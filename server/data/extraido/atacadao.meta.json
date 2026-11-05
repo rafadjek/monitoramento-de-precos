@@ -1,0 +1,69 @@
+{
+ "scope": "Atacadão Mauá Itapark (vendedor atacadaobr631), entrega no CEP 09310-000, definido pela seleção de endereço do site (CEP 09310-000, número 1)",
+ "log": [
+  {
+   "path": "catalogo",
+   "total": 1437,
+   "got": 1437,
+   "note": "",
+   "label": "Super Ofertas"
+  },
+  {
+   "path": "mercearia",
+   "total": 2231,
+   "got": 2360,
+   "note": "lista acima de 2000: final lido em ordem inversa (231 itens esperados fora da 1ª leitura)"
+  },
+  {
+   "path": "padaria-e-matinais",
+   "total": 303,
+   "got": 303,
+   "note": ""
+  },
+  {
+   "path": "bebidas",
+   "total": 670,
+   "got": 670,
+   "note": ""
+  },
+  {
+   "path": "frios-e-congelados",
+   "total": 1064,
+   "got": 1064,
+   "note": ""
+  },
+  {
+   "path": "carnes-aves-e-peixes",
+   "total": 364,
+   "got": 364,
+   "note": ""
+  },
+  {
+   "path": "hortifruti",
+   "total": 142,
+   "got": 142,
+   "note": ""
+  },
+  {
+   "path": "cafeteria",
+   "total": 1,
+   "got": 1,
+   "note": ""
+  },
+  {
+   "path": "higiene-e-perfumaria",
+   "total": 1254,
+   "got": 1254,
+   "note": ""
+  },
+  {
+   "path": "limpeza",
+   "total": 669,
+   "got": 669,
+   "note": ""
+  }
+ ],
+ "requests": 222,
+ "blocked": null,
+ "seconds": 455
+}

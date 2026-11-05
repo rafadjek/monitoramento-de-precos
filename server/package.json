@@ -1,0 +1,16 @@
+{
+  "name": "monitoramento-precos-coleta",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Coleta de preços de mercados de Mauá e Ribeirão Pires e montagem dos dados do site",
+  "scripts": {
+    "coletar": "node run-all.mjs",
+    "folhetos": "node readers/folheto.mjs data/extraido/assai-encartes.json",
+    "montar": "node build-site.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.0",
+    "sharp": "^0.35.5"
+  }
+}

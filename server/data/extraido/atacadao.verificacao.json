@@ -1,0 +1,59 @@
+{
+ "stats": {
+  "total": 6750,
+  "byCat": {
+   "higiene": 1251,
+   "alimenticios": 4766,
+   "limpeza": 665,
+   "outros": 68
+  },
+  "comImagem": 6750,
+  "comValidade": 0,
+  "comListPrice": 0,
+  "problems": 0
+ },
+ "problems": [],
+ "checks": [
+  {
+   "id": "46510",
+   "name": "Queijo Coalho Ipanema Peça com 375g",
+   "price": 28.9,
+   "h1": "Queijo Coalho Ipanema Peça com 375g",
+   "nameOk": true,
+   "priceOk": true
+  },
+  {
+   "id": "10549",
+   "name": "Amaciante Roupas Concentrado Downy Brisa de Verão 1,5L",
+   "price": 24.9,
+   "h1": "Amaciante Roupas Concentrado Downy Brisa de Verão 1,5L",
+   "nameOk": true,
+   "priceOk": true
+  },
+  {
+   "id": "56847",
+   "name": "Salgadinho Lucky Torcida Pimenta Mexicana 100g",
+   "price": 3.99,
+   "h1": "Salgadinho Lucky Torcida Pimenta Mexicana 100g",
+   "nameOk": true,
+   "priceOk": true
+  },
+  {
+   "id": "58989",
+   "name": "Bala Arcor Butter Toffees Leite 400g",
+   "price": 16.9,
+   "h1": "Bala Arcor Butter Toffees Leite 400g",
+   "nameOk": true,
+   "priceOk": true
+  },
+  {
+   "id": "13197",
+   "name": "Molho de Tomate Pomarola Bolonhesa 300g",
+   "price": 4.79,
+   "h1": "Molho de Tomate Pomarola Bolonhesa 300g",
+   "nameOk": true,
+   "priceOk": true
+  }
+ ],
+ "verifiedAt": "2026-11-05T18:36:41.137Z"
+}

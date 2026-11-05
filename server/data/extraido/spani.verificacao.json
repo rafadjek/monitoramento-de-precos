@@ -1,0 +1,94 @@
+{
+  "stats": {
+    "total": 3298,
+    "porCategoria": {
+      "alimenticios": 2316,
+      "higiene": 603,
+      "limpeza": 379
+    },
+    "comImagem": 3259,
+    "comValidade": 0,
+    "comTamanho": 3016,
+    "comListPrice": 214,
+    "multiCompra": 2227,
+    "problemas": 0
+  },
+  "problemas": [],
+  "conferencia": [
+    {
+      "id": "14297",
+      "name": "Queijo Ralado Italac 40g Tradicional",
+      "price": 3.69,
+      "nomeConfere": true,
+      "precoConfere": true,
+      "lojaMaua": true,
+      "precosNaPagina": [
+        "R$ 3,69",
+        "R$ 3,39",
+        "R$ 86,38/kg",
+        "R$ 44,92"
+      ],
+      "nota": "Mais por menos: R$ 3,39 cada na compra de 6 ou mais unidades (preço de"
+    },
+    {
+      "id": "11120",
+      "name": "Limpador Desengordurante Veja 400ml Embalagem Econômica Com 2 Un",
+      "price": 19.49,
+      "nomeConfere": true,
+      "precoConfere": true,
+      "lojaMaua": true,
+      "precosNaPagina": [
+        "R$ 19,49",
+        "R$ 17,49",
+        "R$ 4,79",
+        "R$ 4,35"
+      ],
+      "nota": "Mais por menos: R$ 17,49 cada na compra de 3 ou mais unidades (preço d"
+    },
+    {
+      "id": "6490",
+      "name": "Hidratante Corporal Nivea 400ml Milk",
+      "price": 28.9,
+      "nomeConfere": true,
+      "precoConfere": true,
+      "lojaMaua": true,
+      "precosNaPagina": [
+        "R$ 28,90",
+        "R$ 25,90",
+        "R$ 6,19",
+        "R$ 5,69"
+      ],
+      "nota": "Mais por menos: R$ 25,90 cada na compra de 3 ou mais unidades (preço d"
+    },
+    {
+      "id": "5809",
+      "name": "Requeijão Copo Tirolez Light 200g",
+      "price": 9.19,
+      "nomeConfere": true,
+      "precoConfere": true,
+      "lojaMaua": true,
+      "precosNaPagina": [
+        "R$ 9,19",
+        "R$ 8,49",
+        "R$ 47,90",
+        "R$ 62,90"
+      ],
+      "nota": "Mais por menos: R$ 8,49 cada na compra de 3 ou mais unidades (preço de"
+    },
+    {
+      "id": "5390",
+      "name": "Iogurte Líquido Danoninho 100g Morango",
+      "price": 3.59,
+      "nomeConfere": true,
+      "precoConfere": true,
+      "lojaMaua": true,
+      "precosNaPagina": [
+        "R$ 3,59",
+        "R$ 3,29",
+        "R$ 3,99",
+        "R$ 4,99"
+      ],
+      "nota": "Mais por menos: R$ 3,29 cada na compra de 6 ou mais unidades (preço de"
+    }
+  ]
+}

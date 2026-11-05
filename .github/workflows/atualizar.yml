@@ -1,0 +1,86 @@
+name: Atualizar preços e publicar
+
+on:
+  schedule:
+    - cron: '0 9 * * 3' # quartas, 06h no horário de Brasília (os folhetos trocam nesse dia)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['app/**', 'server/build-site.mjs', '.github/workflows/atualizar.yml']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            server/package-lock.json
+            app/package-lock.json
+
+      - name: Instalar dependências
+        run: |
+          npm ci --prefix server
+          npm ci --prefix app
+
+      - name: Coletar catálogos dos sites
+        if: github.event_name != 'push'
+        working-directory: server
+        run: node run-all.mjs
+
+      - name: Ler folhetos em imagem (IA gratuita)
+        if: github.event_name != 'push'
+        working-directory: server
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ] && [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "Sem chave de IA configurada: folhetos em imagem ficam de fora desta rodada."
+          else
+            node readers/folheto.mjs data/extraido/assai-encartes.json || echo "Leitura de folhetos falhou, seguindo."
+          fi
+
+      - name: Guardar dados coletados
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add server/data/extraido
+          git diff --cached --quiet || (git commit -m "Atualiza dados de preços" && git push)
+
+      - name: Montar dados e imagens do site
+        working-directory: server
+        run: node build-site.mjs
+
+      - name: Compilar o site
+        working-directory: app
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

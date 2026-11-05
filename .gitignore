@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+*.db
+
+# gerados a cada execução (o site é montado pelo GitHub Actions)
+app/public/data/
+app/public/img/
+
+# material bruto, caches e experimentos
+server/data/cache/
+server/data/folhetos/
+server/data/*_raw.json
+server/collectors/_*
+server/recon/out/
+*.log
+
+# scripts locais antigos (caminhos da máquina de desenvolvimento)
+ABRIR-SITE.bat
+run-dev.ps1
+start-dev.ps1
+setup*.bat
+setup-ps.ps1
