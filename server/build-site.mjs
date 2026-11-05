@@ -16,6 +16,7 @@ const index = { generatedAt: new Date().toISOString(), markets: [] };
 
 import crypto from 'node:crypto';
 import sharp from 'sharp';
+import { groupOffers } from './group.mjs';
 const IMG = path.join(ROOT, '../app/public/img');
 const PAGES = path.join(ROOT, 'data/cache/paginas');
 fs.rmSync(IMG, { recursive: true, force: true });
@@ -42,6 +43,11 @@ async function crop(o, id) {
   return `img/${name}`;
 }
 
+const STORE_LABEL = {
+  'Atacadão': 'preços da loja de Mauá (CEP 09310-000)',
+  Spani: 'preços da loja Mauá 1 (Av. Barão de Mauá, 2005)',
+};
+const built = [];
 for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.includes('encartes'))) {
   const parsed = JSON.parse(fs.readFileSync(path.join(IN, f), 'utf8'));
   if (!Array.isArray(parsed)) continue; // .meta.json e .verificacao.json dos coletores
@@ -62,11 +68,22 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
       imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, validityNote: o.validityNote ?? null,
     });
   }
-  fs.writeFileSync(path.join(OUT, `${slug(market)}.json`), JSON.stringify(slim));
+  built.push({ market, slim });
   index.markets.push({
     name: market, file: `${slug(market)}.json`, products: slim.length, expiredDropped: rows.length - vigentes.length,
-    storeScope: rows[0].storeScope ?? null, collectedAt: rows.map((r) => r.collectedAt).sort().at(-1),
+    storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: rows.map((r) => r.collectedAt).sort().at(-1),
   });
 }
+
+// Produtos iguais em mercados diferentes recebem o mesmo "g" (id do grupo).
+const flat = built.flatMap((b) => b.slim);
+const groups = groupOffers(flat);
+for (const g of groups) {
+  const gid = crypto.createHash('sha1').update(g.key).digest('hex').slice(0, 10);
+  for (const i of g.idx) flat[i].g = gid;
+}
+index.groups = groups.length;
+for (const b of built) fs.writeFileSync(path.join(OUT, `${slug(b.market)}.json`), JSON.stringify(b.slim));
 fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify(index));
 console.log(index.markets.map((m) => `${m.name}: ${m.products}`).join('\n') || 'nenhum dado');
+console.log(`Grupos com 2+ mercados: ${groups.length}`);

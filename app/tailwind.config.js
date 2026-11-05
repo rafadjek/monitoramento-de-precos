@@ -1,28 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#3b82f6',
-          light: '#60a5fa',
-          dark: '#2563eb',
-        },
-        secondary: {
-          DEFAULT: '#10b981',
-          light: '#34d399',
-          dark: '#059669',
-        },
+        ink: '#14222B',
+        paper: '#F2F4F1',
+        tag: '#FFD21F',
+        signal: '#C8102E',
+        line: '#D5DBD3',
+        muted: '#566660',
       },
       fontFamily: {
-        display: ['Inter', 'sans-serif'],
-        body: ['Source Sans Pro', 'sans-serif'],
+        display: ['"Barlow Condensed"', 'Arial Narrow', 'sans-serif'],
+        sans: ['"Public Sans"', 'system-ui', 'sans-serif'],
       },
     },
   },
   plugins: [],
-}
+};
