@@ -42,19 +42,6 @@ jobs:
         working-directory: server
         run: node run-all.mjs
 
-      - name: Ler folhetos em imagem (IA gratuita)
-        if: github.event_name != 'push'
-        working-directory: server
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: |
-          if [ -z "$GEMINI_API_KEY" ] && [ -z "$OPENROUTER_API_KEY" ]; then
-            echo "Sem chave de IA configurada: folhetos em imagem ficam de fora desta rodada."
-          else
-            node readers/folheto.mjs data/extraido/assai-encartes.json || echo "Leitura de folhetos falhou, seguindo."
-          fi
-
       - name: Guardar dados coletados
         if: github.event_name != 'push'
         run: |

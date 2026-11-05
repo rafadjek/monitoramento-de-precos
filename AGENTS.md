@@ -4,7 +4,7 @@ Site público de preços de mercados de Mauá e Ribeirão Pires (alimentícios, 
 
 ## Arquitetura
 - `server/collectors/<mercado>.mjs`: coleta cada mercado e grava `server/data/extraido/<mercado>.json` (formato em `server/build-site.mjs`).
-- `server/readers/folheto.mjs`: lê folhetos em imagem com IA de visão gratuita (Gemini; reserva OpenRouter).
+- `server/readers/folheto.mjs`: leitor de folhetos em imagem com IA de visão gratuita (Gemini; reserva OpenRouter). Desligado: nenhum mercado ativo precisa e o CDN do Assaí bloqueia o IP do GitHub.
 - `server/run-all.mjs`: roda os coletores e mantém os dados antigos se um falhar.
 - `server/build-site.mjs`: gera `app/public/data` e as miniaturas.
 - `app/`: React + Vite + Tailwind, estático, busca no navegador.

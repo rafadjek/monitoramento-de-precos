@@ -9,9 +9,10 @@ Os preços são lidos dos sites e folhetos dos próprios mercados e **podem muda
 Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 
 1. **GitHub Actions** roda toda quarta-feira (e quando chamado à mão) e executa os coletores em `server/collectors/`.
-2. **Folhetos em imagem** são lidos por uma IA gratuita com visão (`server/readers/folheto.mjs`), que devolve nome, preço e validade de cada produto.
-3. `server/build-site.mjs` junta os dados em arquivos estáticos e recorta a foto de cada produto.
-4. O site (`app/`, React + Vite + Tailwind) é publicado no **GitHub Pages**. A busca roda no navegador do visitante.
+2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos.
+3. O site (`app/`, React + Vite + Tailwind) é publicado na branch `gh-pages`, servida pelo **GitHub Pages**. A busca roda no navegador do visitante.
+
+Folhetos em imagem: o leitor (`server/readers/folheto.mjs`, IA gratuita com visão) existe, mas **está desligado**. Nenhum mercado ativo precisa dele hoje, e o servidor de imagens do Assaí recusa (403) os IPs do GitHub.
 
 Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `run-all.mjs` mantém os dados antigos.
 
@@ -21,7 +22,7 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 |---|---|---|
 | Atacadão | API do site (loja de Mauá, CEP 09310-000) | funcionando |
 | Spani | API do site (loja Mauá 1) | funcionando |
-| Assaí | Encartes em imagem (Ribeirão Pires e Mauá) | precisa da chave de IA |
+| Assaí | Só encartes em imagem (Ribeirão Pires e Mauá) | fora por enquanto: o servidor das imagens bloqueia o GitHub |
 | Nagumo | HTML das categorias | em desenvolvimento |
 | Semar | API do site | bloqueada pela Cloudflare |
 | Roldão, Coop, São Jorge | só folheto | a fazer |
@@ -30,12 +31,9 @@ Nem todo mercado informa validade de oferta; quando não informa, o site mostra 
 
 ## Configuração (uma vez)
 
-1. Crie uma chave gratuita em [Google AI Studio](https://aistudio.google.com/apikey).
-2. No repositório: **Settings → Secrets and variables → Actions → New repository secret**, nome `GEMINI_API_KEY`.
-3. (Opcional, reserva) segredo `OPENROUTER_API_KEY` com uma chave gratuita do OpenRouter.
-4. **Settings → Pages → Source: GitHub Actions**.
+**Settings → Pages → Source: Deploy from a branch → `gh-pages` / `(root)`.**
 
-A chave fica só no GitHub e nunca vai para o código nem para o site.
+Só se o leitor de folhetos voltar a ser usado: crie uma chave gratuita no [Google AI Studio](https://aistudio.google.com/apikey) e guarde como segredo do repositório (`GEMINI_API_KEY`; reserva opcional `OPENROUTER_API_KEY`). A chave fica só no GitHub e nunca vai para o código nem para o site.
 
 ## Rodar no computador
 
