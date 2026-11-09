@@ -1,6 +1,118 @@
 [
  {
   "market": "Baronesa",
+  "externalId": "4975bd5a6af2",
+  "name": "KIT PANTENE SH 300ML + COND 150ML",
+  "brand": "Pantene",
+  "ean": null,
+  "size": "300ml + 150ml",
+  "price": 33.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "imageBox": [
+   188,
+   538,
+   411,
+   804
+  ],
+  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-03T03:00:00.000Z",
+  "validUntil": "2026-11-10T02:59:59.000Z",
+  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
+  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
+  "collectedAt": "2026-11-09T21:42:39.338Z"
+ },
+ {
+  "market": "Baronesa",
+  "externalId": "ba5da7da9a5b",
+  "name": "KIT SEDA SH 300ML + COND 190ML",
+  "brand": "Seda",
+  "ean": null,
+  "size": "300ml + 190ml",
+  "price": 18.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "imageBox": [
+   370,
+   312,
+   621,
+   513
+  ],
+  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-03T03:00:00.000Z",
+  "validUntil": "2026-11-10T02:59:59.000Z",
+  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
+  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
+  "collectedAt": "2026-11-09T21:42:39.338Z"
+ },
+ {
+  "market": "Baronesa",
+  "externalId": "3d9f11be6f5f",
+  "name": "PAPEL HIG SULLEG LVE 12 PG 11",
+  "brand": "Sulleg",
+  "ean": null,
+  "size": "12 rolos",
+  "price": 17.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "imageBox": [
+   435,
+   542,
+   620,
+   878
+  ],
+  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "source": "encarte",
+  "condition": "LVE 12 PG 11",
+  "validFrom": "2026-11-03T03:00:00.000Z",
+  "validUntil": "2026-11-10T02:59:59.000Z",
+  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
+  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
+  "collectedAt": "2026-11-09T21:42:39.338Z"
+ },
+ {
+  "market": "Baronesa",
+  "externalId": "6a9b5aa7289a",
+  "name": "SABÃO EM PÓ OMO 2.4KG",
+  "brand": "Omo",
+  "ean": null,
+  "size": "2.4kg",
+  "price": 29.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "limpeza",
+  "categoryRaw": null,
+  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "imageBox": [
+   638,
+   280,
+   863,
+   476
+  ],
+  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-03T03:00:00.000Z",
+  "validUntil": "2026-11-10T02:59:59.000Z",
+  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
+  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
+  "collectedAt": "2026-11-09T21:42:39.338Z"
+ },
+ {
+  "market": "Baronesa",
   "externalId": "b32a2a83157a",
   "name": "AMAC DOWNY SACHE 750ML (FRAGRÂNCIAS)",
   "brand": "Downy",
@@ -25,7 +137,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -53,7 +165,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -81,7 +193,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -109,7 +221,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -137,7 +249,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -165,7 +277,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -193,7 +305,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -221,7 +333,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -249,7 +361,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -277,7 +389,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -305,7 +417,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -333,7 +445,7 @@
   "validUntil": "2026-11-10T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  },
  {
   "market": "Baronesa",
@@ -361,6 +473,6 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-09T21:21:08.451Z"
+  "collectedAt": "2026-11-09T21:42:39.338Z"
  }
 ]
