@@ -12,7 +12,7 @@ let requests = 0;
 
 async function get(url) {
   if (++requests > 600) throw new Error('teto de 600 requisições');
-  const r = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'pt-BR' } });
+  const r = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'pt-BR' }, signal: AbortSignal.timeout(45000) });
   if (r.status === 403 || r.status === 429) throw new Error(`bloqueio ${r.status} em ${url}`);
   if (!r.ok) throw new Error(`${r.status} em ${url}`);
   return r;

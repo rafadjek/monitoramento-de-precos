@@ -66,10 +66,10 @@ async function download(url, referer) {
   if (fs.existsSync(f)) return fs.readFileSync(f);
   const headers = { 'User-Agent': UA, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' };
   if (referer) headers.Referer = referer;
-  let r = await fetch(url, { headers });
+  let r = await fetch(url, { headers, signal: AbortSignal.timeout(45000) });
   // Proxy de imagens (Worker na Cloudflare), só se configurado e só quando a origem recusa o IP do GitHub.
   if ((r.status === 403 || r.status === 429) && process.env.IMG_PROXY) {
-    r = await fetch(`${process.env.IMG_PROXY}?url=${encodeURIComponent(url)}`, { headers: { 'X-Proxy-Key': process.env.IMG_PROXY_KEY ?? '' } });
+    r = await fetch(`${process.env.IMG_PROXY}?url=${encodeURIComponent(url)}`, { headers: { 'X-Proxy-Key': process.env.IMG_PROXY_KEY ?? '' }, signal: AbortSignal.timeout(45000) });
   }
   if (!r.ok) throw new Error(`download HTTP ${r.status}`);
   const buf = Buffer.from(await r.arrayBuffer());
@@ -89,7 +89,7 @@ async function askGemini(buf, mime) {
   for (let tent = 0; tent < 5; tent++) {
     const model = MODELS[modelIdx];
     const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body),
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body), signal: AbortSignal.timeout(120000),
     });
     if (r.status === 404 && modelIdx < MODELS.length - 1) { console.warn(`  modelo ${model} indisponível, tentando ${MODELS[modelIdx + 1]}`); modelIdx++; continue; }
     if (r.status === 429 || r.status >= 500) { await sleep(20000 * (tent + 1)); continue; }
@@ -105,7 +105,7 @@ async function askOpenRouter(buf, mime) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) throw new Error('sem OPENROUTER_API_KEY');
   const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
+    method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(120000),
     body: JSON.stringify({
       model: 'openrouter/free', temperature: 0,
       messages: [{ role: 'user', content: [{ type: 'text', text: PROMPT }, { type: 'image_url', image_url: { url: `data:${mime};base64,${buf.toString('base64')}` } }] }],

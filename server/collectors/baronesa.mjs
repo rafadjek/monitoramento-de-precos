@@ -9,7 +9,7 @@ const BASE = 'https://baronesasupermercados.com.br';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 
 const r = await fetch(`${BASE}/classes/encarte.php`, {
-  method: 'POST', headers: { 'User-Agent': UA, Referer: `${BASE}/encarte/`, 'X-Requested-With': 'XMLHttpRequest' },
+  method: 'POST', headers: { 'User-Agent': UA, Referer: `${BASE}/encarte/`, 'X-Requested-With': 'XMLHttpRequest' }, signal: AbortSignal.timeout(45000),
 });
 if (!r.ok) { console.error(`baronesa: HTTP ${r.status}`); process.exit(1); }
 const html = await r.text();
