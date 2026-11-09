@@ -53,7 +53,7 @@ jobs:
       - name: Ler encartes (Assaí e Baronesa)
         working-directory: server
         continue-on-error: true
-        timeout-minutes: 30
+        timeout-minutes: 50
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

@@ -91,9 +91,18 @@ async function askGemini(buf, mime) {
   let last = '';
   for (let tent = 0, onModel = 0; tent < 8; tent++, onModel++) {
     const model = MODELS[modelIdx];
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body), signal: AbortSignal.timeout(120000),
-    });
+    let r;
+    try {
+      r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body), signal: AbortSignal.timeout(300000),
+      });
+    } catch (e) {
+      // página muito cheia pode passar do tempo: tenta de novo (e com outro modelo na segunda vez)
+      last = `${model} ${e.message}`;
+      console.warn('  ' + last);
+      if (onModel >= 1 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; }
+      continue;
+    }
     if (r.status === 404 && modelIdx < MODELS.length - 1) { console.warn(`  modelo ${model} indisponível, tentando ${MODELS[modelIdx + 1]}`); modelIdx++; onModel = -1; continue; }
     if (r.status === 429 || r.status >= 500) {
       last = `${model} ${r.status} ${(await r.text()).replace(/\s+/g, ' ').slice(0, 160)}`;
