@@ -1,40 +1,48 @@
 {
- "startedAt": "2026-11-09T21:42:39.338Z",
+ "startedAt": "2026-11-09T21:53:08.948Z",
  "pages": [
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-1.jpeg",
-   "ok": false,
-   "error": "The operation was aborted due to timeout | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 19,
+   "model": "gemini-flash-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
-   "ok": false,
-   "error": "The operation was aborted due to timeout | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 26,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
-   "ok": false,
-   "error": "The operation was aborted due to timeout | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 30,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-4.jpeg",
-   "ok": false,
-   "error": "The operation was aborted due to timeout | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 25,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175725-883",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175725/campanha-175725-cluster-883-pagina-1.jpeg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 6,
    "model": "gemini-flash-lite-latest"
   },
@@ -43,7 +51,7 @@
    "offerId": "encarte-2026-11-09",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -84,6 +92,6 @@
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-09T21:51:40.188Z",
- "newReads": 6
+ "finishedAt": "2026-11-09T21:57:53.498Z",
+ "newReads": 4
 }
