@@ -50,7 +50,14 @@ export function OfferRow({ o, onCompare }: { o: Indexed; onCompare?: () => void 
         </h3>
         <p className="mt-0.5 text-xs">
           <Validity o={o} />
+          {o.source === 'encarte' && o.productUrl && (
+            <>
+              {' · '}
+              <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className="font-bold underline underline-offset-2">ver no encarte</a>
+            </>
+          )}
         </p>
+        {o.condition && <p className="mt-0.5 text-xs font-bold text-signal">{o.condition}</p>}
         {o.g && onCompare && (
           <button onClick={onCompare} className="mt-1 min-h-[2.25rem] text-sm font-bold underline underline-offset-2">
             Comparar com outros mercados

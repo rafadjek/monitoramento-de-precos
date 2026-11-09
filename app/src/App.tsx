@@ -5,7 +5,8 @@ import { GroupRow, OfferRow, SkeletonRows } from './components/Rows';
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 40;
 
-type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string };
+type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte' };
+type InfoOnly = { name: string; cities: string[]; note: string; address: string; links: { label: string; url: string }[] };
 type View = 'comparar' | 'todos';
 
 const CATEGORIES = [
@@ -22,6 +23,8 @@ const SORTS: Record<View, { id: string; label: string }[]> = {
 export default function App() {
   const [all, setAll] = useState<Indexed[]>([]);
   const [markets, setMarkets] = useState<MarketInfo[]>([]);
+  const [infoOnly, setInfoOnly] = useState<InfoOnly[]>([]);
+  const [city, setCity] = useState('');
   const [generatedAt, setGeneratedAt] = useState('');
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading');
   const [attempt, setAttempt] = useState(0);
@@ -48,6 +51,7 @@ export default function App() {
           }),
         );
         setMarkets(idx.markets);
+        setInfoOnly(idx.infoOnly ?? []);
         setGeneratedAt(idx.generatedAt);
         setAll(parts.flat().map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
         setStatus('ok');
@@ -57,10 +61,13 @@ export default function App() {
     })();
   }, [attempt]);
 
-  useEffect(() => setShown(PAGE), [dq, view, category, market, sort, focus]);
+  useEffect(() => setShown(PAGE), [dq, view, category, market, city, sort, focus]);
+  const cities = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].sort(), [markets]);
+  // mercados com loja na cidade escolhida
+  const inCity = useMemo(() => new Set(markets.filter((m) => !city || (m.cities ?? []).includes(city)).map((m) => m.name)), [markets, city]);
   useEffect(() => setSort(SORTS[view][0].id), [view]);
 
-  const groups = useMemo(() => buildGroups(all), [all]);
+  const groups = useMemo(() => buildGroups(city ? all.filter((o) => inCity.has(o.market)) : all), [all, city, inCity]);
   const terms = useMemo(() => norm(dq).split(/\s+/).filter(Boolean), [dq]);
   const hit = (n: string) => terms.every((t) => n.includes(t));
 
@@ -74,7 +81,7 @@ export default function App() {
 
   const offerList = useMemo(() => {
     const disc = (o: Indexed) => (o.listPrice && o.listPrice > o.price ? (o.listPrice - o.price) / o.listPrice : 0);
-    const r = all.filter((o) => (!category || o.category === category) && (!market || o.market === market) && hit(o._n));
+    const r = all.filter((o) => inCity.has(o.market) && (!category || o.category === category) && (!market || o.market === market) && hit(o._n));
     // Com busca, quem "é" o produto (nome começa com o termo) vem antes de quem só o menciona (tempero de feijão).
     const lead = (o: Indexed) => (terms.length && !o._n.startsWith(terms[0]) ? 1 : 0);
     return r.sort(
@@ -82,10 +89,10 @@ export default function App() {
         : sort === 'desconto' ? (a, b) => lead(a) - lead(b) || disc(b) - disc(a)
         : (a, b) => lead(a) - lead(b) || a.price - b.price,
     );
-  }, [all, terms, category, market, sort]);
+  }, [all, terms, category, market, sort, inCity]);
 
   const list = view === 'comparar' ? groupList : offerList;
-  const clear = () => { setQ(''); setCategory(''); setMarket(''); setFocus(null); };
+  const clear = () => { setQ(''); setCategory(''); setMarket(''); setCity(''); setFocus(null); };
   const updated = generatedAt ? new Date(generatedAt).toLocaleDateString('pt-BR') : '';
 
   return (
@@ -126,10 +133,16 @@ export default function App() {
                 </button>
               ))}
             </div>
-            <div className="ml-auto flex gap-2">
+            <div className="ml-auto flex flex-wrap gap-2">
+              {cities.length > 1 && (
+                <select aria-label="Cidade" value={city} onChange={(e) => { setCity(e.target.value); setMarket(''); }} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
+                  <option value="">Mauá e Ribeirão Pires</option>
+                  {cities.map((c) => <option key={c} value={c}>Lojas em {c}</option>)}
+                </select>
+              )}
               <select aria-label="Mercado" value={market} onChange={(e) => setMarket(e.target.value)} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
                 <option value="">Todos os mercados</option>
-                {markets.map((m) => <option key={m.name} value={m.name}>{m.name}</option>)}
+                {markets.filter((m) => inCity.has(m.name)).map((m) => <option key={m.name} value={m.name}>{m.name}{m.source === 'encarte' ? ' (encarte)' : ''}</option>)}
               </select>
               <select aria-label="Ordenar por" value={sort} onChange={(e) => setSort(e.target.value)} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
                 {SORTS[view].map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
@@ -213,8 +226,20 @@ export default function App() {
                 {m.name}: {m.products.toLocaleString('pt-BR')} produtos{m.storeScope ? `, ${m.storeScope}` : ''}
               </li>
             ))}
+            {infoOnly.map((m) => (
+              <li key={m.name}>
+                {m.name} ({m.address}): {m.note}{' '}
+                {m.links.map((l, i) => (
+                  <span key={l.url}>
+                    {i > 0 && ' · '}
+                    <a href={l.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{l.label}</a>
+                  </span>
+                ))}
+              </li>
+            ))}
           </ul>
-          <p className="mt-3">Preços e ofertas podem mudar a qualquer momento e variam por loja. Confirme na prateleira antes de ir.</p>
+          <p className="mt-3">Os encartes em imagem são lidos por inteligência artificial e podem ter erros de leitura: confira no link "ver no encarte".</p>
+          <p className="mt-1">Preços e ofertas podem mudar a qualquer momento e variam por loja. Confirme na prateleira antes de ir.</p>
         </footer>
       </main>
     </div>

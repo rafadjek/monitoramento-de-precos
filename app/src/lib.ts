@@ -12,6 +12,8 @@ export type Offer = {
   productUrl: string | null;
   validUntil: string | null;
   validityNote: string | null;
+  source?: 'encarte';
+  condition?: string | null;
   g?: string;
 };
 

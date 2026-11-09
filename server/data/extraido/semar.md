@@ -25,3 +25,12 @@ Sem dados coletados, não houve validação do JSON nem comparação de 5 produt
 2. Pedir ao Semar/oSuper acesso ou autorização para uso dos dados (relevante também para o app público).
 3. Usar só os folhetos do Semar (Tiendeo/Kimbino, vigentes até 12/11) lidos por imagem.
 4. Anotar o Semar como "sem coleta automática" no app até resolver.
+
+## Reavaliação (2026-11-05, 2ª tentativa): continua sem caminho legítimo
+
+- **Bloqueio não foi passageiro.** Uma única tentativa por caminho, com pausa de 1 s: `curl` na API `sense.osuper.com.br/336/1703/v2/search?promotion=true` → 403 (Cloudflare). Chrome comum (sem disfarce) em `/categorias/ofertas-semanal-03-a-0911` → a página abre, mas mostra "Não foi possível sua solicitação! Verifique sua conexão" e 0 preços. Não repeti.
+- **Site institucional não ajuda.** `semarsupermercados.com.br`, `semarentrega.com.br` e `www.semarentrega.com.br` servem o mesmo storefront oSuper (HTTP 200, 880 KB de HTML). Esse HTML não traz produtos nem preços (0 ocorrências de "R$", sem estado inicial; só 3 blocos ld+json institucionais). Os produtos vêm só da API oSuper, via script em `cdn.osuper.com.br`.
+- **Não há outra API pública** de vitrine além da oSuper.
+- **Dependência de país:** o 403 veio de IP brasileiro (esta máquina). Logo não é bloqueio geográfico, e sim regra da Cloudflare contra cliente automatizado; os IPs do GitHub (datacenter nos EUA) tendem a piorar. Qualquer solução teria de ser autorizada pela oSuper/Semar, não contornada.
+- **Resultado:** nenhum coletor criado (`collectors/semar.mjs` não existe), nenhum `semar.json`.
+- **Saídas que sobram:** pedir autorização/acesso à oSuper ou ao Semar; ou só folheto (Tiendeo/Kimbino), com a ressalva de termos de uso dos agregadores e de que o leitor de folhetos nunca foi testado de ponta a ponta.

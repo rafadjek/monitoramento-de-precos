@@ -37,6 +37,9 @@ export function MarketTag({ o, cheapest, diff }: { o: Indexed; cheapest: boolean
     <>
       <span className="block text-sm font-bold leading-tight">{o.market}</span>
       <Price value={o.price} big={cheapest} />
+      {o.source === 'encarte' && (
+        <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide">encarte{o.condition ? ` · ${o.condition}` : ''}</span>
+      )}
       <span className={`mt-0.5 block text-xs ${cheapest ? 'font-bold' : 'text-muted'}`}>
         {cheapest ? 'mais barato' : `+ ${brl(diff)}`}
       </span>
@@ -46,7 +49,7 @@ export function MarketTag({ o, cheapest, diff }: { o: Indexed; cheapest: boolean
     cheapest ? 'border-b-4 border-ink bg-tag' : 'border border-line bg-white'
   }`;
   return o.productUrl ? (
-    <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-95`} title={`Abrir ${o.name} no site do ${o.market}`}>
+    <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-95`} title={o.source === 'encarte' ? `Ver a página do encarte do ${o.market}` : `Abrir ${o.name} no site do ${o.market}`}>
       {body}
     </a>
   ) : (

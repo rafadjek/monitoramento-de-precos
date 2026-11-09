@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const EXTRAIDO = path.join(ROOT, 'data', 'extraido');
-const FOLHETOS = path.join(ROOT, 'data', 'folhetos', 'assai');
 const SRC = 'https://www.assai.com.br/sites/default/files/static/ofertas_assai.json';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 const LOJAS = { 58: 'Assaí Ribeirão Pires', 161: 'Assaí Shop. Mauá' };
@@ -42,24 +41,11 @@ for (const o of data.ofertas) {
     validityNote: o.custom_text || null,
     stores: lojas.map((id) => LOJAS[id]),
     images: o.images.map((i) => i.url),
-    localImages: [],
+    storeScope: 'Encarte das lojas Assaí Ribeirão Pires e Mauá',
     collectedAt: now.toISOString(),
   });
 }
 
-for (const e of encartes.filter((x) => x.vigente)) {
-  const dir = path.join(FOLHETOS, e.offerId);
-  fs.mkdirSync(dir, { recursive: true });
-  for (let i = 0; i < e.images.length; i++) {
-    const file = path.join(dir, `pagina-${i + 1}.jpg`);
-    await sleep(1000);
-    const buf = Buffer.from(await (await get(e.images[i])).arrayBuffer());
-    fs.writeFileSync(file, buf);
-    e.localImages.push(path.relative(ROOT, file).replaceAll('\\', '/'));
-  }
-}
-
 fs.writeFileSync(path.join(EXTRAIDO, 'assai-encartes.json'), JSON.stringify(encartes, null, 2));
-// O site do Assaí não publica catálogo com preço em texto: nenhum produto estruturado a gravar.
-fs.writeFileSync(path.join(EXTRAIDO, 'assai.json'), '[]');
+// Os preços só existem nas imagens: quem lê é readers/folheto.mjs (o assai.json sai de lá).
 console.log(`encartes das lojas: ${encartes.length}, vigentes: ${encartes.filter((e) => e.vigente).length}, requisições: ${requests}`);

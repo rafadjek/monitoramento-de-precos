@@ -2,11 +2,12 @@ name: Atualizar preços e publicar
 
 on:
   schedule:
-    - cron: '0 9 * * 3' # quartas, 06h no horário de Brasília (os folhetos trocam nesse dia)
+    - cron: '0 9 * * 3' # quartas, 06h de Brasília: catálogos dos sites + encartes
+    - cron: '0 9 * * 0,1,2,4,5,6' # demais dias, 06h: só encartes (Assaí e Baronesa trocam no meio da semana)
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -37,13 +38,32 @@ jobs:
           npm ci --prefix server
           npm ci --prefix app
 
+      - name: Restaurar cache de leitura dos encartes
+        uses: actions/cache@v4
+        with:
+          path: server/data/cache
+          key: encartes-${{ github.run_id }}
+          restore-keys: encartes-
+
       - name: Coletar catálogos dos sites
-        if: github.event_name != 'push'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * 3'
         working-directory: server
         run: node run-all.mjs
 
+      - name: Ler encartes (Assaí e Baronesa)
+        working-directory: server
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          IMG_PROXY: ${{ secrets.IMG_PROXY }}
+          IMG_PROXY_KEY: ${{ secrets.IMG_PROXY_KEY }}
+        run: |
+          node collectors/assai.mjs || echo "::warning::Assaí: lista de encartes indisponível"
+          node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"
+          node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json
+
       - name: Guardar dados coletados
-        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

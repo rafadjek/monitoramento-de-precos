@@ -46,7 +46,25 @@ async function crop(o, id) {
 const STORE_LABEL = {
   'Atacadão': 'preços da loja de Mauá (CEP 09310-000)',
   Spani: 'preços da loja Mauá 1 (Av. Barão de Mauá, 2005)',
+  Coop: 'preços da loja Barão de Mauá (retirada, CEP 09310-000)',
+  Baronesa: 'encarte da loja de Mauá (R. Fernão Dias, 5)',
+  'Assaí': 'encarte das lojas de Ribeirão Pires e Mauá',
 };
+// Cidades das lojas usadas por mercado (filtro do site).
+const CITIES = {
+  'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
+};
+// Mercados sem fonte coletável: aparecem no site só com o caminho para as ofertas.
+index.infoOnly = [{
+  name: 'STUK', cities: ['Ribeirão Pires'],
+  note: 'O jornal de ofertas sai todo dia só no Instagram e no WhatsApp de cada loja.',
+  address: 'Av. Princesa Izabel, 980, Parque Aliança, Ribeirão Pires',
+  links: [
+    { label: 'Instagram', url: 'https://www.instagram.com/supermercadostuk/' },
+    { label: 'WhatsApp', url: 'https://wa.me/5511980810790?text=Oi!%20Quero%20receber%20as%20ofertas%20do%20dia' },
+    { label: 'Site', url: 'https://supermercadostuk.com.br/' },
+  ],
+}];
 const built = [];
 for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.includes('encartes'))) {
   const parsed = JSON.parse(fs.readFileSync(path.join(IN, f), 'utf8'));
@@ -66,11 +84,13 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
       id, market, name: o.name, brand: o.brand ?? null, ean: o.ean ?? null, size: o.size ?? null,
       price: o.price, listPrice: o.listPrice ?? null, unitPrice: o.unitPrice ?? null, category: o.category ?? 'outros',
       imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, validityNote: o.validityNote ?? null,
+      ...(o.source === 'encarte' ? { source: 'encarte', condition: o.condition ?? null } : {}),
     });
   }
   built.push({ market, slim });
   index.markets.push({
-    name: market, file: `${slug(market)}.json`, products: slim.length, expiredDropped: rows.length - vigentes.length,
+    name: market, file: `${slug(market)}.json`, products: slim.length, cities: CITIES[market] ?? [],
+    source: rows.some((r) => r.source === 'encarte') ? 'encarte' : 'site', expiredDropped: rows.length - vigentes.length,
     storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: rows.map((r) => r.collectedAt).sort().at(-1),
   });
 }
