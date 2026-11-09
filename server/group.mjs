@@ -8,6 +8,9 @@ const STOP = new Set(['de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'para', 
 const NEUTRAL = new Set([
   'pacote', 'pct', 'pcte', 'embalagem', 'emb', 'unidade', 'unid', 'un', 'tradicional', 'original', 'classico',
   'novo', 'nova', 'oferta', 'especial',
+  // embalagem, como os encartes escrevem ("POTE 400G", "GALÃO 5L", "TP 1L"); não muda o produto.
+  // Lata, pet, vidro, garrafa e sachê ficam de fora: distinguem produtos (óleo lata x pet, refil x frasco).
+  'pote', 'galao', 'frasco', 'tp', 'bisnaga', 'bandeja', 'caixa', 'cx', 'zip', 'iqf',
 ]);
 
 export const strip = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();

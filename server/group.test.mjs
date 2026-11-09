@@ -70,3 +70,8 @@ test('conversão de tamanho', () => {
   assert.equal(parseSize('', 'Arroz 5 kg').key, 'g:5000');
   assert.equal(parseSize('4x90g').key, 'g:360');
 });
+
+test('palavra de embalagem do encarte não impede juntar', () => {
+  assert.ok(grouped(o('A', 'REQUEIJÃO CREMOSO BATAVO TRADICIONAL POTE 400G'), o('B', 'Requeijão Cremoso Batavo Tradicional 400g')));
+  assert.ok(grouped(o('A', 'ÁGUA SANITÁRIA YPÊ GALÃO 5L'), o('B', 'Água Sanitária Ypê 5L')));
+});

@@ -24,13 +24,17 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 | Spani | API do site (loja Mauá 1) | funcionando |
 | Coop | API VTEX do site, loja Barão de Mauá fixa pelo `regionId` (base64 de `SW#coopspbm`; Ribeirão Pires = `coopsprp`) | funcionando |
 | Baronesa (Mauá) | Encarte em imagem (`/classes/encarte.php`), lido por IA | funcionando |
-| Assaí | Encarte em imagem das lojas Ribeirão Pires e Mauá, lido por IA | ver situação abaixo |
+| Assaí | Encarte em imagem das lojas Ribeirão Pires e Mauá, lido por IA | funcionando (imagens pelo Worker, ver abaixo) |
 | STUK (Ribeirão Pires) | Ofertas só no Instagram e WhatsApp | só link no rodapé do site |
 | Nagumo | HTML das categorias | em desenvolvimento |
 | Semar | API do site | bloqueada pela Cloudflare |
 | Roldão, São Jorge | só folheto | a fazer |
 
 Nem todo mercado informa validade de oferta; quando não informa, o site mostra "validade não informada".
+
+### Imagens do Assaí
+
+O servidor de imagens do Assaí só atende o Brasil e recusa os IPs do GitHub. As imagens passam por um Worker na Cloudflare (`worker-imagens/`, `monitoramento-precos-imagens.consultor-milhas-worker.workers.dev`), fixado perto de São Paulo (`[placement] region = "aws:sa-east-1"`). Ele só aceita imagens `.jpg/.png` do servidor de encartes do Assaí e é usado só quando o download direto dá 403. Publicar de novo: `npx wrangler deploy` dentro de `worker-imagens/`.
 
 ## Configuração (uma vez)
 
