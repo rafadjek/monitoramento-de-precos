@@ -9,7 +9,7 @@ Os preços são lidos dos sites e folhetos dos próprios mercados e **podem muda
 Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 
 1. **GitHub Actions** roda toda quarta-feira (e quando chamado à mão) e executa os coletores em `server/collectors/`.
-2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos.
+2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos. O agrupamento usa primeiro o código de barras (EAN), que os dois mercados publicam: Spani no campo `codigo_barras` da API, Atacadão pela API pública de catálogo da VTEX (`collectors/atacadao-ean.mjs`, lotes de 50). A regra por nome só junta quando nenhum EAN contradiz. Testes: `node --test group.test.mjs` em `server/`.
 3. O site (`app/`, React + Vite + Tailwind) é publicado na branch `gh-pages`, servida pelo **GitHub Pages**. A busca roda no navegador do visitante.
 
 Folhetos em imagem: o leitor (`server/readers/folheto.mjs`, IA gratuita com visão) existe, mas **está desligado**. Nenhum mercado ativo precisa dele hoje, e o servidor de imagens do Assaí recusa (403) os IPs do GitHub.

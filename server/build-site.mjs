@@ -63,7 +63,7 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
       imageUrl = await crop(o, id).catch(() => null); // sem recorte, melhor sem imagem do que a página inteira
     }
     slim.push({
-      id, market, name: o.name, brand: o.brand ?? null, size: o.size ?? null,
+      id, market, name: o.name, brand: o.brand ?? null, ean: o.ean ?? null, size: o.size ?? null,
       price: o.price, listPrice: o.listPrice ?? null, unitPrice: o.unitPrice ?? null, category: o.category ?? 'outros',
       imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, validityNote: o.validityNote ?? null,
     });
@@ -82,6 +82,8 @@ for (const g of groups) {
   const gid = crypto.createHash('sha1').update(g.key).digest('hex').slice(0, 10);
   for (const i of g.idx) flat[i].g = gid;
 }
+for (const o of flat) delete o.ean; // só serve para agrupar; o site não usa
+index.groupsByEan = groups.filter((g) => g.key.startsWith('ean:')).length;
 index.groups = groups.length;
 for (const b of built) fs.writeFileSync(path.join(OUT, `${slug(b.market)}.json`), JSON.stringify(b.slim));
 fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify(index));

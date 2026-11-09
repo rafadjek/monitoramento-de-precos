@@ -50,6 +50,10 @@ jobs:
           git add server/data/extraido
           git diff --cached --quiet || (git commit -m "Atualiza dados de preços" && git pull --rebase -X theirs && git push)
 
+      - name: Testar o agrupamento de produtos
+        working-directory: server
+        run: npm test
+
       - name: Montar dados e imagens do site
         working-directory: server
         run: node build-site.mjs

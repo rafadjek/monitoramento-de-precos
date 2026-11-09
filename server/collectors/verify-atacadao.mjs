@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { openSession } from './atacadao.mjs';
 
 const OUT_DIR = fileURLToPath(new URL('../data/extraido/', import.meta.url));
-const FIELDS = ['market', 'externalId', 'name', 'brand', 'size', 'price', 'listPrice', 'unitPrice', 'category', 'categoryRaw', 'imageUrl', 'productUrl', 'validFrom', 'validUntil', 'validityNote', 'storeScope', 'collectedAt'];
+const FIELDS = ['market', 'externalId', 'name', 'brand', 'ean', 'size', 'price', 'listPrice', 'unitPrice', 'category', 'categoryRaw', 'imageUrl', 'productUrl', 'validFrom', 'validUntil', 'validityNote', 'storeScope', 'collectedAt'];
 const rows = JSON.parse(fs.readFileSync(OUT_DIR + 'atacadao.json', 'utf8'));
 const problems = [];
 const ids = new Set();

@@ -126,6 +126,7 @@ async function main() {
           externalId: String(p.produto_id),
           name,
           brand: null,
+          ean: p.codigo_barras ? String(p.codigo_barras).trim() : null,
           size: sizeFrom(name),
           price: Math.round(price * 100) / 100,
           listPrice: listPrice ? Math.round(listPrice * 100) / 100 : null,

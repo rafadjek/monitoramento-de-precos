@@ -1,6 +1,7 @@
 import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fillEans } from './atacadao-ean.mjs';
 
 const HERE = fileURLToPath(new URL('./', import.meta.url));
 const OUT_DIR = fileURLToPath(new URL('../data/extraido/', import.meta.url));
@@ -72,6 +73,7 @@ function toRecord(node, scope, collectedAt, fromPage) {
     externalId: String(node.sku || node.id),
     name: node.name.trim(),
     brand: node.brand?.brandName || node.brand?.name || null,
+    ean: node.gtin && /^\d{8,14}$/.test(String(node.gtin)) ? String(node.gtin) : null,
     size: sizeFromName(node.name),
     price: o.price,
     listPrice: o.listPrice && o.listPrice > o.price ? o.listPrice : null,
@@ -177,6 +179,8 @@ async function main() {
   }
   await s.browser.close();
   const rows = [...store.values()];
+  const ean = blocked ? null : await fillEans(rows).catch((e) => ({ stop: e.message }));
+  log.push({ path: 'ean', ...ean });
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(OUT_DIR + 'atacadao.json', JSON.stringify(rows, null, 1));
   fs.writeFileSync(OUT_DIR + 'atacadao.meta.json', JSON.stringify({ scope, log, requests, blocked, seconds: Math.round((Date.now() - t0) / 1000) }, null, 1));

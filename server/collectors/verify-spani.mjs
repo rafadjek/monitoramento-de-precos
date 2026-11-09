@@ -4,7 +4,7 @@ import { chromium } from 'playwright-core';
 
 const dir = fileURLToPath(new URL('../data/extraido/', import.meta.url));
 const data = JSON.parse(fs.readFileSync(dir + 'spani.json', 'utf8'));
-const FIELDS = ['market', 'externalId', 'name', 'brand', 'size', 'price', 'listPrice', 'unitPrice', 'category', 'categoryRaw', 'imageUrl', 'productUrl', 'validFrom', 'validUntil', 'validityNote', 'storeScope', 'collectedAt'];
+const FIELDS = ['market', 'externalId', 'name', 'brand', 'ean', 'size', 'price', 'listPrice', 'unitPrice', 'category', 'categoryRaw', 'imageUrl', 'productUrl', 'validFrom', 'validUntil', 'validityNote', 'storeScope', 'collectedAt'];
 const problems = [];
 const ids = new Set();
 for (const p of data) {
