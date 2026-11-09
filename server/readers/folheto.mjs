@@ -162,6 +162,13 @@ const startIso = (s) => { const m = ISO_DAY.exec(s ?? ''); return m ? new Date(D
 const endIso = (s) => { const m = ISO_DAY.exec(s ?? ''); return m ? new Date(Date.UTC(+m[1], m[2] - 1, +m[3] + 1, 2, 59, 59)).toISOString() : null; };
 const mode = (xs) => { const c = new Map(); for (const x of xs.filter(Boolean)) c.set(x, (c.get(x) ?? 0) + 1); return [...c].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null; };
 
+// "cada"/"un" não é condição; "quilo"/"kg" vira "preço por kg"
+const cond = (c) => {
+  const t = String(c ?? '').trim();
+  if (!t || /^(cada|un\.?|und\.?|unid\.?|unidade)$/i.test(t)) return null;
+  if (/^(por\s+)?(o\s+)?(quilo|kg)$/i.test(t) || /^pre[cç]o por (kg|quilo)$/i.test(t)) return 'preço por kg';
+  return t;
+};
 const ok = (it) => it && typeof it.name === 'string' && it.name.trim().length > 2 && typeof it.price === 'number' && it.price > 0 && it.price < 10000;
 
 async function main() {
@@ -205,7 +212,7 @@ async function main() {
             price: it.price, listPrice: it.listPrice > it.price ? it.listPrice : null, unitPrice: null,
             category: it.category ?? 'outros', categoryRaw: null,
             imageUrl: p.url, imageBox: Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
-            productUrl: p.url, source: 'encarte', condition: it.condition ?? null,
+            productUrl: p.url, source: 'encarte', condition: cond(it.condition),
             validFrom, validUntil,
             validityNote: enc.validityNote ?? null,
             storeScope: enc.storeScope ?? `Encarte: ${(enc.stores ?? []).join(', ') || 'lojas não informadas'}`,
