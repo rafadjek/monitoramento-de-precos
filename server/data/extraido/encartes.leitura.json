@@ -1,0 +1,79 @@
+{
+ "startedAt": "2026-11-09T20:48:33.335Z",
+ "pages": [
+  {
+   "market": "Assaí",
+   "offerId": "175721-948",
+   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-1.jpeg",
+   "ok": false,
+   "error": "download HTTP 403"
+  },
+  {
+   "market": "Assaí",
+   "offerId": "175721-948",
+   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
+   "ok": false,
+   "error": "download HTTP 403"
+  },
+  {
+   "market": "Assaí",
+   "offerId": "175721-948",
+   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
+   "ok": false,
+   "error": "download HTTP 403"
+  },
+  {
+   "market": "Assaí",
+   "offerId": "175721-948",
+   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-4.jpeg",
+   "ok": false,
+   "error": "download HTTP 403"
+  },
+  {
+   "market": "Assaí",
+   "offerId": "175725-883",
+   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175725/campanha-175725-cluster-883-pagina-1.jpeg",
+   "ok": false,
+   "error": "download HTTP 403"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-09",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
+   "ok": false,
+   "error": "sem OPENROUTER_API_KEY"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-09",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859622.jpg",
+   "ok": false,
+   "error": "fetch failed"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-09",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004866932.jpg",
+   "ok": false,
+   "error": "sem OPENROUTER_API_KEY"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-09",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004866934.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-09",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
+   "ok": false,
+   "error": "sem OPENROUTER_API_KEY"
+  }
+ ],
+ "finishedAt": "2026-11-09T21:09:53.031Z",
+ "newReads": 4
+}
