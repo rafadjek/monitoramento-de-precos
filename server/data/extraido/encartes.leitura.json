@@ -1,12 +1,12 @@
 {
- "startedAt": "2026-11-09T21:53:08.948Z",
+ "startedAt": "2026-11-09T21:58:25.951Z",
  "pages": [
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-1.jpeg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 19,
    "model": "gemini-flash-latest"
   },
@@ -15,7 +15,7 @@
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 26,
    "model": "gemini-flash-lite-latest"
   },
@@ -24,7 +24,7 @@
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 30,
    "model": "gemini-flash-lite-latest"
   },
@@ -33,7 +33,7 @@
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-4.jpeg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 25,
    "model": "gemini-flash-lite-latest"
   },
@@ -92,6 +92,6 @@
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-09T21:57:53.498Z",
- "newReads": 4
+ "finishedAt": "2026-11-09T21:58:25.957Z",
+ "newReads": 0
 }
