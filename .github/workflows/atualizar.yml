@@ -57,8 +57,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          IMG_PROXY: ${{ secrets.IMG_PROXY }}
-          IMG_PROXY_KEY: ${{ secrets.IMG_PROXY_KEY }}
+          # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
+          # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
+          IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
         run: |
           node collectors/assai.mjs || echo "::warning::Assaí: lista de encartes indisponível"
           node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"

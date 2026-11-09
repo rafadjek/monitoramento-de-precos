@@ -8,11 +8,11 @@ Os preços são lidos dos sites e folhetos dos próprios mercados e **podem muda
 
 Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 
-1. **GitHub Actions** roda toda quarta-feira (e quando chamado à mão) e executa os coletores em `server/collectors/`.
+1. **GitHub Actions** roda todo dia às 06h. Às quartas (e quando chamado à mão) executa os coletores de catálogo em `server/collectors/`; todo dia lê os encartes em imagem.
 2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos. O agrupamento usa primeiro o código de barras (EAN), que os dois mercados publicam: Spani no campo `codigo_barras` da API, Atacadão pela API pública de catálogo da VTEX (`collectors/atacadao-ean.mjs`, lotes de 50). A regra por nome só junta quando nenhum EAN contradiz. Testes: `node --test group.test.mjs` em `server/`.
 3. O site (`app/`, React + Vite + Tailwind) é publicado na branch `gh-pages`, servida pelo **GitHub Pages**. A busca roda no navegador do visitante.
 
-Folhetos em imagem: o leitor (`server/readers/folheto.mjs`, IA gratuita com visão) existe, mas **está desligado**. Nenhum mercado ativo precisa dele hoje, e o servidor de imagens do Assaí recusa (403) os IPs do GitHub.
+Encartes em imagem: `collectors/baronesa.mjs` e `collectors/assai.mjs` gravam um manifesto (`<mercado>-encartes.json`) com as imagens vigentes, e `server/readers/folheto.mjs` lê cada imagem com IA gratuita com visão (Gemini; reserva OpenRouter): nome, preço, condição ("leve 12 pague 11", "a partir de 3 un.") e a validade impressa. Sem validade, o produto não entra. Cada imagem é lida uma vez só (cache em `server/data/cache`, guardado entre execuções). O relatório da última leitura fica em `server/data/extraido/encartes.leitura.json`. No site, produto de encarte tem o selo "encarte" e o link "ver no encarte".
 
 Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `run-all.mjs` mantém os dados antigos.
 
@@ -22,10 +22,13 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 |---|---|---|
 | Atacadão | API do site (loja de Mauá, CEP 09310-000) | funcionando |
 | Spani | API do site (loja Mauá 1) | funcionando |
-| Assaí | Só encartes em imagem (Ribeirão Pires e Mauá) | fora por enquanto: o servidor das imagens bloqueia o GitHub |
+| Coop | API VTEX do site, loja Barão de Mauá fixa pelo `regionId` (base64 de `SW#coopspbm`; Ribeirão Pires = `coopsprp`) | funcionando |
+| Baronesa (Mauá) | Encarte em imagem (`/classes/encarte.php`), lido por IA | funcionando |
+| Assaí | Encarte em imagem das lojas Ribeirão Pires e Mauá, lido por IA | ver situação abaixo |
+| STUK (Ribeirão Pires) | Ofertas só no Instagram e WhatsApp | só link no rodapé do site |
 | Nagumo | HTML das categorias | em desenvolvimento |
 | Semar | API do site | bloqueada pela Cloudflare |
-| Roldão, Coop, São Jorge | só folheto | a fazer |
+| Roldão, São Jorge | só folheto | a fazer |
 
 Nem todo mercado informa validade de oferta; quando não informa, o site mostra "validade não informada".
 
@@ -33,7 +36,7 @@ Nem todo mercado informa validade de oferta; quando não informa, o site mostra 
 
 **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `(root)`.**
 
-Só se o leitor de folhetos voltar a ser usado: crie uma chave gratuita no [Google AI Studio](https://aistudio.google.com/apikey) e guarde como segredo do repositório (`GEMINI_API_KEY`; reserva opcional `OPENROUTER_API_KEY`). A chave fica só no GitHub e nunca vai para o código nem para o site.
+Leitor de encartes: crie uma chave gratuita no [Google AI Studio](https://aistudio.google.com/apikey) e guarde como segredo do repositório (`GEMINI_API_KEY`; reserva opcional `OPENROUTER_API_KEY`). A chave fica só no GitHub e nunca vai para o código nem para o site.
 
 ## Rodar no computador
 

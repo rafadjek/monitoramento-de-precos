@@ -21,3 +21,4 @@ run-dev.ps1
 start-dev.ps1
 setup*.bat
 setup-ps.ps1
+worker-imagens/.wrangler/

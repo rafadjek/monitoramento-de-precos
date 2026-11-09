@@ -15,7 +15,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE_READ = path.join(ROOT, 'data/cache/leitura');
 const CACHE_PAGES = path.join(ROOT, 'data/cache/paginas');
 const OUT = path.join(ROOT, 'data/extraido');
-const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-2.5-flash,gemini-2.0-flash').split(',');
+const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-2.5-flash,gemini-flash-lite-latest,gemini-2.5-flash-lite,gemini-2.0-flash').split(',');
 const GAP_MS = Number(process.env.READER_GAP_MS || 7000); // ~8 pedidos/min, abaixo do limite gratuito
 const MAX_NEW = Number(process.env.READER_MAX_NEW || 60); // teto de páginas novas por execução; o resto fica para a próxima
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
@@ -69,7 +69,7 @@ async function download(url, referer) {
   let r = await fetch(url, { headers, signal: AbortSignal.timeout(45000) });
   // Proxy de imagens (Worker na Cloudflare), só se configurado e só quando a origem recusa o IP do GitHub.
   if ((r.status === 403 || r.status === 429) && process.env.IMG_PROXY) {
-    r = await fetch(`${process.env.IMG_PROXY}?url=${encodeURIComponent(url)}`, { headers: { 'X-Proxy-Key': process.env.IMG_PROXY_KEY ?? '' }, signal: AbortSignal.timeout(45000) });
+    r = await fetch(`${process.env.IMG_PROXY}?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(45000) });
   }
   if (!r.ok) throw new Error(`download HTTP ${r.status}`);
   const buf = Buffer.from(await r.arrayBuffer());
@@ -86,19 +86,27 @@ async function askGemini(buf, mime) {
     contents: [{ parts: [{ text: PROMPT }, { inline_data: { mime_type: mime, data: buf.toString('base64') } }] }],
     generationConfig: { temperature: 0, responseMimeType: 'application/json', responseSchema: SCHEMA },
   };
-  for (let tent = 0; tent < 5; tent++) {
+  let last = '';
+  for (let tent = 0, onModel = 0; tent < 8; tent++, onModel++) {
     const model = MODELS[modelIdx];
     const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
       method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body), signal: AbortSignal.timeout(120000),
     });
-    if (r.status === 404 && modelIdx < MODELS.length - 1) { console.warn(`  modelo ${model} indisponível, tentando ${MODELS[modelIdx + 1]}`); modelIdx++; continue; }
-    if (r.status === 429 || r.status >= 500) { await sleep(20000 * (tent + 1)); continue; }
+    if (r.status === 404 && modelIdx < MODELS.length - 1) { console.warn(`  modelo ${model} indisponível, tentando ${MODELS[modelIdx + 1]}`); modelIdx++; onModel = -1; continue; }
+    if (r.status === 429 || r.status >= 500) {
+      last = `${model} ${r.status} ${(await r.text()).replace(/\s+/g, ' ').slice(0, 160)}`;
+      console.warn('  ' + last);
+      // cota do dia acabou nesse modelo (ou insiste em falhar): cada modelo tem a sua cota, passa para o próximo
+      if ((/PerDay|per day/i.test(last) || onModel >= 1) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+      await sleep(15000 * (onModel + 1));
+      continue;
+    }
     if (!r.ok) throw new Error(`gemini ${model} ${r.status} ${(await r.text()).slice(0, 200)}`);
     const j = await r.json();
     const t = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
     return { ...JSON.parse(t), model };
   }
-  throw new Error('gemini: limite de uso atingido');
+  throw new Error(`gemini: limite de uso atingido (${last})`);
 }
 
 async function askOpenRouter(buf, mime) {
@@ -128,7 +136,8 @@ async function readPage(url, referer) {
   try { res = await askGemini(buf, mime); }
   catch (e) {
     console.warn('  gemini falhou:', e.message);
-    res = await askOpenRouter(buf, mime);
+    try { res = await askOpenRouter(buf, mime); }
+    catch (e2) { throw new Error(`${e.message} | reserva: ${e2.message}`); }
   }
   const page = { validFrom: res.validFrom ?? null, validUntil: res.validUntil ?? null, products: res.products ?? [], model: res.model, readAt: new Date().toISOString() };
   fs.mkdirSync(CACHE_READ, { recursive: true });
