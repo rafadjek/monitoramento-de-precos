@@ -2,3 +2,8 @@ name = "monitoramento-precos-imagens"
 main = "worker.js"
 compatibility_date = "2026-10-01"
 workers_dev = true
+
+# O servidor de imagens do Assaí só atende o Brasil: o Worker roda perto de São Paulo,
+# mesmo quando chamado pelo GitHub Actions (EUA).
+[placement]
+region = "aws:sa-east-1"

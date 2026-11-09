@@ -29,7 +29,9 @@ const PROMPT = `Você lê uma página de encarte (folheto) de supermercado brasi
 Regras:
 - Só o que está escrito na imagem. Nunca invente nem estime. Se não tiver certeza do preço, omita o produto.
 - price = preço de venda de 1 unidade/embalagem em reais, como número (ex.: 24.9). Preço escrito "33,99" é 33.99.
-- Se o preço só vale com condição ("leve 3 pague 2", "a partir de 3 unidades", "no cartão/clube", "por kg"), coloque o preço da condição em price e descreva a condição em condition (ex.: "a partir de 3 un.", "preço por kg").
+- Se o produto tem preço normal ("cada") E um preço com condição ("a partir de 2 un.", "no app", "no cartão"), price = preço normal e condition = o outro preço com a condição (ex.: "R$ 23,90 a partir de 2 un.", "R$ 4,49 no app").
+- Se o único preço visível depende de condição ("leve 3 pague 2", "por kg"), use-o em price e descreva em condition (ex.: "preço por kg").
+- Ignore frases do tipo "neste pacote o quilo sai por" (é só cálculo do preço por quilo, não é outro produto nem outro preço).
 - "LVE 12 PG 11" no nome significa "leve 12 pague 11": mantenha no name e repita em condition.
 - listPrice = preço "de" riscado, se aparecer; senão null.
 - name = nome do produto como no encarte, com marca e tamanho; brand e size separados quando possível (size ex.: "5kg", "900ml", "12 rolos").
