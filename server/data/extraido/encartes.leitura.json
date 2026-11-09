@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-09T20:48:33.335Z",
+ "startedAt": "2026-11-09T21:10:27.157Z",
  "pages": [
   {
    "market": "Assaí",
@@ -48,7 +48,7 @@
    "offerId": "encarte-2026-11-09",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859622.jpg",
    "ok": false,
-   "error": "fetch failed"
+   "error": "sem OPENROUTER_API_KEY"
   },
   {
    "market": "Baronesa",
@@ -62,7 +62,7 @@
    "offerId": "encarte-2026-11-09",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004866934.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-latest"
   },
@@ -74,6 +74,6 @@
    "error": "sem OPENROUTER_API_KEY"
   }
  ],
- "finishedAt": "2026-11-09T21:09:53.031Z",
+ "finishedAt": "2026-11-09T21:18:34.063Z",
  "newReads": 4
 }
