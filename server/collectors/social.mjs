@@ -114,13 +114,15 @@ async function scrapecreators(net) {
 
 // ---------- cadeia de reserva ----------
 const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators]];
+// SOCIAL_SKIP=apify,brightdata pula serviços (para testar as reservas)
+const SKIP = new Set(String(process.env.SOCIAL_SKIP || '').split(',').map((x) => x.trim()).filter(Boolean));
 async function collect(net) {
   for (const [name, fn] of SERVICES) {
-    if (!KEYS[name]) continue;
+    if (!KEYS[name] || SKIP.has(name)) continue;
     try {
       const posts = (await fn(net)).filter((p) => p.market && recent(p.when));
       console.log(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} trouxe ${posts.length} posts recentes`);
-      if (posts.length) return posts;
+      if (posts.length) return posts.map((p) => ({ ...p, via: name }));
     } catch (e) {
       console.warn(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} falhou (${e.message}); tentando o próximo`);
     }
@@ -139,7 +141,7 @@ for (const p of [...(await collect('ig')), ...(await collect('fb'))]) {
     validUntil: m.daily ? endOfDay(p.when) : null, // os outros precisam da validade impressa na imagem
     validityNote: m.daily ? 'jornal de ofertas do dia' : `post de ofertas (${p.net === 'ig' ? 'Instagram' : 'Facebook'})`,
     stores: [p.market], storeScope: `Ofertas publicadas no ${p.net === 'ig' ? 'Instagram' : 'Facebook'} ${p.owner || p.market}`,
-    link: p.link, images, imageKeys: images.map((_, i) => `${p.net}:${p.code}:${i}`), collectedAt: new Date().toISOString(),
+    via: p.via, link: p.link, images, imageKeys: images.map((_, i) => `${p.net}:${p.code}:${i}`), collectedAt: new Date().toISOString(),
   });
 }
 fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));

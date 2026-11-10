@@ -64,6 +64,7 @@ jobs:
           # reservas, nesta ordem, se a Apify falhar ou o crédito acabar
           BRIGHTDATA_TOKEN: ${{ secrets.BRIGHTDATA_TOKEN }}
           SCRAPECREATORS_KEY: ${{ secrets.SCRAPECREATORS_KEY }}
+          SOCIAL_SKIP: apify # TESTE da reserva ScrapeCreators; tirar depois
           # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
