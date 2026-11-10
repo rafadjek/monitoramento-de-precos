@@ -75,7 +75,10 @@ export function PriceTable({ groups, markets, active, onMarket, favs, onFav, inC
               <div className="min-w-0">
                 <p className="line-clamp-2 text-[0.82rem] font-bold leading-snug sm:text-sm">{g.name}</p>
                 <p className="mt-0.5 text-[0.7rem] text-muted">
-                  {g.items.length > 1 ? `${g.items.length} mercados` : `só no ${best.market}`}
+                  {/* o mais barato pode estar numa coluna fora da tela: fica sempre escrito aqui */}
+                  {g.items.length > 1 && !g.suspect && !g.odd.includes(best.id) ? (
+                    <>Menor: <b className="text-neon">{brl(g.shown)}</b> no {best.market} · {g.items.length} mercados</>
+                  ) : g.items.length > 1 ? `${g.items.length} mercados` : `só no ${best.market}`}
                   {best.validUntil && <> · <Validity o={best} /></>}
                 </p>
                 {/* no celular a coluna de ação some; o botão da lista fica aqui */}
