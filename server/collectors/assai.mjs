@@ -25,7 +25,8 @@ const fimIso = (s) => { const { y, m, d } = br(s); return new Date(Date.UTC(y, m
 
 fs.mkdirSync(EXTRAIDO, { recursive: true });
 const now = new Date();
-const data = await (await get(SRC)).json();
+// t= evita a cópia velha do CDN (em 10/11 ele devolveu a lista de 22/10, sem o encarte vigente)
+const data = await (await get(`${SRC}?t=${now.getTime()}`)).json();
 
 const encartes = [];
 for (const o of data.ofertas) {
@@ -46,6 +47,15 @@ for (const o of data.ofertas) {
   });
 }
 
-fs.writeFileSync(path.join(EXTRAIDO, 'assai-encartes.json'), JSON.stringify(encartes, null, 2));
+// Encarte da leitura anterior que ainda vale e sumiu da lista continua: uma lista velha não apaga oferta válida.
+const OUT = path.join(EXTRAIDO, 'assai-encartes.json');
+let prev = [];
+try { prev = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch {}
+const ids = new Set(encartes.map((e) => e.offerId));
+const kept = prev.filter((e) => !ids.has(e.offerId) && new Date(e.validUntil) >= now).map((e) => ({ ...e, vigente: new Date(e.validFrom) <= now }));
+if (kept.length) console.log(`mantidos da leitura anterior (ainda valem): ${kept.map((e) => e.offerId).join(', ')}`);
+encartes.push(...kept);
+
+fs.writeFileSync(OUT, JSON.stringify(encartes, null, 2));
 // Os preços só existem nas imagens: quem lê é readers/folheto.mjs (o assai.json sai de lá).
 console.log(`encartes das lojas: ${encartes.length}, vigentes: ${encartes.filter((e) => e.vigente).length}, requisições: ${requests}`);
