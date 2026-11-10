@@ -56,12 +56,13 @@ const STORE_LABEL = {
   Semar: 'preços da loja 06 Mauá',
   Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
   Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
+  Dia: 'destaques do folheto da loja de Mauá (Av. Dom José Gaspar, 1016), via Tiendeo',
   'Roldão': 'encartes que valem na loja de Mauá (o Roldão não tem loja em Ribeirão Pires)',
 };
 // Cidades das lojas usadas por mercado (filtro do site).
 const CITIES = {
   'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
-  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'],
+  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'], Dia: ['Mauá'],
   // preço da loja online de São Bernardo: não entra no filtro "Lojas em Mauá/Ribeirão Pires"
   Extra: ['São Bernardo do Campo'],
 };
@@ -74,14 +75,6 @@ index.infoOnly = [{
     { label: 'Instagram', url: 'https://www.instagram.com/supermercadostuk/' },
     { label: 'WhatsApp', url: 'https://wa.me/5511980810790?text=Oi!%20Quero%20receber%20as%20ofertas%20do%20dia' },
     { label: 'Site', url: 'https://supermercadostuk.com.br/' },
-  ],
-}, {
-  name: 'Dia', cities: ['Mauá'],
-  note: 'O site do Dia não publica as ofertas da loja (mostra "nenhuma oferta encontrada"); elas saem só no app ClubDIA.',
-  address: 'Av. Dom José Gaspar, 1016, Matriz, Mauá',
-  links: [
-    { label: 'Página da loja', url: 'https://www.dia.com.br/lojas/sp-maua-matriz-avenida-dom-jose-gaspar-1016/' },
-    { label: 'App ClubDIA', url: 'https://play.google.com/store/apps/details?id=br.com.dia.customers' },
   ],
 }];
 const built = [];

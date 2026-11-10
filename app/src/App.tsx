@@ -51,6 +51,9 @@ export default function App() {
   const [shown, setShown] = useState(PAGE);
   const [favs, setFavs] = useState<Set<string>>(() => new Set(load<string[]>('bate-favoritos', [])));
   const [onlyFavs, setOnlyFavs] = useState(false);
+  // produtos marcados para pôr na lista de uma vez
+  const [picked, setPicked] = useState<Set<string>>(new Set());
+  const pick = (id: string) => { const n = new Set(picked); if (n.has(id)) n.delete(id); else n.add(id); setPicked(n); };
   const [cart, setCartState] = useState<CartItem[]>(() => {
     // lista recebida por link (?lista=...) se junta à que já está no navegador
     const mine = load<CartItem[]>('bate-lista', []);
@@ -147,14 +150,14 @@ export default function App() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1400px] px-4 pb-6 pt-8 sm:pt-12">
+      <section className="mx-auto max-w-[1400px] px-4 pb-4 pt-4 sm:pt-6">
         <div className="flex items-start gap-3">
-          <Icon name="bolt" className="mt-1 h-12 w-12 shrink-0 text-fire drop-shadow-[0_0_12px_rgba(255,138,30,.8)] sm:h-20 sm:w-20" fill />
+          <Icon name="bolt" className="mt-1 h-9 w-9 shrink-0 text-fire drop-shadow-[0_0_12px_rgba(255,138,30,.8)] sm:h-12 sm:w-12" fill />
           <div>
-            <h1 className="font-display text-[2.6rem] font-extrabold italic uppercase leading-[0.9] tracking-tight sm:text-7xl">
+            <h1 className="font-display text-[2rem] font-extrabold italic uppercase leading-[0.9] tracking-tight sm:text-5xl">
               Combate de <span className="title-fire">preços</span>
             </h1>
-            <p className="mt-3 max-w-xl text-sm font-bold uppercase tracking-wide text-ink/90 sm:text-lg">
+            <p className="mt-1.5 text-xs font-bold uppercase tracking-wide text-ink/85 sm:text-sm">
               Compare os preços dos mercados de Mauá e Ribeirão Pires{updated && `, atualizados em ${updated}`}.
             </p>
           </div>
@@ -232,7 +235,7 @@ export default function App() {
               </div>
             )}
             {status === 'ok' && list.length > 0 && (
-              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} picked={picked} onPick={pick} />
             )}
             {status === 'ok' && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">
@@ -247,6 +250,18 @@ export default function App() {
           <Offers offers={offers} onAdd={(o) => add(o.g ?? `p:${o.id}`)} />
         </aside>
       </div>
+
+      {picked.size > 0 && (
+        <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
+          <div className="flex items-center gap-3 rounded-2xl border border-sky/70 bg-panel px-4 py-3 shadow-sky">
+            <span className="text-sm font-bold">{picked.size} {picked.size === 1 ? 'selecionado' : 'selecionados'}</span>
+            <button onClick={() => { const n = [...cart]; for (const id of picked) if (!n.some((c) => c.g === id)) n.push({ g: id, qty: 1 }); setCart(n); setPicked(new Set()); }} className="inline-flex items-center gap-1.5 rounded-xl bg-neon px-4 py-2 font-bold text-night">
+              <Icon name="cart" className="h-4 w-4" />Pôr na lista
+            </button>
+            <button onClick={() => setPicked(new Set())} className="text-sm text-muted underline">desmarcar</button>
+          </div>
+        </div>
+      )}
 
       <footer className="border-t border-edge bg-night/90">
         <div className="mx-auto max-w-[1400px] px-4 py-6 text-xs text-muted">

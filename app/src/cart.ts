@@ -74,3 +74,36 @@ export function decodeCart(s: string | null): CartItem[] {
     return { g: decodeURIComponent(g), qty: Math.max(1, Math.min(99, parseInt(q) || 1)) };
   }).filter((c) => c.g);
 }
+
+// Plano de compra: onde comprar cada item. Usa a divisão em 2 mercados se ela sair mais barata
+// que o melhor mercado sozinho (ou se nenhum mercado tiver a lista inteira).
+export type PlanLine = { g: string; qty: number; market: string; unit: number; total: number };
+export function buildPlan(groups: Map<string, Group>, cart: CartItem[], markets: string[]): { lines: PlanLine[]; total: number; split: boolean } | null {
+  const rank = rankMarkets(groups, cart, markets);
+  const single = rank.find((r) => r.missing.length === 0);
+  const pair = bestPair(groups, cart, markets);
+  const usePair = pair && (!single || pair.total < single.total - 0.009);
+  if (!usePair && !single) return null;
+  const lines: PlanLine[] = cart.map((c) => {
+    const market = usePair ? pair!.picks.find((p) => p.g === c.g)!.market : single!.market;
+    const unit = priceIn(groups.get(c.g)!, market)!.cost;
+    return { g: c.g, qty: c.qty, market, unit, total: Math.round(unit * c.qty * 100) / 100 };
+  });
+  return { lines, total: Math.round(lines.reduce((s, l) => s + l.total, 0) * 100) / 100, split: !!usePair };
+}
+
+// Texto da lista para mandar no WhatsApp: itens agrupados por mercado, com preço e total.
+const money = (n: number) => 'R$ ' + n.toFixed(2).replace('.', ',');
+export function shareText(plan: { lines: PlanLine[]; total: number }, nameOf: (g: string) => string, date = new Date()): string {
+  const byMarket = new Map<string, PlanLine[]>();
+  for (const l of plan.lines) (byMarket.get(l.market) ?? byMarket.set(l.market, []).get(l.market)!).push(l);
+  const out = ['🛒 *Minha lista – Bate Ofertas*', ''];
+  for (const [m, ls] of byMarket) {
+    out.push(`🏪 *${m}*`);
+    for (const l of ls) out.push(`• ${l.qty > 1 ? l.qty + 'x ' : ''}${nameOf(l.g)} — ${money(l.total)}`);
+    out.push(`Subtotal: ${money(ls.reduce((s, l) => s + l.total, 0))}`, '');
+  }
+  out.push(`💰 *Total: ${money(plan.total)}*`);
+  out.push(`_Preços de ${date.toLocaleDateString('pt-BR')}; confira na loja._`);
+  return out.join('\n');
+}

@@ -3,42 +3,58 @@ import { Icon, MarketLogo, Price, Thumb, Validity } from './Parts';
 
 // Linha de produto como na primeira versão: só os mercados que têm o produto, lado a lado,
 // do mais barato ao mais caro, com o mais barato em destaque. Sem colunas vazias.
-type Props = { groups: Group[]; only: string; favs: Set<string>; onFav: (id: string) => void; inCart: Set<string>; onAdd: (id: string) => void };
+type Props = {
+  groups: Group[]; only: string; favs: Set<string>; onFav: (id: string) => void;
+  inCart: Set<string>; onAdd: (id: string) => void; picked: Set<string>; onPick: (id: string) => void;
+};
 
 const byQty = (o: Indexed) => !!o.condition && /levando|a partir|leve \d/i.test(o.condition);
+
+// Texto da condição da oferta, mostrado ao passar o mouse (ou tocar) no asterisco
+export function conditionText(it: Indexed, g: Group): string | null {
+  const parts: string[] = [];
+  if (it.condition) parts.push(it.condition.replace(/^R\$\s*[\d.,]+\s*/, ''));
+  if (byQty(it) && it.listPrice) parts.push(`1 unidade sai por ${brl(it.listPrice)}`);
+  const u = it._u ?? 1;
+  if (g.perUnit && u > 1) parts.push(`preço de cada unidade; a embalagem com ${u} custa ${brl(it.price)}`);
+  return parts.length ? parts.join(' · ') : null;
+}
+
+export function Star({ text }: { text: string }) {
+  return (
+    <span title={text} aria-label={text} tabIndex={0} className="ml-0.5 inline-grid h-4 w-4 cursor-help place-items-center rounded-full bg-gold text-[0.7rem] font-black leading-none text-night">*</span>
+  );
+}
 
 function Tag({ g, it, first }: { g: Group; it: Indexed; first: boolean }) {
   const odd = g.odd.includes(it.id);
   const alone = g.items.length === 1;
   const best = first && !odd && !g.suspect && !alone;
-  const units = it._u ?? 1;
-  const unitView = g.perUnit && units > 1;
   const value = g.perUnit ? each(it) : it.price;
   const diff = value - (g.perUnit ? each(g.items[0]) : g.items[0].price);
-  const strike = it.listPrice && it.listPrice > it.price && !byQty(it) && !unitView ? it.listPrice : null;
-  const cls = best
-    ? 'border-neon/80 bg-neon/10 shadow-neon'
-    : odd ? 'border-dashed border-signal/70 opacity-80' : 'border-edge bg-panel2';
+  const strike = it.listPrice && it.listPrice > it.price && !byQty(it) && !(g.perUnit && (it._u ?? 1) > 1) ? it.listPrice : null;
+  const cond = conditionText(it, g);
+  const cls = best ? 'border-neon/80 bg-neon/10 shadow-neon' : odd ? 'border-dashed border-signal/70 opacity-80' : 'border-edge bg-panel2';
   const body = (
     <>
       <MarketLogo name={it.market} h="h-7" />
       {strike && <s className="num mt-1 block text-[0.7rem] text-muted">{brl(strike)}</s>}
-      <span className={`mt-1 block ${best ? 'text-neon' : 'text-ink'}`}><Price value={value} size={best ? 'lg' : 'md'} /></span>
-      {unitView && <span className="block text-[0.7rem] text-muted">cada · {brl(it.price)} com {units}</span>}
-      {it.condition && <span className="mt-0.5 block text-[0.66rem] font-bold uppercase leading-tight text-gold">{it.condition.replace(/^R\$\s*[\d.,]+\s*/, '')}</span>}
-      {byQty(it) && it.listPrice && <span className="num block text-[0.7rem] text-muted">1 un: {brl(it.listPrice)}</span>}
+      <span className={`mt-1 flex items-start ${best ? 'text-neon' : 'text-ink'}`}>
+        <Price value={value} size={best ? 'lg' : 'md'} />
+        {cond && <Star text={cond} />}
+      </span>
       <span className={`mt-0.5 block text-[0.72rem] ${best ? 'font-bold text-neon' : 'text-muted'}`}>
-        {odd ? <b className="text-signal">preço fora do padrão</b> : best ? <span className="inline-flex items-center gap-1"><Icon name="crown" className="h-3.5 w-3.5" fill />Menor preço</span> : !alone && diff > 0.004 ? `+ ${brl(diff)}${g.perUnit ? ' cada' : ''}` : ''}
+        {odd ? <b className="text-signal">preço fora do padrão</b> : best ? <span className="inline-flex items-center gap-1"><Icon name="crown" className="h-3.5 w-3.5" fill />Menor preço</span> : !alone && diff > 0.004 ? `+ ${brl(diff)}` : ''}
       </span>
     </>
   );
-  const box = `block min-w-[7.6rem] rounded-xl border px-3 py-2 text-left ${cls}`;
+  const box = `block min-w-[7.2rem] rounded-xl border px-3 py-2 text-left ${cls}`;
   return it.productUrl ? (
     <a href={it.productUrl} target="_blank" rel="noopener noreferrer" className={`${box} hover:brightness-125`} title={`Ver no ${it.market}`}>{body}</a>
   ) : <div className={box}>{body}</div>;
 }
 
-export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props) {
+export function ProductList({ groups, only, favs, onFav, inCart, onAdd, picked, onPick }: Props) {
   return (
     <ul className="divide-y divide-edge/80 overflow-hidden rounded-2xl border border-edge bg-panel">
       {groups.map((g) => {
@@ -46,13 +62,19 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props)
         const alone = g.items.length === 1;
         // com um mercado escolhido, a etiqueta dele vem primeiro (as outras continuam para comparar)
         const items = only ? [...g.items.filter((i) => i.market === only), ...g.items.filter((i) => i.market !== only)] : g.items;
-        const fav = favs.has(g.id), added = inCart.has(g.id);
+        const fav = favs.has(g.id), added = inCart.has(g.id), sel = picked.has(g.id);
         return (
-          <li key={g.id} className="flex gap-3 p-3 sm:p-4">
-            <Thumb src={g.image} name={g.name} size={68} />
+          <li key={g.id} className={`flex gap-3 p-3 sm:gap-4 sm:p-4 ${sel ? 'bg-sky/10' : ''}`}>
+            <div className="flex shrink-0 flex-col items-center gap-2">
+              <Thumb src={g.image} name={g.name} size={104} />
+              <label className="flex cursor-pointer items-center gap-1.5 text-xs text-muted">
+                <input type="checkbox" checked={sel} onChange={() => onPick(g.id)} className="h-4 w-4 accent-[#2F8BFF]" />
+                selecionar
+              </label>
+            </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-start gap-2">
-                <h3 className="min-w-0 flex-1 text-[0.95rem] font-bold leading-snug">{g.name}</h3>
+                <h3 className="min-w-0 flex-1 text-base font-bold leading-snug">{g.name}</h3>
                 <button onClick={() => onFav(g.id)} aria-pressed={fav} aria-label={fav ? 'Tirar dos favoritos' : 'Favoritar'} className={`shrink-0 p-0.5 ${fav ? 'text-signal' : 'text-muted hover:text-ink'}`}>
                   <Icon name="heart" className="h-5 w-5" fill={fav} />
                 </button>

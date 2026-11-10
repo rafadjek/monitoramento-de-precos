@@ -42,3 +42,14 @@ test('link da lista ida e volta', () => {
   assert.deepEqual(decodeCart(encodeCart(c)), c);
   assert.deepEqual(decodeCart('x*500'), [{ g: 'x', qty: 99 }]);
 });
+
+test('plano usa a divisão em 2 quando sai mais barata, e o texto agrupa por mercado', async () => {
+  const { buildPlan, shareText } = await import('./cart.ts');
+  const p = buildPlan(groups, cart, ['A', 'B', 'C'])!;
+  assert.equal(p.split, true);
+  assert.equal(p.total, 92);
+  const t = shareText(p, (g) => g, new Date(2026, 10, 10));
+  assert.match(t, /\*A\*\n• arroz — R\$ 20,00\nSubtotal: R\$ 20,00/);
+  assert.match(t, /\*B\*\n• 2x cafe — R\$ 48,00\n• 6x leite — R\$ 24,00\nSubtotal: R\$ 72,00/);
+  assert.match(t, /Total: R\$ 92,00/);
+});

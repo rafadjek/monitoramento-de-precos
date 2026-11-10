@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -67,6 +67,7 @@ jobs:
           node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"
           node collectors/joanin.mjs || echo "::warning::Joanin: tabloide indisponível"
           node collectors/roldao.mjs || echo "::warning::Roldão: encarte indisponível"
+          node collectors/dia.mjs || echo "::warning::Dia: folheto indisponível no Tiendeo"
           node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json
 
       - name: Guardar dados coletados

@@ -22,7 +22,7 @@ Encartes em imagem: `collectors/baronesa.mjs` e `collectors/assai.mjs` gravam um
 
 **Tela ("Bate Ofertas", desde 10/11/2026).** Tema escuro em neon pelo modelo do Rafael (`app/public/fundo.webp`, `bate-ofertas.png`). Tabela com um mercado por coluna: produto fixo à esquerda, ação fixa à direita, 4 mercados visíveis e barra para arrastar até os outros (sempre todos os mercados da região); toque no logotipo filtra por aquele mercado. Categorias finas (`server/category.mjs`: hortifruti, carnes, laticínios, bebidas, mercearia, limpeza, higiene, outros) pelo departamento de cada site e pelo nome. Ordem: menor preço, maior preço, nome. Favoritos e a lista ficam no navegador (localStorage), sem login.
 
-**Carrinho Inteligente** (`app/src/cart.ts`, testes em `app/src/cart.test.ts`, `npm test` em `app/`): lista com quantidade; total em cada mercado (quem tem a lista inteira primeiro; "tem 3 de 4" para os outros); melhor compra e economia contra o mais caro; melhor divisão em 2 mercados; link para compartilhar (`?lista=id*qtd~...`); aviso de preço por quantidade ou que vence logo. Preço fora do padrão não entra na conta.
+**Carrinho Inteligente** (`app/src/cart.ts`, testes em `app/src/cart.test.ts`, `npm test` em `app/`): lista com quantidade (ou vários produtos marcados de uma vez); cada item mostra onde comprar; total em cada mercado (quem tem a lista inteira primeiro; "tem 3 de 4" para os outros); melhor compra e economia contra o mais caro; melhor divisão em 2 mercados; "Mandar no WhatsApp" com a lista pronta, agrupada por mercado, com preços e total (`shareText`); link `?lista=id*qtd~...` ainda é aceito; aviso de preço por quantidade ou que vence logo. Preço fora do padrão não entra na conta.
 
 **Disponibilidade.** Produto esgotado na loja não entra: Atacadão pelo `availability` da oferta, Nagumo pelo `available` do produto (na loja 038 Mauá só ~6,3 mil dos ~26 mil do catálogo estão à venda); os outros coletores já filtravam.
 
@@ -42,7 +42,7 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 | Semar | API OSuper `sense.osuper.com.br/336/1705/v2/search` (loja 06 Mauá), chamada de dentro da página (a Cloudflare só atende navegador); 20 por página, por departamento | funcionando (~9,5 mil) |
 | Extra | API GPA `api.vendas.gpa.digital/ex/search/search`. As lojas de Mauá e Ribeirão Pires não vendem pelo site: usa a loja online mais próxima (1867 Demarchi, São Bernardo, `storeId` 1162). A busca não aceita termo vazio: 158 termos de itens comuns | funcionando (~4 mil; cidade "São Bernardo do Campo" no filtro) |
 | Joanin | Tabloide em imagem em `/ofertas/` (`pagN-full-tabloide-*-DDMMAAAA.jpg`), lido por IA | funcionando |
-| Dia (Mauá) | O site não publica ofertas de nenhuma loja ("nenhuma oferta encontrada"); só no app ClubDIA | cartão no rodapé |
+| Dia (Mauá) | O site do Dia não publica ofertas. Entra pelos produtos em destaque do folheto da loja de Mauá na página pública do Tiendeo (`/maua/supermercado-dia`): nome, preço, De/Por e foto, em texto, sem IA. O folheto inteiro fica em `/Catalogos/`, que o robots.txt do Tiendeo proíbe, por isso não é usado | funcionando (~10 destaques) |
 | Roldão (Mauá) | Encarte em PDF por campanha em `/ofertas/`; entram as que citam Mauá ou valem para a rede. O PDF vem de `admin-ajax.php?action=elem_get_pdf_oferta_iframe` e o leitor manda o PDF direto ao Gemini (sem foto recortada). Sem loja em Ribeirão Pires | funcionando |
 | São Jorge | só folheto | a fazer |
 
