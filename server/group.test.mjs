@@ -75,3 +75,51 @@ test('palavra de embalagem do encarte não impede juntar', () => {
   assert.ok(grouped(o('A', 'REQUEIJÃO CREMOSO BATAVO TRADICIONAL POTE 400G'), o('B', 'Requeijão Cremoso Batavo Tradicional 400g')));
   assert.ok(grouped(o('A', 'ÁGUA SANITÁRIA YPÊ GALÃO 5L'), o('B', 'Água Sanitária Ypê 5L')));
 });
+
+const b = (market, name, brand, price, ean = null) => ({ market, name, brand, price, ean });
+
+test('mesmo produto descrito de outro jeito junta (palavras que só descrevem)', () => {
+  assert.ok(grouped(b('A', 'Café Melitta Tradicional 500g', 'Melitta', 22.9, '7891021006125'), b('B', 'Café Torrado e Moído Melitta Tradicional Vácuo 500g', 'Melitta', 27.99, '7891021001885')));
+  assert.ok(grouped(b('A', 'Achocolatado em Pó Nescau 670g', 'Nescau', 17.9), b('B', 'ACHOCOLATADO EM PÓ NESCAU NESTLÉ 670G', 'Nescau', 18.5)));
+  // "lata" de um lado só não é palavra neutra: não junta
+  assert.ok(!grouped(b('A', 'Achocolatado em Pó Nescau 370g', 'Nescau', 12.9), b('B', 'Achocolatado em Pó Nescau Lata 370g', 'Nescau', 13.5)));
+});
+
+test('palavra que muda o produto nunca junta, mesmo com nome quase igual', () => {
+  assert.ok(!grouped(b('A', 'Água Mineral Crystal Com gás 500ml', 'Crystal', 2.5, '7894900530001'), b('B', 'Água Mineral Crystal sem Gás 500ml', 'Crystal', 2.3, '7894900531008')));
+  assert.ok(!grouped(b('A', 'Manteiga Aviação com Sal 200g', 'Aviação', 14.9), b('B', 'Manteiga Aviação sem Sal 200g', 'Aviação', 14.9)));
+  assert.ok(!grouped(b('A', 'Refresco em Pó Clight Limonada 8g', 'Clight', 1.5), b('B', 'Refresco em pó Clight Sem Açúcar Limonada 8g', 'Clight', 1.5)));
+  assert.ok(!grouped(b('A', 'Torrada Bauducco Tradicional 284g', 'Bauducco', 8.9), b('B', 'Torrada Integral Bauducco 284g', 'Bauducco', 9.2)));
+  assert.ok(!grouped(b('A', 'Requeijão Vigor Tradicional 200g', 'Vigor', 8.9), b('B', 'Requeijão Cremoso Light Vigor 200g', 'Vigor', 8.9)));
+  assert.ok(!grouped(b('A', 'Refrigerante Coca-Cola 2L', 'Coca-Cola', 10.9), b('B', 'Refrigerante Coca-Cola Zero 2L', 'Coca-Cola', 10.9)));
+});
+
+test('nome quase igual com preço muito diferente não junta', () => {
+  assert.ok(!grouped(b('A', 'Café Melitta Tradicional 500g', 'Melitta', 22.9), b('B', 'Café Torrado Melitta Tradicional 500g', 'Melitta', 49.9)));
+});
+
+test('quantidade de unidades lida do nome', async () => {
+  const { parsePack } = await import('./group.mjs');
+  assert.equal(parsePack('Hambúrguer Bovino Misto 36x56g Aurora Faroeste'), 36);
+  assert.equal(parsePack('Bolinho Ana Maria Triplo Chocolate 70g | Com 2 Unidades'), 2);
+  assert.equal(parsePack('Cerveja Brahma Lata 350ml c/12'), 12);
+  assert.equal(parsePack('Água Mineral Fardo 12 Unidades 500ml'), 12);
+  assert.equal(parsePack('Refrigerante Guaraná Pack 6 350ml'), 6);
+  assert.equal(parsePack('Arroz Camil Pacote 5kg'), 1);
+  assert.equal(parsePack('Energético Sabor Maçã Sugarfree Red Bull 250ml'), 1);
+  assert.equal(parsePack('Feijão Carioca Tipo 1 1kg'), 1);
+  assert.equal(parsePack('Caixa de Bombom Garoto 250g'), 1);
+  // contagem que é o próprio produto (sem peso/volume) não é caixa
+  assert.equal(parsePack('Fralda Descartável Huggies Máxima Proteção G Com 58 Unidades'), 1);
+  assert.equal(parsePack('Escova Dental Colgate White Active Prevenção C/2'), 1);
+  // desconto não é quantidade
+  assert.equal(parsePack('Limpador Desengordurante Veja 500ml Com 30% De Desconto Cozinha'), 1);
+  assert.equal(parsePack('Alvejante Vanish 1.2l Sachê Sacola Com 2 Unidades Com 50% De Desconto Na Segunda'), 2);
+  assert.equal(parsePack('Chocolate Lacta Bis 3 Pack De 100,8g Leite'), 3);
+  assert.equal(parsePack('Inseticida Elétrico Sbp Refil Cheiro Suave 2un 32,9ml'), 2);
+  assert.equal(parsePack('Odorizador Bom Ar Freshmatic 250ml Refil Sacola Com 50% Na Segunda Unidade'), 2);
+  assert.equal(parsePack('2 Inseticida Elétrico Suave 45 Noites SBP com Refil 35ML'), 2);
+  assert.equal(parsePack('Kit Tira Manchas Vanish Gel Multiuso 1,2L + Crystal White 1,2L'), 2);
+  assert.equal(parsePack('Kit Shampoo 350Ml + Condicionador 175Ml Dove'), 1);
+  assert.equal(parsePack('Água Mineral 1,5L'), 1);
+});

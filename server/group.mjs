@@ -7,10 +7,22 @@ import { normalizeEan } from './ean.mjs';
 const STOP = new Set(['de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'para', 'a', 'o', 'c', 'por']);
 const NEUTRAL = new Set([
   'pacote', 'pct', 'pcte', 'embalagem', 'emb', 'unidade', 'unid', 'un', 'tradicional', 'original', 'classico',
-  'novo', 'nova', 'oferta', 'especial',
+  'novo', 'nova', 'oferta',
   // embalagem, como os encartes escrevem ("POTE 400G", "GALÃO 5L", "TP 1L"); não muda o produto.
   // Lata, pet, vidro, garrafa e sachê ficam de fora: distinguem produtos (óleo lata x pet, refil x frasco).
   'pote', 'galao', 'frasco', 'tp', 'bisnaga', 'bandeja', 'caixa', 'cx', 'zip', 'iqf',
+]);
+
+// Palavras que só descrevem o que o produto já é (tipo de produto, fabricante, embalagem equivalente).
+// Nomes da mesma marca e do mesmo tamanho que diferem SÓ por elas são o mesmo produto, mesmo com EAN diferente
+// ("Café Melitta Tradicional 500g" x "Café Torrado e Moído Melitta Tradicional Vácuo 500g").
+// Lista fechada de propósito: qualquer outra palavra a mais (sem, zero, light, integral, um sabor) separa.
+const SOFT = new Set([
+  'torrado', 'moido', 'vacuo', 'almofada', 'soluvel', 'vidro',
+  'nestle', 'elma', 'chip', 'chips', 'danone',
+  'cerveja', 'lager', 'pilsen', 'long', 'neck', 'refrigerante',
+  'biscoito', 'bolacha', 'salgadinho', 'achocolatado', 'po',
+  'tipo', '1', 'economico', 'economica',
 ]);
 
 export const strip = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -39,6 +51,35 @@ const singular = (w) => (w.length > 4 && w.endsWith('s') && !w.endsWith('ss') ? 
 export function tokens(name) {
   let s = strip(name).replace(SIZE_RE, ' ').replace(/[^a-z0-9\s]/g, ' ');
   return s.split(/\s+/).filter((w) => w && !STOP.has(w)).map(singular);
+}
+
+// Quantas unidades vêm na embalagem, lido do nome. Sem número no nome, 1 (nunca chuta).
+// "36x56g", "2x32,9ml", "3 pack de 100,8g": sempre caixa/kit.
+// "c/12", "com 2 unidades", "fardo 12", "2un": só é caixa quando o produto também tem peso ou volume
+// ("Cerveja 350ml c/12", "Bolinho 70g com 2 unidades"). Sem peso/volume a contagem É o produto
+// ("Fralda com 58 unidades", "Escova c/2") e fica 1, para comparar igual com "58 un" de outro mercado.
+const MEASURE = /\d\s*(?:kg|g|mg|ml|lt|l)\b/;
+const PACK_ALWAYS = [
+  /\b(\d{1,3})\s*x\s*\d+(?:[.,]\d+)?\s*(?:kg|g|mg|ml|lt|l)\b/,
+  /\b(\d{1,3})\s*pack\b/,
+];
+const PACK_WITH_MEASURE = [
+  /(?:\bc\/|\b(?:com|cx|caixa|fardo|pack|kit|display|bandeja)\b)\s*(?:com\s*)?(\d{1,3})\b(?!\s*(?:%|kg|g|mg|ml|lt|l|cm|m)\b|\s*%)/,
+  /\b(\d{1,3})\s*(?:un|unid|unidade|unidades|und)\b/,
+  /^(\d{1,2})\s+(?=[a-z])/, // "2 Inseticida Elétrico ... 35ml"
+];
+export function parsePack(name, size = '') {
+  const s = strip(name);
+  const ok = (m) => { if (!m) return 0; const n = parseInt(m[1]); return n > 1 && n <= 100 ? n : 0; };
+  for (const re of PACK_ALWAYS) { const n = ok(s.match(re)); if (n) return n; }
+  // "sacola ... 50% na segunda (unidade)": o Spani vende assim o pacote com 2
+  if (/\bsacola\b/.test(s) && /\b(?:na|a) segunda\b/.test(s)) return 2;
+  // kit de iguais: "1,2L + 1,2L"
+  const kit = [...s.matchAll(/(\d+(?:[.,]\d+)?)\s*(kg|g|ml|lt|l)\b/g)].map((m) => m[1].replace(',', '.') + m[2]);
+  if (kit.length >= 2 && s.includes('+') && new Set(kit).size === 1) return kit.length;
+  if (!MEASURE.test(s) && !MEASURE.test(strip(size))) return 1;
+  for (const re of PACK_WITH_MEASURE) { const n = ok(s.match(re)); if (n) return n; }
+  return 1;
 }
 
 export function signature(o) {
@@ -90,6 +131,30 @@ export function groupOffers(offers) {
 
   const bySig = new Map();
   sigs.forEach((s, i) => { if (!s.key) return; if (bySig.has(s.key)) union(bySig.get(s.key), i, true); else bySig.set(s.key, i); });
+
+  // Nomes quase iguais: mesma marca, mesmo tamanho, preço parecido, e as palavras que sobram de um lado
+  // ou do outro são todas da lista SOFT. Junta por cima do EAN (são cadastros diferentes do mesmo produto).
+  const brandOf = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
+  const near = new Map();
+  sigs.forEach((sg, i) => {
+    const b = brandOf(offers[i]);
+    if (!sg.size || !b) return;
+    const k = sg.size + '|' + b;
+    (near.get(k) ?? near.set(k, []).get(k)).push(i);
+  });
+  for (const idx of near.values()) {
+    if (idx.length < 2 || idx.length > 200) continue;
+    for (let x = 0; x < idx.length; x++) for (let y = x + 1; y < idx.length; y++) {
+      const a = idx[x], b = idx[y];
+      if (find(a) === find(b)) continue;
+      const ca = sigs[a].core, cb = sigs[b].core;
+      const diff = [...ca].filter((t) => !cb.has(t)).concat([...cb].filter((t) => !ca.has(t)));
+      if (!diff.length || !diff.every((t) => SOFT.has(t))) continue;
+      const pa = offers[a].price, pb = offers[b].price;
+      if (pa > 0 && pb > 0 && ratio(pa, pb) > 1.3) continue;
+      union(a, b, false);
+    }
+  }
 
   const members = new Map();
   for (let i = 0; i < n; i++) { const r = find(i); if (!members.has(r)) members.set(r, []); members.get(r).push(i); }

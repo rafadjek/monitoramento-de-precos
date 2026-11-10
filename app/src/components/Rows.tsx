@@ -1,4 +1,4 @@
-import { brl, type Group } from '../lib';
+import { brl, each, type Group } from '../lib';
 import { MarketTag, Thumb, Validity } from './Parts';
 
 export function GroupRow({ g }: { g: Group }) {
@@ -12,18 +12,27 @@ export function GroupRow({ g }: { g: Group }) {
         <p className="mt-0.5 text-sm text-muted">
           {alone ? (
             `Por enquanto só achei no ${best.market}`
+          ) : g.suspect ? (
+            <b className="text-signal">Preços muito diferentes: um deles pode ser caixa ou fardo. Confira no site.</b>
           ) : g.saving > 0 ? (
             <>
-              Economize <b className="text-ink">{brl(g.saving)}</b> ({Math.round(g.savingPct * 100)}%) comprando no {best.market}
+              Economize <b className="text-ink">{brl(g.saving)}</b>{g.perUnit ? ' em cada unidade' : ''} ({Math.round(g.savingPct * 100)}%) comprando no {best.market}
             </>
           ) : (
-            `Mesmo preço em ${g.items.length} mercados`
+            `Mesmo preço em ${g.items.length - g.odd.length} mercados`
           )}
         </p>
         <ul className="mt-2 flex flex-wrap gap-2">
           {g.items.map((it, i) => (
             <li key={it.id}>
-              <MarketTag o={it} cheapest={i === 0} diff={it.price - best.price} alone={alone} />
+              <MarketTag
+                o={it}
+                cheapest={i === 0 && !g.suspect}
+                diff={each(it) - each(best)}
+                alone={alone || g.suspect}
+                perUnit={g.perUnit}
+                odd={g.odd.includes(it.id)}
+              />
             </li>
           ))}
         </ul>

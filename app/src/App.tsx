@@ -1,5 +1,5 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import { buildGroups, norm, type Group, type Indexed, type Offer } from './lib';
+import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
 import { GroupRow, SkeletonRows } from './components/Rows';
 import { MarketLogo } from './components/Parts';
 
@@ -30,7 +30,8 @@ export default function App() {
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading');
   const [attempt, setAttempt] = useState(0);
 
-  const [q, setQ] = useState('');
+  // ?q=café no endereço abre já com a busca (dá para mandar o link de uma busca)
+  const [q, setQ] = useState(() => new URLSearchParams(location.search).get('q') ?? '');
   const dq = useDeferredValue(q);
   const [category, setCategory] = useState('');
   const [market, setMarket] = useState('');
@@ -78,7 +79,7 @@ export default function App() {
     const disc = (g: Group) => { const o = g.items[0]; return o.listPrice && o.listPrice > o.price ? (o.listPrice - o.price) / o.listPrice : 0; };
     return r.sort(
       sort === 'nome' ? (a, b) => a.name.localeCompare(b.name)
-        : sort === 'preco' ? (a, b) => lead(a) - lead(b) || a.items[0].price - b.items[0].price
+        : sort === 'preco' ? (a, b) => lead(a) - lead(b) || each(a.items[0]) - each(b.items[0])
         // quem dá para comparar vem primeiro; depois, o maior desconto de quem está sozinho
         : (a, b) => lead(a) - lead(b) || b.saving - a.saving || b.items.length - a.items.length || disc(b) - disc(a),
     );

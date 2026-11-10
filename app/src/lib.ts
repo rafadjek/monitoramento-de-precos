@@ -14,6 +14,7 @@ export type Offer = {
   validityNote: string | null;
   source?: 'encarte';
   condition?: string | null;
+  units?: number; // caixa/fardo: quantas unidades vêm
   g?: string;
 };
 
@@ -28,6 +29,9 @@ export type Group = {
   items: Indexed[]; // um por mercado, do mais barato ao mais caro
   saving: number;
   savingPct: number;
+  perUnit: boolean; // embalagens com quantidades diferentes: compara pelo preço de cada unidade
+  odd: string[]; // ids com preço fora do padrão (provável caixa sem quantidade no nome, ou erro no site)
+  suspect: boolean; // só 2 mercados e preços muito distantes: não dá para saber qual está certo
   _n: string;
 };
 
@@ -50,6 +54,12 @@ export function validity(o: Pick<Offer, 'validUntil'>) {
   return { text: `vale até ${when}`, urgent: false, known: true };
 }
 
+// Preço de cada unidade (caixa com 36 por R$ 49,90 = R$ 1,39 cada).
+export const each = (o: Pick<Offer, 'price' | 'units'>) => o.price / (o.units ?? 1);
+const median = (xs: number[]) => { const v = [...xs].sort((a, b) => a - b); const m = v.length >> 1; return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; };
+// Mais de 2,5 vezes (ou menos de 1/2,5) do preço dos outros: fora do padrão.
+const FAR = 2.5;
+
 export function buildGroups(all: Indexed[]): Group[] {
   const byG = new Map<string, Indexed[]>();
   // produto que só um mercado tem também entra, sozinho no próprio grupo
@@ -59,11 +69,23 @@ export function buildGroups(all: Indexed[]): Group[] {
     const perMarket = new Map<string, Indexed>();
     for (const o of list) {
       const cur = perMarket.get(o.market);
-      if (!cur || o.price < cur.price) perMarket.set(o.market, o);
+      if (!cur || each(o) < each(cur)) perMarket.set(o.market, o);
     }
-    const items = [...perMarket.values()].sort((a, b) => a.price - b.price);
-    const max = items[items.length - 1].price;
-    const saving = max - items[0].price;
+    let items = [...perMarket.values()].sort((a, b) => each(a) - each(b));
+    const odd = new Set<string>();
+    if (items.length >= 3) {
+      for (const it of items) {
+        const m = median(items.filter((x) => x !== it).map(each));
+        const r = each(it) / m;
+        if (r > FAR || r < 1 / FAR) odd.add(it.id);
+      }
+    }
+    const suspect = items.length === 2 && each(items[1]) / each(items[0]) > FAR;
+    // fora do padrão vai para o fim e não conta na economia
+    items = [...items.filter((i) => !odd.has(i.id)), ...items.filter((i) => odd.has(i.id))];
+    const fair = suspect ? [] : items.filter((i) => !odd.has(i.id));
+    const max = fair.length >= 2 ? each(fair[fair.length - 1]) : 0;
+    const saving = fair.length >= 2 ? max - each(fair[0]) : 0;
     const label = [...items].sort((a, b) => a.name.length - b.name.length)[0];
     out.push({
       id,
@@ -74,6 +96,9 @@ export function buildGroups(all: Indexed[]): Group[] {
       items,
       saving,
       savingPct: max > 0 ? saving / max : 0,
+      perUnit: new Set(items.map((i) => i.units ?? 1)).size > 1,
+      odd: [...odd],
+      suspect,
       _n: items.map((i) => i._n).join(' '),
     });
   }

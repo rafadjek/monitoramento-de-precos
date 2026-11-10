@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { brl, brlParts, validity, type Indexed } from '../lib';
+import { brl, brlParts, each, validity, type Indexed } from '../lib';
 
 const BASE = import.meta.env.BASE_URL;
 export const imgSrc = (u: string) => (u.startsWith('http') ? u : BASE + u);
@@ -58,23 +58,35 @@ export function MarketLogo({ name }: { name: string }) {
   );
 }
 
-export function MarketTag({ o, cheapest, diff, alone }: { o: Indexed; cheapest: boolean; diff: number; alone?: boolean }) {
+type TagProps = { o: Indexed; cheapest: boolean; diff: number; alone?: boolean; perUnit?: boolean; odd?: boolean };
+
+export function MarketTag({ o, cheapest, diff, alone, perUnit, odd }: TagProps) {
   const off = o.listPrice && o.listPrice > o.price ? o.listPrice : null;
+  const units = o.units ?? 1;
+  // Embalagens diferentes no grupo: o preço grande é o de cada unidade, e o da caixa fica embaixo.
+  const unitView = perUnit && units > 1;
+  const highlight = cheapest && !alone && !odd;
   const body: ReactNode = (
     <>
       <MarketLogo name={o.market} />
-      {off && <s className="num mt-1 block text-xs text-muted">{brl(off)}</s>}
-      <span className="block"><Price value={o.price} big={cheapest} /></span>
+      {off && !unitView && <s className="num mt-1 block text-xs text-muted">{brl(off)}</s>}
+      <span className="block"><Price value={unitView ? each(o) : o.price} big={highlight} /></span>
+      {unitView && <span className="block text-xs font-bold">cada · {brl(o.price)} com {units}</span>}
+      {!perUnit && units > 1 && <span className="block text-xs text-muted">embalagem com {units}</span>}
       {o.condition && <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide text-signal">{o.condition}</span>}
-      {!alone && (
-        <span className={`mt-0.5 block text-xs ${cheapest ? 'font-bold' : 'text-muted'}`}>
-          {cheapest ? 'mais barato' : `+ ${brl(diff)}`}
-        </span>
+      {odd ? (
+        <span className="mt-0.5 block text-xs font-bold text-signal">preço fora do padrão, confira</span>
+      ) : (
+        !alone && (
+          <span className={`mt-0.5 block text-xs ${highlight ? 'font-bold' : 'text-muted'}`}>
+            {highlight ? 'mais barato' : `+ ${brl(diff)}${perUnit ? ' cada' : ''}`}
+          </span>
+        )
       )}
     </>
   );
   const cls = `block min-w-[7.5rem] px-3 py-2 text-left ${
-    cheapest && !alone ? 'border-b-4 border-ink bg-tag' : 'border border-line bg-white'
+    highlight ? 'border-b-4 border-ink bg-tag' : odd ? 'border border-dashed border-signal bg-white opacity-80' : 'border border-line bg-white'
   }`;
   return o.productUrl ? (
     <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-95`} title={`Ver a oferta no ${o.market}`}>

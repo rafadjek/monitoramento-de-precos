@@ -16,7 +16,7 @@ const index = { generatedAt: new Date().toISOString(), markets: [] };
 
 import crypto from 'node:crypto';
 import sharp from 'sharp';
-import { groupOffers } from './group.mjs';
+import { groupOffers, parsePack } from './group.mjs';
 const IMG = path.join(ROOT, '../app/public/img');
 const PAGES = path.join(ROOT, 'data/cache/paginas');
 fs.rmSync(IMG, { recursive: true, force: true });
@@ -84,6 +84,8 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
       id, market, name: o.name, brand: o.brand ?? null, ean: o.ean ?? null, size: o.size ?? null,
       price: o.price, listPrice: o.listPrice ?? null, unitPrice: o.unitPrice ?? null, category: o.category ?? 'outros',
       imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, validityNote: o.validityNote ?? null,
+      // caixa/fardo: quantas unidades vêm (o site compara pelo preço de cada uma)
+      ...(parsePack(o.name, o.size ?? '') > 1 ? { units: parsePack(o.name, o.size ?? '') } : {}),
       ...(o.source === 'encarte' ? { source: 'encarte', condition: o.condition ?? null } : {}),
     });
   }
