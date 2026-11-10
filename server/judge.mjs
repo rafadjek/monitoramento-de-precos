@@ -73,6 +73,7 @@ async function judge(pairs) {
 const state = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { ativo: false, prova: null, pares: {} };
 const fmt = (o) => `${o.market} | ${o.name}${o.price ? ` | R$ ${Number(o.price).toFixed(2)}` : ''}`;
 
+try {
 // ---------- 1. prova com os rótulos do Rafael ----------
 const labels = JSON.parse(fs.readFileSync(LABELS, 'utf8')).filter((x) => x.label === 'mesmo' || x.label === 'diferente');
 const provaPairs = labels.map((x) => ({ key: x.id, a: fmt(x.a), b: fmt(x.b) }));
@@ -138,5 +139,10 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
     } catch (e) { console.warn('juiz:', e.message); break; }
   }
   console.log(`juiz: ${feitos} vereditos novos; total ${Object.keys(state.pares).length}`);
+}
+} catch (e) {
+  // sem cota ou erro do Gemini: grava o motivo e mantém o que já havia (nada muda no site)
+  state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 300) };
+  console.warn('juiz: parou:', e.message);
 }
 fs.writeFileSync(OUT, JSON.stringify(state));

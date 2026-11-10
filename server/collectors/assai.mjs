@@ -41,7 +41,8 @@ for (const o of data.ofertas) {
     validFrom, validUntil, vigente,
     validityNote: o.custom_text || null,
     stores: lojas.map((id) => LOJAS[id]),
-    images: o.images.map((i) => i.url),
+    // desde 10/11/2026 algumas imagens vêm sem domínio (/sites/default/files/...): monta o endereço completo
+    images: o.images.map((i) => new URL(i.url, 'https://www.assai.com.br').href),
     storeScope: 'Encarte das lojas Assaí Ribeirão Pires e Mauá',
     collectedAt: now.toISOString(),
   });

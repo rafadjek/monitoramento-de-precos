@@ -163,6 +163,7 @@ async function crawlbase(net) {
 // ---------- cadeia de reserva ----------
 const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators], ['socialcrawl', socialcrawl], ['crawlbase', crawlbase]];
 // SOCIAL_SKIP=apify,brightdata pula serviços (para testar as reservas)
+const STATUS = { em: new Date().toISOString(), servicos: [] };
 const SKIP = new Set(String(process.env.SOCIAL_SKIP || '').split(',').map((x) => x.trim()).filter(Boolean));
 async function collect(net) {
   for (const [name, fn] of SERVICES) {
@@ -170,9 +171,11 @@ async function collect(net) {
     try {
       const posts = (await fn(net)).filter((p) => p.market && recent(p.when));
       console.log(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} trouxe ${posts.length} posts recentes`);
+      STATUS.servicos.push({ net, name, posts: posts.length });
       if (posts.length) return posts.map((p) => ({ ...p, via: name }));
     } catch (e) {
       console.warn(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} falhou (${e.message}); tentando o próximo`);
+      STATUS.servicos.push({ net, name, erro: String(e.message).slice(0, 200) });
     }
   }
   return [];
@@ -195,5 +198,13 @@ for (const p of [...(await collect('ig')), ...(await collect('fb'))]) {
   });
 }
 fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));
+// SOCIAL_TEST=socialcrawl,crawlbase: chama esses serviços à parte só para diagnóstico (não entram no resultado)
+for (const name of String(process.env.SOCIAL_TEST || '').split(',').map((x) => x.trim()).filter(Boolean)) {
+  const fn = SERVICES.find(([n]) => n === name)?.[1];
+  if (!fn || !KEYS[name]) { STATUS.servicos.push({ teste: name, erro: 'sem chave ou serviço desconhecido' }); continue; }
+  try { const ps = await fn('ig'); STATUS.servicos.push({ teste: name, net: 'ig', posts: ps.length, recentes: ps.filter((p) => recent(p.when)).length, comImagem: ps.filter((p) => p.images.length).length }); }
+  catch (e) { STATUS.servicos.push({ teste: name, net: 'ig', erro: String(e.message).slice(0, 200) }); }
+}
+fs.writeFileSync(OUT.replace('social-encartes.json', 'social-status.json'), JSON.stringify(STATUS, null, 1));
 const by = manifest.reduce((acc, x) => ((acc[x.market] = (acc[x.market] || 0) + x.images.length), acc), {});
 console.log(`social: ${manifest.length} posts com imagem`, JSON.stringify(by));
