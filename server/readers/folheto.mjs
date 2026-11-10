@@ -15,7 +15,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE_READ = path.join(ROOT, 'data/cache/leitura');
 const CACHE_PAGES = path.join(ROOT, 'data/cache/paginas');
 const OUT = path.join(ROOT, 'data/extraido');
-const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-2.5-flash,gemini-flash-lite-latest,gemini-2.5-flash-lite,gemini-2.0-flash').split(',');
+const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-2.5-flash,gemini-flash-lite-latest,gemini-2.5-flash-lite').split(',');
 const GAP_MS = Number(process.env.READER_GAP_MS || 7000); // ~8 pedidos/min, abaixo do limite gratuito
 const MAX_NEW = Number(process.env.READER_MAX_NEW || 60); // teto de páginas novas por execução; o resto fica para a próxima
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
@@ -111,9 +111,9 @@ async function askGemini(buf, mime) {
     if (r.status === 429 || r.status >= 500) {
       last = `${model} ${r.status} ${(await r.text()).replace(/\s+/g, ' ').slice(0, 160)}`;
       console.warn('  ' + last);
-      // cota do dia acabou nesse modelo (ou insiste em falhar): cada modelo tem a sua cota, passa para o próximo
-      if ((/PerDay|per day/i.test(last) || onModel >= 1) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
-      await sleep(15000 * (onModel + 1));
+      // só a cota do DIA troca de modelo (cada modelo tem a sua); limite por minuto (PDF grande) é esperar e repetir
+      if ((/PerDay|per day/i.test(last) || (r.status >= 500 && onModel >= 2)) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+      await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
       continue;
     }
     if (!r.ok) throw new Error(`gemini ${model} ${r.status} ${(await r.text()).slice(0, 200)}`);
