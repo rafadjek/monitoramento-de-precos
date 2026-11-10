@@ -5,7 +5,7 @@
   "name": "BATATA ELMA CHIPS RUFFLES ORIGINAL TUBO 100G",
   "brand": "Elma Chips",
   "ean": null,
-  "size": "100G",
+  "size": "100g",
   "price": 9.99,
   "listPrice": null,
   "unitPrice": null,
@@ -13,10 +13,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
   "imageBox": [
-   357,
+   358,
    401,
-   896,
-   610
+   897,
+   608
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
   "source": "encarte",
@@ -25,7 +25,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -41,10 +41,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "imageBox": [
-   94,
-   471,
-   368,
-   706
+   107,
+   462,
+   372,
+   715
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "source": "encarte",
@@ -53,7 +53,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -69,10 +69,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "imageBox": [
-   429,
-   142,
-   595,
-   451
+   426,
+   143,
+   597,
+   450
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "source": "encarte",
@@ -81,7 +81,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -97,9 +97,9 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "imageBox": [
-   348,
-   654,
-   678,
+   350,
+   642,
+   681,
    839
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
@@ -109,7 +109,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -117,7 +117,7 @@
   "name": "PAPEL HIG MIMMO 30M 4UN",
   "brand": "Mimmo",
   "ean": null,
-  "size": "4 rolos",
+  "size": "4 un",
   "price": 6.49,
   "listPrice": null,
   "unitPrice": null,
@@ -125,10 +125,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "imageBox": [
-   624,
-   163,
-   836,
-   420
+   620,
+   155,
+   833,
+   428
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
   "source": "encarte",
@@ -137,15 +137,15 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
-  "externalId": "b396e831643f",
-  "name": "Bisteca Suína Lombo ou Copa",
+  "externalId": "127061cd7bd2",
+  "name": "Bisteca Suína, Lombo ou Copa",
   "brand": null,
   "ean": null,
-  "size": "1kg",
+  "size": null,
   "price": 16.99,
   "listPrice": null,
   "unitPrice": null,
@@ -153,10 +153,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "imageBox": [
-   190,
-   469,
-   396,
-   881
+   193,
+   471,
+   393,
+   878
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "source": "encarte",
@@ -165,7 +165,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -173,7 +173,7 @@
   "name": "Costela Suína",
   "brand": null,
   "ean": null,
-  "size": "1kg",
+  "size": null,
   "price": 30.99,
   "listPrice": null,
   "unitPrice": null,
@@ -181,7 +181,7 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "imageBox": [
-   414,
+   419,
    127,
    591,
    517
@@ -193,7 +193,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -201,7 +201,7 @@
   "name": "Osso Buco",
   "brand": null,
   "ean": null,
-  "size": "1kg",
+  "size": null,
   "price": 34.99,
   "listPrice": null,
   "unitPrice": null,
@@ -210,9 +210,9 @@
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "imageBox": [
    402,
-   513,
-   621,
-   889
+   517,
+   617,
+   888
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "source": "encarte",
@@ -221,15 +221,15 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
-  "externalId": "36d126f75f27",
-  "name": "Costela Gaucha",
+  "externalId": "7f8837b09b0d",
+  "name": "Costela Gaúcha",
   "brand": null,
   "ean": null,
-  "size": "1kg",
+  "size": null,
   "price": 35.99,
   "listPrice": null,
   "unitPrice": null,
@@ -237,10 +237,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "imageBox": [
-   611,
+   617,
    114,
-   824,
-   532
+   829,
+   530
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
   "source": "encarte",
@@ -249,7 +249,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -265,19 +265,19 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "imageBox": [
-   138,
+   210,
    518,
-   415,
-   877
+   417,
+   878
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "source": "encarte",
-  "condition": null,
+  "condition": "por un.",
   "validFrom": "2026-11-10T03:00:00.000Z",
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -295,8 +295,8 @@
   "imageBox": [
    419,
    125,
-   623,
-   478
+   622,
+   479
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "source": "encarte",
@@ -305,7 +305,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -322,18 +322,18 @@
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "imageBox": [
    425,
-   535,
-   654,
+   536,
+   657,
    896
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "source": "encarte",
-  "condition": null,
+  "condition": "por un.",
   "validFrom": "2026-11-10T03:00:00.000Z",
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -349,9 +349,9 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
   "imageBox": [
-   634,
-   116,
-   849,
+   632,
+   115,
+   843,
    493
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
@@ -361,7 +361,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -377,10 +377,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
   "imageBox": [
-   500,
+   499,
    138,
-   695,
-   542
+   697,
+   544
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
   "source": "encarte",
@@ -389,7 +389,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -397,7 +397,7 @@
   "name": "CHUCHU",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "1kg",
   "price": 2.99,
   "listPrice": null,
   "unitPrice": null,
@@ -405,10 +405,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "imageBox": [
-   403,
-   508,
-   657,
-   832
+   409,
+   503,
+   652,
+   831
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "source": "encarte",
@@ -417,7 +417,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -425,7 +425,7 @@
   "name": "MANDIOQUINHA",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "1kg",
   "price": 7.99,
   "listPrice": null,
   "unitPrice": null,
@@ -433,10 +433,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "imageBox": [
-   217,
-   485,
-   429,
-   882
+   199,
+   489,
+   427,
+   885
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "source": "encarte",
@@ -445,7 +445,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -453,7 +453,7 @@
   "name": "CEBOLA NACIONAL",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "1kg",
   "price": 6.99,
   "listPrice": null,
   "unitPrice": null,
@@ -461,10 +461,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "imageBox": [
-   418,
-   111,
-   638,
-   500
+   419,
+   116,
+   636,
+   501
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "source": "encarte",
@@ -473,7 +473,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -481,7 +481,7 @@
   "name": "PEPINO JAPONÊS",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "1kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -490,9 +490,9 @@
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "imageBox": [
    658,
-   111,
-   820,
-   518
+   114,
+   822,
+   519
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
   "source": "encarte",
@@ -501,7 +501,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -509,7 +509,7 @@
   "name": "ABACAXI PEROLA",
   "brand": null,
   "ean": null,
-  "size": "1 un.",
+  "size": null,
   "price": 7.99,
   "listPrice": null,
   "unitPrice": null,
@@ -517,19 +517,19 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "imageBox": [
-   100,
-   506,
-   438,
+   110,
+   499,
+   442,
    786
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "source": "encarte",
-  "condition": "por un.",
+  "condition": null,
   "validFrom": "2026-11-10T03:00:00.000Z",
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -545,10 +545,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "imageBox": [
-   418,
-   110,
-   629,
-   458
+   415,
+   107,
+   631,
+   460
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "source": "encarte",
@@ -557,7 +557,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -573,10 +573,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "imageBox": [
-   433,
+   431,
    472,
-   632,
-   897
+   635,
+   896
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "source": "encarte",
@@ -585,7 +585,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -601,10 +601,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "imageBox": [
-   620,
+   618,
    114,
    805,
-   518
+   521
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
   "source": "encarte",
@@ -613,7 +613,7 @@
   "validUntil": "2026-11-12T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -629,10 +629,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "imageBox": [
-   118,
-   501,
-   386,
-   701
+   91,
+   499,
+   383,
+   700
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "source": "encarte",
@@ -641,7 +641,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -649,7 +649,7 @@
   "name": "ABS ÍNTIMOS GEL TRIPLA PROT SECA OU SUAVE C/32",
   "brand": "Intimus",
   "ean": null,
-  "size": "C/32",
+  "size": "c/32",
   "price": 12.99,
   "listPrice": null,
   "unitPrice": null,
@@ -657,10 +657,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "imageBox": [
-   421,
-   168,
-   622,
-   451
+   418,
+   180,
+   617,
+   448
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "source": "encarte",
@@ -669,7 +669,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -685,10 +685,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "imageBox": [
-   411,
-   529,
-   694,
-   663
+   419,
+   536,
+   691,
+   664
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "source": "encarte",
@@ -697,7 +697,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Baronesa",
@@ -713,10 +713,10 @@
   "categoryRaw": null,
   "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "imageBox": [
-   623,
-   122,
-   882,
-   280
+   629,
+   131,
+   878,
+   278
   ],
   "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
   "source": "encarte",
@@ -725,6 +725,6 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  }
 ]

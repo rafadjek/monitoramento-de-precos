@@ -1,8 +1,8 @@
 [
  {
   "market": "Joanin",
-  "externalId": "5c0d7cfaf63b",
-  "name": "Alho Extra a cada 100g",
+  "externalId": "12184d4b0530",
+  "name": "Alho Extra",
   "brand": null,
   "ean": null,
   "size": "100g",
@@ -13,19 +13,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   43,
-   248,
-   149
+   193,
+   38,
+   252,
+   158
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "a cada 100g",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -33,7 +33,7 @@
   "name": "Abóbora Japonesa Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 4.99,
   "listPrice": null,
   "unitPrice": null,
@@ -41,19 +41,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   160,
-   248,
-   267
+   193,
+   159,
+   252,
+   271
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -61,7 +61,7 @@
   "name": "Batata Lavada Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 6.99,
   "listPrice": null,
   "unitPrice": null,
@@ -69,19 +69,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   277,
-   248,
-   384
+   193,
+   274,
+   252,
+   386
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -89,7 +89,7 @@
   "name": "Batata Doce Rosada Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -97,19 +97,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   394,
-   248,
-   500
+   193,
+   389,
+   252,
+   501
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -117,7 +117,7 @@
   "name": "Cenoura Extra Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -125,19 +125,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   511,
-   248,
-   617
+   193,
+   503,
+   252,
+   615
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -145,7 +145,7 @@
   "name": "Chuchu Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 3.99,
   "listPrice": null,
   "unitPrice": null,
@@ -153,19 +153,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   627,
-   248,
-   734
+   193,
+   617,
+   252,
+   729
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -173,7 +173,7 @@
   "name": "Pepino Japonês Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 6.99,
   "listPrice": null,
   "unitPrice": null,
@@ -181,19 +181,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   744,
-   248,
-   850
+   193,
+   731,
+   252,
+   843
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -209,19 +209,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   190,
-   861,
-   248,
-   966
+   193,
+   846,
+   252,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -229,7 +229,7 @@
   "name": "Abacate Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -237,19 +237,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   43,
-   319,
-   149
+   257,
+   38,
+   324,
+   158
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -257,7 +257,7 @@
   "name": "Laranja Pera Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 3.99,
   "listPrice": null,
   "unitPrice": null,
@@ -265,19 +265,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   160,
-   319,
-   267
+   257,
+   159,
+   324,
+   271
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -293,19 +293,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   277,
-   319,
-   384
+   257,
+   274,
+   324,
+   386
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -313,7 +313,7 @@
   "name": "Mamão Papaya Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 7.99,
   "listPrice": null,
   "unitPrice": null,
@@ -321,19 +321,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   394,
-   319,
-   500
+   257,
+   389,
+   324,
+   501
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -341,7 +341,7 @@
   "name": "Manga Palmer Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -349,19 +349,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   511,
-   319,
-   617
+   257,
+   503,
+   324,
+   615
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -369,7 +369,7 @@
   "name": "Melão Amarelo/Pele de Sapo Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 5.99,
   "listPrice": null,
   "unitPrice": null,
@@ -377,19 +377,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   627,
-   319,
-   734
+   257,
+   617,
+   324,
+   729
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -397,7 +397,7 @@
   "name": "Mexerica Morgot Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 6.99,
   "listPrice": null,
   "unitPrice": null,
@@ -405,19 +405,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   744,
-   319,
-   850
+   257,
+   731,
+   324,
+   843
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -433,27 +433,27 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   258,
-   861,
-   319,
-   966
+   257,
+   846,
+   324,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "Bandeja 500g",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "342fa43c2f2e",
-  "name": "Acém/Peito Bovina Kg",
+  "externalId": "d8cb4945f79c",
+  "name": "Acém/Peito Bovino Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 41.99,
   "listPrice": null,
   "unitPrice": null,
@@ -461,19 +461,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   366,
+   363,
    624,
-   427,
+   428,
    729
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -481,7 +481,7 @@
   "name": "Paleta Bovina Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 42.99,
   "listPrice": null,
   "unitPrice": null,
@@ -489,19 +489,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   366,
-   275,
-   427,
-   377
+   363,
+   274,
+   428,
+   386
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -509,7 +509,7 @@
   "name": "Bife Ancho Cryovac Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 65.99,
   "listPrice": null,
   "unitPrice": null,
@@ -517,19 +517,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   366,
-   381,
-   427,
-   492
+   363,
+   389,
+   428,
+   501
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -537,7 +537,7 @@
   "name": "Pernil Suíno Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 15.99,
   "listPrice": null,
   "unitPrice": null,
@@ -545,19 +545,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   366,
-   845,
-   427,
-   957
+   363,
+   846,
+   428,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -565,7 +565,7 @@
   "name": "Coxão Mole Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 53.99,
   "listPrice": null,
   "unitPrice": null,
@@ -573,19 +573,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   366,
-   734,
-   427,
-   839
+   363,
+   731,
+   428,
+   843
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -601,19 +601,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   431,
-   43,
+   386,
+   38,
    497,
-   163
+   158
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "1L",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -621,7 +621,7 @@
   "name": "Lombo Suíno Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 24.99,
   "listPrice": null,
   "unitPrice": null,
@@ -637,11 +637,11 @@
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -649,7 +649,7 @@
   "name": "Costela Suína Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 25.99,
   "listPrice": null,
   "unitPrice": null,
@@ -658,18 +658,18 @@
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
    431,
-   277,
+   274,
    497,
-   381
+   386
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -677,7 +677,7 @@
   "name": "Bisteca Carré/Copa Lombo com Osso Suíno Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 16.99,
   "listPrice": null,
   "unitPrice": null,
@@ -686,18 +686,18 @@
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
    431,
-   734,
+   731,
    497,
    958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -713,27 +713,27 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   508,
-   43,
-   679,
-   169
+   507,
+   38,
+   672,
+   172
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "3521ef88f387",
-  "name": "Arroz Guacira Tipo 01 5Kg",
+  "externalId": "e0a3237f8085",
+  "name": "Arroz Refinado Tipo 01 Guacira 5kg",
   "brand": "Guacira",
   "ean": null,
-  "size": "5Kg",
+  "size": "5kg",
   "price": 22.9,
   "listPrice": null,
   "unitPrice": null,
@@ -741,159 +741,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   508,
-   174,
-   601,
+   507,
+   175,
+   600,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "e2469b361bf3",
-  "name": "Óleo de Soja Liza 900ml",
-  "brand": "Liza",
-  "ean": null,
-  "size": "900ml",
-  "price": 7.49,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   508,
-   308,
-   601,
-   437
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "fda649920847",
-  "name": "Óleo Girassol Soya 900ml",
-  "brand": "Soya",
-  "ean": null,
-  "size": "900ml",
-  "price": 12.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   508,
-   442,
-   601,
-   563
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "fa8ba82e5822",
-  "name": "Azeite Carbonell Extra Virgem Vidro 500ml",
-  "brand": "Carbonell",
-  "ean": null,
-  "size": "500ml",
-  "price": 29.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   508,
-   568,
-   601,
-   696
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "cc548a831218",
-  "name": "Molho de Tomate Fugini Tradicional Sachê 300g",
-  "brand": "Fugini",
-  "ean": null,
-  "size": "300g",
-  "price": 1.89,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   508,
-   701,
-   601,
-   824
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "1bf211507c13",
-  "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)",
-  "brand": "Dona Benta",
-  "ean": null,
-  "size": "500g",
-  "price": 3.49,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   508,
-   829,
-   601,
-   959
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -909,19 +769,47 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   174,
-   687,
+   602,
+   175,
+   672,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "e2469b361bf3",
+  "name": "Óleo de Soja Liza 900ml",
+  "brand": "Liza",
+  "ean": null,
+  "size": "900ml",
+  "price": 7.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "imageBox": [
+   507,
+   305,
+   600,
+   434
+  ],
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -937,19 +825,47 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   308,
-   687,
-   437
+   602,
+   305,
+   672,
+   434
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "fda649920847",
+  "name": "Óleo Girassol Soya 900ml",
+  "brand": "Soya",
+  "ean": null,
+  "size": "900ml",
+  "price": 12.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "imageBox": [
+   507,
+   437,
+   600,
+   564
+  ],
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -965,19 +881,47 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   442,
-   687,
-   563
+   602,
+   437,
+   672,
+   564
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "e2aa0c92bb8c",
+  "name": "Azeite Carbonel Extra Virgem Vidro 500ml",
+  "brand": "Carbonel",
+  "ean": null,
+  "size": "500ml",
+  "price": 29.9,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "imageBox": [
+   507,
+   567,
+   600,
+   695
+  ],
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -993,19 +937,47 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   568,
-   687,
-   696
+   602,
+   567,
+   672,
+   695
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "cc548a831218",
+  "name": "Molho de Tomate Fugini Tradicional Sachê 300g",
+  "brand": "Fugini",
+  "ean": null,
+  "size": "300g",
+  "price": 1.89,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "imageBox": [
+   507,
+   698,
+   600,
+   825
+  ],
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1021,19 +993,47 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   701,
-   687,
-   824
+   602,
+   698,
+   672,
+   825
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "a cada 100g",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "1bf211507c13",
+  "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)",
+  "brand": "Dona Benta",
+  "ean": null,
+  "size": "500g",
+  "price": 3.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "imageBox": [
+   507,
+   828,
+   600,
+   958
+  ],
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-04-11T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1049,19 +1049,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   606,
-   829,
-   687,
-   959
+   602,
+   828,
+   672,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1077,24 +1077,24 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   43,
-   752,
-   169
+   675,
+   38,
+   751,
+   172
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "1e822b7bc026",
-  "name": "Farofa Yoki Mandioca 400g",
+  "externalId": "9ac2881e8f56",
+  "name": "Farofa Yoki Manioca 400g",
   "brand": "Yoki",
   "ean": null,
   "size": "400g",
@@ -1105,19 +1105,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   174,
-   752,
+   675,
+   175,
+   751,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1133,19 +1133,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   308,
-   752,
-   437
+   675,
+   305,
+   751,
+   434
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1161,19 +1161,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   442,
-   752,
-   563
+   675,
+   437,
+   751,
+   564
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1189,19 +1189,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   568,
-   752,
-   696
+   675,
+   567,
+   751,
+   695
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1217,24 +1217,24 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   701,
-   752,
-   824
+   675,
+   698,
+   751,
+   825
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "56aa21757c28",
-  "name": "Panetone Visconti Frutas/ Chocolate 400g",
+  "externalId": "f8275315e4b9",
+  "name": "Panetone Visconti Frutas/Chocolate 400g",
   "brand": "Visconti",
   "ean": null,
   "size": "400g",
@@ -1245,19 +1245,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   692,
-   829,
-   752,
-   959
+   675,
+   828,
+   751,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1273,19 +1273,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   43,
-   827,
-   169
+   754,
+   38,
+   828,
+   172
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1301,19 +1301,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   174,
-   827,
+   754,
+   175,
+   828,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1329,19 +1329,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   308,
-   827,
-   437
+   754,
+   305,
+   828,
+   434
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1357,27 +1357,27 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   442,
-   827,
-   563
+   754,
+   437,
+   828,
+   564
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "63ec0d02a425",
-  "name": "Filé Peito de Frango Kg",
+  "externalId": "5f1f6ce1edce",
+  "name": "File Peito de Frango Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 19.99,
   "listPrice": null,
   "unitPrice": null,
@@ -1385,19 +1385,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   568,
-   827,
-   696
+   754,
+   567,
+   828,
+   695
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1405,7 +1405,7 @@
   "name": "Peito de Frango com Osso Kg",
   "brand": null,
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 15.99,
   "listPrice": null,
   "unitPrice": null,
@@ -1413,19 +1413,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   701,
-   827,
-   824
+   754,
+   698,
+   828,
+   825
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1433,7 +1433,7 @@
   "name": "Linguiça Aurora Toscana Kg",
   "brand": "Aurora",
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 21.9,
   "listPrice": null,
   "unitPrice": null,
@@ -1441,19 +1441,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   757,
-   829,
-   827,
-   959
+   754,
+   828,
+   828,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1461,7 +1461,7 @@
   "name": "Salsicha Hot Dog Perdigão Kg",
   "brand": "Perdigão",
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 9.99,
   "listPrice": null,
   "unitPrice": null,
@@ -1469,19 +1469,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   43,
-   905,
-   169
+   831,
+   38,
+   906,
+   172
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": "preço por kg",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1497,19 +1497,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   174,
-   905,
+   831,
+   175,
+   906,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": "no app",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1525,19 +1525,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   308,
-   905,
-   437
+   831,
+   305,
+   906,
+   434
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": "no app",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1553,19 +1553,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   442,
-   905,
-   563
+   831,
+   437,
+   906,
+   564
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": "no app",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1581,19 +1581,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   568,
-   905,
-   696
+   831,
+   567,
+   906,
+   695
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1609,24 +1609,24 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   701,
-   905,
-   824
+   831,
+   698,
+   906,
+   825
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "Nesta Embalagem a unidade sai por: R$ 9,50",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": "Nesta embalagem a unidade sai por: 9,50",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "a2297014b115",
-  "name": "Coca-Cola Original Sem Açúcar 600ml",
+  "externalId": "f354ff24fd90",
+  "name": "Coca-Cola Original/ Sem Açúcar 600ml",
   "brand": "Coca-Cola",
   "ean": null,
   "size": "600ml",
@@ -1637,19 +1637,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   833,
-   829,
-   905,
-   959
+   831,
+   828,
+   906,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1665,19 +1665,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   43,
-   981,
-   169
+   909,
+   38,
+   979,
+   172
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1693,19 +1693,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   174,
-   981,
+   909,
+   175,
+   979,
    303
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1721,19 +1721,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   308,
-   981,
-   437
+   909,
+   305,
+   979,
+   434
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1749,19 +1749,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   442,
-   981,
-   563
+   909,
+   437,
+   979,
+   564
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1777,19 +1777,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   568,
-   981,
-   696
+   909,
+   567,
+   979,
+   695
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1805,19 +1805,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   701,
-   981,
-   824
+   909,
+   698,
+   979,
+   825
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1833,19 +1833,19 @@
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "imageBox": [
-   910,
-   829,
-   981,
-   959
+   909,
+   828,
+   979,
+   958
   ],
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "Leve 12, Pague 11",
-  "validFrom": "2026-11-04T03:00:00.000Z",
+  "condition": "Leve 12 Pague 11",
+  "validFrom": "2026-04-11T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1860,12 +1860,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   47,
-   49,
-   107,
-   103
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -1873,7 +1868,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1888,12 +1883,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   47,
-   185,
-   107,
-   248
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -1901,7 +1891,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1916,12 +1906,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   35,
-   335,
-   115,
-   419
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -1929,7 +1914,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1937,27 +1922,22 @@
   "name": "Queijo Serramar Minas Frescal Kg",
   "brand": "Serramar",
   "ean": null,
-  "size": null,
+  "size": "Kg",
   "price": 39.9,
   "listPrice": null,
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   36,
-   452,
-   109,
-   540
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "preço por kg",
+  "condition": null,
   "validFrom": "2026-11-04T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -1972,12 +1952,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   44,
-   597,
-   112,
-   681
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -1985,12 +1960,12 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "8d58ea1cc8fe",
-  "name": "Requeijão Ipanema Tradicional/ Light 380g",
+  "externalId": "43eaaa6c8317",
+  "name": "Requeijão Ipanema Tradicional/Light 380g",
   "brand": "Ipanema",
   "ean": null,
   "size": "380g",
@@ -2000,12 +1975,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   39,
-   712,
-   110,
-   814
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2013,7 +1983,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2028,12 +1998,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   40,
-   853,
-   107,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2041,12 +2006,12 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "a54688192b41",
-  "name": "Iogurte Vigor Grego Sabores 90g",
+  "externalId": "4612351407ce",
+  "name": "Iogurte Vigor Grego Sabores 90g LEVE 5 PAGUE 4",
   "brand": "Vigor",
   "ean": null,
   "size": "90g",
@@ -2056,25 +2021,20 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   133,
-   49,
-   185,
-   110
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "LEVE 5 PAGUE 4 R$ 2,79 a unidade sai por",
+  "condition": null,
   "validFrom": "2026-11-04T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "6eed3b926e84",
-  "name": "Iogurte Vigor Mix 140g",
+  "externalId": "cb8257e0d499",
+  "name": "Iogurte Vigor Mix 140g LEVE 4 PAGUE 3",
   "brand": "Vigor",
   "ean": null,
   "size": "140g",
@@ -2084,25 +2044,20 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   133,
-   178,
-   185,
-   237
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "LEVE 4 PAGUE 3 R$ 3,97 a unidade sai por",
+  "condition": null,
   "validFrom": "2026-11-04T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "3678d24a1b43",
-  "name": "Bebida Láctea Parmalat WheyFit 250ml",
+  "externalId": "887a3ddcd5bc",
+  "name": "Bebida Láctea Parmalat Wheyfit 250ml LEVE 5 PAGUE 4",
   "brand": "Parmalat",
   "ean": null,
   "size": "250ml",
@@ -2112,20 +2067,15 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   134,
-   298,
-   186,
-   381
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "LEVE 5 PAGUE 4 R$ 5,59 a unidade sai por",
+  "condition": null,
   "validFrom": "2026-11-04T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2140,12 +2090,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   133,
-   442,
-   182,
-   532
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2153,7 +2098,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2168,12 +2113,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   132,
-   577,
-   188,
-   683
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2181,7 +2121,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2196,12 +2136,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   133,
-   701,
-   183,
-   814
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2209,7 +2144,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2224,12 +2159,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   132,
-   855,
-   183,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2237,7 +2167,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2252,12 +2182,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   223,
-   40,
-   276,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2265,7 +2190,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2280,12 +2205,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   217,
-   187,
-   270,
-   287
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2293,7 +2213,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2308,12 +2228,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   217,
-   321,
-   269,
-   415
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2321,7 +2236,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2336,12 +2251,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   210,
-   439,
-   263,
-   532
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2349,7 +2259,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2364,12 +2274,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   212,
-   574,
-   261,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2377,7 +2282,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2392,12 +2297,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   213,
-   715,
-   262,
-   822
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2405,7 +2305,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2420,12 +2320,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   212,
-   867,
-   271,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2433,7 +2328,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2448,12 +2343,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   308,
-   48,
-   355,
-   148
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2461,7 +2351,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2476,12 +2366,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   307,
-   187,
-   357,
-   281
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2489,7 +2374,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2504,12 +2389,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   296,
-   331,
-   357,
-   417
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2517,7 +2397,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2532,12 +2412,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   307,
-   448,
-   357,
-   532
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2545,7 +2420,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2560,12 +2435,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   305,
-   574,
-   354,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2573,7 +2443,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2588,12 +2458,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   305,
-   712,
-   356,
-   822
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2601,7 +2466,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2616,20 +2481,15 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   295,
-   856,
-   358,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
-  "condition": "Leve 240g, Pague 200g",
+  "condition": null,
   "validFrom": "2026-11-04T03:00:00.000Z",
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2644,12 +2504,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   389,
-   49,
-   432,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2657,7 +2512,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2672,12 +2527,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   386,
-   179,
-   432,
-   296
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2685,7 +2535,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2700,12 +2550,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   387,
-   319,
-   435,
-   434
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2713,7 +2558,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2728,12 +2573,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   386,
-   568,
-   433,
-   694
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2741,7 +2581,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2756,12 +2596,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   382,
-   706,
-   433,
-   818
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2769,7 +2604,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2784,12 +2619,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   383,
-   856,
-   430,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2797,7 +2627,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2812,12 +2642,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   454,
-   49,
-   497,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2825,7 +2650,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2840,12 +2665,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   452,
-   179,
-   496,
-   281
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2853,7 +2673,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2868,12 +2688,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   454,
-   321,
-   498,
-   417
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2881,7 +2696,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2896,12 +2711,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   447,
-   449,
-   496,
-   529
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2909,7 +2719,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2924,12 +2734,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   453,
-   574,
-   495,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2937,7 +2742,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2952,12 +2757,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   442,
-   709,
-   495,
-   822
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2965,7 +2765,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -2980,12 +2780,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   444,
-   855,
-   498,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -2993,7 +2788,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3008,12 +2803,7 @@
   "category": "limpeza",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   545,
-   49,
-   584,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3021,7 +2811,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3029,47 +2819,14 @@
   "name": "Limpador Saif Desengordurante Cozinha Refil Leve 500ml, Pague 400ml",
   "brand": "Saif",
   "ean": null,
-  "size": "500ml",
+  "size": "500ml/400ml",
   "price": 9.99,
   "listPrice": null,
   "unitPrice": null,
   "category": "limpeza",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   542,
-   178,
-   585,
-   296
-  ],
-  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "source": "encarte",
-  "condition": "Leve 500ml, Pague 400ml",
-  "validFrom": "2026-11-04T03:00:00.000Z",
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "tabloide válido até 15/11/2026",
-  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
- },
- {
-  "market": "Joanin",
-  "externalId": "972789ec724c",
-  "name": "Inseticida Raid Aerosol 420ml Grátis 120ml",
-  "brand": "Raid",
-  "ean": null,
-  "size": "420ml",
-  "price": 16.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "limpeza",
-  "categoryRaw": null,
-  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   538,
-   319,
-   586,
-   423
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3077,7 +2834,30 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
+ },
+ {
+  "market": "Joanin",
+  "externalId": "972789ec724c",
+  "name": "Inseticida Raid Aerosol 420ml Grátis 120ml",
+  "brand": "Raid",
+  "ean": null,
+  "size": "420ml/120ml",
+  "price": 16.9,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "limpeza",
+  "categoryRaw": null,
+  "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
+  "imageBox": null,
+  "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-04T03:00:00.000Z",
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "tabloide válido até 15/11/2026",
+  "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3092,12 +2872,7 @@
   "category": "limpeza",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   538,
-   449,
-   587,
-   545
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3105,7 +2880,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3120,12 +2895,7 @@
   "category": "limpeza",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   544,
-   574,
-   589,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3133,7 +2903,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3148,12 +2918,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   545,
-   712,
-   588,
-   814
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3161,7 +2926,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3176,12 +2941,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   536,
-   856,
-   586,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3189,7 +2949,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3204,12 +2964,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   619,
-   49,
-   663,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3217,7 +2972,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3232,12 +2987,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   619,
-   179,
-   663,
-   284
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3245,7 +2995,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3260,12 +3010,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   616,
-   317,
-   663,
-   434
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3273,7 +3018,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3288,12 +3033,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   616,
-   574,
-   664,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3301,13 +3041,13 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
-  "externalId": "7a5405af3708",
-  "name": "Desodorante Herbíssimo Creme 55g",
-  "brand": "Herbíssimo",
+  "externalId": "a95810382e35",
+  "name": "Desodorante Herbissimo Creme 55g",
+  "brand": "Herbissimo",
   "ean": null,
   "size": "55g",
   "price": 6.49,
@@ -3316,12 +3056,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   616,
-   706,
-   664,
-   822
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3329,7 +3064,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3344,12 +3079,7 @@
   "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   616,
-   856,
-   664,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3357,7 +3087,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3369,15 +3099,10 @@
   "price": 5.39,
   "listPrice": null,
   "unitPrice": null,
-  "category": "limpeza",
+  "category": "higiene",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   693,
-   49,
-   739,
-   151
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3385,7 +3110,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3400,12 +3125,7 @@
   "category": "outros",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   691,
-   178,
-   739,
-   290
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3413,7 +3133,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3428,12 +3148,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   684,
-   321,
-   739,
-   423
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3441,7 +3156,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3456,12 +3171,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   684,
-   449,
-   738,
-   558
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3469,13 +3179,13 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
   "externalId": "3efdc6ac8bd6",
   "name": "Vinho Quinta Já Pias 750ml",
-  "brand": "Quinta Já",
+  "brand": "Quinta Já Pias",
   "ean": null,
   "size": "750ml",
   "price": 29.9,
@@ -3484,12 +3194,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   682,
-   574,
-   739,
-   679
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3497,7 +3202,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3512,12 +3217,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   682,
-   706,
-   739,
-   822
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3525,7 +3225,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  },
  {
   "market": "Joanin",
@@ -3540,12 +3240,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "imageUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-  "imageBox": [
-   682,
-   856,
-   739,
-   951
-  ],
+  "imageBox": null,
   "productUrl": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
   "source": "encarte",
   "condition": null,
@@ -3553,6 +3248,6 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "tabloide válido até 15/11/2026",
   "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
-  "collectedAt": "2026-11-10T12:27:58.970Z"
+  "collectedAt": "2026-11-10T12:37:59.404Z"
  }
 ]

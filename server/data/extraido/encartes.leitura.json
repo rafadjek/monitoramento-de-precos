@@ -1,126 +1,160 @@
 {
- "startedAt": "2026-11-10T12:34:58.797Z",
+ "startedAt": "2026-11-10T12:37:59.404Z",
  "pages": [
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-1.jpeg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 19,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 26,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 30,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Assaí",
    "offerId": "175721-948",
    "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-4.jpeg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 25,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 1,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 2,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Joanin",
    "offerId": "tabloide-15112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 70,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Joanin",
    "offerId": "tabloide-15112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 61,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Roldão",
    "offerId": "5070-09.11-11.11",
    "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-09-A-11-11-2026-3.pdf",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 105,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Roldão",
    "offerId": "5058-05.11-11.11",
    "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-SEARA-05-A11-11-2026.pdf",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 13,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Roldão",
    "offerId": "5067-09.11-15.11",
    "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-09-A-15-11-2026.pdf",
-   "ok": false,
-   "error": "gemini gemini-2.0-flash 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvemen | reserva: sem OPENROUTER_API_KEY"
+   "ok": true,
+   "cached": false,
+   "products": 31,
+   "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T12:35:49.470Z",
+ "finishedAt": "2026-11-10T13:02:19.872Z",
  "newReads": 17
 }
