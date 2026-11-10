@@ -9,7 +9,11 @@ Os preços são lidos dos sites e folhetos dos próprios mercados e **podem muda
 Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 
 1. **GitHub Actions** roda todo dia às 06h. Às quartas (e quando chamado à mão) executa os coletores de catálogo em `server/collectors/`; todo dia lê os encartes em imagem.
-2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos. O agrupamento usa primeiro o código de barras (EAN), que os dois mercados publicam: Spani no campo `codigo_barras` da API, Atacadão pela API pública de catálogo da VTEX (`collectors/atacadao-ean.mjs`, lotes de 50). A regra por nome só junta quando nenhum EAN contradiz. Testes: `node --test group.test.mjs` em `server/`.
+2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos. O agrupamento usa primeiro o código de barras (EAN), que os dois mercados publicam: Spani no campo `codigo_barras` da API, Atacadão pela API pública de catálogo da VTEX (`collectors/atacadao-ean.mjs`, lotes de 50). A regra por nome só junta quando nenhum EAN contradiz, com uma exceção: nomes da mesma marca, mesmo tamanho e preço parecido (até 30% de diferença) que diferem só por palavras que descrevem (lista `SOFT`: torrado, moído, vácuo, almofada, garrafa, pet, lager...) juntam mesmo com EAN diferente. Qualquer outra palavra a mais (sem, zero, light, integral, um sabor, lata) separa. Testes: `npm test` em `server/`.
+
+**Comparação justa.** `parsePack` (em `group.mjs`) lê do nome quantas unidades vêm ("36x56g", "350ml c/12", "sacola 50% na segunda", "1,2L + 1,2L"); contagem sem peso/volume ("fralda com 58 unidades") é o próprio produto e não vira caixa. O site compara pelo preço de cada unidade quando as embalagens diferem ("R$ 1,39 cada · R$ 49,90 com 36"). Preço mais de 2,2 vezes distante dos outros fica marcado "preço fora do padrão, confira" e não entra na economia; com só 2 mercados e preços muito distantes, o grupo avisa que um deles pode ser caixa. Nunca se chuta quantidade que o nome não diz.
+
+**Menor preço sem cartão da loja** (`server/price.mjs`): preço de app ou clube com CPF (Meu Assaí, clube Semar, Clube Extra), pix, cooperado e preço por quantidade ("a partir de 3 un.", "leve 5 pague 4", calculado por unidade) viram o preço principal, com o normal riscado e a condição escrita. Preço que exige cartão próprio da loja fica só como observação.
 3. O site (`app/`, React + Vite + Tailwind) é publicado na branch `gh-pages`, servida pelo **GitHub Pages**. A busca roda no navegador do visitante.
 
 Encartes em imagem: `collectors/baronesa.mjs` e `collectors/assai.mjs` gravam um manifesto (`<mercado>-encartes.json`) com as imagens vigentes, e `server/readers/folheto.mjs` lê cada imagem com IA gratuita com visão (Gemini; reserva OpenRouter): nome, preço, condição ("leve 12 pague 11", "a partir de 3 un.") e a validade impressa. Sem validade, o produto não entra. Cada imagem é lida uma vez só (cache em `server/data/cache`, guardado entre execuções). O relatório da última leitura fica em `server/data/extraido/encartes.leitura.json`. No site não há distinção: encarte e catálogo entram no mesmo comparador (produto de um mercado só aparece sozinho), cada mercado aparece pelo logotipo (`app/public/logos`; Spani como letreiro nas cores da marca, pois o site não publica o arquivo) e o preço leva à oferta original (página do site ou imagem do encarte).
@@ -26,8 +30,11 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 | Baronesa (Mauá) | Encarte em imagem (`/classes/encarte.php`), lido por IA | funcionando |
 | Assaí | Encarte em imagem das lojas Ribeirão Pires e Mauá, lido por IA | funcionando (imagens pelo Worker, ver abaixo) |
 | STUK (Ribeirão Pires) | Ofertas só no Instagram e WhatsApp | só link no rodapé do site |
-| Nagumo | HTML das categorias | em desenvolvimento |
-| Semar | API do site | bloqueada pela Cloudflare |
+| Nagumo | JSON do site (Salesforce, `Search-UpdateGrid`) com a loja 038 Mauá fixada, pelo navegador | funcionando (~26 mil produtos) |
+| Semar | API OSuper `sense.osuper.com.br/336/1705/v2/search` (loja 06 Mauá), chamada de dentro da página (a Cloudflare só atende navegador); 20 por página, por departamento | funcionando (~9,5 mil) |
+| Extra | API GPA `api.vendas.gpa.digital/ex/search/search`. As lojas de Mauá e Ribeirão Pires não vendem pelo site: usa a loja online mais próxima (1867 Demarchi, São Bernardo, `storeId` 1162). A busca não aceita termo vazio: 158 termos de itens comuns | funcionando (~4 mil; cidade "São Bernardo do Campo" no filtro) |
+| Joanin | Tabloide em imagem em `/ofertas/` (`pagN-full-tabloide-*-DDMMAAAA.jpg`), lido por IA | funcionando |
+| Dia (Mauá) | O site não publica ofertas de nenhuma loja ("nenhuma oferta encontrada"); só no app ClubDIA | cartão no rodapé |
 | Roldão, São Jorge | só folheto | a fazer |
 
 Nem todo mercado informa validade de oferta; quando não informa, o site mostra "validade não informada".
@@ -50,7 +57,7 @@ node server/build-site.mjs          # monta app/public/data a partir de server/d
 npm run dev --prefix app            # abre em http://localhost:5173
 ```
 
-Para coletar de novo localmente: `node server/run-all.mjs` (precisa de Google Chrome; use `CHROME_PATH` se não estiver no caminho padrão).
+Para coletar de novo localmente: `node server/run-all.mjs` (coletores: spani, atacadao, coop, nagumo, semar, extra) (precisa de Google Chrome; use `CHROME_PATH` se não estiver no caminho padrão).
 
 ## Acrescentar um mercado
 
