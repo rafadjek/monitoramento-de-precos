@@ -21,7 +21,7 @@ const cart = [{ g: 'arroz', qty: 1 }, { g: 'cafe', qty: 2 }, { g: 'leite', qty: 
 test('ranking: quem tem a lista inteira primeiro, pelo total', () => {
   const r = rankMarkets(groups, cart, ['A', 'B', 'C']);
   assert.deepEqual(r.map((x) => [x.market, x.total, x.have]), [['B', 97, 3], ['A', 110, 3], ['C', 74, 2]]);
-  assert.deepEqual(r[2].missing, ['leite']);
+  assert.deepEqual(r[2].missing, ['leite@']);
 });
 
 test('melhor dupla cobre a lista e é mais barata que o melhor mercado sozinho', () => {
@@ -64,4 +64,13 @@ test('item fixo num mercado entra com o preço dele em todas as contas', async (
   assert.equal(p.lines[0].market, 'B');
   assert.equal(p.lines[0].pinned, true);
   assert.deepEqual(decodeCart(encodeCart(c2)), c2);
+});
+
+test('mesmo produto em dois mercados escolhidos vira duas linhas', async () => {
+  const { buildPlan, keyOf } = await import('./cart.ts');
+  const c3 = [{ g: 'arroz', qty: 1, m: 'A' }, { g: 'arroz', qty: 2, m: 'B' }];
+  const p = buildPlan(groups, c3, ['A', 'B', 'C'])!;
+  assert.deepEqual(p.lines.map((l) => [l.market, l.total]), [['A', 20], ['B', 50]]);
+  assert.equal(p.total, 70);
+  assert.notEqual(keyOf(c3[0]), keyOf(c3[1]));
 });

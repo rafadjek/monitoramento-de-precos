@@ -5,8 +5,10 @@ import type { Group, Indexed } from './lib';
 // m: mercado escolhido pela pessoa para aquele item ("quero esse do Atacadão"). Item com m fica fixo
 // nesse mercado em todas as contas; os outros itens o carrinho põe onde sair mais barato.
 export type CartItem = { g: string; qty: number; m?: string };
+// Chave de cada linha da lista: o mesmo produto pode entrar 2 vezes, uma em cada mercado escolhido.
+export const keyOf = (c: Pick<CartItem, 'g' | 'm'>) => c.g + '@' + (c.m ?? '');
 export type MarketTotal = { market: string; total: number; have: number; missing: string[]; warn: number };
-export type Pair = { a: string; b: string; total: number; picks: { g: string; market: string; cost: number }[] };
+export type Pair = { a: string; b: string; total: number; picks: { key: string; g: string; market: string; cost: number }[] };
 
 const unit = (o: Pick<Indexed, 'price' | '_u'>) => o.price / (o._u ?? 1);
 const soon = (o: Pick<Indexed, 'validUntil'>) => !!o.validUntil && Date.parse(o.validUntil) - Date.now() < 36 * 3600 * 1000;
@@ -34,7 +36,7 @@ export function rankMarkets(groups: Map<string, Group>, cart: CartItem[], market
     for (const c of cart) {
       const g = groups.get(c.g);
       const p = g && (c.m ? pinnedPrice(g, c.m) : priceIn(g, market));
-      if (!p) { missing.push(c.g); continue; }
+      if (!p) { missing.push(keyOf(c)); continue; }
       total += p.cost * c.qty;
       if (!c.m) have++;
       if (p.warn) warn++;
@@ -63,7 +65,7 @@ export function bestPair(groups: Map<string, Group>, cart: CartItem[], markets: 
         const p = g && pinnedPrice(g, c.m);
         if (!p) { ok = false; break; }
         total += p.cost * c.qty;
-        picks.push({ g: c.g, market: c.m, cost: p.cost * c.qty });
+        picks.push({ key: keyOf(c), g: c.g, market: c.m, cost: p.cost * c.qty });
         continue;
       }
       const pa = g && priceIn(g, a), pb = g && priceIn(g, b);
@@ -71,11 +73,11 @@ export function bestPair(groups: Map<string, Group>, cart: CartItem[], markets: 
       const useA = pa && (!pb || pa.cost <= pb.cost);
       const cost = (useA ? pa!.cost : pb!.cost) * c.qty;
       total += cost;
-      picks.push({ g: c.g, market: useA ? a : b, cost });
+      picks.push({ key: keyOf(c), g: c.g, market: useA ? a : b, cost });
     }
     if (!ok) continue;
     // dupla em que um mercado não leva nenhum item livre é, na verdade, um mercado só
-    const freePicks = picks.filter((p) => !cart.find((c) => c.g === p.g)!.m);
+    const freePicks = picks.filter((p) => p.key.endsWith('@')); // item livre: chave sem mercado
     if (!freePicks.some((p) => p.market === a) || !freePicks.some((p) => p.market === b)) continue;
     total = Math.round(total * 100) / 100;
     if (!best || total < best.total) best = { a, b, total, picks };
@@ -97,7 +99,7 @@ export function decodeCart(s: string | null): CartItem[] {
 
 // Plano de compra: onde comprar cada item. Usa a divisão em 2 mercados se ela sair mais barata
 // que o melhor mercado sozinho (ou se nenhum mercado tiver a lista inteira). Item fixo fica onde foi escolhido.
-export type PlanLine = { g: string; qty: number; market: string; unit: number; total: number; pinned: boolean };
+export type PlanLine = { key: string; g: string; qty: number; market: string; unit: number; total: number; pinned: boolean };
 export function buildPlan(groups: Map<string, Group>, cart: CartItem[], markets: string[]): { lines: PlanLine[]; total: number; split: boolean } | null {
   const rank = rankMarkets(groups, cart, markets);
   const single = rank.find((r) => r.missing.length === 0);
@@ -105,10 +107,10 @@ export function buildPlan(groups: Map<string, Group>, cart: CartItem[], markets:
   const usePair = pair && (!single || pair.total < single.total - 0.009);
   if (!usePair && !single) return null;
   const lines: PlanLine[] = cart.map((c) => {
-    const market = c.m ?? (usePair ? pair!.picks.find((p) => p.g === c.g)!.market : single!.market);
+    const market = c.m ?? (usePair ? pair!.picks.find((p) => p.key === keyOf(c))!.market : single!.market);
     const g = groups.get(c.g)!;
     const unitCost = (c.m ? pinnedPrice(g, market) : priceIn(g, market))!.cost;
-    return { g: c.g, qty: c.qty, market, unit: unitCost, total: Math.round(unitCost * c.qty * 100) / 100, pinned: !!c.m };
+    return { key: keyOf(c), g: c.g, qty: c.qty, market, unit: unitCost, total: Math.round(unitCost * c.qty * 100) / 100, pinned: !!c.m };
   });
   return { lines, total: Math.round(lines.reduce((s, l) => s + l.total, 0) * 100) / 100, split: !!usePair };
 }

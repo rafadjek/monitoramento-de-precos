@@ -1,6 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
-import { decodeCart, type CartItem } from './cart';
+import { decodeCart, keyOf, type CartItem } from './cart';
 import { ProductList } from './components/ProductList';
 import { CartPanel } from './components/CartPanel';
 import { Offers, pickOffers } from './components/Offers';
@@ -51,6 +51,9 @@ export default function App() {
   const [shown, setShown] = useState(PAGE);
   const [favs, setFavs] = useState<Set<string>>(() => new Set(load<string[]>('bate-favoritos', [])));
   const [onlyFavs, setOnlyFavs] = useState(false);
+  // oferta selecionada em cada produto (borda amarela): id do grupo -> mercado
+  const [selected, setSelected] = useState<Record<string, string>>({});
+  const onSelect = (id: string, m: string) => setSelected((s) => { const n = { ...s }; if (n[id] === m) delete n[id]; else n[id] = m; return n; });
   const [cart, setCartState] = useState<CartItem[]>(() => {
     // lista recebida por link (?lista=...) se junta à que já está no navegador
     const mine = load<CartItem[]>('bate-lista', []);
@@ -115,12 +118,12 @@ export default function App() {
 
   const toggleFav = (id: string) => { const n = new Set(favs); if (n.has(id)) n.delete(id); else n.add(id); setFavs(n); save('bate-favoritos', [...n]); };
   // m: mercado escolhido na etiqueta (item fica fixo nele); sem m, o carrinho escolhe o mais barato
+  // mesmo produto em mercados diferentes vira linhas diferentes; repetir o mesmo soma 1
   const add = (g: string, m?: string) => {
-    const has = cart.find((c) => c.g === g);
-    if (!has) return setCart([...cart, m ? { g, qty: 1, m } : { g, qty: 1 }]);
-    // trocar de mercado não soma quantidade; clicar de novo no mesmo soma 1
-    const same = (has.m ?? '') === (m ?? '');
-    setCart(cart.map((c) => (c.g === g ? { ...c, qty: same ? Math.min(99, c.qty + 1) : c.qty, m } : c)));
+    const item: CartItem = m ? { g, qty: 1, m } : { g, qty: 1 };
+    const k = keyOf(item);
+    setCart(cart.some((c) => keyOf(c) === k) ? cart.map((c) => (keyOf(c) === k ? { ...c, qty: Math.min(99, c.qty + 1) } : c)) : [...cart, item]);
+    if (m) setSelected((s) => { const n = { ...s }; delete n[g]; return n; });
   };
   const inCart = useMemo(() => new Set(cart.map((c) => c.g)), [cart]);
   const clear = () => { setQ(''); setCategory(''); setMarket(''); setOnlyFavs(false); };
@@ -239,7 +242,7 @@ export default function App() {
               </div>
             )}
             {status === 'ok' && list.length > 0 && (
-              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} />
             )}
             {status === 'ok' && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">

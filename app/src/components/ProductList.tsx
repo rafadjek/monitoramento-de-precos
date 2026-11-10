@@ -1,11 +1,13 @@
 import { brl, each, type Group, type Indexed } from '../lib';
 import { Icon, MarketLogo, Price, Thumb, Validity } from './Parts';
 
-// Linha de produto como na primeira versão: só os mercados que têm o produto, lado a lado,
-// do mais barato ao mais caro, com o mais barato em destaque. Sem colunas vazias.
+// Linha de produto: só os mercados que têm o produto, lado a lado, do mais barato ao mais caro.
+// Clicar numa etiqueta seleciona aquela oferta (borda amarela) e mostra o botão para pôr na lista;
+// o ícone no canto abre o produto no site do mercado.
 type Props = {
   groups: Group[]; only: string; favs: Set<string>; onFav: (id: string) => void;
   inCart: Set<string>; onAdd: (id: string, market?: string) => void;
+  selected: Record<string, string>; onSelect: (id: string, market: string) => void;
 };
 
 const byQty = (o: Indexed) => !!o.condition && /levando|a partir|leve \d/i.test(o.condition);
@@ -26,7 +28,7 @@ export function Star({ text }: { text: string }) {
   );
 }
 
-function Tag({ g, it, first, onAdd }: { g: Group; it: Indexed; first: boolean; onAdd: (id: string, market?: string) => void }) {
+function Tag({ g, it, first, picked, onSelect }: { g: Group; it: Indexed; first: boolean; picked: boolean; onSelect: () => void }) {
   const odd = g.odd.includes(it.id);
   const alone = g.items.length === 1;
   const best = first && !odd && !g.suspect && !alone;
@@ -34,35 +36,34 @@ function Tag({ g, it, first, onAdd }: { g: Group; it: Indexed; first: boolean; o
   const diff = value - (g.perUnit ? each(g.items[0]) : g.items[0].price);
   const strike = it.listPrice && it.listPrice > it.price && !byQty(it) && !(g.perUnit && (it._u ?? 1) > 1) ? it.listPrice : null;
   const cond = conditionText(it, g);
-  const cls = best ? 'border-neon/80 bg-neon/10 shadow-neon' : odd ? 'border-dashed border-signal/70 opacity-80' : 'border-edge bg-panel2';
-  const body = (
-    <>
-      <MarketLogo name={it.market} h="h-7" />
-      {strike && <s className="num mt-1 block text-[0.7rem] text-muted">{brl(strike)}</s>}
-      <span className={`mt-1 flex items-start ${best ? 'text-neon' : 'text-ink'}`}>
-        <Price value={value} size={best ? 'lg' : 'md'} />
-        {cond && <Star text={cond} />}
-      </span>
-      <span className={`mt-0.5 block text-[0.72rem] ${best ? 'font-bold text-neon' : 'text-muted'}`}>
-        {odd ? <b className="text-signal">preço fora do padrão</b> : best ? <span className="inline-flex items-center gap-1"><Icon name="crown" className="h-3.5 w-3.5" fill />Menor preço</span> : !alone && diff > 0.004 ? `+ ${brl(diff)}` : ''}
-      </span>
-    </>
-  );
-  const box = `block min-w-[7.2rem] rounded-xl border px-3 py-2 pr-9 text-left ${cls}`;
-  // a etiqueta abre o produto no site do mercado; o "+" põe na lista esta oferta, fixa neste mercado
+  // selecionada: borda amarela de alerta (tem prioridade sobre o verde do mais barato)
+  const cls = picked ? 'border-2 border-gold bg-gold/10 shadow-[0_0_0_1px_rgba(255,194,26,.6),0_0_18px_rgba(255,194,26,.35)]'
+    : best ? 'border-neon/80 bg-neon/10 shadow-neon' : odd ? 'border-dashed border-signal/70 opacity-80' : 'border-edge bg-panel2';
   return (
     <div className="relative">
-      {it.productUrl ? (
-        <a href={it.productUrl} target="_blank" rel="noopener noreferrer" className={`${box} hover:brightness-125`} title={`Ver no ${it.market}`}>{body}</a>
-      ) : <div className={box}>{body}</div>}
-      <button onClick={() => onAdd(g.id, it.market)} aria-label={`Pôr na lista: comprar no ${it.market}`} title={`Pôr na lista: comprar no ${it.market}`} className="absolute right-1.5 top-1.5 grid h-7 w-7 place-items-center rounded-lg bg-sky text-night hover:brightness-110">
-        <Icon name="plus" className="h-4 w-4" />
+      <button type="button" onClick={onSelect} aria-pressed={picked} title={picked ? 'Selecionado' : `Selecionar a oferta do ${it.market}`}
+        className={`block min-w-[7.2rem] rounded-xl border px-3 py-2 pr-9 text-left hover:brightness-125 ${cls}`}>
+        <MarketLogo name={it.market} h="h-7" />
+        {strike && <s className="num mt-1 block text-[0.7rem] text-muted">{brl(strike)}</s>}
+        <span className={`mt-1 flex items-start ${picked ? 'text-gold' : best ? 'text-neon' : 'text-ink'}`}>
+          <Price value={value} size={best ? 'lg' : 'md'} />
+          {cond && <Star text={cond} />}
+        </span>
+        <span className={`mt-0.5 block text-[0.72rem] ${best ? 'font-bold text-neon' : 'text-muted'}`}>
+          {odd ? <b className="text-signal">preço fora do padrão</b> : best ? <span className="inline-flex items-center gap-1"><Icon name="crown" className="h-3.5 w-3.5" fill />Menor preço</span> : !alone && diff > 0.004 ? `+ ${brl(diff)}` : ''}
+        </span>
       </button>
+      {it.productUrl && (
+        <a href={it.productUrl} target="_blank" rel="noopener noreferrer" aria-label={`Ver no site do ${it.market}`} title={`Ver no site do ${it.market}`}
+          className="absolute right-1.5 top-1.5 grid h-7 w-7 place-items-center rounded-lg border border-sky/70 bg-night/60 text-sky hover:bg-sky hover:text-night">
+          <Icon name="external" className="h-4 w-4" />
+        </a>
+      )}
     </div>
   );
 }
 
-export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props) {
+export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected, onSelect }: Props) {
   return (
     <ul className="divide-y divide-edge/80 overflow-hidden rounded-2xl border border-edge bg-panel">
       {groups.map((g) => {
@@ -71,6 +72,8 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props)
         // com um mercado escolhido, a etiqueta dele vem primeiro (as outras continuam para comparar)
         const items = only ? [...g.items.filter((i) => i.market === only), ...g.items.filter((i) => i.market !== only)] : g.items;
         const fav = favs.has(g.id), added = inCart.has(g.id);
+        const pick = selected[g.id];
+        const pickedItem = pick ? g.items.find((i) => i.market === pick) : undefined;
         return (
           <li key={g.id} className="flex gap-3 p-3 sm:gap-4 sm:p-4">
             <Thumb src={g.image} name={g.name} size={104} />
@@ -88,14 +91,22 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props)
                   : `Mesmo preço em ${g.items.length - g.odd.length} mercados`}
               </p>
               <ul className="mt-2 flex flex-wrap gap-2">
-                {items.map((it) => <li key={it.id}><Tag g={g} it={it} first={it === g.items[0]} onAdd={onAdd} /></li>)}
+                {items.map((it) => (
+                  <li key={it.id}><Tag g={g} it={it} first={it === g.items[0]} picked={pick === it.market} onSelect={() => onSelect(g.id, it.market)} /></li>
+                ))}
               </ul>
               <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
-                <button onClick={() => onAdd(g.id)} className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-bold ${added ? 'bg-neon/15 text-neon' : 'border border-sky/70 text-sky hover:bg-sky/10'}`}>
-                  <Icon name="cart" className="h-4 w-4" />{added ? 'Na lista (+1)' : 'Pôr na lista (mais barato)'}
-                </button>
+                {pickedItem ? (
+                  <button onClick={() => onAdd(g.id, pickedItem.market)} className="inline-flex items-center gap-1.5 rounded-lg bg-gold px-3 py-1.5 font-bold text-night hover:brightness-110">
+                    <Icon name="cart" className="h-4 w-4" />Pôr na lista: {pickedItem.market} {brl(g.perUnit ? each(pickedItem) : pickedItem.price)}
+                  </button>
+                ) : (
+                  <button onClick={() => onAdd(g.id)} className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-bold ${added ? 'bg-neon/15 text-neon' : 'border border-sky/70 text-sky hover:bg-sky/10'}`}>
+                    <Icon name="cart" className="h-4 w-4" />{added ? 'Na lista (+1)' : 'Pôr na lista (mais barato)'}
+                  </button>
+                )}
                 <span className="text-muted">
-                  {best.validUntil ? <><Validity o={best} /> no {best.market}</> : `${best.market} não informa até quando vale`}
+                  {pickedItem ? 'toque de novo na etiqueta para desmarcar' : best.validUntil ? <><Validity o={best} /> no {best.market}</> : 'toque numa etiqueta para escolher o mercado'}
                 </span>
               </div>
             </div>

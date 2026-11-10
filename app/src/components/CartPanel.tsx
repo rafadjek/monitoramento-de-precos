@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { bestPair, buildPlan, rankMarkets, shareText, type CartItem } from '../cart';
+import { bestPair, buildPlan, keyOf, rankMarkets, shareText, type CartItem } from '../cart';
 import { brl, type Group } from '../lib';
 import { Icon, MarketLogo } from './Parts';
 import { Star, conditionText } from './ProductList';
@@ -9,14 +9,14 @@ type Props = { cart: CartItem[]; setCart: (c: CartItem[]) => void; groups: Map<s
 export function CartPanel({ cart, setCart, groups, markets }: Props) {
   const [copied, setCopied] = useState(false);
   const items = cart.filter((c) => groups.has(c.g));
-  const key = items.map((c) => c.g + c.qty).join();
+  const key = items.map((c) => keyOf(c) + c.qty).join();
   const rank = useMemo(() => rankMarkets(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
   const pair = useMemo(() => bestPair(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
   const plan = useMemo(() => buildPlan(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
   const best = rank.find((r) => r.missing.length === 0);
   const pairGain = best && pair ? best.total - pair.total : 0;
   const showPair = pair && (!best || pairGain > 0.009);
-  const setQty = (g: string, q: number) => setCart(q <= 0 ? cart.filter((c) => c.g !== g) : cart.map((c) => (c.g === g ? { ...c, qty: Math.min(99, q) } : c)));
+  const setQty = (k: string, q: number) => setCart(q <= 0 ? cart.filter((c) => keyOf(c) !== k) : cart.map((c) => (keyOf(c) === k ? { ...c, qty: Math.min(99, q) } : c)));
   const name = (g: string) => groups.get(g)?.name ?? '';
 
   // abre o WhatsApp direto com a lista pronta (o "Compartilhar" do Windows não mostra o WhatsApp);
@@ -44,18 +44,18 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
           {/* 1. itens, cada um com o mercado onde comprar (pelo plano mais barato) */}
           <ul className="mt-3 space-y-1">
             {items.map((c) => {
-              const line = plan?.lines.find((l) => l.g === c.g);
+              const line = plan?.lines.find((l) => l.key === keyOf(c));
               const g = groups.get(c.g)!;
               const it = line && g.items.find((i) => i.market === line.market);
               const cond = it ? conditionText(it, g) : null;
               return (
-                <li key={c.g} className="rounded-lg bg-panel2/70 px-2 py-1.5 text-sm">
+                <li key={keyOf(c)} className="rounded-lg bg-panel2/70 px-2 py-1.5 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="min-w-0 flex-1 truncate font-bold" title={g.name}>{g.name}</span>
-                    <button onClick={() => setQty(c.g, c.qty - 1)} aria-label="Menos" className="rounded bg-edge p-1"><Icon name="minus" className="h-3 w-3" /></button>
+                    <button onClick={() => setQty(keyOf(c), c.qty - 1)} aria-label="Menos" className="rounded bg-edge p-1"><Icon name="minus" className="h-3 w-3" /></button>
                     <span className="num w-5 text-center font-bold">{c.qty}</span>
-                    <button onClick={() => setQty(c.g, c.qty + 1)} aria-label="Mais" className="rounded bg-edge p-1"><Icon name="plus" className="h-3 w-3" /></button>
-                    <button onClick={() => setQty(c.g, 0)} aria-label="Tirar da lista" className="p-0.5 text-muted hover:text-signal"><Icon name="x" className="h-4 w-4" /></button>
+                    <button onClick={() => setQty(keyOf(c), c.qty + 1)} aria-label="Mais" className="rounded bg-edge p-1"><Icon name="plus" className="h-3 w-3" /></button>
+                    <button onClick={() => setQty(keyOf(c), 0)} aria-label="Tirar da lista" className="p-0.5 text-muted hover:text-signal"><Icon name="x" className="h-4 w-4" /></button>
                   </div>
                   {line ? (
                     <div className="mt-1 flex items-center gap-2 text-xs text-muted">
@@ -69,7 +69,11 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
             })}
           </ul>
 
-          {/* 2. melhor mercado para a lista toda */}
+          {/* com todos os itens fixos não há o que comparar: só o total */}
+          {items.every((c) => c.m) && plan && (
+            <p className="mt-4 flex items-center justify-between rounded-xl border border-gold/60 bg-gold/10 p-3 font-bold"><span>Total da lista</span><span className="num font-display text-2xl text-gold">{brl(plan.total)}</span></p>
+          )}
+          {!items.every((c) => c.m) && <>{/* 2. melhor mercado para a lista toda */}
           <h3 className="mt-4 flex items-center gap-2 font-display text-lg font-bold"><Icon name="trophy" className="h-5 w-5 text-gold" />Melhor mercado para a lista toda</h3>
           <ol className="mt-2 divide-y divide-edge/70 overflow-hidden rounded-xl border border-edge">
             {rank.slice(0, 5).map((r, i) => {
@@ -86,7 +90,7 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
               );
             })}
           </ol>
-          {!best && <p className="mt-2 text-xs text-gold">Nenhum mercado tem a lista inteira.</p>}
+          {!best && <p className="mt-2 text-xs text-gold">Nenhum mercado tem a lista inteira.</p>}</>}
 
           {/* 3. divisão em 2 mercados, separada */}
           {showPair && pair && (
@@ -98,7 +102,7 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
                 return (
                   <div key={m} className="mt-2 rounded-lg bg-panel2/70 p-2">
                     <div className="flex items-center"><MarketLogo name={m} h="h-6" /><span className="num ml-auto font-bold">{brl(ls.reduce((s, p) => s + p.cost, 0))}</span></div>
-                    <ul className="mt-1 text-xs text-muted">{ls.map((p) => <li key={p.g} className="truncate">• {name(p.g)}</li>)}</ul>
+                    <ul className="mt-1 text-xs text-muted">{ls.map((p) => <li key={p.key} className="truncate">• {name(p.g)}</li>)}</ul>
                   </div>
                 );
               })}
