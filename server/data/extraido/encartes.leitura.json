@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-10T11:03:16.886Z",
+ "startedAt": "2026-11-10T11:23:48.767Z",
  "pages": [
   {
    "market": "Assaí",
@@ -39,50 +39,86 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-09",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859620.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 4,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-09",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004859622.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 4,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-09",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004866932.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 4,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-09",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004866934.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 4,
-   "model": "gemini-flash-latest"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-09",
+   "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
    "ok": true,
    "cached": true,
    "products": 1,
    "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 2,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Joanin",
+   "offerId": "tabloide-15112026",
+   "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 70,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Joanin",
+   "offerId": "tabloide-15112026",
+   "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
+   "ok": true,
+   "cached": false,
+   "products": 61,
+   "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T11:03:16.895Z",
- "newReads": 0
+ "finishedAt": "2026-11-10T11:36:36.835Z",
+ "newReads": 8
 }
