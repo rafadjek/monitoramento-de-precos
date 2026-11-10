@@ -25,6 +25,11 @@ const r = await fetch(`https://api.apify.com/v2/acts/${ACTOR}/run-sync-get-datas
 });
 if (!r.ok) { console.error(`social: Apify HTTP ${r.status} ${(await r.text()).slice(0, 200)}`); process.exit(1); }
 const posts = await r.json();
+// registro por perfil: quantos posts vieram e de que tipo (ajuda a conferir a coleta)
+for (const u of Object.keys(PROFILES)) {
+  const mine = (Array.isArray(posts) ? posts : []).filter((p) => String(p.ownerUsername || '').toLowerCase() === u);
+  console.log(`  @${u}: ${mine.length} posts (${mine.map((p) => p.type).join(', ') || 'nenhum'})`);
+}
 
 // fim do dia do post em Brasília
 const endOfDay = (iso) => { const d = new Date(new Date(iso).getTime() - 3 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1, 2, 59, 59)).toISOString(); };
