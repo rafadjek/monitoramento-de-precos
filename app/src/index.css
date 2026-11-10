@@ -1,5 +1,6 @@
 @import '@fontsource/barlow-condensed/600.css';
-@import '@fontsource/barlow-condensed/800.css';
+@import '@fontsource/barlow-condensed/700.css';
+@import '@fontsource/barlow-condensed/800-italic.css';
 @import '@fontsource/public-sans/400.css';
 @import '@fontsource/public-sans/700.css';
 
@@ -8,12 +9,35 @@
 @tailwind utilities;
 
 @layer base {
-  html { -webkit-text-size-adjust: 100%; }
-  body { @apply bg-paper font-sans text-ink antialiased; }
-  :focus-visible { outline: 3px solid #14222B; outline-offset: 2px; }
-  .on-ink :focus-visible { outline-color: #FFD21F; }
+  html { -webkit-text-size-adjust: 100%; color-scheme: dark; }
+  body {
+    @apply bg-night font-sans text-ink antialiased;
+  }
+  :focus-visible { outline: 3px solid #ffc21a; outline-offset: 2px; }
 }
 
 @layer components {
   .num { font-variant-numeric: tabular-nums; }
+  .glass { @apply rounded-2xl border border-edge bg-panel/85 backdrop-blur; }
+  /* borda em degradê azul -> laranja da busca */
+  .glow-ring {
+    background: linear-gradient(#0c1530, #0c1530) padding-box, linear-gradient(90deg, #2f8bff, #22e3d0 45%, #ff8a1e) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 0 22px rgba(47, 139, 255, 0.25), 0 0 22px rgba(255, 138, 30, 0.18);
+  }
+  .title-fire {
+    background: linear-gradient(180deg, #ffd23a, #ff8a1e 60%, #ff5a1e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* barra de rolagem visível na tabela (para arrastar até os outros mercados) */
+  .bar-x { scrollbar-color: #2f8bff #101c3d; scrollbar-width: auto; }
+  .bar-x::-webkit-scrollbar { height: 12px; }
+  .bar-x::-webkit-scrollbar-track { background: #101c3d; border-radius: 99px; }
+  .bar-x::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #2f8bff, #22e36b); border-radius: 99px; }
 }
+
+/* larguras da tabela de preços; no celular a coluna de ação some (o botão da lista vai para a célula do produto) */
+.tbl { --pc: clamp(140px, 36vw, 260px); --mc: clamp(104px, 26vw, 122px); --ac: 0px; }
+@media (min-width: 640px) { .tbl { --ac: 158px; } }

@@ -1,4 +1,6 @@
-# Monitoramento de Preços — Mauá e Ribeirão Pires
+# Bate Ofertas — Combate de preços em Mauá e Ribeirão Pires
+
+(repositório `monitoramento-de-precos`)
 
 Site que reúne os preços de **alimentícios, higiene e limpeza** dos mercados da região, com busca e filtros. Qualquer pessoa usa pelo navegador; não precisa instalar nada.
 
@@ -17,6 +19,12 @@ Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 3. O site (`app/`, React + Vite + Tailwind) é publicado na branch `gh-pages`, servida pelo **GitHub Pages**. A busca roda no navegador do visitante.
 
 Encartes em imagem: `collectors/baronesa.mjs` e `collectors/assai.mjs` gravam um manifesto (`<mercado>-encartes.json`) com as imagens vigentes, e `server/readers/folheto.mjs` lê cada imagem com IA gratuita com visão (Gemini; reserva OpenRouter): nome, preço, condição ("leve 12 pague 11", "a partir de 3 un.") e a validade impressa. Sem validade, o produto não entra. Cada imagem é lida uma vez só (cache em `server/data/cache`, guardado entre execuções). O relatório da última leitura fica em `server/data/extraido/encartes.leitura.json`. No site não há distinção: encarte e catálogo entram no mesmo comparador (produto de um mercado só aparece sozinho), cada mercado aparece pelo logotipo (`app/public/logos`; Spani como letreiro nas cores da marca, pois o site não publica o arquivo) e o preço leva à oferta original (página do site ou imagem do encarte).
+
+**Tela ("Bate Ofertas", desde 10/11/2026).** Tema escuro em neon pelo modelo do Rafael (`app/public/fundo.webp`, `bate-ofertas.png`). Tabela com um mercado por coluna: produto fixo à esquerda, ação fixa à direita, 4 mercados visíveis e barra para arrastar até os outros (sempre todos os mercados da região); toque no logotipo filtra por aquele mercado. Categorias finas (`server/category.mjs`: hortifruti, carnes, laticínios, bebidas, mercearia, limpeza, higiene, outros) pelo departamento de cada site e pelo nome. Ordem: menor preço, maior preço, nome. Favoritos e a lista ficam no navegador (localStorage), sem login.
+
+**Carrinho Inteligente** (`app/src/cart.ts`, testes em `app/src/cart.test.ts`, `npm test` em `app/`): lista com quantidade; total em cada mercado (quem tem a lista inteira primeiro; "tem 3 de 4" para os outros); melhor compra e economia contra o mais caro; melhor divisão em 2 mercados; link para compartilhar (`?lista=id*qtd~...`); aviso de preço por quantidade ou que vence logo. Preço fora do padrão não entra na conta.
+
+**Disponibilidade.** Produto esgotado na loja não entra: Atacadão pelo `availability` da oferta, Nagumo pelo `available` do produto (na loja 038 Mauá só ~6,3 mil dos ~26 mil do catálogo estão à venda); os outros coletores já filtravam.
 
 Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `run-all.mjs` mantém os dados antigos.
 

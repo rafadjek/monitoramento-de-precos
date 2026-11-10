@@ -3,16 +3,16 @@
  "log": [
   {
    "path": "catalogo",
-   "total": 1434,
-   "got": 80,
-   "note": "resposta sem products",
+   "total": 1435,
+   "got": 1435,
+   "note": "",
    "label": "Super Ofertas"
   },
   {
    "path": "mercearia",
-   "total": 2187,
+   "total": 2188,
    "got": 2320,
-   "note": "lista acima de 2000: final lido em ordem inversa (187 itens esperados fora da 1ª leitura)"
+   "note": "lista acima de 2000: final lido em ordem inversa (188 itens esperados fora da 1ª leitura)"
   },
   {
    "path": "padaria-e-matinais",
@@ -40,8 +40,8 @@
   },
   {
    "path": "hortifruti",
-   "total": 144,
-   "got": 144,
+   "total": 145,
+   "got": 145,
    "note": ""
   },
   {
@@ -58,19 +58,19 @@
   },
   {
    "path": "limpeza",
-   "total": 685,
-   "got": 685,
+   "total": 684,
+   "got": 684,
    "note": ""
   },
   {
    "path": "ean",
-   "found": 843,
-   "missing": 843,
-   "requests": 17,
+   "found": 6600,
+   "missing": 6700,
+   "requests": 134,
    "stop": null
   }
  ],
- "requests": 189,
+ "requests": 222,
  "blocked": null,
- "seconds": 470
+ "seconds": 744
 }

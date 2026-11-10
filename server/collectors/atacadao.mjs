@@ -56,7 +56,8 @@ function sizeFromName(name) {
 }
 
 function toRecord(node, scope, collectedAt, fromPage) {
-  const offers = (node.offers?.offers || []).filter((o) => typeof o.price === 'number' && o.price > 0);
+  // esgotado na loja não entra (o site manda availability = 'outOfStock' e similares)
+  const offers = (node.offers?.offers || []).filter((o) => typeof o.price === 'number' && o.price > 0 && (!o.availability || /available|instock/i.test(o.availability)) && !/out ?of ?stock|unavailable/i.test(o.availability || ''));
   if (!node.name || !offers.length) return null;
   offers.sort((a, b) => (a.minQuantity || 1) - (b.minQuantity || 1));
   const o = offers[0];

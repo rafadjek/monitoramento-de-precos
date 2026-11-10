@@ -114,6 +114,8 @@ function normalize(p, ctxInfo) {
   const price = p.price && p.price.sales && Number(p.price.sales.value);
   const name = (p.productName || '').replace(/\s+/g, ' ').trim();
   if (!name || !(price > 0)) return null;
+  // esgotado na loja escolhida não entra
+  if (p.available === false || p.readyToOrder === false || p.availability?.available === false) return null;
   const listV = p.price.list && Number(p.price.list.value);
   const productUrl = p.productShowFullUrl;
   const { dept, raw } = categoryFromUrl(productUrl);

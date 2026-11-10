@@ -80,6 +80,10 @@ jobs:
         working-directory: server
         run: npm test
 
+      - name: Testar a conta do Carrinho Inteligente
+        working-directory: app
+        run: npm test
+
       - name: Montar dados e imagens do site
         working-directory: server
         run: node build-site.mjs
