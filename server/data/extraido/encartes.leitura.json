@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-09T21:58:25.951Z",
+ "startedAt": "2026-11-10T09:58:27.561Z",
  "pages": [
   {
    "market": "Assaí",
@@ -35,15 +35,6 @@
    "ok": true,
    "cached": true,
    "products": 25,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Assaí",
-   "offerId": "175725-883",
-   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175725/campanha-175725-cluster-883-pagina-1.jpeg",
-   "ok": true,
-   "cached": true,
-   "products": 6,
    "model": "gemini-flash-lite-latest"
   },
   {
@@ -92,6 +83,6 @@
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-09T21:58:25.957Z",
+ "finishedAt": "2026-11-10T09:58:27.567Z",
  "newReads": 0
 }
