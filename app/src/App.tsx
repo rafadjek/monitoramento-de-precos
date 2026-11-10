@@ -1,10 +1,10 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
 import { decodeCart, type CartItem } from './cart';
-import { PriceTable } from './components/Table';
+import { ProductList } from './components/ProductList';
 import { CartPanel } from './components/CartPanel';
 import { Offers, pickOffers } from './components/Offers';
-import { Icon } from './components/Parts';
+import { Icon, MarketLogo } from './components/Parts';
 
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
@@ -121,9 +121,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.2) 0, rgba(6,11,26,.75) 300px, #060b1a 560px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
-      <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/85 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/95">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
-          <a href={BASE} aria-label="Bate Ofertas, início"><img src={`${BASE}bate-ofertas.png`} alt="Bate Ofertas" className="h-11 w-auto sm:h-14" /></a>
+          <a href={BASE} aria-label="Bate Ofertas, início"><img src={`${BASE}bate-ofertas.webp`} alt="Bate Ofertas" className="h-11 w-auto sm:h-14" /></a>
           <label className="ml-1 hidden items-center gap-2 rounded-xl border border-sky/60 bg-panel px-3 py-1.5 shadow-sky sm:flex">
             <Icon name="pin" className="h-5 w-5 text-sky" />
             <span className="leading-tight">
@@ -171,13 +171,13 @@ export default function App() {
       <div className="mx-auto grid max-w-[1400px] gap-5 px-4 pb-16 lg:grid-cols-[minmax(0,1fr)_370px]">
         <main className="min-w-0 space-y-4">
           <div className="glass p-2">
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-5 xl:grid-cols-9">
+            <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-9 xl:overflow-visible">
               {CATEGORIES.map((c) => (
                 <button
                   key={c.id}
                   onClick={() => setCategory(c.id)}
                   aria-pressed={category === c.id}
-                  className={`flex flex-col items-center gap-1 rounded-xl border px-2 py-2.5 text-sm font-bold ${category === c.id ? 'border-neon bg-neon/15 text-ink shadow-neon' : 'border-edge bg-panel2/70 text-ink/90 hover:border-sky/60'}`}
+                  className={`flex min-w-[5.6rem] shrink-0 flex-col items-center gap-1 rounded-xl border px-2 py-2.5 text-sm font-bold ${category === c.id ? 'border-neon bg-neon/15 text-ink shadow-neon' : 'border-edge bg-panel2/70 text-ink/90 hover:border-sky/60'}`}
                 >
                   <span className="text-2xl leading-none" aria-hidden>{c.icon}</span>{c.label}
                 </button>
@@ -200,12 +200,21 @@ export default function App() {
               </label>
             </div>
 
+            {/* filtro por mercado: um botão com o logotipo de cada mercado da região */}
+            <div role="group" aria-label="Mercado" className="-mx-3 flex gap-2 overflow-x-auto px-3 pb-1">
+              <button onClick={() => setMarket('')} aria-pressed={market === ''} className={`min-h-[2.75rem] shrink-0 rounded-xl border px-3 text-sm font-bold ${market === '' ? 'border-sky bg-sky/15 text-ink' : 'border-edge bg-panel2 text-muted'}`}>Todos</button>
+              {columns.map((m) => (
+                <button key={m} onClick={() => setMarket(market === m ? '' : m)} aria-pressed={market === m} className={`flex min-h-[2.75rem] shrink-0 items-center rounded-xl border px-2 ${market === m ? 'border-sky bg-sky/15' : 'border-edge bg-panel2 hover:border-sky/60'}`}>
+                  <MarketLogo name={m} h="h-7" />
+                </button>
+              ))}
+            </div>
+
             {status === 'ok' && (
               <p className="text-xs text-muted">
                 {list.length.toLocaleString('pt-BR')} produtos
                 {market && <> no <b className="text-ink">{market}</b> · <button onClick={() => setMarket('')} className="text-sky underline">ver todos os mercados</button></>}
                 {onlyFavs && <> · só favoritos</>}
-                {' '}· arraste a barra da tabela para ver os {columns.length} mercados; toque num logotipo para ver só aquele mercado.
               </p>
             )}
 
@@ -223,7 +232,7 @@ export default function App() {
               </div>
             )}
             {status === 'ok' && list.length > 0 && (
-              <PriceTable groups={list.slice(0, shown)} markets={columns} active={market} onMarket={(m) => setMarket(market === m ? '' : m)} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} />
             )}
             {status === 'ok' && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">

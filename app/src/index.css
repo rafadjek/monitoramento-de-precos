@@ -18,7 +18,7 @@
 
 @layer components {
   .num { font-variant-numeric: tabular-nums; }
-  .glass { @apply rounded-2xl border border-edge bg-panel/85 backdrop-blur; }
+  .glass { @apply rounded-2xl border border-edge bg-panel/95; } /* sem desfoque: pesava ao rolar no celular */
   /* borda em degradê azul -> laranja da busca */
   .glow-ring {
     background: linear-gradient(#0c1530, #0c1530) padding-box, linear-gradient(90deg, #2f8bff, #22e3d0 45%, #ff8a1e) border-box;
