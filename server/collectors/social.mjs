@@ -1,81 +1,147 @@
-// Jornais de ofertas que só saem no Instagram e no Facebook (Nevada, STUK, Lourencini), lidos pela Apify.
-// Decisão do Rafael em 10/11/2026: usar a Apify (crédito grátis mensal) mesmo sabendo que a coleta automática
-// contraria os termos da Meta. Nenhuma conta pessoal é usada: a Apify acessa sem login, com a infraestrutura dela.
-// Pega os posts dos últimos 3 dias (o jornal nem sempre é o último post); post já lido não é lido de novo
-// (cache pelo código do post) e jornal vencido é descartado pela validade impressa.
-// Grava data/extraido/social-encartes.json para readers/folheto.mjs. Sem APIFY_TOKEN, não faz nada.
+// Jornais de ofertas que só saem no Instagram e no Facebook (Nevada, STUK, Lourencini).
+// Decisão do Rafael em 10/11/2026: usar serviços de coleta (planos grátis) mesmo sabendo que a coleta automática
+// contraria os termos da Meta. Nenhuma conta pessoal é usada: os serviços acessam sem login, com a infraestrutura deles.
+// Cadeia de reserva, separada para Instagram e Facebook: Apify -> Bright Data -> ScrapeCreators. Cada serviço só entra
+// se a chave dele existir (APIFY_TOKEN, BRIGHTDATA_TOKEN, SCRAPECREATORS_KEY) e passa a vez se falhar
+// (crédito acabou, bloqueio, erro) ou não trouxer nada.
+// Pega os posts dos últimos 3 dias; post já lido não é lido de novo (cache pelo código do post) e jornal vencido
+// é descartado pela validade impressa. Grava data/extraido/social-encartes.json para readers/folheto.mjs.
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const OUT = fileURLToPath(new URL('../data/extraido/social-encartes.json', import.meta.url));
-const TOKEN = process.env.APIFY_TOKEN;
-const DAYS = 3; // cada post volta no máximo 3 vezes (a Apify cobra por post devolvido); o jornal costuma ser de 0 a 2 dias atrás
+const DAYS = 3; // cada post volta no máximo 3 vezes (os serviços cobram por post devolvido)
+const SINCE = Date.now() - DAYS * 86400e3;
+const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDATA_TOKEN, scrapecreators: process.env.SCRAPECREATORS_KEY };
 // STUK: o próprio site diz que sai um jornal novo por dia, então vale no dia do post.
 const MARKETS = {
   Nevada: { ig: 'redenevada', fb: 'https://www.facebook.com/redenevada/', daily: false },
   STUK: { ig: 'supermercadostuk', fb: null, daily: true },
   Lourencini: { ig: 'lourencinisupermercados', fb: 'https://www.facebook.com/LourenciniSupermercados/', daily: false },
 };
-if (!TOKEN) { console.log('social: sem APIFY_TOKEN, pulando'); process.exit(0); }
+if (!Object.values(KEYS).some(Boolean)) { console.log('social: nenhuma chave de serviço, pulando'); process.exit(0); }
 
-async function runActor(actor, input) {
-  const r = await fetch(`https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${TOKEN}&timeout=280`, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input), signal: AbortSignal.timeout(320000),
-  });
-  if (!r.ok) throw new Error(`${actor} HTTP ${r.status} ${(await r.text()).slice(0, 200)}`);
-  const j = await r.json();
-  return Array.isArray(j) ? j : [];
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const toIso = (t) => { if (t == null || t === '') return null; const n = Number(t); const d = Number.isFinite(n) ? new Date(n < 1e12 ? n * 1000 : n) : new Date(t); return isNaN(d) ? null : d.toISOString(); };
+const recent = (iso) => iso && Date.parse(iso) >= SINCE;
+const marketOfIg = (u) => Object.entries(MARKETS).find(([, v]) => v.ig === String(u || '').toLowerCase())?.[0];
+const marketOfFb = (s) => Object.entries(MARKETS).find(([, v]) => v.fb && String(s || '').toLowerCase().includes(v.fb.split('/')[3].toLowerCase()))?.[0];
+// imagens de post (CDN do Instagram/Facebook) achadas em qualquer campo; foto de perfil fica de fora
+function findImages(obj, out = []) {
+  if (typeof obj === 'string') { if (/^https:\/\/[^ ]*(cdninstagram|fbcdn|scontent)[^ ]*/.test(obj) && !/s150x150|p50x50|profile_pic|\/v\/t1\.30497/.test(obj)) out.push(obj); }
+  else if (Array.isArray(obj)) obj.forEach((x) => findImages(x, out));
+  else if (obj && typeof obj === 'object') for (const [k, v] of Object.entries(obj)) if (!/profile|avatar|owner|author|user_pic/i.test(k)) findImages(v, out);
+  return out;
 }
 
-// fim do dia do post em Brasília
+// ---------- serviços: cada um devolve posts no formato { market, net, code, when, link, images, owner } ----------
+async function apify(net) {
+  const actor = net === 'ig' ? 'apify~instagram-post-scraper' : 'apify~facebook-posts-scraper';
+  const input = net === 'ig'
+    ? { username: Object.values(MARKETS).map((m) => m.ig), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` }
+    : { startUrls: Object.values(MARKETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` };
+  const r = await fetch(`https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${KEYS.apify}&timeout=280`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input), signal: AbortSignal.timeout(320000),
+  });
+  if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
+  const items = await r.json();
+  return (Array.isArray(items) ? items : []).map((p) => {
+    if (net === 'ig') {
+      const imgs = [...(p.childPosts || []).filter((c) => c.type !== 'Video').map((c) => c.displayUrl), ...(p.images || [])];
+      if (!imgs.length && p.type !== 'Video') imgs.push(p.displayUrl);
+      const code = p.shortCode || p.id;
+      return { market: marketOfIg(p.ownerUsername), net, code, when: toIso(p.timestamp), link: p.url || `https://www.instagram.com/p/${code}/`, images: imgs, owner: '@' + p.ownerUsername };
+    }
+    const imgs = (p.media || []).map((x) => x?.photo_image?.uri || x?.image?.uri || x?.thumbnail);
+    return { market: marketOfFb(p.facebookUrl || p.inputUrl || p.pageName || p.url), net, code: p.postId || p.id, when: toIso(p.time || p.timestamp), link: p.url, images: imgs, owner: p.pageName };
+  });
+}
+
+async function brightdata(net) {
+  // Web Scraper API: posts recentes de cada perfil ("discover by url"); se demorar, vira snapshot e é consultado depois
+  const ds = net === 'ig' ? 'gd_lk5ns7kz21pck8jpis' : 'gd_lkaxegm826bjpoo9m5';
+  const urls = net === 'ig' ? Object.values(MARKETS).map((m) => `https://www.instagram.com/${m.ig}/`) : Object.values(MARKETS).filter((m) => m.fb).map((m) => m.fb);
+  const d = new Date(SINCE);
+  const start = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}-${d.getFullYear()}`;
+  const H = { Authorization: `Bearer ${KEYS.brightdata}`, 'Content-Type': 'application/json' };
+  let r = await fetch(`https://api.brightdata.com/datasets/v3/scrape?dataset_id=${ds}&format=json&type=discover_new&discover_by=url&include_errors=true`, {
+    method: 'POST', headers: H, body: JSON.stringify(urls.map((url) => ({ url, num_of_posts: 12, start_date: start }))), signal: AbortSignal.timeout(120000),
+  });
+  if (r.status === 202) {
+    const { snapshot_id: id } = await r.json();
+    for (let i = 0; i < 30; i++) {
+      await sleep(10000);
+      r = await fetch(`https://api.brightdata.com/datasets/v3/snapshot/${id}?format=json`, { headers: H, signal: AbortSignal.timeout(60000) });
+      if (r.status !== 202) break;
+    }
+  }
+  if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
+  const items = await r.json();
+  return (Array.isArray(items) ? items : []).filter((p) => !p.error).map((p) => {
+    const owner = p.user_posted || p.page_name || p.profile_name || '';
+    const market = net === 'ig' ? marketOfIg(owner) || marketOfIg(String(p.input?.url || '').split('/')[3]) : marketOfFb(p.page_url || p.input?.url || p.url);
+    const images = [...(p.photos || []), ...(p.attachments || []).filter((a) => !/video/i.test(a?.type || '')).map((a) => a.url || a.attachment_url), p.post_image]
+      .filter((u) => typeof u === 'string');
+    return { market, net, code: p.shortcode || p.post_id || p.id || String(p.url || '').split('/').filter(Boolean).pop(), when: toIso(p.date_posted || p.timestamp), link: p.url, images: images.length ? images : findImages(p), owner };
+  });
+}
+
+async function scrapecreators(net) {
+  const H = { 'x-api-key': KEYS.scrapecreators };
+  const out = [];
+  for (const [market, m] of Object.entries(MARKETS)) {
+    if (net === 'fb' && !m.fb) continue;
+    const url = net === 'ig'
+      ? `https://api.scrapecreators.com/v2/instagram/user/posts?handle=${m.ig}&trim=false`
+      : `https://api.scrapecreators.com/v1/facebook/profile/posts?url=${encodeURIComponent(m.fb)}`;
+    const r = await fetch(url, { headers: H, signal: AbortSignal.timeout(90000) });
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
+    const j = await r.json();
+    for (const p of j.items || j.posts || j.data || []) {
+      if (net === 'ig') {
+        if (p.media_type === 2) continue; // vídeo
+        const media = p.carousel_media?.length ? p.carousel_media.filter((c) => c.media_type !== 2) : [p];
+        const images = media.map((c) => c.image_versions2?.candidates?.[0]?.url || c.display_url).filter(Boolean);
+        out.push({ market, net, code: p.code || p.shortcode || p.id, when: toIso(p.taken_at || p.taken_at_timestamp), link: `https://www.instagram.com/p/${p.code || p.shortcode}/`, images, owner: '@' + m.ig });
+      } else {
+        out.push({ market, net, code: p.id || p.post_id, when: toIso(p.publishTime || p.creation_time || p.timestamp), link: p.url || p.permalink, images: findImages(p), owner: market });
+      }
+    }
+    await sleep(1000);
+  }
+  return out;
+}
+
+// ---------- cadeia de reserva ----------
+const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators]];
+async function collect(net) {
+  for (const [name, fn] of SERVICES) {
+    if (!KEYS[name]) continue;
+    try {
+      const posts = (await fn(net)).filter((p) => p.market && recent(p.when));
+      console.log(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} trouxe ${posts.length} posts recentes`);
+      if (posts.length) return posts;
+    } catch (e) {
+      console.warn(`  ${net === 'ig' ? 'instagram' : 'facebook'}: ${name} falhou (${e.message}); tentando o próximo`);
+    }
+  }
+  return [];
+}
+
 const endOfDay = (iso) => { const d = new Date(new Date(iso).getTime() - 3 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1, 2, 59, 59)).toISOString(); };
 const manifest = [];
-const add = (market, net, code, when, link, images, owner) => {
-  const m = MARKETS[market];
-  images = [...new Set(images.filter(Boolean))].slice(0, 12);
-  if (!images.length || !when) return;
+for (const p of [...(await collect('ig')), ...(await collect('fb'))]) {
+  const m = MARKETS[p.market];
+  const images = [...new Set(p.images.filter((u) => typeof u === 'string' && /^https?:/.test(u)))].slice(0, 12);
+  if (!images.length || !p.code) continue;
   manifest.push({
-    market, offerId: `${net}-${code}`, validFrom: null,
-    validUntil: m.daily ? endOfDay(when) : null, // os outros precisam da validade impressa na imagem
-    validityNote: m.daily ? 'jornal de ofertas do dia' : `post de ofertas (${net === 'ig' ? 'Instagram' : 'Facebook'})`,
-    stores: [market], storeScope: `Ofertas publicadas no ${net === 'ig' ? 'Instagram' : 'Facebook'} ${owner}`,
-    link, images, imageKeys: images.map((_, i) => `${net}:${code}:${i}`), collectedAt: new Date().toISOString(),
+    market: p.market, offerId: `${p.net}-${p.code}`, validFrom: null,
+    validUntil: m.daily ? endOfDay(p.when) : null, // os outros precisam da validade impressa na imagem
+    validityNote: m.daily ? 'jornal de ofertas do dia' : `post de ofertas (${p.net === 'ig' ? 'Instagram' : 'Facebook'})`,
+    stores: [p.market], storeScope: `Ofertas publicadas no ${p.net === 'ig' ? 'Instagram' : 'Facebook'} ${p.owner || p.market}`,
+    link: p.link, images, imageKeys: images.map((_, i) => `${p.net}:${p.code}:${i}`), collectedAt: new Date().toISOString(),
   });
-};
-
-const [ig, fb] = await Promise.allSettled([
-  runActor('apify~instagram-post-scraper', { username: Object.values(MARKETS).map((m) => m.ig), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` }),
-  runActor('apify~facebook-posts-scraper', { startUrls: Object.values(MARKETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` }),
-]);
-
-if (ig.status === 'fulfilled') {
-  const byIg = Object.fromEntries(Object.entries(MARKETS).map(([k, v]) => [v.ig, k]));
-  for (const p of ig.value) {
-    const market = byIg[String(p.ownerUsername || '').toLowerCase()];
-    if (!market) continue;
-    // só imagem (carrossel: todas as fotos); vídeo/reels não têm o jornal legível
-    const imgs = [...(p.childPosts || []).filter((c) => c.type !== 'Video').map((c) => c.displayUrl), ...(p.images || [])];
-    if (!imgs.length && p.type !== 'Video') imgs.push(p.displayUrl);
-    const code = p.shortCode || p.id;
-    add(market, 'ig', code, p.timestamp, p.url || `https://www.instagram.com/p/${code}/`, imgs, '@' + p.ownerUsername);
-  }
-  console.log(`  instagram: ${ig.value.length} posts`);
-} else console.warn('  instagram falhou:', ig.reason?.message);
-
-if (fb.status === 'fulfilled') {
-  for (const p of fb.value) {
-    const page = String(p.pageName || p.facebookUrl || p.inputUrl || p.url || '').toLowerCase();
-    const market = Object.entries(MARKETS).find(([, v]) => v.fb && page.includes(v.fb.split('/')[3].toLowerCase()))?.[0];
-    if (!market) continue;
-    const media = Array.isArray(p.media) ? p.media : [];
-    const imgs = media.map((x) => x?.photo_image?.uri || x?.image?.uri || x?.thumbnail || x?.url).filter((u) => typeof u === 'string' && /^https?:/.test(u));
-    const code = p.postId || p.id || (p.url || '').split('/').filter(Boolean).pop();
-    add(market, 'fb', code, p.time || p.timestamp, p.url || p.topLevelUrl, imgs, p.pageName || market);
-  }
-  console.log(`  facebook: ${fb.value.length} posts`);
-} else console.warn('  facebook falhou:', fb.reason?.message);
-
-if (ig.status === 'rejected' && fb.status === 'rejected') process.exit(1);
+}
 fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));
-const by = manifest.reduce((m, x) => ((m[x.market] = (m[x.market] || 0) + x.images.length), m), {});
+const by = manifest.reduce((acc, x) => ((acc[x.market] = (acc[x.market] || 0) + x.images.length), acc), {});
 console.log(`social: ${manifest.length} posts com imagem`, JSON.stringify(by));

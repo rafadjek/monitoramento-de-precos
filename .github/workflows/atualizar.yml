@@ -59,8 +59,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          # Apify (crédito grátis): jornais de ofertas do Instagram de Nevada, STUK e Lourencini
+          # Apify (crédito grátis): jornais de ofertas do Instagram e do Facebook de Nevada, STUK e Lourencini
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          # reservas, nesta ordem, se a Apify falhar ou o crédito acabar
+          BRIGHTDATA_TOKEN: ${{ secrets.BRIGHTDATA_TOKEN }}
+          SCRAPECREATORS_KEY: ${{ secrets.SCRAPECREATORS_KEY }}
           # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
