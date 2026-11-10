@@ -1,42 +1,6 @@
 {
- "startedAt": "2026-11-10T09:58:27.561Z",
+ "startedAt": "2026-11-10T10:34:55.551Z",
  "pages": [
-  {
-   "market": "Assaí",
-   "offerId": "175721-948",
-   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-1.jpeg",
-   "ok": true,
-   "cached": true,
-   "products": 19,
-   "model": "gemini-flash-latest"
-  },
-  {
-   "market": "Assaí",
-   "offerId": "175721-948",
-   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
-   "ok": true,
-   "cached": true,
-   "products": 26,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Assaí",
-   "offerId": "175721-948",
-   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
-   "ok": true,
-   "cached": true,
-   "products": 30,
-   "model": "gemini-flash-lite-latest"
-  },
-  {
-   "market": "Assaí",
-   "offerId": "175721-948",
-   "url": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-4.jpeg",
-   "ok": true,
-   "cached": true,
-   "products": 25,
-   "model": "gemini-flash-lite-latest"
-  },
   {
    "market": "Baronesa",
    "offerId": "encarte-2026-11-09",
@@ -83,6 +47,6 @@
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T09:58:27.567Z",
+ "finishedAt": "2026-11-10T10:34:55.557Z",
  "newReads": 0
 }
