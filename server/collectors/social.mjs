@@ -1,7 +1,7 @@
 // Jornais de ofertas que só saem no Instagram e no Facebook (Nevada, STUK, Lourencini), lidos pela Apify.
 // Decisão do Rafael em 10/11/2026: usar a Apify (crédito grátis mensal) mesmo sabendo que a coleta automática
 // contraria os termos da Meta. Nenhuma conta pessoal é usada: a Apify acessa sem login, com a infraestrutura dela.
-// Pega os posts dos últimos 7 dias (o jornal nem sempre é o último post); post já lido não é lido de novo
+// Pega os posts dos últimos 3 dias (o jornal nem sempre é o último post); post já lido não é lido de novo
 // (cache pelo código do post) e jornal vencido é descartado pela validade impressa.
 // Grava data/extraido/social-encartes.json para readers/folheto.mjs. Sem APIFY_TOKEN, não faz nada.
 import fs from 'node:fs';
@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const OUT = fileURLToPath(new URL('../data/extraido/social-encartes.json', import.meta.url));
 const TOKEN = process.env.APIFY_TOKEN;
-const DAYS = 7;
+const DAYS = 3; // cada post volta no máximo 3 vezes (a Apify cobra por post devolvido); o jornal costuma ser de 0 a 2 dias atrás
 // STUK: o próprio site diz que sai um jornal novo por dia, então vale no dia do post.
 const MARKETS = {
   Nevada: { ig: 'redenevada', fb: 'https://www.facebook.com/redenevada/', daily: false },
