@@ -42,6 +42,7 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   Semar: { src: 'logos/semar.png' },
   Extra: { src: 'logos/extra.png' },
   Joanin: { src: 'logos/joanin.png' },
+  'Roldão': { src: 'logos/roldao.svg', bg: '#082F63' },
   Spani: { word: 'SPANI', chipCls: 'bg-[#E30613] px-2 -skew-x-6', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
 };
 
@@ -66,18 +67,22 @@ type TagProps = { o: Indexed; cheapest: boolean; diff: number; alone?: boolean; 
 
 export function MarketTag({ o, cheapest, diff, alone, perUnit, odd }: TagProps) {
   const off = o.listPrice && o.listPrice > o.price ? o.listPrice : null;
-  const units = o.units ?? 1;
+  const units = o._u ?? 1;
   // Embalagens diferentes no grupo: o preço grande é o de cada unidade, e o da caixa fica embaixo.
   const unitView = perUnit && units > 1;
   const highlight = cheapest && !alone && !odd;
+  // Preço por quantidade ("levando 6 ou mais", "a partir de 3 un."): o preço de 1 unidade aparece sem risco,
+  // para bater com o que o site do mercado mostra; risco só para promoção de verdade (de/por).
+  const byQty = !!o.condition && /levando|a partir|leve \d/i.test(o.condition);
   const body: ReactNode = (
     <>
       <MarketLogo name={o.market} />
-      {off && !unitView && <s className="num mt-1 block text-xs text-muted">{brl(off)}</s>}
+      {off && !unitView && !byQty && <s className="num mt-1 block text-xs text-muted">{brl(off)}</s>}
       <span className="block"><Price value={unitView ? each(o) : o.price} big={highlight} /></span>
       {unitView && <span className="block text-xs font-bold">cada · {brl(o.price)} com {units}</span>}
       {!perUnit && units > 1 && <span className="block text-xs text-muted">embalagem com {units}</span>}
-      {o.condition && <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide text-signal">{o.condition}</span>}
+      {o.condition && <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide text-signal">{o.condition.replace(/^R\$\s*[\d.,]+\s*/, '')}</span>}
+      {byQty && off && <span className="num block text-xs text-muted">1 un: {brl(off)}</span>}
       {odd ? (
         <span className="mt-0.5 block text-xs font-bold text-signal">preço fora do padrão, confira</span>
       ) : (

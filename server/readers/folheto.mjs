@@ -141,7 +141,8 @@ async function readPage(url, referer) {
   if (fs.existsSync(f)) return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true };
   if (newReads >= MAX_NEW) throw new Error('teto de páginas novas desta execução');
   const buf = await download(url, referer);
-  const mime = buf[0] === 0x89 ? 'image/png' : buf[0] === 0x52 ? 'image/webp' : 'image/jpeg';
+  // PDF (o Roldão publica o encarte inteiro assim): o Gemini lê PDF direto
+  const mime = buf.subarray(0, 4).toString() === '%PDF' ? 'application/pdf' : buf[0] === 0x89 ? 'image/png' : buf[0] === 0x52 ? 'image/webp' : 'image/jpeg';
   newReads++;
   let res;
   try { res = await askGemini(buf, mime); }
@@ -169,6 +170,7 @@ const cond = (c) => {
   if (/^(por\s+)?(o\s+)?(quilo|kg)$/i.test(t) || /^pre[cç]o por (kg|quilo)$/i.test(t)) return 'preço por kg';
   return t;
 };
+const isPdf = (u) => /\.pdf($|\?)/i.test(u);
 const ok = (it) => it && typeof it.name === 'string' && it.name.trim().length > 2 && typeof it.price === 'number' && it.price > 0 && it.price < 10000;
 
 async function main() {
@@ -211,7 +213,8 @@ async function main() {
             market: enc.market, externalId: id, name: it.name.trim(), brand: it.brand ?? null, ean: null, size: it.size ?? null,
             price: it.price, listPrice: it.listPrice > it.price ? it.listPrice : null, unitPrice: null,
             category: it.category ?? 'outros', categoryRaw: null,
-            imageUrl: p.url, imageBox: Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
+            // de PDF não dá para recortar a foto: fica sem imagem e o link abre o PDF
+            imageUrl: isPdf(p.url) ? null : p.url, imageBox: !isPdf(p.url) && Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
             productUrl: p.url, source: 'encarte', condition: cond(it.condition),
             validFrom, validUntil,
             validityNote: enc.validityNote ?? null,

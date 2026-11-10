@@ -16,8 +16,8 @@ const CATEGORIES = [
   { id: 'limpeza', label: 'Limpeza' },
 ];
 const SORTS = [
-  { id: 'economia', label: 'Maior economia' },
   { id: 'preco', label: 'Menor preço' },
+  { id: 'preco-desc', label: 'Maior preço' },
   { id: 'nome', label: 'Nome' },
 ];
 
@@ -35,7 +35,7 @@ export default function App() {
   const dq = useDeferredValue(q);
   const [category, setCategory] = useState('');
   const [market, setMarket] = useState('');
-  const [sort, setSort] = useState('economia');
+  const [sort, setSort] = useState('preco');
   const [shown, setShown] = useState(PAGE);
 
   useEffect(() => {
@@ -74,14 +74,16 @@ export default function App() {
   const list = useMemo(() => {
     const hit = (n: string) => terms.every((t) => n.includes(t));
     const r = groups.filter((g) => (!category || g.category === category) && (!market || g.items.some((i) => i.market === market)) && hit(g._n));
-    // Com busca, quem "é" o produto (nome começa com o termo) vem antes de quem só o menciona (tempero de feijão).
-    const lead = (g: Group) => (terms.length && !g.items.some((i) => i._n.startsWith(terms[0])) ? 1 : 0);
-    const disc = (g: Group) => { const o = g.items[0]; return o.listPrice && o.listPrice > o.price ? (o.listPrice - o.price) / o.listPrice : 0; };
+    // Preço usado na ordem: o que aparece em destaque; com um mercado escolhido, o daquele mercado.
+    const price = (g: Group) => {
+      if (!market) return g.shown;
+      const it = g.items.find((i) => i.market === market)!;
+      return g.perUnit ? each(it) : it.price;
+    };
     return r.sort(
-      sort === 'nome' ? (a, b) => a.name.localeCompare(b.name)
-        : sort === 'preco' ? (a, b) => lead(a) - lead(b) || each(a.items[0]) - each(b.items[0])
-        // quem dá para comparar vem primeiro; depois, o maior desconto de quem está sozinho
-        : (a, b) => lead(a) - lead(b) || b.saving - a.saving || b.items.length - a.items.length || disc(b) - disc(a),
+      sort === 'nome' ? (x, y) => x.name.localeCompare(y.name)
+        : sort === 'preco-desc' ? (x, y) => price(y) - price(x)
+        : (x, y) => price(x) - price(y),
     );
   }, [groups, terms, category, market, sort]);
 
@@ -184,7 +186,7 @@ export default function App() {
           <>
             <p className="mt-2 text-xs text-muted">{list.length.toLocaleString('pt-BR')} produtos</p>
             <ul>
-              {list.slice(0, shown).map((g) => <GroupRow key={g.id} g={g} />)}
+              {list.slice(0, shown).map((g) => <GroupRow key={g.id} g={g} only={market || undefined} />)}
             </ul>
           </>
         )}

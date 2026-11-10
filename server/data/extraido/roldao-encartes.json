@@ -1,0 +1,50 @@
+[
+  {
+    "market": "Roldão",
+    "offerId": "5070-09.11-11.11",
+    "validFrom": null,
+    "validUntil": "2026-11-12T02:59:59.000Z",
+    "validityNote": "Hortifruti (REDE): 09.11 a 11.11",
+    "stores": [
+      "Roldão Mauá"
+    ],
+    "storeScope": "Encarte \"Hortifruti (REDE)\" das lojas que incluem Mauá",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-09-A-11-11-2026-3.pdf"
+    ],
+    "collectedAt": "2026-11-10T12:15:22.513Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5058-05.11-11.11",
+    "validFrom": null,
+    "validUntil": "2026-11-12T02:59:59.000Z",
+    "validityNote": "Seara: 05.11 a 11.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Seara\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-SEARA-05-A11-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-10T12:15:22.513Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5067-09.11-15.11",
+    "validFrom": null,
+    "validUntil": "2026-11-16T02:59:59.000Z",
+    "validityNote": "Comerciante: 09.11 a 15.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-09-A-15-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-10T12:15:22.513Z"
+  }
+]

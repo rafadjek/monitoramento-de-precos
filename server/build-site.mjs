@@ -9,7 +9,8 @@ const OUT = path.join(ROOT, '../app/public/data');
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 
-const valid = (o) => o && o.market && o.externalId != null && o.name && typeof o.price === 'number' && o.price > 0 && o.collectedAt;
+const valid = (o) => o && o.market && o.externalId != null && o.name && typeof o.price === 'number' && o.price >= 0.1 && o.price < 20000 && // R$ 0,01 e R$ 99.999 são cadastro sem preço (vistos no Nagumo)
+   o.collectedAt;
 const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\W+/g, '-');
 const now = Date.now();
 const index = { generatedAt: new Date().toISOString(), markets: [] };
@@ -54,11 +55,12 @@ const STORE_LABEL = {
   Semar: 'preços da loja 06 Mauá',
   Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
   Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
+  'Roldão': 'encartes que valem na loja de Mauá (o Roldão não tem loja em Ribeirão Pires)',
 };
 // Cidades das lojas usadas por mercado (filtro do site).
 const CITIES = {
   'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
-  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'],
+  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'],
   // preço da loja online de São Bernardo: não entra no filtro "Lojas em Mauá/Ribeirão Pires"
   Extra: ['São Bernardo do Campo'],
 };

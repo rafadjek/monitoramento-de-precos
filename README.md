@@ -8,7 +8,7 @@ Os preços são lidos dos sites e folhetos dos próprios mercados e **podem muda
 
 Tudo roda no GitHub, sem servidor e sem depender de nenhum computador pessoal:
 
-1. **GitHub Actions** roda todo dia às 06h. Às quartas (e quando chamado à mão) executa os coletores de catálogo em `server/collectors/`; todo dia lê os encartes em imagem.
+1. **GitHub Actions** roda todo dia às 06h: coletores de catálogo em `server/collectors/` e leitura dos encartes. Era semanal até 10/11/2026, mas o Spani mudou 12% dos preços de um dia para o outro e os preços deixavam de bater com os sites.
 2. `server/build-site.mjs` junta os dados, agrupa o mesmo produto de mercados diferentes (`server/group.mjs`) e gera arquivos estáticos. O agrupamento usa primeiro o código de barras (EAN), que os dois mercados publicam: Spani no campo `codigo_barras` da API, Atacadão pela API pública de catálogo da VTEX (`collectors/atacadao-ean.mjs`, lotes de 50). A regra por nome só junta quando nenhum EAN contradiz, com uma exceção: nomes da mesma marca, mesmo tamanho e preço parecido (até 30% de diferença) que diferem só por palavras que descrevem (lista `SOFT`: torrado, moído, vácuo, almofada, garrafa, pet, lager...) juntam mesmo com EAN diferente. Qualquer outra palavra a mais (sem, zero, light, integral, um sabor, lata) separa. Testes: `npm test` em `server/`.
 
 **Comparação justa.** `parsePack` (em `group.mjs`) lê do nome quantas unidades vêm ("36x56g", "350ml c/12", "sacola 50% na segunda", "1,2L + 1,2L"); contagem sem peso/volume ("fralda com 58 unidades") é o próprio produto e não vira caixa. O site compara pelo preço de cada unidade quando as embalagens diferem ("R$ 1,39 cada · R$ 49,90 com 36"). Preço mais de 2,2 vezes distante dos outros fica marcado "preço fora do padrão, confira" e não entra na economia; com só 2 mercados e preços muito distantes, o grupo avisa que um deles pode ser caixa. Nunca se chuta quantidade que o nome não diz.
@@ -35,7 +35,8 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 | Extra | API GPA `api.vendas.gpa.digital/ex/search/search`. As lojas de Mauá e Ribeirão Pires não vendem pelo site: usa a loja online mais próxima (1867 Demarchi, São Bernardo, `storeId` 1162). A busca não aceita termo vazio: 158 termos de itens comuns | funcionando (~4 mil; cidade "São Bernardo do Campo" no filtro) |
 | Joanin | Tabloide em imagem em `/ofertas/` (`pagN-full-tabloide-*-DDMMAAAA.jpg`), lido por IA | funcionando |
 | Dia (Mauá) | O site não publica ofertas de nenhuma loja ("nenhuma oferta encontrada"); só no app ClubDIA | cartão no rodapé |
-| Roldão, São Jorge | só folheto | a fazer |
+| Roldão (Mauá) | Encarte em PDF por campanha em `/ofertas/`; entram as que citam Mauá ou valem para a rede. O PDF vem de `admin-ajax.php?action=elem_get_pdf_oferta_iframe` e o leitor manda o PDF direto ao Gemini (sem foto recortada). Sem loja em Ribeirão Pires | funcionando |
+| São Jorge | só folheto | a fazer |
 
 Nem todo mercado informa validade de oferta; quando não informa, o site mostra "validade não informada".
 

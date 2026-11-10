@@ -16,7 +16,8 @@ export type Offer = {
   g?: string;
 };
 
-export type Indexed = Offer & { _n: string };
+// _u: unidades que valem na comparação (decidido no grupo; o nome do produto sozinho não basta)
+export type Indexed = Offer & { _n: string; _u?: number };
 
 export type Group = {
   id: string;
@@ -30,6 +31,7 @@ export type Group = {
   perUnit: boolean; // embalagens com quantidades diferentes: compara pelo preço de cada unidade
   odd: string[]; // ids com preço fora do padrão (provável caixa sem quantidade no nome, ou erro no site)
   suspect: boolean; // só 2 mercados e preços muito distantes: não dá para saber qual está certo
+  shown: number; // preço que aparece em destaque no mais barato (por unidade quando as embalagens diferem)
   _n: string;
 };
 
@@ -53,10 +55,11 @@ export function validity(o: Pick<Offer, 'validUntil'>) {
 }
 
 // Preço de cada unidade (caixa com 36 por R$ 49,90 = R$ 1,39 cada).
-export const each = (o: Pick<Offer, 'price' | 'units'>) => o.price / (o.units ?? 1);
+export const each = (o: Pick<Indexed, 'price' | '_u'>) => o.price / (o._u ?? 1);
 const median = (xs: number[]) => { const v = [...xs].sort((a, b) => a - b); const m = v.length >> 1; return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; };
 // Mais de 2,2 vezes (ou menos de 1/2,2) do preço dos outros: fora do padrão.
 const FAR = 2.2;
+const dist = (a: number, b: number) => Math.abs(Math.log(a / b));
 
 export function buildGroups(all: Indexed[]): Group[] {
   const byG = new Map<string, Indexed[]>();
@@ -64,6 +67,17 @@ export function buildGroups(all: Indexed[]): Group[] {
   for (const o of all) { const k = o.g ?? `p:${o.id}`; (byG.get(k) ?? byG.set(k, []).get(k)!).push(o); }
   const out: Group[] = [];
   for (const [id, list] of byG) {
+    // Quantidade lida do nome ("36x56g") só vale se dividir aproxima o preço do que os outros mercados cobram.
+    // "Creme dental 72x50g" a R$ 3,69 é 1 tubo (o nome descreve a caixa do fornecedor): não divide.
+    for (const o of list) {
+      o._u = undefined;
+      const n = o.units ?? 1;
+      if (n <= 1) continue;
+      const others = list.filter((x) => x.market !== o.market).map((x) => x.price);
+      if (!others.length) continue;
+      const m = median(others);
+      if (dist(o.price / n, m) < dist(o.price, m)) o._u = n;
+    }
     const perMarket = new Map<string, Indexed>();
     for (const o of list) {
       const cur = perMarket.get(o.market);
@@ -84,6 +98,7 @@ export function buildGroups(all: Indexed[]): Group[] {
     const fair = suspect ? [] : items.filter((i) => !odd.has(i.id));
     const max = fair.length >= 2 ? each(fair[fair.length - 1]) : 0;
     const saving = fair.length >= 2 ? max - each(fair[0]) : 0;
+    const perUnit = new Set(items.map((i) => i._u ?? 1)).size > 1;
     const label = [...items].sort((a, b) => a.name.length - b.name.length)[0];
     out.push({
       id,
@@ -94,9 +109,10 @@ export function buildGroups(all: Indexed[]): Group[] {
       items,
       saving,
       savingPct: max > 0 ? saving / max : 0,
-      perUnit: new Set(items.map((i) => i.units ?? 1)).size > 1,
+      perUnit,
       odd: [...odd],
       suspect,
+      shown: perUnit ? each(items[0]) : items[0].price,
       _n: items.map((i) => i._n).join(' '),
     });
   }

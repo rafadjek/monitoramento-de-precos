@@ -73,7 +73,9 @@ function toRecord(node, scope, collectedAt, fromPage) {
     externalId: String(node.sku || node.id),
     name: node.name.trim(),
     brand: node.brand?.brandName || node.brand?.name || null,
-    ean: node.gtin && /^\d{8,14}$/.test(String(node.gtin)) ? String(node.gtin) : null,
+    // desde nov/2026 o gtin às vezes traz um código interno de 8 dígitos; só 12 a 14 dígitos é código de barras
+    // (o resto o fillEans completa pela API de catálogo)
+    ean: node.gtin && /^\d{12,14}$/.test(String(node.gtin)) ? String(node.gtin) : null,
     size: sizeFromName(node.name),
     price: o.price,
     listPrice: o.listPrice && o.listPrice > o.price ? o.listPrice : null,
