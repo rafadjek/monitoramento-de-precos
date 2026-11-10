@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-10T10:37:08.785Z",
+ "startedAt": "2026-11-10T11:03:16.886Z",
  "pages": [
   {
    "market": "Assaí",
@@ -83,6 +83,6 @@
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T10:37:08.793Z",
+ "finishedAt": "2026-11-10T11:03:16.895Z",
  "newReads": 0
 }
