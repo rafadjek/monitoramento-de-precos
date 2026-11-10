@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-10T11:23:48.767Z",
+ "startedAt": "2026-11-10T12:27:58.970Z",
  "pages": [
   {
    "market": "Assaí",
@@ -51,7 +51,7 @@
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -60,7 +60,7 @@
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -69,7 +69,7 @@
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -78,7 +78,7 @@
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 2,
    "model": "gemini-flash-lite-latest"
   },
@@ -87,7 +87,7 @@
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -95,6 +95,15 @@
    "market": "Baronesa",
    "offerId": "encarte-2026-11-10",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
+   "ok": true,
+   "cached": true,
+   "products": 4,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Baronesa",
+   "offerId": "encarte-2026-11-10",
+   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
    "ok": true,
    "cached": false,
    "products": 4,
@@ -105,7 +114,7 @@
    "offerId": "tabloide-15112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 70,
    "model": "gemini-flash-lite-latest"
   },
@@ -114,11 +123,38 @@
    "offerId": "tabloide-15112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 61,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Roldão",
+   "offerId": "5070-09.11-11.11",
+   "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-09-A-11-11-2026-3.pdf",
+   "ok": true,
+   "cached": false,
+   "products": 105,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Roldão",
+   "offerId": "5058-05.11-11.11",
+   "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-SEARA-05-A11-11-2026.pdf",
+   "ok": true,
+   "cached": false,
+   "products": 13,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Roldão",
+   "offerId": "5067-09.11-15.11",
+   "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-09-A-15-11-2026.pdf",
+   "ok": true,
+   "cached": false,
+   "products": 31,
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T11:36:36.835Z",
- "newReads": 8
+ "finishedAt": "2026-11-10T12:32:55.703Z",
+ "newReads": 4
 }
