@@ -7,7 +7,7 @@ const PAGE = 40;
 
 type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte' };
 type InfoOnly = { name: string; cities: string[]; note: string; address: string; links: { label: string; url: string }[] };
-type View = 'comparar' | 'todos';
+type View = 'comparar' | 'encartes' | 'todos';
 
 const CATEGORIES = [
   { id: '', label: 'Tudo' },
@@ -17,6 +17,7 @@ const CATEGORIES = [
 ];
 const SORTS: Record<View, { id: string; label: string }[]> = {
   comparar: [{ id: 'economia', label: 'Maior economia' }, { id: 'nome', label: 'Nome' }],
+  encartes: [{ id: 'mercado', label: 'Mercado' }, { id: 'preco', label: 'Menor preço' }, { id: 'nome', label: 'Nome' }],
   todos: [{ id: 'preco', label: 'Menor preço' }, { id: 'desconto', label: 'Maior desconto' }, { id: 'nome', label: 'Nome' }],
 };
 
@@ -53,7 +54,9 @@ export default function App() {
         setMarkets(idx.markets);
         setInfoOnly(idx.infoOnly ?? []);
         setGeneratedAt(idx.generatedAt);
-        setAll(parts.flat().map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
+        // oferta vencida some (o encarte do Baronesa vence antes da próxima leitura)
+        const now = Date.now();
+        setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
         setStatus('ok');
       } catch {
         setStatus('error');
@@ -86,12 +89,15 @@ export default function App() {
     const lead = (o: Indexed) => (terms.length && !o._n.startsWith(terms[0]) ? 1 : 0);
     return r.sort(
       sort === 'nome' ? (a, b) => a._n.localeCompare(b._n)
+        : sort === 'mercado' ? (a, b) => a.market.localeCompare(b.market) || lead(a) - lead(b) || a.price - b.price
         : sort === 'desconto' ? (a, b) => lead(a) - lead(b) || disc(b) - disc(a)
         : (a, b) => lead(a) - lead(b) || a.price - b.price,
     );
   }, [all, terms, category, market, sort, inCity]);
 
-  const list = view === 'comparar' ? groupList : offerList;
+  // os encartes casam pouco com os sites; numa aba própria eles não somem no meio de 14 mil produtos
+  const encarteList = useMemo(() => offerList.filter((o) => o.source === 'encarte'), [offerList]);
+  const list = view === 'comparar' ? groupList : view === 'encartes' ? encarteList : offerList;
   const clear = () => { setQ(''); setCategory(''); setMarket(''); setCity(''); setFocus(null); };
   const updated = generatedAt ? new Date(generatedAt).toLocaleDateString('pt-BR') : '';
 
@@ -122,7 +128,7 @@ export default function App() {
         <div className="mx-auto max-w-4xl space-y-2 px-4 py-2">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <div role="group" aria-label="Tipo de lista" className="flex border border-ink">
-              {([['comparar', `Comparar (${groupList.length})`], ['todos', `Todos os produtos (${offerList.length})`]] as [View, string][]).map(([v, label]) => (
+              {([['comparar', `Comparar (${groupList.length})`], ['encartes', `Encartes (${encarteList.length})`], ['todos', `Todos os produtos (${offerList.length})`]] as [View, string][]).map(([v, label]) => (
                 <button
                   key={v}
                   aria-pressed={view === v}
@@ -206,7 +212,7 @@ export default function App() {
           <ul>
             {view === 'comparar'
               ? groupList.slice(0, shown).map((g: Group) => <GroupRow key={g.id} g={g} />)
-              : offerList.slice(0, shown).map((o) => (
+              : (view === 'encartes' ? encarteList : offerList).slice(0, shown).map((o) => (
                   <OfferRow key={o.id} o={o} onCompare={() => { setView('comparar'); setFocus(o.g!); }} />
                 ))}
           </ul>
