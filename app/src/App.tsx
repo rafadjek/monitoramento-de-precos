@@ -51,9 +51,6 @@ export default function App() {
   const [shown, setShown] = useState(PAGE);
   const [favs, setFavs] = useState<Set<string>>(() => new Set(load<string[]>('bate-favoritos', [])));
   const [onlyFavs, setOnlyFavs] = useState(false);
-  // produtos marcados para pôr na lista de uma vez
-  const [picked, setPicked] = useState<Set<string>>(new Set());
-  const pick = (id: string) => { const n = new Set(picked); if (n.has(id)) n.delete(id); else n.add(id); setPicked(n); };
   const [cart, setCartState] = useState<CartItem[]>(() => {
     // lista recebida por link (?lista=...) se junta à que já está no navegador
     const mine = load<CartItem[]>('bate-lista', []);
@@ -117,7 +114,14 @@ export default function App() {
   }, [groups, terms, category, market, sort, onlyFavs, favs]);
 
   const toggleFav = (id: string) => { const n = new Set(favs); if (n.has(id)) n.delete(id); else n.add(id); setFavs(n); save('bate-favoritos', [...n]); };
-  const add = (g: string) => setCart(cart.some((c) => c.g === g) ? cart.map((c) => (c.g === g ? { ...c, qty: Math.min(99, c.qty + 1) } : c)) : [...cart, { g, qty: 1 }]);
+  // m: mercado escolhido na etiqueta (item fica fixo nele); sem m, o carrinho escolhe o mais barato
+  const add = (g: string, m?: string) => {
+    const has = cart.find((c) => c.g === g);
+    if (!has) return setCart([...cart, m ? { g, qty: 1, m } : { g, qty: 1 }]);
+    // trocar de mercado não soma quantidade; clicar de novo no mesmo soma 1
+    const same = (has.m ?? '') === (m ?? '');
+    setCart(cart.map((c) => (c.g === g ? { ...c, qty: same ? Math.min(99, c.qty + 1) : c.qty, m } : c)));
+  };
   const inCart = useMemo(() => new Set(cart.map((c) => c.g)), [cart]);
   const clear = () => { setQ(''); setCategory(''); setMarket(''); setOnlyFavs(false); };
   const updated = generatedAt ? new Date(generatedAt).toLocaleDateString('pt-BR') : '';
@@ -235,7 +239,7 @@ export default function App() {
               </div>
             )}
             {status === 'ok' && list.length > 0 && (
-              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} picked={picked} onPick={pick} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} />
             )}
             {status === 'ok' && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">
@@ -250,18 +254,6 @@ export default function App() {
           <Offers offers={offers} onAdd={(o) => add(o.g ?? `p:${o.id}`)} />
         </aside>
       </div>
-
-      {picked.size > 0 && (
-        <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
-          <div className="flex items-center gap-3 rounded-2xl border border-sky/70 bg-panel px-4 py-3 shadow-sky">
-            <span className="text-sm font-bold">{picked.size} {picked.size === 1 ? 'selecionado' : 'selecionados'}</span>
-            <button onClick={() => { const n = [...cart]; for (const id of picked) if (!n.some((c) => c.g === id)) n.push({ g: id, qty: 1 }); setCart(n); setPicked(new Set()); }} className="inline-flex items-center gap-1.5 rounded-xl bg-neon px-4 py-2 font-bold text-night">
-              <Icon name="cart" className="h-4 w-4" />Pôr na lista
-            </button>
-            <button onClick={() => setPicked(new Set())} className="text-sm text-muted underline">desmarcar</button>
-          </div>
-        </div>
-      )}
 
       <footer className="border-t border-edge bg-night/90">
         <div className="mx-auto max-w-[1400px] px-4 py-6 text-xs text-muted">

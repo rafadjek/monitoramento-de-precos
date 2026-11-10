@@ -19,14 +19,13 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
   const setQty = (g: string, q: number) => setCart(q <= 0 ? cart.filter((c) => c.g !== g) : cart.map((c) => (c.g === g ? { ...c, qty: Math.min(99, q) } : c)));
   const name = (g: string) => groups.get(g)?.name ?? '';
 
+  // abre o WhatsApp direto com a lista pronta (o "Compartilhar" do Windows não mostra o WhatsApp);
+  // no celular abre o app, no computador o WhatsApp Web ou o app instalado. O texto também vai para a área de transferência.
   const share = async () => {
     if (!plan) return;
     const text = shareText(plan, name);
-    try {
-      if (navigator.share) { await navigator.share({ text }); return; }
-    } catch { return; /* cancelou */ }
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
-    try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 2500); } catch { /* sem permissão */ }
+    window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 3000); } catch { /* sem permissão */ }
   };
 
   return (
@@ -61,6 +60,7 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
                   {line ? (
                     <div className="mt-1 flex items-center gap-2 text-xs text-muted">
                       <MarketLogo name={line.market} h="h-5" />
+                      {line.pinned && <span title="Você escolheu este mercado para este item" className="text-[0.7rem] font-bold text-sky">📌 escolhido</span>}
                       <span className="num ml-auto inline-flex items-center font-bold text-ink">{brl(line.total)}{cond && <Star text={cond} />}</span>
                     </div>
                   ) : <p className="mt-1 text-xs text-gold">nenhum mercado da lista tem este item</p>}
@@ -108,7 +108,7 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
 
           <div className="mt-4 grid grid-cols-[1fr_auto] gap-2">
             <button onClick={share} disabled={!plan} className="inline-flex items-center justify-center gap-2 rounded-xl bg-neon px-3 py-2.5 font-bold text-night hover:brightness-110 disabled:opacity-50">
-              <Icon name="share" className="h-4 w-4" />{copied ? 'Texto copiado' : 'Mandar no WhatsApp'}
+              <Icon name="share" className="h-4 w-4" />{copied ? 'Abrindo o WhatsApp…' : 'Mandar no WhatsApp'}
             </button>
             <button onClick={() => setCart([])} className="rounded-xl border border-edge px-3 py-2.5 text-sm font-bold text-muted hover:text-ink">Limpar</button>
           </div>

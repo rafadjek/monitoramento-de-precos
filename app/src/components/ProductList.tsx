@@ -5,7 +5,7 @@ import { Icon, MarketLogo, Price, Thumb, Validity } from './Parts';
 // do mais barato ao mais caro, com o mais barato em destaque. Sem colunas vazias.
 type Props = {
   groups: Group[]; only: string; favs: Set<string>; onFav: (id: string) => void;
-  inCart: Set<string>; onAdd: (id: string) => void; picked: Set<string>; onPick: (id: string) => void;
+  inCart: Set<string>; onAdd: (id: string, market?: string) => void;
 };
 
 const byQty = (o: Indexed) => !!o.condition && /levando|a partir|leve \d/i.test(o.condition);
@@ -26,7 +26,7 @@ export function Star({ text }: { text: string }) {
   );
 }
 
-function Tag({ g, it, first }: { g: Group; it: Indexed; first: boolean }) {
+function Tag({ g, it, first, onAdd }: { g: Group; it: Indexed; first: boolean; onAdd: (id: string, market?: string) => void }) {
   const odd = g.odd.includes(it.id);
   const alone = g.items.length === 1;
   const best = first && !odd && !g.suspect && !alone;
@@ -48,13 +48,21 @@ function Tag({ g, it, first }: { g: Group; it: Indexed; first: boolean }) {
       </span>
     </>
   );
-  const box = `block min-w-[7.2rem] rounded-xl border px-3 py-2 text-left ${cls}`;
-  return it.productUrl ? (
-    <a href={it.productUrl} target="_blank" rel="noopener noreferrer" className={`${box} hover:brightness-125`} title={`Ver no ${it.market}`}>{body}</a>
-  ) : <div className={box}>{body}</div>;
+  const box = `block min-w-[7.2rem] rounded-xl border px-3 py-2 pr-9 text-left ${cls}`;
+  // a etiqueta abre o produto no site do mercado; o "+" põe na lista esta oferta, fixa neste mercado
+  return (
+    <div className="relative">
+      {it.productUrl ? (
+        <a href={it.productUrl} target="_blank" rel="noopener noreferrer" className={`${box} hover:brightness-125`} title={`Ver no ${it.market}`}>{body}</a>
+      ) : <div className={box}>{body}</div>}
+      <button onClick={() => onAdd(g.id, it.market)} aria-label={`Pôr na lista: comprar no ${it.market}`} title={`Pôr na lista: comprar no ${it.market}`} className="absolute right-1.5 top-1.5 grid h-7 w-7 place-items-center rounded-lg bg-sky text-night hover:brightness-110">
+        <Icon name="plus" className="h-4 w-4" />
+      </button>
+    </div>
+  );
 }
 
-export function ProductList({ groups, only, favs, onFav, inCart, onAdd, picked, onPick }: Props) {
+export function ProductList({ groups, only, favs, onFav, inCart, onAdd }: Props) {
   return (
     <ul className="divide-y divide-edge/80 overflow-hidden rounded-2xl border border-edge bg-panel">
       {groups.map((g) => {
@@ -62,16 +70,10 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, picked, 
         const alone = g.items.length === 1;
         // com um mercado escolhido, a etiqueta dele vem primeiro (as outras continuam para comparar)
         const items = only ? [...g.items.filter((i) => i.market === only), ...g.items.filter((i) => i.market !== only)] : g.items;
-        const fav = favs.has(g.id), added = inCart.has(g.id), sel = picked.has(g.id);
+        const fav = favs.has(g.id), added = inCart.has(g.id);
         return (
-          <li key={g.id} className={`flex gap-3 p-3 sm:gap-4 sm:p-4 ${sel ? 'bg-sky/10' : ''}`}>
-            <div className="flex shrink-0 flex-col items-center gap-2">
-              <Thumb src={g.image} name={g.name} size={104} />
-              <label className="flex cursor-pointer items-center gap-1.5 text-xs text-muted">
-                <input type="checkbox" checked={sel} onChange={() => onPick(g.id)} className="h-4 w-4 accent-[#2F8BFF]" />
-                selecionar
-              </label>
-            </div>
+          <li key={g.id} className="flex gap-3 p-3 sm:gap-4 sm:p-4">
+            <Thumb src={g.image} name={g.name} size={104} />
             <div className="min-w-0 flex-1">
               <div className="flex items-start gap-2">
                 <h3 className="min-w-0 flex-1 text-base font-bold leading-snug">{g.name}</h3>
@@ -86,11 +88,11 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, picked, 
                   : `Mesmo preço em ${g.items.length - g.odd.length} mercados`}
               </p>
               <ul className="mt-2 flex flex-wrap gap-2">
-                {items.map((it) => <li key={it.id}><Tag g={g} it={it} first={it === g.items[0]} /></li>)}
+                {items.map((it) => <li key={it.id}><Tag g={g} it={it} first={it === g.items[0]} onAdd={onAdd} /></li>)}
               </ul>
               <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                 <button onClick={() => onAdd(g.id)} className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-bold ${added ? 'bg-neon/15 text-neon' : 'border border-sky/70 text-sky hover:bg-sky/10'}`}>
-                  <Icon name="cart" className="h-4 w-4" />{added ? 'Na lista (+1)' : 'Pôr na lista'}
+                  <Icon name="cart" className="h-4 w-4" />{added ? 'Na lista (+1)' : 'Pôr na lista (mais barato)'}
                 </button>
                 <span className="text-muted">
                   {best.validUntil ? <><Validity o={best} /> no {best.market}</> : `${best.market} não informa até quando vale`}

@@ -53,3 +53,15 @@ test('plano usa a divisão em 2 quando sai mais barata, e o texto agrupa por mer
   assert.match(t, /\*B\*\n• 2x cafe — R\$ 48,00\n• 6x leite — R\$ 24,00\nSubtotal: R\$ 72,00/);
   assert.match(t, /Total: R\$ 92,00/);
 });
+
+test('item fixo num mercado entra com o preço dele em todas as contas', async () => {
+  const { buildPlan } = await import('./cart.ts');
+  // arroz fixo no B (25); café e leite livres: melhor sozinho B = 25 + 48 + 24 = 97; A = 25 + 60 + 30 = 115
+  const c2 = [{ g: 'arroz', qty: 1, m: 'B' }, { g: 'cafe', qty: 2 }, { g: 'leite', qty: 6 }];
+  const r = rankMarkets(groups, c2, ['A', 'B', 'C']);
+  assert.deepEqual(r.slice(0, 2).map((x) => [x.market, x.total]), [['B', 97], ['A', 115]]);
+  const p = buildPlan(groups, c2, ['A', 'B', 'C'])!;
+  assert.equal(p.lines[0].market, 'B');
+  assert.equal(p.lines[0].pinned, true);
+  assert.deepEqual(decodeCart(encodeCart(c2)), c2);
+});
