@@ -44,6 +44,7 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   Extra: { src: 'logos/extra.png' },
   Joanin: { src: 'logos/joanin.png' },
   Dia: { src: 'logos/dia.png', bg: '#E41E26' },
+  Nevada: { src: 'logos/nevada.png', bg: '#1B8A2E' },
   'Roldão': { src: 'logos/roldao.svg', bg: '#082F63' },
   Spani: { word: 'SPANI', bg: '#E30613', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
 };

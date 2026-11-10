@@ -171,7 +171,7 @@ const mode = (xs) => { const c = new Map(); for (const x of xs.filter(Boolean)) 
 // "cada"/"un" não é condição; "quilo"/"kg" vira "preço por kg"
 const cond = (c) => {
   const t = String(c ?? '').trim();
-  if (!t || /^(cada|un\.?|und\.?|unid\.?|unidade)$/i.test(t)) return null;
+  if (!t || /^(cada|un\.?|und\.?|unid\.?|unidade|(o )?pre[cç]o (por|da) unidade)$/i.test(t)) return null;
   if (/^(por\s+)?(o\s+)?(quilo|kg)$/i.test(t) || /^pre[cç]o por (kg|quilo)$/i.test(t)) return 'preço por kg';
   return t;
 };
