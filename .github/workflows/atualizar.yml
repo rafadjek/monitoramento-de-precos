@@ -55,7 +55,7 @@ jobs:
       - name: Ler encartes (Assaí, Baronesa, Joanin e Roldão)
         working-directory: server
         continue-on-error: true
-        timeout-minutes: 50
+        timeout-minutes: 60
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -64,7 +64,6 @@ jobs:
           # reservas, nesta ordem, se a Apify falhar ou o crédito acabar
           BRIGHTDATA_TOKEN: ${{ secrets.BRIGHTDATA_TOKEN }}
           SCRAPECREATORS_KEY: ${{ secrets.SCRAPECREATORS_KEY }}
-          SOCIAL_SKIP: apify # TESTE da reserva ScrapeCreators; tirar depois
           # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev

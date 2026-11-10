@@ -17,7 +17,10 @@ const CACHE_PAGES = path.join(ROOT, 'data/cache/paginas');
 const OUT = path.join(ROOT, 'data/extraido');
 const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-2.5-flash,gemini-flash-lite-latest,gemini-2.5-flash-lite').split(',');
 const GAP_MS = Number(process.env.READER_GAP_MS || 7000); // ~8 pedidos/min, abaixo do limite gratuito
-const MAX_NEW = Number(process.env.READER_MAX_NEW || 60); // teto de páginas novas por execução; o resto fica para a próxima
+const MAX_NEW = Number(process.env.READER_MAX_NEW || 60);
+// prazo da rodada: depois dele não começa imagem nova (grava o que leu; o resto fica para a próxima rodada).
+// Sem isso o passo do GitHub era interrompido no limite de tempo e nada era gravado.
+const DEADLINE = Date.now() + Number(process.env.READER_BUDGET_MIN || 40) * 60e3; // teto de páginas novas por execução; o resto fica para a próxima
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 const manifests = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const DRY = process.argv.includes('--dry');
@@ -145,6 +148,7 @@ async function readPage(url, referer, key = url) {
   const f = path.join(CACHE_READ, sha1(key + '|' + READ_VERSION) + '.json');
   if (fs.existsSync(f)) return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true };
   if (newReads >= MAX_NEW) throw new Error('teto de páginas novas desta execução');
+  if (Date.now() > DEADLINE) throw new Error('prazo da rodada esgotado; fica para a próxima');
   const buf = await download(url, referer);
   // PDF (o Roldão publica o encarte inteiro assim): o Gemini lê PDF direto
   const mime = buf.subarray(0, 4).toString() === '%PDF' ? 'application/pdf' : buf[0] === 0x89 ? 'image/png' : buf[0] === 0x52 ? 'image/webp' : 'image/jpeg';
