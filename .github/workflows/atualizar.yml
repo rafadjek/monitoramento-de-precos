@@ -95,14 +95,30 @@ jobs:
         working-directory: server
         run: node build-site.mjs
 
-      - name: Compilar o site
+      # Endereço oficial: https://bate-ofertas.pages.dev (Cloudflare Pages, projeto bate-ofertas).
+      # Com a chave do Cloudflare, publica lá e o endereço antigo do GitHub Pages vira só um redirecionamento.
+      # Sem a chave, continua publicando o site completo no GitHub Pages (nada fica parado).
+      - name: Compilar e publicar o site
         working-directory: app
         env:
-          VITE_BASE: /${{ github.event.repository.name }}/
-        run: npm run build
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: eabf66b4fd617d6adc78c3aa603100be
+          OLD_BASE: /${{ github.event.repository.name }}/
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ]; then
+            VITE_BASE=/ npm run build
+            npx --yes wrangler@4 pages deploy dist --project-name bate-ofertas --branch main --commit-dirty=true
+            # GitHub Pages: só redireciona para o endereço novo (mantém a busca e a lista do link)
+            rm -rf gh && mkdir gh
+            printf '%s' '<!doctype html><meta charset="utf-8"><title>Bate Ofertas</title><meta name="robots" content="noindex"><script>location.replace("https://bate-ofertas.pages.dev/"+location.search+location.hash)</script><p>O Bate Ofertas mudou para <a href="https://bate-ofertas.pages.dev/">bate-ofertas.pages.dev</a>.</p>' > gh/index.html
+            cp gh/index.html gh/404.html
+          else
+            VITE_BASE="$OLD_BASE" npm run build
+            rm -rf gh && cp -r dist gh
+          fi
 
       - name: Publicar na branch gh-pages (um único commit, sem acumular histórico)
-        working-directory: app/dist
+        working-directory: app/gh
         run: |
           touch .nojekyll
           git init -q -b gh-pages
