@@ -23,14 +23,17 @@ const manifests = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const DRY = process.argv.includes('--dry');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const sha1 = (s) => crypto.createHash('sha1').update(s).digest('hex');
+// sobe quando a instrução muda: as páginas são lidas de novo (v2: lista "others" com todos os preços alternativos)
+const READ_VERSION = 'v2';
 const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\W+/g, '-');
 
 const PROMPT = `Você lê uma página de encarte (folheto) de supermercado brasileiro. Extraia TODOS os produtos com preço visível.
 Regras:
 - Só o que está escrito na imagem. Nunca invente nem estime. Se não tiver certeza do preço, omita o produto.
 - price = preço de venda de 1 unidade/embalagem em reais, como número (ex.: 24.9). Preço escrito "33,99" é 33.99.
-- Se o produto tem preço normal ("cada") E um preço com condição ("a partir de 2 un.", "no app", "no cartão"), price = preço normal e condition = o outro preço com a condição (ex.: "R$ 23,90 a partir de 2 un.", "R$ 4,49 no app").
-- Se o único preço visível depende de condição ("leve 3 pague 2", "por kg"), use-o em price e descreva em condition (ex.: "preço por kg").
+- price = preço normal do produto (o maior, sem condição). TODOS os outros preços do mesmo produto vão em others, cada um com a sua condição, como está escrito: ex. [{"price": 28.5, "condition": "no app Roldão Mais"}, {"price": 27.9, "condition": "no cartão Roldão Pay"}], [{"price": 23.9, "condition": "a partir de 2 un."}], [{"price": 4.49, "condition": "no app Meu Assaí"}]. Não deixe nenhum de fora: faixas coloridas embaixo do preço ("APP ...", "CARTÃO ...", "PIX", "CLUBE ...") são outros preços.
+- "X% de desconto na 2ª unidade" com "nesta oferta a unidade sai por R$ Y": others = [{"price": Y, "condition": "cada levando 2 (X% na 2ª unidade)"}].
+- Se o único preço visível depende de condição ("leve 3 pague 2", "por kg"), use-o em price e descreva em condition (ex.: "preço por kg"). condition fica null quando não houver.
 - Ignore frases do tipo "neste pacote o quilo sai por" (é só cálculo do preço por quilo, não é outro produto nem outro preço).
 - "LVE 12 PG 11" no nome significa "leve 12 pague 11": mantenha no name e repita em condition.
 - listPrice = preço "de" riscado, se aparecer; senão null.
@@ -53,6 +56,7 @@ const SCHEMA = {
           name: { type: 'STRING' }, brand: { type: 'STRING', nullable: true }, size: { type: 'STRING', nullable: true },
           price: { type: 'NUMBER' }, listPrice: { type: 'NUMBER', nullable: true },
           condition: { type: 'STRING', nullable: true },
+          others: { type: 'ARRAY', items: { type: 'OBJECT', properties: { price: { type: 'NUMBER' }, condition: { type: 'STRING' } }, required: ['price', 'condition'] } },
           category: { type: 'STRING', enum: ['alimenticios', 'higiene', 'limpeza', 'outros'] },
           box: { type: 'ARRAY', items: { type: 'INTEGER' } },
         },
@@ -137,7 +141,7 @@ async function askOpenRouter(buf, mime) {
 
 let newReads = 0;
 async function readPage(url, referer) {
-  const f = path.join(CACHE_READ, sha1(url) + '.json');
+  const f = path.join(CACHE_READ, sha1(url + '|' + READ_VERSION) + '.json');
   if (fs.existsSync(f)) return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true };
   if (newReads >= MAX_NEW) throw new Error('teto de páginas novas desta execução');
   const buf = await download(url, referer);
@@ -171,6 +175,18 @@ const cond = (c) => {
   return t;
 };
 const isPdf = (u) => /\.pdf($|\?)/i.test(u);
+// De todos os preços alternativos, o menor que não pede cartão da loja vira a condição ("R$ 28,50 no app Roldão Mais");
+// sem nenhum assim, o de cartão fica só como observação (o build-site não deixa virar preço principal).
+const CARD = /cart[aã]o|\bpay\b/i;
+const brl = (n) => 'R$ ' + n.toFixed(2).replace('.', ',');
+const bestCond = (it) => {
+  const alts = (Array.isArray(it.others) ? it.others : []).filter((x) => typeof x?.price === 'number' && x.price > 0 && x.price < it.price && x.condition);
+  const free = alts.filter((x) => !CARD.test(x.condition)).sort((a, b) => a.price - b.price)[0];
+  if (free) return `${brl(free.price)} ${free.condition.trim()}`;
+  const card = alts.sort((a, b) => a.price - b.price)[0];
+  if (card) return `${brl(card.price)} ${card.condition.trim()}`;
+  return cond(it.condition);
+};
 const ok = (it) => it && typeof it.name === 'string' && it.name.trim().length > 2 && typeof it.price === 'number' && it.price > 0 && it.price < 10000;
 
 async function main() {
@@ -215,7 +231,7 @@ async function main() {
             category: it.category ?? 'outros', categoryRaw: null,
             // de PDF não dá para recortar a foto: fica sem imagem e o link abre o PDF
             imageUrl: isPdf(p.url) ? null : p.url, imageBox: !isPdf(p.url) && Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
-            productUrl: p.url, source: 'encarte', condition: cond(it.condition),
+            productUrl: p.url, source: 'encarte', condition: bestCond(it),
             validFrom, validUntil,
             validityNote: enc.validityNote ?? null,
             storeScope: enc.storeScope ?? `Encarte: ${(enc.stores ?? []).join(', ') || 'lojas não informadas'}`,
