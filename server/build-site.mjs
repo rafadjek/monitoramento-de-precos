@@ -17,7 +17,7 @@ const index = { generatedAt: new Date().toISOString(), markets: [] };
 
 import crypto from 'node:crypto';
 import sharp from 'sharp';
-import { groupOffers, parsePack } from './group.mjs';
+import { groupOffers, pairKey, parsePack } from './group.mjs';
 import { bestPrice } from './price.mjs';
 import { fineCategory } from './category.mjs';
 const IMG = path.join(ROOT, '../app/public/img');
@@ -119,7 +119,18 @@ index.infoOnly = index.infoOnly.filter((i) => !index.markets.some((m) => m.name 
 
 // Produtos iguais em mercados diferentes recebem o mesmo "g" (id do grupo).
 const flat = built.flatMap((b) => b.slim);
-const groups = groupOffers(flat);
+// Vereditos de 'mesmo produto?': os rótulos do Rafael valem sempre; os do juiz com IA só se a prova dele passou.
+const verdicts = new Map();
+try {
+  const j = JSON.parse(fs.readFileSync(path.join(IN, 'juiz-veredictos.json'), 'utf8'));
+  if (j.ativo) for (const [k, v] of Object.entries(j.pares || {})) verdicts.set(k, v.same);
+} catch { /* ainda sem juiz */ }
+try {
+  for (const x of JSON.parse(fs.readFileSync(path.join(ROOT, 'data/rotulos/rotulos.json'), 'utf8')))
+    if (x.label === 'mesmo' || x.label === 'diferente') verdicts.set(pairKey(x.a, x.b), x.label === 'mesmo');
+} catch { /* sem rótulos */ }
+const groups = groupOffers(flat, (i, j) => verdicts.get(pairKey(flat[i], flat[j])));
+index.verdicts = verdicts.size;
 for (const g of groups) {
   const gid = crypto.createHash('sha1').update(g.key).digest('hex').slice(0, 10);
   for (const i of g.idx) flat[i].g = gid;

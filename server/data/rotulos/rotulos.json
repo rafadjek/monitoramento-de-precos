@@ -1,0 +1,977 @@
+[
+ {
+  "id": "00bf7bdf11",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Pilão 40g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Em Pó Pilão 40G"
+  }
+ },
+ {
+  "id": "0372e7a433",
+  "label": "diferente",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Absorvente em Gel Intimus Seca com abas 32 un"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Absorvente com Abas Intimus Gel Tripla Proteção Cobertura Seca Pacote 32 Unidades"
+  }
+ },
+ {
+  "id": "05258190b1",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão com Ovos Nhoque Adria 500g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão de Sêmola com Ovos Nhoque Adria Pacote 500g"
+  }
+ },
+ {
+  "id": "0803eef4ff",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Ervilha e Milho Quero Lata 170g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Milho Verde Quero 170G."
+  }
+ },
+ {
+  "id": "082a5ff47e",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Chocolate Lacta 5 Star 40g"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Chocolate 5Star Lacta 40g"
+  }
+ },
+ {
+  "id": "0b33bbe02f",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Extra",
+   "name": "Pão Caseiro Coco Panco Pacote 350g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Pão De Coco Panco 350G"
+  }
+ },
+ {
+  "id": "0bd01cddf0",
+  "label": "nao_sei",
+  "kind": "juntos",
+  "a": {
+   "market": "Assaí",
+   "name": "EMPANADO DE FRANGO TEKITOS SEARA PACOTE 1KG"
+  },
+  "b": {
+   "market": "Atacadão",
+   "name": "Tekitos Seara Congelado 1kg"
+  }
+ },
+ {
+  "id": "163367744f",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Sabonete Em Barra Para Bebê Protex Baby Glicerina Natural 85g"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Sabonete Infantil Protex Baby Suave 85g"
+  }
+ },
+ {
+  "id": "1750292f92",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão Instantâneo Nissin Lámen Frango Assado 85g"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Macarrão Instantaneo Nissin Lámen Carne 85g"
+  }
+ },
+ {
+  "id": "23de4093a6",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Cápsula de Cappuccino Classic 3 Corações 10 unid"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Cápsula De Café 3 Corações C/10 Cappuccino"
+  }
+ },
+ {
+  "id": "2937ecabe8",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Pipoca Para Micro-ondas Natural Yoki 100g"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Pipoca De Microondas Yoki 100g Natural"
+  }
+ },
+ {
+  "id": "2b6f2249e5",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Requeijão Cremoso Tradicional Catupiry Copo 200g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Requeijão Cream Tradicional Catupiry 200G"
+  }
+ },
+ {
+  "id": "2c66f6cf53",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Batata Chips Ruffles Original 68g"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Salgadinho De Batata Elma Chips Ruffles 68g Sal"
+  }
+ },
+ {
+  "id": "2f59fff9c0",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Café Torrado e Moído Café Brasileiro Extra Forte Almofada 500g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Extra Forte Almofada Brasileiro 500G"
+  }
+ },
+ {
+  "id": "315f802868",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Desodorante Aerossol Axe 150ml Apollo"
+  }
+ },
+ {
+  "id": "33ddb516d4",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Amaciante de Roupas Concentrado Downy Verão Tropical 500ml"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Amaciante de Roupa Concentrado Brisa de Verão Downy Frasco 500ml"
+  }
+ },
+ {
+  "id": "376d887603",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Brasileiro Tradicional Stand 500g"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Café Torrado E Moído Brasileiro 500g Almofada Tradicional"
+  }
+ },
+ {
+  "id": "383f68889d",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Chocolate 300g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo de Coco PANCO 300g"
+  }
+ },
+ {
+  "id": "3affb81ad2",
+  "label": "diferente",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão Petybon Massa com Ovos Ninho N°3 500g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão com Ovos Ninho PETYBON Pacote 500g"
+  }
+ },
+ {
+  "id": "3bf367fd01",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado Líquido Toddynho 200ml"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bebida Láctea Toddynho 200ml"
+  }
+ },
+ {
+  "id": "3c3669ed4a",
+  "label": "nao_sei",
+  "kind": "separados",
+  "a": {
+   "market": "Assaí",
+   "name": "COXINHA DA ASA DE FRANGO CONGELADA SEARA PACOTE 1KG"
+  },
+  "b": {
+   "market": "Atacadão",
+   "name": "Coxa de Frango Seara Congelada IQF 1Kg"
+  }
+ },
+ {
+  "id": "45e2c73d53",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Extra",
+   "name": "Café em Cápsula Torrado e Moído Espresso Intenso Nescafé Dolce Gusto Caixa 80g 10 Unidades"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cápsula Café Espresso Intenso Nescafé Dolce Gusto 10 Cápsulas 80g"
+  }
+ },
+ {
+  "id": "495fb46ac4",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Lava Roupas em Pó Brilhante Limpeza Total 1,6kg"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Detergente em Pó Brilhante Limpeza Total Caixa 1,6kg"
+  }
+ },
+ {
+  "id": "501e498254",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Café Torrado e Moído Pilão Extra Forte Almofada 500g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Torrado E Moído Extra Forte Vácuo Pilão 500G"
+  }
+ },
+ {
+  "id": "51913a7107",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Arroz Prato Fino Integral Tipo 1 1kg"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Arroz Agulhinha Tipo 1 PRATO FINO Pacote 1kg"
+  }
+ },
+ {
+  "id": "52ba9aa6c9",
+  "label": "nao_sei",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Dona Benta Aviãozinho 500g"
+  },
+  "b": {
+   "market": "Joanin",
+   "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)"
+  }
+ },
+ {
+  "id": "56d1ce8791",
+  "label": "diferente",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Desinfetante Álcool Líquido Coperalcool Lavanda 46°INPM 1L"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Álcool Líquido 46 INPM Lavanda Oriental Coperalcool Bacfree 1L"
+  }
+ },
+ {
+  "id": "593ed76eab",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado em Pó Toddy Original Pacote 700g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Achocolatado Em Pó Original Toddy 700g + Econômica"
+  }
+ },
+ {
+  "id": "61a229fa20",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Óleo de Soja Soya 900ml"
+  },
+  "b": {
+   "market": "Roldão",
+   "name": "Óleo de Soja Soya Pet 900ml"
+  }
+ },
+ {
+  "id": "667601a2cf",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em Pó Frisco Laranja 18g"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Refresco em Pó Frisco Laranja com Acerola 18g"
+  }
+ },
+ {
+  "id": "6adaee0a39",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Guaraná Antarctica Zero 200ml"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante Zero Açúcar Guaraná Antarctica 200Ml"
+  }
+ },
+ {
+  "id": "6d2233319e",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Leite Longa Vida Ninho Integral 1L"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Leite Uht Ninho Integral 1L"
+  }
+ },
+ {
+  "id": "70f01820a7",
+  "label": "diferente",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Protetor Diário Proteção Carefree Leve 80 Pague 60"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Protetor Diário Carefree Sem Abas Com 80 Un Respirável Sem Fragrância"
+  }
+ },
+ {
+  "id": "73aa41af78",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refresco Em Pó Maracujá Sem Açúcar Clight 8G"
+  }
+ },
+ {
+  "id": "77012de767",
+  "label": "nao_sei",
+  "kind": "separados",
+  "a": {
+   "market": "Joanin",
+   "name": "Refrigerante Sprite Original/ Sem Açúcar 2L"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante De Limão Sem Açúcar Sprite 2L"
+  }
+ },
+ {
+  "id": "7c1e55d751",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Adria Espaguete Furado 500g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão com Ovos Conchinha Adria 500g"
+  }
+ },
+ {
+  "id": "7c61f26b4f",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Coco 300g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bolo De Chocoboy Panco 300G"
+  }
+ },
+ {
+  "id": "816eeb5025",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolinho Bauducco Baunilha com Chocolate 40g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bolinho Baunilha Recheio Morango Bauducco 40G"
+  }
+ },
+ {
+  "id": "823e29f7f1",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Ana Maria Chocolate 70g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo Morango Recheio Morango Ana Maria Pacote 70g"
+  }
+ },
+ {
+  "id": "83238cdd10",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Panco Formigueiro 300g"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Chocoboy 300g"
+  }
+ },
+ {
+  "id": "8c682d0bf5",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Panco Chocoboy 300g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo de Coco PANCO 300g"
+  }
+ },
+ {
+  "id": "8de5298177",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Coalhada Serramar Natural 170g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Coalhada Serramar Embalagem 170G"
+  }
+ },
+ {
+  "id": "9697800c56",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Refrigerante Sprite Original Pet 2L"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Sprite Original 2L"
+  }
+ },
+ {
+  "id": "9da594f8d7",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Aveia Nestlé em Flocos Regulares 450g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Aveia em Flocos Nestlé Caixa 450g Embalagem Econômica"
+  }
+ },
+ {
+  "id": "acf97c489d",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Biscoito Tostines Coco 160g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Biscoito Coco Nestlé Tostines Pacote 160g"
+  }
+ },
+ {
+  "id": "add20d8d6e",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Haste Flexível Johnson's com 150 Unidades"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Hastes Flexíveis Johnson Cotonetes C/150"
+  }
+ },
+ {
+  "id": "add5ab08d4",
+  "label": "diferente",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte Natural Batavo Integral 1,15kg"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Integral Natural Batavo Original 1,15kg Embalagem Econômica Garrafa"
+  }
+ },
+ {
+  "id": "b1b6507cee",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Fralda Descartável Infantil Huggies Supreme Care XXG 54 Unidades"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Fralda Descartável Huggies Máxima Proteção Xxg Com 54 Unidades"
+  }
+ },
+ {
+  "id": "b1b8f756ee",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Limpador Destac Laminados 750ml"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Limpador De Piso Laminado Destac 750ml Com 20% De Desconto"
+  }
+ },
+ {
+  "id": "b2f43cdaf1",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Difusor de Aromas Coala Lavanda 100ml"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Difusor De Aromas Cereja Com Avelã Coala 100Ml"
+  }
+ },
+ {
+  "id": "b3d917be0e",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Escova Dental Colgate Zig Zag Carvão Ativado 2 un"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Escova Dental Colgate Zig Zag Charcoal Com 2"
+  }
+ },
+ {
+  "id": "b631ac7acd",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Desodorizador Sanitário Pato Bloco para Caixa Acoplada Marine 40g | Com 2 Unidades"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bloco Sanitário Para Caixa Acoplada Pato Com 2 Unidades De 40g Com 50% De Desconto Marine"
+  }
+ },
+ {
+  "id": "bcac066e12",
+  "label": "diferente",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Vinagre color  Vitalia 750ml"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Vinagre Vitalia Álcool Colorido 750ml"
+  }
+ },
+ {
+  "id": "be79dd0b06",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Schin Itubaína 350ml"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Refrigerante Tutti Frutti 350ml Itubaína Retrô"
+  }
+ },
+ {
+  "id": "c23e24c58f",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Cachaça Pitú 350ml"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Aguardente Pitú Lata 350ml"
+  }
+ },
+ {
+  "id": "c2ec64f13d",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Tradicional 3 Corações Sache 40g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Tradicional 3 Corações 40G"
+  }
+ },
+ {
+  "id": "c3092419f3",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Hot Dog Seara 500g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Salsicha Defumada Seara 500g"
+  }
+ },
+ {
+  "id": "c66f52cbaf",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Coop",
+   "name": "Aparelho Depilatório Gillette Venus Simply 3"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Aparelho Descartável Para Depilar Venus Simply Gillette Suave Leve 4 Pague 3 Unidades"
+  }
+ },
+ {
+  "id": "cd05a9cc52",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Fanta Laranja 200ml"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Refrigerante Laranja Fanta Garrafa 200ml"
+  }
+ },
+ {
+  "id": "d132f3d206",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte Natural Danone Desnatado 160g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Natural Mel Danone 160G"
+  }
+ },
+ {
+  "id": "d1d60fbdf3",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado em Pó Toddy Light Pacote 280g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Achocolatado Em Pó Light Toddy 280G + Econômica"
+  }
+ },
+ {
+  "id": "d4c5d174e1",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Extra",
+   "name": "Cerveja Pilsen Antarctica Original Lata 269ml"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cerveja Antarctica Original lata 269Ml"
+  }
+ },
+ {
+  "id": "d7a2576020",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Extra",
+   "name": "Refrigerante Uva Sukita Garrafa 2l"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante De Uva Sukita Pet 2L"
+  }
+ },
+ {
+  "id": "dd2c8a18c1",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Pilão Extra Forte Almofada 500g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Extra Forte Pilão 500G"
+  }
+ },
+ {
+  "id": "e39dfdfd08",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Coca-Cola Sem açúcar 200ml"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Refrigerante sem Açúcar Coca-Cola Garrafa 200ml"
+  }
+ },
+ {
+  "id": "e5f4499d20",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Cerveja Heineken One Way 600ml"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Cerveja Premium Heineken 600ml"
+  }
+ },
+ {
+  "id": "e7a18c2969",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Desodorante Aerossol Axe Apollo 150ml"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml"
+  }
+ },
+ {
+  "id": "eb00808c54",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Azeite de Oliva Borges Extra Virgem 500ml"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Azeite de Oliva Borges Extravirgem Vidro 500ml"
+  }
+ },
+ {
+  "id": "ef178ccf11",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho de Trigo Pimenta Mexicana Torcida 100g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g"
+  }
+ },
+ {
+  "id": "f06ec2ff79",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Tempero Ideal Para Arroz Sazón 60g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Tempero para Arroz Branco SAZON 60g"
+  }
+ },
+ {
+  "id": "f0f0ea142e",
+  "label": "mesmo",
+  "kind": "juntos",
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Tipo Viena Perdigão 500g"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salsicha Viena Perdigão 500g"
+  }
+ },
+ {
+  "id": "f256b0b11d",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Limpador Multiuso Veja Gold Original 750ml Embalagem Econômica"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Limpador Multiuso Original Veja Gold Squeeze 750ml Embalagem Econômica"
+  }
+ },
+ {
+  "id": "f49b613b26",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Cerveja Heineken Zero 330ml"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Cerveja Heineken Zero Álcool Long Neck 330ml"
+  }
+ },
+ {
+  "id": "fdb71d09d5",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Gelatina Royal Uva 25g"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Gelatina em Pó Royal Morango 25g"
+  }
+ },
+ {
+  "id": "ffbddfe2c0",
+  "label": "mesmo",
+  "kind": "ean",
+  "a": {
+   "market": "Atacadão",
+   "name": "Lava Roupas em Pó Urca Maxx 2,2kg"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Lava Roupa Em Pó Concentrado Perfumação Intensa Maxx Urca 2.2Kg"
+  }
+ }
+]

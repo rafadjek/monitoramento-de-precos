@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -66,7 +66,7 @@ jobs:
           SCRAPECREATORS_KEY: ${{ secrets.SCRAPECREATORS_KEY }}
           SOCIALCRAWL_KEY: ${{ secrets.SOCIAL_CRAW_API || secrets.SOCIALCRAWL_KEY || secrets.SOCIALCRAWL_API_KEY || secrets.SOCIALCRAWL_TOKEN || secrets.SOCIALCRAWL }}
           CRAWLBASE_TOKEN: ${{ secrets.CRAWLBASE_API }}
-          SOCIAL_SKIP: apify,brightdata,scrapecreators,socialcrawl # TESTE da reserva Crawlbase; tirar depois
+          SOCIAL_SKIP: apify,brightdata,scrapecreators,crawlbase # TESTE da reserva SocialCrawl; tirar depois
           # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
@@ -78,6 +78,16 @@ jobs:
           node collectors/dia.mjs || echo "::warning::Dia: folheto indisponível no Tiendeo"
           node collectors/social.mjs || echo "::warning::Instagram (Apify) indisponível"
           node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json
+
+      # Juiz de "mesmo produto?" (Gemini grátis): primeiro a prova com os pares rotulados pelo Rafael;
+      # se acertar >= 95% e mais que a regra, julga pares duvidosos (cada par uma vez só, com teto por rodada).
+      - name: Juiz de produtos iguais
+        working-directory: server
+        continue-on-error: true
+        timeout-minutes: 25
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node judge.mjs
 
       - name: Guardar dados coletados
         run: |

@@ -89,10 +89,17 @@ export function signature(o) {
   return { size: size?.key ?? null, core, key: size ? `${size.key}|${[...core].sort().join(' ')}` : null };
 }
 
-// 1) Mesmo código de barras (EAN) = mesmo produto, sempre.
+// Chave estável de um par de ofertas (mercado + nome normalizado), igual nos dois sentidos.
+// Usada pelos vereditos (rótulos do Rafael e juiz com IA).
+export const offerKey = (o) => `${o.market}|${strip(o.name).replace(/\s+/g, ' ').trim()}`;
+export const pairKey = (o1, o2) => [offerKey(o1), offerKey(o2)].sort().join(' <> ');
+
+// 1) Mesmo código de barras (EAN) = mesmo produto, salvo veredito contrário.
 // 2) A regra de nomes só junta quando nenhum EAN contradiz: se os dois lados têm EAN válido e diferente,
 //    são produtos diferentes (ex.: água com gás x sem gás, pacote com 4 x unidade).
-export function groupOffers(offers) {
+// decide(i, j): veredito para o par (true = mesmo produto, false = diferente, undefined = sem veredito).
+// Vem dos rótulos do Rafael e do juiz com IA (server/judge.mjs) e vale mais que as regras de nome e de EAN.
+export function groupOffers(offers, decide = () => undefined) {
   const n = offers.length;
   const parent = Array.from({ length: n }, (_, i) => i);
   const find = (i) => { while (parent[i] !== i) i = parent[i] = parent[parent[i]]; return i; };
@@ -126,11 +133,11 @@ export function groupOffers(offers) {
     if (!e) return;
     const first = byEan.get(e);
     if (first === undefined) byEan.set(e, i);
-    else if (!eanConflict(first, i)) union(first, i, false);
+    else if (!eanConflict(first, i) && decide(first, i) !== false) union(first, i, false);
   });
 
   const bySig = new Map();
-  sigs.forEach((s, i) => { if (!s.key) return; if (bySig.has(s.key)) union(bySig.get(s.key), i, true); else bySig.set(s.key, i); });
+  sigs.forEach((s, i) => { if (!s.key) return; if (bySig.has(s.key)) { if (decide(bySig.get(s.key), i) !== false) union(bySig.get(s.key), i, true); } else bySig.set(s.key, i); });
 
   // Nomes quase iguais: mesma marca, mesmo tamanho, preço parecido, e as palavras que sobram de um lado
   // ou do outro são todas da lista SOFT. Junta por cima do EAN (são cadastros diferentes do mesmo produto).
@@ -147,10 +154,14 @@ export function groupOffers(offers) {
     for (let x = 0; x < idx.length; x++) for (let y = x + 1; y < idx.length; y++) {
       const a = idx[x], b = idx[y];
       if (find(a) === find(b)) continue;
+      const pa = offers[a].price, pb = offers[b].price;
+      const verdict = decide(a, b);
+      if (verdict === false) continue;
+      // veredito "mesmo produto": junta mesmo com palavras diferentes (preço até 50% de diferença, por segurança)
+      if (verdict === true) { if (!(pa > 0 && pb > 0 && ratio(pa, pb) > 1.5)) union(a, b, false); continue; }
       const ca = sigs[a].core, cb = sigs[b].core;
       const diff = [...ca].filter((t) => !cb.has(t)).concat([...cb].filter((t) => !ca.has(t)));
       if (!diff.length || !diff.every((t) => SOFT.has(t))) continue;
-      const pa = offers[a].price, pb = offers[b].price;
       if (pa > 0 && pb > 0 && ratio(pa, pb) > 1.3) continue;
       union(a, b, false);
     }
