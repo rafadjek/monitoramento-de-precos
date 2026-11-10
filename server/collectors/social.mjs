@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const OUT = fileURLToPath(new URL('../data/extraido/social-encartes.json', import.meta.url));
-const DAYS = 3; // cada post volta no máximo 3 vezes (os serviços cobram por post devolvido)
+const DAYS = 7; // o Lourencini posta com menos frequência; com 6 posts por perfil o custo diário fica parecido com 3 dias x 12
 const SINCE = Date.now() - DAYS * 86400e3;
 const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDATA_TOKEN, scrapecreators: process.env.SCRAPECREATORS_KEY };
 // STUK: o próprio site diz que sai um jornal novo por dia, então vale no dia do post.
@@ -38,8 +38,8 @@ function findImages(obj, out = []) {
 async function apify(net) {
   const actor = net === 'ig' ? 'apify~instagram-post-scraper' : 'apify~facebook-posts-scraper';
   const input = net === 'ig'
-    ? { username: Object.values(MARKETS).map((m) => m.ig), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` }
-    : { startUrls: Object.values(MARKETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 12, onlyPostsNewerThan: `${DAYS} days` };
+    ? { username: Object.values(MARKETS).map((m) => m.ig), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` }
+    : { startUrls: Object.values(MARKETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` };
   const r = await fetch(`https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${KEYS.apify}&timeout=280`, {
     method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input), signal: AbortSignal.timeout(320000),
   });
@@ -65,7 +65,7 @@ async function brightdata(net) {
   const start = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}-${d.getFullYear()}`;
   const H = { Authorization: `Bearer ${KEYS.brightdata}`, 'Content-Type': 'application/json' };
   let r = await fetch(`https://api.brightdata.com/datasets/v3/scrape?dataset_id=${ds}&format=json&type=discover_new&discover_by=url&include_errors=true`, {
-    method: 'POST', headers: H, body: JSON.stringify(urls.map((url) => ({ url, num_of_posts: 12, start_date: start }))), signal: AbortSignal.timeout(120000),
+    method: 'POST', headers: H, body: JSON.stringify(urls.map((url) => ({ url, num_of_posts: 6, start_date: start }))), signal: AbortSignal.timeout(120000),
   });
   if (r.status === 202) {
     const { snapshot_id: id } = await r.json();
