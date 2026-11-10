@@ -64,6 +64,8 @@ jobs:
           # reservas, nesta ordem, se a Apify falhar ou o crédito acabar
           BRIGHTDATA_TOKEN: ${{ secrets.BRIGHTDATA_TOKEN }}
           SCRAPECREATORS_KEY: ${{ secrets.SCRAPECREATORS_KEY }}
+          SOCIALCRAWL_KEY: ${{ secrets.SOCIALCRAWL_KEY || secrets.SOCIALCRAWL_API_KEY || secrets.SOCIALCRAWL_TOKEN || secrets.SOCIALCRAWL }}
+          SOCIAL_SKIP: apify,brightdata,scrapecreators # TESTE da reserva SocialCrawl; tirar depois
           # Worker na Cloudflare (pasta worker-imagens/): só repassa imagens do servidor de encartes do Assaí,
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
