@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-10T19:05:09.132Z",
+ "startedAt": "2026-11-10T19:09:48.665Z",
  "pages": [
   {
    "market": "Assaí",
@@ -168,8 +168,17 @@
   },
   {
    "market": "Nevada",
+   "offerId": "ig-DfkEQi7xap1",
+   "url": "https://scontent-cdg4-3.cdninstagram.com/v/t51.82787-15/901867067_18576467566075787_8691766888650708976_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=NDAyNzM2MjY5NTk4Mzc3MDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMzIzNy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=v2RJcQjKscgQ7kNvwGX4bfw&_nc_oc=AdrhzdeA-GScdrofKA49SZAfaTQdHrsC1G2biAPn7YPaKEsfwm3HvxhRu4KqquR3cgwd_t1BgGzQQ0EUaDc-7bvF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg4-3.cdninstagram.com&_nc_gid=4vYiF03ZM5I26loqePLO2A&_nc_ss=7a20f&oh=00_AQRM83Olmrux1jyew7jJ8OTintrHJ5dPi-gEUYQ0lY6JjQ&oe=6AF95740",
+   "ok": true,
+   "cached": true,
+   "products": 15,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Nevada",
    "offerId": "ig-DfkKjdokS-0",
-   "url": "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/900174133_1583644543806496_8907464227588744950_n.jpg?stp=c1.0.1078.1277a_dst-jpg_e35_sh2.08_tt6&_nc_cat=110&ig_cache_key=NDAyNzM5MDM2OTIwOTYyMDk2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Q0H0Pfw8wqoQ7kNvwF8HikV&_nc_oc=AdqnYt2IqFW_v6EXrZ3K6WFZrT7Xtdd1DtrzPyKnpACfG9vyVJ6y9D9to-5CuXVFHsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=3dzCei_jj_mBYqSB9MYhoQ&_nc_ss=7239b&oh=00_AQRpevXyLVJ51GeChBMv5NTeZu5dAW9urKnFcwXvTugBqA&oe=6AF94038",
+   "url": "https://instagram.fbod1-1.fna.fbcdn.net/v/t39.30808-6/900174133_1583644543806496_8907464227588744950_n.jpg?stp=c0.98.1080.1080a_dst-jpg_e35_s1080x1080_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNzM5MDM2OTIwOTYyMDk2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Q0H0Pfw8wqoQ7kNvwEXPZ27&_nc_oc=AdpSB6LWO2hT_SujpPfHSzxDBDj_dyPvpYb7yef2EQ6f4_5kX62e764cJFFq3VmRwHTce1tCRpt7VrlahMibJ4MV&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbod1-1.fna&_nc_gid=ZeUCz32WAszCf76Dxqd8mA&_nc_ss=7a20f&oh=00_AQScE34F3CyQljRGzGx1dvuAhJBFQacJH0yhImkaRp_WGA&oe=6AF94038",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -178,7 +187,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfkKjdokS-0",
-   "url": "https://scontent-sea5-2.cdninstagram.com/v/t39.30808-6/897811763_1583644547139829_6815631468776053875_n.jpg?stp=c0.1.1078.1276a_dst-jpg_e35_sh2.08_tt6&_nc_cat=102&ig_cache_key=NDAyNzM5MDM2OTYzNzQ1MjMwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=mMWtRDrWe6QQ7kNvwEEd-OT&_nc_oc=AdrJCq3mGmLduM_dO579GgA2DP-xMKGFxWfW2M9uY2HpsIot7K8KUxDh7NXoPN0GNCY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-sea5-2.cdninstagram.com&_nc_gid=3dzCei_jj_mBYqSB9MYhoQ&_nc_ss=7239b&oh=00_AQSS2rLmZsmhc7v6Bx9FRMYJAITHrfkfv5yFSOwtAfUvnw&oe=6AF9533B",
+   "url": "https://instagram.fbod1-1.fna.fbcdn.net/v/t39.30808-6/897811763_1583644547139829_6815631468776053875_n.jpg?stp=c0.1.1078.1276a_dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNzM5MDM2OTYzNzQ1MjMwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=mMWtRDrWe6QQ7kNvwHHilvo&_nc_oc=AdpE1NZtg9rL08YeIcj90cghUhFTaHnQKWW86Mp_ww3RTuWSgKhEI3_RIB34QNIi2D_02I0-s3MIZQgHesaA05a0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbod1-1.fna&_nc_gid=ZeUCz32WAszCf76Dxqd8mA&_nc_ss=7a20f&oh=00_AQTwnT1oNkdfuldxPZ1biQ9pfMbZLZ0SygKtrTkUyWxxnA&oe=6AF9533B",
    "ok": true,
    "cached": true,
    "products": 6,
@@ -186,14 +195,32 @@
   },
   {
    "market": "Nevada",
-   "offerId": "ig-DfkEQi7xap1",
-   "url": "https://scontent-sea5-2.cdninstagram.com/v/t51.82787-15/901867067_18576467566075787_8691766888650708976_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_cat=111&ig_cache_key=NDAyNzM2MjY5NTk4Mzc3MDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMzIzNy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=v2RJcQjKscgQ7kNvwFtTKYh&_nc_oc=AdrQtn4eqoV0Be-cqCg5xNVtzE6xzr9MhWQ_PEBiX8m0yJ4F8WougjaiwJRFAfkZlAw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sea5-2.cdninstagram.com&_nc_gid=3dzCei_jj_mBYqSB9MYhoQ&_nc_ss=7239b&oh=00_AQS2rqUsqBMfoh0UOwt3VCYJ1-PruRZ6IoKTyh7Fnkl2rQ&oe=6AF95740",
+   "offerId": "fb-1583644603806490",
+   "url": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.99422-6/899487274_29998303023089809_6142229284918210471_n.png?stp=dst-jpg_tt6&cstp=mx1080x1277&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yJLxjlsasBYQ7kNvwEYl7by&_nc_oc=Ado_5p7r-wehCIXHLuK7wK8CezfS4NbIZwlTEf2tkLkKZpFosA767cki4WTlzs2bYlRMrVoE13gIDIVvhj6We6X_&_nc_zt=14&_nc_ht=scontent-bos5-1.xx&_nc_gid=aewS1dDIt79Q5DlJsxGbeA&_nc_ss=70180&oh=00_AQRJ7h3CMQcBwx1KIGmuDNatx9FYgowK0TkekqLOudUfMA&oe=6AF92731",
    "ok": true,
-   "cached": true,
+   "cached": false,
+   "products": 0,
+   "model": "openrouter/free"
+  },
+  {
+   "market": "Nevada",
+   "offerId": "fb-1583644603806490",
+   "url": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.99422-6/899629660_2763188650762722_5783675564670188778_n.png?stp=dst-jpg_tt6&cstp=mx1078x1278&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=QFVmCZwdEXUQ7kNvwHgOMsd&_nc_oc=AdqBEtnfDX_UhPFIele5yPWy9s50rsjYYBLMPG96tXXW2OA0EaqoztdDGjivt6eEzkJ5ywhTZoj2Qt25rigk1eZ4&_nc_zt=14&_nc_ht=scontent-bos5-1.xx&_nc_gid=aewS1dDIt79Q5DlJsxGbeA&_nc_ss=70180&oh=00_AQQ8lBDmOP5zhEG6d9h7XcrliPtzjHkXPFzerj_add5uTg&oe=6AF93FED",
+   "ok": true,
+   "cached": false,
+   "products": 6,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Nevada",
+   "offerId": "fb-1583591977145086",
+   "url": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=r9bJyx6TnowQ7kNvwE53KtI&_nc_oc=AdoteiI7ENVHy-ldXbUw62n2MnluypaJTprJGwDowtjEeqsdalfXkFr6Nv7EuUXq7jE3XTy7ETvG6Cm3OEBNbc3-&_nc_zt=14&_nc_ht=scontent-bos5-1.xx&_nc_gid=aewS1dDIt79Q5DlJsxGbeA&_nc_ss=70180&oh=00_AQSzoA7ILWRxJIVpUGphzdxE-vYFf_DXoZkD-kQx_F-OWg&oe=6AF92F48",
+   "ok": true,
+   "cached": false,
    "products": 15,
    "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-10T19:05:09.168Z",
- "newReads": 0
+ "finishedAt": "2026-11-10T19:30:45.939Z",
+ "newReads": 3
 }
