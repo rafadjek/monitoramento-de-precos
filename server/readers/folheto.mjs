@@ -140,8 +140,9 @@ async function askOpenRouter(buf, mime) {
 }
 
 let newReads = 0;
-async function readPage(url, referer) {
-  const f = path.join(CACHE_READ, sha1(url + '|' + READ_VERSION) + '.json');
+// key: identificador estável da imagem (o endereço do Instagram muda a cada consulta; a chave é o post)
+async function readPage(url, referer, key = url) {
+  const f = path.join(CACHE_READ, sha1(key + '|' + READ_VERSION) + '.json');
   if (fs.existsSync(f)) return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true };
   if (newReads >= MAX_NEW) throw new Error('teto de páginas novas desta execução');
   const buf = await download(url, referer);
@@ -206,7 +207,7 @@ async function main() {
         console.log(`${enc.market} ${enc.offerId} página ${i + 1}/${enc.images.length}`);
         if (DRY) continue;
         try {
-          const p = await readPage(url, enc.referer);
+          const p = await readPage(url, enc.referer, enc.imageKeys?.[i] ?? url);
           pages.push({ url, ...p });
           report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model });
           console.log(`  ${p.products.length} produtos${p.cached ? ' (cache)' : ` (${p.model})`}`);
@@ -231,7 +232,7 @@ async function main() {
             category: it.category ?? 'outros', categoryRaw: null,
             // de PDF não dá para recortar a foto: fica sem imagem e o link abre o PDF
             imageUrl: isPdf(p.url) ? null : p.url, imageBox: !isPdf(p.url) && Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
-            productUrl: p.url, source: 'encarte', condition: bestCond(it),
+            productUrl: enc.link ?? p.url, source: 'encarte', condition: bestCond(it),
             validFrom, validUntil,
             validityNote: enc.validityNote ?? null,
             storeScope: enc.storeScope ?? `Encarte: ${(enc.stores ?? []).join(', ') || 'lojas não informadas'}`,

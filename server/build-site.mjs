@@ -56,13 +56,16 @@ const STORE_LABEL = {
   Semar: 'preços da loja 06 Mauá',
   Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
   Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
+  Nevada: 'jornal de ofertas publicado no Instagram (@redenevada)',
+  STUK: 'jornal de ofertas do dia publicado no Instagram (@supermercadostuk)',
+  Lourencini: 'ofertas publicadas no Instagram (@lourencinisupermercados)',
   Dia: 'destaques do folheto da loja de Mauá (Av. Dom José Gaspar, 1016), via Tiendeo',
   'Roldão': 'encartes que valem na loja de Mauá (o Roldão não tem loja em Ribeirão Pires)',
 };
 // Cidades das lojas usadas por mercado (filtro do site).
 const CITIES = {
   'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
-  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'], Dia: ['Mauá'],
+  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'], Dia: ['Mauá'], STUK: ['Ribeirão Pires'],
   // preço da loja online de São Bernardo: não entra no filtro "Lojas em Mauá/Ribeirão Pires"
   Extra: ['São Bernardo do Campo'],
 };
@@ -110,6 +113,9 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
     storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: rows.map((r) => r.collectedAt).sort().at(-1),
   });
 }
+
+// mercado que passou a ter produtos (ex.: STUK pelo Instagram) sai da lista de só-link
+index.infoOnly = index.infoOnly.filter((i) => !index.markets.some((m) => m.name === i.name));
 
 // Produtos iguais em mercados diferentes recebem o mesmo "g" (id do grupo).
 const flat = built.flatMap((b) => b.slim);
