@@ -22,3 +22,6 @@ start-dev.ps1
 setup*.bat
 setup-ps.ps1
 worker-imagens/.wrangler/
+
+# página de rotulagem gerada (grande, refeita a cada rodada de exemplos)
+server/data/rotulos/rotulos.html

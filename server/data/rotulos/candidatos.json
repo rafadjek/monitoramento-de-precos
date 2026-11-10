@@ -1,0 +1,1778 @@
+[
+ {
+  "id": "61a229fa20",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: pet",
+  "diff": [
+   "pet"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Óleo de Soja Soya 900ml",
+   "price": 7.29,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234865/g.jpg.jpg?v=639287899841700000",
+   "ean": "7891107101621"
+  },
+  "b": {
+   "market": "Roldão",
+   "name": "Óleo de Soja Soya Pet 900ml",
+   "price": 7.09,
+   "image": null,
+   "ean": null
+  }
+ },
+ {
+  "id": "56d1ce8791",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: bacfree, desinfetante, oriental",
+  "diff": [
+   "bacfree",
+   "desinfetante",
+   "oriental"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Desinfetante Álcool Líquido Coperalcool Lavanda 46°INPM 1L",
+   "price": 11.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2297051/g.jpg.jpg?v=639290365559630000",
+   "ean": "7896090700769"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Álcool Líquido 46 INPM Lavanda Oriental Coperalcool Bacfree 1L",
+   "price": 15.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/247739/7896090700769.webp?v=638838853277130000",
+   "ean": "7896090700769"
+  }
+ },
+ {
+  "id": "b2f43cdaf1",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: avela, cereja, lavanda",
+  "diff": [
+   "avela",
+   "cereja",
+   "lavanda"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Difusor de Aromas Coala Lavanda 100ml",
+   "price": 11.5,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2301197/g.jpg.jpg?v=639291190914000000",
+   "ean": "7897744502586"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Difusor De Aromas Cereja Com Avelã Coala 100Ml",
+   "price": 16.95,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261371.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "f49b613b26",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: alcool, long, neck",
+  "diff": [
+   "alcool",
+   "long",
+   "neck"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Cerveja Heineken Zero 330ml",
+   "price": 6.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2259390/g.jpg.png?v=639288090538200000",
+   "ean": "7896045506040"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Cerveja Heineken Zero Álcool Long Neck 330ml",
+   "price": 7.19,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/223951/7896045506040.jpg?v=637919582370100000",
+   "ean": "7896045506040"
+  }
+ },
+ {
+  "id": "add20d8d6e",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: cotonete, flexivei, flexivel, s",
+  "diff": [
+   "cotonete",
+   "flexivei",
+   "flexivel",
+   "s"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Haste Flexível Johnson's com 150 Unidades",
+   "price": 15.29,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214888/7891010560812.jpg?v=637919524332030000",
+   "ean": "7891010560812"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Hastes Flexíveis Johnson Cotonetes C/150",
+   "price": 13.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4f2fa88a-c0b3-11e7-a6aa-063e6e4e9f3a.jpg",
+   "ean": "7891010560812"
+  }
+ },
+ {
+  "id": "33ddb516d4",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: brisa, tropical",
+  "diff": [
+   "brisa",
+   "tropical"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Amaciante de Roupas Concentrado Downy Verão Tropical 500ml",
+   "price": 12.6,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235170/g.jpg.jpg?v=639287901975500000",
+   "ean": "7500435259552"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Amaciante de Roupa Concentrado Brisa de Verão Downy Frasco 500ml",
+   "price": 15.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/724/33368724.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "2f59fff9c0",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: moido, torrado",
+  "diff": [
+   "moido",
+   "torrado"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Café Torrado e Moído Café Brasileiro Extra Forte Almofada 500g",
+   "price": 24.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229244/7891018001393.jpg?v=638074202690270000",
+   "ean": "7891018001393"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Extra Forte Almofada Brasileiro 500G",
+   "price": 24.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/242482.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "c2ec64f13d",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: sache",
+  "diff": [
+   "sache"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Tradicional 3 Corações Sache 40g",
+   "price": 7.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245096/7896045103003.jpg?v=638672124195100000",
+   "ean": "7896045103003"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Tradicional 3 Corações 40G",
+   "price": 7.65,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/255668.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "0803eef4ff",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: ervilha, lata, verde",
+  "diff": [
+   "ervilha",
+   "lata",
+   "verde"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Ervilha e Milho Quero Lata 170g",
+   "price": 6.29,
+   "image": "https://static.extramercado.com.br/img/uploads/1/370/33375370.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Milho Verde Quero 170G.",
+   "price": 4.79,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/220527.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "ffbddfe2c0",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: concentrado, intensa, perfumacao",
+  "diff": [
+   "concentrado",
+   "intensa",
+   "perfumacao"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Lava Roupas em Pó Urca Maxx 2,2kg",
+   "price": 14.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2297617/g.jpg.jpg?v=639290368712430000",
+   "ean": "7896060402495"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Lava Roupa Em Pó Concentrado Perfumação Intensa Maxx Urca 2.2Kg",
+   "price": 17.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249911/nq -5-.png?v=639034132841100000",
+   "ean": "7896060402495"
+  }
+ },
+ {
+  "id": "f06ec2ff79",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: branco, ideal",
+  "diff": [
+   "branco",
+   "ideal"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Tempero Ideal Para Arroz Sazón 60g",
+   "price": 6.19,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216169/7891132000449.jpg?v=637919531968500000",
+   "ean": "7891132000449"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Tempero para Arroz Branco SAZON 60g",
+   "price": 4.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/265/33323265.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "acf97c489d",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: nestle",
+  "diff": [
+   "nestle"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Biscoito Tostines Coco 160g",
+   "price": 3.98,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280306/g.jpg.jpg?v=639289496226730000",
+   "ean": "7891000329498"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Biscoito Coco Nestlé Tostines Pacote 160g",
+   "price": 4.89,
+   "image": "https://static.extramercado.com.br/img/uploads/1/678/33243678.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "c3092419f3",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: defumada, dog, hot",
+  "diff": [
+   "defumada",
+   "dog",
+   "hot"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Hot Dog Seara 500g",
+   "price": 13.29,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/253572/7894904005482-2.jpg?v=639153233258870000",
+   "ean": "7894904005482"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Salsicha Defumada Seara 500g",
+   "price": 14.5,
+   "image": "https://static.extramercado.com.br/img/uploads/1/129/33348129.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "7c61f26b4f",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocoboy, coco, pronto",
+  "diff": [
+   "chocoboy",
+   "coco",
+   "pronto"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Coco 300g",
+   "price": 11.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245012/7891203059338.jpg?v=638665262186530000",
+   "ean": "7891203059338"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bolo De Chocoboy Panco 300G",
+   "price": 12.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/873154.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "7c1e55d751",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: conchinha, espaguete, furado",
+  "diff": [
+   "conchinha",
+   "espaguete",
+   "furado"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Adria Espaguete Furado 500g",
+   "price": 2.98,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2243141/g.jpg.jpg?v=639287955286670000",
+   "ean": "7896205788057"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão com Ovos Conchinha Adria 500g",
+   "price": 3.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/313/33163313.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "52ba9aa6c9",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: aviaozinho, exceto, ninho",
+  "diff": [
+   "aviaozinho",
+   "exceto",
+   "ninho"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Dona Benta Aviãozinho 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2230691/g.jpg.jpg?v=639287866738170000",
+   "ean": "7896005212844"
+  },
+  "b": {
+   "market": "Joanin",
+   "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)",
+   "price": 3.49,
+   "image": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "3c3669ed4a",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: asa, coxa, coxinha",
+  "diff": [
+   "asa",
+   "coxa",
+   "coxinha"
+  ],
+  "a": {
+   "market": "Assaí",
+   "name": "COXINHA DA ASA DE FRANGO CONGELADA SEARA PACOTE 1KG",
+   "price": 12.5,
+   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
+   "ean": null
+  },
+  "b": {
+   "market": "Atacadão",
+   "name": "Coxa de Frango Seara Congelada IQF 1Kg",
+   "price": 12.98,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2243607/g.jpg.jpg?v=639287957839530000",
+   "ean": "7894904197729"
+  }
+ },
+ {
+  "id": "23de4093a6",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 10, cafe, classic",
+  "diff": [
+   "10",
+   "cafe",
+   "classic"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Cápsula de Cappuccino Classic 3 Corações 10 unid",
+   "price": 24.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238503/7896005805077_1.jpg?v=638500779020270000",
+   "ean": "7896005805077"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Cápsula De Café 3 Corações C/10 Cappuccino",
+   "price": 19.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/9141073d-fd19-4836-83f8-b8ee98f77e35.jpg",
+   "ean": "7896005805077"
+  }
+ },
+ {
+  "id": "593ed76eab",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: economica",
+  "diff": [
+   "economica"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado em Pó Toddy Original Pacote 700g",
+   "price": 18.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/234127/7894321220529.jpg?v=638336929011900000",
+   "ean": "7894321220529"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Achocolatado Em Pó Original Toddy 700g + Econômica",
+   "price": 12.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/356/33324356.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "73aa41af78",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: lemonade, maracuja, pink",
+  "diff": [
+   "lemonade",
+   "maracuja",
+   "pink"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g",
+   "price": 1.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234442/g.jpg.jpg?v=639287896635300000",
+   "ean": "7622202351815"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refresco Em Pó Maracujá Sem Açúcar Clight 8G",
+   "price": 2.09,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/140621.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "fdb71d09d5",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: morango, po, uva",
+  "diff": [
+   "morango",
+   "po",
+   "uva"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Gelatina Royal Uva 25g",
+   "price": 2.19,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2248681/g.jpg.png?v=639287997578300000",
+   "ean": "7622300859770"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Gelatina em Pó Royal Morango 25g",
+   "price": 3.09,
+   "image": "https://static.extramercado.com.br/img/uploads/1/123/33357123.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "1750292f92",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: assado, carne, frango",
+  "diff": [
+   "assado",
+   "carne",
+   "frango"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão Instantâneo Nissin Lámen Frango Assado 85g",
+   "price": 2.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2296064/g.jpg.jpg?v=639290360171130000",
+   "ean": "7891079012581"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Macarrão Instantaneo Nissin Lámen Carne 85g",
+   "price": 3.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215041/7891079000205.jpg?v=637919525147770000",
+   "ean": "7891079000205"
+  }
+ },
+ {
+  "id": "667601a2cf",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: acerola",
+  "diff": [
+   "acerola"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em Pó Frisco Laranja 18g",
+   "price": 0.85,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291568/g.jpg.jpg?v=639290336363730000",
+   "ean": "7896045112081"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Refresco em Pó Frisco Laranja com Acerola 18g",
+   "price": 0.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/239034/7896045112425.jpg?v=638514739288130000",
+   "ean": "7896045112425"
+  }
+ },
+ {
+  "id": "2b6f2249e5",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: copo, cream, cremoso",
+  "diff": [
+   "copo",
+   "cream",
+   "cremoso"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Requeijão Cremoso Tradicional Catupiry Copo 200g",
+   "price": 9.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/641/33326641.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Requeijão Cream Tradicional Catupiry 200G",
+   "price": 10.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/716819.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "376d887603",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: almofada, moido, stand, torrado",
+  "diff": [
+   "almofada",
+   "moido",
+   "stand",
+   "torrado"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Brasileiro Tradicional Stand 500g",
+   "price": 23.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2263342/g.jpg.jpg?v=639288121552470000",
+   "ean": "7891018001386"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Café Torrado E Moído Brasileiro 500g Almofada Tradicional",
+   "price": 25.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/01ac7307-75a3-4117-9452-37fef7539c76.jpg",
+   "ean": "7891018001386"
+  }
+ },
+ {
+  "id": "05258190b1",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: semola",
+  "diff": [
+   "semola"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão com Ovos Nhoque Adria 500g",
+   "price": 3.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215067/7896205754465.jpg?v=637919525281570000",
+   "ean": "7896205754465"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão de Sêmola com Ovos Nhoque Adria Pacote 500g",
+   "price": 3.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/367/33353367.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "2937ecabe8",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: micro, microonda, onda",
+  "diff": [
+   "micro",
+   "microonda",
+   "onda"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Pipoca Para Micro-ondas Natural Yoki 100g",
+   "price": 4.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/252880/Pipocas Micro_7891095100125- Natural 100g.png?v=639088497426170000",
+   "ean": "7891095100125"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Pipoca De Microondas Yoki 100g Natural",
+   "price": 4.09,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/3c3706cc-0e7e-4f23-98d8-105d415404de.jpg",
+   "ean": "7891095100125"
+  }
+ },
+ {
+  "id": "b1b8f756ee",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 20, desconto, piso",
+  "diff": [
+   "20",
+   "desconto",
+   "piso"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Limpador Destac Laminados 750ml",
+   "price": 18.5,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251705/g.jpg.jpg?v=639288020981230000",
+   "ean": "7891035116513"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Limpador De Piso Laminado Destac 750ml Com 20% De Desconto",
+   "price": 18.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/01aefdfd-c9ce-4eef-ae75-8bedce7de92c.jpg",
+   "ean": "7891035116513"
+  }
+ },
+ {
+  "id": "bcac066e12",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: alcool, color, colorido",
+  "diff": [
+   "alcool",
+   "color",
+   "colorido"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Vinagre color  Vitalia 750ml",
+   "price": 2.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/220985/7896048284792.jpg?v=637919563668870000",
+   "ean": "7896048284792"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Vinagre Vitalia Álcool Colorido 750ml",
+   "price": 2.59,
+   "image": "https://static.extramercado.com.br/img/uploads/1/232/33345232.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "be79dd0b06",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: frutti, retro, schin, tutti",
+  "diff": [
+   "frutti",
+   "retro",
+   "schin",
+   "tutti"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Schin Itubaína 350ml",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246660/g.jpg.jpg?v=639287975825330000",
+   "ean": "7896052604975"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Refrigerante Tutti Frutti 350ml Itubaína Retrô",
+   "price": 2.79,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/da0951ad-a35e-49aa-a994-aad627c4bf20.jpg",
+   "ean": "7896052604975"
+  }
+ },
+ {
+  "id": "d1d60fbdf3",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: economica",
+  "diff": [
+   "economica"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado em Pó Toddy Light Pacote 280g",
+   "price": 12.29,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240578/7892840822743.jpg?v=638536477087830000",
+   "ean": "7892840822743"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Achocolatado Em Pó Light Toddy 280G + Econômica",
+   "price": 13.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/389/33347389.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "f256b0b11d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: squeeze",
+  "diff": [
+   "squeeze"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Limpador Multiuso Veja Gold Original 750ml Embalagem Econômica",
+   "price": 7.7,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2254072/g.jpg.png?v=639288041779570000",
+   "ean": "7891035216206"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Limpador Multiuso Original Veja Gold Squeeze 750ml Embalagem Econômica",
+   "price": 8.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/104/33375104.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "383f68889d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocolate, coco, pronto",
+  "diff": [
+   "chocolate",
+   "coco",
+   "pronto"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Chocolate 300g",
+   "price": 11.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245013/7891203059352.jpg?v=638665265677870000",
+   "ean": "7891203059352"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo de Coco PANCO 300g",
+   "price": 12.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/718/33369718.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "823e29f7f1",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocolate, morango, recheio",
+  "diff": [
+   "chocolate",
+   "morango",
+   "recheio"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Ana Maria Chocolate 70g",
+   "price": 3.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2257475/g.jpg.jpg?v=639288071730370000",
+   "ean": "7896002362436"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo Morango Recheio Morango Ana Maria Pacote 70g",
+   "price": 3.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/443/33350443.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "f0f0ea142e",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: tipo",
+  "diff": [
+   "tipo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Tipo Viena Perdigão 500g",
+   "price": 15.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/218989/7891515742065.jpg?v=637919548597830000",
+   "ean": "7891515742065"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salsicha Viena Perdigão 500g",
+   "price": 14.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/165754.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "816eeb5025",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocolate, morango, recheio",
+  "diff": [
+   "chocolate",
+   "morango",
+   "recheio"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolinho Bauducco Baunilha com Chocolate 40g",
+   "price": 2.39,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2283251/g.jpg.jpg?v=639289510895200000",
+   "ean": "7891962000725"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bolinho Baunilha Recheio Morango Bauducco 40G",
+   "price": 2.49,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/683883.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "c23e24c58f",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: aguardente, cachaca, lata",
+  "diff": [
+   "aguardente",
+   "cachaca",
+   "lata"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Cachaça Pitú 350ml",
+   "price": 6.29,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235563/g.jpg.jpg?v=639287904597400000",
+   "ean": "7896607100044"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Aguardente Pitú Lata 350ml",
+   "price": 6.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227420/7896607100044.jpg?v=638074199448470000",
+   "ean": "7896607100044"
+  }
+ },
+ {
+  "id": "e5f4499d20",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: one, premium, way",
+  "diff": [
+   "one",
+   "premium",
+   "way"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Cerveja Heineken One Way 600ml",
+   "price": 14.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246317/g.jpg.png?v=639287973825130000",
+   "ean": "78905498"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Cerveja Premium Heineken 600ml",
+   "price": 13.99,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/a59a673a-09fe-4db3-9975-6b6dcf661141.jpg",
+   "ean": "78905498"
+  }
+ },
+ {
+  "id": "d4c5d174e1",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: pilsen",
+  "diff": [
+   "pilsen"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Cerveja Pilsen Antarctica Original Lata 269ml",
+   "price": 3.59,
+   "image": "https://static.extramercado.com.br/img/uploads/1/942/33341942.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cerveja Antarctica Original lata 269Ml",
+   "price": 3.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/241115.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "b631ac7acd",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 50, desconto, desodorizador",
+  "diff": [
+   "50",
+   "desconto",
+   "desodorizador"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Desodorizador Sanitário Pato Bloco para Caixa Acoplada Marine 40g | Com 2 Unidades",
+   "price": 27.89,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/248173/7894650003756_99_1_1200_72_SRGB.png?v=638888950242870000",
+   "ean": "7894650003756"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bloco Sanitário Para Caixa Acoplada Pato Com 2 Unidades De 40g Com 50% De Desconto Marine",
+   "price": 28.59,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/3392b017-a93c-415d-9319-63900ae75a1e.jpg",
+   "ean": "7894650003756"
+  }
+ },
+ {
+  "id": "e7a18c2969",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: aerosol, aerossol, body, spray",
+  "diff": [
+   "aerosol",
+   "aerossol",
+   "body",
+   "spray"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Desodorante Aerossol Axe Apollo 150ml",
+   "price": 12.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2258510/g.jpg.jpg?v=639288083142600000",
+   "ean": "7791293025780"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml",
+   "price": 12.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214642/7791293025780.jpg?v=637919522876030000",
+   "ean": "7791293025780"
+  }
+ },
+ {
+  "id": "082a5ff47e",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 5, 5star, star",
+  "diff": [
+   "5",
+   "5star",
+   "star"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Chocolate Lacta 5 Star 40g",
+   "price": 3.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2231251/g.jpg.png?v=639287871785130000",
+   "ean": "7622210411501"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Chocolate 5Star Lacta 40g",
+   "price": 3.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214516/7622210411501.jpg?v=637919522071530000",
+   "ean": "7622210411501"
+  }
+ },
+ {
+  "id": "cd05a9cc52",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: garrafa",
+  "diff": [
+   "garrafa"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Fanta Laranja 200ml",
+   "price": 1.89,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253615/g.jpg.jpg?v=639288035734000000",
+   "ean": "78936478"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Refrigerante Laranja Fanta Garrafa 200ml",
+   "price": 1.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/294/33330294.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "45e2c73d53",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: moido, torrado",
+  "diff": [
+   "moido",
+   "torrado"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Café em Cápsula Torrado e Moído Espresso Intenso Nescafé Dolce Gusto Caixa 80g 10 Unidades",
+   "price": 24.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/724/33331724.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cápsula Café Espresso Intenso Nescafé Dolce Gusto 10 Cápsulas 80g",
+   "price": 25.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/209956.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "2c66f6cf53",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: elma, sal, salgadinho",
+  "diff": [
+   "elma",
+   "sal",
+   "salgadinho"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Batata Chips Ruffles Original 68g",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240425/7892840823054.jpg?v=638536476339370000",
+   "ean": "7892840823054"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Salgadinho De Batata Elma Chips Ruffles 68g Sal",
+   "price": 10.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/7b8c2c51-0aba-4e5c-9eeb-528402edfd5d.jpg",
+   "ean": "7892840823054"
+  }
+ },
+ {
+  "id": "e39dfdfd08",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: garrafa",
+  "diff": [
+   "garrafa"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Coca-Cola Sem açúcar 200ml",
+   "price": 2.29,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253316/g.jpg.jpg?v=639288033749300000",
+   "ean": "78933873"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Refrigerante sem Açúcar Coca-Cola Garrafa 200ml",
+   "price": 2.29,
+   "image": "https://static.extramercado.com.br/img/uploads/1/868/33331868.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "b1b6507cee",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: care, infantil, maxima, protecao, supreme",
+  "diff": [
+   "care",
+   "infantil",
+   "maxima",
+   "protecao",
+   "supreme"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Fralda Descartável Infantil Huggies Supreme Care XXG 54 Unidades",
+   "price": 99.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/248068/32907696.webp?v=638881105073330000",
+   "ean": "7896007552849"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Fralda Descartável Huggies Máxima Proteção Xxg Com 54 Unidades",
+   "price": 89.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4c0fc130-f48e-4777-9126-c994b8978f78.jpg",
+   "ean": "7896007552849"
+  }
+ },
+ {
+  "id": "70f01820a7",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 60, 80, abas, fragrancia, leve, pague",
+  "diff": [
+   "60",
+   "80",
+   "abas",
+   "fragrancia",
+   "leve",
+   "pague",
+   "protecao",
+   "respiravel",
+   "sem"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Protetor Diário Proteção Carefree Leve 80 Pague 60",
+   "price": 37.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216925/7891010604349.jpg?v=637919536220470000",
+   "ean": "7891010604349"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Protetor Diário Carefree Sem Abas Com 80 Un Respirável Sem Fragrância",
+   "price": 32.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/d27cf235-3fbf-4376-8d66-7f93aa4bbbab.jpg",
+   "ean": "7891010604349"
+  }
+ },
+ {
+  "id": "ef178ccf11",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: mexicana, pimenta, queijo",
+  "diff": [
+   "mexicana",
+   "pimenta",
+   "queijo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho de Trigo Pimenta Mexicana Torcida 100g",
+   "price": 4.29,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/224201/7892840817107.jpg?v=637919583745300000",
+   "ean": "7892840817107"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g",
+   "price": 4.89,
+   "image": "https://static.extramercado.com.br/img/uploads/1/875/33339875.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "8de5298177",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: natural",
+  "diff": [
+   "natural"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Coalhada Serramar Natural 170g",
+   "price": 2.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2231845/g.jpg.jpg?v=639287877246670000",
+   "ean": "7897951610333"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Coalhada Serramar Embalagem 170G",
+   "price": 2.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/343329.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "8c682d0bf5",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocoboy, coco",
+  "diff": [
+   "chocoboy",
+   "coco"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Panco Chocoboy 300g",
+   "price": 11.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2249783/g.jpg.jpg?v=639288005356670000",
+   "ean": "7891203059345"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Bolo de Coco PANCO 300g",
+   "price": 12.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/718/33369718.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "9697800c56",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: pet, refrigerante",
+  "diff": [
+   "pet",
+   "refrigerante"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Refrigerante Sprite Original Pet 2L",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249113/56271.png?v=638941688458070000",
+   "ean": "7894900681000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Sprite Original 2L",
+   "price": 9.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/206235.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "b3d917be0e",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 2, ativado, carvao, charcoal",
+  "diff": [
+   "2",
+   "ativado",
+   "carvao",
+   "charcoal"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Escova Dental Colgate Zig Zag Carvão Ativado 2 un",
+   "price": 12.5,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2285186/g.jpg.jpg?v=639289521077800000",
+   "ean": "7509546673042"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Escova Dental Colgate Zig Zag Charcoal Com 2",
+   "price": 12.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4904043b-8693-4841-ab4c-d0584acf9b15.jpg",
+   "ean": "7509546673042"
+  }
+ },
+ {
+  "id": "315f802868",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: aerosol, aerossol, body, spray",
+  "diff": [
+   "aerosol",
+   "aerossol",
+   "body",
+   "spray"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml",
+   "price": 12.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214642/7791293025780.jpg?v=637919522876030000",
+   "ean": "7791293025780"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Desodorante Aerossol Axe 150ml Apollo",
+   "price": 10.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/7a5180ac-e6d8-4947-a19f-ee2ee81aed02.jpg",
+   "ean": "7791293025780"
+  }
+ },
+ {
+  "id": "d132f3d206",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: desnatado, mel",
+  "diff": [
+   "desnatado",
+   "mel"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte Natural Danone Desnatado 160g",
+   "price": 4.29,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2262030/g.jpg.jpg?v=639288108185270000",
+   "ean": "7891025120223"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Natural Mel Danone 160G",
+   "price": 4.59,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/239439.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "0b33bbe02f",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: caseiro",
+  "diff": [
+   "caseiro"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Pão Caseiro Coco Panco Pacote 350g",
+   "price": 13.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/762/33353762.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Pão De Coco Panco 350G",
+   "price": 13.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243582.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "00bf7bdf11",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: po",
+  "diff": [
+   "po"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Pilão 40g",
+   "price": 6.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240752/7896089088656.jpg?v=638539059165100000",
+   "ean": "7896089088656"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Em Pó Pilão 40G",
+   "price": 8.95,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/254798.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "6adaee0a39",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: acucar",
+  "diff": [
+   "acucar"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Guaraná Antarctica Zero 200ml",
+   "price": 1.89,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2283925/g.jpg.jpg?v=639289514547100000",
+   "ean": "7891991016124"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante Zero Açúcar Guaraná Antarctica 200Ml",
+   "price": 1.89,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243364.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "dd2c8a18c1",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: almofada",
+  "diff": [
+   "almofada"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Pilão Extra Forte Almofada 500g",
+   "price": 29.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246485/g.jpg.jpg?v=639287974846200000",
+   "ean": "7896089013399"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Extra Forte Pilão 500G",
+   "price": 28.5,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/335195.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "d7a2576020",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: garrafa, pet",
+  "diff": [
+   "garrafa",
+   "pet"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Refrigerante Uva Sukita Garrafa 2l",
+   "price": 5.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/150/33358150.png",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante De Uva Sukita Pet 2L",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/714174.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "77012de767",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: limao",
+  "diff": [
+   "limao"
+  ],
+  "a": {
+   "market": "Joanin",
+   "name": "Refrigerante Sprite Original/ Sem Açúcar 2L",
+   "price": 7.99,
+   "image": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+   "ean": null
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante De Limão Sem Açúcar Sprite 2L",
+   "price": 9.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/284738.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "3affb81ad2",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: 3, massa, n",
+  "diff": [
+   "3",
+   "massa",
+   "n"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão Petybon Massa com Ovos Ninho N°3 500g",
+   "price": 4.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215070/7897721410057.jpg?v=637919525295800000",
+   "ean": "7897721410057"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão com Ovos Ninho PETYBON Pacote 500g",
+   "price": 6.59,
+   "image": "https://static.extramercado.com.br/img/uploads/1/896/33316896.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "add5ab08d4",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: economica, garrafa",
+  "diff": [
+   "economica",
+   "garrafa"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte Natural Batavo Integral 1,15kg",
+   "price": 16.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2238468/g.jpg.jpg?v=639287923942730000",
+   "ean": "7891097108136"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Integral Natural Batavo Original 1,15kg Embalagem Econômica Garrafa",
+   "price": 19.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276259.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "83238cdd10",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocoboy, formigueiro, pronto",
+  "diff": [
+   "chocoboy",
+   "formigueiro",
+   "pronto"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Panco Formigueiro 300g",
+   "price": 11.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253340/g.jpg.jpg?v=639288033935730000",
+   "ean": "7891203063359"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Bolo Pronto Panco Chocoboy 300g",
+   "price": 13.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245016/7891203059345--1-.jpg?v=638669286794200000",
+   "ean": "7891203059345"
+  }
+ },
+ {
+  "id": "0372e7a433",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 32, cobertura, protecao, tripla",
+  "diff": [
+   "32",
+   "cobertura",
+   "protecao",
+   "tripla"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Absorvente em Gel Intimus Seca com abas 32 un",
+   "price": 18.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244717/g.jpg.jpg?v=639287964517270000",
+   "ean": "7896007544059"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Absorvente com Abas Intimus Gel Tripla Proteção Cobertura Seca Pacote 32 Unidades",
+   "price": 22.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238381/7896007544059.jpg?v=638487994970270000",
+   "ean": "7896007544059"
+  }
+ },
+ {
+  "id": "6d2233319e",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: longa, uht, vida",
+  "diff": [
+   "longa",
+   "uht",
+   "vida"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Leite Longa Vida Ninho Integral 1L",
+   "price": 7.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2236907/g.jpg.jpg?v=639287913649130000",
+   "ean": "7898215157304"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Leite Uht Ninho Integral 1L",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/740876.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "0bd01cddf0",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: congelado, empanado, frango",
+  "diff": [
+   "congelado",
+   "empanado",
+   "frango"
+  ],
+  "a": {
+   "market": "Assaí",
+   "name": "EMPANADO DE FRANGO TEKITOS SEARA PACOTE 1KG",
+   "price": 19.9,
+   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg",
+   "ean": null
+  },
+  "b": {
+   "market": "Atacadão",
+   "name": "Tekitos Seara Congelado 1kg",
+   "price": 24.5,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2247666/g.jpg.jpg?v=639287990160970000",
+   "ean": "7894904691005"
+  }
+ },
+ {
+  "id": "51913a7107",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: agulhinha, integral",
+  "diff": [
+   "agulhinha",
+   "integral"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Arroz Prato Fino Integral Tipo 1 1kg",
+   "price": 5.89,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244677/g.jpg.jpg?v=639287964260370000",
+   "ean": "7896290300714"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Arroz Agulhinha Tipo 1 PRATO FINO Pacote 1kg",
+   "price": 6.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/520/33355520.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "501e498254",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: almofada, vacuo",
+  "diff": [
+   "almofada",
+   "vacuo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Café Torrado e Moído Pilão Extra Forte Almofada 500g",
+   "price": 26.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214337/7896089013399.jpg?v=637919521027130000",
+   "ean": "7896089013399"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Torrado E Moído Extra Forte Vácuo Pilão 500G",
+   "price": 28.5,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/335201.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "163367744f",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: barra, bebe, glicerina, infantil, natural, suave",
+  "diff": [
+   "barra",
+   "bebe",
+   "glicerina",
+   "infantil",
+   "natural",
+   "suave"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Sabonete Em Barra Para Bebê Protex Baby Glicerina Natural 85g",
+   "price": 3.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2288873/g.jpg.png?v=639289540319700000",
+   "ean": "7509546673226"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Sabonete Infantil Protex Baby Suave 85g",
+   "price": 5.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227087/7509546673226.jpg?v=638064654037000000",
+   "ean": "7509546673226"
+  }
+ },
+ {
+  "id": "c66f52cbaf",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: 4, depilar, depilatorio, descartavel, leve, pague",
+  "diff": [
+   "4",
+   "depilar",
+   "depilatorio",
+   "descartavel",
+   "leve",
+   "pague",
+   "suave"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Aparelho Depilatório Gillette Venus Simply 3",
+   "price": 32.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/222643/7500435004220.jpg?v=637919573942530000",
+   "ean": "7500435004220"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Aparelho Descartável Para Depilar Venus Simply Gillette Suave Leve 4 Pague 3 Unidades",
+   "price": 31.89,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/c720a5e8-f333-4246-b798-758af72c49f0.jpg",
+   "ean": "7500435004220"
+  }
+ },
+ {
+  "id": "9da594f8d7",
+  "kind": "juntos",
+  "why": "hoje JUNTOS; diferem em: economica, regulare",
+  "diff": [
+   "economica",
+   "regulare"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Aveia Nestlé em Flocos Regulares 450g",
+   "price": 13.29,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249605/7891000380994-Aveia_NESTL_Flocos_450g-Gr_os_e_Cereais-Nestl_--1-.jpg?v=638980355026700000",
+   "ean": "7891000380994"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Aveia em Flocos Nestlé Caixa 450g Embalagem Econômica",
+   "price": 14.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/668/33271668.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "495fb46ac4",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: detergente, lava, roupa",
+  "diff": [
+   "detergente",
+   "lava",
+   "roupa"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Lava Roupas em Pó Brilhante Limpeza Total 1,6kg",
+   "price": 18.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2279545/g.jpg.jpg?v=639289492144330000",
+   "ean": "7891150086555"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Detergente em Pó Brilhante Limpeza Total Caixa 1,6kg",
+   "price": 21.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/243428/7891150086555.jpg?v=638606229944500000",
+   "ean": "7891150086555"
+  }
+ },
+ {
+  "id": "3bf367fd01",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: achocolatado, bebida, lactea, liquido",
+  "diff": [
+   "achocolatado",
+   "bebida",
+   "lactea",
+   "liquido"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Achocolatado Líquido Toddynho 200ml",
+   "price": 2.79,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214245/7894321722016.jpg?v=637916693303370000",
+   "ean": "7894321722016"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bebida Láctea Toddynho 200ml",
+   "price": 2.99,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/0998443d-ac54-44f2-8ce7-b4cd858ff9d2.jpg",
+   "ean": "7894321722016"
+  }
+ },
+ {
+  "id": "eb00808c54",
+  "kind": "ean",
+  "why": "hoje JUNTOS pelo código de barras; nomes diferem em: extra, extravirgem, vidro, virgem",
+  "diff": [
+   "extra",
+   "extravirgem",
+   "vidro",
+   "virgem"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Azeite de Oliva Borges Extra Virgem 500ml",
+   "price": 27.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2233561/g.jpg.jpg?v=639287888570430000",
+   "ean": "8410179100036"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Azeite de Oliva Borges Extravirgem Vidro 500ml",
+   "price": 35.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216326/8410179100036.jpg?v=637919532858200000",
+   "ean": "8410179100036"
+  }
+ }
+]
