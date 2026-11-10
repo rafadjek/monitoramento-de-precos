@@ -25,3 +25,4 @@ worker-imagens/.wrangler/
 
 # página de rotulagem gerada (grande, refeita a cada rodada de exemplos)
 server/data/rotulos/rotulos.html
+.wrangler/

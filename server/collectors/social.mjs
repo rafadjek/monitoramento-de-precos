@@ -150,10 +150,10 @@ async function crawlbase(net) {
     for (const p of posts) {
       const link = p.link || p.url || p.postUrl || '';
       const code = (link.match(/\/(?:p|reel|posts)\/([^/?]+)/) || [])[1] || p.id || p.shortcode;
-      if (!code || /video|reel/i.test(String(p.type || p.mediaType || ''))) continue;
+      if (!code || /video|reel/i.test(String(p.type || p.mediaType || '')) || /\/reel\//.test(link)) continue;
       // sem data na resposta, conta como recente: a validade impressa no jornal decide se vale
-      const when = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt) || new Date().toISOString();
-      out.push({ market, net, code, when, link: link || page, images: findImages(p), owner: net === 'ig' ? '@' + m.ig : market });
+      const real = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt);
+      out.push({ market, net, code, when: real || new Date().toISOString(), noDate: !real, link: link || page, images: findImages(p), owner: net === 'ig' ? '@' + m.ig : market });
     }
     await sleep(1500);
   }
@@ -184,6 +184,8 @@ for (const p of [...(await collect('ig')), ...(await collect('fb'))]) {
   const m = MARKETS[p.market];
   const images = [...new Set(p.images.filter((u) => typeof u === 'string' && /^https?:/.test(u)))].slice(0, 12);
   if (!images.length || !p.code) continue;
+  // jornal diário (STUK) sem data do post não entra: não dá para saber de que dia é
+  if (m.daily && p.noDate) continue;
   manifest.push({
     market: p.market, offerId: `${p.net}-${p.code}`, validFrom: null,
     validUntil: m.daily ? endOfDay(p.when) : null, // os outros precisam da validade impressa na imagem
