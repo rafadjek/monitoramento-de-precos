@@ -23,6 +23,15 @@ if (!Object.values(KEYS).some(Boolean)) { console.log('social: nenhuma chave de 
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const toIso = (t) => { if (t == null || t === '') return null; const n = Number(t); const d = Number.isFinite(n) ? new Date(n < 1e12 ? n * 1000 : n) : new Date(t); return isNaN(d) ? null : d.toISOString(); };
+// data do post em qualquer campo com nome de data/hora (cada serviço usa um nome: taken_at, timestamp, created_time, date...)
+function findWhen(p) {
+  for (const [k, v] of Object.entries(p || {})) {
+    if (!/time|date|taken|created|published|posted/i.test(k) || v == null || typeof v === 'object') continue;
+    const iso = toIso(v);
+    if (iso && Date.parse(iso) > Date.parse('2015-01-01') && Date.parse(iso) < Date.now() + 86400e3) return iso;
+  }
+  return null;
+}
 const recent = (iso) => iso && Date.parse(iso) >= SINCE;
 const marketOfIg = (u) => Object.entries(MARKETS).find(([, v]) => v.ig === String(u || '').toLowerCase())?.[0];
 const marketOfFb = (s) => Object.entries(MARKETS).find(([, v]) => v.fb && String(s || '').toLowerCase().includes(v.fb.split('/')[3].toLowerCase()))?.[0];
@@ -127,7 +136,7 @@ async function socialcrawl(net) {
       const code = p.shortcode || p.code || p.id;
       const imgs = [...(p.carousel || p.carousel_media || p.children || []).map((c) => c.image_url || c.display_url || c.url || c.image_versions2?.candidates?.[0]?.url), p.image_url, p.display_url, p.thumbnail_url];
       const images = imgs.filter((u) => typeof u === 'string');
-      out.push({ market, net, code, when: toIso(p.taken_at || p.timestamp || p.created_at || p.published_at), link: p.url || p.permalink || `https://www.instagram.com/p/${code}/`, images: images.length ? images : findImages(p), owner: '@' + m.ig });
+      out.push({ market, net, code, when: toIso(p.taken_at || p.timestamp || p.created_at || p.published_at) || findWhen(p), link: p.url || p.permalink || `https://www.instagram.com/p/${code}/`, images: images.length ? images : findImages(p), owner: '@' + m.ig });
     }
     await sleep(1000);
   }
@@ -152,7 +161,7 @@ async function crawlbase(net) {
       const code = (link.match(/\/(?:p|reel|posts)\/([^/?]+)/) || [])[1] || p.id || p.shortcode;
       if (!code || /video|reel/i.test(String(p.type || p.mediaType || '')) || /\/reel\//.test(link)) continue;
       // sem data na resposta, conta como recente: a validade impressa no jornal decide se vale
-      const real = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt);
+      const real = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt) || findWhen(p);
       out.push({ market, net, code, when: real || new Date().toISOString(), noDate: !real, link: link || page, images: findImages(p), owner: net === 'ig' ? '@' + m.ig : market });
     }
     await sleep(1500);
@@ -202,7 +211,7 @@ fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));
 for (const name of String(process.env.SOCIAL_TEST || '').split(',').map((x) => x.trim()).filter(Boolean)) {
   const fn = SERVICES.find(([n]) => n === name)?.[1];
   if (!fn || !KEYS[name]) { STATUS.servicos.push({ teste: name, erro: 'sem chave ou serviço desconhecido' }); continue; }
-  try { const ps = await fn('ig'); STATUS.servicos.push({ teste: name, net: 'ig', posts: ps.length, recentes: ps.filter((p) => recent(p.when)).length, comImagem: ps.filter((p) => p.images.length).length }); }
+  try { const ps = await fn('ig'); STATUS.servicos.push({ teste: name, net: 'ig', exemploData: ps[0]?.when ?? null, posts: ps.length, recentes: ps.filter((p) => recent(p.when)).length, comImagem: ps.filter((p) => p.images.length).length }); }
   catch (e) { STATUS.servicos.push({ teste: name, net: 'ig', erro: String(e.message).slice(0, 200) }); }
 }
 fs.writeFileSync(OUT.replace('social-encartes.json', 'social-status.json'), JSON.stringify(STATUS, null, 1));
