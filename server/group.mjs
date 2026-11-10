@@ -20,7 +20,7 @@ const NEUTRAL = new Set([
 const SOFT = new Set([
   'torrado', 'moido', 'vacuo', 'almofada', 'soluvel', 'vidro',
   'nestle', 'elma', 'chip', 'chips', 'danone',
-  'cerveja', 'lager', 'pilsen', 'long', 'neck', 'refrigerante',
+  'cerveja', 'lager', 'pilsen', 'long', 'neck', 'refrigerante', 'garrafa', 'pet',
   'biscoito', 'bolacha', 'salgadinho', 'achocolatado', 'po',
   'tipo', '1', 'economico', 'economica',
 ]);

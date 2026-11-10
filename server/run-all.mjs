@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(ROOT, 'data/extraido');
-const COLLECTORS = (process.env.COLLECTORS || 'spani,atacadao,coop').split(',');
+const COLLECTORS = (process.env.COLLECTORS || 'spani,atacadao,coop,nagumo,semar,extra').split(',');
 const count = (f) => { try { const j = JSON.parse(fs.readFileSync(f, 'utf8')); return Array.isArray(j) ? j.length : 0; } catch { return 0; } };
 
 let failed = 0;

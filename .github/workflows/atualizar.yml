@@ -3,11 +3,11 @@ name: Atualizar preços e publicar
 on:
   schedule:
     - cron: '0 9 * * 3' # quartas, 06h de Brasília: catálogos dos sites + encartes
-    - cron: '0 9 * * 0,1,2,4,5,6' # demais dias, 06h: só encartes (Assaí e Baronesa trocam no meio da semana)
+    - cron: '0 9 * * 0,1,2,4,5,6' # demais dias, 06h: só encartes (Assaí, Baronesa e Joanin trocam no meio da semana)
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 200
     env:
       CHROME_PATH: /usr/bin/google-chrome
     steps:
@@ -48,9 +48,11 @@ jobs:
       - name: Coletar catálogos dos sites
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * 3'
         working-directory: server
+        env:
+          COLLECTORS: spani,atacadao,coop,nagumo,semar,extra
         run: node run-all.mjs
 
-      - name: Ler encartes (Assaí e Baronesa)
+      - name: Ler encartes (Assaí, Baronesa e Joanin)
         working-directory: server
         continue-on-error: true
         timeout-minutes: 50
@@ -63,7 +65,8 @@ jobs:
         run: |
           node collectors/assai.mjs || echo "::warning::Assaí: lista de encartes indisponível"
           node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"
-          node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json
+          node collectors/joanin.mjs || echo "::warning::Joanin: tabloide indisponível"
+          node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json
 
       - name: Guardar dados coletados
         run: |

@@ -38,6 +38,10 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   'Assaí': { src: 'logos/assai.svg' },
   Coop: { src: 'logos/coop.png', bg: '#002846' },
   Baronesa: { src: 'logos/baronesa.png', word: 'Baronesa', wordCls: 'font-serif italic font-bold uppercase tracking-wide text-[#D7101A]' },
+  Nagumo: { src: 'logos/nagumo.png', bg: '#D7182A' },
+  Semar: { src: 'logos/semar.png' },
+  Extra: { src: 'logos/extra.png' },
+  Joanin: { src: 'logos/joanin.png' },
   Spani: { word: 'SPANI', chipCls: 'bg-[#E30613] px-2 -skew-x-6', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
 };
 

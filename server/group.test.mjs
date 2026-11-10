@@ -123,3 +123,8 @@ test('quantidade de unidades lida do nome', async () => {
   assert.equal(parsePack('Kit Shampoo 350Ml + Condicionador 175Ml Dove'), 1);
   assert.equal(parsePack('Água Mineral 1,5L'), 1);
 });
+
+test('garrafa/pet de um lado só juntam; lata contra garrafa não', () => {
+  assert.ok(grouped(b('A', 'Cachaça Ypióca Ouro 965ml', 'Ypióca', 28.89), b('B', 'Cachaça Ouro Ypióca Garrafa 965ml', 'Ypióca', 24.99)));
+  assert.ok(!grouped(b('A', 'Cerveja Heineken Lata 350ml', 'Heineken', 5.49), b('B', 'Cerveja Heineken Garrafa 350ml', 'Heineken', 5.99)));
+});

@@ -6,12 +6,10 @@ export type Offer = {
   size: string | null;
   price: number;
   listPrice: number | null;
-  unitPrice: string | null;
   category: string;
   imageUrl: string | null;
   productUrl: string | null;
   validUntil: string | null;
-  validityNote: string | null;
   source?: 'encarte';
   condition?: string | null;
   units?: number; // caixa/fardo: quantas unidades vêm
@@ -57,8 +55,8 @@ export function validity(o: Pick<Offer, 'validUntil'>) {
 // Preço de cada unidade (caixa com 36 por R$ 49,90 = R$ 1,39 cada).
 export const each = (o: Pick<Offer, 'price' | 'units'>) => o.price / (o.units ?? 1);
 const median = (xs: number[]) => { const v = [...xs].sort((a, b) => a - b); const m = v.length >> 1; return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; };
-// Mais de 2,5 vezes (ou menos de 1/2,5) do preço dos outros: fora do padrão.
-const FAR = 2.5;
+// Mais de 2,2 vezes (ou menos de 1/2,2) do preço dos outros: fora do padrão.
+const FAR = 2.2;
 
 export function buildGroups(all: Indexed[]): Group[] {
   const byG = new Map<string, Indexed[]>();

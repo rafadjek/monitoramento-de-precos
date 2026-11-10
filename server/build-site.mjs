@@ -50,10 +50,17 @@ const STORE_LABEL = {
   Coop: 'preços da loja Barão de Mauá (retirada, CEP 09310-000)',
   Baronesa: 'encarte da loja de Mauá (R. Fernão Dias, 5)',
   'Assaí': 'encarte das lojas de Ribeirão Pires e Mauá',
+  Nagumo: 'preços da loja de Mauá (Av. Barão de Mauá, 3232)',
+  Semar: 'preços da loja 06 Mauá',
+  Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
+  Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
 };
 // Cidades das lojas usadas por mercado (filtro do site).
 const CITIES = {
   'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
+  Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'],
+  // preço da loja online de São Bernardo: não entra no filtro "Lojas em Mauá/Ribeirão Pires"
+  Extra: ['São Bernardo do Campo'],
 };
 // Mercados sem fonte coletável: aparecem no site só com o caminho para as ofertas.
 index.infoOnly = [{
@@ -64,6 +71,14 @@ index.infoOnly = [{
     { label: 'Instagram', url: 'https://www.instagram.com/supermercadostuk/' },
     { label: 'WhatsApp', url: 'https://wa.me/5511980810790?text=Oi!%20Quero%20receber%20as%20ofertas%20do%20dia' },
     { label: 'Site', url: 'https://supermercadostuk.com.br/' },
+  ],
+}, {
+  name: 'Dia', cities: ['Mauá'],
+  note: 'O site do Dia não publica as ofertas da loja (mostra "nenhuma oferta encontrada"); elas saem só no app ClubDIA.',
+  address: 'Av. Dom José Gaspar, 1016, Matriz, Mauá',
+  links: [
+    { label: 'Página da loja', url: 'https://www.dia.com.br/lojas/sp-maua-matriz-avenida-dom-jose-gaspar-1016/' },
+    { label: 'App ClubDIA', url: 'https://play.google.com/store/apps/details?id=br.com.dia.customers' },
   ],
 }];
 const built = [];
@@ -84,8 +99,8 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
     const best = bestPrice(o.price, o.condition);
     slim.push({
       id, market, name: o.name, brand: o.brand ?? null, ean: o.ean ?? null, size: o.size ?? null,
-      price: best.price, listPrice: best.listPrice ?? o.listPrice ?? null, unitPrice: o.unitPrice ?? null, category: o.category ?? 'outros',
-      imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, validityNote: o.validityNote ?? null,
+      price: best.price, listPrice: best.listPrice ?? o.listPrice ?? null, category: o.category ?? 'outros',
+      imageUrl, productUrl: o.productUrl ?? null, validUntil: o.validUntil ?? null, // observação e unitPrice ficam só no dado bruto: o site não usa e pesavam MBs
       // caixa/fardo: quantas unidades vêm (o site compara pelo preço de cada uma)
       ...(parsePack(o.name, o.size ?? '') > 1 ? { units: parsePack(o.name, o.size ?? '') } : {}),
       ...(o.source === 'encarte' ? { source: 'encarte' } : {}),

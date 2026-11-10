@@ -1,0 +1,20 @@
+[
+  {
+    "market": "Joanin",
+    "offerId": "tabloide-15112026",
+    "validFrom": null,
+    "validUntil": "2026-11-16T02:59:59.000Z",
+    "validityNote": "tabloide válido até 15/11/2026",
+    "stores": [
+      "Joanin Mauá",
+      "Joanin Ribeirão Pires"
+    ],
+    "storeScope": "Tabloide das lojas Joanin (vale para as lojas de Mauá e Ribeirão Pires)",
+    "referer": "https://www.joanin.com.br/ofertas/",
+    "images": [
+      "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg",
+      "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg"
+    ],
+    "collectedAt": "2026-11-10T11:13:40.608Z"
+  }
+]
