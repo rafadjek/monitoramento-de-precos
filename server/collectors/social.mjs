@@ -1,7 +1,7 @@
 // Jornais de ofertas que só saem no Instagram e no Facebook (Nevada, STUK, Lourencini).
 // Decisão do Rafael em 10/11/2026: usar serviços de coleta (planos grátis) mesmo sabendo que a coleta automática
 // contraria os termos da Meta. Nenhuma conta pessoal é usada: os serviços acessam sem login, com a infraestrutura deles.
-// Cadeia de reserva, separada para Instagram e Facebook: Apify -> Bright Data -> ScrapeCreators -> SocialCrawl (só Instagram). Cada serviço só entra
+// Cadeia de reserva, separada para Instagram e Facebook: Apify -> Bright Data -> ScrapeCreators -> SocialCrawl (só Instagram) -> Crawlbase. Cada serviço só entra
 // se a chave dele existir (APIFY_TOKEN, BRIGHTDATA_TOKEN, SCRAPECREATORS_KEY) e passa a vez se falhar
 // (crédito acabou, bloqueio, erro) ou não trouxer nada.
 // Pega os posts dos últimos 3 dias; post já lido não é lido de novo (cache pelo código do post) e jornal vencido
@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 const OUT = fileURLToPath(new URL('../data/extraido/social-encartes.json', import.meta.url));
 const DAYS = 7; // o Lourencini posta com menos frequência; com 6 posts por perfil o custo diário fica parecido com 3 dias x 12
 const SINCE = Date.now() - DAYS * 86400e3;
-const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDATA_TOKEN, scrapecreators: process.env.SCRAPECREATORS_KEY, socialcrawl: process.env.SOCIALCRAWL_KEY };
+const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDATA_TOKEN, scrapecreators: process.env.SCRAPECREATORS_KEY, socialcrawl: process.env.SOCIALCRAWL_KEY, crawlbase: process.env.CRAWLBASE_TOKEN };
 // STUK: o próprio site diz que sai um jornal novo por dia, então vale no dia do post.
 const MARKETS = {
   Nevada: { ig: 'redenevada', fb: 'https://www.facebook.com/redenevada/', daily: false },
@@ -134,8 +134,34 @@ async function socialcrawl(net) {
   return out;
 }
 
+async function crawlbase(net) {
+  // Crawling API com os extratores prontos do Crawlbase (instagram-profile e facebook-page).
+  // A documentação não detalha os campos: as imagens dos posts são achadas em qualquer campo (findImages).
+  const out = [];
+  for (const [market, m] of Object.entries(MARKETS)) {
+    const page = net === 'ig' ? `https://www.instagram.com/${m.ig}/` : m.fb;
+    if (!page) continue;
+    const scraper = net === 'ig' ? 'instagram-profile' : 'facebook-page';
+    const r = await fetch(`https://api.crawlbase.com/?token=${KEYS.crawlbase}&scraper=${scraper}&url=${encodeURIComponent(page)}`, { signal: AbortSignal.timeout(120000) });
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
+    const j = await r.json();
+    const body = j.body || j;
+    const posts = body.posts || body.feed || body.timeline || [];
+    for (const p of posts) {
+      const link = p.link || p.url || p.postUrl || '';
+      const code = (link.match(/\/(?:p|reel|posts)\/([^/?]+)/) || [])[1] || p.id || p.shortcode;
+      if (!code || /video|reel/i.test(String(p.type || p.mediaType || ''))) continue;
+      // sem data na resposta, conta como recente: a validade impressa no jornal decide se vale
+      const when = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt) || new Date().toISOString();
+      out.push({ market, net, code, when, link: link || page, images: findImages(p), owner: net === 'ig' ? '@' + m.ig : market });
+    }
+    await sleep(1500);
+  }
+  return out;
+}
+
 // ---------- cadeia de reserva ----------
-const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators], ['socialcrawl', socialcrawl]];
+const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators], ['socialcrawl', socialcrawl], ['crawlbase', crawlbase]];
 // SOCIAL_SKIP=apify,brightdata pula serviços (para testar as reservas)
 const SKIP = new Set(String(process.env.SOCIAL_SKIP || '').split(',').map((x) => x.trim()).filter(Boolean));
 async function collect(net) {
