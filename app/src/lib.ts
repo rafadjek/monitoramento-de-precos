@@ -52,7 +52,8 @@ export function validity(o: Pick<Offer, 'validUntil'>) {
 
 export function buildGroups(all: Indexed[]): Group[] {
   const byG = new Map<string, Indexed[]>();
-  for (const o of all) if (o.g) (byG.get(o.g) ?? byG.set(o.g, []).get(o.g)!).push(o);
+  // produto que só um mercado tem também entra, sozinho no próprio grupo
+  for (const o of all) { const k = o.g ?? `p:${o.id}`; (byG.get(k) ?? byG.set(k, []).get(k)!).push(o); }
   const out: Group[] = [];
   for (const [id, list] of byG) {
     const perMarket = new Map<string, Indexed>();
@@ -60,7 +61,6 @@ export function buildGroups(all: Indexed[]): Group[] {
       const cur = perMarket.get(o.market);
       if (!cur || o.price < cur.price) perMarket.set(o.market, o);
     }
-    if (perMarket.size < 2) continue;
     const items = [...perMarket.values()].sort((a, b) => a.price - b.price);
     const max = items[items.length - 1].price;
     const saving = max - items[0].price;

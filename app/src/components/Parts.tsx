@@ -32,24 +32,52 @@ export function Validity({ o }: { o: Pick<Indexed, 'validUntil'> }) {
   return <span className={v.urgent ? 'font-bold text-signal' : v.known ? 'text-ink' : 'text-muted'}>{v.text}</span>;
 }
 
-export function MarketTag({ o, cheapest, diff }: { o: Indexed; cheapest: boolean; diff: number }) {
+// Cada mercado aparece pela própria marca: logotipo quando ele publica um, letreiro nas cores dele quando não.
+const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?: string; chipCls?: string }> = {
+  'Atacadão': { src: 'logos/atacadao.svg' },
+  'Assaí': { src: 'logos/assai.svg' },
+  Coop: { src: 'logos/coop.png', bg: '#002846' },
+  Baronesa: { src: 'logos/baronesa.png', word: 'Baronesa', wordCls: 'font-serif italic font-bold uppercase tracking-wide text-[#D7101A]' },
+  Spani: { word: 'SPANI', chipCls: 'bg-[#E30613] px-2 -skew-x-6', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
+};
+
+export function MarketLogo({ name }: { name: string }) {
+  const l = LOGOS[name];
+  if (!l) return <span className="text-sm font-bold leading-tight">{name}</span>;
+  return (
+    <span
+      role="img"
+      aria-label={name}
+      title={name}
+      className={`inline-flex h-7 items-center gap-1 ${l.bg ? 'px-1.5' : ''} ${l.chipCls ?? ''}`}
+      style={l.bg ? { background: l.bg } : undefined}
+    >
+      {l.src && <img src={imgSrc(l.src)} alt="" className="h-full w-auto max-w-[6.5rem] object-contain py-0.5" />}
+      {l.word && <span aria-hidden className={`leading-none ${l.wordCls ?? ''}`}>{l.word}</span>}
+    </span>
+  );
+}
+
+export function MarketTag({ o, cheapest, diff, alone }: { o: Indexed; cheapest: boolean; diff: number; alone?: boolean }) {
+  const off = o.listPrice && o.listPrice > o.price ? o.listPrice : null;
   const body: ReactNode = (
     <>
-      <span className="block text-sm font-bold leading-tight">{o.market}</span>
-      <Price value={o.price} big={cheapest} />
-      {o.source === 'encarte' && (
-        <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide">encarte{o.condition ? ` · ${o.condition}` : ''}</span>
+      <MarketLogo name={o.market} />
+      {off && <s className="num mt-1 block text-xs text-muted">{brl(off)}</s>}
+      <span className="block"><Price value={o.price} big={cheapest} /></span>
+      {o.condition && <span className="mt-0.5 block text-[0.7rem] font-bold uppercase tracking-wide text-signal">{o.condition}</span>}
+      {!alone && (
+        <span className={`mt-0.5 block text-xs ${cheapest ? 'font-bold' : 'text-muted'}`}>
+          {cheapest ? 'mais barato' : `+ ${brl(diff)}`}
+        </span>
       )}
-      <span className={`mt-0.5 block text-xs ${cheapest ? 'font-bold' : 'text-muted'}`}>
-        {cheapest ? 'mais barato' : `+ ${brl(diff)}`}
-      </span>
     </>
   );
   const cls = `block min-w-[7.5rem] px-3 py-2 text-left ${
-    cheapest ? 'border-b-4 border-ink bg-tag' : 'border border-line bg-white'
+    cheapest && !alone ? 'border-b-4 border-ink bg-tag' : 'border border-line bg-white'
   }`;
   return o.productUrl ? (
-    <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-95`} title={o.source === 'encarte' ? `Ver a página do encarte do ${o.market}` : `Abrir ${o.name} no site do ${o.market}`}>
+    <a href={o.productUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-95`} title={`Ver a oferta no ${o.market}`}>
       {body}
     </a>
   ) : (

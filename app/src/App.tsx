@@ -1,13 +1,13 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { buildGroups, norm, type Group, type Indexed, type Offer } from './lib';
-import { GroupRow, OfferRow, SkeletonRows } from './components/Rows';
+import { GroupRow, SkeletonRows } from './components/Rows';
+import { MarketLogo } from './components/Parts';
 
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 40;
 
 type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte' };
 type InfoOnly = { name: string; cities: string[]; note: string; address: string; links: { label: string; url: string }[] };
-type View = 'comparar' | 'encartes' | 'todos';
 
 const CATEGORIES = [
   { id: '', label: 'Tudo' },
@@ -15,11 +15,11 @@ const CATEGORIES = [
   { id: 'higiene', label: 'Higiene' },
   { id: 'limpeza', label: 'Limpeza' },
 ];
-const SORTS: Record<View, { id: string; label: string }[]> = {
-  comparar: [{ id: 'economia', label: 'Maior economia' }, { id: 'nome', label: 'Nome' }],
-  encartes: [{ id: 'mercado', label: 'Mercado' }, { id: 'preco', label: 'Menor preço' }, { id: 'nome', label: 'Nome' }],
-  todos: [{ id: 'preco', label: 'Menor preço' }, { id: 'desconto', label: 'Maior desconto' }, { id: 'nome', label: 'Nome' }],
-};
+const SORTS = [
+  { id: 'economia', label: 'Maior economia' },
+  { id: 'preco', label: 'Menor preço' },
+  { id: 'nome', label: 'Nome' },
+];
 
 export default function App() {
   const [all, setAll] = useState<Indexed[]>([]);
@@ -32,11 +32,9 @@ export default function App() {
 
   const [q, setQ] = useState('');
   const dq = useDeferredValue(q);
-  const [view, setView] = useState<View>('comparar');
   const [category, setCategory] = useState('');
   const [market, setMarket] = useState('');
   const [sort, setSort] = useState('economia');
-  const [focus, setFocus] = useState<string | null>(null);
   const [shown, setShown] = useState(PAGE);
 
   useEffect(() => {
@@ -54,7 +52,7 @@ export default function App() {
         setMarkets(idx.markets);
         setInfoOnly(idx.infoOnly ?? []);
         setGeneratedAt(idx.generatedAt);
-        // oferta vencida some (o encarte do Baronesa vence antes da próxima leitura)
+        // oferta vencida some (um folheto pode vencer antes da próxima leitura)
         const now = Date.now();
         setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
         setStatus('ok');
@@ -64,42 +62,31 @@ export default function App() {
     })();
   }, [attempt]);
 
-  useEffect(() => setShown(PAGE), [dq, view, category, market, city, sort, focus]);
+  useEffect(() => setShown(PAGE), [dq, category, market, city, sort]);
   const cities = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].sort(), [markets]);
   // mercados com loja na cidade escolhida
   const inCity = useMemo(() => new Set(markets.filter((m) => !city || (m.cities ?? []).includes(city)).map((m) => m.name)), [markets, city]);
-  useEffect(() => setSort(SORTS[view][0].id), [view]);
 
   const groups = useMemo(() => buildGroups(city ? all.filter((o) => inCity.has(o.market)) : all), [all, city, inCity]);
   const terms = useMemo(() => norm(dq).split(/\s+/).filter(Boolean), [dq]);
-  const hit = (n: string) => terms.every((t) => n.includes(t));
 
-  const groupList = useMemo(() => {
-    const r = groups.filter(
-      (g) => (!focus || g.id === focus) && (!category || g.category === category) && (!market || g.items.some((i) => i.market === market)) && hit(g._n),
-    );
-    const lead = (g: Group) => (terms.length && !g.items.some((i) => i._n.startsWith(terms[0])) ? 1 : 0);
-    return r.sort(sort === 'nome' ? (a, b) => a.name.localeCompare(b.name) : (a, b) => lead(a) - lead(b) || b.saving - a.saving);
-  }, [groups, terms, category, market, sort, focus]);
-
-  const offerList = useMemo(() => {
-    const disc = (o: Indexed) => (o.listPrice && o.listPrice > o.price ? (o.listPrice - o.price) / o.listPrice : 0);
-    const r = all.filter((o) => inCity.has(o.market) && (!category || o.category === category) && (!market || o.market === market) && hit(o._n));
+  const list = useMemo(() => {
+    const hit = (n: string) => terms.every((t) => n.includes(t));
+    const r = groups.filter((g) => (!category || g.category === category) && (!market || g.items.some((i) => i.market === market)) && hit(g._n));
     // Com busca, quem "é" o produto (nome começa com o termo) vem antes de quem só o menciona (tempero de feijão).
-    const lead = (o: Indexed) => (terms.length && !o._n.startsWith(terms[0]) ? 1 : 0);
+    const lead = (g: Group) => (terms.length && !g.items.some((i) => i._n.startsWith(terms[0])) ? 1 : 0);
+    const disc = (g: Group) => { const o = g.items[0]; return o.listPrice && o.listPrice > o.price ? (o.listPrice - o.price) / o.listPrice : 0; };
     return r.sort(
-      sort === 'nome' ? (a, b) => a._n.localeCompare(b._n)
-        : sort === 'mercado' ? (a, b) => a.market.localeCompare(b.market) || lead(a) - lead(b) || a.price - b.price
-        : sort === 'desconto' ? (a, b) => lead(a) - lead(b) || disc(b) - disc(a)
-        : (a, b) => lead(a) - lead(b) || a.price - b.price,
+      sort === 'nome' ? (a, b) => a.name.localeCompare(b.name)
+        : sort === 'preco' ? (a, b) => lead(a) - lead(b) || a.items[0].price - b.items[0].price
+        // quem dá para comparar vem primeiro; depois, o maior desconto de quem está sozinho
+        : (a, b) => lead(a) - lead(b) || b.saving - a.saving || b.items.length - a.items.length || disc(b) - disc(a),
     );
-  }, [all, terms, category, market, sort, inCity]);
+  }, [groups, terms, category, market, sort]);
 
-  // os encartes casam pouco com os sites; numa aba própria eles não somem no meio de 14 mil produtos
-  const encarteList = useMemo(() => offerList.filter((o) => o.source === 'encarte'), [offerList]);
-  const list = view === 'comparar' ? groupList : view === 'encartes' ? encarteList : offerList;
-  const clear = () => { setQ(''); setCategory(''); setMarket(''); setCity(''); setFocus(null); };
+  const clear = () => { setQ(''); setCategory(''); setMarket(''); setCity(''); };
   const updated = generatedAt ? new Date(generatedAt).toLocaleDateString('pt-BR') : '';
+  const shownMarkets = markets.filter((m) => inCity.has(m.name));
 
   return (
     <div className="min-h-screen">
@@ -109,14 +96,14 @@ export default function App() {
             Quanto custa em Mauá e Ribeirão Pires
           </h1>
           <p className="mt-3 max-w-prose text-sm text-paper/75">
-            Compare o mesmo produto em {markets.length || 'vários'} mercados. Os preços vêm dos sites e folhetos de cada um{updated && `, atualizados em ${updated}`}.
+            Compare o mesmo produto em {markets.length || 'vários'} mercados{updated && `. Preços atualizados em ${updated}`}.
           </p>
           <label className="mt-4 block">
             <span className="sr-only">Buscar produto</span>
             <input
               type="search"
               value={q}
-              onChange={(e) => { setQ(e.target.value); setFocus(null); }}
+              onChange={(e) => setQ(e.target.value)}
               placeholder="Arroz 5kg, café, detergente"
               className="h-14 w-full border-b-4 border-tag bg-paper px-4 text-lg text-ink placeholder:text-muted"
             />
@@ -126,57 +113,54 @@ export default function App() {
 
       <div className="border-b border-line bg-paper/95 backdrop-blur sm:sticky sm:top-0 sm:z-10">
         <div className="mx-auto max-w-4xl space-y-2 px-4 py-2">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <div role="group" aria-label="Tipo de lista" className="flex border border-ink">
-              {([['comparar', `Comparar (${groupList.length})`], ['encartes', `Encartes (${encarteList.length})`], ['todos', `Todos os produtos (${offerList.length})`]] as [View, string][]).map(([v, label]) => (
+          <div role="group" aria-label="Mercado" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
+            <button
+              aria-pressed={market === ''}
+              onClick={() => setMarket('')}
+              className={`min-h-[2.75rem] shrink-0 border px-3 text-sm font-bold ${market === '' ? 'border-ink bg-ink text-paper' : 'border-line bg-white'}`}
+            >
+              Todos
+            </button>
+            {shownMarkets.map((m) => (
+              <button
+                key={m.name}
+                aria-pressed={market === m.name}
+                onClick={() => setMarket(market === m.name ? '' : m.name)}
+                className={`flex min-h-[2.75rem] shrink-0 items-center border bg-white px-2 ${market === m.name ? 'border-ink ring-2 ring-ink' : 'border-line'}`}
+              >
+                <MarketLogo name={m.name} />
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="-mx-4 flex min-w-0 basis-full gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-1 sm:basis-auto sm:px-0">
+              {CATEGORIES.map((c) => (
                 <button
-                  key={v}
-                  aria-pressed={view === v}
-                  onClick={() => { setView(v); setFocus(null); }}
-                  className={`min-h-[2.75rem] px-3 text-sm font-bold ${view === v ? 'bg-ink text-paper' : 'bg-paper text-ink'}`}
+                  key={c.id}
+                  aria-pressed={category === c.id}
+                  onClick={() => setCategory(c.id)}
+                  className={`min-h-[2.5rem] shrink-0 border px-3 text-sm ${category === c.id ? 'border-ink bg-tag font-bold' : 'border-line bg-white'}`}
                 >
-                  {label}
+                  {c.label}
                 </button>
               ))}
             </div>
-            <div className="ml-auto flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {cities.length > 1 && (
-                <select aria-label="Cidade" value={city} onChange={(e) => { setCity(e.target.value); setMarket(''); }} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
+                <select aria-label="Cidade" value={city} onChange={(e) => { setCity(e.target.value); setMarket(''); }} className="min-h-[2.5rem] border border-line bg-white px-2 text-sm">
                   <option value="">Mauá e Ribeirão Pires</option>
                   {cities.map((c) => <option key={c} value={c}>Lojas em {c}</option>)}
                 </select>
               )}
-              <select aria-label="Mercado" value={market} onChange={(e) => setMarket(e.target.value)} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
-                <option value="">Todos os mercados</option>
-                {markets.filter((m) => inCity.has(m.name)).map((m) => <option key={m.name} value={m.name}>{m.name}{m.source === 'encarte' ? ' (encarte)' : ''}</option>)}
-              </select>
-              <select aria-label="Ordenar por" value={sort} onChange={(e) => setSort(e.target.value)} className="min-h-[2.75rem] border border-line bg-white px-2 text-sm">
-                {SORTS[view].map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
+              <select aria-label="Ordenar por" value={sort} onChange={(e) => setSort(e.target.value)} className="min-h-[2.5rem] border border-line bg-white px-2 text-sm">
+                {SORTS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
               </select>
             </div>
-          </div>
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c.id}
-                aria-pressed={category === c.id}
-                onClick={() => setCategory(c.id)}
-                className={`min-h-[2.5rem] shrink-0 border px-3 text-sm ${category === c.id ? 'border-ink bg-tag font-bold' : 'border-line bg-white'}`}
-              >
-                {c.label}
-              </button>
-            ))}
           </div>
         </div>
       </div>
 
       <main className="mx-auto max-w-4xl px-4 pb-16 pt-2">
-        {focus && (
-          <button onClick={() => setFocus(null)} className="mb-1 mt-2 min-h-[2.5rem] text-sm font-bold underline underline-offset-2">
-            Voltar para todos os produtos comparáveis
-          </button>
-        )}
-
         {status === 'loading' && <SkeletonRows />}
 
         {status === 'error' && (
@@ -189,38 +173,24 @@ export default function App() {
 
         {status === 'ok' && list.length === 0 && (
           <div className="my-8">
-            <p className="text-lg font-bold">
-              {view === 'comparar' && offerList.length > 0
-                ? `Nenhum mercado tem "${dq}" para comparar.`
-                : dq ? `Não achei "${dq}".` : 'Nada por aqui com esses filtros.'}
-            </p>
-            <p className="mt-1 text-sm text-muted">
-              {view === 'comparar' && offerList.length > 0
-                ? `Ele aparece em ${offerList.length} ${offerList.length === 1 ? 'oferta' : 'ofertas'}, mas só em um mercado.`
-                : 'Tente só o nome do produto, sem marca nem tamanho, ou tire um filtro.'}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {view === 'comparar' && offerList.length > 0 && (
-                <button onClick={() => setView('todos')} className="min-h-[2.75rem] bg-ink px-4 font-bold text-paper">Ver {offerList.length} em Todos os produtos</button>
-              )}
-              <button onClick={clear} className="min-h-[2.75rem] border border-ink px-4 font-bold">Limpar busca e filtros</button>
-            </div>
+            <p className="text-lg font-bold">{dq ? `Não achei "${dq}".` : 'Nada por aqui com esses filtros.'}</p>
+            <p className="mt-1 text-sm text-muted">Tente só o nome do produto, sem marca nem tamanho, ou tire um filtro.</p>
+            <button onClick={clear} className="mt-3 min-h-[2.75rem] border border-ink px-4 font-bold">Limpar busca e filtros</button>
           </div>
         )}
 
         {status === 'ok' && list.length > 0 && (
-          <ul>
-            {view === 'comparar'
-              ? groupList.slice(0, shown).map((g: Group) => <GroupRow key={g.id} g={g} />)
-              : (view === 'encartes' ? encarteList : offerList).slice(0, shown).map((o) => (
-                  <OfferRow key={o.id} o={o} onCompare={() => { setView('comparar'); setFocus(o.g!); }} />
-                ))}
-          </ul>
+          <>
+            <p className="mt-2 text-xs text-muted">{list.length.toLocaleString('pt-BR')} produtos</p>
+            <ul>
+              {list.slice(0, shown).map((g) => <GroupRow key={g.id} g={g} />)}
+            </ul>
+          </>
         )}
 
         {status === 'ok' && shown < list.length && (
           <button onClick={() => setShown((s) => s + PAGE)} className="mt-5 min-h-[3rem] w-full border-2 border-ink font-bold">
-            Mostrar mais ({shown} de {list.length})
+            Mostrar mais ({shown} de {list.length.toLocaleString('pt-BR')})
           </button>
         )}
 
@@ -244,8 +214,9 @@ export default function App() {
               </li>
             ))}
           </ul>
-          <p className="mt-3">Os encartes em imagem são lidos por inteligência artificial e podem ter erros de leitura: confira no link "ver no encarte".</p>
+          <p className="mt-3">Parte das ofertas vem de folhetos em imagem, lidos por inteligência artificial. Clique no preço para ver a oferta original.</p>
           <p className="mt-1">Preços e ofertas podem mudar a qualquer momento e variam por loja. Confirme na prateleira antes de ir.</p>
+          <p className="mt-1">As marcas e logotipos pertencem aos seus donos; aparecem aqui só para identificar cada mercado.</p>
         </footer>
       </main>
     </div>
