@@ -1,0 +1,22 @@
+{
+ "em": "2026-11-10T23:10:44.558Z",
+ "servicos": [
+  {
+   "net": "ig",
+   "name": "apify",
+   "posts": 15
+  },
+  {
+   "net": "fb",
+   "name": "apify",
+   "posts": 10
+  },
+  {
+   "teste": "socialcrawl",
+   "net": "ig",
+   "posts": 21,
+   "recentes": 0,
+   "comImagem": 21
+  }
+ ]
+}
