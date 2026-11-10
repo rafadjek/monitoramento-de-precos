@@ -56,9 +56,9 @@ const STORE_LABEL = {
   Semar: 'preços da loja 06 Mauá',
   Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
   Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
-  Nevada: 'jornal de ofertas do Instagram (@redenevada); 5 lojas em Mauá: Av. Pres. Castelo Branco 1210, 1740, 2415 e 2864 (Jd. Zaíra) e Av. José Moreira 471 (Jd. Quarto Centenário)',
+  Nevada: 'ofertas do Instagram (@redenevada)',
   STUK: 'jornal de ofertas do dia publicado no Instagram (@supermercadostuk)',
-  Lourencini: 'ofertas do Instagram (@lourencinisupermercados); 9 lojas em Mauá, entre elas Av. Barão de Mauá 4079 (matriz, Jd. Maringá) e 5764, Av. Itapark 3810 e 2777, Av. Benvenuto Bagnara 590, R. Três Américas 491, R. Manoel Franco 55, Estr. Mauá e Adutora Rio Claro 260 e R. Brasil 700',
+  Lourencini: 'ofertas do Instagram (@lourencinisupermercados)',
   Dia: 'destaques do folheto da loja de Mauá (Av. Dom José Gaspar, 1016), via Tiendeo',
   'Roldão': 'encartes que valem na loja de Mauá (o Roldão não tem loja em Ribeirão Pires)',
 };
