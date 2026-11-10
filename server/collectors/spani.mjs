@@ -105,6 +105,7 @@ async function main() {
         if (p.disponivel === false) { unavailable++; continue; }
         let price = regular;
         let listPrice = null;
+        let condition = null;
         let note = 'O Spani não publica data de término das ofertas; o preço é o vigente no momento da coleta.';
         const o = p.em_oferta ? p.oferta : null;
         if (o) {
@@ -117,6 +118,8 @@ async function main() {
             note = `Oferta (${o.nome}). ${note}`;
           } else if (po > 0) {
             note = `${o.nome}: ${brl(po)} cada na compra de ${minQ} ou mais unidades (preço de 1 unidade: ${brl(regular)}). ${note}`;
+            // preço por quantidade conta como o menor preço (decisão de 10/11): o site mostra a condição
+            condition = `${brl(po)} cada levando ${minQ} ou mais`;
           }
         }
         const secId = p.secao_id ?? p.classificacao_mercadologica_id;
@@ -138,6 +141,7 @@ async function main() {
           validFrom: null,
           validUntil: null,
           validityNote: note,
+          condition,
           storeScope,
           collectedAt,
         };
