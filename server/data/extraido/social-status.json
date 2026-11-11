@@ -1,5 +1,5 @@
 {
- "em": "2026-11-10T23:10:44.558Z",
+ "em": "2026-11-11T00:00:03.001Z",
  "servicos": [
   {
    "net": "ig",
@@ -14,9 +14,10 @@
   {
    "teste": "socialcrawl",
    "net": "ig",
-   "posts": 21,
+   "exemploData": null,
+   "posts": 20,
    "recentes": 0,
-   "comImagem": 21
+   "comImagem": 20
   }
  ]
 }
