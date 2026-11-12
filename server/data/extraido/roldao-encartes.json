@@ -1,6 +1,22 @@
 [
   {
     "market": "Roldão",
+    "offerId": "5083-12.11",
+    "validFrom": null,
+    "validUntil": "2026-11-13T02:59:59.000Z",
+    "validityNote": "Quinta da Carne: 12.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-12-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-12T18:39:12.674Z"
+  },
+  {
+    "market": "Roldão",
     "offerId": "5067-09.11-15.11",
     "validFrom": null,
     "validUntil": "2026-11-16T02:59:59.000Z",
@@ -13,7 +29,55 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-09-A-15-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-11T18:14:09.683Z"
+    "collectedAt": "2026-11-12T18:39:12.674Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5090-12.11-15.11",
+    "validFrom": null,
+    "validUntil": "2026-11-16T02:59:59.000Z",
+    "validityNote": "Fim de Semana Arrasador (REDE): 12.11 a 15.11",
+    "stores": [
+      "Roldão Mauá"
+    ],
+    "storeScope": "Encarte \"Fim de Semana Arrasador (REDE)\" das lojas que incluem Mauá",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-FDS-REDE-12-A-15-11-2026-3.pdf"
+    ],
+    "collectedAt": "2026-11-12T18:39:12.674Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5099-11.11-15.11",
+    "validFrom": null,
+    "validUntil": "2026-11-16T02:59:59.000Z",
+    "validityNote": "Reinauguração de Franco da Rocha: 11.11 a 15.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Reinauguração de Franco da Rocha\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/REINAUGURACAO-FRANCO-DA-ROCHA-12-A-15-11-2016-2.pdf"
+    ],
+    "collectedAt": "2026-11-12T18:39:12.674Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5102-12.11-15.11",
+    "validFrom": null,
+    "validUntil": "2026-11-16T02:59:59.000Z",
+    "validityNote": "🏠💥 Espaço Vestcasa no Roldão!💙💛: 12.11 a 15.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"🏠💥 Espaço Vestcasa no Roldão!💙💛\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-VESTCASA-FRANCO-DA-ROCHA-12-A-15-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-12T18:39:12.674Z"
   },
   {
     "market": "Roldão",
@@ -29,6 +93,6 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-BRF-11-A-17-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-11T18:14:09.683Z"
+    "collectedAt": "2026-11-12T18:39:12.674Z"
   }
 ]

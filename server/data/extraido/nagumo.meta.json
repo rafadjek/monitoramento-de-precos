@@ -1,8 +1,8 @@
 {
   "stats": {
     "ofertas-dia": {
-      "siteCount": 1809,
-      "lidos": 1809
+      "siteCount": 1932,
+      "lidos": 1932
     },
     "peixaria": {
       "siteCount": 679,
@@ -34,16 +34,16 @@
     },
     "frios-e-laticinios": {
       "siteCount": 7138,
-      "lidos": 7138
+      "lidos": 7135
     },
     "higiene-e-perfumaria": {
-      "siteCount": 6100,
-      "lidos": 6100
+      "siteCount": 6099,
+      "lidos": 6099
     }
   },
-  "requests": 341,
+  "requests": 342,
   "aborted": null,
-  "seconds": 1073,
-  "ofertaDia": 1809,
-  "produtos": 6323
+  "seconds": 974,
+  "ofertaDia": 1932,
+  "produtos": 6489
 }

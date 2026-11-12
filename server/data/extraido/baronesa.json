@@ -25,7 +25,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -53,7 +53,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -81,7 +81,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -109,7 +109,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -137,7 +137,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -165,7 +165,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -193,7 +193,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -221,7 +221,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -249,371 +249,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "f4fb39cf6de0",
-  "name": "UVA THOMPSON S/ SEMENTE 500G",
-  "brand": null,
-  "ean": null,
-  "size": "500G",
-  "price": 8.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "imageBox": [
-   210,
-   518,
-   417,
-   878
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "source": "encarte",
-  "condition": "por un.",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "74ef0e5b2298",
-  "name": "MELÃO AMARELO",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 6.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "imageBox": [
-   419,
-   125,
-   622,
-   479
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "e40e24fcc247",
-  "name": "AMEIXA BDJ 500G",
-  "brand": null,
-  "ean": null,
-  "size": "500G",
-  "price": 5.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "imageBox": [
-   425,
-   536,
-   657,
-   896
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "source": "encarte",
-  "condition": "por un.",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "bc56e2e031b8",
-  "name": "MANGA PALMER",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 4.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "imageBox": [
-   632,
-   115,
-   843,
-   493
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879651.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "f6195cbfdf07",
-  "name": "UVA PRETA S/ SEMENTE BDJ 500GR",
-  "brand": null,
-  "ean": null,
-  "size": "500gr",
-  "price": 8.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
-  "imageBox": [
-   499,
-   138,
-   697,
-   544
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879652.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "b6d54e7d594c",
-  "name": "CHUCHU",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 2.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "imageBox": [
-   409,
-   503,
-   652,
-   831
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "01ea6ebd2020",
-  "name": "MANDIOQUINHA",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 7.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "imageBox": [
-   199,
-   489,
-   427,
-   885
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "3b275e6c73dc",
-  "name": "CEBOLA NACIONAL",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 6.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "imageBox": [
-   419,
-   116,
-   636,
-   501
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "eef7ae8ec1fc",
-  "name": "PEPINO JAPONÊS",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 5.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "imageBox": [
-   658,
-   114,
-   822,
-   519
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879653.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "a4020670a5c6",
-  "name": "ABACAXI PEROLA",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 7.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "imageBox": [
-   110,
-   499,
-   442,
-   786
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "d8e07dc84c6a",
-  "name": "MAMÃO PAPAYA",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 6.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "imageBox": [
-   415,
-   107,
-   631,
-   460
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "df4d562e6ee5",
-  "name": "CENOURA",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 4.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "imageBox": [
-   431,
-   472,
-   635,
-   896
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
- },
- {
-  "market": "Baronesa",
-  "externalId": "5fcca435a054",
-  "name": "BATATA LAVADA",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 5.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "imageBox": [
-   618,
-   114,
-   805,
-   521
-  ],
-  "productUrl": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879658.jpg",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-10T03:00:00.000Z",
-  "validUntil": "2026-11-12T02:59:59.000Z",
-  "validityNote": "ofertas do encarte, enquanto durarem os estoques",
-  "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -641,7 +277,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -669,7 +305,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -697,7 +333,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -725,7 +361,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -753,7 +389,7 @@
   "validUntil": "2026-11-13T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -781,7 +417,7 @@
   "validUntil": "2026-11-13T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -809,7 +445,7 @@
   "validUntil": "2026-11-13T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -837,7 +473,7 @@
   "validUntil": "2026-11-13T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -865,7 +501,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -893,7 +529,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -921,7 +557,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -949,7 +585,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  },
  {
   "market": "Baronesa",
@@ -977,6 +613,6 @@
   "validUntil": "2026-11-13T02:59:59.000Z",
   "validityNote": "ofertas do encarte, enquanto durarem os estoques",
   "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
-  "collectedAt": "2026-11-11T18:14:54.112Z"
+  "collectedAt": "2026-11-12T18:39:55.736Z"
  }
 ]

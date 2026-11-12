@@ -1,15 +1,15 @@
 {
- "em": "2026-11-11T18:14:12.905Z",
+ "em": "2026-11-12T18:39:21.244Z",
  "servicos": [
   {
    "net": "ig",
    "name": "apify",
-   "posts": 15
+   "posts": 16
   },
   {
    "net": "fb",
    "name": "apify",
-   "posts": 7
+   "posts": 10
   },
   {
    "teste": "socialcrawl",
