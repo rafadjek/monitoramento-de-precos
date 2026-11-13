@@ -1,16 +1,16 @@
 {
   "stats": {
     "ofertas-dia": {
-      "siteCount": 1932,
-      "lidos": 1932
+      "siteCount": 2428,
+      "lidos": 2428
     },
     "peixaria": {
       "siteCount": 679,
       "lidos": 679
     },
     "acougue": {
-      "siteCount": 1583,
-      "lidos": 1583
+      "siteCount": 1582,
+      "lidos": 1582
     },
     "hortifruti": {
       "siteCount": 2361,
@@ -21,8 +21,8 @@
       "lidos": 1732
     },
     "basicos-e-matinais": {
-      "siteCount": 3471,
-      "lidos": 3471
+      "siteCount": 3470,
+      "lidos": 3470
     },
     "bebidas": {
       "siteCount": 4883,
@@ -33,17 +33,17 @@
       "lidos": 2951
     },
     "frios-e-laticinios": {
-      "siteCount": 7138,
-      "lidos": 7135
+      "siteCount": 7133,
+      "lidos": 7133
     },
     "higiene-e-perfumaria": {
       "siteCount": 6099,
       "lidos": 6099
     }
   },
-  "requests": 342,
+  "requests": 347,
   "aborted": null,
-  "seconds": 974,
-  "ofertaDia": 1932,
-  "produtos": 6489
+  "seconds": 1136,
+  "ofertaDia": 2428,
+  "produtos": 6616
 }
