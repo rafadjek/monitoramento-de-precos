@@ -1126,7 +1126,7 @@
  },
  {
   "id": "32131f52eb",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Atacadão",
@@ -1316,7 +1316,7 @@
  },
  {
   "id": "9be3de853f",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Atacadão",
@@ -1544,7 +1544,7 @@
  },
  {
   "id": "515fa83d73",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Nagumo",
@@ -2019,7 +2019,7 @@
  },
  {
   "id": "4a16df6306",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Nagumo",

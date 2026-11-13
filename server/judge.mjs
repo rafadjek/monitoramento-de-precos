@@ -40,7 +40,9 @@ Considere DIFERENTES: sabor, fragrância ou cor diferente; versão diferente (ex
 sem sal x com sal, com gás x sem gás); formato ou linha diferente do mesmo fabricante; produto composto x simples;
 quantidade diferente no pacote ou promoção "leve X pague Y" diferente; produto de outra categoria com nome parecido; tamanho diferente.
 Quando houver foto, use-a: embalagem, cor e o que está escrito no rótulo mostram a variação. Foto de catálogo genérica
-(sem o produto) não prova nada. Se faltar informação para ter certeza de que é o mesmo produto, responda false.
+(sem o produto) não prova nada.
+Exceção de encarte: oferta que vale para vários sabores ("sabores", "diversos", "exceto X") é o MESMO produto
+que qualquer sabor incluído, de mesma marca e tamanho. Se faltar informação para ter certeza de que é o mesmo produto, responda false.
 Siga o critério dos exemplos já decididos pelo dono do site: eles mostram até onde ele considera "o mesmo produto".`;
 
 const SCHEMA = { type: 'OBJECT', properties: { results: { type: 'ARRAY', items: { type: 'OBJECT', properties: { id: { type: 'STRING' }, same: { type: 'BOOLEAN' } }, required: ['id', 'same'] } } }, required: ['results'] };
