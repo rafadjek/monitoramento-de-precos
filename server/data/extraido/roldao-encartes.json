@@ -13,7 +13,7 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-09-A-15-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
+    "collectedAt": "2026-11-13T19:14:07.571Z"
   },
   {
     "market": "Roldão",
@@ -29,7 +29,7 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-FDS-REDE-12-A-15-11-2026-3.pdf"
     ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
+    "collectedAt": "2026-11-13T19:14:07.571Z"
   },
   {
     "market": "Roldão",
@@ -45,7 +45,7 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-13-A-15-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
+    "collectedAt": "2026-11-13T19:14:07.571Z"
   },
   {
     "market": "Roldão",
@@ -61,7 +61,7 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/REINAUGURACAO-FRANCO-DA-ROCHA-12-A-15-11-2016-2.pdf"
     ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
+    "collectedAt": "2026-11-13T19:14:07.571Z"
   },
   {
     "market": "Roldão",
@@ -77,22 +77,6 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-VESTCASA-FRANCO-DA-ROCHA-12-A-15-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
-  },
-  {
-    "market": "Roldão",
-    "offerId": "5080-11.11-17.11",
-    "validFrom": null,
-    "validUntil": "2026-11-18T02:59:59.000Z",
-    "validityNote": "BRF - SADIA E PERDIGÃO: 11.11 a 17.11",
-    "stores": [
-      "todas as lojas Roldão"
-    ],
-    "storeScope": "Encarte \"BRF - SADIA E PERDIGÃO\" da rede (vale em Mauá)",
-    "referer": "https://roldao.com.br/ofertas/",
-    "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-BRF-11-A-17-11-2026.pdf"
-    ],
-    "collectedAt": "2026-11-13T18:20:24.969Z"
+    "collectedAt": "2026-11-13T19:14:07.571Z"
   }
 ]
