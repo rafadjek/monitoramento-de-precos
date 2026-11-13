@@ -1,5 +1,5 @@
 {
- "em": "2026-11-13T11:54:15.868Z",
+ "em": "2026-11-13T12:19:50.985Z",
  "servicos": [
   {
    "net": "ig",
@@ -9,7 +9,7 @@
   {
    "net": "fb",
    "name": "apify",
-   "posts": 3
+   "posts": 8
   },
   {
    "teste": "socialcrawl",
