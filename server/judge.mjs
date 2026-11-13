@@ -21,7 +21,7 @@ const OUT = path.join(IN, 'juiz-veredictos.json');
 const LABELS = path.join(ROOT, 'data/rotulos/rotulos.json');
 const CANDS = path.join(ROOT, 'data/rotulos/candidatos.json');
 const KEY = process.env.GEMINI_JUIZ_KEY || process.env.GEMINI_API_KEY;
-const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-2.5-flash').split(',');
+const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-flash-lite-latest').split(',');
 const BATCH = 20; // 20 pares = até 40 fotos por pedido
 const MAX_LOTES = Number(process.env.JUIZ_MAX_LOTES || 40);
 const DEADLINE = Date.now() + Number(process.env.JUIZ_BUDGET_MIN || 20) * 60e3;
@@ -61,6 +61,7 @@ async function photo(url) {
 }
 
 let modelIdx = 0;
+const falhas = []; // motivo de cada troca de modelo, gravado no erro para diagnóstico
 async function ask(pairs, examples) {
   const parts = [{ text: `${RULES}\n\nExemplos decididos pelo dono do site (A || B => resposta):\n${examples.map((e) => `${e.a} || ${e.b} => ${e.same ? 'mesmo' : 'diferente'}`).join('\n')}\n\nPares para decidir (id: A || B), cada um seguido das fotos de A e de B quando houver:` }];
   for (const p of pairs) {
@@ -77,10 +78,12 @@ async function ask(pairs, examples) {
     let r;
     try {
       r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
-    } catch (e) { if (onModel >= 1 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; } continue; }
+    } catch (e) { falhas.push(`${model}: ${e.message}`.slice(0, 120)); if (onModel >= 1 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; } continue; }
+    if (r.status === 404) falhas.push(`${model}: 404`);
     if (r.status === 404 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
     if (r.status === 429 || r.status >= 500) {
       const t = (await r.text()).slice(0, 300);
+      falhas.push(`${model}: ${r.status} ${(t.match(/quotaId"?:\s*"([^"]+)/) || [, t.slice(0, 80)])[1]}`);
       if ((/PerDay|per day/i.test(t) || (r.status >= 500 && onModel >= 2)) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
       if (/PerDay|per day/i.test(t)) throw new Error('gemini: cota do dia esgotada');
       await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
@@ -91,7 +94,7 @@ async function ask(pairs, examples) {
     const out = JSON.parse(j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') || '{}');
     return { model, results: new Map((out.results || []).map((x) => [String(x.id), !!x.same])) };
   }
-  throw new Error('gemini: limite de uso atingido');
+  throw new Error(`gemini: limite de uso atingido (${falhas.slice(-6).join(' | ')})`);
 }
 async function judge(pairs, examples) {
   const out = new Map();
@@ -191,13 +194,13 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
     try {
       const r = await judge(todo.slice(i, i + BATCH), examples);
       for (const [k, val] of r) { state.pares[k] = { ...val, em: new Date().toISOString().slice(0, 10) }; feitos++; }
-    } catch (e) { console.warn('juiz:', e.message); state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 300) }; break; }
+    } catch (e) { console.warn('juiz:', e.message); state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 600), falhas: falhas.slice(-10) }; break; }
   }
   console.log(`juiz: ${feitos} vereditos novos; total ${Object.keys(state.pares).length}`);
 }
 } catch (e) {
   // sem cota ou erro do Gemini: grava o motivo e mantém o que já havia (nada muda no site)
-  state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 300) };
+  state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 600), falhas: falhas.slice(-10) };
   console.warn('juiz: parou:', e.message);
 }
 // qual chave rodou (só o nome do segredo, nunca o valor): a própria do juiz ou a do leitor de encartes
