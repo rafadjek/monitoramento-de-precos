@@ -1,5 +1,8 @@
 import { brl, each, type Group, type Indexed } from '../lib';
 import { Icon, MarketLogo, Price, Thumb, Validity } from './Parts';
+import { useState } from 'react';
+import { HistoryPanel } from './HistoryPanel';
+import type { HistMeta } from '../history';
 
 // Linha de produto: só os mercados que têm o produto, lado a lado, do mais barato ao mais caro.
 // Clicar numa etiqueta seleciona aquela oferta (borda amarela) e mostra o botão para pôr na lista;
@@ -8,6 +11,7 @@ type Props = {
   groups: Group[]; only: string; favs: Set<string>; onFav: (id: string) => void;
   inCart: Set<string>; onAdd: (id: string, market?: string) => void;
   selected: Record<string, string>; onSelect: (id: string, market: string) => void;
+  hist: HistMeta | null; base: string;
 };
 
 const byQty = (o: Indexed) => !!o.condition && /levando|a partir|leve \d/i.test(o.condition);
@@ -63,7 +67,8 @@ function Tag({ g, it, first, picked, onSelect }: { g: Group; it: Indexed; first:
   );
 }
 
-export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected, onSelect }: Props) {
+export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected, onSelect, hist, base }: Props) {
+  const [openHist, setOpenHist] = useState<Set<string>>(new Set());
   return (
     <ul className="divide-y divide-edge/80 overflow-hidden rounded-2xl border border-edge bg-panel">
       {groups.map((g) => {
@@ -108,10 +113,17 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected
                     <Icon name="cart" className="h-4 w-4" />{added ? 'Na lista (+1)' : 'Pôr na lista (mais barato)'}
                   </button>
                 )}
+                {hist && (
+                  <button onClick={() => setOpenHist((s) => { const n = new Set(s); if (n.has(g.id)) n.delete(g.id); else n.add(g.id); return n; })}
+                    aria-expanded={openHist.has(g.id)} className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 font-bold ${openHist.has(g.id) ? 'border-neon/70 text-neon' : 'border-edge text-muted hover:text-ink'}`}>
+                    <Icon name="chart" className="h-4 w-4" />Histórico
+                  </button>
+                )}
                 <span className="text-muted">
                   {pickedItem ? 'toque de novo na etiqueta para desmarcar' : best.validUntil ? <><Validity o={best} /> no {best.market}</> : 'toque numa etiqueta para escolher o mercado'}
                 </span>
               </div>
+              {hist && openHist.has(g.id) && <HistoryPanel g={g} meta={hist} base={base} />}
             </div>
           </li>
         );

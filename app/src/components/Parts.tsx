@@ -83,6 +83,8 @@ const P: Record<string, string> = {
   trophy: 'M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4Zm10 1h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3',
   bolt: 'M13 2 4 14h7l-1 8 9-12h-7l1-8Z',
   external: 'M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5',
+  chart: 'M4 4v16h16M7 15l4-4 3 3 5-6',
+  down: 'M12 5v14m-6-6 6 6 6-6',
 };
 export function Icon({ name, className = 'h-5 w-5', fill = false }: { name: keyof typeof P | string; className?: string; fill?: boolean }) {
   return (

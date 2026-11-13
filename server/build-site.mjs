@@ -20,6 +20,10 @@ import sharp from 'sharp';
 import { groupOffers, pairKey, parsePack } from './group.mjs';
 import { bestPrice } from './price.mjs';
 import { fineCategory } from './category.mjs';
+import { load as loadHist, priceAt } from './historico.mjs';
+// o site calcula o mesmo pedaço (app/src/history.ts): FNV-1a do id
+const HIST_SHARDS = 64;
+const histShard = (id) => { let x = 0x811c9dc5; for (let i = 0; i < id.length; i++) { x ^= id.charCodeAt(i); x = Math.imul(x, 0x01000193) >>> 0; } return x % HIST_SHARDS; };
 const IMG = path.join(ROOT, '../app/public/img');
 const PAGES = path.join(ROOT, 'data/cache/paginas');
 fs.rmSync(IMG, { recursive: true, force: true });
@@ -136,6 +140,44 @@ for (const g of groups) {
   for (const i of g.idx) flat[i].g = gid;
 }
 for (const o of flat) delete o.ean; // só serve para agrupar; o site não usa
+
+// Histórico (historico.mjs): o site baixa só o pedaço do produto aberto (data/hist/NN.json, 30 dias)
+// e o "Baixou hoje" compara o preço de hoje com o da coleta anterior.
+{
+  const h = loadHist();
+  const today = h.last || 0;
+  const HIST = path.join(OUT, 'hist');
+  fs.mkdirSync(HIST, { recursive: true });
+  const shards = Array.from({ length: HIST_SHARDS }, () => ({}));
+  for (const o of flat) {
+    const s = h.ids[o.id];
+    if (!s || s.length < 2) continue; // preço que nunca mudou: o site diz "sem mudança" sem baixar nada
+    let i = 0;
+    while (i + 1 < s.length && s[i + 1][0] <= today - 30) i++;
+    shards[histShard(o.id)][o.id] = s.slice(i);
+  }
+  shards.forEach((ids, n) => fs.writeFileSync(path.join(HIST, `${n}.json`), JSON.stringify(ids)));
+  index.hist = { day0: '2026-01-01', today, shards: HIST_SHARDS };
+
+  // Baixou esta semana: a mesma oferta (mesmo mercado) está mais barata que o maior preço dela nos 7 dias anteriores.
+  // Queda de mais de 60% é quase sempre cadastro errado ou caixa x unidade: fica de fora.
+  const best = new Map();
+  for (const o of flat) {
+    const s = h.ids[o.id];
+    if (!s) continue;
+    // maior preço dos 7 dias anteriores; só conta se a queda aconteceu nesta semana
+    if (s[s.length - 1][0] < today - 6) continue;
+    let before = 0;
+    for (let d = today - 7; d < today; d++) before = Math.max(before, priceAt(s, d) ?? 0);
+    if (!before) continue;
+    const pct = 1 - o.price / before;
+    if (pct < 0.05 || pct > 0.6) continue;
+    const k = o.g ?? `p:${o.id}`;
+    if (!best.has(k) || best.get(k).pct < pct) best.set(k, { id: o.id, g: k, before, pct: Math.round(pct * 1000) / 1000 });
+  }
+  index.baixou = [...best.values()].sort((a, b) => b.pct - a.pct).slice(0, 30);
+  console.log(`histórico: ${Object.keys(h.ids).length} ofertas; baixou na semana: ${best.size}`);
+}
 index.groupsByEan = groups.filter((g) => g.key.startsWith('ean:')).length;
 index.groups = groups.length;
 for (const b of built) fs.writeFileSync(path.join(OUT, `${slug(b.market)}.json`), JSON.stringify(b.slim));

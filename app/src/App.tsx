@@ -6,6 +6,8 @@ import { CartPanel } from './components/CartPanel';
 import { Offers, pickOffers } from './components/Offers';
 import { Icon, MarketLogo } from './components/Parts';
 import { haystack, match, parseQuery } from './search';
+import { Dropped, type Drop } from './components/Dropped';
+import type { HistMeta } from './history';
 
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
@@ -39,6 +41,8 @@ export default function App() {
   const [markets, setMarkets] = useState<MarketInfo[]>([]);
   const [infoOnly, setInfoOnly] = useState<InfoOnly[]>([]);
   const [generatedAt, setGeneratedAt] = useState('');
+  const [hist, setHist] = useState<HistMeta | null>(null);
+  const [drops, setDrops] = useState<Drop[]>([]);
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading');
   const [attempt, setAttempt] = useState(0);
 
@@ -94,6 +98,8 @@ export default function App() {
         setMarkets(idx.markets);
         setInfoOnly(idx.infoOnly ?? []);
         setGeneratedAt(idx.generatedAt);
+        setHist(idx.hist ?? null);
+        setDrops(idx.baixou ?? []);
         // oferta vencida some (um folheto pode vencer antes da próxima leitura)
         const now = Date.now();
         setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
@@ -115,6 +121,7 @@ export default function App() {
   const groups = useMemo(() => buildGroups(cityOffers), [cityOffers]);
   const byId = useMemo(() => new Map(groups.map((g) => [g.id, g])), [groups]);
   const offers = useMemo(() => pickOffers(cityOffers), [cityOffers]);
+  const offerById = useMemo(() => new Map(cityOffers.map((o) => [o.id, o])), [cityOffers]);
   const terms = useMemo(() => parseQuery(dq), [dq]);
   // texto de busca de cada produto preparado uma vez (sem acento, sem hífen, palavras separadas)
   const hays = useMemo(() => new Map(groups.map((g) => [g.id, haystack(g._n)])), [groups]);
@@ -210,6 +217,7 @@ export default function App() {
           <CartPanel cart={cart} setCart={setCart} groups={byId} markets={columns} open={cartOpen} onToggle={() => setCartOpen(!cartOpen)} />
         </div>
         <main className="min-w-0 space-y-4 lg:col-start-1 lg:row-span-2 lg:row-start-1">
+          {status === 'ok' && !dq && !category && !market && !onlyFavs && <Dropped drops={drops} byId={offerById} onAdd={(o) => add(o.g ?? `p:${o.id}`, o.market)} />}
           <div className="glass p-2">
             <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-9 xl:overflow-visible">
               {CATEGORIES.map((c) => (
@@ -272,7 +280,7 @@ export default function App() {
               </div>
             )}
             {status === 'ok' && list.length > 0 && (
-              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} hist={hist} base={BASE} />
             )}
             {status === 'ok' && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">

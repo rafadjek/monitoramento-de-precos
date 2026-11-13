@@ -91,11 +91,16 @@ jobs:
           GEMINI_JUIZ_KEY: ${{ secrets.GEMINI_JUIZ_KEY }}
         run: node judge.mjs
 
+      # preço de cada oferta por dia (só grava o que mudou); alimenta o gráfico e o "Baixou hoje" do site
+      - name: Histórico de preços
+        working-directory: server
+        run: node historico.mjs
+
       - name: Guardar dados coletados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add server/data/extraido
+          git add server/data/extraido server/data/historico
           git diff --cached --quiet || (git commit -m "Atualiza dados de preços" && git pull --rebase -X theirs && git push)
 
       - name: Testar o agrupamento de produtos
