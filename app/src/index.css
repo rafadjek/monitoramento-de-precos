@@ -32,6 +32,12 @@
     color: transparent;
   }
   /* barra de rolagem visível na tabela (para arrastar até os outros mercados) */
+  /* linha de etiquetas que arrasta no celular: sem barra, com a borda direita esmaecendo para mostrar que tem mais */
+  .tags-row { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .tags-row::-webkit-scrollbar { display: none; }
+  @media (max-width: 639px) {
+    .tags-row { mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+  }
   .bar-x { scrollbar-color: #2f8bff #101c3d; scrollbar-width: auto; }
   .bar-x::-webkit-scrollbar { height: 12px; }
   .bar-x::-webkit-scrollbar-track { background: #101c3d; border-radius: 99px; }

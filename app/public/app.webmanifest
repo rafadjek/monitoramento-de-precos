@@ -1,0 +1,17 @@
+{
+  "name": "Bate Ofertas",
+  "short_name": "Bate Ofertas",
+  "description": "Compare preços dos mercados de Mauá e Ribeirão Pires.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#060B1A",
+  "theme_color": "#060B1A",
+  "icons": [
+    { "src": "app-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
+    { "src": "app-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" },
+    { "src": "app-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}

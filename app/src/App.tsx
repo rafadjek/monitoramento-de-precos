@@ -61,6 +61,18 @@ export default function App() {
     return mine;
   });
   const setCart = (c: CartItem[]) => { setCartState(c); save('bate-lista', c); };
+  // no celular o carrinho abre por toque (no computador fica sempre aberto); lista recebida por link já chega aberta
+  const [cartOpen, setCartOpen] = useState(() => !!params.get('lista'));
+  // botão "Instalar" quando o navegador oferece (Chrome/Edge/Android); some depois de instalado
+  const [installEvt, setInstallEvt] = useState<(Event & { prompt: () => Promise<void> }) | null>(null);
+  useEffect(() => {
+    const on = (e: Event) => { e.preventDefault(); setInstallEvt(e as Event & { prompt: () => Promise<void> }); };
+    const done = () => setInstallEvt(null);
+    window.addEventListener('beforeinstallprompt', on);
+    window.addEventListener('appinstalled', done);
+    return () => { window.removeEventListener('beforeinstallprompt', on); window.removeEventListener('appinstalled', done); };
+  }, []);
+  const install = async () => { if (!installEvt) return; await installEvt.prompt(); setInstallEvt(null); };
   useEffect(() => {
     if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -145,11 +157,16 @@ export default function App() {
             </span>
           </label>
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
+            {installEvt && (
+              <button onClick={install} className="flex flex-col items-center px-2 text-xs text-neon hover:text-ink">
+                <Icon name="plus" className="h-6 w-6" />Instalar
+              </button>
+            )}
             <a href="#ofertas" className="flex flex-col items-center px-2 text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
             <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
               <Icon name="heart" className="h-6 w-6" fill={onlyFavs} />Favoritos
             </button>
-            <a href="#carrinho" className="relative flex items-center gap-2 rounded-xl border border-sky/70 px-3 py-2 font-bold shadow-sky hover:bg-sky/10">
+            <a href="#carrinho" onClick={() => setCartOpen(true)} className="relative flex items-center gap-2 rounded-xl border border-sky/70 px-3 py-2 font-bold shadow-sky hover:bg-sky/10">
               <Icon name="cart" className="h-5 w-5 text-sky" /><span className="hidden sm:inline">Minha lista</span>
               {cart.length > 0 && <span className="grid h-5 min-w-5 place-items-center rounded-full bg-neon px-1 text-[0.7rem] font-bold text-night">{cart.length}</span>}
             </a>
@@ -178,8 +195,13 @@ export default function App() {
         </label>
       </section>
 
-      <div className="mx-auto grid max-w-[1400px] gap-5 px-4 pb-16 lg:grid-cols-[minmax(0,1fr)_370px]">
-        <main className="min-w-0 space-y-4">
+      {/* celular: carrinho no topo (fechado num resumo), depois a lista, depois as ofertas.
+          computador: lista à esquerda; carrinho e ofertas na coluna da direita */}
+      <div className="mx-auto grid max-w-[1400px] gap-4 px-4 pb-16 lg:grid-cols-[minmax(0,1fr)_370px] lg:grid-rows-[auto_1fr] lg:gap-5">
+        <div className="min-w-0 lg:col-start-2 lg:row-start-1">
+          <CartPanel cart={cart} setCart={setCart} groups={byId} markets={columns} open={cartOpen} onToggle={() => setCartOpen(!cartOpen)} />
+        </div>
+        <main className="min-w-0 space-y-4 lg:col-start-1 lg:row-span-2 lg:row-start-1">
           <div className="glass p-2">
             <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-9 xl:overflow-visible">
               {CATEGORIES.map((c) => (
@@ -252,8 +274,7 @@ export default function App() {
           </div>
         </main>
 
-        <aside className="space-y-5">
-          <CartPanel cart={cart} setCart={setCart} groups={byId} markets={columns} />
+        <aside className="min-w-0 space-y-5 lg:col-start-2 lg:row-start-2">
           <Offers offers={offers} onAdd={(o) => add(o.g ?? `p:${o.id}`)} />
         </aside>
       </div>

@@ -8,3 +8,7 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>
 );
+// instalável e abrindo sem internet (só no site publicado; no "npm run dev" atrapalharia)
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {}); });
+}

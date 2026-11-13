@@ -75,10 +75,11 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected
         const pick = selected[g.id];
         const pickedItem = pick ? g.items.find((i) => i.market === pick) : undefined;
         return (
-          <li key={g.id} className="flex gap-3 p-3 sm:gap-4 sm:p-4">
-            <Thumb src={g.image} name={g.name} size={104} />
+          <li key={g.id} className="p-3 sm:flex sm:gap-4 sm:p-4">
+            <div className="hidden sm:block"><Thumb src={g.image} name={g.name} size={104} /></div>
             <div className="min-w-0 flex-1">
               <div className="flex items-start gap-2">
+                <div className="sm:hidden"><Thumb src={g.image} name={g.name} size={64} /></div>
                 <h3 className="min-w-0 flex-1 text-base font-bold leading-snug">{g.name}</h3>
                 <button onClick={() => onFav(g.id)} aria-pressed={fav} aria-label={fav ? 'Tirar dos favoritos' : 'Favoritar'} className={`shrink-0 p-0.5 ${fav ? 'text-signal' : 'text-muted hover:text-ink'}`}>
                   <Icon name="heart" className="h-5 w-5" fill={fav} />
@@ -90,11 +91,13 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected
                   : g.saving > 0.004 ? <>Economize <b className="text-neon">{brl(g.saving)}</b>{g.perUnit ? ' em cada unidade' : ''} ({Math.round(g.savingPct * 100)}%) comprando no {best.market}</>
                   : `Mesmo preço em ${g.items.length - g.odd.length} mercados`}
               </p>
-              <ul className="mt-2 flex flex-wrap gap-2">
+              {/* no celular: etiquetas lado a lado numa linha que arrasta (a mais barata primeiro); no computador quebram linha */}
+              <ul className="tags-row -mx-3 mt-2 flex snap-x gap-2 overflow-x-auto pb-1 pl-3 pr-8 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
                 {items.map((it) => (
-                  <li key={it.id}><Tag g={g} it={it} first={it === g.items[0]} picked={pick === it.market} onSelect={() => onSelect(g.id, it.market)} /></li>
+                  <li key={it.id} className="shrink-0 snap-start"><Tag g={g} it={it} first={it === g.items[0]} picked={pick === it.market} onSelect={() => onSelect(g.id, it.market)} /></li>
                 ))}
               </ul>
+              {items.length > 2 && <p className="mt-0.5 text-[0.7rem] text-muted sm:hidden">arraste para o lado para ver os {items.length} mercados →</p>}
               <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                 {pickedItem ? (
                   <button onClick={() => onAdd(g.id, pickedItem.market)} className="inline-flex items-center gap-1.5 rounded-lg bg-gold px-3 py-1.5 font-bold text-night hover:brightness-110">

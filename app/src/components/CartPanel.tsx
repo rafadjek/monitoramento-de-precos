@@ -4,9 +4,10 @@ import { brl, type Group } from '../lib';
 import { Icon, MarketLogo } from './Parts';
 import { Star, conditionText } from './ProductList';
 
-type Props = { cart: CartItem[]; setCart: (c: CartItem[]) => void; groups: Map<string, Group>; markets: string[] };
+// open/onToggle: no celular o painel fica no topo, fechado num resumo de uma linha; no computador fica sempre aberto
+type Props = { cart: CartItem[]; setCart: (c: CartItem[]) => void; groups: Map<string, Group>; markets: string[]; open: boolean; onToggle: () => void };
 
-export function CartPanel({ cart, setCart, groups, markets }: Props) {
+export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Props) {
   const [copied, setCopied] = useState(false);
   const items = cart.filter((c) => groups.has(c.g));
   const key = items.map((c) => keyOf(c) + c.qty).join();
@@ -29,12 +30,25 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
   };
 
   return (
-    <section id="carrinho" className="glass p-4" aria-label="Carrinho Inteligente">
-      <div className="flex items-center gap-3">
+    <section id="carrinho" className={`glass scroll-mt-20 p-3 lg:p-4 ${items.length ? 'border-neon/60 shadow-neon lg:border-edge lg:shadow-none' : ''}`} aria-label="Carrinho Inteligente">
+      <button type="button" onClick={onToggle} aria-expanded={open} aria-controls="carrinho-corpo" className="flex w-full items-center gap-3 text-left lg:pointer-events-none">
         <span className="relative text-sky"><Icon name="cart" className="h-8 w-8" /><span className="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-neon text-[0.7rem] font-bold text-night">{items.length}</span></span>
-        <h2 className="font-display text-2xl font-bold leading-none">Carrinho Inteligente</h2>
-      </div>
+        <span className="min-w-0 flex-1">
+          <span className="block font-display text-2xl font-bold leading-none" role="heading" aria-level={2}>Carrinho Inteligente</span>
+          {/* resumo de uma linha, só no celular com o painel fechado */}
+          {!open && (
+            <span className="mt-0.5 block truncate text-xs text-muted lg:hidden">
+              {!items.length ? 'Toque em Pôr na lista e veja onde sai mais barato'
+                : best ? <>{items.length} {items.length === 1 ? 'item' : 'itens'} · melhor no <b className="text-neon">{best.market}</b> <b className="num text-ink">{brl(best.total)}</b></>
+                : plan ? <>{items.length} {items.length === 1 ? 'item' : 'itens'} · total <b className="num text-ink">{brl(plan.total)}</b></>
+                : `${items.length} itens`}
+            </span>
+          )}
+        </span>
+        <Icon name={open ? 'minus' : 'plus'} className="h-5 w-5 shrink-0 text-sky lg:hidden" />
+      </button>
 
+      <div id="carrinho-corpo" className={open ? '' : 'hidden lg:block'}>
       {!items.length ? (
         <p className="mt-3 rounded-xl border border-dashed border-edge p-4 text-sm text-muted">
           Marque produtos ou toque em <b className="text-ink">Pôr na lista</b>. Aqui aparece onde a sua lista sai mais barata.
@@ -118,6 +132,7 @@ export function CartPanel({ cart, setCart, groups, markets }: Props) {
           </div>
         </>
       )}
+      </div>
     </section>
   );
 }
