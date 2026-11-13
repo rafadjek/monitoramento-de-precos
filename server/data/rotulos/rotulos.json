@@ -5,11 +5,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Café Solúvel Pilão 40g"
+   "name": "Café Solúvel Pilão 40g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240752/7896089088656.jpg?v=638539059165100000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Café Solúvel Em Pó Pilão 40G"
+   "name": "Café Solúvel Em Pó Pilão 40G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/254798.webp"
   }
  },
  {
@@ -18,11 +20,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Absorvente em Gel Intimus Seca com abas 32 un"
+   "name": "Absorvente em Gel Intimus Seca com abas 32 un",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244717/g.jpg.jpg?v=639287964517270000"
   },
   "b": {
    "market": "Coop",
-   "name": "Absorvente com Abas Intimus Gel Tripla Proteção Cobertura Seca Pacote 32 Unidades"
+   "name": "Absorvente com Abas Intimus Gel Tripla Proteção Cobertura Seca Pacote 32 Unidades",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238381/7896007544059.jpg?v=638487994970270000"
   }
  },
  {
@@ -31,11 +35,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Macarrão com Ovos Nhoque Adria 500g"
+   "name": "Macarrão com Ovos Nhoque Adria 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215067/7896205754465.jpg?v=637919525281570000"
   },
   "b": {
    "market": "Extra",
-   "name": "Macarrão de Sêmola com Ovos Nhoque Adria Pacote 500g"
+   "name": "Macarrão de Sêmola com Ovos Nhoque Adria Pacote 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/367/33353367.png"
   }
  },
  {
@@ -44,11 +50,13 @@
   "kind": "separados",
   "a": {
    "market": "Extra",
-   "name": "Ervilha e Milho Quero Lata 170g"
+   "name": "Ervilha e Milho Quero Lata 170g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/370/33375370.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Milho Verde Quero 170G."
+   "name": "Milho Verde Quero 170G.",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/220527.webp"
   }
  },
  {
@@ -57,11 +65,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Chocolate Lacta 5 Star 40g"
+   "name": "Chocolate Lacta 5 Star 40g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2231251/g.jpg.png?v=639287871785130000"
   },
   "b": {
    "market": "Coop",
-   "name": "Chocolate 5Star Lacta 40g"
+   "name": "Chocolate 5Star Lacta 40g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214516/7622210411501.jpg?v=637919522071530000"
   }
  },
  {
@@ -70,11 +80,13 @@
   "kind": "juntos",
   "a": {
    "market": "Extra",
-   "name": "Pão Caseiro Coco Panco Pacote 350g"
+   "name": "Pão Caseiro Coco Panco Pacote 350g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/762/33353762.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Pão De Coco Panco 350G"
+   "name": "Pão De Coco Panco 350G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243582.webp"
   }
  },
  {
@@ -83,11 +95,13 @@
   "kind": "juntos",
   "a": {
    "market": "Assaí",
-   "name": "EMPANADO DE FRANGO TEKITOS SEARA PACOTE 1KG"
+   "name": "EMPANADO DE FRANGO TEKITOS SEARA PACOTE 1KG",
+   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg"
   },
   "b": {
    "market": "Atacadão",
-   "name": "Tekitos Seara Congelado 1kg"
+   "name": "Tekitos Seara Congelado 1kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2247666/g.jpg.jpg?v=639287990160970000"
   }
  },
  {
@@ -96,11 +110,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Sabonete Em Barra Para Bebê Protex Baby Glicerina Natural 85g"
+   "name": "Sabonete Em Barra Para Bebê Protex Baby Glicerina Natural 85g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2288873/g.jpg.png?v=639289540319700000"
   },
   "b": {
    "market": "Coop",
-   "name": "Sabonete Infantil Protex Baby Suave 85g"
+   "name": "Sabonete Infantil Protex Baby Suave 85g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227087/7509546673226.jpg?v=638064654037000000"
   }
  },
  {
@@ -109,11 +125,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Macarrão Instantâneo Nissin Lámen Frango Assado 85g"
+   "name": "Macarrão Instantâneo Nissin Lámen Frango Assado 85g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2296064/g.jpg.jpg?v=639290360171130000"
   },
   "b": {
    "market": "Coop",
-   "name": "Macarrão Instantaneo Nissin Lámen Carne 85g"
+   "name": "Macarrão Instantaneo Nissin Lámen Carne 85g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215041/7891079000205.jpg?v=637919525147770000"
   }
  },
  {
@@ -122,11 +140,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Cápsula de Cappuccino Classic 3 Corações 10 unid"
+   "name": "Cápsula de Cappuccino Classic 3 Corações 10 unid",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238503/7896005805077_1.jpg?v=638500779020270000"
   },
   "b": {
    "market": "Spani",
-   "name": "Cápsula De Café 3 Corações C/10 Cappuccino"
+   "name": "Cápsula De Café 3 Corações C/10 Cappuccino",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/9141073d-fd19-4836-83f8-b8ee98f77e35.jpg"
   }
  },
  {
@@ -135,11 +155,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Pipoca Para Micro-ondas Natural Yoki 100g"
+   "name": "Pipoca Para Micro-ondas Natural Yoki 100g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/252880/Pipocas Micro_7891095100125- Natural 100g.png?v=639088497426170000"
   },
   "b": {
    "market": "Spani",
-   "name": "Pipoca De Microondas Yoki 100g Natural"
+   "name": "Pipoca De Microondas Yoki 100g Natural",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/3c3706cc-0e7e-4f23-98d8-105d415404de.jpg"
   }
  },
  {
@@ -148,11 +170,13 @@
   "kind": "separados",
   "a": {
    "market": "Extra",
-   "name": "Requeijão Cremoso Tradicional Catupiry Copo 200g"
+   "name": "Requeijão Cremoso Tradicional Catupiry Copo 200g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/641/33326641.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Requeijão Cream Tradicional Catupiry 200G"
+   "name": "Requeijão Cream Tradicional Catupiry 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/716819.webp"
   }
  },
  {
@@ -161,11 +185,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Batata Chips Ruffles Original 68g"
+   "name": "Batata Chips Ruffles Original 68g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240425/7892840823054.jpg?v=638536476339370000"
   },
   "b": {
    "market": "Spani",
-   "name": "Salgadinho De Batata Elma Chips Ruffles 68g Sal"
+   "name": "Salgadinho De Batata Elma Chips Ruffles 68g Sal",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/7b8c2c51-0aba-4e5c-9eeb-528402edfd5d.jpg"
   }
  },
  {
@@ -174,11 +200,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Café Torrado e Moído Café Brasileiro Extra Forte Almofada 500g"
+   "name": "Café Torrado e Moído Café Brasileiro Extra Forte Almofada 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229244/7891018001393.jpg?v=638074202690270000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Café Extra Forte Almofada Brasileiro 500G"
+   "name": "Café Extra Forte Almofada Brasileiro 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/242482.webp"
   }
  },
  {
@@ -187,11 +215,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml"
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214642/7791293025780.jpg?v=637919522876030000"
   },
   "b": {
    "market": "Spani",
-   "name": "Desodorante Aerossol Axe 150ml Apollo"
+   "name": "Desodorante Aerossol Axe 150ml Apollo",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/7a5180ac-e6d8-4947-a19f-ee2ee81aed02.jpg"
   }
  },
  {
@@ -200,11 +230,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Amaciante de Roupas Concentrado Downy Verão Tropical 500ml"
+   "name": "Amaciante de Roupas Concentrado Downy Verão Tropical 500ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235170/g.jpg.jpg?v=639287901975500000"
   },
   "b": {
    "market": "Extra",
-   "name": "Amaciante de Roupa Concentrado Brisa de Verão Downy Frasco 500ml"
+   "name": "Amaciante de Roupa Concentrado Brisa de Verão Downy Frasco 500ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/724/33368724.png"
   }
  },
  {
@@ -213,11 +245,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Café Brasileiro Tradicional Stand 500g"
+   "name": "Café Brasileiro Tradicional Stand 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2263342/g.jpg.jpg?v=639288121552470000"
   },
   "b": {
    "market": "Spani",
-   "name": "Café Torrado E Moído Brasileiro 500g Almofada Tradicional"
+   "name": "Café Torrado E Moído Brasileiro 500g Almofada Tradicional",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/01ac7307-75a3-4117-9452-37fef7539c76.jpg"
   }
  },
  {
@@ -226,11 +260,13 @@
   "kind": "separados",
   "a": {
    "market": "Coop",
-   "name": "Bolo Pronto Panco Chocolate 300g"
+   "name": "Bolo Pronto Panco Chocolate 300g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245013/7891203059352.jpg?v=638665265677870000"
   },
   "b": {
    "market": "Extra",
-   "name": "Bolo de Coco PANCO 300g"
+   "name": "Bolo de Coco PANCO 300g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/718/33369718.png"
   }
  },
  {
@@ -239,11 +275,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Macarrão Petybon Massa com Ovos Ninho N°3 500g"
+   "name": "Macarrão Petybon Massa com Ovos Ninho N°3 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215070/7897721410057.jpg?v=637919525295800000"
   },
   "b": {
    "market": "Extra",
-   "name": "Macarrão com Ovos Ninho PETYBON Pacote 500g"
+   "name": "Macarrão com Ovos Ninho PETYBON Pacote 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/896/33316896.png"
   }
  },
  {
@@ -252,11 +290,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Achocolatado Líquido Toddynho 200ml"
+   "name": "Achocolatado Líquido Toddynho 200ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214245/7894321722016.jpg?v=637916693303370000"
   },
   "b": {
    "market": "Spani",
-   "name": "Bebida Láctea Toddynho 200ml"
+   "name": "Bebida Láctea Toddynho 200ml",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/0998443d-ac54-44f2-8ce7-b4cd858ff9d2.jpg"
   }
  },
  {
@@ -265,11 +305,13 @@
   "kind": "separados",
   "a": {
    "market": "Assaí",
-   "name": "COXINHA DA ASA DE FRANGO CONGELADA SEARA PACOTE 1KG"
+   "name": "COXINHA DA ASA DE FRANGO CONGELADA SEARA PACOTE 1KG",
+   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-3.jpeg"
   },
   "b": {
    "market": "Atacadão",
-   "name": "Coxa de Frango Seara Congelada IQF 1Kg"
+   "name": "Coxa de Frango Seara Congelada IQF 1Kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2243607/g.jpg.jpg?v=639287957839530000"
   }
  },
  {
@@ -278,11 +320,13 @@
   "kind": "juntos",
   "a": {
    "market": "Extra",
-   "name": "Café em Cápsula Torrado e Moído Espresso Intenso Nescafé Dolce Gusto Caixa 80g 10 Unidades"
+   "name": "Café em Cápsula Torrado e Moído Espresso Intenso Nescafé Dolce Gusto Caixa 80g 10 Unidades",
+   "image": "https://static.extramercado.com.br/img/uploads/1/724/33331724.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Cápsula Café Espresso Intenso Nescafé Dolce Gusto 10 Cápsulas 80g"
+   "name": "Cápsula Café Espresso Intenso Nescafé Dolce Gusto 10 Cápsulas 80g",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/209956.webp"
   }
  },
  {
@@ -291,11 +335,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Lava Roupas em Pó Brilhante Limpeza Total 1,6kg"
+   "name": "Lava Roupas em Pó Brilhante Limpeza Total 1,6kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2279545/g.jpg.jpg?v=639289492144330000"
   },
   "b": {
    "market": "Coop",
-   "name": "Detergente em Pó Brilhante Limpeza Total Caixa 1,6kg"
+   "name": "Detergente em Pó Brilhante Limpeza Total Caixa 1,6kg",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/243428/7891150086555.jpg?v=638606229944500000"
   }
  },
  {
@@ -304,11 +350,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Café Torrado e Moído Pilão Extra Forte Almofada 500g"
+   "name": "Café Torrado e Moído Pilão Extra Forte Almofada 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214337/7896089013399.jpg?v=637919521027130000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Café Torrado E Moído Extra Forte Vácuo Pilão 500G"
+   "name": "Café Torrado E Moído Extra Forte Vácuo Pilão 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/335201.webp"
   }
  },
  {
@@ -317,11 +365,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Arroz Prato Fino Integral Tipo 1 1kg"
+   "name": "Arroz Prato Fino Integral Tipo 1 1kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244677/g.jpg.jpg?v=639287964260370000"
   },
   "b": {
    "market": "Extra",
-   "name": "Arroz Agulhinha Tipo 1 PRATO FINO Pacote 1kg"
+   "name": "Arroz Agulhinha Tipo 1 PRATO FINO Pacote 1kg",
+   "image": "https://static.extramercado.com.br/img/uploads/1/520/33355520.png"
   }
  },
  {
@@ -330,11 +380,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Macarrão com Ovos Dona Benta Aviãozinho 500g"
+   "name": "Macarrão com Ovos Dona Benta Aviãozinho 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2230691/g.jpg.jpg?v=639287866738170000"
   },
   "b": {
    "market": "Joanin",
-   "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)"
+   "name": "Macarrão Dona Benta com Ovos 500g (Exceto Ninho)",
+   "image": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg"
   }
  },
  {
@@ -343,11 +395,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Desinfetante Álcool Líquido Coperalcool Lavanda 46°INPM 1L"
+   "name": "Desinfetante Álcool Líquido Coperalcool Lavanda 46°INPM 1L",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2297051/g.jpg.jpg?v=639290365559630000"
   },
   "b": {
    "market": "Coop",
-   "name": "Álcool Líquido 46 INPM Lavanda Oriental Coperalcool Bacfree 1L"
+   "name": "Álcool Líquido 46 INPM Lavanda Oriental Coperalcool Bacfree 1L",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/247739/7896090700769.webp?v=638838853277130000"
   }
  },
  {
@@ -356,11 +410,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Achocolatado em Pó Toddy Original Pacote 700g"
+   "name": "Achocolatado em Pó Toddy Original Pacote 700g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/234127/7894321220529.jpg?v=638336929011900000"
   },
   "b": {
    "market": "Extra",
-   "name": "Achocolatado Em Pó Original Toddy 700g + Econômica"
+   "name": "Achocolatado Em Pó Original Toddy 700g + Econômica",
+   "image": "https://static.extramercado.com.br/img/uploads/1/356/33324356.png"
   }
  },
  {
@@ -369,11 +425,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Óleo de Soja Soya 900ml"
+   "name": "Óleo de Soja Soya 900ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234865/g.jpg.jpg?v=639287899841700000"
   },
   "b": {
    "market": "Roldão",
-   "name": "Óleo de Soja Soya Pet 900ml"
+   "name": "Óleo de Soja Soya Pet 900ml",
+   "image": null
   }
  },
  {
@@ -382,11 +440,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Refresco em Pó Frisco Laranja 18g"
+   "name": "Refresco em Pó Frisco Laranja 18g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291568/g.jpg.jpg?v=639290336363730000"
   },
   "b": {
    "market": "Coop",
-   "name": "Refresco em Pó Frisco Laranja com Acerola 18g"
+   "name": "Refresco em Pó Frisco Laranja com Acerola 18g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/239034/7896045112425.jpg?v=638514739288130000"
   }
  },
  {
@@ -395,11 +455,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Refrigerante Guaraná Antarctica Zero 200ml"
+   "name": "Refrigerante Guaraná Antarctica Zero 200ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2283925/g.jpg.jpg?v=639289514547100000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Refrigerante Zero Açúcar Guaraná Antarctica 200Ml"
+   "name": "Refrigerante Zero Açúcar Guaraná Antarctica 200Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243364.webp"
   }
  },
  {
@@ -408,11 +470,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Leite Longa Vida Ninho Integral 1L"
+   "name": "Leite Longa Vida Ninho Integral 1L",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2236907/g.jpg.jpg?v=639287913649130000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Leite Uht Ninho Integral 1L"
+   "name": "Leite Uht Ninho Integral 1L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/740876.webp"
   }
  },
  {
@@ -421,11 +485,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Protetor Diário Proteção Carefree Leve 80 Pague 60"
+   "name": "Protetor Diário Proteção Carefree Leve 80 Pague 60",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216925/7891010604349.jpg?v=637919536220470000"
   },
   "b": {
    "market": "Spani",
-   "name": "Protetor Diário Carefree Sem Abas Com 80 Un Respirável Sem Fragrância"
+   "name": "Protetor Diário Carefree Sem Abas Com 80 Un Respirável Sem Fragrância",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/d27cf235-3fbf-4376-8d66-7f93aa4bbbab.jpg"
   }
  },
  {
@@ -434,11 +500,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g"
+   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234442/g.jpg.jpg?v=639287896635300000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Refresco Em Pó Maracujá Sem Açúcar Clight 8G"
+   "name": "Refresco Em Pó Maracujá Sem Açúcar Clight 8G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/140621.webp"
   }
  },
  {
@@ -447,11 +515,13 @@
   "kind": "separados",
   "a": {
    "market": "Joanin",
-   "name": "Refrigerante Sprite Original/ Sem Açúcar 2L"
+   "name": "Refrigerante Sprite Original/ Sem Açúcar 2L",
+   "image": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-04102026-15112026.jpg"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Refrigerante De Limão Sem Açúcar Sprite 2L"
+   "name": "Refrigerante De Limão Sem Açúcar Sprite 2L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/284738.webp"
   }
  },
  {
@@ -460,11 +530,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Macarrão com Ovos Adria Espaguete Furado 500g"
+   "name": "Macarrão com Ovos Adria Espaguete Furado 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2243141/g.jpg.jpg?v=639287955286670000"
   },
   "b": {
    "market": "Extra",
-   "name": "Macarrão com Ovos Conchinha Adria 500g"
+   "name": "Macarrão com Ovos Conchinha Adria 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/313/33163313.jpg"
   }
  },
  {
@@ -473,11 +545,13 @@
   "kind": "separados",
   "a": {
    "market": "Coop",
-   "name": "Bolo Pronto Panco Coco 300g"
+   "name": "Bolo Pronto Panco Coco 300g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245012/7891203059338.jpg?v=638665262186530000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Bolo De Chocoboy Panco 300G"
+   "name": "Bolo De Chocoboy Panco 300G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/873154.webp"
   }
  },
  {
@@ -486,11 +560,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Bolinho Bauducco Baunilha com Chocolate 40g"
+   "name": "Bolinho Bauducco Baunilha com Chocolate 40g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2283251/g.jpg.jpg?v=639289510895200000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Bolinho Baunilha Recheio Morango Bauducco 40G"
+   "name": "Bolinho Baunilha Recheio Morango Bauducco 40G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/683883.webp"
   }
  },
  {
@@ -499,11 +575,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Bolo Ana Maria Chocolate 70g"
+   "name": "Bolo Ana Maria Chocolate 70g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2257475/g.jpg.jpg?v=639288071730370000"
   },
   "b": {
    "market": "Extra",
-   "name": "Bolo Morango Recheio Morango Ana Maria Pacote 70g"
+   "name": "Bolo Morango Recheio Morango Ana Maria Pacote 70g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/443/33350443.png"
   }
  },
  {
@@ -512,11 +590,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Bolo Panco Formigueiro 300g"
+   "name": "Bolo Panco Formigueiro 300g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253340/g.jpg.jpg?v=639288033935730000"
   },
   "b": {
    "market": "Coop",
-   "name": "Bolo Pronto Panco Chocoboy 300g"
+   "name": "Bolo Pronto Panco Chocoboy 300g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245016/7891203059345--1-.jpg?v=638669286794200000"
   }
  },
  {
@@ -525,11 +605,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Bolo Panco Chocoboy 300g"
+   "name": "Bolo Panco Chocoboy 300g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2249783/g.jpg.jpg?v=639288005356670000"
   },
   "b": {
    "market": "Extra",
-   "name": "Bolo de Coco PANCO 300g"
+   "name": "Bolo de Coco PANCO 300g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/718/33369718.png"
   }
  },
  {
@@ -538,11 +620,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Coalhada Serramar Natural 170g"
+   "name": "Coalhada Serramar Natural 170g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2231845/g.jpg.jpg?v=639287877246670000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Coalhada Serramar Embalagem 170G"
+   "name": "Coalhada Serramar Embalagem 170G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/343329.webp"
   }
  },
  {
@@ -551,11 +635,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Refrigerante Sprite Original Pet 2L"
+   "name": "Refrigerante Sprite Original Pet 2L",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249113/56271.png?v=638941688458070000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Sprite Original 2L"
+   "name": "Sprite Original 2L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/206235.webp"
   }
  },
  {
@@ -564,11 +650,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Aveia Nestlé em Flocos Regulares 450g"
+   "name": "Aveia Nestlé em Flocos Regulares 450g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249605/7891000380994-Aveia_NESTL_Flocos_450g-Gr_os_e_Cereais-Nestl_--1-.jpg?v=638980355026700000"
   },
   "b": {
    "market": "Extra",
-   "name": "Aveia em Flocos Nestlé Caixa 450g Embalagem Econômica"
+   "name": "Aveia em Flocos Nestlé Caixa 450g Embalagem Econômica",
+   "image": "https://static.extramercado.com.br/img/uploads/1/668/33271668.png"
   }
  },
  {
@@ -577,11 +665,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Biscoito Tostines Coco 160g"
+   "name": "Biscoito Tostines Coco 160g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280306/g.jpg.jpg?v=639289496226730000"
   },
   "b": {
    "market": "Extra",
-   "name": "Biscoito Coco Nestlé Tostines Pacote 160g"
+   "name": "Biscoito Coco Nestlé Tostines Pacote 160g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/678/33243678.png"
   }
  },
  {
@@ -590,11 +680,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Haste Flexível Johnson's com 150 Unidades"
+   "name": "Haste Flexível Johnson's com 150 Unidades",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214888/7891010560812.jpg?v=637919524332030000"
   },
   "b": {
    "market": "Spani",
-   "name": "Hastes Flexíveis Johnson Cotonetes C/150"
+   "name": "Hastes Flexíveis Johnson Cotonetes C/150",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4f2fa88a-c0b3-11e7-a6aa-063e6e4e9f3a.jpg"
   }
  },
  {
@@ -603,11 +695,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Iogurte Natural Batavo Integral 1,15kg"
+   "name": "Iogurte Natural Batavo Integral 1,15kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2238468/g.jpg.jpg?v=639287923942730000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Iogurte Integral Natural Batavo Original 1,15kg Embalagem Econômica Garrafa"
+   "name": "Iogurte Integral Natural Batavo Original 1,15kg Embalagem Econômica Garrafa",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276259.webp"
   }
  },
  {
@@ -616,11 +710,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Fralda Descartável Infantil Huggies Supreme Care XXG 54 Unidades"
+   "name": "Fralda Descartável Infantil Huggies Supreme Care XXG 54 Unidades",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/248068/32907696.webp?v=638881105073330000"
   },
   "b": {
    "market": "Spani",
-   "name": "Fralda Descartável Huggies Máxima Proteção Xxg Com 54 Unidades"
+   "name": "Fralda Descartável Huggies Máxima Proteção Xxg Com 54 Unidades",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4c0fc130-f48e-4777-9126-c994b8978f78.jpg"
   }
  },
  {
@@ -629,11 +725,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Limpador Destac Laminados 750ml"
+   "name": "Limpador Destac Laminados 750ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251705/g.jpg.jpg?v=639288020981230000"
   },
   "b": {
    "market": "Spani",
-   "name": "Limpador De Piso Laminado Destac 750ml Com 20% De Desconto"
+   "name": "Limpador De Piso Laminado Destac 750ml Com 20% De Desconto",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/01aefdfd-c9ce-4eef-ae75-8bedce7de92c.jpg"
   }
  },
  {
@@ -642,11 +740,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Difusor de Aromas Coala Lavanda 100ml"
+   "name": "Difusor de Aromas Coala Lavanda 100ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2301197/g.jpg.jpg?v=639291190914000000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Difusor De Aromas Cereja Com Avelã Coala 100Ml"
+   "name": "Difusor De Aromas Cereja Com Avelã Coala 100Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261371.webp"
   }
  },
  {
@@ -655,11 +755,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Escova Dental Colgate Zig Zag Carvão Ativado 2 un"
+   "name": "Escova Dental Colgate Zig Zag Carvão Ativado 2 un",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2285186/g.jpg.jpg?v=639289521077800000"
   },
   "b": {
    "market": "Spani",
-   "name": "Escova Dental Colgate Zig Zag Charcoal Com 2"
+   "name": "Escova Dental Colgate Zig Zag Charcoal Com 2",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4904043b-8693-4841-ab4c-d0584acf9b15.jpg"
   }
  },
  {
@@ -668,11 +770,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Desodorizador Sanitário Pato Bloco para Caixa Acoplada Marine 40g | Com 2 Unidades"
+   "name": "Desodorizador Sanitário Pato Bloco para Caixa Acoplada Marine 40g | Com 2 Unidades",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/248173/7894650003756_99_1_1200_72_SRGB.png?v=638888950242870000"
   },
   "b": {
    "market": "Spani",
-   "name": "Bloco Sanitário Para Caixa Acoplada Pato Com 2 Unidades De 40g Com 50% De Desconto Marine"
+   "name": "Bloco Sanitário Para Caixa Acoplada Pato Com 2 Unidades De 40g Com 50% De Desconto Marine",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/3392b017-a93c-415d-9319-63900ae75a1e.jpg"
   }
  },
  {
@@ -681,11 +785,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Vinagre color  Vitalia 750ml"
+   "name": "Vinagre color  Vitalia 750ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/220985/7896048284792.jpg?v=637919563668870000"
   },
   "b": {
    "market": "Extra",
-   "name": "Vinagre Vitalia Álcool Colorido 750ml"
+   "name": "Vinagre Vitalia Álcool Colorido 750ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/232/33345232.jpg"
   }
  },
  {
@@ -694,11 +800,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Refrigerante Schin Itubaína 350ml"
+   "name": "Refrigerante Schin Itubaína 350ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246660/g.jpg.jpg?v=639287975825330000"
   },
   "b": {
    "market": "Spani",
-   "name": "Refrigerante Tutti Frutti 350ml Itubaína Retrô"
+   "name": "Refrigerante Tutti Frutti 350ml Itubaína Retrô",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/da0951ad-a35e-49aa-a994-aad627c4bf20.jpg"
   }
  },
  {
@@ -707,11 +815,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Cachaça Pitú 350ml"
+   "name": "Cachaça Pitú 350ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235563/g.jpg.jpg?v=639287904597400000"
   },
   "b": {
    "market": "Coop",
-   "name": "Aguardente Pitú Lata 350ml"
+   "name": "Aguardente Pitú Lata 350ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227420/7896607100044.jpg?v=638074199448470000"
   }
  },
  {
@@ -720,11 +830,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Café Solúvel Tradicional 3 Corações Sache 40g"
+   "name": "Café Solúvel Tradicional 3 Corações Sache 40g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245096/7896045103003.jpg?v=638672124195100000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Café Solúvel Tradicional 3 Corações 40G"
+   "name": "Café Solúvel Tradicional 3 Corações 40G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/255668.webp"
   }
  },
  {
@@ -733,11 +845,13 @@
   "kind": "separados",
   "a": {
    "market": "Coop",
-   "name": "Salsicha Hot Dog Seara 500g"
+   "name": "Salsicha Hot Dog Seara 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/253572/7894904005482-2.jpg?v=639153233258870000"
   },
   "b": {
    "market": "Extra",
-   "name": "Salsicha Defumada Seara 500g"
+   "name": "Salsicha Defumada Seara 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/129/33348129.png"
   }
  },
  {
@@ -746,11 +860,13 @@
   "kind": "ean",
   "a": {
    "market": "Coop",
-   "name": "Aparelho Depilatório Gillette Venus Simply 3"
+   "name": "Aparelho Depilatório Gillette Venus Simply 3",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/222643/7500435004220.jpg?v=637919573942530000"
   },
   "b": {
    "market": "Spani",
-   "name": "Aparelho Descartável Para Depilar Venus Simply Gillette Suave Leve 4 Pague 3 Unidades"
+   "name": "Aparelho Descartável Para Depilar Venus Simply Gillette Suave Leve 4 Pague 3 Unidades",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/c720a5e8-f333-4246-b798-758af72c49f0.jpg"
   }
  },
  {
@@ -759,11 +875,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Refrigerante Fanta Laranja 200ml"
+   "name": "Refrigerante Fanta Laranja 200ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253615/g.jpg.jpg?v=639288035734000000"
   },
   "b": {
    "market": "Extra",
-   "name": "Refrigerante Laranja Fanta Garrafa 200ml"
+   "name": "Refrigerante Laranja Fanta Garrafa 200ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/294/33330294.png"
   }
  },
  {
@@ -772,11 +890,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Iogurte Natural Danone Desnatado 160g"
+   "name": "Iogurte Natural Danone Desnatado 160g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2262030/g.jpg.jpg?v=639288108185270000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Iogurte Natural Mel Danone 160G"
+   "name": "Iogurte Natural Mel Danone 160G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/239439.webp"
   }
  },
  {
@@ -785,11 +905,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Achocolatado em Pó Toddy Light Pacote 280g"
+   "name": "Achocolatado em Pó Toddy Light Pacote 280g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240578/7892840822743.jpg?v=638536477087830000"
   },
   "b": {
    "market": "Extra",
-   "name": "Achocolatado Em Pó Light Toddy 280G + Econômica"
+   "name": "Achocolatado Em Pó Light Toddy 280G + Econômica",
+   "image": "https://static.extramercado.com.br/img/uploads/1/389/33347389.png"
   }
  },
  {
@@ -798,11 +920,13 @@
   "kind": "juntos",
   "a": {
    "market": "Extra",
-   "name": "Cerveja Pilsen Antarctica Original Lata 269ml"
+   "name": "Cerveja Pilsen Antarctica Original Lata 269ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/942/33341942.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Cerveja Antarctica Original lata 269Ml"
+   "name": "Cerveja Antarctica Original lata 269Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/241115.webp"
   }
  },
  {
@@ -811,11 +935,13 @@
   "kind": "juntos",
   "a": {
    "market": "Extra",
-   "name": "Refrigerante Uva Sukita Garrafa 2l"
+   "name": "Refrigerante Uva Sukita Garrafa 2l",
+   "image": "https://static.extramercado.com.br/img/uploads/1/150/33358150.png"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Refrigerante De Uva Sukita Pet 2L"
+   "name": "Refrigerante De Uva Sukita Pet 2L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/714174.webp"
   }
  },
  {
@@ -824,11 +950,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Café Pilão Extra Forte Almofada 500g"
+   "name": "Café Pilão Extra Forte Almofada 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246485/g.jpg.jpg?v=639287974846200000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Café Extra Forte Pilão 500G"
+   "name": "Café Extra Forte Pilão 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/335195.webp"
   }
  },
  {
@@ -837,11 +965,13 @@
   "kind": "juntos",
   "a": {
    "market": "Atacadão",
-   "name": "Refrigerante Coca-Cola Sem açúcar 200ml"
+   "name": "Refrigerante Coca-Cola Sem açúcar 200ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2253316/g.jpg.jpg?v=639288033749300000"
   },
   "b": {
    "market": "Extra",
-   "name": "Refrigerante sem Açúcar Coca-Cola Garrafa 200ml"
+   "name": "Refrigerante sem Açúcar Coca-Cola Garrafa 200ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/868/33331868.png"
   }
  },
  {
@@ -850,11 +980,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Cerveja Heineken One Way 600ml"
+   "name": "Cerveja Heineken One Way 600ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246317/g.jpg.png?v=639287973825130000"
   },
   "b": {
    "market": "Spani",
-   "name": "Cerveja Premium Heineken 600ml"
+   "name": "Cerveja Premium Heineken 600ml",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/a59a673a-09fe-4db3-9975-6b6dcf661141.jpg"
   }
  },
  {
@@ -863,11 +995,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Desodorante Aerossol Axe Apollo 150ml"
+   "name": "Desodorante Aerossol Axe Apollo 150ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2258510/g.jpg.jpg?v=639288083142600000"
   },
   "b": {
    "market": "Coop",
-   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml"
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214642/7791293025780.jpg?v=637919522876030000"
   }
  },
  {
@@ -876,11 +1010,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Azeite de Oliva Borges Extra Virgem 500ml"
+   "name": "Azeite de Oliva Borges Extra Virgem 500ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2233561/g.jpg.jpg?v=639287888570430000"
   },
   "b": {
    "market": "Coop",
-   "name": "Azeite de Oliva Borges Extravirgem Vidro 500ml"
+   "name": "Azeite de Oliva Borges Extravirgem Vidro 500ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216326/8410179100036.jpg?v=637919532858200000"
   }
  },
  {
@@ -889,11 +1025,13 @@
   "kind": "separados",
   "a": {
    "market": "Coop",
-   "name": "Salgadinho de Trigo Pimenta Mexicana Torcida 100g"
+   "name": "Salgadinho de Trigo Pimenta Mexicana Torcida 100g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/224201/7892840817107.jpg?v=637919583745300000"
   },
   "b": {
    "market": "Extra",
-   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g"
+   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/875/33339875.png"
   }
  },
  {
@@ -902,11 +1040,13 @@
   "kind": "separados",
   "a": {
    "market": "Coop",
-   "name": "Tempero Ideal Para Arroz Sazón 60g"
+   "name": "Tempero Ideal Para Arroz Sazón 60g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216169/7891132000449.jpg?v=637919531968500000"
   },
   "b": {
    "market": "Extra",
-   "name": "Tempero para Arroz Branco SAZON 60g"
+   "name": "Tempero para Arroz Branco SAZON 60g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/265/33323265.png"
   }
  },
  {
@@ -915,11 +1055,13 @@
   "kind": "juntos",
   "a": {
    "market": "Coop",
-   "name": "Salsicha Tipo Viena Perdigão 500g"
+   "name": "Salsicha Tipo Viena Perdigão 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/218989/7891515742065.jpg?v=637919548597830000"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Salsicha Viena Perdigão 500g"
+   "name": "Salsicha Viena Perdigão 500g",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/165754.webp"
   }
  },
  {
@@ -928,11 +1070,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Limpador Multiuso Veja Gold Original 750ml Embalagem Econômica"
+   "name": "Limpador Multiuso Veja Gold Original 750ml Embalagem Econômica",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2254072/g.jpg.png?v=639288041779570000"
   },
   "b": {
    "market": "Extra",
-   "name": "Limpador Multiuso Original Veja Gold Squeeze 750ml Embalagem Econômica"
+   "name": "Limpador Multiuso Original Veja Gold Squeeze 750ml Embalagem Econômica",
+   "image": "https://static.extramercado.com.br/img/uploads/1/104/33375104.png"
   }
  },
  {
@@ -941,11 +1085,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Cerveja Heineken Zero 330ml"
+   "name": "Cerveja Heineken Zero 330ml",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2259390/g.jpg.png?v=639288090538200000"
   },
   "b": {
    "market": "Coop",
-   "name": "Cerveja Heineken Zero Álcool Long Neck 330ml"
+   "name": "Cerveja Heineken Zero Álcool Long Neck 330ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/223951/7896045506040.jpg?v=637919582370100000"
   }
  },
  {
@@ -954,11 +1100,13 @@
   "kind": "separados",
   "a": {
    "market": "Atacadão",
-   "name": "Gelatina Royal Uva 25g"
+   "name": "Gelatina Royal Uva 25g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2248681/g.jpg.png?v=639287997578300000"
   },
   "b": {
    "market": "Extra",
-   "name": "Gelatina em Pó Royal Morango 25g"
+   "name": "Gelatina em Pó Royal Morango 25g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/123/33357123.png"
   }
  },
  {
@@ -967,11 +1115,13 @@
   "kind": "ean",
   "a": {
    "market": "Atacadão",
-   "name": "Lava Roupas em Pó Urca Maxx 2,2kg"
+   "name": "Lava Roupas em Pó Urca Maxx 2,2kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2297617/g.jpg.jpg?v=639290368712430000"
   },
   "b": {
    "market": "Coop",
-   "name": "Lava Roupa Em Pó Concentrado Perfumação Intensa Maxx Urca 2.2Kg"
+   "name": "Lava Roupa Em Pó Concentrado Perfumação Intensa Maxx Urca 2.2Kg",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249911/nq -5-.png?v=639034132841100000"
   }
  }
 ]

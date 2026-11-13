@@ -12,6 +12,11 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const IN = path.join(ROOT, 'data/extraido');
 const OUT = path.join(ROOT, 'data/rotulos');
 const N = Number(process.argv[2] || 25);
+// --sem-ean: só pares hoje separados em que pelo menos um lado não tem EAN (Nagumo, Semar, encartes),
+// que é onde o juiz faz diferença
+const SEM_EAN = process.argv.includes('--sem-ean');
+let labeled = new Set();
+try { labeled = new Set(JSON.parse(fs.readFileSync(path.join(OUT, 'rotulos.json'), 'utf8')).map((x) => x.id)); } catch { /* primeira rodada */ }
 const offers = [];
 for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !/encartes|meta|verificacao|leitura/.test(x))) {
   const a = JSON.parse(fs.readFileSync(path.join(IN, f), 'utf8'));
@@ -43,7 +48,7 @@ for (const idx of buckets.values()) {
     const same = gOf.has(a) && gOf.get(a) === gOf.get(b);
     const eanSame = offers[a].ean && offers[a].ean === offers[b].ean;
     if (same && !eanSame) joinedSoft.push({ a, b, d });
-    else if (!same && r <= 1.5) nearMiss.push({ a, b, d });
+    else if (!same && r <= 1.5 && !(SEM_EAN && offers[a].ean && offers[b].ean)) nearMiss.push({ a, b, d });
   }
 }
 for (const g of groups) {
@@ -58,6 +63,7 @@ for (const g of groups) {
 const pick = (list, kind, why) => {
   const seen = new Map(), out = [];
   for (const p of shuffle(list)) {
+    if (labeled.has(pairId(p.a, p.b))) continue; // já rotulado numa rodada anterior
     const key = p.d.sort().join(' ');
     if ((seen.get(key) ?? 0) >= 2) continue;
     seen.set(key, (seen.get(key) ?? 0) + 1);
@@ -66,11 +72,13 @@ const pick = (list, kind, why) => {
   }
   return out;
 };
-const pairs = [
-  ...pick(joinedSoft, 'juntos', (p) => `hoje JUNTOS; diferem em: ${p.d.join(', ')}`),
-  ...pick(nearMiss, 'separados', (p) => `hoje SEPARADOS; diferem em: ${p.d.join(', ')}`),
-  ...pick(eanOdd, 'ean', (p) => `hoje JUNTOS pelo código de barras; nomes diferem em: ${p.d.slice(0, 6).join(', ')}`),
-];
+const pairs = SEM_EAN
+  ? pick(nearMiss, 'separados', (p) => `hoje SEPARADOS; diferem em: ${p.d.join(', ')}`)
+  : [
+    ...pick(joinedSoft, 'juntos', (p) => `hoje JUNTOS; diferem em: ${p.d.join(', ')}`),
+    ...pick(nearMiss, 'separados', (p) => `hoje SEPARADOS; diferem em: ${p.d.join(', ')}`),
+    ...pick(eanOdd, 'ean', (p) => `hoje JUNTOS pelo código de barras; nomes diferem em: ${p.d.slice(0, 6).join(', ')}`),
+  ];
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'candidatos.json'), JSON.stringify(shuffle(pairs), null, 1));
 console.log(`candidatos: ${pairs.length} (juntos ${joinedSoft.length}, separados ${nearMiss.length}, ean ${eanOdd.length} no total)`);

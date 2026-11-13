@@ -80,13 +80,15 @@ jobs:
           node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json
 
       # Juiz de "mesmo produto?" (Gemini grátis): primeiro a prova com os pares rotulados pelo Rafael;
-      # se acertar >= 95% e mais que a regra, julga pares duvidosos (cada par uma vez só, com teto por rodada).
+      # se acertar >= 95% e mais que a regra, julga pares duvidosos (com as fotos; cada par uma vez só, com teto por rodada).
       - name: Juiz de produtos iguais
         working-directory: server
         continue-on-error: true
         timeout-minutes: 25
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # chave só do juiz (outro projeto no Google AI Studio = cota própria); sem ela, usa a do leitor
+          GEMINI_JUIZ_KEY: ${{ secrets.GEMINI_JUIZ_KEY }}
         run: node judge.mjs
 
       - name: Guardar dados coletados
