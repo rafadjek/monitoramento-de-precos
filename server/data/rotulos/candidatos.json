@@ -1,542 +1,236 @@
 [
  {
-  "id": "32131f52eb",
+  "id": "e25996d2b5",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: avela, chocolate, festa",
+  "why": "hoje SEPARADOS; diferem em: lata, soluvel",
   "diff": [
-   "avela",
-   "chocolate",
-   "festa"
+   "lata",
+   "soluvel"
   ],
   "a": {
-   "market": "Atacadão",
-   "name": "Mistura para Bolo Dona Benta Chocolate com Avelã 450g",
-   "price": 8.49,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251505/g.jpg.jpg?v=639288019506500000",
-   "ean": "7896005216927"
+   "market": "Coop",
+   "name": "Café Solúvel Melitta Clássico com Leite Lata 200g",
+   "price": 15.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245061/7891021007573.jpg?v=638670389062300000",
+   "ean": "7891021007573"
   },
   "b": {
-   "market": "Semar",
-   "name": "Mistura para Bolo Dona Benta Festa 450g",
-   "price": 8.99,
-   "image": "https://edge.osuper.com.br/QvsXNJ2FeCIwVXkbdIHOT55wVh4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d91ae25d32fd05/87598-e9cd1971.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "8c751aa455",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: sabore",
-  "diff": [
-   "sabore"
-  ],
-  "a": {
-   "market": "Assaí",
-   "name": "BEBIDA ENERGÉTICA BALY SABORES",
-   "price": 5.99,
-   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Bebida Energética Baly 473ml Tradicional",
-   "price": 5.49,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/fceaff71-13bd-4b17-9137-536ba45a8ce8.jpg",
-   "ean": "7898080663733"
-  }
- },
- {
-  "id": "dac2a72659",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: lichia, pessego",
-  "diff": [
-   "lichia",
-   "pessego"
-  ],
-  "a": {
    "market": "Nagumo",
-   "name": "Chá Ice Tea Leão Pêssego Zero 1,5L",
-   "price": 8.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/822718.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Cha Leão Ice Tea Zero Lichia 1,5l",
-   "price": 9.39,
-   "image": "https://edge.osuper.com.br/Dk2ZQEHNGBPBCZznTfSHztwYpUg=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d418e15d31f906/534935-2e47c0be.png",
+   "name": "Café Com Leite Melitta 200G",
+   "price": 16.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/387156.webp",
    "ean": null
   }
  },
  {
-  "id": "8e714aea25",
+  "id": "00a2ec29b5",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: barra",
+  "why": "hoje SEPARADOS; diferem em: lata",
   "diff": [
-   "barra"
-  ],
-  "a": {
-   "market": "Semar",
-   "name": "Sabonete Barra Dove Karité e Baunilha 90g",
-   "price": 5.59,
-   "image": "https://edge.osuper.com.br/9bAlrBD2D4sCyA3GNGSLVj7BDAc=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417885ddc18e45637fd05/12887-ff41c492.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Sabonete Dove 90g Karité E Baunilha",
-   "price": 3.99,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/473c8924-65b2-417b-b2b2-5118d71d2a2a.jpg",
-   "ean": "7891150019560"
-  }
- },
- {
-  "id": "98a169feb9",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: caseiro, italiano, salada",
-  "diff": [
-   "caseiro",
-   "italiano",
-   "salada"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Molho para Salada Kisabor Caseiro 240ml",
-   "price": 6.49,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2284399/g.jpg.png?v=639289516876730000",
-   "ean": "7898416524707"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Molho Kisabor Italiano 240ml",
-   "price": 8.99,
-   "image": "https://edge.osuper.com.br/V5fTx0NuuDfGY-jKP0h5s2FMTpY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8d59da1de75b35f904/150225-62946f67.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "8a8bb91d14",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: diet, lata",
-  "diff": [
-   "diet",
    "lata"
   ],
   "a": {
    "market": "Nagumo",
-   "name": "Água Tônica Antarctica 350Ml Lata",
-   "price": 3.69,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/273206.webp",
+   "name": "Cappuccino Solúvel Tradicional Melitta 200G",
+   "price": 18.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/207409.webp",
    "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Água Tônica Diet Antarctica 350ml",
-   "price": 3.35,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/acd8d9d9-fd56-482b-8df7-f20bd5849291.jpg",
-   "ean": "7891991000888"
-  }
- },
- {
-  "id": "8febe5c1c3",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: aurogget, aurogguet, kids",
-  "diff": [
-   "aurogget",
-   "aurogguet",
-   "kids"
-  ],
-  "a": {
-   "market": "Extra",
-   "name": "Aurogguets Queijo Aurora 275g",
-   "price": 9.39,
-   "image": "https://static.extramercado.com.br/img/uploads/1/720/33346720.png",
-   "ean": "7891164110727"
   },
   "b": {
    "market": "Semar",
-   "name": "Auroggets Aurora Kids Queijo 275g",
-   "price": 9.49,
-   "image": "https://edge.osuper.com.br/ZgU1kxpg5sMSyK-vRmk_FTtTY0o=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417885ed819e45f35fe0d/528662-e5cab1b5.png",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp",
    "ean": null
   }
  },
  {
-  "id": "89986f2c37",
+  "id": "8ae23387a5",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: light",
+  "why": "hoje SEPARADOS; diferem em: avela, chocolate, sabor",
   "diff": [
-   "light"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Requeijão Tradicional Cremoso Vigor 400G",
-   "price": 19.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/257946.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Requeijão Cremoso Pote 400g Vigor Light",
-   "price": 16.99,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/f8572ba3-0670-4940-b7e7-424326c0c0ef.jpg",
-   "ean": "7896625211395"
-  }
- },
- {
-  "id": "5c9635f522",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: 6, 8, pack",
-  "diff": [
-   "6",
-   "8",
-   "pack"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Sabonete Dove 90G Pele Sensível C/6",
-   "price": 29.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261152.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Pack Sabonete Dove 90g Com 8 Unidades Pele Sensível",
-   "price": 34.9,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/9c411562-2013-4ac1-a4fa-b00c951ada01.jpg",
-   "ean": "7891150095625"
-  }
- },
- {
-  "id": "014f4cba78",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: japone, verde",
-  "diff": [
-   "japone",
-   "verde"
-  ],
-  "a": {
-   "market": "Semar",
-   "name": "Arroz Japonês Momiji Verde Tipo 1 5 Kg",
-   "price": 49.9,
-   "image": "https://edge.osuper.com.br/ylwcI9JwhYzzJxBmFGMJsJ4cWMs=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/d0b6016e-ArrozJaponsMomijiVerdeTipo15Kg_5221052a-bc82-4bdb-b4e5-1e67c903b094.jpg.jpeg",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Arroz Tipo 1 Momiji 5kg",
-   "price": 50.29,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/5221052a-bc82-4bdb-b4e5-1e67c903b094.jpg",
-   "ean": "7896006701156"
-  }
- },
- {
-  "id": "9be3de853f",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: lavanda, perfumado",
-  "diff": [
-   "lavanda",
-   "perfumado"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Desinfetante Pinho Sol Perfumado Lavanda 500ml",
-   "price": 8.5,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2242925/g.jpg.jpg?v=639287954219700000",
-   "ean": "7891024193006"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Desinfetante Pinho Sol Original Frasco 500ml",
-   "price": 8.99,
-   "image": "https://edge.osuper.com.br/z0DbCbfg4w5pjWeY_CBVziF4Fqo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819ec5b33fb07/16661-3e66aeca.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "65c65fe042",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: economica, empanada, empanado",
-  "diff": [
-   "economica",
-   "empanada",
-   "empanado"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Coxinha da Asa Seara Empanada 900g",
-   "price": 35.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2294392/g.jpg.jpg?v=639290351498630000",
-   "ean": "7894904293155"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Coxinha Asa Tradicional Empanado Seara 900g Embalagem Econômica",
-   "price": 44.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261871.webp",
-   "ean": null
-  }
- },
- {
-  "id": "b7778d1b7c",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: milho",
-  "diff": [
-   "milho"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Pão Artesanale Panco Milho 350g",
-   "price": 9.29,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2237638/g.jpg.jpg?v=639287918636930000",
-   "ean": "7891203061683"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Pao Panco Artesanale Original 350g",
-   "price": 10.98,
-   "image": "https://edge.osuper.com.br/oJzSM_ZZiNmSVj86H0jpvPyoJJI=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/acd0ad23-PaoPancoArtesanaleOriginal350g_3c575493-726d-4531-b721-b28d30417a07.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "7a0de24e67",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: biscoito, biscotti, sabor",
-  "diff": [
-   "biscoito",
-   "biscotti",
+   "avela",
+   "chocolate",
    "sabor"
   ],
   "a": {
-   "market": "Atacadão",
-   "name": "Biscoito Papapá Banana e Cacau 60g",
-   "price": 11.49,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2231693/g.jpg.jpg?v=639287876195470000",
-   "ean": "7898969895361"
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Tradicional 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238435/7891021007078.jpg?v=638490684740030000",
+   "ean": "7891021007078"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Biscotti Sabor Banana E Cacau Papapa 60G",
-   "price": 15.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/262862.webp",
+   "name": "Cappuccino Solúvel Sabor Chocolate Com Avelã Melitta 200G",
+   "price": 18.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243937.webp",
    "ean": null
   }
  },
  {
-  "id": "ee36d517e7",
+  "id": "0af58bdbad",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: brownie, exceto, festa",
+  "why": "hoje SEPARADOS; diferem em: avela, lata",
   "diff": [
-   "brownie",
-   "exceto",
-   "festa"
-  ],
-  "a": {
-   "market": "Joanin",
-   "name": "Mistura Bolo Italac (Exceto Brownie) 400g",
-   "price": 4.99,
-   "image": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-04102026-15112026.jpg",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Mistura De Bolo Italac 400g Festa",
-   "price": 5.29,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/a5598459-5bb3-4014-a3eb-71c90bc47495.jpg",
-   "ean": "7898080641595"
-  }
- },
- {
-  "id": "37ccce8bbe",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: aipim, chocolate",
-  "diff": [
-   "aipim",
-   "chocolate"
-  ],
-  "a": {
-   "market": "Semar",
-   "name": "Mistura Para Bolo de Chocolate Italac 400g",
-   "price": 5.99,
-   "image": "https://edge.osuper.com.br/0bQj109l6aUzr6Sch6ghYgp31DI=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8950dc1ee15e37f30d/134915-b687c0ef.jpg",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Mistura De Bolo Italac 400g Aipim",
-   "price": 5.29,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/2218464b-127d-4e85-bd64-b065226d1375.jpg",
-   "ean": "7898080642172"
-  }
- },
- {
-  "id": "78cb7c3cfd",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: forma, nobre, sovado",
-  "diff": [
-   "forma",
-   "nobre",
-   "sovado"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Pão Sovado Kim Pacote 500G",
-   "price": 14.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/866651.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Pão De Forma Kim Nobre Original 500g",
-   "price": 11.99,
-   "image": "https://edge.osuper.com.br/kh1KZHcSZKQqzVDyOxg_p-0BZHg=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28411805fde18e55c3bff02/159346-4682cabf.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "ce00fcfb15",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: lavanda",
-  "diff": [
-   "lavanda"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Desinfetante Pinho Sol Original 1L",
-   "price": 14.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2242620/g.jpg.png?v=639287952501730000",
-   "ean": "7891024194607"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Desinfetante Pinho Sol Lavanda Frasco 1l",
-   "price": 19.98,
-   "image": "https://edge.osuper.com.br/TJK0YHzMm7bSKHVqu3uzBWU6e5w=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad818e65834f205/298667-8340b769.webp",
-   "ean": null
-  }
- },
- {
-  "id": "59364fa49d",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: linguine, parafuso, semola",
-  "diff": [
-   "linguine",
-   "parafuso",
-   "semola"
-  ],
-  "a": {
-   "market": "Extra",
-   "name": "Macarrão de Sêmola com Ovos Parafuso Petybon Pacote 500g",
-   "price": 4.49,
-   "image": "https://static.extramercado.com.br/img/uploads/1/479/33377479.png",
-   "ean": "7896005214336"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Macarrão Linguine Petybon Com Ovos 500g",
-   "price": 3.89,
-   "image": "https://edge.osuper.com.br/z3g1AJj9oduLU-ATpA0OGIyX50Y=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/6de0c974-MacarroLinguinePetybonComOvos500g_f5bd451f-181f-48b7-af87-921b3b69ad9e.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "9d172251c8",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: acucar, garrafa, zero",
-  "diff": [
-   "acucar",
-   "garrafa",
-   "zero"
+   "avela",
+   "lata"
   ],
   "a": {
    "market": "Coop",
-   "name": "Refrigerante Guaraná Antarctica Zero Açúcar 2L",
-   "price": 9.99,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/215366/7891991001373.jpg?v=637919527239770000",
-   "ean": "7891991001373"
+   "name": "Cappuccino Solúvel Melitta Chocolate e Avelã 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229341/7896348300840.jpg?v=638074202912300000",
+   "ean": "7896348300840"
   },
   "b": {
-   "market": "Nagumo",
-   "name": "Refrigerante Guaraná Antarctica Garrafa 2L",
-   "price": 9.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/273251.webp",
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Chocolate Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/tcYP2bg3STYySAqo4eW5Njg9vBo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55830f205/256902-3b85cf51.webp",
    "ean": null
   }
  },
  {
-  "id": "4d652361e5",
+  "id": "9578ce1702",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: australiano, forma, integral",
+  "why": "hoje SEPARADOS; diferem em: extraforte",
   "diff": [
-   "australiano",
-   "forma",
-   "integral"
+   "extraforte"
   ],
   "a": {
    "market": "Extra",
-   "name": "Pão de Forma Original Wickbold Do Forno Pacote 500g",
-   "price": 12.99,
-   "image": "https://static.extramercado.com.br/img/uploads/1/129/33332129.png",
-   "ean": "7896066301419"
+   "name": "Café Torrado e Moído Extraforte Melitta Caixa 500g",
+   "price": 33.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/782/33374782.png",
+   "ean": "7891021006934"
   },
   "b": {
-   "market": "Nagumo",
-   "name": "Pão Australiano Integral Do Forno Wickbold 500G",
-   "price": 14.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/241029.webp",
+   "market": "Semar",
+   "name": "Café Torrado e Moído Tradicional Melitta Caixa 500g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/59P3OskcK-Vi8KCrNJHj_YNlENo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55933f900/14488-b5646409.webp",
    "ean": null
   }
  },
  {
-  "id": "f8366bff48",
+  "id": "6df2a67032",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: congelada, congelado",
+  "why": "hoje SEPARADOS; diferem em: extra, forte",
   "diff": [
-   "congelada",
-   "congelado"
+   "extra",
+   "forte"
   ],
   "a": {
-   "market": "Atacadão",
-   "name": "Lasanha Seara Congelada Bolonhesa 600g",
-   "price": 15.8,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2242555/g.jpg.jpg?v=639287952144500000",
-   "ean": "7894904082704"
+   "market": "Extra",
+   "name": "Café Torrado e Moído Tradicional Melitta Pacote 500g",
+   "price": 33.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/133/33379133.png",
+   "ean": "7891021005043"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Lasanha Bolonhesa Seara 600g Congelado",
-   "price": 18.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/849982.webp",
+   "name": "Café Torrado E Moído Extra Forte Melitta 500G",
+   "price": 26.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/223414.webp",
    "ean": null
   }
  },
  {
-  "id": "515fa83d73",
+  "id": "a77ea1b8dc",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: aerosol, aventura, refrescante",
+  "why": "hoje SEPARADOS; diferem em: doce, leite",
   "diff": [
-   "aerosol",
-   "aventura",
-   "refrescante"
+   "doce",
+   "leite"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Doce de Leite Lata 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/243074/7896348301496.jpg?v=638588208855930000",
+   "ean": "7896348301496"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "a9754c1b6c",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: cerrado",
+  "diff": [
+   "cerrado"
   ],
   "a": {
    "market": "Nagumo",
-   "name": "Desodorante Aerosol Aventura Old Spice 250ml Leve Mais Pague Menos",
-   "price": 25.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/269255.webp",
+   "name": "Café Melitta Regiões Brasileiras Cerrado 250G",
+   "price": 23.5,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/534154.webp",
    "ean": null
   },
   "b": {
    "market": "Semar",
-   "name": "Desodorante Old Spice Refrescante Leve Mais Pague Menos 250ml",
-   "price": 25.99,
-   "image": "https://edge.osuper.com.br/Doe5dfNo71_NGUGw1ouU9ZRoDQk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0ef8d168d5bd91ae15636f207/358210-ed4616cf.webp",
+   "name": "Café Melitta regiões brasileiras 250g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/17PUN0JGCLfpCBkDUR_efpwhJeo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55e36ff04/313829-e6b0b5c1.webp",
    "ean": null
   }
  },
  {
-  "id": "380e762ee4",
+  "id": "9d82bf7d56",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: extra, forte, sachet",
+  "diff": [
+   "extra",
+   "forte",
+   "sachet"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Extra Forte Melitta 40g",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250239.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Soluvel Melitta Tradicional Sachet 40g",
+   "price": 8.99,
+   "image": "https://edge.osuper.com.br/YtFE_kA9USitaXef1ddHxZzU-ZQ=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55f3af200/256598-fdb55eb1.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "a046e7b636",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: extraforte, moido, torrado",
+  "diff": [
+   "extraforte",
+   "moido",
+   "torrado"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Melitta Extraforte 500g",
+   "price": 22.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251820/g.jpg.png?v=639288021748100000",
+   "ean": "7891021005067"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído Tradicional Melitta Caixa 500g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/59P3OskcK-Vi8KCrNJHj_YNlENo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55933f900/14488-b5646409.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "8aeb16ac78",
   "kind": "separados",
   "why": "hoje SEPARADOS; diferem em: sabor",
   "diff": [
@@ -544,557 +238,185 @@
   ],
   "a": {
    "market": "Coop",
-   "name": "Iogurte Zero Sabor Morango Danone 1,2Kg",
-   "price": 21.59,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/252953/7891025125372 - IOG LIQ ZERO MORANGO 1200G DANONE -2-.png?v=639111026145170000",
-   "ean": "7891025125372"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Iogurte Danone Morango Zero 1,2kg",
-   "price": 21.89,
-   "image": "https://edge.osuper.com.br/YxqAaoUN6rlILo8_jcKlnJ4z-wc=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad919e75a31fc07/317138-9c550782.webp",
-   "ean": null
-  }
- },
- {
-  "id": "4b068ef959",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: abacaxi, coco",
-  "diff": [
-   "abacaxi",
-   "coco"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Bolo Panco Abacaxi 300g",
-   "price": 10.69,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2249781/g.jpg.jpg?v=639288005351370000",
-   "ean": "7891203059321"
+   "name": "Cappuccino Solúvel Melitta Chocolate e Avelã 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229341/7896348300840.jpg?v=638074202912300000",
+   "ean": "7896348300840"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Bolo Coco Panco 300G",
-   "price": 11.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/873130.webp",
+   "name": "Cappuccino Solúvel Sabor Chocolate Com Avelã Melitta 200G",
+   "price": 18.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243937.webp",
    "ean": null
   }
  },
  {
-  "id": "59b8763eab",
+  "id": "97a91d33a4",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: platinum, seduction",
+  "why": "hoje SEPARADOS; diferem em: granulado, sachet",
   "diff": [
-   "platinum",
-   "seduction"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Sabonete Senador Seduction 130g",
-   "price": 7.69,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2242171/g.jpg.jpg?v=639287949692330000",
-   "ean": "7891134006654"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Sabonete Senador Platinum Unidade 130G",
-   "price": 10.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/681384.webp",
-   "ean": null
-  }
- },
- {
-  "id": "f392cde3ae",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: 6, bacon, carne",
-  "diff": [
-   "6",
-   "bacon",
-   "carne"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Caldo Knorr Bacon 57g",
-   "price": 2.88,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2301455/g.jpg.jpg?v=639291192219100000",
-   "ean": "7894000033860"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Caldo de Carne Knorr 57g 6 Unidades",
-   "price": 3.19,
-   "image": "https://edge.osuper.com.br/nvmREwGmYZwyJYyM0cK3NdRtgNw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/c8f3a77c-78911500123180.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "4bd88b145b",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: sanduiche",
-  "diff": [
-   "sanduiche"
-  ],
-  "a": {
-   "market": "Coop",
-   "name": "Hot Pocket X Burguer Sadia 145g",
-   "price": 10.19,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/214894/7893000027701.jpg?v=637919524367400000",
-   "ean": "7893000027701"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Sanduíche Hot Pocket X-Burguer Sadia 145g",
-   "price": 10.99,
-   "image": "https://edge.osuper.com.br/FNpMuQAzR2siiM3WXasEee8ilm8=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc18e75835fb04/502708-a701586e.png",
-   "ean": null
-  }
- },
- {
-  "id": "fa18ece022",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: roupa, tecido",
-  "diff": [
-   "roupa",
-   "tecido"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Amaciante Ype Romance da Primavera Roupa e Tecidos Concentrado 1.5L.",
-   "price": 28.9,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/271935.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Amaciante Ype Concentrado Romance de Primavera 1,5l",
-   "price": 32.99,
-   "image": "https://edge.osuper.com.br/B4MBGHx8hRHcld1o2VYtfmDRNuc=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/a10b5571-AmacianteYpeConcentradoRomancedePrimavera15l_f3721bb2-f515-4dea-8894-3065d064f826.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "15afc164f3",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: 1, sabor, tipo",
-  "diff": [
-   "1",
-   "sabor",
-   "tipo"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "FEIJAO PRETO MAXIMO 1KG",
-   "price": 6.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/598927.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Feijão Preto Tipo 1 Sabor Máximo 1 Kg",
-   "price": 7.69,
-   "image": "https://edge.osuper.com.br/uHmOER6rCNz7fOlR_UjBN5wgLGU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/8d8507fe-FeijoPretoTipo1SaborMximo1Kg_9101869b-4010-4020-995e-0c58fcd62c46.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "b69497865b",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: citru, lavanda, limao",
-  "diff": [
-   "citru",
-   "lavanda",
-   "limao"
-  ],
-  "a": {
-   "market": "Coop",
-   "name": "Desinfetante Pinho Sol Citrus Limão 1L",
-   "price": 19.99,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/216821/7891024195604.jpg?v=637919535649030000",
-   "ean": "7891024195604"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Desinfetante Pinho Sol Lavanda Frasco 1l",
-   "price": 19.98,
-   "image": "https://edge.osuper.com.br/TJK0YHzMm7bSKHVqu3uzBWU6e5w=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad818e65834f205/298667-8340b769.webp",
-   "ean": null
-  }
- },
- {
-  "id": "8fc62c9290",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: abacaxi, caju, garrafa",
-  "diff": [
-   "abacaxi",
-   "caju",
-   "garrafa"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Suco Concentrado Maguary Abacaxi 500ml",
-   "price": 5.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2233344/g.jpg.jpg?v=639287886718500000",
-   "ean": "7896000557056"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Suco concentrado de caju Maguary garrafa 500ml",
-   "price": 5.49,
-   "image": "https://edge.osuper.com.br/SvFgisRjR4G7b2uRU6-831dVVKU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958dc1de05b31fd0c/252061-55120dd0.webp",
-   "ean": null
-  }
- },
- {
-  "id": "7248c31bf0",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: levemente, picante",
-  "diff": [
-   "levemente",
-   "picante"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Pão De Alho Levemente Picante Santa Massa 400G",
-   "price": 16.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/313964.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Pão De Alho Santa Massa 400g",
-   "price": 18.34,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/0fd8b608-0a63-4787-a6b0-44bb67c073da.jpg",
-   "ean": "7898067340404"
-  }
- },
- {
-  "id": "abfedd0e9a",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: alecrim, azeite, coco",
-  "diff": [
-   "alecrim",
-   "azeite",
-   "coco"
-  ],
-  "a": {
-   "market": "Semar",
-   "name": "Pao Panco Artesanale Alecrim & Azeite 350g",
-   "price": 10.98,
-   "image": "https://edge.osuper.com.br/sIy7zl31uFYfn7n6-0IlfSmm0ms=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/41120d9e-PaoPancoArtesanaleAlecrimAzeite350g_2208427e-1372-423c-962a-74b55c8c6c4e.jpg.jpeg",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Pão Panco Artesanale 350g Coco",
-   "price": 9.98,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/d3d3c259-6417-4497-9633-98ec42aaa6b7.jpg",
-   "ean": "7891203061287"
-  }
- },
- {
-  "id": "60b68978f5",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: abac, coco, morango",
-  "diff": [
-   "abac",
-   "coco",
-   "morango"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Biscoito Wafer Panco Morango 112g",
-   "price": 3.79,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2300316/g.jpg.jpg?v=639291186450500000",
-   "ean": "7891203057068"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Biscoito Panco Wafer 112g Abac/Coco",
-   "price": 4.49,
-   "image": "https://edge.osuper.com.br/nj8oSIpFpUDC-vdJpt-aGkRqtEs=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/58bd4ee8-biscoito-panco-wafer-112g-abaccoco-1.webp",
-   "ean": null
-  }
- },
- {
-  "id": "2e1c711ad6",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: extra, fino",
-  "diff": [
-   "extra",
-   "fino"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Queijo Mussarela Président Fatiado 150g",
-   "price": 10.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280282/g.jpg.png?v=639289496096030000",
-   "ean": "77534944"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Queijo Mussarela President Extra Fino Fatiado 150g",
-   "price": 14.29,
-   "image": "https://edge.osuper.com.br/YyrMaMS2mB8cfA-YGD9eC8KWHEQ=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/a98fab8b-QueijoMussarelaPresidentExtraFinoFatiado150g_b8344f36-504a-4499-a2ad-7f01db734857.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "14bc4c40a2",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: congelado, peixe",
-  "diff": [
-   "congelado",
-   "peixe"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Filé de Peixe Tilápia Aurora Congelado 800g",
-   "price": 38.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2254812/g.jpg.jpg?v=639288048623630000",
-   "ean": "7891164035020"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "File Tilapia Aurora 800G",
-   "price": 53.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/208233.webp",
-   "ean": null
-  }
- },
- {
-  "id": "0cce5f41be",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: fruta, pessego, vermelha",
-  "diff": [
-   "fruta",
-   "pessego",
-   "vermelha"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "IOGURTE PEDAÇOS CAROLINA PESSEGO POTE 450G",
-   "price": 9.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/269356.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Iogurte Carolina Pedaços de Frutas Vermelhas 450g",
-   "price": 9.98,
-   "image": "https://edge.osuper.com.br/teHpvfQM5NFsKi0GeMlRI8AprZE=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108f51dd19e55c3afc02/492450-e63486de.png",
-   "ean": null
-  }
- },
- {
-  "id": "b9b9cc2521",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: chocolate, festa, sabor",
-  "diff": [
-   "chocolate",
-   "festa",
-   "sabor"
-  ],
-  "a": {
-   "market": "Extra",
-   "name": "Mistura Para Bolo ITALAC Sabor Chocolate Pacote 400g",
-   "price": 5.43,
-   "image": "https://static.extramercado.com.br/img/uploads/1/99/33331099.jpg",
-   "ean": "7898080641588"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Mistura Para Bolo de Festa Italac 400g",
-   "price": 5.99,
-   "image": "https://edge.osuper.com.br/KZOJZSNGjVZh6WZ1rPELHUJVAnI=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8950dc1ee15e37f200/137964-17d45214.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "9c63fc030a",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: acucar, zero",
-  "diff": [
-   "acucar",
-   "zero"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "CHA DE HIBISCO ZERO ACUCAR GOIABA YAI 1L",
-   "price": 9.49,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/268734.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Cha De Hibisco Yai Goiaba 1l",
-   "price": 8.99,
-   "image": "https://edge.osuper.com.br/J7QMT-b6AE3PnSJ196k1S6--EVg=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/09a86026-ChaDeHibiscoYaiGoiaba1l_9390ad5c-8f1e-465b-a2dc-d686411dc178.jpg.jpeg",
-   "ean": null
-  }
- },
- {
-  "id": "d7075bc50b",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: caju, garrafa, goiaba",
-  "diff": [
-   "caju",
-   "garrafa",
-   "goiaba"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Suco Concentrado Maguary Goiaba 500ml",
-   "price": 5.9,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2233341/g.jpg.jpg?v=639287886716630000",
-   "ean": "7896000559265"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Suco concentrado de caju Maguary garrafa 500ml",
-   "price": 5.49,
-   "image": "https://edge.osuper.com.br/SvFgisRjR4G7b2uRU6-831dVVKU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958dc1de05b31fd0c/252061-55120dd0.webp",
-   "ean": null
-  }
- },
- {
-  "id": "e300395e0f",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: lavanda, limao",
-  "diff": [
-   "lavanda",
-   "limao"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Desinfetante Pinho Sol Perfumado Lavanda 500ml",
-   "price": 8.5,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2242925/g.jpg.jpg?v=639287954219700000",
-   "ean": "7891024193006"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Desinfetante Perfumado Limão Pinho Sol 500Ml",
-   "price": 10.59,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/510615.webp",
-   "ean": null
-  }
- },
- {
-  "id": "cbacb9d01b",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: queijo",
-  "diff": [
-   "queijo"
-  ],
-  "a": {
-   "market": "Extra",
-   "name": "Empanado de Frango Tradicional Perdigão Big Chicken Pacote 1kg",
-   "price": 39.9,
-   "image": "https://static.extramercado.com.br/img/uploads/1/573/33360573.png",
-   "ean": "7891515786298"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Empanado Big Chicken Frango Com Queijo Perdigão 1Kg",
-   "price": 39.9,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/274050.webp",
-   "ean": null
-  }
- },
- {
-  "id": "ce8d3cb87c",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: lactose, zero",
-  "diff": [
-   "lactose",
-   "zero"
-  ],
-  "a": {
-   "market": "Coop",
-   "name": "Requeijão Cremoso Polenghi Zero Lactose 200g",
-   "price": 12.99,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/252314/10000019879.png?v=639071233875000000",
-   "ean": "7891143019065"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Requeijão Cremoso Tradicional Polenghi 200G",
-   "price": 8.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/616898.webp",
-   "ean": null
-  }
- },
- {
-  "id": "cad60090c8",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: avela, cenoura, chocolate",
-  "diff": [
-   "avela",
-   "cenoura",
-   "chocolate"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Mistura para Bolo Dona Benta Cenoura 450g",
-   "price": 6.79,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2144004/g.jpg.jpg?v=639283545876800000",
-   "ean": "7896005280911"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Mistura para Bolo Dona Benta Chocolate com Avelã 450g",
-   "price": 9.99,
-   "image": "https://edge.osuper.com.br/5mrdlHw8L9oxxYeraruXGn-XihY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d91ae4593bf902/38303-e2b7f354.jpg",
-   "ean": null
-  }
- },
- {
-  "id": "acb8918ee6",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: erva, fina",
-  "diff": [
-   "erva",
-   "fina"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Oleo Composto Ervas Finas Pet Faisao 500ml",
-   "price": 12.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/268065.webp",
-   "ean": null
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Óleo Composto Faisão Pet 500ml Tradicional",
-   "price": 8.79,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/4bb41f2a-f115-4d38-902b-a7b4f2328081.jpg",
-   "ean": "7908435500665"
-  }
- },
- {
-  "id": "0a219c991f",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: sachet",
-  "diff": [
+   "granulado",
    "sachet"
   ],
   "a": {
-   "market": "Atacadão",
-   "name": "Molho de Tomate Pomarola Tradicional 300g",
-   "price": 3.29,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280769/g.jpg.jpg?v=639289498607430000",
-   "ean": "7896036099988"
+   "market": "Nagumo",
+   "name": "Café Solúvel Granulado Descafeinado Melitta 40G",
+   "price": 12.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250236.webp",
+   "ean": null
   },
   "b": {
    "market": "Semar",
-   "name": "Molho de Tomate Pomarola Tradicional Sachet 300g",
-   "price": 3.29,
-   "image": "https://edge.osuper.com.br/4ExeHFH9EoVF7JqtO_oF3b1EM2g=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895bda18ec563bf30d/230226-3a753ade.jpg",
+   "name": "Café Solúvel Melitta Descafeinado Sachet 40g",
+   "price": 13.99,
+   "image": "https://edge.osuper.com.br/Y5CMrULMABHGq-z7CKUW-A8xjl4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55f3bfa0d/306902-b79a97a6.webp",
    "ean": null
   }
  },
  {
-  "id": "4a16df6306",
+  "id": "c0dcaf5116",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: doce, lata, leite",
+  "diff": [
+   "doce",
+   "lata",
+   "leite"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Cappuccino Solúvel Doce De Leite Melitta 200G",
+   "price": 18.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/262392.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "6831a57c91",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: brasileira, descafeinado, regioe",
+  "diff": [
+   "brasileira",
+   "descafeinado",
+   "regioe"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Melitta Descafeinado 250G",
+   "price": 25.9,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/251549.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Melitta regiões brasileiras 250g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/17PUN0JGCLfpCBkDUR_efpwhJeo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55e36ff04/313829-e6b0b5c1.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "ea93de2f5b",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: chocolate, lata",
+  "diff": [
+   "chocolate",
+   "lata"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Chocolate Pote 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/220924/7891021007290.jpg?v=637919563124200000",
+   "ean": "7891021007290"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "c294da1329",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: desnatado, semi, semidesnatado",
+  "diff": [
+   "desnatado",
+   "semi",
+   "semidesnatado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Leite Condensado Italac Semidesnatado 395G",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/510790.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Leite Condensado Semi Desnatado Italac 395g",
+   "price": 6.59,
+   "image": "https://edge.osuper.com.br/9h7tLL73YD27_AOHhWE_fvApwys=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8950dc1ee15f36fa06/12793-2e8c4fed.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "7ab1d2c215",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: parafuso, tipo",
+  "diff": [
+   "parafuso",
+   "tipo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão com Ovos Parafuso Renata 500g",
+   "price": 3.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238688/7896022200206.jpg?v=638512094478770000",
+   "ean": "7896022200206"
+  },
+  "b": {
+   "market": "Roldão",
+   "name": "Macarrão Com Ovos Renata Tipos 500g",
+   "price": 2.99,
+   "image": null,
+   "ean": null
+  }
+ },
+ {
+  "id": "6f6ebb2c43",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: morango, pessego",
+  "diff": [
+   "morango",
+   "pessego"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte com Pedaços Batavo Morango 450g",
+   "price": 9.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2292741/g.jpg.jpg?v=639290342622030000",
+   "ean": "7891097010781"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Pedaços Pêssego Batavo 450G",
+   "price": 12.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/772273.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "1755ae8758",
   "kind": "separados",
   "why": "hoje SEPARADOS; diferem em: hidratacao, restauracao",
   "diff": [
@@ -1109,57 +431,732 @@
    "ean": null
   },
   "b": {
-   "market": "Semar",
-   "name": "Shampoo Pantene Restauração 400ml",
-   "price": 30.99,
-   "image": "https://edge.osuper.com.br/nBWGfABbi9rSc1ijd9QUlWCcOO8=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0ef8d178958da1fe75e33f806/35679-e4cb7463.webp",
-   "ean": null
+   "market": "Spani",
+   "name": "Shampoo Pantene 400ml Restauração",
+   "price": 23.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/296db94c-c0b4-11e7-a6aa-063e6e4e9f3a.jpg",
+   "ean": "7501065922403"
   }
  },
  {
-  "id": "3f0d30a3e6",
+  "id": "6147e421d4",
   "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: galinha, lamen, legume",
+  "why": "hoje SEPARADOS; diferem em: barra, recheado",
   "diff": [
-   "galinha",
-   "lamen",
-   "legume"
-  ],
-  "a": {
-   "market": "Atacadão",
-   "name": "Macarrão Instantâneo Lámen Panco Galinha 85g",
-   "price": 1.95,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2302847/g.jpg.png?v=639293772153900000",
-   "ean": "7891203057518"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Macarrão Instantâneo Panco Tradicional Legumes 85G",
-   "price": 2.49,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/680424.webp",
-   "ean": null
-  }
- },
- {
-  "id": "281cab58e2",
-  "kind": "separados",
-  "why": "hoje SEPARADOS; diferem em: 12, banana",
-  "diff": [
-   "12",
-   "banana"
+   "barra",
+   "recheado"
   ],
   "a": {
    "market": "Coop",
-   "name": "Petit Suisse Danoninho Morango 480g",
-   "price": 15.49,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/232252/Novo-Projeto---2023-03-30T104624.052.jpg?v=638157808307400000",
-   "ean": "7891025109907"
+   "name": "Chocolate em Barra Lacta Sonho de Valsa Recheado 98g",
+   "price": 10.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/234024/7622210528186.jpg?v=638336928490400000",
+   "ean": "7622210528186"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chocolate Lacta Sonho de Valsa 98g",
+   "price": 10.89,
+   "image": "https://edge.osuper.com.br/Szy5jRHJU6plpK8gcokGntSRrjM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/27374ffb-ChocolateLactaSonhodeValsa98g_3e9f4016-e617-4a22-ad49-ce6f7679ad9e.jpg.jpeg",
+   "ean": null
+  }
+ },
+ {
+  "id": "6390616d13",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: baunilha, gota",
+  "diff": [
+   "baunilha",
+   "gota"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolinho Bauducco Chocolate com Baunilha 40g",
+   "price": 2.39,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280495/g.jpg.jpg?v=639289497203130000",
+   "ean": "7891962067346"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Bolinho Bauducco Gotas Chocolate 40g",
+   "price": 2.79,
+   "image": "https://edge.osuper.com.br/j2EDKD3v2Im3TCZd2G2dgSbhVQM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417805ede18e25b34fd00/501729-02d001d1.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "d047cda060",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: amazonia, frescor, manha",
+  "diff": [
+   "amazonia",
+   "frescor",
+   "manha"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Sabonete Phebo Amazonia 90g",
+   "price": 6.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216124/7896512909732.jpg?v=637919531694670000",
+   "ean": "7896512909732"
   },
   "b": {
    "market": "Nagumo",
-   "name": "Petit Suisse Morango E Banana Danoninho 480G 12 Unidades",
-   "price": 15.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/785884.webp",
+   "name": "Sabonete Frescor Da Manhã Phebo 90G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/783682.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "8eeabf9844",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: dog, hot",
+  "diff": [
+   "dog",
+   "hot"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Sadia Hot Dog 500g",
+   "price": 15.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215474/7893000135529.jpg?v=637919528029630000",
+   "ean": "7893000135529"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salsicha Tradicional Sadia 500G",
+   "price": 14.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276757.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "fa83d0df78",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: tampa",
+  "diff": [
+   "tampa"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Leite UHT Semidesnatado Zero Lactose Piracanjuba Caixa com Tampa 1L",
+   "price": 7.29,
+   "image": "https://static.extramercado.com.br/img/uploads/1/779/33370779.png",
+   "ean": "7898215152811"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Leite Semidesnatado Piracanjuba UHT 1L Zero Lactose",
+   "price": 6.99,
+   "image": "https://edge.osuper.com.br/o78S16xZKDyfE7slCiYeflqrEZY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8b59d919e05d3afa04/12087-dbbd4ea6.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "2190395e11",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: bolw, bowl",
+  "diff": [
+   "bolw",
+   "bowl"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Nhoque de Molho Branco Hot Bolws Sadia 300g.",
+   "price": 11.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/268569.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Nhoque sadia Hot Bowls Molho Branco 300g",
+   "price": 12.99,
+   "image": "https://edge.osuper.com.br/-Iv_nPj4kzeR_7mLrXHzhPj6Y90=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91ee15f3bfa05/602400-ba9618f6.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "4c18af2e03",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: defumado, embutido, fatiado",
+  "diff": [
+   "defumado",
+   "embutido",
+   "fatiado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Embutido Peito De Peru Fatiado Defumado Soltíssimo Sadia 200G",
+   "price": 19.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/487559.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Peito Peru Sadia Soltíssimo 200g",
+   "price": 22.98,
+   "image": "https://edge.osuper.com.br/Uej0jihZ5V-6Gp-C0I_pupDo9dk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc18ed5b31f907/721445-5cc57b37.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "5bfb03ca35",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: delicita, maizena",
+  "diff": [
+   "delicita",
+   "maizena"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Biscoito Maizena Tradicional Vitarella Pacote 350g",
+   "price": 7.29,
+   "image": "https://static.extramercado.com.br/img/uploads/1/366/33343366.png",
+   "ean": "7896213006396"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Biscoito Vitarella Delicita Original 350g",
+   "price": 7.59,
+   "image": "https://edge.osuper.com.br/e0oVNNRasygDhBEAdRIdLUjPLfE=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/67e9b9ab-BiscoitoVitarellaDelicitaOriginal350g_d6ffe3dd-af28-463e-8714-b57046c13cbc.jpg.jpeg",
+   "ean": null
+  }
+ },
+ {
+  "id": "61ad053b91",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: azedinha",
+  "diff": [
+   "azedinha"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Chiclete Fini Salada de Frutas 80g",
+   "price": 6.35,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251404/g.jpg.jpg?v=639288018836600000",
+   "ean": "7898279795061"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chiclete Fini Salada de Frutas Azedinha 80g",
+   "price": 7.99,
+   "image": "https://edge.osuper.com.br/lNgP8KQLAB1X-6oSv-5w-Vw1M8U=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8b5fd51fec5a32fd04/384165-9ac184e9.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "7f7d2ee9fa",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: colageno, profunda, restauracao",
+  "diff": [
+   "colageno",
+   "profunda",
+   "restauracao"
+  ],
+  "a": {
+   "market": "Semar",
+   "name": "Creme Pentear Pantene Colageno 240g",
+   "price": 20.9,
+   "image": "https://edge.osuper.com.br/WnK9zW0HYsv7gSDH8mqYCAWJheA=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0ef8d168d5bd91ae05e3bfc03/320206-00dcc685.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Creme De Pentear Pantene 240g Restauração Profunda",
+   "price": 17.89,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/98543f45-e853-4b26-a637-5b8b61ed8137.jpg",
+   "ean": "7506309841823"
+  }
+ },
+ {
+  "id": "b2b6860146",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: limao, perfumado",
+  "diff": [
+   "limao",
+   "perfumado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Desinfetante Perfumado Limão Pinho Sol 500Ml",
+   "price": 10.59,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/510615.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Desinfetante Pinho Sol Original Frasco 500ml",
+   "price": 8.99,
+   "image": "https://edge.osuper.com.br/z0DbCbfg4w5pjWeY_CBVziF4Fqo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819ec5b33fb07/16661-3e66aeca.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "b6adf9931b",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: coco, maca, squeeze",
+  "diff": [
+   "coco",
+   "maca",
+   "squeeze"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Detergente Líquido Coco Limpol Squeeze 500ml",
+   "price": 2.79,
+   "image": "https://static.extramercado.com.br/img/uploads/1/755/33381755.png",
+   "ean": "7891022640007"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Detergente Líquido De Maçã Limpol 500Ml",
+   "price": 2.79,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/187930.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "488a13532b",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: crocante, empanado",
+  "diff": [
+   "crocante",
+   "empanado"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Nuggets de Frango Sadia Tradicional 300g",
+   "price": 10.8,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2240343/g.jpg.jpg?v=639287938528400000",
+   "ean": "7893000991989"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Empanado de Frango Nuggets Crocante Sadia 300g",
+   "price": 10.99,
+   "image": "https://edge.osuper.com.br/52XODXL352sYlZSQWt8f3u3GYU4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc11e15630fc05/32898-154a5dc7.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "995ee6f7d7",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: integral, light",
+  "diff": [
+   "integral",
+   "light"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Torrada Integral Lev Magic Toast Marilan 110G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/257196.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Torrada Marilan Lev Magic Toast Light 110g",
+   "price": 7.49,
+   "image": "https://edge.osuper.com.br/eS2pYhd-Hl2cJYOhg-SqptGEL8Q=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958df1fe65631fd02/308980-b7637b7d.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "4d07ca7068",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: garrafa, mineral, natural",
+  "diff": [
+   "garrafa",
+   "mineral",
+   "natural"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Água Mineral Natural sem Gás Crystal Garrafa 1,5l",
+   "price": 3.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/678/33320678.png",
+   "ean": "7894900530032"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Agua Sem Gas Crystal 1.5L",
+   "price": 3.69,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/390972.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "8dc5858f56",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: garrafa, goiaba, manga",
+  "diff": [
+   "garrafa",
+   "goiaba",
+   "manga"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Suco Concentrado Maguary Manga 500Ml",
+   "price": 9.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/114493.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Suco concentrado goiaba maguary garrafa 500ml",
+   "price": 9.99,
+   "image": "https://edge.osuper.com.br/z7-4e_8A0Wt3aI-BDQ_ufdNHx1M=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958dc1de05630fd00/11866-bfb05276.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "2c0f82a50d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: ervilha, legume, mix",
+  "diff": [
+   "ervilha",
+   "legume",
+   "mix"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Ervilha Daucy Congelada 1Kg",
+   "price": 17.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244186/g.jpg.jpg?v=639287961196200000",
+   "ean": "3248451061905"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Mix de Legumes Daucy Congelada 1Kg",
+   "price": 20.99,
+   "image": "https://edge.osuper.com.br/InPQ4QtMvqSjv4xk0ZVEf7eBDss=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/1e972ffe-MixdeLegumesDaucyCongelada1Kg_cf993cf9-d451-4e34-89b1-9b321f20c4d5.jpg.jpeg",
+   "ean": null
+  }
+ },
+ {
+  "id": "cb6486cad1",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: cebola, queijo",
+  "diff": [
+   "cebola",
+   "queijo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho de Trigo Cebola Torcida 100g",
+   "price": 4.89,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/224219/7892840817091.jpg?v=637919583837300000",
+   "ean": "7892840817091"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g",
+   "price": 4.89,
+   "image": "https://edge.osuper.com.br/tTKjYuYk8r2Fic03lx3VpbIGXac=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28414815cdc10e45832f301/135720-e23bbf64.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "7abeef1e59",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: goiabada, passata, tomate",
+  "diff": [
+   "goiabada",
+   "passata",
+   "tomate"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Passata De Tomate Fugini 300G",
+   "price": 5.29,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/218110.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Goiabada Fugini 300g",
+   "price": 6.99,
+   "image": "https://edge.osuper.com.br/-5zDryuyc9KPxergFPrLMKGp9DQ=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284118c59db1ae55f32fa00/229458-ba7226e4.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "b2d32bf52d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: congelado",
+  "diff": [
+   "congelado"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Sanduíche Congelado Sadia Hot Pocket X Cheddar Cremoso 145g",
+   "price": 10.19,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227136/7891515556327.jpg?v=638064654322400000",
+   "ean": "7891515556327"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Sanduíche Hot Pocket Sadia X-Cheddar Cremoso 145g",
+   "price": 10.99,
+   "image": "https://edge.osuper.com.br/EnLr-3LqXaEIrQLWKKin26z8e98=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91de05931f902/427802-46b094a5.png",
+   "ean": null
+  }
+ },
+ {
+  "id": "51ec51b39e",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: lemonade, pink, uva",
+  "diff": [
+   "lemonade",
+   "pink",
+   "uva"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g",
+   "price": 1.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234442/g.jpg.jpg?v=639287896635300000",
+   "ean": "7622202351815"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refresco Em Pó Uva Sem Açúcar Clight 8G",
+   "price": 2.09,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/140669.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "197ca1e76d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: limao, pet, tubaina",
+  "diff": [
+   "limao",
+   "pet",
+   "tubaina"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Tubaína Schincariol 2L",
+   "price": 5.69,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2144433/g.jpg.jpg?v=639283548054400000",
+   "ean": "7898996349400"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante Pet de Limao Schincariol 2L",
+   "price": 6.15,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/267736.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "734a92cf42",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: forma, nobre, sovado",
+  "diff": [
+   "forma",
+   "nobre",
+   "sovado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Pão De Forma Kim Nobre Original 500G",
+   "price": 12.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236691.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Pão Sovado Kim 500g",
+   "price": 14.69,
+   "image": "https://edge.osuper.com.br/lLt0VIY6erg_N5LKxYXyisMH3bw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28411805fde18e5593bf206/150976-56f32fb0.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "42c813ba8d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: cebola, queijo",
+  "diff": [
+   "cebola",
+   "queijo"
+  ],
+  "a": {
+   "market": "Semar",
+   "name": "Creme Cebola Kisabor 65g",
+   "price": 4.99,
+   "image": "https://edge.osuper.com.br/CnD6d4FZscrreB4p4S5HqA-fnJw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8d59da1de75a33fc0c/160473-e5011dd2.jpg",
+   "ean": null
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Creme De Queijo Kisabor 65g",
+   "price": 3.79,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/38d4faf6-4d2b-4846-9515-dc9c4899f80f.jpg",
+   "ean": "7898416525186"
+  }
+ },
+ {
+  "id": "85c04a94c8",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: acida, sortido",
+  "diff": [
+   "acida",
+   "sortido"
+  ],
+  "a": {
+   "market": "Semar",
+   "name": "Bala De Gelatina Dori Frutas Minhoca 60g",
+   "price": 4.49,
+   "image": "https://edge.osuper.com.br/b7Ed-LC5aMUl734Il_DpKMPoKrw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895dd41de55f30f903/229139-9f5163fd.jpg",
+   "ean": null
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bala De Gelatina Dori 60g Sortidos De Fruta Ácida Minhocas",
+   "price": 3.49,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/8c7df83e-fd96-4217-a91c-7789b1ef3f0c.jpg",
+   "ean": "7896058500233"
+  }
+ },
+ {
+  "id": "cef210b86b",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: amor, fuba, maca",
+  "diff": [
+   "amor",
+   "fuba",
+   "maca"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Mistura para Bolo Dona Benta Fubá 450g",
+   "price": 6.79,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239613/g.jpg.jpg?v=639287933756470000",
+   "ean": "7896005279182"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "MIstura De Bolo Dona Benta Maca Do Amor 450g",
+   "price": 9.99,
+   "image": "https://edge.osuper.com.br/xV0E5-CJTjClOtnk5_1ciW7G85c=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/0b03db43-MIsturaDeBoloDonaBentaMacaDoAmor450g_f726bb55-3931-41d5-9b37-38f013fc12a6.jpg.jpeg",
+   "ean": null
+  }
+ },
+ {
+  "id": "e0aaccb7df",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: bolinha, branco",
+  "diff": [
+   "bolinha",
+   "branco"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Feijão Branco CAMIL Pacote 500g",
+   "price": 13.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/436/33320436.jpg",
+   "ean": "7896006748885"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Feijão Bolinha Camil 500g",
+   "price": 11.99,
+   "image": "https://edge.osuper.com.br/rdbXnTH7gjUkaDTxix7hE6UQUnU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958da1fe1573af805/78945-db4c7382.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "bc3415ee03",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: espaguete, penne",
+  "diff": [
+   "espaguete",
+   "penne"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Dona Benta Espaguete 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2144886/g.jpg.jpg?v=639283550122800000",
+   "ean": "7896005286579"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Macarrão Penne Dona Benta Com Ovos 500g",
+   "price": 3.59,
+   "image": "https://edge.osuper.com.br/xRhp4EaiT6h0friFEq6-b7G--Kk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d91aed5e35fa05/236628-892f81ad.jpg",
+   "ean": null
+  }
+ },
+ {
+  "id": "10a283194d",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: milho",
+  "diff": [
+   "milho"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho Toque De Sal Marinho Tostitos 110G",
+   "price": 9.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/253984/7892840823566.jpg?v=639159196384730000",
+   "ean": "7892840823566"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salgadinho De Milho Toque De Sal Marinho Tostitos 110G",
+   "price": 9.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/263921.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "81232c7553",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: campo, festa, mar",
+  "diff": [
+   "campo",
+   "festa",
+   "mar"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Limpador Perfumado Festa Das Flores Mar De Flores Ajax 500Ml",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/258247.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Limpador Perfumado Ajax Flores Do Campo Frasco 500ml",
+   "price": 6.59,
+   "image": "https://edge.osuper.com.br/elY7GasPmFnodPgc8j-MRYzYuYY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819e75835fb01/298654-97d04e64.webp",
+   "ean": null
+  }
+ },
+ {
+  "id": "bce864b3ee",
+  "kind": "separados",
+  "why": "hoje SEPARADOS; diferem em: 10, vitaminico",
+  "diff": [
+   "10",
+   "vitaminico"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Chá Vitamínico Mel Gengibre E Cúrcuma Leão 20G Caixa Com 10Un",
+   "price": 17.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/249686.webp",
+   "ean": null
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chá Leão Mel/Gengibre+Curcuma C/10 20g",
+   "price": 15.99,
+   "image": "https://edge.osuper.com.br/9URWL3oy2QHsxOoHUadJBzf6Jk0=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d418e15d33f201/236005-585c5dbd.jpg",
    "ean": null
   }
  }

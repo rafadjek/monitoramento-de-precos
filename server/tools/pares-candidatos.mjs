@@ -15,6 +15,8 @@ const N = Number(process.argv[2] || 25);
 // --sem-ean: só pares hoje separados em que pelo menos um lado não tem EAN (Nagumo, Semar, encartes),
 // que é onde o juiz faz diferença
 const SEM_EAN = process.argv.includes('--sem-ean');
+// --busca=melitta,pilao: põe na frente os pares em que os dois nomes têm o termo (até 15 por termo)
+const BUSCA = (process.argv.find((x) => x.startsWith('--busca='))?.slice(8) || '').split(',').map((t) => strip(t).trim()).filter(Boolean);
 let labeled = new Set();
 try { labeled = new Set(JSON.parse(fs.readFileSync(path.join(OUT, 'rotulos.json'), 'utf8')).map((x) => x.id)); } catch { /* primeira rodada */ }
 const offers = [];
@@ -72,6 +74,8 @@ const pick = (list, kind, why) => {
   }
   return out;
 };
+const has = (i, t) => strip(offers[i].name).includes(t);
+const wanted = BUSCA.flatMap((t) => pick(nearMiss.filter((p) => has(p.a, t) && has(p.b, t)), 'separados', (p) => `hoje SEPARADOS; diferem em: ${p.d.join(', ')}`).slice(0, 15));
 const pairs = SEM_EAN
   ? pick(nearMiss, 'separados', (p) => `hoje SEPARADOS; diferem em: ${p.d.join(', ')}`)
   : [
@@ -80,5 +84,7 @@ const pairs = SEM_EAN
     ...pick(eanOdd, 'ean', (p) => `hoje JUNTOS pelo código de barras; nomes diferem em: ${p.d.slice(0, 6).join(', ')}`),
   ];
 fs.mkdirSync(OUT, { recursive: true });
-fs.writeFileSync(path.join(OUT, 'candidatos.json'), JSON.stringify(shuffle(pairs), null, 1));
+const wantedIds = new Set(wanted.map((p) => p.id));
+const final = [...wanted, ...shuffle(pairs).filter((p) => !wantedIds.has(p.id))].slice(0, Math.max(N, wanted.length));
+fs.writeFileSync(path.join(OUT, 'candidatos.json'), JSON.stringify(final, null, 1));
 console.log(`candidatos: ${pairs.length} (juntos ${joinedSoft.length}, separados ${nearMiss.length}, ean ${eanOdd.length} no total)`);

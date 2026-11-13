@@ -2073,5 +2073,755 @@
    "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/785884.webp",
    "ean": null
   }
+ },
+ {
+  "id": "e25996d2b5",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Melitta Clássico com Leite Lata 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/245061/7891021007573.jpg?v=638670389062300000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Com Leite Melitta 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/387156.webp"
+  }
+ },
+ {
+  "id": "00a2ec29b5",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Cappuccino Solúvel Tradicional Melitta 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/207409.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp"
+  }
+ },
+ {
+  "id": "8ae23387a5",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Tradicional 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238435/7891021007078.jpg?v=638490684740030000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cappuccino Solúvel Sabor Chocolate Com Avelã Melitta 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243937.webp"
+  }
+ },
+ {
+  "id": "0af58bdbad",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Chocolate e Avelã 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229341/7896348300840.jpg?v=638074202912300000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Chocolate Melitta Lata 200g",
+   "image": "https://edge.osuper.com.br/tcYP2bg3STYySAqo4eW5Njg9vBo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55830f205/256902-3b85cf51.webp"
+  }
+ },
+ {
+  "id": "9578ce1702",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Café Torrado e Moído Extraforte Melitta Caixa 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/782/33374782.png"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído Tradicional Melitta Caixa 500g",
+   "image": "https://edge.osuper.com.br/59P3OskcK-Vi8KCrNJHj_YNlENo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55933f900/14488-b5646409.webp"
+  }
+ },
+ {
+  "id": "6df2a67032",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Café Torrado e Moído Tradicional Melitta Pacote 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/133/33379133.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Torrado E Moído Extra Forte Melitta 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/223414.webp"
+  }
+ },
+ {
+  "id": "a77ea1b8dc",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Doce de Leite Lata 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/243074/7896348301496.jpg?v=638588208855930000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp"
+  }
+ },
+ {
+  "id": "a9754c1b6c",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Melitta Regiões Brasileiras Cerrado 250G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/534154.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Melitta regiões brasileiras 250g",
+   "image": "https://edge.osuper.com.br/17PUN0JGCLfpCBkDUR_efpwhJeo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55e36ff04/313829-e6b0b5c1.webp"
+  }
+ },
+ {
+  "id": "9d82bf7d56",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Extra Forte Melitta 40g",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250239.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Soluvel Melitta Tradicional Sachet 40g",
+   "image": "https://edge.osuper.com.br/YtFE_kA9USitaXef1ddHxZzU-ZQ=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55f3af200/256598-fdb55eb1.webp"
+  }
+ },
+ {
+  "id": "a046e7b636",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Melitta Extraforte 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251820/g.jpg.png?v=639288021748100000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído Tradicional Melitta Caixa 500g",
+   "image": "https://edge.osuper.com.br/59P3OskcK-Vi8KCrNJHj_YNlENo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55933f900/14488-b5646409.webp"
+  }
+ },
+ {
+  "id": "8aeb16ac78",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Chocolate e Avelã 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229341/7896348300840.jpg?v=638074202912300000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Cappuccino Solúvel Sabor Chocolate Com Avelã Melitta 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/243937.webp"
+  }
+ },
+ {
+  "id": "97a91d33a4",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Granulado Descafeinado Melitta 40G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250236.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Solúvel Melitta Descafeinado Sachet 40g",
+   "image": "https://edge.osuper.com.br/Y5CMrULMABHGq-z7CKUW-A8xjl4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55f3bfa0d/306902-b79a97a6.webp"
+  }
+ },
+ {
+  "id": "c0dcaf5116",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Cappuccino Solúvel Doce De Leite Melitta 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/262392.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp"
+  }
+ },
+ {
+  "id": "6831a57c91",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Melitta Descafeinado 250G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/251549.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Melitta regiões brasileiras 250g",
+   "image": "https://edge.osuper.com.br/17PUN0JGCLfpCBkDUR_efpwhJeo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55e36ff04/313829-e6b0b5c1.webp"
+  }
+ },
+ {
+  "id": "ea93de2f5b",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Chocolate Pote 200g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/220924/7891021007290.jpg?v=637919563124200000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Tradicional Melitta Lata 200g",
+   "image": "https://edge.osuper.com.br/JhbC9xi3jUEwMbOtim9NfqEjBCY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55832fc0d/31079-874f5e83.webp"
+  }
+ },
+ {
+  "id": "c294da1329",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Leite Condensado Italac Semidesnatado 395G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/510790.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Leite Condensado Semi Desnatado Italac 395g",
+   "image": "https://edge.osuper.com.br/9h7tLL73YD27_AOHhWE_fvApwys=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8950dc1ee15f36fa06/12793-2e8c4fed.webp"
+  }
+ },
+ {
+  "id": "7ab1d2c215",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão com Ovos Parafuso Renata 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238688/7896022200206.jpg?v=638512094478770000"
+  },
+  "b": {
+   "market": "Roldão",
+   "name": "Macarrão Com Ovos Renata Tipos 500g",
+   "image": null
+  }
+ },
+ {
+  "id": "6f6ebb2c43",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte com Pedaços Batavo Morango 450g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2292741/g.jpg.jpg?v=639290342622030000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Pedaços Pêssego Batavo 450G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/772273.webp"
+  }
+ },
+ {
+  "id": "1755ae8758",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Shampoo Hidratação Pantene 400Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/868075.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Shampoo Pantene 400ml Restauração",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/296db94c-c0b4-11e7-a6aa-063e6e4e9f3a.jpg"
+  }
+ },
+ {
+  "id": "6147e421d4",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Chocolate em Barra Lacta Sonho de Valsa Recheado 98g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/234024/7622210528186.jpg?v=638336928490400000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chocolate Lacta Sonho de Valsa 98g",
+   "image": "https://edge.osuper.com.br/Szy5jRHJU6plpK8gcokGntSRrjM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/27374ffb-ChocolateLactaSonhodeValsa98g_3e9f4016-e617-4a22-ad49-ce6f7679ad9e.jpg.jpeg"
+  }
+ },
+ {
+  "id": "6390616d13",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolinho Bauducco Chocolate com Baunilha 40g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2280495/g.jpg.jpg?v=639289497203130000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Bolinho Bauducco Gotas Chocolate 40g",
+   "image": "https://edge.osuper.com.br/j2EDKD3v2Im3TCZd2G2dgSbhVQM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417805ede18e25b34fd00/501729-02d001d1.png"
+  }
+ },
+ {
+  "id": "d047cda060",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Sabonete Phebo Amazonia 90g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216124/7896512909732.jpg?v=637919531694670000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Sabonete Frescor Da Manhã Phebo 90G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/783682.webp"
+  }
+ },
+ {
+  "id": "8eeabf9844",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Sadia Hot Dog 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215474/7893000135529.jpg?v=637919528029630000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salsicha Tradicional Sadia 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276757.webp"
+  }
+ },
+ {
+  "id": "fa83d0df78",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Leite UHT Semidesnatado Zero Lactose Piracanjuba Caixa com Tampa 1L",
+   "image": "https://static.extramercado.com.br/img/uploads/1/779/33370779.png"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Leite Semidesnatado Piracanjuba UHT 1L Zero Lactose",
+   "image": "https://edge.osuper.com.br/o78S16xZKDyfE7slCiYeflqrEZY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8b59d919e05d3afa04/12087-dbbd4ea6.webp"
+  }
+ },
+ {
+  "id": "2190395e11",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Nhoque de Molho Branco Hot Bolws Sadia 300g.",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/268569.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Nhoque sadia Hot Bowls Molho Branco 300g",
+   "image": "https://edge.osuper.com.br/-Iv_nPj4kzeR_7mLrXHzhPj6Y90=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91ee15f3bfa05/602400-ba9618f6.png"
+  }
+ },
+ {
+  "id": "4c18af2e03",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Embutido Peito De Peru Fatiado Defumado Soltíssimo Sadia 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/487559.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Peito Peru Sadia Soltíssimo 200g",
+   "image": "https://edge.osuper.com.br/Uej0jihZ5V-6Gp-C0I_pupDo9dk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc18ed5b31f907/721445-5cc57b37.webp"
+  }
+ },
+ {
+  "id": "5bfb03ca35",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Biscoito Maizena Tradicional Vitarella Pacote 350g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/366/33343366.png"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Biscoito Vitarella Delicita Original 350g",
+   "image": "https://edge.osuper.com.br/e0oVNNRasygDhBEAdRIdLUjPLfE=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/67e9b9ab-BiscoitoVitarellaDelicitaOriginal350g_d6ffe3dd-af28-463e-8714-b57046c13cbc.jpg.jpeg"
+  }
+ },
+ {
+  "id": "61ad053b91",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Chiclete Fini Salada de Frutas 80g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251404/g.jpg.jpg?v=639288018836600000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chiclete Fini Salada de Frutas Azedinha 80g",
+   "image": "https://edge.osuper.com.br/lNgP8KQLAB1X-6oSv-5w-Vw1M8U=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8b5fd51fec5a32fd04/384165-9ac184e9.jpg"
+  }
+ },
+ {
+  "id": "7f7d2ee9fa",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Semar",
+   "name": "Creme Pentear Pantene Colageno 240g",
+   "image": "https://edge.osuper.com.br/WnK9zW0HYsv7gSDH8mqYCAWJheA=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0ef8d168d5bd91ae05e3bfc03/320206-00dcc685.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Creme De Pentear Pantene 240g Restauração Profunda",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/98543f45-e853-4b26-a637-5b8b61ed8137.jpg"
+  }
+ },
+ {
+  "id": "b2b6860146",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Desinfetante Perfumado Limão Pinho Sol 500Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/510615.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Desinfetante Pinho Sol Original Frasco 500ml",
+   "image": "https://edge.osuper.com.br/z0DbCbfg4w5pjWeY_CBVziF4Fqo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819ec5b33fb07/16661-3e66aeca.jpg"
+  }
+ },
+ {
+  "id": "b6adf9931b",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Detergente Líquido Coco Limpol Squeeze 500ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/755/33381755.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Detergente Líquido De Maçã Limpol 500Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/187930.webp"
+  }
+ },
+ {
+  "id": "488a13532b",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Nuggets de Frango Sadia Tradicional 300g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2240343/g.jpg.jpg?v=639287938528400000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Empanado de Frango Nuggets Crocante Sadia 300g",
+   "image": "https://edge.osuper.com.br/52XODXL352sYlZSQWt8f3u3GYU4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc11e15630fc05/32898-154a5dc7.jpg"
+  }
+ },
+ {
+  "id": "995ee6f7d7",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Torrada Integral Lev Magic Toast Marilan 110G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/257196.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Torrada Marilan Lev Magic Toast Light 110g",
+   "image": "https://edge.osuper.com.br/eS2pYhd-Hl2cJYOhg-SqptGEL8Q=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958df1fe65631fd02/308980-b7637b7d.webp"
+  }
+ },
+ {
+  "id": "4d07ca7068",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Água Mineral Natural sem Gás Crystal Garrafa 1,5l",
+   "image": "https://static.extramercado.com.br/img/uploads/1/678/33320678.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Agua Sem Gas Crystal 1.5L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/390972.webp"
+  }
+ },
+ {
+  "id": "8dc5858f56",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Suco Concentrado Maguary Manga 500Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/114493.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Suco concentrado goiaba maguary garrafa 500ml",
+   "image": "https://edge.osuper.com.br/z7-4e_8A0Wt3aI-BDQ_ufdNHx1M=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958dc1de05630fd00/11866-bfb05276.jpg"
+  }
+ },
+ {
+  "id": "2c0f82a50d",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Ervilha Daucy Congelada 1Kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244186/g.jpg.jpg?v=639287961196200000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Mix de Legumes Daucy Congelada 1Kg",
+   "image": "https://edge.osuper.com.br/InPQ4QtMvqSjv4xk0ZVEf7eBDss=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/1e972ffe-MixdeLegumesDaucyCongelada1Kg_cf993cf9-d451-4e34-89b1-9b321f20c4d5.jpg.jpeg"
+  }
+ },
+ {
+  "id": "cb6486cad1",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho de Trigo Cebola Torcida 100g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/224219/7892840817091.jpg?v=637919583837300000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Salgadinho de Trigo Queijo Torcida Pacote 100g",
+   "image": "https://edge.osuper.com.br/tTKjYuYk8r2Fic03lx3VpbIGXac=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28414815cdc10e45832f301/135720-e23bbf64.jpg"
+  }
+ },
+ {
+  "id": "7abeef1e59",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Passata De Tomate Fugini 300G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/218110.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Goiabada Fugini 300g",
+   "image": "https://edge.osuper.com.br/-5zDryuyc9KPxergFPrLMKGp9DQ=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284118c59db1ae55f32fa00/229458-ba7226e4.jpg"
+  }
+ },
+ {
+  "id": "b2d32bf52d",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Sanduíche Congelado Sadia Hot Pocket X Cheddar Cremoso 145g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227136/7891515556327.jpg?v=638064654322400000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Sanduíche Hot Pocket Sadia X-Cheddar Cremoso 145g",
+   "image": "https://edge.osuper.com.br/EnLr-3LqXaEIrQLWKKin26z8e98=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91de05931f902/427802-46b094a5.png"
+  }
+ },
+ {
+  "id": "51ec51b39e",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refresco em pó Clight Sem Açúcar Pink Lemonade 8g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2234442/g.jpg.jpg?v=639287896635300000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refresco Em Pó Uva Sem Açúcar Clight 8G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/140669.webp"
+  }
+ },
+ {
+  "id": "197ca1e76d",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Refrigerante Tubaína Schincariol 2L",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2144433/g.jpg.jpg?v=639283548054400000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Refrigerante Pet de Limao Schincariol 2L",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/267736.webp"
+  }
+ },
+ {
+  "id": "734a92cf42",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Pão De Forma Kim Nobre Original 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236691.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Pão Sovado Kim 500g",
+   "image": "https://edge.osuper.com.br/lLt0VIY6erg_N5LKxYXyisMH3bw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28411805fde18e5593bf206/150976-56f32fb0.jpg"
+  }
+ },
+ {
+  "id": "42c813ba8d",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Semar",
+   "name": "Creme Cebola Kisabor 65g",
+   "image": "https://edge.osuper.com.br/CnD6d4FZscrreB4p4S5HqA-fnJw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8d59da1de75a33fc0c/160473-e5011dd2.jpg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Creme De Queijo Kisabor 65g",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/38d4faf6-4d2b-4846-9515-dc9c4899f80f.jpg"
+  }
+ },
+ {
+  "id": "85c04a94c8",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Semar",
+   "name": "Bala De Gelatina Dori Frutas Minhoca 60g",
+   "image": "https://edge.osuper.com.br/b7Ed-LC5aMUl734Il_DpKMPoKrw=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895dd41de55f30f903/229139-9f5163fd.jpg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bala De Gelatina Dori 60g Sortidos De Fruta Ácida Minhocas",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/8c7df83e-fd96-4217-a91c-7789b1ef3f0c.jpg"
+  }
+ },
+ {
+  "id": "cef210b86b",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Mistura para Bolo Dona Benta Fubá 450g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239613/g.jpg.jpg?v=639287933756470000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "MIstura De Bolo Dona Benta Maca Do Amor 450g",
+   "image": "https://edge.osuper.com.br/xV0E5-CJTjClOtnk5_1ciW7G85c=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/0b03db43-MIsturaDeBoloDonaBentaMacaDoAmor450g_f726bb55-3931-41d5-9b37-38f013fc12a6.jpg.jpeg"
+  }
+ },
+ {
+  "id": "e0aaccb7df",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Extra",
+   "name": "Feijão Branco CAMIL Pacote 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/436/33320436.jpg"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Feijão Bolinha Camil 500g",
+   "image": "https://edge.osuper.com.br/rdbXnTH7gjUkaDTxix7hE6UQUnU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958da1fe1573af805/78945-db4c7382.jpg"
+  }
+ },
+ {
+  "id": "bc3415ee03",
+  "label": "diferente",
+  "kind": "separados",
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Dona Benta Espaguete 500g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2144886/g.jpg.jpg?v=639283550122800000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Macarrão Penne Dona Benta Com Ovos 500g",
+   "image": "https://edge.osuper.com.br/xRhp4EaiT6h0friFEq6-b7G--Kk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d91aed5e35fa05/236628-892f81ad.jpg"
+  }
+ },
+ {
+  "id": "10a283194d",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Coop",
+   "name": "Salgadinho Toque De Sal Marinho Tostitos 110G",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/253984/7892840823566.jpg?v=639159196384730000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salgadinho De Milho Toque De Sal Marinho Tostitos 110G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/263921.webp"
+  }
+ },
+ {
+  "id": "81232c7553",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Limpador Perfumado Festa Das Flores Mar De Flores Ajax 500Ml",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/258247.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Limpador Perfumado Ajax Flores Do Campo Frasco 500ml",
+   "image": "https://edge.osuper.com.br/elY7GasPmFnodPgc8j-MRYzYuYY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819e75835fb01/298654-97d04e64.webp"
+  }
+ },
+ {
+  "id": "bce864b3ee",
+  "label": "mesmo",
+  "kind": "separados",
+  "a": {
+   "market": "Nagumo",
+   "name": "Chá Vitamínico Mel Gengibre E Cúrcuma Leão 20G Caixa Com 10Un",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/249686.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chá Leão Mel/Gengibre+Curcuma C/10 20g",
+   "image": "https://edge.osuper.com.br/9URWL3oy2QHsxOoHUadJBzf6Jk0=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d418e15d33f201/236005-585c5dbd.jpg"
+  }
  }
 ]
