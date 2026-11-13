@@ -5,6 +5,7 @@ import { ProductList } from './components/ProductList';
 import { CartPanel } from './components/CartPanel';
 import { Offers, pickOffers } from './components/Offers';
 import { Icon, MarketLogo } from './components/Parts';
+import { haystack, match, parseQuery } from './search';
 
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
@@ -114,19 +115,26 @@ export default function App() {
   const groups = useMemo(() => buildGroups(cityOffers), [cityOffers]);
   const byId = useMemo(() => new Map(groups.map((g) => [g.id, g])), [groups]);
   const offers = useMemo(() => pickOffers(cityOffers), [cityOffers]);
-  const terms = useMemo(() => norm(dq).split(/\s+/).filter(Boolean), [dq]);
+  const terms = useMemo(() => parseQuery(dq), [dq]);
+  // texto de busca de cada produto preparado uma vez (sem acento, sem hífen, palavras separadas)
+  const hays = useMemo(() => new Map(groups.map((g) => [g.id, haystack(g._n)])), [groups]);
 
   const list = useMemo(() => {
-    const hit = (n: string) => terms.every((t) => n.includes(t));
-    const r = groups.filter((g) => (!category || g.items.some((i) => i.category === category)) && (!market || g.items.some((i) => i.market === market)) && (!onlyFavs || favs.has(g.id)) && hit(g._n));
+    const lvl = new Map<string, number>();
+    const hit = (g: Group) => { if (!terms.length) return true; const m = match(hays.get(g.id)!, terms); if (m) lvl.set(g.id, m); return m > 0; };
+    const r = groups.filter((g) => (!category || g.items.some((i) => i.category === category)) && (!market || g.items.some((i) => i.market === market)) && (!onlyFavs || favs.has(g.id)) && hit(g));
     // ordem pelo preço em destaque; com um mercado escolhido, pelo preço dele
     const price = (g: Group) => {
       if (!market) return g.shown;
       const it = g.items.find((i) => i.market === market)!;
       return g.perUnit ? each(it) : it.price;
     };
-    return r.sort(sort === 'nome' ? (x, y) => x.name.localeCompare(y.name) : sort === 'preco-desc' ? (x, y) => price(y) - price(x) : (x, y) => price(x) - price(y));
-  }, [groups, terms, category, market, sort, onlyFavs, favs]);
+    const by = sort === 'nome' ? (x: Group, y: Group) => x.name.localeCompare(y.name) : sort === 'preco-desc' ? (x: Group, y: Group) => price(y) - price(x) : (x: Group, y: Group) => price(x) - price(y);
+    // achados só com erro de digitação: entram só quando a busca exata acha pouco (menos de 5), e vão para o fim
+    const exact = r.filter((g) => (lvl.get(g.id) ?? 1) === 1);
+    const out = exact.length >= 5 ? exact : r;
+    return out.sort((x, y) => ((lvl.get(x.id) ?? 1) - (lvl.get(y.id) ?? 1)) || by(x, y));
+  }, [groups, hays, terms, category, market, sort, onlyFavs, favs]);
 
   const toggleFav = (id: string) => { const n = new Set(favs); if (n.has(id)) n.delete(id); else n.add(id); setFavs(n); save('bate-favoritos', [...n]); };
   // m: mercado escolhido na etiqueta (item fica fixo nele); sem m, o carrinho escolhe o mais barato
