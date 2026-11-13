@@ -200,4 +200,7 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
   state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 300) };
   console.warn('juiz: parou:', e.message);
 }
+// qual chave rodou (só o nome do segredo, nunca o valor): a própria do juiz ou a do leitor de encartes
+state.chave = process.env.GEMINI_JUIZ_KEY ? 'GEMINI_JUIZ_KEY' : process.env.GEMINI_API_KEY ? 'GEMINI_API_KEY' : 'nenhuma';
+state.rodou = new Date().toISOString();
 fs.writeFileSync(OUT, JSON.stringify(state));
