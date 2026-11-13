@@ -73,7 +73,7 @@ async function ask(pairs, examples) {
   }
   parts.push({ text: '\nResponda um item por par, com o mesmo id.' });
   const body = { contents: [{ parts }], generationConfig: { temperature: 0, responseMimeType: 'application/json', responseSchema: SCHEMA } };
-  for (let tent = 0, onModel = 0; tent < 8; tent++, onModel++) {
+  for (let tent = 0, onModel = 0; tent < 12; tent++, onModel++) {
     const model = MODELS[modelIdx];
     let r;
     try {
@@ -82,9 +82,12 @@ async function ask(pairs, examples) {
     if (r.status === 404) falhas.push(`${model}: 404`);
     if (r.status === 404 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
     if (r.status === 429 || r.status >= 500) {
-      const t = (await r.text()).slice(0, 300);
-      falhas.push(`${model}: ${r.status} ${(t.match(/quotaId"?:\s*"([^"]+)/) || [, t.slice(0, 80)])[1]}`);
-      if ((/PerDay|per day/i.test(t) || (r.status >= 500 && onModel >= 2)) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+      // o motivo (quotaId, limite) vem no fim da resposta: ler inteira, não só o começo
+      const t = await r.text();
+      const q = t.match(/quotaId"?:\s*"([^"]+)"/)?.[1], lim = t.match(/quotaValue"?:\s*"?(\d+)/)?.[1];
+      falhas.push(`${model}: ${r.status} ${q ? q + (lim ? ' limite ' + lim : '') : t.replace(/\s+/g, ' ').slice(0, 80)}`);
+      // cota diária, limite zero ou 429 repetido: troca de modelo em vez de esperar à toa
+      if ((/PerDay|per day/i.test(t) || lim === '0' || onModel >= 1) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
       if (/PerDay|per day/i.test(t)) throw new Error('gemini: cota do dia esgotada');
       await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
       continue;
