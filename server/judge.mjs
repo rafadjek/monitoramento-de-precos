@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { pairKey, signature, strip } from './group.mjs';
+import { pairKey, brandKeys, signature, strip } from './group.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const IN = path.join(ROOT, 'data/extraido');
@@ -100,11 +100,11 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
     if (Array.isArray(a)) offers.push(...a.filter((o) => o && o.name && o.price >= 0.1 && o.price < 20000));
   }
   const sigs = offers.map(signature);
-  const brand = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
+  const brands = brandKeys(offers);
   const ratio = (x, y) => Math.max(x, y) / Math.min(x, y);
   const cand = new Map();
   const buckets = new Map();
-  sigs.forEach((s, i) => { const b = brand(offers[i]); if (!s.size || !b) return; const k = s.size + '|' + b; (buckets.get(k) ?? buckets.set(k, []).get(k)).push(i); });
+  sigs.forEach((s, i) => { const b = brands[i]; if (!s.size || !b) return; const k = s.size + '|' + b; (buckets.get(k) ?? buckets.set(k, []).get(k)).push(i); });
   for (const idx of buckets.values()) {
     if (idx.length > 80) continue;
     for (let x = 0; x < idx.length; x++) for (let y = x + 1; y < idx.length; y++) {

@@ -6,6 +6,7 @@
 // Saída: server/data/extraido/extra.json
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { fillEans } from './extra-ean.mjs';
 
 const OUT = fileURLToPath(new URL('../data/extraido/extra.json', import.meta.url));
 const API = 'https://api.vendas.gpa.digital/ex/search/search';
@@ -117,5 +118,6 @@ for (const term of TERMS) {
 }
 const out = [...rows.values()];
 if (out.length < 500) { console.error(`extra: só ${out.length} produtos; não grava`); process.exit(1); }
+await fillEans(out);
 fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
 console.log(`extra: ${out.length} produtos (${TERMS.length} termos), ${out.filter((o) => o.listPrice).length} em oferta, ${requests} requisições`);

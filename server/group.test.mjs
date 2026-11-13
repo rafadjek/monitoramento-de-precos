@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { groupOffers, parseSize } from './group.mjs';
+import { groupOffers, parseSize, brandKeys } from './group.mjs';
 import { normalizeEan } from './ean.mjs';
 
 const o = (market, name, size = null) => ({ market, name, size });
@@ -127,4 +127,13 @@ test('quantidade de unidades lida do nome', async () => {
 test('garrafa/pet de um lado só juntam; lata contra garrafa não', () => {
   assert.ok(grouped(b('A', 'Cachaça Ypióca Ouro 965ml', 'Ypióca', 28.89), b('B', 'Cachaça Ouro Ypióca Garrafa 965ml', 'Ypióca', 24.99)));
   assert.ok(!grouped(b('A', 'Cerveja Heineken Lata 350ml', 'Heineken', 5.49), b('B', 'Cerveja Heineken Garrafa 350ml', 'Heineken', 5.99)));
+});
+
+test('marca deduzida do nome para quem não informa marca (Semar, Spani, encartes)', () => {
+  const comMarca = [1, 2, 3].flatMap((k) => [b('A', `Óleo de Soja Liza ${k}L`, 'Liza', 7), b('B', `Café Pilão Tradicional ${k}00g`, 'Pilão', 20)]);
+  const sem = [b('S', 'Óleo de Soja Tipo 1 Liza Garrafa 900ml', null, 7.5), b('S', 'Combo Óleo Liza 900ml + Café Pilão 500g', null, 30), b('S', 'Arroz Branco 5kg', null, 25)];
+  const k = brandKeys([...comMarca, ...sem]);
+  assert.deepEqual(k.slice(comMarca.length), ['liza', null, null]); // combo com 2 marcas fica sem marca
+  // com a marca deduzida, nome quase igual (só palavra SOFT a mais) junta
+  assert.ok(groupOffers([...comMarca, b('X', 'Óleo de Soja Liza 900ml', 'Liza', 7.2), sem[0]]).some((g) => g.idx.includes(comMarca.length + 1) && g.idx.includes(comMarca.length)));
 });

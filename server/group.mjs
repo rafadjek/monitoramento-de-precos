@@ -89,6 +89,28 @@ export function signature(o) {
   return { size: size?.key ?? null, core, key: size ? `${size.key}|${[...core].sort().join(' ')}` : null };
 }
 
+// Marca de cada oferta (primeira palavra, sem acento). Quem não informa a marca (Semar, Spani, encartes)
+// ganha a marca deduzida do nome: uma palavra do nome que, nos mercados que informam marca, é a marca
+// em >= 60% dos nomes onde aparece (e em >= 3 ofertas). Mais de uma marca no nome (combo, kit) = sem marca.
+export function brandKeys(offers) {
+  const first = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
+  const asBrand = new Map(), inName = new Map();
+  const toks = offers.map((o) => new Set(tokens(o.name)));
+  offers.forEach((o, i) => {
+    const b = first(o);
+    if (!b) return;
+    if (toks[i].has(b)) asBrand.set(b, (asBrand.get(b) ?? 0) + 1);
+    for (const w of toks[i]) inName.set(w, (inName.get(w) ?? 0) + 1);
+  });
+  const dict = new Set([...asBrand].filter(([b, n]) => n >= 3 && b.length >= 3 && !/^\d+$/.test(b) && n / inName.get(b) >= 0.6).map(([b]) => b));
+  return offers.map((o, i) => {
+    const b = first(o);
+    if (b) return b;
+    const found = [...toks[i]].filter((w) => dict.has(w));
+    return found.length === 1 ? found[0] : null;
+  });
+}
+
 // Chave estável de um par de ofertas (mercado + nome normalizado), igual nos dois sentidos.
 // Usada pelos vereditos (rótulos do Rafael e juiz com IA).
 export const offerKey = (o) => `${o.market}|${strip(o.name).replace(/\s+/g, ' ').trim()}`;
@@ -141,10 +163,10 @@ export function groupOffers(offers, decide = () => undefined) {
 
   // Nomes quase iguais: mesma marca, mesmo tamanho, preço parecido, e as palavras que sobram de um lado
   // ou do outro são todas da lista SOFT. Junta por cima do EAN (são cadastros diferentes do mesmo produto).
-  const brandOf = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
+  const brands = brandKeys(offers);
   const near = new Map();
   sigs.forEach((sg, i) => {
-    const b = brandOf(offers[i]);
+    const b = brands[i];
     if (!sg.size || !b) return;
     const k = sg.size + '|' + b;
     (near.get(k) ?? near.set(k, []).get(k)).push(i);

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { groupOffers, signature, strip } from '../group.mjs';
+import { groupOffers, brandKeys, signature, strip } from '../group.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const IN = path.join(ROOT, 'data/extraido');
@@ -21,7 +21,7 @@ const groups = groupOffers(offers);
 const gOf = new Map();
 groups.forEach((g, k) => g.idx.forEach((i) => gOf.set(i, k)));
 const sigs = offers.map(signature);
-const brand = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
+const brands = brandKeys(offers);
 const diffWords = (a, b) => [...a].filter((t) => !b.has(t)).concat([...b].filter((t) => !a.has(t)));
 const pairId = (a, b) => crypto.createHash('sha1').update([offers[a].market + offers[a].name, offers[b].market + offers[b].name].sort().join('|')).digest('hex').slice(0, 10);
 const item = (i) => ({ market: offers[i].market, name: offers[i].name, price: offers[i].price, image: offers[i].imageUrl && /^https/.test(offers[i].imageUrl) ? offers[i].imageUrl : null, ean: offers[i].ean ?? null });
@@ -31,7 +31,7 @@ const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math
 
 const joinedSoft = [], nearMiss = [], eanOdd = [];
 const buckets = new Map();
-sigs.forEach((s, i) => { const b = brand(offers[i]); if (!s.size || !b) return; const k = s.size + '|' + b; (buckets.get(k) ?? buckets.set(k, []).get(k)).push(i); });
+sigs.forEach((s, i) => { const b = brands[i]; if (!s.size || !b) return; const k = s.size + '|' + b; (buckets.get(k) ?? buckets.set(k, []).get(k)).push(i); });
 for (const idx of buckets.values()) {
   if (idx.length > 60) continue;
   for (let x = 0; x < idx.length; x++) for (let y = x + 1; y < idx.length; y++) {
