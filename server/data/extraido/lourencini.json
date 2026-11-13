@@ -1,342 +1,6 @@
 [
  {
   "market": "Lourencini",
-  "externalId": "a521d1274524",
-  "name": "BARRIGA SUÍNA KG",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 19.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGWGZ0v&_nc_oc=AdoZfv9N7SNmKNQFrYwWnGKMSM_fqpGWR4Z1kxQhUhY1Q0PVue4AJvFPw7LlBKxooi4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQS9TfRIhrP9uFwTo4xbDEIQdUuf_imFRWj7DWa6591wAQ&oe=6AFCC4EA",
-  "imageBox": [
-   238,
-   96,
-   403,
-   439
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "33f604792f21",
-  "name": "COSTELA SUÍNA KG",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 22.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGWGZ0v&_nc_oc=AdoZfv9N7SNmKNQFrYwWnGKMSM_fqpGWR4Z1kxQhUhY1Q0PVue4AJvFPw7LlBKxooi4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQS9TfRIhrP9uFwTo4xbDEIQdUuf_imFRWj7DWa6591wAQ&oe=6AFCC4EA",
-  "imageBox": [
-   245,
-   596,
-   413,
-   903
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "b798ae22cfd0",
-  "name": "PERNIL C/ OSSO KG",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 13.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGWGZ0v&_nc_oc=AdoZfv9N7SNmKNQFrYwWnGKMSM_fqpGWR4Z1kxQhUhY1Q0PVue4AJvFPw7LlBKxooi4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQS9TfRIhrP9uFwTo4xbDEIQdUuf_imFRWj7DWa6591wAQ&oe=6AFCC4EA",
-  "imageBox": [
-   579,
-   122,
-   737,
-   425
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "ba1386b8c142",
-  "name": "CUPIM BOVINO KG",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 35.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGWGZ0v&_nc_oc=AdoZfv9N7SNmKNQFrYwWnGKMSM_fqpGWR4Z1kxQhUhY1Q0PVue4AJvFPw7LlBKxooi4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQS9TfRIhrP9uFwTo4xbDEIQdUuf_imFRWj7DWa6591wAQ&oe=6AFCC4EA",
-  "imageBox": [
-   577,
-   584,
-   741,
-   922
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "14631aef6a09",
-  "name": "SUCO AURORA INTEGRAL UVA TP C/ 1.5ML UNID",
-  "brand": "Aurora",
-  "ean": null,
-  "size": "1.5L",
-  "price": 13.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwGeGCF2&_nc_oc=AdpOeFZ70H_9XCwS28zFmYD3dcKxs9TGcyXVc9n-OpQNW_gCMVzfyr1XnWRuSUIMROg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQQBLjEnsWVVSkMm2o0j09I164NCKzkk8qgO69rHw566wA&oe=6AFCD017",
-  "imageBox": [
-   223,
-   137,
-   434,
-   381
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "8a2079a76d5b",
-  "name": "PANETONE E CHOCOTONE PRODUÇÃO PRÓPRIA C/400G UNID",
-  "brand": null,
-  "ean": null,
-  "size": "400g",
-  "price": 10.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwGeGCF2&_nc_oc=AdpOeFZ70H_9XCwS28zFmYD3dcKxs9TGcyXVc9n-OpQNW_gCMVzfyr1XnWRuSUIMROg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQQBLjEnsWVVSkMm2o0j09I164NCKzkk8qgO69rHw566wA&oe=6AFCD017",
-  "imageBox": [
-   220,
-   591,
-   401,
-   912
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "a04d7768d7b4",
-  "name": "FEIJÃO CARIOCA LOURENCINI PACOTE C/ 1KG UNID",
-  "brand": "Lourencini",
-  "ean": null,
-  "size": "1kg",
-  "price": 6.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwGeGCF2&_nc_oc=AdpOeFZ70H_9XCwS28zFmYD3dcKxs9TGcyXVc9n-OpQNW_gCMVzfyr1XnWRuSUIMROg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQQBLjEnsWVVSkMm2o0j09I164NCKzkk8qgO69rHw566wA&oe=6AFCD017",
-  "imageBox": [
-   587,
-   129,
-   772,
-   404
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "ddcfd7fec374",
-  "name": "REFRIGERANTE FANTA PET C/ 2L (SABORES) UNID",
-  "brand": "Fanta",
-  "ean": null,
-  "size": "2L",
-  "price": 7.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwGeGCF2&_nc_oc=AdpOeFZ70H_9XCwS28zFmYD3dcKxs9TGcyXVc9n-OpQNW_gCMVzfyr1XnWRuSUIMROg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQQBLjEnsWVVSkMm2o0j09I164NCKzkk8qgO69rHw566wA&oe=6AFCD017",
-  "imageBox": [
-   578,
-   626,
-   786,
-   875
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "cbe7a6a964e0",
-  "name": "MUSSARELA PREMIATTA A CADA 100G",
-  "brand": "Premiatta",
-  "ean": null,
-  "size": "100g",
-  "price": 3.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwF6K2yn&_nc_oc=Adpe0oxOJIrrt4WG-pTo8UwsXo_rHqpYNChOyJh3il4fCWwMB6VuSBqjqBlH41OZctg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQRu435mjpPFnSHW2kjtQJn_imXgZXWRCU69iovkAs_diw&oe=6AFCBF48",
-  "imageBox": [
-   247,
-   133,
-   401,
-   392
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "a cada 100g",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "2f338e874f4e",
-  "name": "PRESUNTO SADIA A CADA 100G",
-  "brand": "Sadia",
-  "ean": null,
-  "size": "100g",
-  "price": 3.49,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwF6K2yn&_nc_oc=Adpe0oxOJIrrt4WG-pTo8UwsXo_rHqpYNChOyJh3il4fCWwMB6VuSBqjqBlH41OZctg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQRu435mjpPFnSHW2kjtQJn_imXgZXWRCU69iovkAs_diw&oe=6AFCBF48",
-  "imageBox": [
-   253,
-   630,
-   407,
-   853
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "a cada 100g",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "4b921e42b66d",
-  "name": "MORTADELA DEFUMADA OURO PERDIGÃO A CADA 100G",
-  "brand": "Perdigão",
-  "ean": null,
-  "size": "100g",
-  "price": 2.49,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwF6K2yn&_nc_oc=Adpe0oxOJIrrt4WG-pTo8UwsXo_rHqpYNChOyJh3il4fCWwMB6VuSBqjqBlH41OZctg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQRu435mjpPFnSHW2kjtQJn_imXgZXWRCU69iovkAs_diw&oe=6AFCBF48",
-  "imageBox": [
-   595,
-   127,
-   774,
-   440
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": "a cada 100g",
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
-  "externalId": "3b7f75844c79",
-  "name": "MARGARINA CREMOSA DORIANA POTE C/ 500G UNID",
-  "brand": "Doriana",
-  "ean": null,
-  "size": "500g",
-  "price": 7.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwF6K2yn&_nc_oc=Adpe0oxOJIrrt4WG-pTo8UwsXo_rHqpYNChOyJh3il4fCWwMB6VuSBqjqBlH41OZctg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=MdUWR-KJg4ir5alY26MGEQ&_nc_ss=7a20f&oh=00_AQRu435mjpPFnSHW2kjtQJn_imXgZXWRCU69iovkAs_diw&oe=6AFCBF48",
-  "imageBox": [
-   609,
-   595,
-   726,
-   911
-  ],
-  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": "2026-11-12T03:00:00.000Z",
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
- },
- {
-  "market": "Lourencini",
   "externalId": "2c56a8849846",
   "name": "Refrigerante Tubaína Tutti Fruti Pet c/ 2L unid",
   "brand": "Tubaína",
@@ -347,7 +11,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwF1SyG-&_nc_oc=Adp5Ql7TFC8LCaJHpG8fTkICBCNsv9Zw5ZhVke38gLw0nNZopLkYijovYslFBOvHWKXaEXwegYVN5GAflyk7U68Q&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSiDrSutlkl_md77Hfk8JiArM1s1FVvqsuXN76cVxXcBQ&oe=6AFCA688",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwFic4db&_nc_oc=Ado5N5XF1NeBaMntfiXIxI0hHrt4LVk4y2wlXDwPr3J0wCheixmAnTbfaGrtqGQR6JM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQS0tS343-fVs2DdIEyBCRPFxu2VYrS42g6_qQbV3Do5DQ&oe=6AFCDEC8",
   "imageBox": [
    326,
    203,
@@ -361,7 +25,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -375,7 +39,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwF1SyG-&_nc_oc=Adp5Ql7TFC8LCaJHpG8fTkICBCNsv9Zw5ZhVke38gLw0nNZopLkYijovYslFBOvHWKXaEXwegYVN5GAflyk7U68Q&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSiDrSutlkl_md77Hfk8JiArM1s1FVvqsuXN76cVxXcBQ&oe=6AFCA688",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwFic4db&_nc_oc=Ado5N5XF1NeBaMntfiXIxI0hHrt4LVk4y2wlXDwPr3J0wCheixmAnTbfaGrtqGQR6JM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQS0tS343-fVs2DdIEyBCRPFxu2VYrS42g6_qQbV3Do5DQ&oe=6AFCDEC8",
   "imageBox": [
    323,
    574,
@@ -389,7 +53,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -403,7 +67,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwF1SyG-&_nc_oc=Adp5Ql7TFC8LCaJHpG8fTkICBCNsv9Zw5ZhVke38gLw0nNZopLkYijovYslFBOvHWKXaEXwegYVN5GAflyk7U68Q&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSiDrSutlkl_md77Hfk8JiArM1s1FVvqsuXN76cVxXcBQ&oe=6AFCA688",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwFic4db&_nc_oc=Ado5N5XF1NeBaMntfiXIxI0hHrt4LVk4y2wlXDwPr3J0wCheixmAnTbfaGrtqGQR6JM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQS0tS343-fVs2DdIEyBCRPFxu2VYrS42g6_qQbV3Do5DQ&oe=6AFCDEC8",
   "imageBox": [
    626,
    201,
@@ -417,7 +81,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -431,7 +95,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwF1SyG-&_nc_oc=Adp5Ql7TFC8LCaJHpG8fTkICBCNsv9Zw5ZhVke38gLw0nNZopLkYijovYslFBOvHWKXaEXwegYVN5GAflyk7U68Q&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSiDrSutlkl_md77Hfk8JiArM1s1FVvqsuXN76cVxXcBQ&oe=6AFCA688",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903405188_1558637682958666_1171460529442927126_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZCFXcI6PFEMQ7kNvwFic4db&_nc_oc=Ado5N5XF1NeBaMntfiXIxI0hHrt4LVk4y2wlXDwPr3J0wCheixmAnTbfaGrtqGQR6JM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQS0tS343-fVs2DdIEyBCRPFxu2VYrS42g6_qQbV3Do5DQ&oe=6AFCDEC8",
   "imageBox": [
    626,
    551,
@@ -445,7 +109,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -459,7 +123,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEyc4lf&_nc_oc=AdryzX0qv1vLiN4Ox7Ai2BjiVvRR5vFrJaadutyol_ObfKEBJg6D5Yy8BtjWWYA-dWdrvQ31quu-iGSDjfSsnqsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQS9DjbNFCiBBsWM4wjmRY_qhXIj4ytzwgBi3xmhikjOyg&oe=6AFCB226",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEeEqzD&_nc_oc=AdpaQv2R4AE-HykGw6P7pEyHXgo8xrX6DDGg_Msyq-bfUBpEFUShykyKhQp0fQFGGRU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQSsvljd5NZX29bt7kA2KetF77Vc0Pmfw_tUluf2dGFfew&oe=6AFCB226",
   "imageBox": [
    334,
    196,
@@ -473,7 +137,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -487,7 +151,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEyc4lf&_nc_oc=AdryzX0qv1vLiN4Ox7Ai2BjiVvRR5vFrJaadutyol_ObfKEBJg6D5Yy8BtjWWYA-dWdrvQ31quu-iGSDjfSsnqsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQS9DjbNFCiBBsWM4wjmRY_qhXIj4ytzwgBi3xmhikjOyg&oe=6AFCB226",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEeEqzD&_nc_oc=AdpaQv2R4AE-HykGw6P7pEyHXgo8xrX6DDGg_Msyq-bfUBpEFUShykyKhQp0fQFGGRU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQSsvljd5NZX29bt7kA2KetF77Vc0Pmfw_tUluf2dGFfew&oe=6AFCB226",
   "imageBox": [
    336,
    580,
@@ -501,7 +165,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -515,7 +179,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEyc4lf&_nc_oc=AdryzX0qv1vLiN4Ox7Ai2BjiVvRR5vFrJaadutyol_ObfKEBJg6D5Yy8BtjWWYA-dWdrvQ31quu-iGSDjfSsnqsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQS9DjbNFCiBBsWM4wjmRY_qhXIj4ytzwgBi3xmhikjOyg&oe=6AFCB226",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEeEqzD&_nc_oc=AdpaQv2R4AE-HykGw6P7pEyHXgo8xrX6DDGg_Msyq-bfUBpEFUShykyKhQp0fQFGGRU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQSsvljd5NZX29bt7kA2KetF77Vc0Pmfw_tUluf2dGFfew&oe=6AFCB226",
   "imageBox": [
    640,
    203,
@@ -529,7 +193,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -543,7 +207,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEyc4lf&_nc_oc=AdryzX0qv1vLiN4Ox7Ai2BjiVvRR5vFrJaadutyol_ObfKEBJg6D5Yy8BtjWWYA-dWdrvQ31quu-iGSDjfSsnqsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQS9DjbNFCiBBsWM4wjmRY_qhXIj4ytzwgBi3xmhikjOyg&oe=6AFCB226",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=sObvn9twTv0Q7kNvwEeEqzD&_nc_oc=AdpaQv2R4AE-HykGw6P7pEyHXgo8xrX6DDGg_Msyq-bfUBpEFUShykyKhQp0fQFGGRU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQSsvljd5NZX29bt7kA2KetF77Vc0Pmfw_tUluf2dGFfew&oe=6AFCB226",
   "imageBox": [
    635,
    579,
@@ -557,7 +221,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -571,7 +235,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwGtwqSV&_nc_oc=Adp749SEjg54AGLHUQf-IUXseoR4IWgNzdtix9Y3G03mzReM77Subf_dE1IjqHvStou84TLsrVwCh0jefSMZ4IeX&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSzNWb0uDx_jkiRGSqAYV5QFUd6Vdhv1-4zwoOXHtk0jw&oe=6AFCD927",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwEsFPjh&_nc_oc=Ado94as2zMQ7Z5HePD1DQ8qn2kTrPRuLLJI8o_1M99MEkEfHAz9UxUeIyGAGpzhKfrw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQTBZ_qNwuu7_Ew9H0b9vNWwGgEWk5XdlyAfAY88CcPfFw&oe=6AFCD927",
   "imageBox": [
    347,
    212,
@@ -585,7 +249,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -599,7 +263,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwGtwqSV&_nc_oc=Adp749SEjg54AGLHUQf-IUXseoR4IWgNzdtix9Y3G03mzReM77Subf_dE1IjqHvStou84TLsrVwCh0jefSMZ4IeX&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSzNWb0uDx_jkiRGSqAYV5QFUd6Vdhv1-4zwoOXHtk0jw&oe=6AFCD927",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwEsFPjh&_nc_oc=Ado94as2zMQ7Z5HePD1DQ8qn2kTrPRuLLJI8o_1M99MEkEfHAz9UxUeIyGAGpzhKfrw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQTBZ_qNwuu7_Ew9H0b9vNWwGgEWk5XdlyAfAY88CcPfFw&oe=6AFCD927",
   "imageBox": [
    343,
    577,
@@ -613,7 +277,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -627,7 +291,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwGtwqSV&_nc_oc=Adp749SEjg54AGLHUQf-IUXseoR4IWgNzdtix9Y3G03mzReM77Subf_dE1IjqHvStou84TLsrVwCh0jefSMZ4IeX&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSzNWb0uDx_jkiRGSqAYV5QFUd6Vdhv1-4zwoOXHtk0jw&oe=6AFCD927",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwEsFPjh&_nc_oc=Ado94as2zMQ7Z5HePD1DQ8qn2kTrPRuLLJI8o_1M99MEkEfHAz9UxUeIyGAGpzhKfrw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQTBZ_qNwuu7_Ew9H0b9vNWwGgEWk5XdlyAfAY88CcPfFw&oe=6AFCD927",
   "imageBox": [
    637,
    226,
@@ -641,7 +305,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -655,7 +319,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwGtwqSV&_nc_oc=Adp749SEjg54AGLHUQf-IUXseoR4IWgNzdtix9Y3G03mzReM77Subf_dE1IjqHvStou84TLsrVwCh0jefSMZ4IeX&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQSzNWb0uDx_jkiRGSqAYV5QFUd6Vdhv1-4zwoOXHtk0jw&oe=6AFCD927",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MwoNXoeqE6kQ7kNvwEsFPjh&_nc_oc=Ado94as2zMQ7Z5HePD1DQ8qn2kTrPRuLLJI8o_1M99MEkEfHAz9UxUeIyGAGpzhKfrw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQTBZ_qNwuu7_Ew9H0b9vNWwGgEWk5XdlyAfAY88CcPfFw&oe=6AFCD927",
   "imageBox": [
    647,
    557,
@@ -669,7 +333,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -683,7 +347,7 @@
   "unitPrice": null,
   "category": "limpeza",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-2.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHA7Cfc&_nc_oc=Adodmri_q6yFwxAu4s48TaS8uJYFj6RzaMOZRG4r5iDimtUjjehagm5FqYoWjGH1SWqTsp5mag90zLr91ZVO01eT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-2.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQQhjLlatni5kZxbPpKzLznLuc2nabrpb2LeQ_UHoOaDiA&oe=6AFCC68E",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHY9O_E&_nc_oc=AdqSMm2fZFXtnO7w_LwOmA11YETDny2cULVoczl8GhRjBmWVH5hPcS9_ew9NbLRag70&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQT3or7Dg0NWTf3-F0Izd-WvEMWrGHeq6dxCGUzAiftexQ&oe=6AFCC68E",
   "imageBox": [
    342,
    185,
@@ -697,7 +361,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -711,7 +375,7 @@
   "unitPrice": null,
   "category": "limpeza",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-2.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHA7Cfc&_nc_oc=Adodmri_q6yFwxAu4s48TaS8uJYFj6RzaMOZRG4r5iDimtUjjehagm5FqYoWjGH1SWqTsp5mag90zLr91ZVO01eT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-2.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQQhjLlatni5kZxbPpKzLznLuc2nabrpb2LeQ_UHoOaDiA&oe=6AFCC68E",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHY9O_E&_nc_oc=AdqSMm2fZFXtnO7w_LwOmA11YETDny2cULVoczl8GhRjBmWVH5hPcS9_ew9NbLRag70&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQT3or7Dg0NWTf3-F0Izd-WvEMWrGHeq6dxCGUzAiftexQ&oe=6AFCC68E",
   "imageBox": [
    348,
    568,
@@ -725,7 +389,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -739,7 +403,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-2.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHA7Cfc&_nc_oc=Adodmri_q6yFwxAu4s48TaS8uJYFj6RzaMOZRG4r5iDimtUjjehagm5FqYoWjGH1SWqTsp5mag90zLr91ZVO01eT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-2.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQQhjLlatni5kZxbPpKzLznLuc2nabrpb2LeQ_UHoOaDiA&oe=6AFCC68E",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHY9O_E&_nc_oc=AdqSMm2fZFXtnO7w_LwOmA11YETDny2cULVoczl8GhRjBmWVH5hPcS9_ew9NbLRag70&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQT3or7Dg0NWTf3-F0Izd-WvEMWrGHeq6dxCGUzAiftexQ&oe=6AFCC68E",
   "imageBox": [
    638,
    224,
@@ -753,7 +417,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -767,7 +431,7 @@
   "unitPrice": null,
   "category": "limpeza",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-2.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHA7Cfc&_nc_oc=Adodmri_q6yFwxAu4s48TaS8uJYFj6RzaMOZRG4r5iDimtUjjehagm5FqYoWjGH1SWqTsp5mag90zLr91ZVO01eT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-2.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQQhjLlatni5kZxbPpKzLznLuc2nabrpb2LeQ_UHoOaDiA&oe=6AFCC68E",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=d-3WAsjBHTgQ7kNvwHY9O_E&_nc_oc=AdqSMm2fZFXtnO7w_LwOmA11YETDny2cULVoczl8GhRjBmWVH5hPcS9_ew9NbLRag70&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQT3or7Dg0NWTf3-F0Izd-WvEMWrGHeq6dxCGUzAiftexQ&oe=6AFCC68E",
   "imageBox": [
    636,
    597,
@@ -781,7 +445,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -795,7 +459,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFsD3lG&_nc_oc=AdpnALnv__656ZUTNuGZxZ3PnLdtdoFQLqxb8mP_OIhgGMq8zlK_uSnIL3_0TrVC4cMxoeLbDPRQdt5usanxzJAL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQR9GB7QWwDlgWJAgXatuPYrQE6i_Z6NkbITqJIWv02H7A&oe=6AFCCA9C",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFOJPgz&_nc_oc=AdpXjvx_6kzQKWqVJmUe9p28ljyiEIDUSxGxS7nVDL7G6yxwZk6L22eGGEUNhKgUAI8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQQ4ClVdu-6DxdQMVI6sitmSYy3E5PuwYkkuHjdC4JT18Q&oe=6AFCCA9C",
   "imageBox": [
    336,
    218,
@@ -809,7 +473,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -823,7 +487,7 @@
   "unitPrice": null,
   "category": "higiene",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFsD3lG&_nc_oc=AdpnALnv__656ZUTNuGZxZ3PnLdtdoFQLqxb8mP_OIhgGMq8zlK_uSnIL3_0TrVC4cMxoeLbDPRQdt5usanxzJAL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQR9GB7QWwDlgWJAgXatuPYrQE6i_Z6NkbITqJIWv02H7A&oe=6AFCCA9C",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFOJPgz&_nc_oc=AdpXjvx_6kzQKWqVJmUe9p28ljyiEIDUSxGxS7nVDL7G6yxwZk6L22eGGEUNhKgUAI8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQQ4ClVdu-6DxdQMVI6sitmSYy3E5PuwYkkuHjdC4JT18Q&oe=6AFCCA9C",
   "imageBox": [
    335,
    584,
@@ -837,7 +501,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -851,7 +515,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFsD3lG&_nc_oc=AdpnALnv__656ZUTNuGZxZ3PnLdtdoFQLqxb8mP_OIhgGMq8zlK_uSnIL3_0TrVC4cMxoeLbDPRQdt5usanxzJAL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQR9GB7QWwDlgWJAgXatuPYrQE6i_Z6NkbITqJIWv02H7A&oe=6AFCCA9C",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFOJPgz&_nc_oc=AdpXjvx_6kzQKWqVJmUe9p28ljyiEIDUSxGxS7nVDL7G6yxwZk6L22eGGEUNhKgUAI8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQQ4ClVdu-6DxdQMVI6sitmSYy3E5PuwYkkuHjdC4JT18Q&oe=6AFCCA9C",
   "imageBox": [
    632,
    192,
@@ -865,7 +529,7 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  },
  {
   "market": "Lourencini",
@@ -879,7 +543,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFsD3lG&_nc_oc=AdpnALnv__656ZUTNuGZxZ3PnLdtdoFQLqxb8mP_OIhgGMq8zlK_uSnIL3_0TrVC4cMxoeLbDPRQdt5usanxzJAL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=g1yAkvOqW4Ukrn4A8CDnlA&_nc_ss=7a20f&oh=00_AQR9GB7QWwDlgWJAgXatuPYrQE6i_Z6NkbITqJIWv02H7A&oe=6AFCCA9C",
+  "imageUrl": "https://instagram.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=l2B5Ln9i7G4Q7kNvwFOJPgz&_nc_oc=AdpXjvx_6kzQKWqVJmUe9p28ljyiEIDUSxGxS7nVDL7G6yxwZk6L22eGGEUNhKgUAI8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcpq4-1.fna&_nc_gid=cr0_PY7aCE9UvVzPS65bkg&_nc_ss=7a20f&oh=00_AQQ4ClVdu-6DxdQMVI6sitmSYy3E5PuwYkkuHjdC4JT18Q&oe=6AFCCA9C",
   "imageBox": [
    643,
    592,
@@ -893,6 +557,342 @@
   "validUntil": "2026-11-27T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
-  "collectedAt": "2026-11-13T11:09:58.235Z"
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "a521d1274524",
+  "name": "BARRIGA SUÍNA KG",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 19.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGAQoeh&_nc_oc=Ado0LfKH4aReCuWqFDHLOzZAnHE6vr9a_B3ypOnoGLDvMML4k8AD9425ZCvKBiJgR4o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTJn6z7KHrHHDVSxk7piC4RPvZ9pSr929DK2HaYFDY1iA&oe=6AFCC4EA",
+  "imageBox": [
+   238,
+   96,
+   403,
+   439
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "33f604792f21",
+  "name": "COSTELA SUÍNA KG",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 22.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGAQoeh&_nc_oc=Ado0LfKH4aReCuWqFDHLOzZAnHE6vr9a_B3ypOnoGLDvMML4k8AD9425ZCvKBiJgR4o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTJn6z7KHrHHDVSxk7piC4RPvZ9pSr929DK2HaYFDY1iA&oe=6AFCC4EA",
+  "imageBox": [
+   245,
+   596,
+   413,
+   903
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "b798ae22cfd0",
+  "name": "PERNIL C/ OSSO KG",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 13.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGAQoeh&_nc_oc=Ado0LfKH4aReCuWqFDHLOzZAnHE6vr9a_B3ypOnoGLDvMML4k8AD9425ZCvKBiJgR4o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTJn6z7KHrHHDVSxk7piC4RPvZ9pSr929DK2HaYFDY1iA&oe=6AFCC4EA",
+  "imageBox": [
+   579,
+   122,
+   737,
+   425
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "ba1386b8c142",
+  "name": "CUPIM BOVINO KG",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 35.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ZR8gkewsIkIQ7kNvwGAQoeh&_nc_oc=Ado0LfKH4aReCuWqFDHLOzZAnHE6vr9a_B3ypOnoGLDvMML4k8AD9425ZCvKBiJgR4o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTJn6z7KHrHHDVSxk7piC4RPvZ9pSr929DK2HaYFDY1iA&oe=6AFCC4EA",
+  "imageBox": [
+   577,
+   584,
+   741,
+   922
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "14631aef6a09",
+  "name": "SUCO AURORA INTEGRAL UVA TP C/ 1.5ML UNID",
+  "brand": "Aurora",
+  "ean": null,
+  "size": "1.5L",
+  "price": 13.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwEcnR-E&_nc_oc=AdreMDN1W-ab_lvImr5a8_PuZWNC9sXDNg1gh_6v3Kyj_OGK9ssICFx5046vXYwsVbM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQQ954fAdUc5uyhPZlEni0nX5bC2mt5a7fazHDvXw3YQKw&oe=6AFCD017",
+  "imageBox": [
+   223,
+   137,
+   434,
+   381
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "8a2079a76d5b",
+  "name": "PANETONE E CHOCOTONE PRODUÇÃO PRÓPRIA C/400G UNID",
+  "brand": null,
+  "ean": null,
+  "size": "400g",
+  "price": 10.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwEcnR-E&_nc_oc=AdreMDN1W-ab_lvImr5a8_PuZWNC9sXDNg1gh_6v3Kyj_OGK9ssICFx5046vXYwsVbM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQQ954fAdUc5uyhPZlEni0nX5bC2mt5a7fazHDvXw3YQKw&oe=6AFCD017",
+  "imageBox": [
+   220,
+   591,
+   401,
+   912
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "a04d7768d7b4",
+  "name": "FEIJÃO CARIOCA LOURENCINI PACOTE C/ 1KG UNID",
+  "brand": "Lourencini",
+  "ean": null,
+  "size": "1kg",
+  "price": 6.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwEcnR-E&_nc_oc=AdreMDN1W-ab_lvImr5a8_PuZWNC9sXDNg1gh_6v3Kyj_OGK9ssICFx5046vXYwsVbM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQQ954fAdUc5uyhPZlEni0nX5bC2mt5a7fazHDvXw3YQKw&oe=6AFCD017",
+  "imageBox": [
+   587,
+   129,
+   772,
+   404
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "ddcfd7fec374",
+  "name": "REFRIGERANTE FANTA PET C/ 2L (SABORES) UNID",
+  "brand": "Fanta",
+  "ean": null,
+  "size": "2L",
+  "price": 7.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=nlzRmyrLDcIQ7kNvwEcnR-E&_nc_oc=AdreMDN1W-ab_lvImr5a8_PuZWNC9sXDNg1gh_6v3Kyj_OGK9ssICFx5046vXYwsVbM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQQ954fAdUc5uyhPZlEni0nX5bC2mt5a7fazHDvXw3YQKw&oe=6AFCD017",
+  "imageBox": [
+   578,
+   626,
+   786,
+   875
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "cbe7a6a964e0",
+  "name": "MUSSARELA PREMIATTA A CADA 100G",
+  "brand": "Premiatta",
+  "ean": null,
+  "size": "100g",
+  "price": 3.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwGtCOrn&_nc_oc=Ador9iH4SV3uDIBT7SjbP_YN-Syz8Z8o-Cv0GT7MONkyJlCPiBdts9XPLTiouiqPYXU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTe-DKJzUkNryebICSlkCudZblzqIUF7McqbCR4TjbrHA&oe=6AFCBF48",
+  "imageBox": [
+   247,
+   133,
+   401,
+   392
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "a cada 100g",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "2f338e874f4e",
+  "name": "PRESUNTO SADIA A CADA 100G",
+  "brand": "Sadia",
+  "ean": null,
+  "size": "100g",
+  "price": 3.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwGtCOrn&_nc_oc=Ador9iH4SV3uDIBT7SjbP_YN-Syz8Z8o-Cv0GT7MONkyJlCPiBdts9XPLTiouiqPYXU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTe-DKJzUkNryebICSlkCudZblzqIUF7McqbCR4TjbrHA&oe=6AFCBF48",
+  "imageBox": [
+   253,
+   630,
+   407,
+   853
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "a cada 100g",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "4b921e42b66d",
+  "name": "MORTADELA DEFUMADA OURO PERDIGÃO A CADA 100G",
+  "brand": "Perdigão",
+  "ean": null,
+  "size": "100g",
+  "price": 2.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwGtCOrn&_nc_oc=Ador9iH4SV3uDIBT7SjbP_YN-Syz8Z8o-Cv0GT7MONkyJlCPiBdts9XPLTiouiqPYXU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTe-DKJzUkNryebICSlkCudZblzqIUF7McqbCR4TjbrHA&oe=6AFCBF48",
+  "imageBox": [
+   595,
+   127,
+   774,
+   440
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": "a cada 100g",
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
+ },
+ {
+  "market": "Lourencini",
+  "externalId": "3b7f75844c79",
+  "name": "MARGARINA CREMOSA DORIANA POTE C/ 500G UNID",
+  "brand": "Doriana",
+  "ean": null,
+  "size": "500g",
+  "price": 7.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Fqj1NYT67KEQ7kNvwGtCOrn&_nc_oc=Ador9iH4SV3uDIBT7SjbP_YN-Syz8Z8o-Cv0GT7MONkyJlCPiBdts9XPLTiouiqPYXU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_gid=wGjaSgqk2g8RvJg4q8rXZA&_nc_ss=7a20f&oh=00_AQTe-DKJzUkNryebICSlkCudZblzqIUF7McqbCR4TjbrHA&oe=6AFCBF48",
+  "imageBox": [
+   609,
+   595,
+   726,
+   911
+  ],
+  "productUrl": "https://www.instagram.com/p/Dfp8IXnEVB3/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-12T03:00:00.000Z",
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @lourencinisupermercados",
+  "collectedAt": "2026-11-13T11:55:04.712Z"
  }
 ]
