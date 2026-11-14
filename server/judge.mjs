@@ -12,7 +12,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
-import { pairKey, offerKey, brandKeys, signature } from './group.mjs';
+import { pairKey, offerKey, brandKeys, signature, strip, groupOffers } from './group.mjs';
 import { normalizeEan } from './ean.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -57,6 +57,28 @@ Exceção de encarte: oferta que vale para vários sabores ("sabores", "diversos
 que qualquer sabor incluído, de mesma marca e tamanho; sem tamanho no encarte, vale o tamanho mais comum da marca.
 Não responda false só porque um lado escreve menos palavras: faltar uma palavra descritiva não é diferença.
 Siga o critério dos exemplos já decididos pelo dono do site: eles mostram até onde ele considera "o mesmo produto".`;
+
+// Filtro de regra antes do juiz (não gasta cota): os dois nomes dizem sabor ou versão, e são diferentes.
+// Só vale quando OS DOIS lados dizem algo; um lado calado é dúvida e vai para o juiz. Encarte "sabores/diversos" nunca cai aqui.
+// Cada grupo é comparado à parte: sabor com sabor, versão do leite com versão do leite etc.
+const GRUPOS_VARIACAO = [
+  ['morango', 'uva', 'laranja', 'limao', 'chocolate', 'baunilha', 'coco', 'abacaxi', 'maracuja', 'pessego', 'framboesa',
+    'menta', 'hortela', 'cereja', 'banana', 'maca', 'manga', 'goiaba', 'caju', 'acerola', 'tangerina', 'melancia', 'amendoim', 'avela',
+    'caramelo', 'frango', 'carne', 'presunto', 'calabresa', 'bacon', 'cebola', 'picanha', 'costela', 'camarao', 'atum', 'sardinha'],
+  ['integral', 'desnatado', 'semidesnatado'],
+  ['sem gas', 'com gas'],
+  ['sem sal', 'com sal'],
+  ['zero', 'light', 'diet'],
+];
+const norm = (nome) => ' ' + strip(nome).replace(/[^a-z0-9]+/g, ' ').replace(/ semi desnatad/g, ' semidesnatad') + ' ';
+export function conflitoDeRegra(nomeA, nomeB) {
+  if (/\bsabores\b|divers|varios|sortid/i.test(strip(nomeA + ' ' + nomeB))) return false;
+  const na = norm(nomeA), nb = norm(nomeB);
+  return GRUPOS_VARIACAO.some((g) => {
+    const a = g.filter((v) => na.includes(' ' + v + ' ')), b = g.filter((v) => nb.includes(' ' + v + ' '));
+    return a.length && b.length && (a.length !== b.length || a.some((v) => !b.includes(v)));
+  });
+}
 
 const SCHEMA = { type: 'OBJECT', properties: { results: { type: 'ARRAY', items: { type: 'OBJECT', properties: { id: { type: 'STRING' }, same: { type: 'BOOLEAN' } }, required: ['id', 'same'] } } }, required: ['results'] };
 const fmt = (o) => `${o.market} | ${o.name}${o.price ? ` | R$ ${Number(o.price).toFixed(2)}` : ''}`;
@@ -115,11 +137,49 @@ async function ask(pairs, examples) {
   }
   throw new Error(`gemini: limite de uso atingido (${falhas.slice(-6).join(' | ')})`);
 }
+// Segundo juiz: Groq (grátis, GROQ_API_KEY), só com texto. O modelo com visão aceita no máximo 3 fotos por pedido e cada foto
+// custa ~1.300 tokens, contra um limite de 8 mil tokens por minuto: com fotos daria 1 par por minuto. Tem prova própria (provaGroq)
+// e só entra quando a cota do Gemini acaba, se a prova dele passou.
+const GROQ_KEY = process.env.GROQ_API_KEY;
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
+let provedor = process.argv.includes('--provedor=groq') ? 'groq' : 'gemini';
+// o pedido inteiro tem de caber em 8 mil tokens: vão só os exemplos mais parecidos com os pares do lote (palavras em comum)
+const GROQ_EXEMPLOS = 40;
+const palavras = (s) => new Set(strip(s).split(/[^a-z0-9]+/).filter((w) => w.length > 2));
+function exemplosParecidos(pairs, examples) {
+  const alvo = pairs.map((p) => palavras(p.a + ' ' + p.b));
+  const nota = (e) => { const w = palavras(e.a + ' ' + e.b); return Math.max(...alvo.map((a) => [...w].filter((x) => a.has(x)).length)); };
+  return examples.map((e) => [nota(e), e]).sort((x, y) => y[0] - x[0]).slice(0, GROQ_EXEMPLOS).map((x) => x[1]);
+}
+async function askGroq(pairs, todos) {
+  const examples = exemplosParecidos(pairs, todos);
+  const text = `${RULES}\n\nVocê NÃO recebe fotos: decida só pelo texto.\n\nExemplos decididos pelo dono do site (A || B => resposta):\n${examples.map((e) => `${e.a} || ${e.b} => ${e.same ? 'mesmo' : 'diferente'}`).join('\n')}\n\nPares para decidir (id: A || B):\n${pairs.map((p) => `${p.id}: ${p.a} || ${p.b}`).join('\n')}\n\nResponda só com JSON no formato {"results":[{"id":"1","same":true}]}, um item por par, com o mesmo id.`;
+  for (let tent = 0; tent < 8; tent++) {
+    let r;
+    try {
+      r = await fetch('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { Authorization: `Bearer ${GROQ_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: GROQ_MODEL, temperature: 0, response_format: { type: 'json_object' }, reasoning_effort: /gpt-oss/.test(GROQ_MODEL) ? 'low' : 'none', messages: [{ role: 'user', content: text }] }), signal: AbortSignal.timeout(120000) });
+    } catch (e) { falhas.push(`groq: ${e.message}`.slice(0, 120)); await sleep(10000); continue; }
+    if (r.status === 429 || r.status >= 500) {
+      const t = await r.text();
+      falhas.push(`groq: ${r.status} ${t.replace(/\s+/g, ' ').slice(0, 100)}`);
+      if (/per day|\(TPD\)|\(RPD\)/i.test(t)) throw new Error('groq: cota do dia esgotada');
+      await sleep(Math.min((Number(r.headers.get('retry-after')) || 20) + 1, 90) * 1000); // limite por minuto: espera o que ele pede
+      continue;
+    }
+    if (!r.ok) throw new Error(`groq ${r.status} ${(await r.text()).slice(0, 160)}`);
+    const j = await r.json();
+    const out = JSON.parse(j.choices?.[0]?.message?.content || '{}');
+    return { model: 'groq:' + GROQ_MODEL, results: new Map((out.results || []).map((x) => [String(x.id), x.same === true || x.same === 'true'])) };
+  }
+  throw new Error(`groq: limite de uso atingido (${falhas.slice(-4).join(' | ')})`);
+}
 async function judge(pairs, examples) {
   const out = new Map();
-  for (let i = 0; i < pairs.length; i += BATCH) {
-    const part = pairs.slice(i, i + BATCH).map((p, k) => ({ ...p, id: String(k + 1) }));
-    const { model, results } = await ask(part, examples);
+  const lote = provedor === 'groq' ? 10 : BATCH;
+  for (let i = 0; i < pairs.length; i += lote) {
+    const part = pairs.slice(i, i + lote).map((p, k) => ({ ...p, id: String(k + 1) }));
+    const { model, results } = provedor === 'groq' ? await askGroq(part, examples) : await ask(part, examples);
     part.forEach((p, k) => { if (results.has(p.id)) out.set(pairs[i + k].key, { same: results.get(p.id), model }); });
     await sleep(4000);
   }
@@ -148,7 +208,26 @@ const asPair = (x) => ({
   imgB: x.b.image || candImgs.get(x.id)?.b.image || imageOf.get(offerKey(x.b)),
 });
 const all = labels.map(asPair);
-const hash = crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
+const hashDe = (prov) => crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, prov === 'groq' ? 'groq:' + GROQ_MODEL : MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
+const hash = hashDe('gemini');
+// prova do Groq (--provedor=groq): grava em provaGroq e não mexe na do Gemini nem no "ativo"
+const groqAprovado = () => !!(GROQ_KEY && state.provaGroq?.hash === hashDe('groq') && state.provaGroq.taxa >= META && state.provaGroq.acertos > state.provaGroq.regra);
+if (provedor === 'groq' && (state.provaGroq?.hash !== hashDe('groq') || process.argv.includes('--forcar-prova'))) {
+  if (!GROQ_KEY) throw new Error('sem GROQ_API_KEY');
+  const fold = (x) => parseInt(crypto.createHash('sha1').update(x.key).digest('hex').slice(0, 6), 16) % FOLDS;
+  const v = new Map();
+  for (let f = 0; f < FOLDS; f++) for (const [k, val] of await judge(all.filter((x) => fold(x) === f), all.filter((x) => fold(x) !== f))) v.set(k, val);
+  let acertos = 0, regra = 0;
+  const erros = [];
+  for (const x of labels) {
+    const truth = x.label === 'mesmo', got = v.get(x.id)?.same;
+    if (got === truth) acertos++; else erros.push({ a: x.a.name, b: x.b.name, rafael: x.label, juiz: got === undefined ? 'sem resposta' : got ? 'mesmo' : 'diferente' });
+    if ((x.kind !== 'separados') === truth) regra++;
+  }
+  state.provaGroq = { em: new Date().toISOString(), hash: hashDe('groq'), modelo: GROQ_MODEL, total: labels.length, acertos, regra, taxa: acertos / labels.length, erros };
+  console.log(`juiz Groq: prova ${acertos}/${labels.length} (${(100 * acertos / labels.length).toFixed(1)}%); regra ${regra}; aprovado: ${groqAprovado()}`);
+  for (const e of erros) console.log(`  erro Groq: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz}`);
+}
 // --aceitar-prova: o Rafael aceita a última prova feita (ex.: rodou com outra lista de modelos) sem gastar cota refazendo
 if (process.argv.includes('--aceitar-prova') && state.prova) {
   state.prova.hash = hash;
@@ -156,7 +235,7 @@ if (process.argv.includes('--aceitar-prova') && state.prova) {
   state.ativo = state.prova.taxa >= META && state.prova.acertos > state.prova.regra;
   delete state.erro;
 }
-if (state.prova?.hash !== hash || process.argv.includes('--forcar-prova')) {
+if (provedor === 'gemini' && (state.prova?.hash !== hash || process.argv.includes('--forcar-prova'))) {
   const fold = (x) => parseInt(crypto.createHash('sha1').update(x.key).digest('hex').slice(0, 6), 16) % FOLDS;
   const v = new Map();
   for (let f = 0; f < FOLDS; f++) {
@@ -181,7 +260,7 @@ if (pv.trocas?.length) console.log("  trocas de modelo:", pv.trocas.join(" | "))
 for (const e of pv.erros) console.log(`  erro: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz} [${e.modelo}]`);
 
 // ---------- 2. julga pares candidatos ----------
-if (state.ativo && !process.argv.includes('--so-prova')) {
+if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini' || groqAprovado())) {
   const sigs = offers.map(signature);
   const brands = brandKeys(offers);
   const eans = offers.map((o) => normalizeEan(o.ean));
@@ -190,7 +269,7 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
   const cand = new Map();
   const add = (a, b, d) => {
     const key = pairKey(offers[a], offers[b]);
-    if (!state.pares[key]) cand.set(key, { key, a: fmt(offers[a]), b: fmt(offers[b]), imgA: offers[a].imageUrl, imgB: offers[b].imageUrl, d, semEan: !eans[a] || !eans[b] });
+    if (!state.pares[key]) cand.set(key, { key, a: fmt(offers[a]), b: fmt(offers[b]), imgA: offers[a].imageUrl, imgB: offers[b].imageUrl, d, semEan: !eans[a] || !eans[b], ia: a, ib: b });
   };
   // mesma marca (informada ou deduzida do nome) e mesmo tamanho, nomes um pouco diferentes
   const buckets = new Map();
@@ -212,18 +291,76 @@ if (state.ativo && !process.argv.includes('--so-prova')) {
     const a = idx[x], b = idx[y];
     if (offers[a].market !== offers[b].market && diffOf(a, b) >= 3) add(a, b, diffOf(a, b));
   }
-  // primeiro os pares em que um lado não tem EAN (Nagumo, Semar, encartes), depois menos palavras diferentes
-  const todo = [...cand.values()].sort((x, y) => (y.semEan - x.semEan) || (x.d - y.d)).slice(0, MAX_LOTES * BATCH);
-  console.log(`juiz: ${cand.size} pares sem veredito; julgando até ${todo.length}`);
-  const examples = all;
-  let feitos = 0;
-  for (let i = 0; i < todo.length && Date.now() < DEADLINE; i += BATCH) {
-    try {
-      const r = await judge(todo.slice(i, i + BATCH), examples);
-      for (const [k, val] of r) { state.pares[k] = { ...val, em: new Date().toISOString().slice(0, 10) }; feitos++; }
-    } catch (e) { console.warn('juiz:', e.message); state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 600), falhas: falhas.slice(-10) }; break; }
+  // par que não muda o site: já estão no mesmo grupo, ou cada lado já tem comparação com o mercado do outro
+  const vered = new Map(Object.entries(state.pares).map(([k, v]) => [k, v.same]));
+  for (const x of labels) vered.set(pairKey(x.a, x.b), x.label === 'mesmo');
+  const grupos = groupOffers(offers, (i, j) => vered.get(pairKey(offers[i], offers[j])));
+  const grupoDe = new Array(offers.length);
+  grupos.forEach((g, gi) => g.idx.forEach((i) => { grupoDe[i] = gi; }));
+  const mercadosDo = grupos.map((g) => new Set(g.idx.map((i) => offers[i].market)));
+  let semGanho = 0;
+  for (const c of cand.values()) {
+    const ga = grupoDe[c.ia], gb = grupoDe[c.ib]; // undefined = oferta sozinha
+    if (ga === undefined || gb === undefined) continue;
+    if (ga === gb || (mercadosDo[ga].has(offers[c.ib].market) && mercadosDo[gb].has(offers[c.ia].market))) { cand.delete(c.key); semGanho++; }
   }
-  console.log(`juiz: ${feitos} vereditos novos; total ${Object.keys(state.pares).length}`);
+  console.log(`juiz: ${semGanho} pares pulados (não mudariam o comparador)`);
+  // um representante por produto com EAN: oferta sem EAN x vários mercados com o MESMO EAN (já agrupados pelo código)
+  // é uma pergunta só; "mesmo" com um deles põe a oferta no grupo inteiro. Fica o par com menos palavras diferentes.
+  const repr = new Map();
+  for (const c of cand.values()) {
+    const ea = eans[c.ia], eb = eans[c.ib];
+    if (!ea === !eb) continue; // os dois sem EAN (ex.: Nagumo x Semar) ou EAN reaproveitado: julga todos
+    const k = (ea ? offerKey(offers[c.ib]) : offerKey(offers[c.ia])) + '#' + (ea || eb);
+    const atual = repr.get(k);
+    if (!atual) repr.set(k, c);
+    else { const fica = c.d < atual.d ? c : atual; cand.delete((fica === c ? atual : c).key); repr.set(k, fica); }
+  }
+  // filtro de regra: sabor/versão diferente dos dois lados = diferente, sem perguntar à IA
+  let porRegra = 0;
+  for (const [k, c] of cand) if (conflitoDeRegra(c.a, c.b)) { state.pares[k] = { same: false, model: 'regra', em: new Date().toISOString().slice(0, 10) }; cand.delete(k); porRegra++; }
+  console.log(`juiz: ${porRegra} pares decididos pela regra de sabor/versão (sem IA)`);
+  if (process.argv.includes('--contar')) {
+    const por = {}; for (const c of cand.values()) { const m = [c.a.split(' | ')[0], c.b.split(' | ')[0]].sort().join(' x '); por[m] = (por[m] || 0) + 1; }
+    const porD = {}; for (const c of cand.values()) porD[c.d] = (porD[c.d] || 0) + 1;
+    console.log('por diferença de palavras:', porD); console.log(Object.entries(por).sort((x, y) => y[1] - x[1]).slice(0, 25));
+    process.exit(0);
+  }
+  // primeiro os pares em que um lado não tem EAN (Nagumo, Semar, encartes), depois menos palavras diferentes
+  // ordem: encartes primeiro (poucos e valiosos); depois a 1ª tentativa de cada oferta antes da 2ª; depois menos palavras diferentes
+  const CATALOGOS = new Set(['Atacadão', 'Coop', 'Extra', 'Spani', 'Nagumo', 'Semar']);
+  const encarte = (c) => !CATALOGOS.has(offers[c.ia].market) || !CATALOGOS.has(offers[c.ib].market);
+  const vez = new Map(); // oferta -> quantos pares dela já vieram antes
+  const fila = [...cand.values()].sort((x, y) => x.d - y.d);
+  for (const c of fila) { c.vez = Math.max(vez.get(c.ia) ?? 0, vez.get(c.ib) ?? 0); vez.set(c.ia, (vez.get(c.ia) ?? 0) + 1); vez.set(c.ib, (vez.get(c.ib) ?? 0) + 1); }
+  fila.sort((x, y) => (encarte(y) - encarte(x)) || (x.vez - y.vez) || (x.d - y.d));
+  console.log(`juiz: ${cand.size} pares sem veredito; até ${MAX_LOTES} lotes de ${BATCH}`);
+  const examples = all;
+  // oferta que já achou par num mercado nesta rodada não pergunta de novo sobre outro produto desse mercado
+  const achou = new Set();
+  const inutil = (c) => achou.has(c.ia + '>' + offers[c.ib].market) && achou.has(c.ib + '>' + offers[c.ia].market);
+  let feitos = 0, pos = 0;
+  for (let lote = 0; lote < MAX_LOTES && pos < fila.length && Date.now() < DEADLINE; lote++) {
+    const part = [], posIni = pos;
+    while (part.length < BATCH && pos < fila.length) { const c = fila[pos++]; if (!inutil(c)) part.push(c); }
+    try {
+      const r = await judge(part, examples);
+      for (const [k, val] of r) {
+        state.pares[k] = { ...val, em: new Date().toISOString().slice(0, 10) }; feitos++;
+        const c = cand.get(k);
+        if (val.same && c) { achou.add(c.ia + '>' + offers[c.ib].market); achou.add(c.ib + '>' + offers[c.ia].market); }
+      }
+    } catch (e) {
+      // Gemini sem cota: o Groq (só texto) continua, se passou na prova dele; o lote é refeito
+      if (provedor === 'gemini' && /cota do dia|limite de uso/.test(e.message) && groqAprovado()) {
+        console.log(`juiz: ${e.message}; seguindo com o Groq`);
+        provedor = 'groq'; pos = posIni; lote--;
+        continue;
+      }
+      console.warn('juiz:', e.message); state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 600), falhas: falhas.slice(-10) }; break;
+    }
+  }
+  console.log(`juiz: ${feitos} vereditos novos (${Object.values(state.pares).filter((v) => v.same && v.model !== 'regra').length} "mesmo" no total); total ${Object.keys(state.pares).length}`);
 }
 } catch (e) {
   // sem cota ou erro do Gemini: grava o motivo e mantém o que já havia (nada muda no site)

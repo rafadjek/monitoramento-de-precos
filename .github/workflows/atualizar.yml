@@ -89,6 +89,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # chave só do juiz (outro projeto no Google AI Studio = cota própria); sem ela, usa a do leitor
           GEMINI_JUIZ_KEY: ${{ secrets.GEMINI_JUIZ_KEY }}
+          # segundo juiz (Groq, só texto): entra quando a cota do Gemini acaba, se passou na prova dele
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node judge.mjs
 
       # preço de cada oferta por dia (só grava o que mudou); alimenta o gráfico e o "Baixou hoje" do site
