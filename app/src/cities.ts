@@ -13,15 +13,21 @@ export function migrateCities(rawNew: string | null, rawOld: string | null): str
   return typeof o === 'string' && o ? [o] : [];
 }
 
-/** Seleção válida: só cidades que existem; marcar todas equivale a não filtrar (lista vazia). */
+/** Seleção válida: só cidades que existem. Lista vazia = todas (as duas formas filtram igual). */
 export function effectiveCities(sel: string[], available: string[]): string[] {
-  const ok = [...new Set(sel)].filter((c) => available.includes(c));
-  return ok.length === 0 || ok.length >= available.length ? [] : ok;
+  return [...new Set(sel)].filter((c) => available.includes(c));
 }
 
-/** Marca ou desmarca uma cidade. */
+/** Lista vazia ou com todas as cidades = sem filtro. */
+export function isAll(sel: string[], available: string[]): boolean {
+  return sel.length === 0 || available.every((c) => sel.includes(c));
+}
+
+/** Marca ou desmarca uma cidade. Com "todas" valendo, as caixinhas aparecem todas marcadas:
+ *  desmarcar uma deixa as outras. Desmarcar a última volta para "todas". */
 export function toggleCity(sel: string[], city: string, available: string[]): string[] {
-  const next = sel.includes(city) ? sel.filter((c) => c !== city) : [...sel, city];
+  const base = sel.length === 0 ? available : sel;
+  const next = base.includes(city) ? base.filter((c) => c !== city) : [...base, city];
   return effectiveCities(next, available);
 }
 
@@ -31,8 +37,8 @@ export function marketInCities(marketCities: string[] | undefined, sel: string[]
 }
 
 /** Texto do botão: 'Mauá', 'Mauá + 1' ou 'Todas as cidades'. */
-export function cityLabel(sel: string[]): string {
-  if (sel.length === 0) return 'Todas as cidades';
+export function cityLabel(sel: string[], total = 0): string {
+  if (sel.length === 0 || (total > 0 && sel.length >= total)) return 'Todas as cidades';
   return sel.length === 1 ? sel[0] : `${sel[0]} + ${sel.length - 1}`;
 }
 

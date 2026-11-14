@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Icon } from './Parts';
-import { cityLabel, toggleCity } from '../cities';
+import { cityLabel, isAll, toggleCity } from '../cities';
 
 type Props = {
   available: string[];
@@ -44,7 +44,7 @@ export function CityPicker({ available, selected, onChange, className = '', alig
         <Icon name="pin" className="h-5 w-5 shrink-0 text-sky" />
         <span className="min-w-0 flex-1 leading-tight">
           <span className="block text-[0.7rem] text-muted">Minha região</span>
-          <span className="block truncate text-sm font-bold">{cityLabel(selected)}</span>
+          <span className="block truncate text-sm font-bold">{cityLabel(selected, available.length)}</span>
         </span>
         <span aria-hidden className={`text-xs text-muted transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>
       </button>
@@ -56,14 +56,14 @@ export function CityPicker({ available, selected, onChange, className = '', alig
           className={`absolute top-full z-40 mt-2 w-72 max-w-[calc(100vw-2rem)] rounded-xl border border-sky/60 bg-panel p-2 shadow-sky ${align === 'right' ? 'right-0' : 'left-0'}`}
         >
           <label className={row}>
-            <input type="checkbox" className={box} checked={selected.length === 0} onChange={() => onChange([])} />
+            <input type="checkbox" className={box} checked={isAll(selected, available)} onChange={() => onChange([])} />
             Todas
           </label>
           <div className="my-1 h-px bg-edge" />
           <div className="max-h-[50vh] overflow-y-auto">
             {available.map((c) => (
               <label key={c} className={row}>
-                <input type="checkbox" className={box} checked={selected.includes(c)} onChange={() => onChange(toggleCity(selected, c, available))} />
+                <input type="checkbox" className={box} checked={isAll(selected, available) || selected.includes(c)} onChange={() => onChange(toggleCity(selected, c, available))} />
                 {c}
               </label>
             ))}

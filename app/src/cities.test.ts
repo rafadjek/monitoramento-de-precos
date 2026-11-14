@@ -1,7 +1,7 @@
 // Teste da escolha de cidades: node --test src/cities.test.ts
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cityLabel, citiesText, effectiveCities, marketInCities, migrateCities, toggleCity } from './cities.ts';
+import { cityLabel, citiesText, effectiveCities, isAll, marketInCities, migrateCities, toggleCity } from './cities.ts';
 
 const av = ['Mauá', 'Ribeirão Pires', 'São Bernardo do Campo'];
 
@@ -14,19 +14,27 @@ test('migra a cidade antiga e prefere a lista nova', () => {
   assert.deepEqual(migrateCities('lixo{', '"Mauá"'), ['Mauá']);
 });
 
-test('seleção válida: ignora cidade inexistente e todas marcadas viram vazio', () => {
+test('seleção válida: ignora cidade inexistente', () => {
   assert.deepEqual(effectiveCities(['Mauá', 'Santo André'], av), ['Mauá']);
   assert.deepEqual(effectiveCities(['Santo André'], av), []);
-  assert.deepEqual(effectiveCities(av, av), []);
   assert.deepEqual(effectiveCities(['Mauá'], []), []);
+  assert.equal(isAll([], av), true);
+  assert.equal(isAll(av, av), true);
+  assert.equal(isAll(['Mauá'], av), false);
 });
 
-test('marcar e desmarcar', () => {
-  assert.deepEqual(toggleCity([], 'Mauá', av), ['Mauá']);
-  assert.deepEqual(toggleCity(['Mauá'], 'Ribeirão Pires', av), ['Mauá', 'Ribeirão Pires']);
-  assert.deepEqual(toggleCity(['Mauá', 'Ribeirão Pires'], 'Mauá', av), ['Ribeirão Pires']);
-  assert.deepEqual(toggleCity(['Mauá'], 'Mauá', av), []);
-  assert.deepEqual(toggleCity(['Mauá', 'Ribeirão Pires'], 'São Bernardo do Campo', av), []);
+test('marcar e desmarcar (qualquer cidade, em qualquer ordem)', () => {
+  const two = ['Mauá', 'Ribeirão Pires'];
+  // "todas" valendo: desmarcar uma deixa a outra
+  assert.deepEqual(toggleCity([], 'Mauá', two), ['Ribeirão Pires']);
+  assert.deepEqual(toggleCity([], 'Ribeirão Pires', two), ['Mauá']);
+  // só Mauá, marcar Ribeirão: as duas ficam marcadas
+  assert.deepEqual(toggleCity(['Mauá'], 'Ribeirão Pires', two), ['Mauá', 'Ribeirão Pires']);
+  // só Ribeirão, marcar Mauá
+  assert.deepEqual(toggleCity(['Ribeirão Pires'], 'Mauá', two), ['Ribeirão Pires', 'Mauá']);
+  // desmarcar a última volta a "todas"
+  assert.deepEqual(toggleCity(['Mauá'], 'Mauá', two), []);
+  assert.deepEqual(toggleCity(['Ribeirão Pires'], 'Ribeirão Pires', two), []);
 });
 
 test('filtro de mercado', () => {
@@ -41,6 +49,7 @@ test('rótulo e subtítulo', () => {
   assert.equal(cityLabel([]), 'Todas as cidades');
   assert.equal(cityLabel(['Mauá']), 'Mauá');
   assert.equal(cityLabel(['Mauá', 'Ribeirão Pires']), 'Mauá + 1');
+  assert.equal(cityLabel(['Mauá', 'Ribeirão Pires'], 2), 'Todas as cidades');
   assert.equal(cityLabel(['A', 'B', 'C']), 'A + 2');
   assert.equal(citiesText([]), 'Mauá e Ribeirão Pires');
   assert.equal(citiesText(['Mauá']), 'Mauá');

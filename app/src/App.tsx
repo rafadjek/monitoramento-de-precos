@@ -9,7 +9,7 @@ import { haystack, match, parseQuery } from './search';
 import type { HistMeta } from './history';
 import { CityAdBanner, CityAdCard } from './components/CityAd';
 import { CityPicker } from './components/CityPicker';
-import { effectiveCities, marketInCities, migrateCities } from './cities';
+import { effectiveCities, isAll, marketInCities, migrateCities } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
 const BASE = import.meta.env.BASE_URL;
@@ -105,7 +105,7 @@ function Comparador() {
   useEffect(() => setShown(PAGE), [dq, category, market, rawCities, sort, onlyFavs]);
   const cityList = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].filter((c) => c === 'Mauá' || c === 'Ribeirão Pires').sort((a, b) => a.localeCompare(b, 'pt-BR')), [markets]);
   // cidades marcadas que existem de verdade (todas marcadas = sem filtro)
-  const cities = useMemo(() => effectiveCities(rawCities, cityList), [rawCities, cityList]);
+  const cities = useMemo(() => { const e = effectiveCities(rawCities, cityList); return isAll(e, cityList) ? [] : e; }, [rawCities, cityList]);
   const inCity = useMemo(() => new Set(markets.filter((m) => marketInCities(m.cities, cities)).map((m) => m.name)), [markets, cities]);
   // colunas: todos os mercados da região escolhida, do que tem mais produtos para o que tem menos
   const columns = useMemo(() => markets.filter((m) => inCity.has(m.name)).sort((a, b) => b.products - a.products).map((m) => m.name), [markets, inCity]);

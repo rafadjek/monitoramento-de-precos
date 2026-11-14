@@ -1,11 +1,13 @@
 import { useState, type FormEvent } from 'react';
 import { buildMessage, EMAIL, mailLink, PLANS, PROFILES, validateLead, waLink, type Lead, type LeadErrors } from './contact';
+import { promoText, type PromoEvent } from './content';
 
+const NL = String.fromCharCode(10);
 const empty: Lead = { nome: '', cidade: '', perfil: '', plano: '', mensagem: '' };
 const field = 'mt-1 w-full rounded-xl border-2 border-edge bg-night px-3 py-3 text-base text-ink placeholder:text-muted/80 focus:border-gold';
 const ORDER = ['nome', 'cidade', 'perfil', 'plano', 'mensagem'] as const;
 
-export function LeadForm() {
+export function LeadForm({ ev = null }: { ev?: PromoEvent | null }) {
   const [lead, setLead] = useState<Lead>(empty);
   const [errors, setErrors] = useState<LeadErrors>({});
   const [sent, setSent] = useState<'' | 'whatsapp' | 'email'>('');
@@ -16,7 +18,8 @@ export function LeadForm() {
     setErrors(e);
     const first = ORDER.find((k) => e[k]);
     if (first) { document.getElementById(`f-${first}`)?.focus(); return; }
-    const text = buildMessage(lead);
+    const promo = promoText(lead.plano, ev);
+    const text = promo ? `${buildMessage(lead)}${NL}${NL}${promo}` : buildMessage(lead);
     if (how === 'whatsapp') window.open(waLink(text), '_blank', 'noopener,noreferrer');
     else window.location.href = mailLink(text);
     setSent(how);
@@ -27,7 +30,7 @@ export function LeadForm() {
   const a11y = (k: keyof Lead) => ({ 'aria-invalid': !!errors[k], 'aria-describedby': errors[k] ? `e-${k}` : undefined });
 
   return (
-    <form onSubmit={submit} noValidate className="grid gap-4 sm:grid-cols-2" aria-label="Quero o Bate Ofertas na minha cidade">
+    <form onSubmit={submit} noValidate className="grid gap-3 sm:grid-cols-2" aria-label="Quero o Bate Ofertas na minha cidade">
       <div>
         <label htmlFor="f-nome" className="font-bold">Seu nome</label>
         <input id="f-nome" name="nome" autoComplete="name" maxLength={80} value={lead.nome} onChange={set('nome')} className={field} {...a11y('nome')} />
@@ -56,7 +59,7 @@ export function LeadForm() {
       </div>
       <div className="sm:col-span-2">
         <label htmlFor="f-mensagem" className="font-bold">Conte o que você tem em mente <span className="font-normal text-muted">(opcional)</span></label>
-        <textarea id="f-mensagem" name="mensagem" rows={3} maxLength={600} value={lead.mensagem} onChange={set('mensagem')} className={field} {...a11y('mensagem')} />
+        <textarea id="f-mensagem" name="mensagem" rows={2} maxLength={600} value={lead.mensagem} onChange={set('mensagem')} className={field} {...a11y('mensagem')} />
         <Err k="mensagem" />
       </div>
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
@@ -70,7 +73,7 @@ export function LeadForm() {
       <p className="text-sm text-muted sm:col-span-2" role="status">
         {sent === 'whatsapp' && <b className="text-neon">WhatsApp aberto com a mensagem pronta: é só apertar enviar. </b>}
         {sent === 'email' && <b className="text-neon">Seu programa de e-mail abriu com a mensagem pronta. </b>}
-        Nada do que você escreve aqui é guardado nem vai para servidor: o formulário só monta a mensagem e abre o seu WhatsApp ou e-mail ({EMAIL}).
+        Nada fica guardado: o formulário só monta a mensagem e abre o seu WhatsApp ou e-mail ({EMAIL}).
       </p>
     </form>
   );
