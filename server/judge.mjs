@@ -20,7 +20,10 @@ const IN = path.join(ROOT, 'data/extraido');
 const OUT = path.join(IN, 'juiz-veredictos.json');
 const LABELS = path.join(ROOT, 'data/rotulos/rotulos.json');
 const CANDS = path.join(ROOT, 'data/rotulos/candidatos.json');
-const KEY = process.env.GEMINI_JUIZ_KEY || process.env.GEMINI_API_KEY;
+// chave do juiz primeiro; esgotada a cota do dia, usa a do leitor de encartes (que já leu os encartes antes, no workflow)
+const KEYS = [...new Set([process.env.GEMINI_JUIZ_KEY, process.env.GEMINI_API_KEY].filter(Boolean))];
+const KEY = KEYS[0];
+let keyIdx = 0;
 const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash').split(',');
 const BATCH = 20; // 20 pares = até 40 fotos por pedido
 const MAX_LOTES = Number(process.env.JUIZ_MAX_LOTES || 40);
@@ -89,7 +92,7 @@ async function ask(pairs, examples) {
     const model = MODELS[modelIdx];
     let r;
     try {
-      r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY }, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
+      r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEYS[keyIdx] }, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
     } catch (e) { falhas.push(`${model}: ${e.message}`.slice(0, 120)); if (onModel >= 1 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; } continue; }
     if (r.status === 404) falhas.push(`${model}: 404`);
     if (r.status === 404 && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
@@ -100,6 +103,7 @@ async function ask(pairs, examples) {
       falhas.push(`${model}: ${r.status} ${q ? q + (lim ? ' limite ' + lim : '') : t.replace(/\s+/g, ' ').slice(0, 80)}`);
       // cota diária, limite zero ou 429 repetido: troca de modelo em vez de esperar à toa
       if ((/PerDay|per day/i.test(t) || lim === '0' || onModel >= 1) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+      if (/PerDay|per day/i.test(t) && keyIdx < KEYS.length - 1) { keyIdx++; modelIdx = 0; onModel = -1; falhas.push('trocou para a chave do leitor'); continue; }
       if (/PerDay|per day/i.test(t)) throw new Error('gemini: cota do dia esgotada');
       await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
       continue;
@@ -145,6 +149,13 @@ const asPair = (x) => ({
 });
 const all = labels.map(asPair);
 const hash = crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
+// --aceitar-prova: o Rafael aceita a última prova feita (ex.: rodou com outra lista de modelos) sem gastar cota refazendo
+if (process.argv.includes('--aceitar-prova') && state.prova) {
+  state.prova.hash = hash;
+  state.prova.aceitaPeloRafael = new Date().toISOString();
+  state.ativo = state.prova.taxa >= META && state.prova.acertos > state.prova.regra;
+  delete state.erro;
+}
 if (state.prova?.hash !== hash || process.argv.includes('--forcar-prova')) {
   const fold = (x) => parseInt(crypto.createHash('sha1').update(x.key).digest('hex').slice(0, 6), 16) % FOLDS;
   const v = new Map();
