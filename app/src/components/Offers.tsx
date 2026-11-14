@@ -2,18 +2,35 @@ import { useMemo } from 'react';
 import { brl, type Indexed } from '../lib';
 import { Icon, MarketLogo, Price, Thumb } from './Parts';
 
-// Maiores descontos de verdade (preço "de" riscado contra o atual), no máximo 2 por mercado, sem preço por quantidade.
-export function pickOffers(all: Indexed[], n = 6): Indexed[] {
+// Ofertas do dia: os maiores descontos de verdade (preço "de" riscado contra o atual), do maior para o menor.
+// Um produto só: se duas ofertas são da mesma marca (ou, sem marca, têm o mesmo nome quase todo), fica a de maior desconto.
+const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const PALAVRAS_NEUTRAS = new Set(['de', 'da', 'do', 'com', 'e', 'em', 'para', 'the', 'o', 'a', 'un', 'unidade', 'pote', 'caixa', 'pacote', 'garrafa', 'lata', 'bandeja', 'frasco', 'sache']);
+const palavras = (s: string) => new Set(semAcento(s).replace(/[^a-z ]+/g, ' ').split(/\s+/).filter((w) => w.length > 2 && !PALAVRAS_NEUTRAS.has(w)));
+const chaveMarca = (b: string | null | undefined) => semAcento(b ?? '').replace(/[^a-z]/g, '').slice(0, 5);
+const semelhanca = (a: Set<string>, b: Set<string>) => { const i = [...a].filter((x) => b.has(x)).length; return i / (a.size + b.size - i || 1); };
+
+export function pickOffers(all: Indexed[], n = 20): Indexed[] {
   const real = all.filter((o) => o.listPrice && o.listPrice > o.price && !(o.condition && /levando|a partir|leve \d|cart[aã]o/i.test(o.condition)) && o.imageUrl);
   const off = (o: Indexed) => 1 - o.price / o.listPrice!;
+  // marcas conhecidas: as informadas em 3 ou mais ofertas; sem marca, a palavra do nome que é uma delas
+  const cont = new Map<string, number>();
+  for (const o of all) { const k = chaveMarca(o.brand); if (k.length >= 4) cont.set(k, (cont.get(k) ?? 0) + 1); }
+  const conhecidas = new Set([...cont].filter(([, c]) => c >= 3).map(([k]) => k));
+  const marcaDe = (o: Indexed) => {
+    const k = chaveMarca(o.brand);
+    if (k) return k;
+    const w = semAcento(o.name).split(/[^a-z]+/).find((x) => x.length >= 4 && conhecidas.has(x.slice(0, 5)));
+    return w ? w.slice(0, 5) : '';
+  };
   const out: Indexed[] = [];
-  const per = new Map<string, number>();
-  const seen = new Set<string>();
+  const marcas = new Set<string>();
+  const nomes: Set<string>[] = []; // palavras do nome de cada oferta já escolhida
   for (const o of real.filter((x) => off(x) >= 0.1 && off(x) <= 0.7).sort((a, b) => off(b) - off(a))) {
-    const key = o.g ?? o.name.toLowerCase();
-    if (seen.has(key) || (per.get(o.market) ?? 0) >= 2) continue;
-    seen.add(key);
-    per.set(o.market, (per.get(o.market) ?? 0) + 1);
+    const mk = marcaDe(o), p = palavras(o.name);
+    if ((mk && marcas.has(mk)) || nomes.some((x) => semelhanca(x, p) >= 0.6)) continue;
+    if (mk) marcas.add(mk);
+    nomes.push(p);
     out.push(o);
     if (out.length >= n) break;
   }

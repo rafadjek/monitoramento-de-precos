@@ -6,14 +6,12 @@ import { CartPanel } from './components/CartPanel';
 import { Offers, pickOffers } from './components/Offers';
 import { Icon, MarketLogo } from './components/Parts';
 import { haystack, match, parseQuery } from './search';
-import { Dropped, type Drop } from './components/Dropped';
 import type { HistMeta } from './history';
 
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
 
 type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte' };
-type InfoOnly = { name: string; cities: string[]; note: string; address: string; links: { label: string; url: string }[] };
 
 const CATEGORIES = [
   { id: '', label: 'Todos', icon: '▦' },
@@ -39,10 +37,8 @@ const save = (k: string, v: unknown) => { try { localStorage.setItem(k, JSON.str
 export default function App() {
   const [all, setAll] = useState<Indexed[]>([]);
   const [markets, setMarkets] = useState<MarketInfo[]>([]);
-  const [infoOnly, setInfoOnly] = useState<InfoOnly[]>([]);
   const [generatedAt, setGeneratedAt] = useState('');
   const [hist, setHist] = useState<HistMeta | null>(null);
-  const [drops, setDrops] = useState<Drop[]>([]);
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading');
   const [attempt, setAttempt] = useState(0);
 
@@ -68,16 +64,6 @@ export default function App() {
   const setCart = (c: CartItem[]) => { setCartState(c); save('bate-lista', c); };
   // no celular o carrinho abre por toque (no computador fica sempre aberto); lista recebida por link já chega aberta
   const [cartOpen, setCartOpen] = useState(() => !!params.get('lista'));
-  // botão "Instalar" quando o navegador oferece (Chrome/Edge/Android); some depois de instalado
-  const [installEvt, setInstallEvt] = useState<(Event & { prompt: () => Promise<void> }) | null>(null);
-  useEffect(() => {
-    const on = (e: Event) => { e.preventDefault(); setInstallEvt(e as Event & { prompt: () => Promise<void> }); };
-    const done = () => setInstallEvt(null);
-    window.addEventListener('beforeinstallprompt', on);
-    window.addEventListener('appinstalled', done);
-    return () => { window.removeEventListener('beforeinstallprompt', on); window.removeEventListener('appinstalled', done); };
-  }, []);
-  const install = async () => { if (!installEvt) return; await installEvt.prompt(); setInstallEvt(null); };
   useEffect(() => {
     if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -96,10 +82,8 @@ export default function App() {
           }),
         );
         setMarkets(idx.markets);
-        setInfoOnly(idx.infoOnly ?? []);
         setGeneratedAt(idx.generatedAt);
         setHist(idx.hist ?? null);
-        setDrops(idx.baixou ?? []);
         // oferta vencida some (um folheto pode vencer antes da próxima leitura)
         const now = Date.now();
         setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
@@ -172,11 +156,6 @@ export default function App() {
             </span>
           </label>
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
-            {installEvt && (
-              <button onClick={install} className="flex flex-col items-center px-2 text-xs text-neon hover:text-ink">
-                <Icon name="plus" className="h-6 w-6" />Instalar
-              </button>
-            )}
             <a href="#ofertas" className="flex flex-col items-center px-2 text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
             <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
               <Icon name="heart" className="h-6 w-6" fill={onlyFavs} />Favoritos
@@ -197,7 +176,7 @@ export default function App() {
               Combate de <span className="title-fire">preços</span>
             </h1>
             <p className="mt-1.5 text-xs font-bold uppercase tracking-wide text-ink/85 sm:text-sm">
-              Compare os preços dos mercados de Mauá e Ribeirão Pires{updated && `, atualizados em ${updated}`}.
+              Todos supermercados num duelo pelo menor preço: e quem ganha é você!{updated && ` Atualizado em ${updated}.`}
             </p>
           </div>
         </div>
@@ -217,7 +196,6 @@ export default function App() {
           <CartPanel cart={cart} setCart={setCart} groups={byId} markets={columns} open={cartOpen} onToggle={() => setCartOpen(!cartOpen)} />
         </div>
         <main className="min-w-0 space-y-4 lg:col-start-1 lg:row-span-2 lg:row-start-1">
-          {status === 'ok' && !dq && !category && !market && !onlyFavs && <Dropped drops={drops} byId={offerById} onAdd={(o) => add(o.g ?? `p:${o.id}`, o.market)} />}
           <div className="glass p-2">
             <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-9 xl:overflow-visible">
               {CATEGORIES.map((c) => (
@@ -297,16 +275,6 @@ export default function App() {
 
       <footer className="border-t border-edge bg-night/90">
         <div className="mx-auto max-w-[1400px] px-4 py-6 text-xs text-muted">
-          <p className="font-bold text-ink">De onde vêm os preços</p>
-          <ul className="mt-1 space-y-0.5">
-            {markets.map((m) => <li key={m.name}>{m.name}: {m.products.toLocaleString('pt-BR')} produtos{m.storeScope ? `, ${m.storeScope}` : ''}</li>)}
-            {infoOnly.map((m) => (
-              <li key={m.name}>
-                {m.name} ({m.address}): {m.note}{' '}
-                {m.links.map((l, i) => <span key={l.url}>{i > 0 && ' · '}<a href={l.url} target="_blank" rel="noopener noreferrer" className="text-sky underline">{l.label}</a></span>)}
-              </li>
-            ))}
-          </ul>
           <p className="mt-3">Parte das ofertas vem de folhetos lidos por inteligência artificial; o preço leva à oferta original. Sua lista e seus favoritos ficam só neste navegador.</p>
           <p className="mt-1">Preços e ofertas mudam a qualquer momento e variam por loja. Confirme na prateleira. As marcas pertencem aos seus donos.</p>
         </div>
