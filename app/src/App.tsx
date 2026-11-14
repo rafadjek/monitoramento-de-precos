@@ -22,7 +22,6 @@ const CATEGORIES = [
   { id: 'mercearia', label: 'Mercearia', icon: '🥫' },
   { id: 'limpeza', label: 'Limpeza', icon: '🧴' },
   { id: 'higiene', label: 'Higiene', icon: '🧻' },
-  { id: 'outros', label: 'Mais', icon: '⋯' },
 ];
 const SORTS = [
   { id: 'preco', label: 'Menor preço' },
@@ -144,7 +143,7 @@ export default function App() {
     <div className="min-h-screen" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.2) 0, rgba(6,11,26,.75) 300px, #060b1a 560px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
       <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/95">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
-          <a href={BASE} aria-label="Bate Ofertas, início"><img src={`${BASE}bate-ofertas.webp`} alt="Bate Ofertas" className="h-11 w-auto sm:h-14" /></a>
+          <a href={BASE} aria-label="Bate Ofertas, início"><img src={`${BASE}logo-bate-ofertas.webp`} alt="Bate Ofertas" className="h-14 w-auto sm:h-20" /></a>
           <label className="ml-1 hidden items-center gap-2 rounded-xl border border-sky/60 bg-panel px-3 py-1.5 shadow-sky sm:flex">
             <Icon name="pin" className="h-5 w-5 text-sky" />
             <span className="leading-tight">
@@ -227,7 +226,7 @@ export default function App() {
             </div>
 
             {/* filtro por mercado: um botão com o logotipo de cada mercado da região */}
-            <div role="group" aria-label="Mercado" className="-mx-3 flex gap-2 overflow-x-auto px-3 pb-1">
+            <div role="group" aria-label="Mercado" className="bar-x -mx-3 flex gap-2 overflow-x-auto px-3 pb-2">
               <button onClick={() => setMarket('')} aria-pressed={market === ''} className={`min-h-[2.75rem] shrink-0 rounded-xl border px-3 text-sm font-bold ${market === '' ? 'border-sky bg-sky/15 text-ink' : 'border-edge bg-panel2 text-muted'}`}>Todos</button>
               {columns.map((m) => (
                 <button key={m} onClick={() => setMarket(market === m ? '' : m)} aria-pressed={market === m} className={`flex min-h-[2.75rem] shrink-0 items-center rounded-xl border px-2 ${market === m ? 'border-sky bg-sky/15' : 'border-edge bg-panel2 hover:border-sky/60'}`}>
@@ -273,12 +272,6 @@ export default function App() {
         </aside>
       </div>
 
-      <footer className="border-t border-edge bg-night/90">
-        <div className="mx-auto max-w-[1400px] px-4 py-6 text-xs text-muted">
-          <p className="mt-3">Parte das ofertas vem de folhetos lidos por inteligência artificial; o preço leva à oferta original. Sua lista e seus favoritos ficam só neste navegador.</p>
-          <p className="mt-1">Preços e ofertas mudam a qualquer momento e variam por loja. Confirme na prateleira. As marcas pertencem aos seus donos.</p>
-        </div>
-      </footer>
     </div>
   );
 }

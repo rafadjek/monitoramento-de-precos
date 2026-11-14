@@ -53,7 +53,7 @@ function Tag({ g, it, best, temEscolha, picked, onSelect }: { g: Group; it: Inde
           {cond && <Star text={cond} />}
         </span>
         <span className={`mt-0.5 block text-[0.72rem] ${verde ? 'font-bold text-neon' : 'text-muted'}`}>
-          {odd ? <b className="text-signal">preço fora do padrão</b> : best ? <span className="inline-flex items-center gap-1"><Icon name="crown" className="h-3.5 w-3.5" fill />Menor preço</span> : ''}
+          {odd ? <b className="text-signal">preço fora do padrão</b> : ''}
         </span>
       </button>
       {it.productUrl && (

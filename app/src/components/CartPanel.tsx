@@ -75,6 +75,9 @@ export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Pr
                     <div className="mt-1 flex items-center gap-2 text-xs text-muted">
                       <MarketLogo name={line.market} h="h-5" />
                       {line.pinned && <span title="Você escolheu este mercado para este item" className="text-[0.7rem] font-bold text-sky">📌 escolhido</span>}
+                      {it && g.items.length > 1 && !g.suspect && !g.odd.includes(it.id) && it.market === g.items[0].market && (
+                        <span className="inline-flex items-center gap-1 text-[0.7rem] font-bold text-neon"><Icon name="crown" className="h-3 w-3" fill />Menor preço</span>
+                      )}
                       <span className="num ml-auto inline-flex items-center font-bold text-ink">{brl(line.total)}{cond && <Star text={cond} />}</span>
                     </div>
                   ) : <p className="mt-1 text-xs text-gold">nenhum mercado da lista tem este item</p>}
@@ -88,13 +91,14 @@ export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Pr
             <p className="mt-4 flex items-center justify-between rounded-xl border border-gold/60 bg-gold/10 p-3 font-bold"><span>Total da lista</span><span className="num font-display text-2xl text-gold">{brl(plan.total)}</span></p>
           )}
           {!items.every((c) => c.m) && <>{/* 2. melhor mercado para a lista toda */}
+          <div className="mt-5 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
           <h3 className="mt-4 flex items-center gap-2 font-display text-lg font-bold"><Icon name="trophy" className="h-5 w-5 text-gold" />Melhor mercado para a lista toda</h3>
-          <ol className="mt-2 divide-y divide-edge/70 overflow-hidden rounded-xl border border-edge">
+          <ol className="mt-2 divide-y divide-edge/70 overflow-hidden rounded-xl border border-gold/40 bg-gradient-to-b from-gold/5 to-transparent shadow-[0_0_24px_rgba(255,194,26,.10)]">
             {rank.slice(0, 5).map((r, i) => {
               const top = r === best;
               return (
                 <li key={r.market} className={`flex items-center gap-3 px-3 py-2 ${top ? 'bg-neon/10' : ''}`}>
-                  <span className={`num w-4 text-sm font-bold ${top ? 'text-neon' : 'text-muted'}`}>{i + 1}</span>
+                  <span className={`num grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-black ${top ? 'bg-gold text-night shadow-[0_0_10px_rgba(255,194,26,.6)]' : 'border border-edge text-muted'}`}>{i + 1}</span>
                   <MarketLogo name={r.market} h="h-6" />
                   <span className="ml-auto text-right">
                     <span className={`num block font-display text-lg font-bold ${top ? 'text-neon' : ''}`}>{brl(r.total)}</span>
