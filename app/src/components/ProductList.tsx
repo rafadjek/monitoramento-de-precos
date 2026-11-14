@@ -1,6 +1,7 @@
 import { brl, each, type Group, type Indexed } from '../lib';
 import { Icon, MarketLogo, Price, Thumb, Validity } from './Parts';
 import { useState } from 'react';
+import { ScrollRow } from './ScrollRow';
 import { HistoryPanel } from './HistoryPanel';
 import type { HistMeta } from '../history';
 
@@ -100,12 +101,13 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected
                 </p>
               )}
               {/* no celular: etiquetas lado a lado numa linha que arrasta (a mais barata primeiro); no computador quebram linha */}
-              <ul className="tags-row -mx-3 mt-2 flex snap-x gap-2 overflow-x-auto pb-1 pl-3 pr-8 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
-                {items.map((it) => (
-                  <li key={it.id} className="shrink-0 snap-start"><Tag g={g} it={it} best={melhor(it)} temEscolha={!!pick} picked={pick === it.market} onSelect={() => toque(it)} /></li>
-                ))}
-              </ul>
-              {items.length > 2 && <p className="mt-0.5 text-[0.7rem] text-muted sm:hidden">arraste para o lado para ver os {items.length} mercados →</p>}
+              <div className="mt-2">
+                <ScrollRow as="ul" label={`Mercados de ${g.name}`} wrapOnWide className="gap-2 pb-1 sm:pb-0">
+                  {items.map((it) => (
+                    <li key={it.id} className="shrink-0 snap-start"><Tag g={g} it={it} best={melhor(it)} temEscolha={!!pick} picked={pick === it.market} onSelect={() => toque(it)} /></li>
+                  ))}
+                </ScrollRow>
+              </div>
               <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                 {pickedItem ? (
                   <button onClick={() => onAdd(g.id, pickedItem.market)} className="inline-flex items-center gap-1.5 rounded-lg bg-gold px-3 py-1.5 font-bold text-night hover:brightness-110">

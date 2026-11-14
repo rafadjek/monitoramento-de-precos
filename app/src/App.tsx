@@ -10,6 +10,7 @@ import type { HistMeta } from './history';
 import { CityAdBanner, CityAdCard } from './components/CityAd';
 import { CityPicker } from './components/CityPicker';
 import { Logo } from './components/Logo';
+import { ScrollRow } from './components/ScrollRow';
 import { effectiveCities, marketInCities, migrateCities, serializeCities, type Sel } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
@@ -228,14 +229,14 @@ function Comparador() {
             </div>
 
             {/* filtro por mercado: um botão com o logotipo de cada mercado da região */}
-            <div role="group" aria-label="Mercado" className="bar-x -mx-3 flex gap-2 overflow-x-auto px-3 pb-2">
+            <ScrollRow role="group" label="Mercado" className="gap-2 pb-1">
               <button onClick={() => setMarket('')} aria-pressed={market === ''} className={`min-h-[2.75rem] shrink-0 rounded-xl border px-3 text-sm font-bold ${market === '' ? 'border-sky bg-sky/15 text-ink' : 'border-edge bg-panel2 text-muted'}`}>Todos</button>
               {columns.map((m) => (
                 <button key={m} onClick={() => setMarket(market === m ? '' : m)} aria-pressed={market === m} className={`flex min-h-[2.75rem] shrink-0 items-center rounded-xl border px-2 ${market === m ? 'border-sky bg-sky/15' : 'border-edge bg-panel2 hover:border-sky/60'}`}>
                   <MarketLogo name={m} h="h-7" />
                 </button>
               ))}
-            </div>
+            </ScrollRow>
 
             {status === 'ok' && !none && (
               <p className="text-xs text-muted">

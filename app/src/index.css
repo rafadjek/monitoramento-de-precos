@@ -31,17 +31,9 @@
     background-clip: text;
     color: transparent;
   }
-  /* barra de rolagem visível na tabela (para arrastar até os outros mercados) */
-  /* linha de etiquetas que arrasta no celular: sem barra, com a borda direita esmaecendo para mostrar que tem mais */
-  .tags-row { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-  .tags-row::-webkit-scrollbar { display: none; }
-  @media (max-width: 639px) {
-    .tags-row { mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
-  }
-  .bar-x { scrollbar-color: #2f8bff #101c3d; scrollbar-width: auto; }
-  .bar-x::-webkit-scrollbar { height: 15px; }
-  .bar-x::-webkit-scrollbar-track { background: #101c3d; border-radius: 99px; box-shadow: inset 0 0 0 1.5px #2f8bff; }
-  .bar-x::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #2f8bff, #22e36b); border-radius: 99px; box-shadow: inset 0 0 0 1.5px #0b1430; }
+  /* rolagem nativa escondida: a barra visível é a do componente ScrollRow */
+  .scroll-hide { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .scroll-hide::-webkit-scrollbar { display: none; }
 }
 
 /* larguras da tabela de preços; no celular a coluna de ação some (o botão da lista vai para a célula do produto) */
