@@ -1,5 +1,5 @@
 {
- "em": "2026-11-13T20:42:45.376Z",
+ "em": "2026-11-14T01:12:58.173Z",
  "servicos": [
   {
    "net": "ig",
@@ -9,15 +9,20 @@
   {
    "net": "fb",
    "name": "apify",
+   "posts": 0
+  },
+  {
+   "net": "fb",
+   "name": "scrapecreators",
    "posts": 6
   },
   {
    "teste": "socialcrawl",
    "net": "ig",
    "exemploData": null,
-   "posts": 23,
+   "posts": 19,
    "recentes": 0,
-   "comImagem": 23
+   "comImagem": 19
   }
  ]
 }
