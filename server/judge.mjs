@@ -21,7 +21,7 @@ const OUT = path.join(IN, 'juiz-veredictos.json');
 const LABELS = path.join(ROOT, 'data/rotulos/rotulos.json');
 const CANDS = path.join(ROOT, 'data/rotulos/candidatos.json');
 const KEY = process.env.GEMINI_JUIZ_KEY || process.env.GEMINI_API_KEY;
-const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-flash-lite-latest').split(',');
+const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash').split(',');
 const BATCH = 20; // 20 pares = até 40 fotos por pedido
 const MAX_LOTES = Number(process.env.JUIZ_MAX_LOTES || 40);
 const DEADLINE = Date.now() + Number(process.env.JUIZ_BUDGET_MIN || 20) * 60e3;
@@ -36,13 +36,23 @@ Mesmo produto = mesma marca, mesmo tipo, mesma variação (sabor, fragrância, c
 Considere IGUAIS quando só muda a forma de escrever: palavras que só descrevem o tipo ou a embalagem equivalente,
 nome do fabricante dito de um lado só, sinônimos e grafias diferentes do mesmo termo, abreviações, ordem diferente
 das palavras, nome de linha que só um mercado escreve.
+Não mudam o produto (são só descrição, embalagem ou processo): almofada x vácuo, sachet x granulado, aerosol x aerossol x
+"body spray", copo/pote/lata/frasco, "em pó", "em barra", infantil x bebê x baby, "tipo 1", origem como "japonês",
+finalidade como "ideal para arroz" x "para arroz branco", nugget x empanado nugget, e adjetivos de propaganda que um
+mercado acrescenta e o outro não (tradicional, original, suave, crocante, extra fino, glicerina natural, "sabores" no encarte).
+Fragrância descrita com palavras diferentes mas do mesmo tema (duas formas de dizer "flores", "lavanda") pode ser o mesmo
+produto quando marca, tipo e tamanho batem e a foto não mostra cor diferente.
+A dúvida só vira "diferente" quando aparece uma palavra que nomeia OUTRA variação: um sabor a mais ou a menos (morango x
+morango e baunilha), outra versão ou linha (light, zero, cream, premium), outra embalagem que muda a quantidade (econômica, refil, kit).
+Preço por unidade muito diferente (mais que o dobro) é pista de produto diferente; preço parecido não prova nada.
 Considere DIFERENTES: sabor, fragrância ou cor diferente; versão diferente (ex.: zero, light, diet, integral, desnatado,
 sem sal x com sal, com gás x sem gás); formato ou linha diferente do mesmo fabricante; produto composto x simples;
 quantidade diferente no pacote ou promoção "leve X pague Y" diferente; produto de outra categoria com nome parecido; tamanho diferente.
 Quando houver foto, use-a: embalagem, cor e o que está escrito no rótulo mostram a variação. Foto de catálogo genérica
 (sem o produto) não prova nada.
 Exceção de encarte: oferta que vale para vários sabores ("sabores", "diversos", "exceto X") é o MESMO produto
-que qualquer sabor incluído, de mesma marca e tamanho. Se faltar informação para ter certeza de que é o mesmo produto, responda false.
+que qualquer sabor incluído, de mesma marca e tamanho; sem tamanho no encarte, vale o tamanho mais comum da marca.
+Não responda false só porque um lado escreve menos palavras: faltar uma palavra descritiva não é diferença.
 Siga o critério dos exemplos já decididos pelo dono do site: eles mostram até onde ele considera "o mesmo produto".`;
 
 const SCHEMA = { type: 'OBJECT', properties: { results: { type: 'ARRAY', items: { type: 'OBJECT', properties: { id: { type: 'STRING' }, same: { type: 'BOOLEAN' } }, required: ['id', 'same'] } } }, required: ['results'] };
@@ -134,7 +144,7 @@ const asPair = (x) => ({
   imgB: x.b.image || candImgs.get(x.id)?.b.image || imageOf.get(offerKey(x.b)),
 });
 const all = labels.map(asPair);
-const hash = crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, MODELS[0], FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
+const hash = crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
 if (state.prova?.hash !== hash || process.argv.includes('--forcar-prova')) {
   const fold = (x) => parseInt(crypto.createHash('sha1').update(x.key).digest('hex').slice(0, 6), 16) % FOLDS;
   const v = new Map();
@@ -147,16 +157,17 @@ if (state.prova?.hash !== hash || process.argv.includes('--forcar-prova')) {
   for (const x of labels) {
     const truth = x.label === 'mesmo';
     const got = v.get(x.id)?.same;
-    if (got === truth) acertos++; else erros.push({ a: x.a.name, b: x.b.name, rafael: x.label, juiz: got === undefined ? 'sem resposta' : got ? 'mesmo' : 'diferente' });
+    if (got === truth) acertos++; else erros.push({ a: x.a.name, b: x.b.name, rafael: x.label, juiz: got === undefined ? 'sem resposta' : got ? 'mesmo' : 'diferente', modelo: v.get(x.id)?.model });
     if ((x.kind !== 'separados') === truth) regra++;
   }
-  state.prova = { em: new Date().toISOString(), hash, total: labels.length, acertos, regra, taxa: acertos / labels.length, taxaRegra: regra / labels.length, fotos: all.filter((x) => x.imgA && x.imgB).length, erros };
+  state.prova = { em: new Date().toISOString(), hash, total: labels.length, acertos, regra, taxa: acertos / labels.length, taxaRegra: regra / labels.length, fotos: all.filter((x) => x.imgA && x.imgB).length, modelos: [...new Set([...v.values()].map((x) => x.model))], trocas: falhas.slice(-10), erros };
   state.ativo = acertos / labels.length >= META && acertos > regra;
   delete state.erro;
 }
 const pv = state.prova;
 console.log(`juiz: prova ${pv.acertos}/${pv.total} (${(100 * pv.taxa).toFixed(0)}%); regra atual ${pv.regra}/${pv.total}; ativo: ${state.ativo}`);
-for (const e of pv.erros) console.log(`  erro: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz}`);
+if (pv.trocas?.length) console.log("  trocas de modelo:", pv.trocas.join(" | "));
+for (const e of pv.erros) console.log(`  erro: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz} [${e.modelo}]`);
 
 // ---------- 2. julga pares candidatos ----------
 if (state.ativo && !process.argv.includes('--so-prova')) {
