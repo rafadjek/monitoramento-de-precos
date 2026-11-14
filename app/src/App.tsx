@@ -143,7 +143,12 @@ export default function App() {
     <div className="min-h-screen" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.2) 0, rgba(6,11,26,.75) 300px, #060b1a 560px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
       <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/95">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
-          <a href={BASE} aria-label="Bate Ofertas, início"><img src={`${BASE}logo-bate-ofertas.webp`} alt="Bate Ofertas" className="h-14 w-auto sm:h-20" /></a>
+          <a href={BASE} aria-label="Bate Ofertas, início" className="flex items-center gap-2 sm:gap-3">
+            <img src={`${BASE}logo-carrinhos.webp`} alt="" className="h-14 w-auto sm:h-20" />
+            <span className="font-display text-2xl font-bold uppercase leading-[0.95] tracking-tight sm:text-4xl">
+              <span className="title-fire">Bate</span><br />Ofertas
+            </span>
+          </a>
           <label className="ml-1 hidden items-center gap-2 rounded-xl border border-sky/60 bg-panel px-3 py-1.5 shadow-sky sm:flex">
             <Icon name="pin" className="h-5 w-5 text-sky" />
             <span className="leading-tight">
