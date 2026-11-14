@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Icon } from '../components/Parts';
+import { Logo } from '../components/Logo';
 import { loadStats, type SiteStats } from './stats';
 import { activeEvent, AUDIENCES, endLabel, FAQ, PLANS_DATA, shownPrice, STEPS, type Plan, type PromoEvent } from './sua-cidade/content';
 import { EMAIL, WHATSAPP_TEXT, waLink } from './sua-cidade/contact';
@@ -66,7 +67,7 @@ function Stat({ big, small }: { big: string; small: string }) {
   return (
     <div className="border-l-4 border-gold pl-3">
       <div className="num font-display text-4xl font-extrabold italic leading-none text-neon sm:text-5xl">{big}</div>
-      <div className="mt-1 text-xs text-ink/85 sm:text-sm">{small}</div>
+      <div className="mt-1 text-sm text-ink/85">{small}</div>
     </div>
   );
 }
@@ -135,9 +136,9 @@ export default function SuaCidade() {
     <div className="min-h-screen pb-24 md:pb-0" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.35) 0, rgba(6,11,26,.85) 420px, #060b1a 620px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
       <header className="border-b border-edge/80 bg-night/90">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
-          <a href="#" aria-label="Bate Ofertas, voltar ao comparador"><img src={`${BASE}bate-ofertas.webp`} alt="Bate Ofertas" className="h-11 w-auto sm:h-14" /></a>
-          <a href="#" className="ml-auto inline-flex min-h-[2.75rem] items-center gap-2 rounded-xl border border-edge px-3 text-sm font-bold text-ink/90 hover:border-sky hover:text-ink">
-            <Icon name="arrow" className="h-4 w-4 rotate-180" />Voltar ao comparador
+          <Logo href="#" label="Bate Ofertas, voltar ao comparador" />
+          <a href="#" className="ml-auto inline-flex min-h-[2.75rem] shrink-0 items-center gap-2 whitespace-nowrap rounded-xl border border-edge px-3 text-sm font-bold text-ink/90 hover:border-sky hover:text-ink">
+            <Icon name="arrow" className="h-4 w-4 rotate-180" />Voltar<span className="hidden sm:inline">&nbsp;ao comparador</span>
           </a>
         </div>
       </header>
@@ -170,7 +171,7 @@ export default function SuaCidade() {
                 <Stat big={stats.groups.toLocaleString('pt-BR')} small="produtos comparados entre mercados" />
                 <Stat big={stats.updated} small="última atualização" />
               </div>
-              <p className="mt-3 text-xs text-muted">Já funciona em Mauá e Ribeirão Pires, lido agora dos dados publicados. <a href="#" className="text-sky underline">Abrir o comparador e testar</a></p>
+              <p className="mt-3 text-sm text-muted">Já funciona em Mauá e Ribeirão Pires, lido agora dos dados publicados. <a href="#" className="text-sky underline">Abrir o comparador e testar</a></p>
             </div>
           </section>
         )}
@@ -252,12 +253,6 @@ export default function SuaCidade() {
           </div>
         </div>
       </main>
-
-      <footer className="border-t border-edge bg-night/90">
-        <div className="mx-auto max-w-6xl px-4 py-5 text-xs text-muted">
-          <p>Preços, folhetos e marcas pertencem aos seus donos. O Bate Ofertas reúne informação pública e leva à oferta original. Parte das ofertas vem de folhetos lidos por inteligência artificial. <a href="#" className="text-sky underline">Voltar ao comparador</a></p>
-        </div>
-      </footer>
 
       {/* celular: botão fixo de WhatsApp */}
       <a href={waLink(heroWa)} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" className="fixed inset-x-4 bottom-4 z-40 flex min-h-[3.5rem] items-center justify-center gap-2 rounded-2xl bg-neon text-lg font-bold text-night shadow-[0_6px_28px_rgba(34,227,107,.5)] md:hidden">

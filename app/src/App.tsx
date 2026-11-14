@@ -9,7 +9,8 @@ import { haystack, match, parseQuery } from './search';
 import type { HistMeta } from './history';
 import { CityAdBanner, CityAdCard } from './components/CityAd';
 import { CityPicker } from './components/CityPicker';
-import { effectiveCities, isAll, marketInCities, migrateCities } from './cities';
+import { Logo } from './components/Logo';
+import { effectiveCities, marketInCities, migrateCities, serializeCities, type Sel } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
 const BASE = import.meta.env.BASE_URL;
@@ -48,8 +49,9 @@ function Comparador() {
   const params = new URLSearchParams(location.search);
   const [q, setQ] = useState(() => params.get('q') ?? '');
   const dq = useDeferredValue(q);
-  const [rawCities, setCities] = useState<string[]>(() => {
-    try { return migrateCities(localStorage.getItem('bate-cidades'), localStorage.getItem('bate-cidade')); } catch { return []; }
+  // null = todas as cidades; lista = só essas; lista vazia = nenhuma
+  const [rawCities, setCities] = useState<Sel>(() => {
+    try { return migrateCities(localStorage.getItem('bate-cidades2'), localStorage.getItem('bate-cidades'), localStorage.getItem('bate-cidade')); } catch { return null; }
   });
   const [category, setCategory] = useState('');
   const [market, setMarket] = useState('');
@@ -73,8 +75,10 @@ function Comparador() {
     if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname + location.hash); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
-    save('bate-cidades', rawCities);
-    try { localStorage.removeItem('bate-cidade'); } catch { /* sem armazenamento */ } // chave antiga, já migrada
+    try {
+      localStorage.setItem('bate-cidades2', serializeCities(rawCities));
+      localStorage.removeItem('bate-cidades'); localStorage.removeItem('bate-cidade'); // chaves antigas, já migradas
+    } catch { /* sem armazenamento */ }
   }, [rawCities]);
 
   useEffect(() => {
@@ -105,13 +109,14 @@ function Comparador() {
   useEffect(() => setShown(PAGE), [dq, category, market, rawCities, sort, onlyFavs]);
   const cityList = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].filter((c) => c === 'Mauá' || c === 'Ribeirão Pires').sort((a, b) => a.localeCompare(b, 'pt-BR')), [markets]);
   // cidades marcadas que existem de verdade (todas marcadas = sem filtro)
-  const cities = useMemo(() => { const e = effectiveCities(rawCities, cityList); return isAll(e, cityList) ? [] : e; }, [rawCities, cityList]);
+  const cities = useMemo(() => effectiveCities(rawCities, cityList), [rawCities, cityList]);
+  const none = cities !== null && cities.length === 0;
   const inCity = useMemo(() => new Set(markets.filter((m) => marketInCities(m.cities, cities)).map((m) => m.name)), [markets, cities]);
   // colunas: todos os mercados da região escolhida, do que tem mais produtos para o que tem menos
   const columns = useMemo(() => markets.filter((m) => inCity.has(m.name)).sort((a, b) => b.products - a.products).map((m) => m.name), [markets, inCity]);
   useEffect(() => { if (market && !inCity.has(market)) setMarket(''); }, [inCity, market]);
 
-  const cityOffers = useMemo(() => (cities.length ? all.filter((o) => inCity.has(o.market)) : all), [all, cities, inCity]);
+  const cityOffers = useMemo(() => (cities === null ? all : all.filter((o) => inCity.has(o.market))), [all, cities, inCity]);
   const groups = useMemo(() => buildGroups(cityOffers), [cityOffers]);
   const byId = useMemo(() => new Map(groups.map((g) => [g.id, g])), [groups]);
   const offers = useMemo(() => pickOffers(cityOffers), [cityOffers]);
@@ -154,12 +159,7 @@ function Comparador() {
     <div className="min-h-screen" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.2) 0, rgba(6,11,26,.75) 300px, #060b1a 560px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
       <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/95">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
-          <a href={BASE} aria-label="Bate Ofertas, início" className="flex items-center gap-2 sm:gap-3">
-            <img src={`${BASE}logo-carrinhos.webp`} alt="" className="h-14 w-auto sm:h-20" />
-            <span className="font-display text-2xl font-bold uppercase leading-[0.95] tracking-tight sm:text-4xl">
-              <span className="title-fire">Bate</span><br />Ofertas
-            </span>
-          </a>
+          <Logo />
           <CityPicker available={cityList} selected={cities} onChange={setCities} className="ml-1 hidden w-56 sm:block" />
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
             <a href="#ofertas" className="flex flex-col items-center px-2 text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
@@ -237,7 +237,7 @@ function Comparador() {
               ))}
             </div>
 
-            {status === 'ok' && (
+            {status === 'ok' && !none && (
               <p className="text-xs text-muted">
                 {list.length.toLocaleString('pt-BR')} produtos
                 {market && <> no <b className="text-ink">{market}</b> · <button onClick={() => setMarket('')} className="text-sky underline">ver todos os mercados</button></>}
@@ -252,16 +252,22 @@ function Comparador() {
                 <button onClick={() => setAttempt((a) => a + 1)} className="mt-2 rounded-xl bg-sky px-4 py-2 font-bold text-night">Tentar de novo</button>
               </div>
             )}
-            {status === 'ok' && list.length === 0 && (
+            {status === 'ok' && none && (
+              <div role="status" className="rounded-xl border border-gold/60 p-6 text-center">
+                <p className="font-bold">Nenhuma cidade selecionada. Marque uma cidade em Minha região para ver os preços.</p>
+                <button onClick={() => setCities(null)} className="mt-3 rounded-xl bg-neon px-4 py-2 font-bold text-night hover:brightness-110">Marcar todas</button>
+              </div>
+            )}
+            {status === 'ok' && !none && list.length === 0 && (
               <div className="rounded-xl border border-edge p-6 text-center">
                 <p className="font-bold">{dq ? `Não achei "${dq}".` : onlyFavs ? 'Você ainda não favoritou nenhum produto.' : 'Nada por aqui com esses filtros.'}</p>
                 <button onClick={clear} className="mt-3 rounded-xl border border-sky/70 px-4 py-2 font-bold text-sky">Limpar busca e filtros</button>
               </div>
             )}
-            {status === 'ok' && list.length > 0 && (
+            {status === 'ok' && !none && list.length > 0 && (
               <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} hist={hist} base={BASE} />
             )}
-            {status === 'ok' && shown < list.length && (
+            {status === 'ok' && !none && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">
                 Mostrar mais ({shown} de {list.length.toLocaleString('pt-BR')})
               </button>

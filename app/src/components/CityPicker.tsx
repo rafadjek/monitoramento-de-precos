@@ -1,18 +1,18 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Icon } from './Parts';
-import { cityLabel, isAll, toggleCity } from '../cities';
+import { cityLabel, isAll, isChecked, toggleAll, toggleCity, type Sel } from '../cities';
 
 type Props = {
   available: string[];
-  selected: string[];
-  onChange: (cities: string[]) => void;
+  selected: Sel;
+  onChange: (cities: Sel) => void;
   /** classes do contêiner (cada lugar da tela ajusta a largura) */
   className?: string;
   /** painel alinhado à esquerda ou à direita do botão */
   align?: 'left' | 'right';
 };
 
-/** Botão "Minha região" com painel de caixinhas. Vazio = todas as cidades. */
+/** Botão "Minha região" com painel de caixinhas. null = todas; lista vazia = nenhuma. */
 export function CityPicker({ available, selected, onChange, className = '', align = 'left' }: Props) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
@@ -56,14 +56,14 @@ export function CityPicker({ available, selected, onChange, className = '', alig
           className={`absolute top-full z-40 mt-2 w-72 max-w-[calc(100vw-2rem)] rounded-xl border border-sky/60 bg-panel p-2 shadow-sky ${align === 'right' ? 'right-0' : 'left-0'}`}
         >
           <label className={row}>
-            <input type="checkbox" className={box} checked={isAll(selected, available)} onChange={() => onChange([])} />
+            <input type="checkbox" className={box} checked={isAll(selected, available)} onChange={() => onChange(toggleAll(selected, available))} />
             Todas
           </label>
           <div className="my-1 h-px bg-edge" />
           <div className="max-h-[50vh] overflow-y-auto">
             {available.map((c) => (
               <label key={c} className={row}>
-                <input type="checkbox" className={box} checked={isAll(selected, available) || selected.includes(c)} onChange={() => onChange(toggleCity(selected, c, available))} />
+                <input type="checkbox" className={box} checked={isChecked(selected, c)} onChange={() => onChange(toggleCity(selected, c, available))} />
                 {c}
               </label>
             ))}

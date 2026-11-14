@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { buildMessage, EMAIL, mailLink, PLANS, PROFILES, validateLead, waLink, type Lead, type LeadErrors } from './contact';
+import { buildMessage, mailLink, PLANS, PROFILES, validateLead, waLink, type Lead, type LeadErrors } from './contact';
 import { promoText, type PromoEvent } from './content';
 
 const NL = String.fromCharCode(10);
@@ -73,7 +73,6 @@ export function LeadForm({ ev = null }: { ev?: PromoEvent | null }) {
       <p className="text-sm text-muted sm:col-span-2" role="status">
         {sent === 'whatsapp' && <b className="text-neon">WhatsApp aberto com a mensagem pronta: é só apertar enviar. </b>}
         {sent === 'email' && <b className="text-neon">Seu programa de e-mail abriu com a mensagem pronta. </b>}
-        Nada fica guardado: o formulário só monta a mensagem e abre o seu WhatsApp ou e-mail ({EMAIL}).
       </p>
     </form>
   );
