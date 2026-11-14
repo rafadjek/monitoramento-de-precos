@@ -1,7 +1,7 @@
 [
  {
   "id": "00bf7bdf11",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "juntos",
   "a": {
    "market": "Coop",
@@ -16,7 +16,7 @@
  },
  {
   "id": "0372e7a433",
-  "label": "diferente",
+  "label": "mesmo",
   "kind": "ean",
   "a": {
    "market": "Atacadão",
@@ -271,7 +271,7 @@
  },
  {
   "id": "3affb81ad2",
-  "label": "diferente",
+  "label": "mesmo",
   "kind": "juntos",
   "a": {
    "market": "Coop",
@@ -391,7 +391,7 @@
  },
  {
   "id": "56d1ce8791",
-  "label": "diferente",
+  "label": "mesmo",
   "kind": "ean",
   "a": {
    "market": "Atacadão",
@@ -781,7 +781,7 @@
  },
  {
   "id": "bcac066e12",
-  "label": "diferente",
+  "label": "mesmo",
   "kind": "juntos",
   "a": {
    "market": "Coop",
@@ -2406,7 +2406,7 @@
  },
  {
   "id": "8eeabf9844",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Coop",
@@ -2556,7 +2556,7 @@
  },
  {
   "id": "995ee6f7d7",
-  "label": "mesmo",
+  "label": "diferente",
   "kind": "separados",
   "a": {
    "market": "Nagumo",

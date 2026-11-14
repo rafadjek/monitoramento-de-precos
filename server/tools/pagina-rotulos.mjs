@@ -1,5 +1,7 @@
 // Monta a página de rotulagem (pares "mesmo produto?") a partir de data/rotulos/candidatos.json.
 // As fotos vão embutidas (a página publicada não carrega imagem de outros sites). Saída: data/rotulos/rotulos.html
+// Uso: node tools/pagina-rotulos.mjs [--entrada=arquivo.json] [--saida=arquivo.html] [--titulo=texto]
+// Par com "atual" (revisão): a página mostra o rótulo de antes e a resposta do juiz.
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -7,7 +9,12 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = path.join(ROOT, 'data/rotulos');
-const pairs = JSON.parse(fs.readFileSync(path.join(DIR, 'candidatos.json'), 'utf8'));
+const arg = (k, d) => process.argv.find((a) => a.startsWith(`--${k}=`))?.slice(k.length + 3) || d;
+const pairs = JSON.parse(fs.readFileSync(path.resolve(DIR, arg('entrada', 'candidatos.json')), 'utf8'));
+const TITLE = arg('titulo', 'Mesmo produto?');
+const LEAD = pairs.some((p) => p.atual)
+  ? 'Nestes pares o juiz discordou de você. Confira cada um pelo seu critério (sabor, fragrância ou versão diferente = produto diferente) e marque de novo: pode manter ou trocar.'
+  : 'Para cada par, diga se é o mesmo produto (dá para comparar o preço) ou se é outro produto. Suas respostas ensinam o Bate Ofertas a juntar certo.';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
 async function thumb(url) {
@@ -26,7 +33,7 @@ for (const p of pairs) {
 console.log(`fotos: ${ok} de ${pairs.length * 2}`);
 
 const data = JSON.stringify(pairs).replace(/</g, '\\u003c');
-const html = `<title>Mesmo produto?</title>
+const html = `<title>${TITLE}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
@@ -63,7 +70,7 @@ ol{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:14px}
 .mk{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
 .nm{font-weight:600;line-height:1.3;margin:2px 0;overflow-wrap:anywhere}
 .pr{font-family:var(--display);font-weight:700;font-size:1.15rem;font-variant-numeric:tabular-nums}
-.why{font-size:.8rem;color:var(--muted)}.why mark{background:none;color:var(--fg);font-weight:700}
+.why{font-size:.8rem;color:var(--muted)}.was{font-size:.85rem;padding:8px 10px;border-radius:8px;background:var(--bg);border:1px dashed var(--line)}.was b{font-weight:700}.why mark{background:none;color:var(--fg);font-weight:700}
 .acts{display:flex;flex-wrap:wrap;gap:8px}
 .acts button{font:inherit;font-weight:700;padding:10px 14px;border-radius:10px;border:2px solid var(--line);background:transparent;color:var(--fg);cursor:pointer;min-width:120px}
 .acts .s[aria-pressed="true"]{background:var(--same);border-color:var(--same);color:#fff}
@@ -76,8 +83,8 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 </style>
 <div class="wrap">
 <header>
-  <h1>Mesmo produto?</h1>
-  <p class="lead">Para cada par, diga se é o mesmo produto (dá para comparar o preço) ou se é outro produto. Suas respostas ensinam o Bate Ofertas a juntar certo.</p>
+  <h1>${TITLE}</h1>
+  <p class="lead">${LEAD}</p>
   <div class="bar"><i id="fill"></i></div>
   <div class="meta"><span><b id="done">0</b> de <b id="total">0</b> respondidos</span><span id="status">Conectando…</span>
     <div class="filters" role="group" aria-label="Mostrar"><button id="f-todos" aria-pressed="false">Todos</button><button id="f-faltam" aria-pressed="true">Faltam</button></div></div>
@@ -87,17 +94,19 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 <script>
 const PAIRS = ${data};
 const KIND = {juntos:'hoje juntos', separados:'hoje separados', ean:'mesmo código de barras'};
+const NOME = {mesmo:'mesmo produto', diferente:'diferente', nao_sei:'não sei'};
 const labels = {}; let filter = 'faltam', db = null, canWrite = true;
-const brl = (n) => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const brl = (n) => n == null ? '' : n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const esc = (s) => String(s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function side(p){return '<div class="prod">'+(p.thumb?'<img alt="" src="'+p.thumb+'">':'<span class="ph">'+esc(p.name.trim()[0]||'?')+'</span>')+'<div><div class="mk">'+esc(p.market)+'</div><div class="nm">'+esc(p.name)+'</div><div class="pr">'+brl(p.price)+'</div></div></div>'}
 function render(){
   const list = document.getElementById('list');
   const shown = PAIRS.filter((p)=>filter==='todos'||!labels[p.id]);
   list.innerHTML = shown.map((p)=>{const n=PAIRS.indexOf(p)+1, l=labels[p.id]||'';
-    return '<li class="pair" data-id="'+p.id+'" data-label="'+l+'"><div class="head"><span class="n">'+n+'</span><span class="kind">'+KIND[p.kind]+'</span></div>'+
+    return '<li class="pair" data-id="'+p.id+'" data-label="'+l+'"><div class="head"><span class="n">'+n+'</span><span class="kind">'+(KIND[p.kind]||'')+'</span></div>'+
     '<div class="sides">'+side(p.a)+'<span class="vs">×</span>'+side(p.b)+'</div>'+
-    '<div class="why">Palavras que mudam: <mark>'+esc(p.diff.join(', ')||'—')+'</mark></div>'+
+    (p.atual?'<div class="was">Antes você marcou <b>'+NOME[p.atual]+'</b>; o juiz disse <b>'+NOME[p.juiz]+'</b>.</div>':'')+
+    (p.diff?'<div class="why">Palavras que mudam: <mark>'+esc(p.diff.join(', ')||'—')+'</mark></div>':'')+
     '<div class="acts"><button class="s" data-v="mesmo" aria-pressed="'+(l==='mesmo')+'">Mesmo produto</button><button class="d" data-v="diferente" aria-pressed="'+(l==='diferente')+'">Diferente</button><button class="k" data-v="nao_sei" aria-pressed="'+(l==='nao_sei')+'">Não sei</button></div></li>'}).join('')
     || '<li class="pair"><b>Tudo respondido.</b> Obrigado! Toque em "Todos" para revisar.</li>';
   const done = PAIRS.filter((p)=>labels[p.id]).length;
@@ -129,5 +138,5 @@ render();
   },(err)=>{ clearTimeout(timer); status('Não consegui ler as respostas salvas.'); });
 })();
 </script>`;
-fs.writeFileSync(path.join(DIR, 'rotulos.html'), html);
+fs.writeFileSync(path.resolve(DIR, arg('saida', 'rotulos.html')), html);
 console.log('ok', (html.length / 1024).toFixed(0) + ' KB');
