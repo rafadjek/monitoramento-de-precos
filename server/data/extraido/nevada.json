@@ -1,454 +1,6 @@
 [
  {
   "market": "Nevada",
-  "externalId": "5f7ee6a76225",
-  "name": "Contra Filé Porcionado Peça",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 54.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/912268250_1588620643308886_9057307748065958799_n.jpg?stp=c0.123.1080.1080a_dst-jpg_e35_s1080x1080_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODY4MjQ0NDE1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4-3aWx5pRGUQ7kNvwEcgt1K&_nc_oc=Adqoe8yXNH9xD010jFMMUHhmNrimc1baI97EXTNy_wpGE1-RwbJu7p4DRlX11uUFozg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSQSyvHwMUP-jMMVMJ5A5JDUJ98MoClGOoaH6pslYqggg&oe=6AFEA4AA",
-  "imageBox": [
-   310,
-   185,
-   715,
-   805
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": null,
-  "validUntil": "2026-11-16T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "ccdfb1a190ef",
-  "name": "COSTELINHA SUÍNA",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 19.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwGupLDJ&_nc_oc=AdqkKx1gyR_pKA5b-oKbP9iA1Xf0_XbmWC4JH6zVELGjML1wSjjcK74AHvFza0HmWpE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQyy-Jzg-ryUk42sPyyrPnEXI5FQApRKU_Dcb_LBOAJ5Q&oe=6AFEB531",
-  "imageBox": [
-   383,
-   55,
-   569,
-   333
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "b6e85576ad43",
-  "name": "SALSICHA PERDIGÃO",
-  "brand": "Perdigão",
-  "ean": null,
-  "size": "1kg",
-  "price": 8.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwGupLDJ&_nc_oc=AdqkKx1gyR_pKA5b-oKbP9iA1Xf0_XbmWC4JH6zVELGjML1wSjjcK74AHvFza0HmWpE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQyy-Jzg-ryUk42sPyyrPnEXI5FQApRKU_Dcb_LBOAJ5Q&oe=6AFEB531",
-  "imageBox": [
-   377,
-   648,
-   576,
-   981
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "b26b45e49757",
-  "name": "PEITO DE FRANGO C/ OSSO",
-  "brand": null,
-  "ean": null,
-  "size": "1kg",
-  "price": 14.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwGupLDJ&_nc_oc=AdqkKx1gyR_pKA5b-oKbP9iA1Xf0_XbmWC4JH6zVELGjML1wSjjcK74AHvFza0HmWpE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQyy-Jzg-ryUk42sPyyrPnEXI5FQApRKU_Dcb_LBOAJ5Q&oe=6AFEB531",
-  "imageBox": [
-   577,
-   373,
-   783,
-   629
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": "preço por kg",
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "f938a4ed559f",
-  "name": "Café União 500g",
-  "brand": "União",
-  "ean": null,
-  "size": "500g",
-  "price": 21.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwFTBvew&_nc_oc=Adpb487vSIeT3Os_jwLSq0mTY9tGZ2sw0xNQoS_UHaTwNOQWG98wjKH6-RvSQnpRikA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQOMxY3SRyjJk7qeUjq0eTg1uvXAr8P32D11a8eZj037g&oe=6AFE8C12",
-  "imageBox": [
-   363,
-   41,
-   600,
-   312
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "fbb5d730c480",
-  "name": "Cereal Nestlé Nescau Leve 770g Pague 620g",
-  "brand": "Nestlé",
-  "ean": null,
-  "size": "Leve 770g Pague 620g",
-  "price": 16.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwFTBvew&_nc_oc=Adpb487vSIeT3Os_jwLSq0mTY9tGZ2sw0xNQoS_UHaTwNOQWG98wjKH6-RvSQnpRikA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQOMxY3SRyjJk7qeUjq0eTg1uvXAr8P32D11a8eZj037g&oe=6AFE8C12",
-  "imageBox": [
-   539,
-   408,
-   811,
-   606
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "09cd479778b8",
-  "name": "Requeijão Danone 200g Tradicional",
-  "brand": "Danone",
-  "ean": null,
-  "size": "200g",
-  "price": 6.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwFTBvew&_nc_oc=Adpb487vSIeT3Os_jwLSq0mTY9tGZ2sw0xNQoS_UHaTwNOQWG98wjKH6-RvSQnpRikA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQOMxY3SRyjJk7qeUjq0eTg1uvXAr8P32D11a8eZj037g&oe=6AFE8C12",
-  "imageBox": [
-   377,
-   729,
-   603,
-   946
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "3d04b3ef9600",
-  "name": "Macarrão Dona Benta 500g Pena, Espaguete Nº8, Parafuso",
-  "brand": "Dona Benta",
-  "ean": null,
-  "size": "500g",
-  "price": 2.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH3ycH_&_nc_oc=AdrgS-FHf9Y3S-9rnF-RjzVzmGBocELPdXD3OK7T_eU92RJnfOXOSDi_Pmx8ILpLsKQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS9r9JRBDS_sjXthXRU_nq9nTY69ZVGrbA7pWqrCTpthA&oe=6AFE972E",
-  "imageBox": [
-   402,
-   38,
-   617,
-   379
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "f606eba73f79",
-  "name": "Milho Verde Predilecta 170g Lata",
-  "brand": "Predilecta",
-  "ean": null,
-  "size": "170g",
-  "price": 3.49,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH3ycH_&_nc_oc=AdrgS-FHf9Y3S-9rnF-RjzVzmGBocELPdXD3OK7T_eU92RJnfOXOSDi_Pmx8ILpLsKQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS9r9JRBDS_sjXthXRU_nq9nTY69ZVGrbA7pWqrCTpthA&oe=6AFE972E",
-  "imageBox": [
-   609,
-   378,
-   805,
-   677
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "e797fc245b32",
-  "name": "Biscoito Bonobon Biscuit 76g Beijinho, Chocolate",
-  "brand": "Bonobon",
-  "ean": null,
-  "size": "76g",
-  "price": 4.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH3ycH_&_nc_oc=AdrgS-FHf9Y3S-9rnF-RjzVzmGBocELPdXD3OK7T_eU92RJnfOXOSDi_Pmx8ILpLsKQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS9r9JRBDS_sjXthXRU_nq9nTY69ZVGrbA7pWqrCTpthA&oe=6AFE972E",
-  "imageBox": [
-   450,
-   700,
-   561,
-   1000
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "311f38e688e5",
-  "name": "Cerveja Petra Lata Puro Malte",
-  "brand": "Petra",
-  "ean": null,
-  "size": "269ml",
-  "price": 2.29,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEorGWU&_nc_oc=AdogbMuI0UQjUbOtilXuUNCuuFpjb2pnTa49cHzJ7eM_g_eqGdI5o0m12VhuTdB_sgs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQaHsuTPKe21CipsHprOFhgFQJJ-9nDEGFbmIVtLeq-mQ&oe=6AFEB5DB",
-  "imageBox": [
-   392,
-   64,
-   579,
-   343
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "3c1bf81bddac",
-  "name": "Bebida Smirnoff Ice Long Neck Original",
-  "brand": "Smirnoff",
-  "ean": null,
-  "size": "275ml",
-  "price": 5.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEorGWU&_nc_oc=AdogbMuI0UQjUbOtilXuUNCuuFpjb2pnTa49cHzJ7eM_g_eqGdI5o0m12VhuTdB_sgs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQaHsuTPKe21CipsHprOFhgFQJJ-9nDEGFbmIVtLeq-mQ&oe=6AFEB5DB",
-  "imageBox": [
-   551,
-   363,
-   960,
-   664
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "b54517f869c7",
-  "name": "Alimento com Soja Mupy",
-  "brand": "Mupy",
-  "ean": null,
-  "size": "1 Litro",
-  "price": 7.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEorGWU&_nc_oc=AdogbMuI0UQjUbOtilXuUNCuuFpjb2pnTa49cHzJ7eM_g_eqGdI5o0m12VhuTdB_sgs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQaHsuTPKe21CipsHprOFhgFQJJ-9nDEGFbmIVtLeq-mQ&oe=6AFEB5DB",
-  "imageBox": [
-   393,
-   695,
-   597,
-   975
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "816637ed1237",
-  "name": "Lava Roupas Omo 1,6kg Lavagem Perfeita",
-  "brand": "Omo",
-  "ean": null,
-  "size": "1,6kg",
-  "price": 19.98,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "limpeza",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwH2Mmbf&_nc_oc=AdqrLjjaFlSA2gdJ5QxVFdtPgH6FtT-QtAXx8AiDdYPeoQz4dKp6i5Jndih-O08nqWo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR6P07MWoTQrJMUuU7BK_Pwjk8XdN9z5bCMeMiwBkIVcQ&oe=6AFE808C",
-  "imageBox": [
-   408,
-   48,
-   591,
-   330
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "f4f8dc668d72",
-  "name": "Papel Higiênico Primavera Premium Folha Dupla 30m c/12",
-  "brand": "Primavera",
-  "ean": null,
-  "size": "12 rolos",
-  "price": 14.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "higiene",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwH2Mmbf&_nc_oc=AdqrLjjaFlSA2gdJ5QxVFdtPgH6FtT-QtAXx8AiDdYPeoQz4dKp6i5Jndih-O08nqWo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR6P07MWoTQrJMUuU7BK_Pwjk8XdN9z5bCMeMiwBkIVcQ&oe=6AFE808C",
-  "imageBox": [
-   611,
-   377,
-   783,
-   658
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
-  "externalId": "5f608be7fde6",
-  "name": "Toalha Umedecida Tok Suave Premium c/ 100",
-  "brand": "Tok Suave",
-  "ean": null,
-  "size": "100 un.",
-  "price": 8.99,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "higiene",
-  "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz5-1.fna.fbcdn.net/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwH2Mmbf&_nc_oc=AdqrLjjaFlSA2gdJ5QxVFdtPgH6FtT-QtAXx8AiDdYPeoQz4dKp6i5Jndih-O08nqWo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz5-1.fna&_nc_gid=qn2aCkMJxmMSDzNvy-S3bw&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR6P07MWoTQrJMUuU7BK_Pwjk8XdN9z5bCMeMiwBkIVcQ&oe=6AFE808C",
-  "imageBox": [
-   462,
-   685,
-   584,
-   966
-  ],
-  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
-  "source": "encarte",
-  "condition": null,
-  "validFrom": null,
-  "validUntil": "2026-11-17T02:59:59.000Z",
-  "validityNote": "post de ofertas (Instagram)",
-  "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
- },
- {
-  "market": "Nevada",
   "externalId": "2bd68413af71",
   "name": "LARANJA PERA",
   "brand": null,
@@ -459,7 +11,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    380,
    46,
@@ -473,7 +25,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -487,7 +39,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://instagram.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/909496009_1588359546668329_8758679075204500324_n.jpg?stp=c0.0.1121.1402a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNjM3NzEwNzA5MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=edNhssh3z-oQ7kNvwHCYaWZ&_nc_oc=Adrxco1FruzZdjOSuGC4HSR4jPv7xBDt5lCh8OIuKta0GHRNuDfJgS3DnoiMu3D_d2A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz4-1.fna&_nc_gid=1rwuPnTPmUxnJShHqzi27w&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQLeTRS0kRHrTTHE3DfZ1--XKe4gW_1DIkW5XAoGIqI5g&oe=6AFEA897",
+  "imageUrl": "https://scontent-fra3-1.cdninstagram.com/v/t39.30808-6/909496009_1588359546668329_8758679075204500324_n.jpg?stp=c0.0.1121.1402a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNjM3NzEwNzA5MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=edNhssh3z-oQ7kNvwHXKx2d&_nc_oc=AdreBpJM2imBnnAlR9THJN5zQj1SDfuB1IeNq6MpKXN3vWDwqB4t2zDfXylFlycN7DPlBVCYAorwGNhdl5szwb8f&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fra3-1.cdninstagram.com&_nc_gid=cRh8bFEnlz2KnOZgta4qLg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQjF-cmmGEIksW1M6V8TrKKCCfdsnghS6yXBWjJRm-Ueg&oe=6AFEA897",
   "imageBox": [
    360,
    363,
@@ -501,7 +53,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -515,7 +67,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    360,
    719,
@@ -529,7 +81,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -543,7 +95,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    693,
    43,
@@ -557,7 +109,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -571,7 +123,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    689,
    365,
@@ -585,7 +137,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -599,7 +151,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    715,
    715,
@@ -613,7 +165,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -627,7 +179,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/901612646_1152247584064224_7722613897408446639_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=iIYjmB_mIj8Q7kNvwE4TDGC&_nc_oc=AdqfwsyBROxEax0u4gQV2oustyaqxBXKAolVMTksxaeM5mF1wb766xJZ_JRNxjj9hfg&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTo8tqIwc5VT5xwAvdaVfxK3IWayUGSm7qkbDuAeFMibg&oe=6AFE9DF4",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/901612646_1152247584064224_7722613897408446639_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=iIYjmB_mIj8Q7kNvwEeN6Ad&_nc_oc=AdriYtpx-zvyY6Nr4TuanzTvB9_8slNdZs0AteTDMtpuConsRxhueqLolRVIszzgJE0W_dAP_dwg6ttgSZrgAFPY&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQQl9jFoftxpgJPPQDTnAwry1V7KgCCaDWNID-4D4xqATA&oe=6AFE9DF4",
   "imageBox": [
    333,
    122,
@@ -641,7 +193,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -655,7 +207,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/901612646_1152247584064224_7722613897408446639_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=iIYjmB_mIj8Q7kNvwE4TDGC&_nc_oc=AdqfwsyBROxEax0u4gQV2oustyaqxBXKAolVMTksxaeM5mF1wb766xJZ_JRNxjj9hfg&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTo8tqIwc5VT5xwAvdaVfxK3IWayUGSm7qkbDuAeFMibg&oe=6AFE9DF4",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/901612646_1152247584064224_7722613897408446639_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=iIYjmB_mIj8Q7kNvwEeN6Ad&_nc_oc=AdriYtpx-zvyY6Nr4TuanzTvB9_8slNdZs0AteTDMtpuConsRxhueqLolRVIszzgJE0W_dAP_dwg6ttgSZrgAFPY&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQQl9jFoftxpgJPPQDTnAwry1V7KgCCaDWNID-4D4xqATA&oe=6AFE9DF4",
   "imageBox": [
    638,
    55,
@@ -669,7 +221,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -683,7 +235,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-waw2-1.cdninstagram.com/v/t39.30808-6/906579419_1586821976822086_4690818470058127819_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA0MTgzMDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=yYRVQGT2nksQ7kNvwFt6sFg&_nc_oc=AdpAzJMhCDns4jjV6uYurz48kl33rQszAu1mz8AWcG5pxNF9LtTQ4vHbK9lQXAsfAWw&_nc_ad=z-m&_nc_cid=1245&_nc_zt=23&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=MtOSmDo3iXJSvuvWiQdlFQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR1wj9mN0j98-3JOvuoWlTNkkTK7Mcga9lFKlz1PaUlbw&oe=6AFE99A7",
+  "imageUrl": "https://instagram.fmel5-1.fna.fbcdn.net/v/t39.30808-6/906579419_1586821976822086_4690818470058127819_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA0MTgzMDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=yYRVQGT2nksQ7kNvwHhe6J2&_nc_oc=Adp1eYbsCt7AI3iSW7Eip-57W42vfYWqrJpQW0piCSV_MnB0H7hgavc1jESsQns1MPM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmel5-1.fna&_nc_gid=1vjvinVKu3aGbkdoMJtZ3g&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSMGGvEiwZAqzWehKGGNWKqG7K3ONSyXjKUlog9UFjB5w&oe=6AFE99A7",
   "imageBox": [
    308,
    93,
@@ -697,7 +249,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Instagram)",
   "storeScope": "Ofertas publicadas no Instagram @redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -711,7 +263,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.99422-6/903908881_2248117595746160_8583136320939962775_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bLOyzO7rD9QQ7kNvwGS9D2J&_nc_oc=AdqmIaUAhCri0iaG_EIu-XMQ6TcaqQMZKy1k0JGqkeCjRWo7VCLFbev2ZoJbUgxZMeo&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQQKKVJe9CxeilbRTaGJg1E6Nx_vlvO2UYsM8N6NvIyOww&oe=6AFE90D0",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/903908881_2248117595746160_8583136320939962775_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bLOyzO7rD9QQ7kNvwFm10FX&_nc_oc=AdoNxFS92vKSmVTrBVwDN-S4Pl44dUV-sMm_XhmHZmhRIGiJgSwFdGjseyCVCL947DGg3d1z0XNubwXPDKPJsuD0&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSYd3YDErr7xqUui9ECQH0Cw7WlfQdEH4R5HXkTbOawtQ&oe=6AFEC910",
   "imageBox": [
    619,
    153,
@@ -725,7 +277,455 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "5f7ee6a76225",
+  "name": "Contra Filé Porcionado Peça",
+  "brand": null,
+  "ean": null,
+  "size": null,
+  "price": 54.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/912268250_1588620643308886_9057307748065958799_n.jpg?stp=c0.123.1080.1080a_dst-jpg_e35_s1080x1080_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODY4MjQ0NDE1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4-3aWx5pRGUQ7kNvwEp0rv4&_nc_oc=Adoedm4MYzoxPWUDvcrBAh8q0WVL0G9IcMZFciNUn2g9saFJdfn_xN5CA_XCemHTJuA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSDfk5yvg-yEiTkZ_5op_zBnLpiwTINRA2qH2mjYcQokA&oe=6AFEA4AA",
+  "imageBox": [
+   310,
+   185,
+   715,
+   805
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": null,
+  "validUntil": "2026-11-16T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "ccdfb1a190ef",
+  "name": "COSTELINHA SUÍNA",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 19.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwEj2po_&_nc_oc=AdrO-8LbafTk2UjarV2cE2s1Qy_wHhNdSb5DxTOIeXzPbGS5e1N-0Bl0VSnEnAx6Oj8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRuXhA3Ieikar3_EyPZ_1u4pdZMcph-6H5VR1eQA2gWUQ&oe=6AFEB531",
+  "imageBox": [
+   383,
+   55,
+   569,
+   333
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "b6e85576ad43",
+  "name": "SALSICHA PERDIGÃO",
+  "brand": "Perdigão",
+  "ean": null,
+  "size": "1kg",
+  "price": 8.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwEj2po_&_nc_oc=AdrO-8LbafTk2UjarV2cE2s1Qy_wHhNdSb5DxTOIeXzPbGS5e1N-0Bl0VSnEnAx6Oj8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRuXhA3Ieikar3_EyPZ_1u4pdZMcph-6H5VR1eQA2gWUQ&oe=6AFEB531",
+  "imageBox": [
+   377,
+   648,
+   576,
+   981
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "b26b45e49757",
+  "name": "PEITO DE FRANGO C/ OSSO",
+  "brand": null,
+  "ean": null,
+  "size": "1kg",
+  "price": 14.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_h78OupJvX8Q7kNvwEj2po_&_nc_oc=AdrO-8LbafTk2UjarV2cE2s1Qy_wHhNdSb5DxTOIeXzPbGS5e1N-0Bl0VSnEnAx6Oj8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRuXhA3Ieikar3_EyPZ_1u4pdZMcph-6H5VR1eQA2gWUQ&oe=6AFEB531",
+  "imageBox": [
+   577,
+   373,
+   783,
+   629
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "f938a4ed559f",
+  "name": "Café União 500g",
+  "brand": "União",
+  "ean": null,
+  "size": "500g",
+  "price": 21.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwF9tpHc&_nc_oc=AdrjBT-wwzODAyo68bTBVVndVdQlugDwv2jyW7jlffdR0Xy1FXPPQu3Yfd9czcfGXJk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYTA68lK_uekbwjmKnnSJ8nNEpptg6gWtnECsRUa0rAA&oe=6AFEC452",
+  "imageBox": [
+   363,
+   41,
+   600,
+   312
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "fbb5d730c480",
+  "name": "Cereal Nestlé Nescau Leve 770g Pague 620g",
+  "brand": "Nestlé",
+  "ean": null,
+  "size": "Leve 770g Pague 620g",
+  "price": 16.9,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwF9tpHc&_nc_oc=AdrjBT-wwzODAyo68bTBVVndVdQlugDwv2jyW7jlffdR0Xy1FXPPQu3Yfd9czcfGXJk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYTA68lK_uekbwjmKnnSJ8nNEpptg6gWtnECsRUa0rAA&oe=6AFEC452",
+  "imageBox": [
+   539,
+   408,
+   811,
+   606
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "09cd479778b8",
+  "name": "Requeijão Danone 200g Tradicional",
+  "brand": "Danone",
+  "ean": null,
+  "size": "200g",
+  "price": 6.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RAEgbUD_Gm0Q7kNvwF9tpHc&_nc_oc=AdrjBT-wwzODAyo68bTBVVndVdQlugDwv2jyW7jlffdR0Xy1FXPPQu3Yfd9czcfGXJk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYTA68lK_uekbwjmKnnSJ8nNEpptg6gWtnECsRUa0rAA&oe=6AFEC452",
+  "imageBox": [
+   377,
+   729,
+   603,
+   946
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "3d04b3ef9600",
+  "name": "Macarrão Dona Benta 500g Pena, Espaguete Nº8, Parafuso",
+  "brand": "Dona Benta",
+  "ean": null,
+  "size": "500g",
+  "price": 2.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH7LXXp&_nc_oc=AdqkaKeztskl9JTk-N7Yvb3NZfonWGqW3alRsBQRpM8EaS1JpaExypSQz5jWkrPtY58&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRx-ws_gWaO-_g9dBf5TGLGmYmC0vWW3pVEQnmG3u6auQ&oe=6AFE972E",
+  "imageBox": [
+   402,
+   38,
+   617,
+   379
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "f606eba73f79",
+  "name": "Milho Verde Predilecta 170g Lata",
+  "brand": "Predilecta",
+  "ean": null,
+  "size": "170g",
+  "price": 3.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH7LXXp&_nc_oc=AdqkaKeztskl9JTk-N7Yvb3NZfonWGqW3alRsBQRpM8EaS1JpaExypSQz5jWkrPtY58&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRx-ws_gWaO-_g9dBf5TGLGmYmC0vWW3pVEQnmG3u6auQ&oe=6AFE972E",
+  "imageBox": [
+   609,
+   378,
+   805,
+   677
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "e797fc245b32",
+  "name": "Biscoito Bonobon Biscuit 76g Beijinho, Chocolate",
+  "brand": "Bonobon",
+  "ean": null,
+  "size": "76g",
+  "price": 4.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8c-ljq3WTd0Q7kNvwH7LXXp&_nc_oc=AdqkaKeztskl9JTk-N7Yvb3NZfonWGqW3alRsBQRpM8EaS1JpaExypSQz5jWkrPtY58&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRx-ws_gWaO-_g9dBf5TGLGmYmC0vWW3pVEQnmG3u6auQ&oe=6AFE972E",
+  "imageBox": [
+   450,
+   700,
+   561,
+   1000
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "311f38e688e5",
+  "name": "Cerveja Petra Lata Puro Malte",
+  "brand": "Petra",
+  "ean": null,
+  "size": "269ml",
+  "price": 2.29,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEU6ayD&_nc_oc=Ado59H6rCDBd4yT8Zv4BFSeob8qISuDR5LFT2z_gG6u9esumkd1IbabWqR4sirz8FE4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ1UvQxILXuupY9s9-4hiU4-oazFFAgmZaiBUOqLlBkSw&oe=6AFEB5DB",
+  "imageBox": [
+   392,
+   64,
+   579,
+   343
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "3c1bf81bddac",
+  "name": "Bebida Smirnoff Ice Long Neck Original",
+  "brand": "Smirnoff",
+  "ean": null,
+  "size": "275ml",
+  "price": 5.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEU6ayD&_nc_oc=Ado59H6rCDBd4yT8Zv4BFSeob8qISuDR5LFT2z_gG6u9esumkd1IbabWqR4sirz8FE4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ1UvQxILXuupY9s9-4hiU4-oazFFAgmZaiBUOqLlBkSw&oe=6AFEB5DB",
+  "imageBox": [
+   551,
+   363,
+   960,
+   664
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "b54517f869c7",
+  "name": "Alimento com Soja Mupy",
+  "brand": "Mupy",
+  "ean": null,
+  "size": "1 Litro",
+  "price": 7.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=1vev-ZKgUrQQ7kNvwEU6ayD&_nc_oc=Ado59H6rCDBd4yT8Zv4BFSeob8qISuDR5LFT2z_gG6u9esumkd1IbabWqR4sirz8FE4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ1UvQxILXuupY9s9-4hiU4-oazFFAgmZaiBUOqLlBkSw&oe=6AFEB5DB",
+  "imageBox": [
+   393,
+   695,
+   597,
+   975
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "816637ed1237",
+  "name": "Lava Roupas Omo 1,6kg Lavagem Perfeita",
+  "brand": "Omo",
+  "ean": null,
+  "size": "1,6kg",
+  "price": 19.98,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "limpeza",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwGHUl-b&_nc_oc=AdqCyCtBueeOc3v8tfl1bMUePh0GXJSAaV9SyNqL78vll-9cDwL7kXyi-vA6FdPcPZ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTtHq_U4GBeSaf9_VPXrurugH3hzQEOm8vMF7VsoAi0Vg&oe=6AFEB8CC",
+  "imageBox": [
+   408,
+   48,
+   591,
+   330
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "f4f8dc668d72",
+  "name": "Papel Higiênico Primavera Premium Folha Dupla 30m c/12",
+  "brand": "Primavera",
+  "ean": null,
+  "size": "12 rolos",
+  "price": 14.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwGHUl-b&_nc_oc=AdqCyCtBueeOc3v8tfl1bMUePh0GXJSAaV9SyNqL78vll-9cDwL7kXyi-vA6FdPcPZ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTtHq_U4GBeSaf9_VPXrurugH3hzQEOm8vMF7VsoAi0Vg&oe=6AFEB8CC",
+  "imageBox": [
+   611,
+   377,
+   783,
+   658
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
+ },
+ {
+  "market": "Nevada",
+  "externalId": "5f608be7fde6",
+  "name": "Toalha Umedecida Tok Suave Premium c/ 100",
+  "brand": "Tok Suave",
+  "ean": null,
+  "size": "100 un.",
+  "price": 8.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "imageUrl": "https://scontent-fco2-1.cdninstagram.com/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j8aD7OASlskQ7kNvwGHUl-b&_nc_oc=AdqCyCtBueeOc3v8tfl1bMUePh0GXJSAaV9SyNqL78vll-9cDwL7kXyi-vA6FdPcPZ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=twyybFmJNPJv81fOxhCSVQ&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTtHq_U4GBeSaf9_VPXrurugH3hzQEOm8vMF7VsoAi0Vg&oe=6AFEB8CC",
+  "imageBox": [
+   462,
+   685,
+   584,
+   966
+  ],
+  "productUrl": "https://www.instagram.com/p/DfvDUQMjDy-/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": null,
+  "validUntil": "2026-11-17T02:59:59.000Z",
+  "validityNote": "post de ofertas (Instagram)",
+  "storeScope": "Ofertas publicadas no Instagram @redenevada",
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -739,7 +739,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwFI6spn&_nc_oc=AdrkEW88yKp4zcExs4Fe5GymMkwuMB-WA_hgiTdB_oQm7ZMICkmzEnXWK3mtqMhBGJ8&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQTyjnUrM12RIKR3OeqRX0Hero1L4lbBLSugZVVJIAz8Hw&oe=6AFE8377",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/905030625_2575899976220015_2398602733931757736_n.png?stp=dst-jpg_tt6&cstp=mx1122x1402&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lTc60D65UOQQ7kNvwF-iiSn&_nc_oc=AdqO0PBvclnkfPxQvlM4NuszMXmeGQK_V0Um7NZNSf3EXxZzGz5TiVr1Rng5zugRSmj-WL4lQ7S4MbCud2hW31ai&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSLIqIV6rb1YswapudGiJEtGFx-ZexUWmLEqw220m4xCw&oe=6AFEBBB7",
   "imageBox": [
    390,
    355,
@@ -753,7 +753,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -767,7 +767,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.99422-6/903908881_2248117595746160_8583136320939962775_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bLOyzO7rD9QQ7kNvwGS9D2J&_nc_oc=AdqmIaUAhCri0iaG_EIu-XMQ6TcaqQMZKy1k0JGqkeCjRWo7VCLFbev2ZoJbUgxZMeo&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=oZgY-NtXDswAMqyb4KVlyg&_nc_ss=70180&oh=00_AQQKKVJe9CxeilbRTaGJg1E6Nx_vlvO2UYsM8N6NvIyOww&oe=6AFE90D0",
+  "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/903908881_2248117595746160_8583136320939962775_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bLOyzO7rD9QQ7kNvwFm10FX&_nc_oc=AdoNxFS92vKSmVTrBVwDN-S4Pl44dUV-sMm_XhmHZmhRIGiJgSwFdGjseyCVCL947DGg3d1z0XNubwXPDKPJsuD0&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZMt99YmEoIasKXiLJok0fg&_nc_ss=70180&oh=00_AQSYd3YDErr7xqUui9ECQH0Cw7WlfQdEH4R5HXkTbOawtQ&oe=6AFEC910",
   "imageBox": [
    330,
    93,
@@ -781,7 +781,7 @@
   "validUntil": "2026-11-16T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -795,7 +795,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    223,
    27,
@@ -809,7 +809,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -823,7 +823,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    223,
    345,
@@ -837,7 +837,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -851,7 +851,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    223,
    664,
@@ -865,7 +865,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -879,7 +879,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    374,
    27,
@@ -893,7 +893,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -907,7 +907,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    374,
    345,
@@ -921,7 +921,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -935,7 +935,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    374,
    663,
@@ -949,7 +949,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -963,7 +963,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    512,
    27,
@@ -977,7 +977,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -991,7 +991,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    512,
    344,
@@ -1005,7 +1005,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1019,7 +1019,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    512,
    663,
@@ -1033,7 +1033,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1047,7 +1047,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    624,
    27,
@@ -1061,7 +1061,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1075,7 +1075,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    624,
    344,
@@ -1089,7 +1089,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1103,7 +1103,7 @@
   "unitPrice": null,
   "category": "alimenticios",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    624,
    663,
@@ -1117,7 +1117,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1131,7 +1131,7 @@
   "unitPrice": null,
   "category": "limpeza",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    762,
    27,
@@ -1145,7 +1145,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1159,7 +1159,7 @@
   "unitPrice": null,
   "category": "higiene",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    762,
    345,
@@ -1173,7 +1173,7 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  },
  {
   "market": "Nevada",
@@ -1187,7 +1187,7 @@
   "unitPrice": null,
   "category": "higiene",
   "categoryRaw": null,
-  "imageUrl": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwE0l8Qq&_nc_oc=Adpjex3GK0z76iXLGKZLZ5E9zz2S6HaAlESxfBLdWeEpcldws7fIumbPGk62BDMzbBxbiH-_widzYebg1AeYjyPu&_nc_zt=14&_nc_ht=scontent-mia3-2.xx&_nc_gid=4uxKnkUVMoEkEGwSXK1e9w&_nc_ss=70180&oh=00_AQThxx2byn9b5mhWPdaiufDjVFX0lZl_nq9l6zGCsoqX9g&oe=6AFEAD88",
+  "imageUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/899575326_1777313093543533_4619862382852778215_n.png?stp=dst-jpg_tt6&cstp=mx1382x2048&ctp=p526x296&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kdW1aNePL3gQ7kNvwF_djdr&_nc_oc=AdpDP3jaYPFCGlkQn61rCianWGxu4Z6yelJ7dTdGUXSoYmllsVQ_9Wd_XD7x773zLqzsZ1ujYs_5Y1VO9tnykUKO&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=OPXe7Z48T76dsv1ErHBMkQ&_nc_ss=70180&oh=00_AQQIgC0xuKbnqy0YrviSPB38rZLA0Ngc7hguBA4WmWVFtw&oe=6AFEAD88",
   "imageBox": [
    762,
    664,
@@ -1201,6 +1201,6 @@
   "validUntil": "2026-11-17T02:59:59.000Z",
   "validityNote": "post de ofertas (Facebook)",
   "storeScope": "Ofertas publicadas no Facebook redenevada",
-  "collectedAt": "2026-11-14T20:52:27.999Z"
+  "collectedAt": "2026-11-14T22:27:31.891Z"
  }
 ]
