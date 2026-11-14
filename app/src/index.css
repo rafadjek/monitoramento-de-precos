@@ -47,3 +47,8 @@
 /* larguras da tabela de preços; no celular a coluna de ação some (o botão da lista vai para a célula do produto) */
 .tbl { --pc: clamp(140px, 36vw, 260px); --mc: clamp(104px, 26vw, 122px); --ac: 0px; }
 @media (min-width: 640px) { .tbl { --ac: 158px; } }
+
+/* etiqueta da página de venda: balança uma vez ao abrir (único movimento da página) */
+.tag-sway { transform-origin: 50% 0; animation: tag-sway 2.4s ease-out 1 both; }
+@keyframes tag-sway { 0% { transform: rotate(-7deg); } 25% { transform: rotate(5deg); } 50% { transform: rotate(-3deg); } 75% { transform: rotate(1.5deg); } 100% { transform: rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .tag-sway { animation: none; } }

@@ -2,7 +2,7 @@
 // - páginas e dados (data/*.json): busca na rede primeiro; sem rede, usa a última cópia guardada
 // - arquivos do site com nome versionado (assets/), fontes, logos e ícones: guardados na primeira vez
 // - imagens de outros sites (fotos dos mercados) não são guardadas
-const CACHE = 'bate-ofertas-v1';
+const CACHE = 'bate-ofertas-v2';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', 'app.webmanifest', 'app-192.png'])).then(() => self.skipWaiting()));

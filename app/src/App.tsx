@@ -1,4 +1,4 @@
-import { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
 import { decodeCart, keyOf, type CartItem } from './cart';
 import { ProductList } from './components/ProductList';
@@ -7,7 +7,11 @@ import { Offers, pickOffers } from './components/Offers';
 import { Icon, MarketLogo } from './components/Parts';
 import { haystack, match, parseQuery } from './search';
 import type { HistMeta } from './history';
+import { CityAdBanner, CityAdCard } from './components/CityAd';
+import { CityPicker } from './components/CityPicker';
+import { effectiveCities, marketInCities, migrateCities } from './cities';
 
+const SuaCidade = lazy(() => import('./pages/SuaCidade'));
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
 
@@ -33,7 +37,7 @@ const SORTS = [
 const load = <T,>(k: string, d: T): T => { try { const v = localStorage.getItem(k); return v ? (JSON.parse(v) as T) : d; } catch { return d; } };
 const save = (k: string, v: unknown) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* modo privado */ } };
 
-export default function App() {
+function Comparador() {
   const [all, setAll] = useState<Indexed[]>([]);
   const [markets, setMarkets] = useState<MarketInfo[]>([]);
   const [generatedAt, setGeneratedAt] = useState('');
@@ -44,7 +48,9 @@ export default function App() {
   const params = new URLSearchParams(location.search);
   const [q, setQ] = useState(() => params.get('q') ?? '');
   const dq = useDeferredValue(q);
-  const [city, setCity] = useState(() => load('bate-cidade', ''));
+  const [rawCities, setCities] = useState<string[]>(() => {
+    try { return migrateCities(localStorage.getItem('bate-cidades'), localStorage.getItem('bate-cidade')); } catch { return []; }
+  });
   const [category, setCategory] = useState('');
   const [market, setMarket] = useState('');
   const [sort, setSort] = useState('preco');
@@ -64,9 +70,12 @@ export default function App() {
   // no celular o carrinho abre por toque (no computador fica sempre aberto); lista recebida por link já chega aberta
   const [cartOpen, setCartOpen] = useState(() => !!params.get('lista'));
   useEffect(() => {
-    if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname); }
+    if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname + location.hash); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => save('bate-cidade', city), [city]);
+  useEffect(() => {
+    save('bate-cidades', rawCities);
+    try { localStorage.removeItem('bate-cidade'); } catch { /* sem armazenamento */ } // chave antiga, já migrada
+  }, [rawCities]);
 
   useEffect(() => {
     setStatus('loading');
@@ -93,14 +102,16 @@ export default function App() {
     })();
   }, [attempt]);
 
-  useEffect(() => setShown(PAGE), [dq, category, market, city, sort, onlyFavs]);
-  const cities = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].filter((c) => c === 'Mauá' || c === 'Ribeirão Pires').sort(), [markets]);
-  const inCity = useMemo(() => new Set(markets.filter((m) => !city || (m.cities ?? []).includes(city)).map((m) => m.name)), [markets, city]);
+  useEffect(() => setShown(PAGE), [dq, category, market, rawCities, sort, onlyFavs]);
+  const cityList = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].filter((c) => c === 'Mauá' || c === 'Ribeirão Pires').sort((a, b) => a.localeCompare(b, 'pt-BR')), [markets]);
+  // cidades marcadas que existem de verdade (todas marcadas = sem filtro)
+  const cities = useMemo(() => effectiveCities(rawCities, cityList), [rawCities, cityList]);
+  const inCity = useMemo(() => new Set(markets.filter((m) => marketInCities(m.cities, cities)).map((m) => m.name)), [markets, cities]);
   // colunas: todos os mercados da região escolhida, do que tem mais produtos para o que tem menos
   const columns = useMemo(() => markets.filter((m) => inCity.has(m.name)).sort((a, b) => b.products - a.products).map((m) => m.name), [markets, inCity]);
   useEffect(() => { if (market && !inCity.has(market)) setMarket(''); }, [inCity, market]);
 
-  const cityOffers = useMemo(() => (city ? all.filter((o) => inCity.has(o.market)) : all), [all, city, inCity]);
+  const cityOffers = useMemo(() => (cities.length ? all.filter((o) => inCity.has(o.market)) : all), [all, cities, inCity]);
   const groups = useMemo(() => buildGroups(cityOffers), [cityOffers]);
   const byId = useMemo(() => new Map(groups.map((g) => [g.id, g])), [groups]);
   const offers = useMemo(() => pickOffers(cityOffers), [cityOffers]);
@@ -149,16 +160,7 @@ export default function App() {
               <span className="title-fire">Bate</span><br />Ofertas
             </span>
           </a>
-          <label className="ml-1 hidden items-center gap-2 rounded-xl border border-sky/60 bg-panel px-3 py-1.5 shadow-sky sm:flex">
-            <Icon name="pin" className="h-5 w-5 text-sky" />
-            <span className="leading-tight">
-              <span className="block text-[0.7rem] text-muted">Minha região</span>
-              <select value={city} onChange={(e) => setCity(e.target.value)} className="bg-transparent text-sm font-bold outline-none" aria-label="Minha região">
-                <option value="" className="bg-panel">Mauá e Ribeirão Pires</option>
-                {cities.map((c) => <option key={c} value={c} className="bg-panel">{c}</option>)}
-              </select>
-            </span>
-          </label>
+          <CityPicker available={cityList} selected={cities} onChange={setCities} className="ml-1 hidden w-56 sm:block" />
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
             <a href="#ofertas" className="flex flex-col items-center px-2 text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
             <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
@@ -176,7 +178,7 @@ export default function App() {
         <div className="flex items-start gap-3">
           <Icon name="bolt" className="mt-1 h-9 w-9 shrink-0 text-fire drop-shadow-[0_0_12px_rgba(255,138,30,.8)] sm:h-12 sm:w-12" fill />
           <div>
-            <h1 className="font-display text-[2rem] font-extrabold italic uppercase leading-[0.9] tracking-tight sm:text-5xl">
+            <h1 id="comparador-h1" tabIndex={-1} className="outline-none font-display text-[2rem] font-extrabold italic uppercase leading-[0.9] tracking-tight sm:text-5xl">
               Combate de <span className="title-fire">preços</span>
             </h1>
             <p className="mt-1.5 text-xs font-bold uppercase tracking-wide text-ink/85 sm:text-sm">
@@ -184,13 +186,7 @@ export default function App() {
             </p>
           </div>
         </div>
-        <label className="mt-4 flex items-center gap-2 rounded-xl border border-sky/60 bg-panel px-3 py-2 sm:hidden">
-          <Icon name="pin" className="h-5 w-5 text-sky" />
-          <select value={city} onChange={(e) => setCity(e.target.value)} className="flex-1 bg-transparent text-sm font-bold outline-none" aria-label="Minha região">
-            <option value="" className="bg-panel">Mauá e Ribeirão Pires</option>
-            {cities.map((c) => <option key={c} value={c} className="bg-panel">{c}</option>)}
-          </select>
-        </label>
+        <CityPicker available={cityList} selected={cities} onChange={setCities} className="mt-4 sm:hidden" />
       </section>
 
       {/* celular: carrinho no topo (fechado num resumo), depois a lista, depois as ofertas.
@@ -198,6 +194,7 @@ export default function App() {
       <div className="mx-auto grid max-w-[1400px] gap-4 px-4 pb-16 lg:grid-cols-[minmax(0,1fr)_370px] lg:grid-rows-[auto_1fr] lg:gap-5">
         <div className="min-w-0 lg:col-start-2 lg:row-start-1">
           <CartPanel cart={cart} setCart={setCart} groups={byId} markets={columns} open={cartOpen} onToggle={() => setCartOpen(!cartOpen)} />
+          <div className="mt-4 empty:hidden"><CityAdCard /></div>
         </div>
         <main className="min-w-0 space-y-4 lg:col-start-1 lg:row-span-2 lg:row-start-1">
           <div className="glass p-2">
@@ -277,6 +274,39 @@ export default function App() {
         </aside>
       </div>
 
+      <CityAdBanner />
     </div>
+  );
+}
+
+// Rota por hash, sem biblioteca: "#/sua-cidade" abre a página de venda (carregada só quando pedida).
+// O comparador fica montado (escondido) para não perder busca, filtros nem rolagem ao voltar.
+export default function App() {
+  const [hash, setHash] = useState(() => location.hash);
+  const scrollBack = useRef(0);
+  useEffect(() => {
+    const on = () => setHash(location.hash);
+    window.addEventListener('hashchange', on);
+    return () => window.removeEventListener('hashchange', on);
+  }, []);
+  // baixa a página de venda em segundo plano (o service worker guarda, e ela abre sem internet)
+  useEffect(() => { const t = setTimeout(() => { import('./pages/SuaCidade'); }, 4000); return () => clearTimeout(t); }, []);
+  const sale = hash === '#/sua-cidade';
+  const was = useRef(false);
+  useEffect(() => {
+    const focusH1 = (id: string) => requestAnimationFrame(() => document.getElementById(id)?.focus({ preventScroll: true }));
+    if (sale && !was.current) { scrollBack.current = window.scrollY; window.scrollTo(0, 0); focusH1('venda-h1'); }
+    else if (!sale && was.current) { const y = scrollBack.current; requestAnimationFrame(() => window.scrollTo(0, hash && hash !== '#' ? 0 : y)); focusH1('comparador-h1'); }
+    was.current = sale;
+  }, [sale, hash]);
+  return (
+    <>
+      <div hidden={sale}><Comparador /></div>
+      {sale && (
+        <Suspense fallback={<div className="grid min-h-screen place-items-center bg-night text-muted" role="status">Carregando...</div>}>
+          <SuaCidade />
+        </Suspense>
+      )}
+    </>
   );
 }
