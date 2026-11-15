@@ -43,6 +43,15 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 - **Anúncios no comparador:** cartão ao lado do carrinho (fechável) e faixa "Sua cidade não está aqui?" no fim da página (`components/CityAd.tsx`).
 - **Regra do texto de venda:** só número real dos dados, nada de depoimento ou cliente inventado; mercado parceiro não compra posição no ranking.
 
+## App Android (Fase 11, 2026-11-14)
+
+- **O que é:** o mesmo site empacotado com Capacitor (pasta `android-app/`, `package.json` próprio; o `app/package.json` não é tocado). Pacote `br.com.bateofertas`, versão em `android-app/versao.json`.
+- **Funções:** abre em tela cheia, ícone e abertura com o logo novo, preços lidos de `https://bate-ofertas.pages.dev/data/` e guardados no aparelho (abre sem internet com aviso), botão voltar fecha painéis antes de sair, compartilhar a lista pelo menu do Android, links abrem no navegador/WhatsApp. O código nativo fica em `app/src/native.ts` e não faz nada na web.
+- **Gerar um APK novo:** subir `versao.json` e rodar `android-app\construir-apk.ps1 -Release` (JDK 21 e SDK em D:erramentas; ver `D:\Projetos Claudepoio\config-claudendroid-no-d.md`). Saída em `android-app\saida\` (`bate-ofertas.apk` assinado, `bate-ofertas.aab` para a Play Store, `-debug.apk`); fora do Git.
+- **Chave de assinatura:** `android-app\chavesateofertas.jks` + `keystore.properties`, fora do Git. **Guardar cópia fora desta máquina**: sem ela não dá para atualizar o app instalado nem publicar na Play Store.
+- **Fora do escopo:** avisos de queda de preço (precisam de servidor de notificação) e publicação na Play Store (conta US$ 25).
+- **Listagem:** etiquetas de cada produto lado a lado com barra de rolagem própria sempre visível (`components/ScrollRow.tsx`).
+
 ## Mercados
 
 | Mercado | Fonte | Situação |
