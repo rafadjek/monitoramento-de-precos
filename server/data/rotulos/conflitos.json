@@ -1,0 +1,324 @@
+[
+ {
+  "id": "00bf7bdf11",
+  "kind": "juntos",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Coop",
+   "name": "Café Solúvel Pilão 40g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/240752/7896089088656.jpg?v=638539059165100000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Em Pó Pilão 40G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/254798.webp"
+  }
+ },
+ {
+  "id": "0372e7a433",
+  "kind": "ean",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Atacadão",
+   "name": "Absorvente em Gel Intimus Seca com abas 32 un",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2244717/g.jpg.jpg?v=639287964517270000"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Absorvente com Abas Intimus Gel Tripla Proteção Cobertura Seca Pacote 32 Unidades",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/238381/7896007544059.jpg?v=638487994970270000"
+  }
+ },
+ {
+  "id": "163367744f",
+  "kind": "ean",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Atacadão",
+   "name": "Sabonete Em Barra Para Bebê Protex Baby Glicerina Natural 85g",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2288873/g.jpg.png?v=639289540319700000"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Sabonete Infantil Protex Baby Suave 85g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/227087/7509546673226.jpg?v=638064654037000000"
+  }
+ },
+ {
+  "id": "2b6f2249e5",
+  "kind": "separados",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Extra",
+   "name": "Requeijão Cremoso Tradicional Catupiry Copo 200g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/641/33326641.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Requeijão Cream Tradicional Catupiry 200G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/716819.webp"
+  }
+ },
+ {
+  "id": "315f802868",
+  "kind": "ean",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Coop",
+   "name": "Desodorante Aerosol Axe Body Spray Apollo 150ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214642/7791293025780.jpg?v=637919522876030000"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Desodorante Aerossol Axe 150ml Apollo",
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/7a5180ac-e6d8-4947-a19f-ee2ee81aed02.jpg"
+  }
+ },
+ {
+  "id": "3affb81ad2",
+  "kind": "juntos",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Coop",
+   "name": "Macarrão Petybon Massa com Ovos Ninho N°3 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215070/7897721410057.jpg?v=637919525295800000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão com Ovos Ninho PETYBON Pacote 500g",
+   "image": "https://static.extramercado.com.br/img/uploads/1/896/33316896.png"
+  }
+ },
+ {
+  "id": "501e498254",
+  "kind": "juntos",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Coop",
+   "name": "Café Torrado e Moído Pilão Extra Forte Almofada 500g",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/214337/7896089013399.jpg?v=637919521027130000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Café Torrado E Moído Extra Forte Vácuo Pilão 500G",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/335201.webp"
+  }
+ },
+ {
+  "id": "56d1ce8791",
+  "kind": "ean",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Atacadão",
+   "name": "Desinfetante Álcool Líquido Coperalcool Lavanda 46°INPM 1L",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2297051/g.jpg.jpg?v=639290365559630000"
+  },
+  "b": {
+   "market": "Coop",
+   "name": "Álcool Líquido 46 INPM Lavanda Oriental Coperalcool Bacfree 1L",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/247739/7896090700769.webp?v=638838853277130000"
+  }
+ },
+ {
+  "id": "add5ab08d4",
+  "kind": "juntos",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Atacadão",
+   "name": "Iogurte Natural Batavo Integral 1,15kg",
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2238468/g.jpg.jpg?v=639287923942730000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Integral Natural Batavo Original 1,15kg Embalagem Econômica Garrafa",
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276259.webp"
+  }
+ },
+ {
+  "id": "bcac066e12",
+  "kind": "juntos",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Coop",
+   "name": "Vinagre color  Vitalia 750ml",
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/220985/7896048284792.jpg?v=637919563668870000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Vinagre Vitalia Álcool Colorido 750ml",
+   "image": "https://static.extramercado.com.br/img/uploads/1/232/33345232.jpg"
+  }
+ },
+ {
+  "id": "8c751aa455",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Assaí",
+   "name": "BEBIDA ENERGÉTICA BALY SABORES",
+   "price": 5.99,
+   "image": "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/175721/campanha-175721-cluster-948-pagina-2.jpeg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bebida Energética Baly 473ml Tradicional",
+   "price": 5.49,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/fceaff71-13bd-4b17-9137-536ba45a8ce8.jpg"
+  }
+ },
+ {
+  "id": "8febe5c1c3",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Extra",
+   "name": "Aurogguets Queijo Aurora 275g",
+   "price": 9.39,
+   "image": "https://static.extramercado.com.br/img/uploads/1/720/33346720.png"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Auroggets Aurora Kids Queijo 275g",
+   "price": 9.49,
+   "image": "https://edge.osuper.com.br/ZgU1kxpg5sMSyK-vRmk_FTtTY0o=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417885ed819e45f35fe0d/528662-e5cab1b5.png"
+  }
+ },
+ {
+  "id": "0af58bdbad",
+  "kind": "separados",
+  "atual": "diferente",
+  "juiz": "mesmo",
+  "a": {
+   "market": "Coop",
+   "name": "Cappuccino Solúvel Melitta Chocolate e Avelã 200g",
+   "price": 13.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/229341/7896348300840.jpg?v=638074202912300000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Cappuccino Solúvel Chocolate Melitta Lata 200g",
+   "price": 19.99,
+   "image": "https://edge.osuper.com.br/tcYP2bg3STYySAqo4eW5Njg9vBo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895add18e55830f205/256902-3b85cf51.webp"
+  }
+ },
+ {
+  "id": "97a91d33a4",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Nagumo",
+   "name": "Café Solúvel Granulado Descafeinado Melitta 40G",
+   "price": 12.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250236.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Solúvel Melitta Descafeinado Sachet 40g",
+   "price": 13.99,
+   "image": "https://edge.osuper.com.br/Y5CMrULMABHGq-z7CKUW-A8xjl4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108a5cd41be55f3bfa0d/306902-b79a97a6.webp"
+  }
+ },
+ {
+  "id": "8eeabf9844",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Coop",
+   "name": "Salsicha Sadia Hot Dog 500g",
+   "price": 15.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/215474/7893000135529.jpg?v=637919528029630000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Salsicha Tradicional Sadia 500G",
+   "price": 14.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/276757.webp"
+  }
+ },
+ {
+  "id": "61ad053b91",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Atacadão",
+   "name": "Chiclete Fini Salada de Frutas 80g",
+   "price": 6.35,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2251404/g.jpg.jpg?v=639288018836600000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Chiclete Fini Salada de Frutas Azedinha 80g",
+   "price": 7.99,
+   "image": "https://edge.osuper.com.br/lNgP8KQLAB1X-6oSv-5w-Vw1M8U=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8b5fd51fec5a32fd04/384165-9ac184e9.jpg"
+  }
+ },
+ {
+  "id": "488a13532b",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Atacadão",
+   "name": "Nuggets de Frango Sadia Tradicional 300g",
+   "price": 10.8,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2240343/g.jpg.jpg?v=639287938528400000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Empanado de Frango Nuggets Crocante Sadia 300g",
+   "price": 10.99,
+   "image": "https://edge.osuper.com.br/52XODXL352sYlZSQWt8f3u3GYU4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc11e15630fc05/32898-154a5dc7.jpg"
+  }
+ },
+ {
+  "id": "995ee6f7d7",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Nagumo",
+   "name": "Torrada Integral Lev Magic Toast Marilan 110G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/257196.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Torrada Marilan Lev Magic Toast Light 110g",
+   "price": 7.49,
+   "image": "https://edge.osuper.com.br/eS2pYhd-Hl2cJYOhg-SqptGEL8Q=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958df1fe65631fd02/308980-b7637b7d.webp"
+  }
+ },
+ {
+  "id": "81232c7553",
+  "kind": "separados",
+  "atual": "mesmo",
+  "juiz": "diferente",
+  "a": {
+   "market": "Nagumo",
+   "name": "Limpador Perfumado Festa Das Flores Mar De Flores Ajax 500Ml",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/258247.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Limpador Perfumado Ajax Flores Do Campo Frasco 500ml",
+   "price": 6.59,
+   "image": "https://edge.osuper.com.br/elY7GasPmFnodPgc8j-MRYzYuYY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28417895ad819e75835fb01/298654-97d04e64.webp"
+  }
+ }
+]
