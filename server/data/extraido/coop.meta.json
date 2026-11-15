@@ -1,18 +1,18 @@
 {
-  "startedAt": "2026-11-14T15:37:23.091Z",
-  "finishedAt": "2026-11-14T15:41:41.683Z",
+  "startedAt": "2026-11-15T16:13:00.989Z",
+  "finishedAt": "2026-11-15T16:17:57.064Z",
   "requests": 133,
-  "rawProducts": 6102,
-  "kept": 4250,
-  "unavailableOrNoPrice": 1852,
+  "rawProducts": 6101,
+  "kept": 4233,
+  "unavailableOrNoPrice": 1868,
   "byCategory": {
-    "alimenticios": 3288,
-    "higiene": 496,
-    "limpeza": 466
+    "alimenticios": 3282,
+    "higiene": 486,
+    "limpeza": 465
   },
-  "withImage": 4250,
+  "withImage": 4233,
   "withValidity": 0,
-  "onPromo": 483,
+  "onPromo": 482,
   "stopped": null,
   "storeScope": "Coop Supermercado Barão de Mauá (preços da loja, via regionId do site)"
 }
