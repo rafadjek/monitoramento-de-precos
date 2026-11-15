@@ -165,7 +165,7 @@ function Comparador() {
           <Logo />
           <CityPicker available={cityList} selected={cities} onChange={setCities} className="ml-1 hidden w-56 sm:block" />
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
-            <a href="#ofertas" className="flex flex-col items-center px-2 text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
+            <a href="#ofertas" className="hidden flex-col items-center px-2 sm:flex text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
             <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
               <Icon name="heart" className="h-6 w-6" fill={onlyFavs} />Favoritos
             </button>

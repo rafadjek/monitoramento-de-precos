@@ -66,8 +66,8 @@ function HeroTag() {
 
 function Stat({ big, small }: { big: string; small: string }) {
   return (
-    <div className="border-l-4 border-gold pl-3">
-      <div className="num font-display text-4xl font-extrabold italic leading-none text-neon sm:text-5xl">{big}</div>
+    <div className="min-w-0 border-l-4 border-gold pl-3">
+      <div className="num font-display text-3xl font-extrabold italic leading-none text-neon sm:text-5xl">{big}</div>
       <div className="mt-1 text-sm text-ink/85">{small}</div>
     </div>
   );
@@ -166,7 +166,7 @@ export default function SuaCidade() {
         {stats && (
           <section aria-label="Números do comparador de Mauá e Ribeirão Pires" className="border-b border-edge bg-panel/90">
             <div className="mx-auto max-w-6xl px-4 py-5">
-              <div className="grid grid-cols-2 gap-x-4 gap-y-4 lg:grid-cols-4">
+              <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-x-4 gap-y-4 lg:grid-cols-4">
                 <Stat big={stats.markets.toLocaleString('pt-BR')} small="mercados com preços no site" />
                 <Stat big={stats.products.toLocaleString('pt-BR')} small="preços coletados" />
                 <Stat big={stats.groups.toLocaleString('pt-BR')} small="produtos comparados entre mercados" />
