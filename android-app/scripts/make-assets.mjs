@@ -7,21 +7,27 @@ const root = path.resolve(here, '../..');
 const sharp = createRequire(path.join(root, 'server/package.json'))('sharp'); // sharp ja vem com o @capacitor/assets; este e reserva
 const pub = path.join(root, 'app/public');
 const out = path.resolve(here, '../assets');
-const ICON_BG = '#0E1B2E'; // cor do fundo do proprio icone (app-512.png), para a borda nao aparecer
-const NIGHT = '#060B1A';
 
-// o app-512.png tem uma moldura escura em volta do desenho: recorta so o quadrado do desenho
-const mark = await sharp(path.join(pub, 'app-512.png')).extract({ left: 68, top: 68, width: 376, height: 376 }).png().toBuffer();
-const fg = await sharp(mark).resize(660, 660).png().toBuffer(); // dentro da zona segura (66%) do icone adaptativo
-await sharp({ create: { width: 1024, height: 1024, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
-  .composite([{ input: fg, left: 182, top: 182 }]).png().toFile(path.join(out, 'icon-foreground.png'));
-await sharp({ create: { width: 1024, height: 1024, channels: 3, background: ICON_BG } }).png().toFile(path.join(out, 'icon-background.png'));
-await sharp({ create: { width: 1024, height: 1024, channels: 3, background: ICON_BG } })
-  .composite([{ input: await sharp(mark).resize(820, 820).png().toBuffer(), left: 102, top: 102 }]).png().toFile(path.join(out, 'icon-only.png'));
-// abertura: logo largo no centro, fundo azul-noite
-const logo = await sharp(path.join(pub, 'logo-carrinhos.webp')).resize({ width: 1500 }).png().toBuffer();
-for (const name of ['splash.png']) {
-  await sharp({ create: { width: 2732, height: 2732, channels: 3, background: NIGHT } })
-    .composite([{ input: logo, gravity: 'center' }]).png().toFile(path.join(out, name));
+const NIGHT = '#060B1A'; // fundo do icone, da abertura e do PWA
+// logo novo (carrinhos sem fundo, 1834x933): sempre inteiro, centralizado, sobre o fundo azul-noite
+const logoSrc = path.join(pub, 'logo-carrinhos.webp');
+const logoAt = (w) => sharp(logoSrc).resize({ width: w }).png().toBuffer();
+const bg = (size) => sharp({ create: { width: size, height: size, channels: 4, background: NIGHT } });
+const clear = (size) => sharp({ create: { width: size, height: size, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } });
+const centered = async (base, size, logoW) => {
+  const input = await logoAt(logoW);
+  const h = (await sharp(input).metadata()).height;
+  return base.composite([{ input, left: Math.round((size - logoW) / 2), top: Math.round((size - h) / 2) }]).png();
+};
+
+// icone adaptativo: primeiro plano transparente com o logo dentro da zona segura (66% da largura), fundo liso
+await (await centered(clear(1024), 1024, 660)).toFile(path.join(out, 'icon-foreground.png'));
+await bg(1024).png().toFile(path.join(out, 'icon-background.png'));
+await (await centered(bg(1024), 1024, 820)).toFile(path.join(out, 'icon-only.png'));
+// abertura: logo no centro, fundo azul-noite
+await (await centered(bg(2732), 2732, 1500)).toFile(path.join(out, 'splash.png'));
+// PWA / site (manifest, favicon, apple-touch): mesmo logo; 70% da largura cabe na zona segura "maskable" (80%)
+for (const [name, size] of [['app-512.png', 512], ['app-192.png', 192], ['icone.png', 192]]) {
+  await (await centered(bg(size), size, Math.round(size * 0.7))).toFile(path.join(pub, name));
 }
 console.log('assets prontos em', out);

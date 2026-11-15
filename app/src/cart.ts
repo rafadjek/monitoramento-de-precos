@@ -100,14 +100,18 @@ export function decodeCart(s: string | null): CartItem[] {
 // Plano de compra: onde comprar cada item. Usa a divisão em 2 mercados se ela sair mais barata
 // que o melhor mercado sozinho (ou se nenhum mercado tiver a lista inteira). Item fixo fica onde foi escolhido.
 export type PlanLine = { key: string; g: string; qty: number; market: string; unit: number; total: number; pinned: boolean };
-export function buildPlan(groups: Map<string, Group>, cart: CartItem[], markets: string[]): { lines: PlanLine[]; total: number; split: boolean } | null {
+// allowSplit=false (app): sem divisão em 2 mercados; sem mercado com a lista inteira, cada item vai ao mais barato que o tem.
+export function buildPlan(groups: Map<string, Group>, cart: CartItem[], markets: string[], allowSplit = true): { lines: PlanLine[]; total: number; split: boolean } | null {
   const rank = rankMarkets(groups, cart, markets);
   const single = rank.find((r) => r.missing.length === 0);
-  const pair = bestPair(groups, cart, markets);
+  const pair = allowSplit ? bestPair(groups, cart, markets) : null;
   const usePair = pair && (!single || pair.total < single.total - 0.009);
-  if (!usePair && !single) return null;
-  const lines: PlanLine[] = cart.map((c) => {
-    const market = c.m ?? (usePair ? pair!.picks.find((p) => p.key === keyOf(c))!.market : single!.market);
+  if (!usePair && !single && allowSplit) return null;
+  const cheapest = (g: Group) => markets.map((m) => ({ m, p: priceIn(g, m) })).filter((x) => x.p).sort((x, y) => x.p!.cost - y.p!.cost)[0]?.m;
+  const usable = (!usePair && !single) ? cart.filter((c) => c.m || (groups.get(c.g) && cheapest(groups.get(c.g)!))) : cart;
+  if (!usable.length) return null;
+  const lines: PlanLine[] = usable.map((c) => {
+    const market = c.m ?? (!usePair && !single ? cheapest(groups.get(c.g)!)! : usePair ? pair!.picks.find((p) => p.key === keyOf(c))!.market : single!.market);
     const g = groups.get(c.g)!;
     const unitCost = (c.m ? pinnedPrice(g, market) : priceIn(g, market))!.cost;
     return { key: keyOf(c), g: c.g, qty: c.qty, market, unit: unitCost, total: Math.round(unitCost * c.qty * 100) / 100, pinned: !!c.m };

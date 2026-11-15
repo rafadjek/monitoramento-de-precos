@@ -11,7 +11,7 @@ import { CityAdBanner, CityAdCard } from './components/CityAd';
 import { CityPicker } from './components/CityPicker';
 import { Logo } from './components/Logo';
 import { ScrollRow } from './components/ScrollRow';
-import { DATA_BASE, useFromCache } from './native';
+import { DATA_BASE, isApp, useFromCache } from './native';
 import { effectiveCities, marketInCities, migrateCities, serializeCities, type Sel } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
@@ -73,7 +73,8 @@ function Comparador() {
   });
   const setCart = (c: CartItem[]) => { setCartState(c); save('bate-lista', c); };
   // no celular o carrinho abre por toque (no computador fica sempre aberto); lista recebida por link já chega aberta
-  const [cartOpen, setCartOpen] = useState(() => !!params.get('lista'));
+  // no app o carrinho já chega aberto quando a lista tem itens
+  const [cartOpen, setCartOpen] = useState(() => !!params.get('lista') || (isApp() && load<CartItem[]>('bate-lista', []).length > 0));
   useEffect(() => {
     if (params.get('lista')) { save('bate-lista', cart); history.replaceState(null, '', location.pathname + location.hash); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -84,9 +85,10 @@ function Comparador() {
     } catch { /* sem armazenamento */ }
   }, [rawCities]);
 
-  useEffect(() => {
-    setStatus('loading');
-    (async () => {
+  // silent: recarga em segundo plano (volta da internet no app): sem tela de carregando e sem mostrar erro
+  const loadData = async (silent: boolean) => {
+    if (!silent) setStatus('loading');
+    {
       try {
         const idx = await (await fetch(`${DATA_BASE}data/index.json`)).json();
         const parts = await Promise.all(
@@ -104,10 +106,28 @@ function Comparador() {
         setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
         setStatus('ok');
       } catch {
-        setStatus('error');
+        if (!silent) setStatus('error');
       }
-    })();
-  }, [attempt]);
+    }
+  };
+  useEffect(() => { void loadData(false); }, [attempt]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // so no app: com o aviso "sem internet" na tela, recarrega quando a rede volta e tenta de novo a cada ~20 s
+  const refreshing = useRef(false);
+  const loadRef = useRef(loadData); loadRef.current = loadData;
+  useEffect(() => {
+    if (!isApp() || !offline) return;
+    const refresh = () => {
+      if (refreshing.current) return;
+      refreshing.current = true;
+      void loadRef.current(true).finally(() => { refreshing.current = false; });
+    };
+    const onVisible = () => { if (document.visibilityState === 'visible') refresh(); };
+    const t = setInterval(refresh, 20000);
+    window.addEventListener('online', refresh);
+    document.addEventListener('visibilitychange', onVisible);
+    return () => { clearInterval(t); window.removeEventListener('online', refresh); document.removeEventListener('visibilitychange', onVisible); };
+  }, [offline]);
 
   useEffect(() => setShown(PAGE), [dq, category, market, rawCities, sort, onlyFavs]);
   const cityList = useMemo(() => [...new Set(markets.flatMap((m) => m.cities ?? []))].filter((c) => c === 'Mauá' || c === 'Ribeirão Pires').sort((a, b) => a.localeCompare(b, 'pt-BR')), [markets]);
@@ -153,22 +173,24 @@ function Comparador() {
     const k = keyOf(item);
     setCart(cart.some((c) => keyOf(c) === k) ? cart.map((c) => (keyOf(c) === k ? { ...c, qty: Math.min(99, c.qty + 1) } : c)) : [...cart, item]);
     if (m) setSelected((s) => { const n = { ...s }; delete n[g]; return n; });
+    if (isApp()) setCartOpen(true); // no app o carrinho abre ao adicionar, mostrando o ranking
   };
   const inCart = useMemo(() => new Set(cart.map((c) => c.g)), [cart]);
   const clear = () => { setQ(''); setCategory(''); setMarket(''); setOnlyFavs(false); };
+  const app = isApp();
   const updated = generatedAt ? new Date(generatedAt).toLocaleDateString('pt-BR') : '';
 
   return (
     <div className="min-h-screen" style={{ background: `linear-gradient(180deg, rgba(6,11,26,.2) 0, rgba(6,11,26,.75) 300px, #060b1a 560px), url(${BASE}fundo.webp) top center / max(1500px, 100%) auto no-repeat, #060b1a` }}>
       <header className="sticky top-0 z-30 border-b border-edge/80 bg-night/95">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
-          <Logo />
+          <Logo compact={app} />
           <CityPicker available={cityList} selected={cities} onChange={setCities} className="ml-1 hidden w-56 sm:block" />
           <nav className="ml-auto flex items-center gap-1 sm:gap-3">
-            <a href="#ofertas" className="hidden flex-col items-center px-2 sm:flex text-xs text-muted hover:text-ink"><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
-            <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
+            <a href="#ofertas" className={`${app ? 'flex' : 'hidden sm:flex'} flex-col items-center px-2 text-xs text-muted hover:text-ink`}><Icon name="flame" className="h-6 w-6 text-fire" fill />Ofertas</a>
+            {!app && <button onClick={() => setOnlyFavs(!onlyFavs)} aria-pressed={onlyFavs} className={`flex flex-col items-center px-2 text-xs ${onlyFavs ? 'text-signal' : 'text-muted hover:text-ink'}`}>
               <Icon name="heart" className="h-6 w-6" fill={onlyFavs} />Favoritos
-            </button>
+            </button>}
             <a href="#carrinho" onClick={() => setCartOpen(true)} className="relative flex items-center gap-2 rounded-xl border border-sky/70 px-3 py-2 font-bold shadow-sky hover:bg-sky/10">
               <Icon name="cart" className="h-5 w-5 text-sky" /><span className="hidden sm:inline">Minha lista</span>
               {cart.length > 0 && <span className="grid h-5 min-w-5 place-items-center rounded-full bg-neon px-1 text-[0.7rem] font-bold text-night">{cart.length}</span>}
@@ -178,7 +200,8 @@ function Comparador() {
       </header>
 
       <section className="mx-auto max-w-[1400px] px-4 pb-4 pt-4 sm:pt-6">
-        <div className="flex items-start gap-3">
+        {app && <h1 id="comparador-h1" tabIndex={-1} className="sr-only">Bate Ofertas</h1>}
+        {!app && <div className="flex items-start gap-3">
           <Icon name="bolt" className="mt-1 h-9 w-9 shrink-0 text-fire drop-shadow-[0_0_12px_rgba(255,138,30,.8)] sm:h-12 sm:w-12" fill />
           <div>
             <h1 id="comparador-h1" tabIndex={-1} className="outline-none font-display text-[2rem] font-extrabold italic uppercase leading-[0.9] tracking-tight sm:text-5xl">
@@ -188,7 +211,7 @@ function Comparador() {
               Todos supermercados num duelo pelo menor preço: e quem ganha é você!{updated && ` Atualizado em ${updated}.`}
             </p>
           </div>
-        </div>
+        </div>}
         {offline && status === 'ok' && (
           <p role="status" className="mt-3 rounded-lg border border-edge bg-panel2/70 px-3 py-1.5 text-xs text-muted">
             Sem internet: mostrando os dados salvos{updated && <> de <b className="text-ink">{updated}</b></>}.

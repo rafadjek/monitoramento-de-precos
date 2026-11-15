@@ -13,6 +13,9 @@ const bridge = (): Bridge | undefined => (window as unknown as { Capacitor?: Bri
 /** true so dentro do app Android */
 export const isNative = (): boolean => { try { return !!bridge()?.isNativePlatform?.(); } catch { return false; } };
 
+/** true so dentro do app Android (na web, tudo continua como esta) */
+export const isApp = isNative;
+
 const SITE = 'https://bate-ofertas.pages.dev/';
 const BUILD_DATA_URL = (import.meta.env.VITE_DATA_URL as string | undefined) || '';
 /** de onde sai data/ e img/: no app, o endereco publico do site; na web, o proprio site (caminho relativo) */

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { bestPair, buildPlan, encodeCart, keyOf, rankMarkets, shareText, type CartItem } from '../cart';
 import { brl, type Group } from '../lib';
 import { Icon, MarketLogo } from './Parts';
-import { isNative, nativeShare } from '../native';
+import { isApp, isNative, nativeShare } from '../native';
 import { Star, conditionText } from './ProductList';
 
 // open/onToggle: no celular o painel fica no topo, fechado num resumo de uma linha; no computador fica sempre aberto
@@ -14,10 +14,10 @@ export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Pr
   const key = items.map((c) => keyOf(c) + c.qty).join();
   const rank = useMemo(() => rankMarkets(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
   const pair = useMemo(() => bestPair(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
-  const plan = useMemo(() => buildPlan(groups, items, markets), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
+  const plan = useMemo(() => buildPlan(groups, items, markets, !isApp()), [groups, key, markets]); // eslint-disable-line react-hooks/exhaustive-deps
   const best = rank.find((r) => r.missing.length === 0);
   const pairGain = best && pair ? best.total - pair.total : 0;
-  const showPair = pair && (!best || pairGain > 0.009);
+  const showPair = !isApp() && pair && (!best || pairGain > 0.009);
   const setQty = (k: string, q: number) => setCart(q <= 0 ? cart.filter((c) => keyOf(c) !== k) : cart.map((c) => (keyOf(c) === k ? { ...c, qty: Math.min(99, q) } : c)));
   const name = (g: string) => groups.get(g)?.name ?? '';
 

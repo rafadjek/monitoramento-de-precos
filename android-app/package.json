@@ -7,7 +7,7 @@
   "scripts": {
     "build:site": "node scripts/build-site.mjs",
     "sync": "npm run build:site && cap sync android",
-    "icons": "node scripts/make-assets.mjs && capacitor-assets generate --android --iconBackgroundColor #0E1B2E --splashBackgroundColor #060B1A"
+    "icons": "node scripts/make-assets.mjs && capacitor-assets generate --android --iconBackgroundColor #060B1A --splashBackgroundColor #060B1A"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.2",
