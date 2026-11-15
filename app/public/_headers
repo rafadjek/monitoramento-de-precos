@@ -1,0 +1,7 @@
+# Dados e miniaturas publicos: o app Android (https://localhost) le daqui.
+/data/*
+  Access-Control-Allow-Origin: *
+/img/*
+  Access-Control-Allow-Origin: *
+/logos/*
+  Access-Control-Allow-Origin: *

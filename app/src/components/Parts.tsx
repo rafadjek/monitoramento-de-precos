@@ -1,7 +1,9 @@
 import { brl, brlParts, validity, type Indexed } from '../lib';
+import { DATA_BASE } from '../native';
 
 const BASE = import.meta.env.BASE_URL;
-export const imgSrc = (u: string) => (u.startsWith('http') ? u : BASE + u);
+// miniaturas de produto (img/) vem de onde vem data/ (no app, da internet); logos e icones ficam no proprio site/app
+export const imgSrc = (u: string) => (u.startsWith('http') ? u : (u.startsWith('img/') ? DATA_BASE : BASE) + u);
 
 export function Price({ value, size = 'md', className = '' }: { value: number; size?: 'sm' | 'md' | 'lg'; className?: string }) {
   const { int, cents } = brlParts(value);

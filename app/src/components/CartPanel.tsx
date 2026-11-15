@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
-import { bestPair, buildPlan, keyOf, rankMarkets, shareText, type CartItem } from '../cart';
+import { bestPair, buildPlan, encodeCart, keyOf, rankMarkets, shareText, type CartItem } from '../cart';
 import { brl, type Group } from '../lib';
 import { Icon, MarketLogo } from './Parts';
+import { isNative, nativeShare } from '../native';
 import { Star, conditionText } from './ProductList';
 
 // open/onToggle: no celular o painel fica no topo, fechado num resumo de uma linha; no computador fica sempre aberto
@@ -25,6 +26,8 @@ export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Pr
   const share = async () => {
     if (!plan) return;
     const text = shareText(plan, name);
+    // dentro do app: menu nativo de compartilhar, com o link da lista (abre no site com a mesma lista)
+    if (await nativeShare({ title: 'Minha lista de compras', text, url: `https://bate-ofertas.pages.dev/?lista=${encodeCart(items)}` })) return;
     window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(text), '_blank', 'noopener');
     try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 3000); } catch { /* sem permissão */ }
   };
@@ -130,7 +133,7 @@ export function CartPanel({ cart, setCart, groups, markets, open, onToggle }: Pr
 
           <div className="mt-4 grid grid-cols-[1fr_auto] gap-2">
             <button onClick={share} disabled={!plan} className="inline-flex items-center justify-center gap-2 rounded-xl bg-neon px-3 py-2.5 font-bold text-night hover:brightness-110 disabled:opacity-50">
-              <Icon name="share" className="h-4 w-4" />{copied ? 'Abrindo o WhatsApp…' : 'Mandar no WhatsApp'}
+              <Icon name="share" className="h-4 w-4" />{copied ? 'Abrindo o WhatsApp…' : isNative() ? 'Compartilhar a lista' : 'Mandar no WhatsApp'}
             </button>
             <button onClick={() => setCart([])} className="rounded-xl border border-edge px-3 py-2.5 text-sm font-bold text-muted hover:text-ink">Limpar</button>
           </div>

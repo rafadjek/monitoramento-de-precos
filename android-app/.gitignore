@@ -1,0 +1,19 @@
+node_modules
+android/build
+android/app/build
+android/.gradle
+android/.idea
+android/captures
+android/local.properties
+saida/
+chaves/
+www/
+*.apk
+*.aab
+*.jks
+*.keystore
+local.properties
+
+# chave de assinatura (nunca no Git)
+keystore.properties
+*.p12

@@ -1,0 +1,26 @@
+{
+  "name": "bate-ofertas-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Empacota o site do Bate Ofertas como app Android (Capacitor). Pasta propria: nao mexe no app/package.json.",
+  "type": "module",
+  "scripts": {
+    "build:site": "node scripts/build-site.mjs",
+    "sync": "npm run build:site && cap sync android",
+    "icons": "node scripts/make-assets.mjs && capacitor-assets generate --android --iconBackgroundColor #0E1B2E --splashBackgroundColor #060B1A"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/browser": "^8.0.5",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/share": "^8.0.3",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.2",
+    "typescript": "^7.0.2"
+  }
+}

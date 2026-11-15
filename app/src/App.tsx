@@ -11,6 +11,7 @@ import { CityAdBanner, CityAdCard } from './components/CityAd';
 import { CityPicker } from './components/CityPicker';
 import { Logo } from './components/Logo';
 import { ScrollRow } from './components/ScrollRow';
+import { DATA_BASE, useFromCache } from './native';
 import { effectiveCities, marketInCities, migrateCities, serializeCities, type Sel } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
@@ -46,6 +47,7 @@ function Comparador() {
   const [hist, setHist] = useState<HistMeta | null>(null);
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading');
   const [attempt, setAttempt] = useState(0);
+  const offline = useFromCache(); // so no app: precos vindos da copia guardada no aparelho
 
   const params = new URLSearchParams(location.search);
   const [q, setQ] = useState(() => params.get('q') ?? '');
@@ -86,10 +88,10 @@ function Comparador() {
     setStatus('loading');
     (async () => {
       try {
-        const idx = await (await fetch(`${BASE}data/index.json`)).json();
+        const idx = await (await fetch(`${DATA_BASE}data/index.json`)).json();
         const parts = await Promise.all(
           idx.markets.map(async (m: MarketInfo) => {
-            const r = await fetch(`${BASE}data/${m.file}`);
+            const r = await fetch(`${DATA_BASE}data/${m.file}`);
             if (!r.ok) throw new Error(m.name);
             return (await r.json()) as Offer[];
           }),
@@ -187,6 +189,11 @@ function Comparador() {
             </p>
           </div>
         </div>
+        {offline && status === 'ok' && (
+          <p role="status" className="mt-3 rounded-lg border border-edge bg-panel2/70 px-3 py-1.5 text-xs text-muted">
+            Sem internet: mostrando os dados salvos{updated && <> de <b className="text-ink">{updated}</b></>}.
+          </p>
+        )}
         <CityPicker available={cityList} selected={cities} onChange={setCities} className="mt-4 sm:hidden" />
       </section>
 
@@ -266,7 +273,7 @@ function Comparador() {
               </div>
             )}
             {status === 'ok' && !none && list.length > 0 && (
-              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} hist={hist} base={BASE} />
+              <ProductList groups={list.slice(0, shown)} only={market} favs={favs} onFav={toggleFav} inCart={inCart} onAdd={add} selected={selected} onSelect={onSelect} hist={hist} base={DATA_BASE} />
             )}
             {status === 'ok' && !none && shown < list.length && (
               <button onClick={() => setShown((s) => s + PAGE)} className="w-full rounded-xl border border-sky/60 py-3 font-bold text-sky hover:bg-sky/10">

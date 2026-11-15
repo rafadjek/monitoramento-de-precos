@@ -6,6 +6,7 @@ import { activeEvent, AUDIENCES, endLabel, FAQ, PLANS_DATA, shownPrice, STEPS, t
 import { EMAIL, WHATSAPP_TEXT, waLink } from './sua-cidade/contact';
 import { LeadForm } from './sua-cidade/Form';
 
+import { DATA_BASE } from '../native';
 const BASE = import.meta.env.BASE_URL;
 const TITLE = 'Leve o Bate Ofertas para a sua cidade';
 const DESC = 'Seu próprio comparador de preços de supermercado, com a sua marca e os mercados da sua cidade. Prazo estimado a partir de 2 semanas.';
@@ -128,7 +129,7 @@ export default function SuaCidade() {
     };
   }, []);
   useEffect(() => { document.getElementById('venda-h1')?.focus({ preventScroll: true }); }, []);
-  useEffect(() => { let on = true; loadStats(BASE).then((s) => on && setStats(s)); return () => { on = false; }; }, []);
+  useEffect(() => { let on = true; loadStats(DATA_BASE).then((s) => on && setStats(s)); return () => { on = false; }; }, []);
 
   const heroWa = ev ? `Olá! Quero saber como levar o Bate Ofertas para a minha cidade. Vi a oferta ${ev.nome} (até ${endLabel(ev)}).` : undefined;
 
