@@ -3,39 +3,39 @@
  "log": [
   {
    "path": "catalogo",
-   "total": 1212,
-   "got": 1212,
+   "total": 1235,
+   "got": 1235,
    "note": "",
    "label": "Super Ofertas"
   },
   {
    "path": "mercearia",
-   "total": 2160,
-   "got": 2280,
-   "note": "lista acima de 2000: final lido em ordem inversa (160 itens esperados fora da 1ª leitura)"
+   "total": 2185,
+   "got": 2320,
+   "note": "lista acima de 2000: final lido em ordem inversa (185 itens esperados fora da 1ª leitura)"
   },
   {
    "path": "padaria-e-matinais",
-   "total": 319,
-   "got": 319,
+   "total": 335,
+   "got": 335,
    "note": ""
   },
   {
    "path": "bebidas",
-   "total": 663,
-   "got": 663,
+   "total": 676,
+   "got": 676,
    "note": ""
   },
   {
    "path": "frios-e-congelados",
-   "total": 1082,
-   "got": 1082,
+   "total": 1042,
+   "got": 1042,
    "note": ""
   },
   {
    "path": "carnes-aves-e-peixes",
-   "total": 398,
-   "got": 398,
+   "total": 320,
+   "got": 320,
    "note": ""
   },
   {
@@ -52,25 +52,25 @@
   },
   {
    "path": "higiene-e-perfumaria",
-   "total": 1232,
-   "got": 1232,
+   "total": 1215,
+   "got": 1215,
    "note": ""
   },
   {
    "path": "limpeza",
-   "total": 673,
-   "got": 673,
+   "total": 668,
+   "got": 668,
    "note": ""
   },
   {
    "path": "ean",
-   "found": 6732,
-   "missing": 6732,
-   "requests": 135,
+   "found": 6646,
+   "missing": 6646,
+   "requests": 133,
    "stop": null
   }
  ],
- "requests": 215,
+ "requests": 214,
  "blocked": null,
- "seconds": 808
+ "seconds": 693
 }
