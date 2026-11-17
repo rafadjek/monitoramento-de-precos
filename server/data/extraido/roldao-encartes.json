@@ -1,6 +1,22 @@
 [
   {
     "market": "Roldão",
+    "offerId": "5109-16.11-18.11",
+    "validFrom": null,
+    "validUntil": "2026-11-19T02:59:59.000Z",
+    "validityNote": "Hortifruti (REDE): 16.11 a 18.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Hortifruti (REDE)\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-16-A-18-11-2026-2-1.pdf"
+    ],
+    "collectedAt": "2026-11-17T16:52:48.683Z"
+  },
+  {
+    "market": "Roldão",
     "offerId": "5105-16.11-22.11",
     "validFrom": null,
     "validUntil": "2026-11-23T02:59:59.000Z",
@@ -13,6 +29,6 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-LANCHONETE-16-A-22-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-16T20:28:43.289Z"
+    "collectedAt": "2026-11-17T16:52:48.683Z"
   }
 ]
