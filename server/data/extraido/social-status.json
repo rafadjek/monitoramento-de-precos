@@ -1,5 +1,5 @@
 {
- "em": "2026-11-17T16:52:51.796Z",
+ "em": "2026-11-17T19:24:55.978Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,15 +19,12 @@
   {
    "net": "fb",
    "name": "scrapecreators",
-   "posts": 6
+   "posts": 4
   },
   {
    "teste": "socialcrawl",
    "net": "ig",
-   "exemploData": null,
-   "posts": 27,
-   "recentes": 0,
-   "comImagem": 27
+   "erro": "HTTP 402 {\"success\":false,\"error\":{\"type\":\"INSUFFICIENT_CREDITS\",\"message\":\"Your account has 0 credits remaining. This endpoint requires 1 credits (under 1p at the Growt"
   }
  ]
 }

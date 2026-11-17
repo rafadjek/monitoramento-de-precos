@@ -1,7 +1,7 @@
 [
   {
     "market": "Baronesa",
-    "offerId": "encarte-2026-11-15",
+    "offerId": "encarte-2026-11-17",
     "validFrom": null,
     "validUntil": null,
     "validityNote": "ofertas do encarte, enquanto durarem os estoques",
@@ -11,19 +11,14 @@
     "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
     "referer": "https://baronesasupermercados.com.br/encarte/",
     "images": [
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004870227.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879428.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004879650.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004880866.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004884338.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888236.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888259.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888266.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888702.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888703.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888704.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004888706.jpg"
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902014.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902638.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902639.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902640.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902641.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902642.jpg"
     ],
-    "collectedAt": "2026-11-15T17:29:13.606Z"
+    "collectedAt": "2026-11-17T19:24:50.478Z"
   }
 ]

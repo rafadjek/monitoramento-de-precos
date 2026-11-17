@@ -1,26 +1,26 @@
 {
-  "startedAt": "2026-11-16T19:02:01.218Z",
-  "finishedAt": "2026-11-16T19:03:22.891Z",
-  "total": 3268,
+  "startedAt": "2026-11-17T17:58:50.873Z",
+  "finishedAt": "2026-11-17T18:00:12.024Z",
+  "total": 3274,
   "perDept": {
-    "Biscoitos e chocolates": 426,
-    "Bebidas": 417,
-    "Mercearia": 361,
+    "Biscoitos e chocolates": 422,
+    "Bebidas": 423,
+    "Mercearia": 360,
     "Cereais e farinaceos": 105,
     "Padaria": 90,
     "Carnes": 111,
     "Hortifruti": 77,
-    "Matinais e sobremesas": 281,
-    "Frios e laticinios": 330,
+    "Matinais e sobremesas": 285,
+    "Frios e laticinios": 333,
     "Congelados": 102,
     "Perfumaria e higiene": 596,
-    "Limpeza": 372
+    "Limpeza": 370
   },
   "skippedDepartments": [
     "Bazar e utilidades",
     "Pet"
   ],
-  "unavailable": 628,
+  "unavailable": 625,
   "discarded": 0,
   "requests": 50,
   "storeScope": "Spani Mauá 1 - Av. Barão de Mauá, 2005, Jardim Nóbrega, Mauá/SP, CEP 09340440 (retirada na loja; centro de distribuição 17, selecionado como o site faz ao escolher a loja)",
