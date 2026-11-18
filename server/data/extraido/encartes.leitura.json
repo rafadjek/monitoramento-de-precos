@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-18T17:15:23.827Z",
+ "startedAt": "2026-11-18T19:51:50.703Z",
  "pages": [
   {
    "market": "Assaí",
@@ -119,7 +119,7 @@
    "offerId": "encarte-2026-11-17",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 4,
    "model": "gemini-flash-lite-latest"
   },
@@ -182,14 +182,14 @@
    "offerId": "tabloide-23112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-17112026-23112026.jpg",
    "ok": false,
-   "error": "gemini: limite de uso atingido (gemini-3.5-flash-lite 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\", \"statu) | reserva: The operation was aborted due to timeout"
+   "error": "gemini: limite de uso atingido (gemini-flash-lite-latest 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\", \"statu) | reserva: The operation was aborted due to timeout"
   },
   {
    "market": "Joanin",
    "offerId": "tabloide-23112026",
    "url": "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-17112026-23112026.jpg",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 60,
    "model": "gemini-3.5-flash-lite"
   },
@@ -197,8 +197,10 @@
    "market": "Roldão",
    "offerId": "5109-16.11-18.11",
    "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-16-A-18-11-2026-2-1.pdf",
-   "ok": false,
-   "error": "gemini: limite de uso atingido (gemini-3.5-flash-lite 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\", \"statu) | reserva: Unexpected end of JSON input"
+   "ok": true,
+   "cached": false,
+   "products": 105,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Roldão",
@@ -212,7 +214,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df2FLQuBVCS",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQzMzI4MDQ1NTYyNjg5OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=X294lI4YPUYQ7kNvwHUICNS&_nc_oc=AdqMHFr6a2Xa_AlOomD68PJ_l68BcL6ZwTD3ODT493SEWhWE5zDklyHVN0ir9YWUVM0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRl801-m36CKQ5_LjgL1f3QhfEd0ehBci7dJA1OT_RK7g&oe=6B03AA2F",
+   "url": "https://scontent-lax3-2.cdninstagram.com/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQzMzI4MDQ1NTYyNjg5OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=X294lI4YPUYQ7kNvwF_PI3o&_nc_oc=AdoOmjDSGxCpvzVsnkxwXjLoyNoLlBQxpTiUmAEgOy7PSnH_JCrvofbnoFyHkIo5kJQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQT1vHO74j3h_squxhRcmZBzqb8jMF7aqOsU5fjfxHZ-3g&oe=6B03E26F",
    "ok": true,
    "cached": true,
    "products": 5,
@@ -221,16 +223,16 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df2Eim6htb6",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/896132695_18578558911075787_5654359264880233893_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQzMDQ4Njc4OTIxNTk5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMzIzNy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_eEmIATdJ8wQ7kNvwFLVZjW&_nc_oc=Adrs8dIrCQIc3jEDp19CVUZxaBeoY51UFZXpADqWpCk6shBuGBZrWaH9MxhMN3kOTz8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ_OFDN1u6uTpUVnQxmen4VSc2zgrcnhQodPn3Ad6UVSg&oe=6B03C2CB",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/896132695_18578558911075787_5654359264880233893_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQzMDQ4Njc4OTIxNTk5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMzIzNy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_eEmIATdJ8wQ7kNvwE9N2Q1&_nc_oc=AdrsrHaNGLXDpDtUYToc4tjf5TSOKWw-TFZgIp4CEJD1S9vxeqAPr44d28MMMInPHmY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTNi5LXQVRXVHsmIx5oCNdPB0s9laK_xs49KvwVjLTY4A&oe=6B03C2CB",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 15,
    "model": "gemini-3.5-flash-lite"
   },
   {
    "market": "Nevada",
    "offerId": "ig-Df0eHrfMsOL",
-   "url": "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/910984199_18578426044075787_6478258562908088781_n.jpg?stp=dst-jpg_e35_q90_s1350x1688_sh2.08_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMTk4MDAzNTUyOTQyNTgwMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM1MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7P4Q-fGWFfIQ7kNvwF_IOxn&_nc_oc=Adrd2Hbqrut7HNueN9g3KPacMyH0IY4-YL3BqVRbJGzQh7o41vh6UzwWK4qMqHImx0Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTZ0d0OvcEe4bpM8C3Ham4mDXmSyU3khLzddcDEZx22UA&oe=6B03B3B7",
+   "url": "https://scontent-lax7-1.cdninstagram.com/v/t39.30808-6/910984199_18578426044075787_6478258562908088781_n.jpg?stp=dst-jpg_e35_q90_s1350x1688_sh2.08_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMTk4MDAzNTUyOTQyNTgwMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM1MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7P4Q-fGWFfIQ7kNvwGlDvZF&_nc_oc=AdpkXDGa2WIiG5KWaOMe93HDAdjz7XwEyrNwgG04QupkADAc439nc1dPUSNgbDrOac4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSTXXX2AjGR7Nle_M68kc5zjhQq3hFsK03S0priGkgc0Q&oe=6B03EBF7",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -239,7 +241,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvlPZ0jGDN",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/909496388_1588850156619268_1490379496552745839_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDYwMzk3Nzc1ODEwNTgwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=cg1_lVsI2BAQ7kNvwEnxcAP&_nc_oc=AdoUc5B9d5Hsf13a3Y1vjMq47hWS9TQnZLTAwwsA8JQ8iITwV5wH-sJS8bprwSLIA8o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQREORvctWi39LwQWQNx97IEtZUu0SbzZj4SJTOudpJhEQ&oe=6B03C206",
+   "url": "https://scontent-lax3-2.cdninstagram.com/v/t39.30808-6/909496388_1588850156619268_1490379496552745839_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDYwMzk3Nzc1ODEwNTgwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=cg1_lVsI2BAQ7kNvwFQ6LpE&_nc_oc=AdrePi3I6uqr0ereMHk_uEX-rINQg3X2x50vG9NJTqYr6_1UyeQ3r1KyEKxJKGbHjQQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRUljD6cCPqEhFXUoYiVAO9nXrYH2jmjvvlFFiR0jKSDw&oe=6B03C206",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -248,7 +250,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/912268250_1588620643308886_9057307748065958799_n.jpg?stp=c0.0.1079.1326a_dst-jpg_e35_sh2.08_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODY4MjQ0NDE1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jHPSOwLt4BgQ7kNvwFt5QGa&_nc_oc=AdqHi1JMwYZzcTtJTbbvhIEYu17geuhi3qAIUAW4wWYyjboSFsJ2wpgCVtbJ8axfnsU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSc2Jb3yUaRCLrzse76WvyUqbi7R32ZTNylUuFBubkTcQ&oe=6B03B26A",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/912268250_1588620643308886_9057307748065958799_n.jpg?stp=c0.0.1079.1326a_dst-jpg_e35_sh2.08_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODY4MjQ0NDE1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jHPSOwLt4BgQ7kNvwF3XBB_&_nc_oc=AdoaHENKh7Ke1Y3eHqdC0vpDZlEgRoikUxg1H3GmjDI2K3MGyXf_L5_4kZFwcDMBAgM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSJHDtd_TvXNZ8Z4WmzJgPjUM0RX1wfI_k8LyPzrEW6Rg&oe=6B03EAAA",
    "ok": true,
    "cached": true,
    "products": 1,
@@ -257,7 +259,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RtRlSBkSZ2gQ7kNvwH_eyo2&_nc_oc=Adp4TecCfc6G0dF3iAr945CgTc9XMdubGUIbw2G8i5vInFS-uSKO29h3YxDM8SgR-dk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS--2XDpisQMce-aLFYmwuo-kE9vLqCf2i52gk2N-oxRA&oe=6B03C2F1",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/906681961_1588620656642218_4130068365502060897_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDIwOTE3NTk3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RtRlSBkSZ2gQ7kNvwHV5Ebl&_nc_oc=AdpthqrlJA8K1q7NEd6I5tq9PAqdm5gSSQv_xpIOSCmmfYi08mG35jXxtOkkFaqTDQE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQV_BsX90AAU040ltHJtlrK4H2L9DsQozswSSdPWZL8NA&oe=6B03C2F1",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -266,7 +268,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4a817dm3ETYQ7kNvwHimtxP&_nc_oc=AdrhgPKDagMoKK1fQWpjqUMPJSUEKQg8iUBhRPD8rlokoDHCR5Y4tA_qpyiEBuwqtwY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQigH60TlFDV9pVMjF6uBhPHu9S7j9PwjCf2OEdnBbCMQ&oe=6B0399D2",
+   "url": "https://scontent-lax3-2.cdninstagram.com/v/t39.30808-6/907583762_1588620636642220_8928121370990092397_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODU5MDE2OTQxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4a817dm3ETYQ7kNvwFTDt7L&_nc_oc=AdqRv0I0kSkZzc7mTAeiL6yLbDK9CrkiFuWOwsDteL2Myw4Coy-RTd1R01hgC463d-M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ-_LyDKWNEIpfKVIKFjTdhKqX5otJ6DssdvGFp1_XqYQ&oe=6B03D212",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -275,7 +277,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=9pD1w9PF41cQ7kNvwH5hSvy&_nc_oc=AdpU6CneSGWFz5nxYuf-L3w2CQbt3qDvIZ0CYDoR1NSOT0KhqkfTV8K4rkMc91i9F_w&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRXBZKDSPoNrhlOll6VGKsc_jpQvny_ZD73A1fZuNCxPA&oe=6B03A4EE",
+   "url": "https://scontent-lax7-1.cdninstagram.com/v/t39.30808-6/908482348_1588620653308885_1815024963896727277_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODIwNDI5Nzg3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=9pD1w9PF41cQ7kNvwHMbpfI&_nc_oc=AdpSL0mnfVKvVVFZVh_dXVSScAXsTjOPzYXqHDqNltoduwNtqcYoJs2ohiOiElckNjE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTNhQ7uqnHRceucETNWe21L_2gVX4RiEMlxGbeB-ERCFg&oe=6B03DD2E",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -284,7 +286,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pG80h_n6f_IQ7kNvwG7_3rB&_nc_oc=Adqio8Mw_iPrcuSwZVWHqps-Po_wamVB9NO2C-Hy1lM9_mvsKhBkA8O0zGf3PqKsreE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTuAJ-SW2VysyBQYNlc2kUfCJEIJiKySBxXxt4hl0TADg&oe=6B03C39B",
+   "url": "https://scontent-lax7-1.cdninstagram.com/v/t39.30808-6/910171858_1588620639975553_7616331215285187281_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc2MDAxNjE5MjcwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pG80h_n6f_IQ7kNvwGk8r39&_nc_oc=Adokcne89B3-PmADdBszrQXbR99Xlu3I9-JUvfgr-RSjPU_iM64GUbcWh1HtHxosQRU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRdjCHNZTQYCg2cWEtR6lfPfPTSYv7kRMSCYcXg1f8mSw&oe=6B03C39B",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -293,7 +295,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfvDUQMjDy-",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=isVK7KNJJGkQ7kNvwGW1qJi&_nc_oc=AdpiZd18hiQcxTKbnY0bi8vPDCHsOxFmhBVOzZTgfXNCfSO4kUXNEZZhwGCn5hGk3GU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSZZ3tXvesee93hbs7f6Rqx7HoVmShqZcXyuHDm-sohiw&oe=6B03C68C",
+   "url": "https://scontent-lax3-2.cdninstagram.com/v/t39.30808-6/907266434_1588620649975552_1550939332547349902_n.jpg?stp=c0.1.1078.1324a_dst-jpg_e35_sh2.08_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDQ1NDc1ODkzNDA4NDg0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=isVK7KNJJGkQ7kNvwE66oWA&_nc_oc=AdpJ6HShL7aQCymAI2UIjS4htdSEOQiAODbSoVu8quQf8FI7uQ4m38cQbkDaR1dGWjE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQjN3q-jffc1b0rNb7d6i-5C_XNwi_cnQcabdqnF9Vlqw&oe=6B03C68C",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -302,7 +304,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfuhSb_DFgd",
-   "url": "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/910811654_1588359543334996_398833552864444103_n.jpg?stp=c0.0.1080.1349a_dst-jpg_e35_sh2.08_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNTQ4NzkwNjgzOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=S6T5zMIYRdkQ7kNvwFKqv52&_nc_oc=AdpcxBsIAnvirV6OG-rmVqiPoAhme3jUextu86LpgcptKwPD77RKMFZKxTFWG6DwHnI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRwXGEAQQd_oa_V_sCRyPt2157xYTEaND-Rn81c1IQl7A&oe=6B03B326",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/910811654_1588359543334996_398833552864444103_n.jpg?stp=c0.0.1080.1349a_dst-jpg_e35_sh2.08_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNTQ4NzkwNjgzOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=S6T5zMIYRdkQ7kNvwGA8eD4&_nc_oc=Adrt33f48UbPu3p-uEny0gp9U8qklqyXHcItSKnPb347gpRAyUy8t_PFjZlV8hHDUlQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQOEruMOufSBuWlxTqVEEsbhfHT5O-UKZLiyKrJTqxK0g&oe=6B03EB66",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -311,7 +313,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfuhSb_DFgd",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/909496009_1588359546668329_8758679075204500324_n.jpg?stp=c0.0.1121.1402a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNjM3NzEwNzA5MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=wboJvzLdwbAQ7kNvwGrebXP&_nc_oc=AdrNh-7cPHONj6aopNsmyGzRijcKAYTt_Bqsyi6-wNhvwj_lKlSMAp_6jy-dRpOJmXs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS-VSu_TvvW4rd_cFcUkR7U8dl8YmXagU0JDXmAJXdx_Q&oe=6B03B657",
+   "url": "https://scontent-lax7-1.cdninstagram.com/v/t39.30808-6/909496009_1588359546668329_8758679075204500324_n.jpg?stp=c0.0.1121.1402a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDMwNTEwNjM3NzEwNzA5MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=wboJvzLdwbAQ7kNvwHsldmK&_nc_oc=AdpHvRFbQjMNuAiBniecFcTAGNQEo7EuX-sq0YqMEGP0GoTc_OrjP77SbDx5J2tEeco&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSAN-Qz3UMuQMMN8KAGKcup_BDwOpnEOx5j0c7nUrq_Hw&oe=6B03EE97",
    "ok": true,
    "cached": true,
    "products": 6,
@@ -320,7 +322,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfreMrekTI2",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/903914602_1586821963488754_8810430721312426304_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4ODk0MTEzNTQyNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=mWBpxDV351QQ7kNvwErK_Rl&_nc_oc=AdqDP2qcoDN4VV2FJKbzIpIWoIM_c_f6oETGn_6jXM6yd-8KXXlBMpWK-2zH-ac4i5M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRGLTBnbLYe2b8tLjUS7Am4eYnf5LbDbynVgejHsTOCJg&oe=6B03B0AB",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/903914602_1586821963488754_8810430721312426304_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4ODk0MTEzNTQyNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=mWBpxDV351QQ7kNvwG959Ee&_nc_oc=Ado6HuQIVXGbjPmlNsU39y03GUhJHJF2nOCvot1kbbhX2IxbJsEmAVUFpYLvjUpASoQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRLGmQLk6w3W4Rz9kL0Oh9zyT8zA1FM9tTjkg0Vp7StHQ&oe=6B03E8EB",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -329,7 +331,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfreMrekTI2",
-   "url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/895708403_1586821973488753_2331728600214483346_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA4MzczMDc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pLXiNt8peCEQ7kNvwE-Q9Gl&_nc_oc=Adr09kkB6bZ1UD2xJjLgIxHalVk1xAauCvzVdnhmJQ4JuaNG17AZlAfOB88Z784jERU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ-AjfXaCWes4-O-bjFtRVA4_NWNq0ftOO42yXYcXOWjw&oe=6B03BD49",
+   "url": "https://scontent-lax3-2.cdninstagram.com/v/t39.30808-6/895708403_1586821973488753_2331728600214483346_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA4MzczMDc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pLXiNt8peCEQ7kNvwGvstMx&_nc_oc=AdpNZBzOP1wt2BvOiXHd7vJ--JKtKAAaxGS9FZDM-9EXc0ysLtpvZTflO71CbU3zhlw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQnBwH_j3Tbn4aODBWTapKlweXu7VsUhP51pKElhwMtrg&oe=6B03BD49",
    "ok": true,
    "cached": true,
    "products": 2,
@@ -338,7 +340,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfreMrekTI2",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/906579419_1586821976822086_4690818470058127819_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA0MTgzMDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jGahuBOmJN4Q7kNvwFscfnP&_nc_oc=AdrD2UplICjWk2QRpczv2Rd0QF3GranMuVzztcySHK5N8GYaSVwmo9pS5FAtUfdklfI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQz210QfXmRaNXvCbjMqlM5nygDVfPNXhXce2gOenZdPw&oe=6B03A767",
+   "url": "https://scontent-lax7-1.cdninstagram.com/v/t39.30808-6/906579419_1586821976822086_4690818470058127819_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTQ0NzA4OTA0MTgzMDIyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jGahuBOmJN4Q7kNvwHNv-pc&_nc_oc=Adpj1joBEC5qXaj0wuQZag0W6jYeqIPye_x5mIuuQuZCqFk1UCZkxS2atexDjLqqVWI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRF0X2Yq81FPgCeN7VEB-n4mxAPq_V6abirbLKGuoI96Q&oe=6B03DFA7",
    "ok": true,
    "cached": true,
    "products": 2,
@@ -347,16 +349,25 @@
   {
    "market": "Nevada",
    "offerId": "ig-DfpcaTWjGCu",
-   "url": "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/906106142_1585936743577276_5093830805884990887_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODg3NjI5NDQ0NzcxODU3NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=fsLOJanZ_YQQ7kNvwGR6bFv&_nc_oc=AdqgLIZIVoZ_k3kyqSr6V3CnX8ClBJEA5RD0gR1b4a5NYXt8DA9CClxol5lN7dE0tK4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=cmC7XvBtBOQZMTDdrQ8INQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSX4l4j4qT-eDCzO6vWkeI5U6praAEW2BlsRUUA6l1sbg&oe=6B03A050",
+   "url": "https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/906106142_1585936743577276_5093830805884990887_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODg3NjI5NDQ0NzcxODU3NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=fsLOJanZ_YQQ7kNvwEMh5UF&_nc_oc=AdpHPPA8WTJyblB3LAeCRb0zekje8uXU1sIBxtg8e9AUzOSGBUjNXJDlF7MSnjAQ93c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=0vaQf_vQNxdf6tpBSxGGZg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTXTZzfv7GflCLLj85PVO4AEXJisl6xPXt_KlVMj1n2Kg&oe=6B03D890",
    "ok": true,
    "cached": true,
+   "products": 0,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "STUK",
+   "offerId": "ig-Df5BfgcPse3",
+   "url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/912429049_18252437992315091_4055280998874923998_n.webp?_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzI2MTUwNDQ3MDg5NDUxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=RQX3EBEmnvYQ7kNvwGaXoXP&_nc_oc=AdrwumAPzC5ulwc0feaPXRzAogr0q9GKZjCCofDju79u0D7Z-mj3pHufsCZtwfAGuD4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=4jxE7bytPo2RN-Q9fiqAnQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTm1fgMAYR3_EpeHHfr3YhQ85WAT6sUWaybffqZIYhjAw&oe=6B03C220",
+   "ok": true,
+   "cached": false,
    "products": 0,
    "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Lourencini",
    "offerId": "ig-Df0JozjlnyK",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/911925110_1563397415816026_9037730958721482433_n.jpg?stp=dst-jpg_e35_p1080x1080_q90_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMTg4OTk1Mjk1OTAwMzc4Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMjE2MC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=VivSFNbQmYcQ7kNvwGNgEnz&_nc_oc=Adoeyh-_M7BS5Grt68rtX8YskjV-OYkp6Y9I3aLjKsvAOmS-GCevityaADeL_qkZ4gc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQRXJiKaZg22_0KZUKoOpvZBzYqXpGCi7t5qe5QmPXcHTw&oe=6B03C66D",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/911925110_1563397415816026_9037730958721482433_n.jpg?stp=dst-jpg_e35_p1080x1080_q90_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMTg4OTk1Mjk1OTAwMzc4Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMjE2MC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=VivSFNbQmYcQ7kNvwHaZhYA&_nc_oc=Adp8fSnh4xyH6_WPWqZqItewlZ3Lv4C1PSSvoJg_c9HZ1rNnuD4PyThkGKi1mZAPzGA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQTd6Ox47rN0xL6MiWUD8I4i2wyiqzZSnqG7g8vX5zO4mA&oe=6B03C66D",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -365,7 +376,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dft8P-hisRu",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/905197112_1559441816211586_6354001732866344747_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MDkwMzc3ODI4Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=WQT2Ke3ixwEQ7kNvwFhGlUt&_nc_oc=Adpw-tKKUMFTdt5iNI_G4_9P9rriqv8oofwaAXqbXlzQ630OBz0a8gnn6qwREnR3OTk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRZNMhygChiTTRpUTFsmYPuWR9TorrvfXYnzyCL5fhvrQ&oe=6B0393EB",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/905197112_1559441816211586_6354001732866344747_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MDkwMzc3ODI4Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=WQT2Ke3ixwEQ7kNvwHAYXFG&_nc_oc=AdpXd5N8Xnc266cSW-O4NijycCp-_QFdq9F8F-AImr7OsI-dcnLY831fDU2RvdZTucA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTfNnbagbPn6DgE9RWOlcQ7I2BRdc5HfE6Id9W9dLdI_w&oe=6B03CC2B",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -374,7 +385,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dft8P-hisRu",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/906978271_1560733309415770_7386765477216035724_n.jpg?stp=dst-jpg_e35_p1080x1080_q90_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMDE0MjE3MDI0MTA4MTM1NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTgwMC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=m4S1fVOC1-IQ7kNvwFIXdRN&_nc_oc=Adp6YphcKOqjCXf8vsnvEhUkgmHH7jIKhvubL34J2yrYuz_o0UJoeo-VTEuB2fvU_gs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQSOYMApzKqb2jCUxvb6LGcG1qC8PhGt0XXVO9CEi12APQ&oe=6B03CA25",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/906978271_1560733309415770_7386765477216035724_n.jpg?stp=dst-jpg_e35_p1080x1080_q90_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAzMDE0MjE3MDI0MTA4MTM1NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTgwMC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=m4S1fVOC1-IQ7kNvwHXrSMk&_nc_oc=Adq-7sngkhANn5H4RlsaM9R05OYU-Sta-icIddk8dGRXVwPB3X-IbL8_IRuZIhatXZo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQQrQm7aj2FtdZPM1ZbAU_7rD-vKEdj0-kBHg_icRJMD2w&oe=6B03CA25",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -383,7 +394,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dft8P-hisRu",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904562589_1559441846211583_7087841674888724060_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MDQwMDQyODMzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=QsFimK8OXj8Q7kNvwELVZB5&_nc_oc=Adq84ZGX8f82njdxCQBZ54mETCf9hjQT9Hhda5-yiwW70s8dl1S2R3GAfXinaGiEq2o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQSZC3_i5seUiPLbC0DNGiTKN1pF4A0-xrKHNIDY-Dt1A&oe=6B03A7BF",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/904562589_1559441846211583_7087841674888724060_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MDQwMDQyODMzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=QsFimK8OXj8Q7kNvwGIDEzG&_nc_oc=AdpVFSTNLlHXuf7R97y8EATqeCw5I1w0nKA-uZuhl4YDhpRMcXPsjT5NBY1O34HjjEU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR_AnnyrqSih34v5rRlBwHRLbU1UbkWhVGUbZv0U_doHA&oe=6B03DFFF",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -392,7 +403,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dft8P-hisRu",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904441203_1559441849544916_2855216215623266339_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MTI1NjA4ODE1Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=cayYU0E_SXcQ7kNvwFXG202&_nc_oc=AdrVbQ4h3JM-lMZYGNMYLtHnhT3TUs09lA5FwIqht1uggyTk14VDpZgXyXGYJlRc2f0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQLkQKkPJ_UfZg4TeKPjIfuMFM-Ld5JftEm6Y1Gn6a_kQ&oe=6B03BA61",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/904441203_1559441849544916_2855216215623266339_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MTI1NjA4ODE1Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=cayYU0E_SXcQ7kNvwHjEmzt&_nc_oc=AdpGX9ZdM6JDtuvFpNzXIx7QLlGEuXay7QftjJXM4stMs7oKAxaF3NWqrdRJ90J8Iow&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQcq8oBTYnGkIZOJQDbQYP24exBoDBLlS5b56U7K5u6Xw&oe=6B03BA61",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -401,7 +412,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dft8P-hisRu",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/907277506_1559441852878249_3847363259589986554_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MjU4MTUxMTAxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=oaqxhhnApdwQ7kNvwGFfPQm&_nc_oc=AdqdygCqqh-TcCpQdxpGuHqYPPOAlIsKEn1jjel2a9984WaHRm7-U5__GV78Dkm8hhM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQT48-9cbpMHX4CqBE9GL9IpFzTtZ9hLbU7f2Jnxbx4oNw&oe=6B03A590",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/907277506_1559441852878249_3847363259589986554_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDE0MjE3MjU4MTUxMTAxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=oaqxhhnApdwQ7kNvwHhlqq2&_nc_oc=Adq5sA3-Cmc1vHrYmfpUtkfmo44hRDzSeFLzqDv52W5NXtgnFEuZg9JCnZRlI0mtaCY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR_JD7EJXPNEIYD7fkOZJDrCiO-pMNz1OWT8mgWGhWB_Q&oe=6B03DDD0",
    "ok": true,
    "cached": true,
    "products": 3,
@@ -410,7 +421,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfr4LZCFsXx",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904905750_1559435499545551_2945200004285201318_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzQ0NDcyODEwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=xLcBVJ6jVxgQ7kNvwHzm1E5&_nc_oc=AdoL8cNgFlqzHN-SQZNGto1N4lbZXiKH83KKB6m-_2ss5Mmbc98LjL7lbUN1sMGBFt0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR6BM67kbaw0TcUSc4dqUNohmpU7F_jbvkXAhHKuFp8pg&oe=6B0399D9",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/904905750_1559435499545551_2945200004285201318_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzQ0NDcyODEwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=xLcBVJ6jVxgQ7kNvwHno6uO&_nc_oc=AdqtIe2f-ZdxRN5mSgN04MRKDAtuB6ZZgKLPET8TfOyrQno5JqunxkqrZ4yNRZTPlFU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ4MRg8DNA-d3yM9IZ7_ZqiMXyduF4Iw3OEMtmLaBn1Bg&oe=6B03D219",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -419,7 +430,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfr4LZCFsXx",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/905003546_1559435522878882_1867043544599907900_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0Njc3MzY1MzU3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=c5Wq4i8Mr1UQ7kNvwGYhLpC&_nc_oc=AdrNBMazkqv8ZNEj4Fy4n-msG6Me5iRvXmUn0ChekWvEXukV_4TeSu7fG3dng5vaaWM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR9ybz2VSUVRdX7DvGpK17_EPR6EyuEhK7JIydZn8ccGw&oe=6B03CA29",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/905003546_1559435522878882_1867043544599907900_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0Njc3MzY1MzU3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=c5Wq4i8Mr1UQ7kNvwHFiwqT&_nc_oc=AdpWuB6sS19RuLGqZXGx98ITR1WBDQGPynmLnAOG1w0gYA7fC-FPG36f5No94CftQfw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTdl3OuZBiZhFFzwkI-uYoe2jHiiOJetQNBT9ywr3EopA&oe=6B03CA29",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -428,7 +439,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfr4LZCFsXx",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904965931_1559435542878880_4599206092446666127_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzA0MjA2MjA0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=3CeG8rCIGSEQ7kNvwE1hSOR&_nc_oc=AdrCXaZEj8cgVcqaEq-4mnngHMEEhBGILesSoC3l0qdHxaTiqaR0VEByEYEIaZ22-08&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS9iMJCxaBtZR77vuenGRbEpEiRQ0kODKKZTOGqJbtmqA&oe=6B03A340",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/904965931_1559435542878880_4599206092446666127_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzA0MjA2MjA0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=3CeG8rCIGSEQ7kNvwGeaGR6&_nc_oc=AdrNwPC_xyW5xt9p_AR6n3aDnDIwg75rP8w2WrFCTP_VhWDpm11rdsUdyShoQovGwYw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTt_kf67T5l2N6bqOHOiaTA03-2We_XkyytMXyKqZaE3g&oe=6B03DB80",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -437,7 +448,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfr4LZCFsXx",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904810169_1559435552878879_3047564091666064003_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzE3NjMxMjMyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=vi5uW3KvQWMQ7kNvwHB5HPx&_nc_oc=AdpsXKK0E-UOIVnTGfbvEef37piMSLhlreWZAalkAXp_ROQVBfMR-rTE7CSfgoTK288&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQAMo5JaiPM0AjRH2yym0h5bjHJXoGtYHLOAF18srPmSg&oe=6B03BF8A",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/904810169_1559435552878879_3047564091666064003_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0NzE3NjMxMjMyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=vi5uW3KvQWMQ7kNvwE0o4Le&_nc_oc=AdqytMEoiJs6jIg_SUi-DNvzGe0C8gwMLv9XCuv3Zzf7IvoUQMvYk1w_VZeiMVf_fIM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRgw0HwAnfvzojKzi8wYws8K4z5Tg5gwDvjPVeCtDaWNQ&oe=6B03BF8A",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -446,7 +457,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfr4LZCFsXx",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/904744627_1559435559545545_4674561322096743065_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0Njg1NzU0Mzk2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=V-VekhpUERgQ7kNvwEmyeF6&_nc_oc=AdqjXLNmTpJ6DaZ2rtDPb7Bx30RBTTHkQL62boxIwU5ulRR5jTel-JlqtgoBYeyIJGg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTaRaL3GBvO3AAaQeefj2KSGVo5L5A2Vol9U--z6-JmpA&oe=6B03A846",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/904744627_1559435559545545_4674561322096743065_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTU2MTM0Njg1NzU0Mzk2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=V-VekhpUERgQ7kNvwHJR_S6&_nc_oc=AdrKO0xLs28bY9K8Bnxg7RGnpapLjWE2j5DGanrNJQsiw8alVsgssBC6y6Wl_QorKaU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTwt05EkIMJp9vKzT6p7W_JT0SnJtM2e1XSW2J9ZjhHNQ&oe=6B03E086",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -455,7 +466,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp8IXnEVB3",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=5qNeNS-8EZ0Q7kNvwEql_bn&_nc_oc=AdrB2kSROQrQMtkQbmkq36qoF953uQC-_9uRcbgk40Lgak3SINi_9sL6dKAMPt3EH7M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQt4wYVu6r8SiZK3pB6Rxzmq33xVY9ayPSAwV6i-Xb8dw&oe=6B0394AA",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/903914529_1558641406291627_2193206419101125602_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzY0NDQyNjk1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=5qNeNS-8EZ0Q7kNvwEkJFOb&_nc_oc=AdpuoOSFPsHKTxUOsv6WqONz-mKfEOhCd0_WWvtEaTcfogbpMtMRsOb-9fXjCH-BD-c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTse_l3jzU4izt_RTFxD_pcbgWj9BKYr9w_glF5zjojNg&oe=6B03CCEA",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -464,7 +475,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp8IXnEVB3",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=diesQb4Ld0AQ7kNvwGUWuki&_nc_oc=AdosYCgKoi3qoFA62Ao-s0vgiEarJ4jIHm9GH-GZLm3SOeBrLSdL7Uh8N43LSzufRSE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRQDNbr6R3ANz6RBK3dq6RFRjEVGkYlJkkjcJmVxlhNbQ&oe=6B039FD7",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/895550231_1558641409624960_7392471175788176482_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzU3NzMwMzk3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=diesQb4Ld0AQ7kNvwFy7PPe&_nc_oc=AdqNrlK08QHhlFLoA7BYSSaN6y8D2KSqumvisiWv6ot44NWQkh0ruh6IyjBoWYx6aG8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQHDKTkFIb74AsBcZ-uARD6LSZA10mUdF7N9-1RnQMBwA&oe=6B03D817",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -473,7 +484,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp8IXnEVB3",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=uCKG_y-Vgs8Q7kNvwEqtlZ2&_nc_oc=AdpNIKcOG_cYmp1ABpnltrvp8ZdliSbLd6Z0z4apbSuARGYq7Aqru_pe-DUn5DM17Ts&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTvsOg0XTqv7GhK-cDVVCalGrxWAv7VLCD01shRdxJZxw&oe=6B03C748",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/905198490_1558641412958293_4130936060985639012_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxNTc4MzE2NjI5MzQxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTAwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=uCKG_y-Vgs8Q7kNvwH_vzWF&_nc_oc=AdrgFerc-MD4qRkv3Ke4BPZBxqV0huymqM-ufSuxkpFcTc4pSho6dH0KqPSlpeQ41U0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSrJeArKU2dfhn6tC54cpxmatkWfVV8_SsNpm5C1j3Cuw&oe=6B03C748",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -482,7 +493,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp7pVUkQ6v",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/911347326_1560369616118806_5561422563471061513_n.jpg?stp=dst-jpg_e35_fr_q90_sh2.08_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=lppY9pKbtQ0Q7kNvwFCcoe6&_nc_oc=Adq24sQCwWDbu3sYN5XHdtUhQST4osHBj6sKHoC0rflNFuaNPBlPYiyWcs_gUb4GJUw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQTm-9mcdLEkBltVMBQUDSURLx_zPxL7hnJ6FUyluo_t6A&oe=6B03A0B8",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/911347326_1560369616118806_5561422563471061513_n.jpg?stp=dst-jpg_e35_fr_q90_sh2.08_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&_nc_cb=8438d1d6-264fe0b2&ig_cache_key=NDAyOTAxMzY0ODc1MjA2NzI2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMy5zdXBlcl9yZXNvbHV0aW9uIn0%3D&_nc_ohc=gFnjeRIVh6UQ7kNvwFCgolk&_nc_oc=Adq4NrqR7naTuR1VKrnYglCUAF7_T5BBLgvP-bqvcwKaswZ2Dg_WH8Hso8hz4fKfu14&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIVAhUEAAAA&oh=00_AQSNiJZSpkOyWIewdr4RfDn8cI2kE4s2MVaQy9CyYIcdwA&oe=6B03D8F8",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -491,7 +502,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp7pVUkQ6v",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=6SWjf8rkZTAQ7kNvwHrS_44&_nc_oc=Adr_UfM_2_2ITOwiVDnMfgygYZfNU-xnvns8jfiGsS1P3vym29WF0txaMAiFGduID6s&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQINXuUURAGh-bvav3o02fJjRkUEU0ez4Psj-I4h8GC3g&oe=6B03BA26",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/903799437_1558637632958671_3296058360827192574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODI3MzkzODY5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=6SWjf8rkZTAQ7kNvwHrXv1u&_nc_oc=AdrJDg0Ev3XksS2tpO-aEsYynQZq6T2P5wrGE7TTamXgGv3rRn11j9QwuTRwposQvdE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQSsKz1PtOGRnObBaP2niGhWmpciMkdM2ZR_rJqS46FgQ&oe=6B03BA26",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -500,7 +511,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp7pVUkQ6v",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=WaKYcQJxd9UQ7kNvwEnh0wd&_nc_oc=AdoaD8Ili9oxgVnUKfAeVz6c1qZDG_Stkas96FpvYUh25SDIntNZc_cy2ZZS5u09T_c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRdXb1emA3QKNshbI2bApwYVj1Hyn1-udvQCEbCJCk0Nw&oe=6B03A8E7",
+   "url": "https://scontent-sjc6-1.cdninstagram.com/v/t39.30808-6/906078585_1558637642958670_734668241631250407_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0OTEyMTE5MDQwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=WaKYcQJxd9UQ7kNvwGPkhxs&_nc_oc=AdqTuy7CjSVyBZCxzIkfntrIE8MBCmC_VVlxAFq1dJHhZbZJMFEHNmyLKNWePcc41uI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSjML2l58sAqQpS0LI8kcgXubPNK7rsWY1FwwQ1YcoTOg&oe=6B03E127",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -509,7 +520,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp7pVUkQ6v",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Rwxhy2lyWegQ7kNvwGow-Tj&_nc_oc=AdqJMQF_W-qMpg4G03RJNd29S1FipkRfeJHTp2At3KcB49UyUHy24YbTdgJfHx6HN50&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQT6qkiBfLPZmpC59y9mMTKEgGfum6JpBArBTuuP-0IP4Q&oe=6B03964E",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/905486360_1558637646292003_6136324933567798683_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODkzNjYyNzkzOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=UpAO5WBMZmYQ7kNvwFeT7vh&_nc_oc=AdrAr23Crw1nyk-1tXPZOww5DPNN4PXfDmdgTsC3DSq_no9juCmjKTnMIFhdoftZB78&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR6W_SjPheiafanDfKAnW0s3vCEKXlJHMYMKS3VgdZTmg&oe=6B03CE8E",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -518,7 +529,7 @@
   {
    "market": "Lourencini",
    "offerId": "ig-Dfp7pVUkQ6v",
-   "url": "https://scontent-phl2-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=8Zfr5XTJjlkQ7kNvwE0rwel&_nc_oc=AdofXyZv3BFeCE-Bs7alipGVA4_vnLEMNLhXl4vi24v5v9nwk6ynMUIenH2o4dOz6fU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=DJlGd0kDQ43uU8GbqUkpNQ&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRQXbAe5QGXPYmCG65tcv9NrS5aI78PiJqk84zxkwIPHA&oe=6B039A5C",
+   "url": "https://scontent-sjc3-1.cdninstagram.com/v/t39.30808-6/906474561_1558637652958669_5008089419712483383_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTAxMzY0ODIyMzYyNzc5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=8Zfr5XTJjlkQ7kNvwEd09X1&_nc_oc=AdoyRm3NP49449LWbvZ-kqAtgbfSNhMDeRBoUewTH-A1a5lSDa38UDFnmZh1-Fuo0Sg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_gid=7rbvvHitTiOE32gIOZ1rMw&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTJg23ScBvIh-tAU8bY_NV2CqsIf8wcNZH3hydUWKRz6w&oe=6B03D29C",
    "ok": true,
    "cached": true,
    "products": 4,
@@ -527,7 +538,7 @@
   {
    "market": "Nevada",
    "offerId": "fb-1592273399610277",
-   "url": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=X294lI4YPUYQ7kNvwGvwK1R&_nc_oc=AdqnAU7-iDc7q8ydOLp9Mm1UGf_iGoWXpfnexFGLcPMr5YY26hPIijNiHs23NquOmYo&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=-pJ9SFHryuRV9FxP_5oleg&_nc_ss=78180&oh=00_AQSvT_7Hy4jVyyhyNeDFsqmgBCG828n9G3Gt23uPLJwNEg&oe=6B03AA2F",
+   "url": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=X294lI4YPUYQ7kNvwEuS32F&_nc_oc=Adpj-bFFYseCm9D8iW66sSf2ZwSA5NhnvzVF_zKP4g3ZqJMMZGKx9xpkNFyccrB-h8I&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=CZagCLJLzX-D-mScWwo4tg&_nc_ss=78180&oh=00_AQSs2pg5bOvoOkizanKSGxw5g8p967Og0w6oZjP_OgJZ3g&oe=6B03E26F",
    "ok": true,
    "cached": true,
    "products": 5,
@@ -536,14 +547,16 @@
   {
    "market": "Nevada",
    "offerId": "fb-1592268059610811",
-   "url": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/914140228_1592268562944094_8624153651261026953_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xs0U9Hq90pwQ7kNvwExwMfj&_nc_oc=Adr5oxSdwtAF3zfI1Apen5VTmsZSJbuxB4xTyEWcbqw3VBg-J3u274GAZEwJkNCgqhI&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=-pJ9SFHryuRV9FxP_5oleg&_nc_ss=78180&oh=00_AQTAe1U5MQpU0vIfd32fHICF6zsUn1KS68Z8PCtWyXKRXg&oe=6B03B03F",
-   "ok": false,
-   "error": "prazo da rodada esgotado; fica para a próxima"
+   "url": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/914140228_1592268562944094_8624153651261026953_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xs0U9Hq90pwQ7kNvwFITXD7&_nc_oc=AdrFzw7q0uUlSWoX8oLYHrmFiRUNaovyi3iwYjZAvOrgrbfajKXeTPdIMOYzr33mVzU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=CZagCLJLzX-D-mScWwo4tg&_nc_ss=78180&oh=00_AQSh9fC3zqwo0DUzZiabQPpphcex07OR63fCeylbviUASA&oe=6B03E87F",
+   "ok": true,
+   "cached": false,
+   "products": 15,
+   "model": "gemini-flash-lite-latest"
   },
   {
    "market": "Nevada",
    "offerId": "fb-1591495296354754",
-   "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t51.82787-15/913122224_18578366071075787_1171534002479248296_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DTKxMWNk9NgQ7kNvwHoG1fU&_nc_oc=AdoTlbG1tyOZ_8DAlyedGm_M-bydtON-BUs9yVCZq2Bu0NA_JCudJd_ySm1T0n0hy98&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=-pJ9SFHryuRV9FxP_5oleg&_nc_ss=78180&oh=00_AQQY1Oip6GzpGP1mliyTrM9IUlrcNyFeGWtHBGAibtYgIA&oe=6B03BE8E",
+   "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t51.82787-15/913122224_18578366071075787_1171534002479248296_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DTKxMWNk9NgQ7kNvwE11ESl&_nc_oc=AdriIj3i2cRMSGQX1wdb_J37SnNkoQvY3wNPpJTUAaRe46gCIo8oONW4RV_rjG18ow0&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=CZagCLJLzX-D-mScWwo4tg&_nc_ss=78180&oh=00_AQR-yMhFeb0b8LykKh27XQUWGFq0jDLFYMF8H534NBkRVA&oe=6B03BE8E",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -552,13 +565,92 @@
   {
    "market": "Lourencini",
    "offerId": "fb-1563234219165679",
-   "url": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/912256853_1563233822499052_3784916018057349843_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rzYTBH3-3yUQ7kNvwEZnCwt&_nc_oc=Ado73XW-_gEYC_5x5tetUE2xX7dseTbmyIFYFEEd03wwb23gxp0jrKNYx68WEWRRgR8&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=P20mHNJJ62gbsXQZMbz8tw&_nc_ss=78180&oh=00_AQTFH0K0yWygpr2WLyq3AjMN7gibAnmlqmdUocbZ6Pmw6g&oe=6B03BEC5",
+   "url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/912256853_1563233822499052_3784916018057349843_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rzYTBH3-3yUQ7kNvwFpFhB2&_nc_oc=Ado5YcFCx9yj2fjwTpwqdscyKUfBE0wYqueJZRHKkHzzhKcEEMMI1oeXt2cmnqj2_qc&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQRIbno8EK4Z_O8MoZvoMXnDDMObX8pX0qNGT_mmq9hHFA&oe=6B03BEC5",
    "ok": true,
    "cached": true,
    "products": 0,
    "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1563180925837675",
+   "url": "https://video-sjc6-1.xx.fbcdn.net/o1/v/t2/f2/m412/AQPOgdYZhqMKHFy8Ka4wbNPmbS5shJLfmdrOp9zRd2SMfo56buRB5i2kk9PMzs9pFRnSwhnI7fUrKs1F0KahLFYUvfE4xt8PFr9Vlnlz3Q.mp4?_nc_cat=111&_nc_sid=8bf8fe&_nc_ht=video-sjc6-1.xx.fbcdn.net&_nc_ohc=lFvehdRb9CcQ7kNvwHq6sLu&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTY4OTE5NjU0OTM0NDI2NiwiYXNzZXRfYWdlX2RheXMiOjIsInZpX3VzZWNhc2VfaWQiOjEwMTIyLCJkdXJhdGlvbl9zIjoxMDcsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQTD6bdFUinQ1FfX7Z1z-ssQyM5EzuXhUW0RFx6ljZ1FxQ&oe=6B03C5DF&bitrate=500142&tag=sve_sd",
+   "ok": true,
+   "cached": true,
+   "products": 0,
+   "model": "openrouter/free"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1563180925837675",
+   "url": "https://video-sjc3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQNLvWkc9_zuvXA2FXVZDeIDLnK4Z8Y-qo4b5BVJLTh2no2Pr6SvwOrTqRx_4l5aodrXGl_b5WvwtFeOe_8ZeM0LejdEh_pO07Id_m2AyVl_cQ.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-sjc3-1.xx.fbcdn.net&_nc_ohc=MEKI5djfhLMQ7kNvwGCfoBg&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2ODkxOTY1NDkzNDQyNjYsImFzc2V0X2FnZV9kYXlzIjoyLCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6MTA3LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=79e6ecf425877989&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9CQTg0NEEzRjU4RUQ0NjM4ODM2Mjk5MTgzNTExNTI5OV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzJEQjY3RjgyN0EzMDRBQTY5NUEyRkIyRDZBNjcwN0JEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwOIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRJjb3B5X3NhbXBsZV9ncm91cHMBMRUAACaUsLyEl5SABhUCKAJDMywXQFrgAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQSinquKmYA9qOeOHTvRhN5wV4k2RFhxA1MmXMM0vLNEEA&oe=6B03DE19&bitrate=2092636&tag=dash_h264-basic-gen2_720p",
+   "ok": false,
+   "error": "gemini gemini-flash-lite-latest 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Unable to process input image. Please retry or report in https://developers.generativeai.google/guide/troubleshooting\",\n    \"status\": \"INVALID_ARGUMENT\" | reserva: openrouter 413"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1563180925837675",
+   "url": "https://scontent-sjc6-1.xx.fbcdn.net/v/t15.5256-10/894125928_2772155626532482_4238713406017260921_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=be8305&_nc_ohc=4TNkW6gh7C0Q7kNvwEpEWHk&_nc_oc=Adq9YSQH4P-nTdQZLmFqkDZIcdoBaQv8I-bNkirDHRjDotpw8io9VBEpwRhlcRGOPZU&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQRjNLMmJR3_gEENRTSRNaJY7c096neZI9cHEMXgCZtcKg&oe=6B03D419",
+   "ok": true,
+   "cached": true,
+   "products": 0,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1563180925837675",
+   "url": "https://scontent-sjc6-1.xx.fbcdn.net/v/t15.5256-10/894125928_2772155626532482_4238713406017260921_n.jpg?stp=dst-jpg_p565x565_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=4TNkW6gh7C0Q7kNvwEpEWHk&_nc_oc=Adq9YSQH4P-nTdQZLmFqkDZIcdoBaQv8I-bNkirDHRjDotpw8io9VBEpwRhlcRGOPZU&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQQutbJxO1HQ8ekLuuZTKMH-7ozjr1U0cLvY8QBus2zjFw&oe=6B03D419",
+   "ok": true,
+   "cached": true,
+   "products": 0,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1560315612790873",
+   "url": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/905197112_1559441816211586_6354001732866344747_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WQT2Ke3ixwEQ7kNvwHU2y_t&_nc_oc=AdrGGAY3nL3SS3WP3NEa3_wqWw2Df_Ya9D_UO5TjizP2UBDlECw1s8P9QJFjRQ3rCYo&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQTnfJ49-K4ocPWOmMLH_IrHBw4QdJtSSCGULuH7cWYHnA&oe=6B03CC2B",
+   "ok": true,
+   "cached": true,
+   "products": 3,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1560315612790873",
+   "url": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/906681602_1559441842878250_9131114296995860068_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pgQe0aHqe6YQ7kNvwF9cyyA&_nc_oc=AdrR7Gx81sVo45QFnKTpDyAullQfO1QZbqafMjzVkZ9a0-Vc6NjuLgokusQB3u1xiOI&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQR5wX1ELcT9pB6DsdGoIPjhxSyVul96uRgjAvptF5JGfw&oe=6B03DC4B",
+   "ok": true,
+   "cached": true,
+   "products": 3,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1560315612790873",
+   "url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/904562589_1559441846211583_7087841674888724060_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QsFimK8OXj8Q7kNvwGRBrIE&_nc_oc=AdorRdtN2-LzwD6blz9lK8J5pNRnHMetAn3EtrgsOn0OtqX77309cuWwBkGNFxOgy94&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQSGSTUJ5ERfyzgvtpEeifzJQc_dG4F9aUZBU8UmS6ZfBg&oe=6B03DFFF",
+   "ok": true,
+   "cached": true,
+   "products": 3,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1560315612790873",
+   "url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/904441203_1559441849544916_2855216215623266339_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=cayYU0E_SXcQ7kNvwEwAVfB&_nc_oc=AdpfeHfE2dkgF3O_B4McnRyENAikJPRVoxlS-mOO5ieqXErLaTsCMpIqECEr58Fl9Y0&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQSx9B8g3k3DYWgSEdNhRz-WXQsfoG1VjUOXbrf4KX6SSQ&oe=6B03BA61",
+   "ok": true,
+   "cached": true,
+   "products": 3,
+   "model": "gemini-flash-lite-latest"
+  },
+  {
+   "market": "Lourencini",
+   "offerId": "fb-1560315612790873",
+   "url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/907277506_1559441852878249_3847363259589986554_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oaqxhhnApdwQ7kNvwHkey1u&_nc_oc=AdqYx4X4ALTpb2zH_AQoc53yjnGlfjZqr8GvZH2B_G_f7gAIr3aSpTqfa7ui67wV3rY&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=X7L3DMpKAytqYfuuweuMsQ&_nc_ss=78180&oh=00_AQQYstrHCZvFx2oasVvmV9sM03YTEYPZ03S9zufkNFBx8Q&oe=6B03DDD0",
+   "ok": true,
+   "cached": true,
+   "products": 3,
+   "model": "gemini-flash-lite-latest"
   }
  ],
- "finishedAt": "2026-11-18T17:57:58.053Z",
+ "finishedAt": "2026-11-18T20:10:50.926Z",
  "newReads": 5
 }
