@@ -390,8 +390,10 @@ for (const nome of MERCADOS) {
       const ficha = { id: o.id, nome: o.name, url: o.productUrl, nossoPreco: o.price };
       let leitura;
       try {
-        leitura = await leitor.ler(o); bloqueios = 0;
-        if (leitura.precos && !leitura.precos.length) { await sleep(3000); leitura = await leitor.ler(o); } // preço que demora a aparecer: uma segunda leitura
+        // página lenta (timeout) ou preço que demora a aparecer: uma segunda leitura antes de desistir
+        const tentar = async () => { try { return await leitor.ler(o); } catch (e) { if (!/Timeout/i.test(e.message)) throw e; await sleep(3000); return leitor.ler(o); } };
+        leitura = await tentar(); bloqueios = 0;
+        if (leitura.precos && !leitura.precos.length) { await sleep(3000); leitura = await leitor.ler(o); }
       } catch (e) {
         if (e instanceof Bloqueado) {
           bloqueios++; rel.inconclusivosLista.push({ ...ficha, motivo: `bloqueado pela loja (${e.message})` });
@@ -443,7 +445,8 @@ for (const [nome, r] of Object.entries(relatorio.mercados)) {
     const grave = pct > 10 ? `ATENÇÃO, mais de 10% divergem (${pct}%): ` : '';
     const tipos = Object.entries(r.divergencias.reduce((a, d) => ((a[d.tipo] = (a[d.tipo] || 0) + 1), a), {})).map(([t, n]) => `${n} ${t}`).join(', ');
     const ex = r.divergencias[0];
-    console.log(`::warning::Conferência de preços, ${nome}: ${grave}${r.divergentes} de ${r.conferidos} não batem com a loja (${tipos}). Ex.: ${ex.nome ?? ''} ${ex.motivo}`);
+    const horas = r.coletadoEm ? Math.round((Date.now() - Date.parse(r.coletadoEm)) / 36e5) : null;
+    console.log(`::warning::Conferência de preços, ${nome}: ${grave}${r.divergentes} de ${r.conferidos} não batem com a loja (${tipos}); dado coletado há ${horas ?? '?'} h. Ex.: ${ex.nome ?? ''} ${ex.motivo}`);
   }
 }
 console.log(`\nRelatório: ${path.relative(process.cwd(), SAIDA)} (semente ${SEMENTE})`);
