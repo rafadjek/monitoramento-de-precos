@@ -15,7 +15,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE_READ = path.join(ROOT, 'data/cache/leitura');
 const CACHE_PAGES = path.join(ROOT, 'data/cache/paginas');
 const OUT = path.join(ROOT, 'data/extraido');
-const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-2.5-flash,gemini-flash-lite-latest,gemini-2.5-flash-lite').split(',');
+const MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-3.8-flash,gemini-2.5-flash,gemini-flash-lite-latest,gemini-3.5-flash-lite').split(',');
 const GAP_MS = Number(process.env.READER_GAP_MS || 7000); // ~8 pedidos/min, abaixo do limite gratuito
 const MAX_NEW = Number(process.env.READER_MAX_NEW || 60);
 // prazo da rodada: depois dele não começa imagem nova (grava o que leu; o resto fica para a próxima rodada).
@@ -35,11 +35,15 @@ Regras:
 - Só o que está escrito na imagem. Nunca invente nem estime. Se não tiver certeza do preço, omita o produto.
 - price = preço de venda de 1 unidade/embalagem em reais, como número (ex.: 24.9). Preço escrito "33,99" é 33.99.
 - price = preço normal do produto (o maior, sem condição). TODOS os outros preços do mesmo produto vão em others, cada um com a sua condição, como está escrito: ex. [{"price": 28.5, "condition": "no app Roldão Mais"}, {"price": 27.9, "condition": "no cartão Roldão Pay"}], [{"price": 23.9, "condition": "a partir de 2 un."}], [{"price": 4.49, "condition": "no app Meu Assaí"}]. Não deixe nenhum de fora: faixas coloridas embaixo do preço ("APP ...", "CARTÃO ...", "PIX", "CLUBE ...") são outros preços.
+- Caixa colorida embaixo do preço com outro valor e "A PARTIR DE N UN." (ex.: "R$ 2,99 CADA" e embaixo "R$ 2,79 A PARTIR DE 3UN.") é outro preço do MESMO produto: others = [{"price": 2.79, "condition": "a partir de 3 un."}]. Confira produto por produto: é comum quase todos da página terem essa caixa.
 - "X% de desconto na 2ª unidade" com "nesta oferta a unidade sai por R$ Y": others = [{"price": Y, "condition": "cada levando 2 (X% na 2ª unidade)"}].
+- "de R$ X por R$ Y" (ou "de: X" e "por: Y"): price = Y e listPrice = X. "por" não é condição.
+- Página inteira de ofertas exclusivas de clube ou app (cabeçalho como "Ofertas exclusivas para membros do Clube Prime", "Exclusivo app"): repita essa exigência em condition de cada produto (ex.: "exclusivo Clube Prime").
+- Preço com "KG", "KILO", "QUILO" ou "/kg" junto do valor é preço por quilo: condition = "preço por kg" (ou, se houver outros preços, ponha "por kg" também na condição de cada um). Nunca deixe sem essa informação.
 - Se o único preço visível depende de condição ("leve 3 pague 2", "por kg"), use-o em price e descreva em condition (ex.: "preço por kg"). condition fica null quando não houver.
-- Ignore frases do tipo "neste pacote o quilo sai por" (é só cálculo do preço por quilo, não é outro produto nem outro preço).
+- Ignore frases do tipo "neste pacote o quilo sai por", "nesta caixa a unidade sai por", "este pacote de 2,5kg sai por" (é só cálculo do preço por quilo/unidade ou da embalagem: não é outro produto nem vai em others). Se o pacote tem preço por kg e preço do pacote, price = preço do pacote e condition = null.
 - "LVE 12 PG 11" no nome significa "leve 12 pague 11": mantenha no name e repita em condition.
-- listPrice = preço "de" riscado, se aparecer; senão null.
+- listPrice = preço "de" (riscado ou escrito "de:"), se aparecer; senão null.
 - name = nome do produto como no encarte, com marca e tamanho; brand e size separados quando possível (size ex.: "5kg", "900ml", "12 rolos").
 - category: "alimenticios" (comida e bebida), "higiene" (cuidado pessoal, papel higiênico, fralda), "limpeza" (casa e lavanderia) ou "outros".
 - box = [ymin, xmin, ymax, xmax] da foto do produto, inteiros de 0 a 1000.
@@ -172,10 +176,35 @@ const startIso = (s) => { const m = ISO_DAY.exec(s ?? ''); return m ? new Date(D
 const endIso = (s) => { const m = ISO_DAY.exec(s ?? ''); return m ? new Date(Date.UTC(+m[1], m[2] - 1, +m[3] + 1, 2, 59, 59)).toISOString() : null; };
 const mode = (xs) => { const c = new Map(); for (const x of xs.filter(Boolean)) c.set(x, (c.get(x) ?? 0) + 1); return [...c].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null; };
 
-// "cada"/"un" não é condição; "quilo"/"kg" vira "preço por kg"
-const cond = (c) => {
+// Frase de cálculo ("neste(a) pacote, o(a) quilo sai por", "nesta caixa a unidade sai por", "este pacote de 2,5kg sai por")
+// não é outro preço. Conferência de 18/11: virava preço e o site mostrava R$ 12,98 numa linguiça de R$ 64,90 e
+// R$ 1,89 numa caixa de hambúrguer de R$ 68,04. "Nesta oferta a unidade sai por" (desconto na 2ª unidade) continua valendo.
+const CALC = /\b(neste|nesta|este|esta)\s*(\(a\))?\s*(pacote|caixa|fardo|embalagem|bandeja|pe[cç]a|kit|pack|saco|gal[aã]o)\b|\b(o|a)\s*(\(a\))?\s*(quilo|kg|litro|unidade|rolo|metro)\s+sai\s+por\b/i;
+export const isCalc = (c) => CALC.test(String(c ?? '')) && !/levando|oferta|2[ªao°]\s*un|segunda/i.test(String(c));
+// "de R$ 6,99 por R$ 5,99" lido como price 6,99 e others [{5,99, "por"}]: o "por" é o preço, o "de" é o anterior.
+const DE_POR = /^(por|por apenas|apenas|s[oó])\s*:?$/i;
+// Arruma o que a IA devolveu antes de virar linha (vale também para leituras já em cache).
+export const normalize = (it) => {
+  const others = (Array.isArray(it.others) ? it.others : []).filter((x) => !isCalc(x?.condition));
+  const por = others.filter((x) => typeof x?.price === 'number' && x.price > 0 && x.price < it.price && DE_POR.test(String(x.condition ?? '').trim()))
+    .sort((a, b) => a.price - b.price)[0];
+  if (por) return { ...it, price: por.price, listPrice: Math.max(it.listPrice ?? 0, it.price), others: others.filter((x) => x !== por) };
+  return { ...it, others };
+};
+// Produto "por kg" que só existe como cálculo de outro da mesma página ("LINGUIÇA AURORA PACOTE 5KG" R$ 89,90 e
+// "LINGUIÇA AURORA KG" R$ 17,98): sai. Só quando o derivado não tem quantidade e o preço bate com preço / kg do pacote.
+const kgOf = (s) => { const m = /(\d+(?:[.,]\d+)?)\s*kg\b/i.exec(s ?? ''); return m ? parseFloat(m[1].replace(',', '.')) : null; };
+const qtyKg = (it) => kgOf(it.size) ?? kgOf(it.name);
+const baseName = (n) => n.toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .replace(/\d+(?:[.,]\d+)?\s*(KG|G|ML|L)\b/g, ' ').replace(/\b(PACOTE|PCT|PC|PECA|KG|QUILO|BANDEJA|CAIXA|CX)\b/g, ' ')
+  .replace(/[^A-Z0-9]+/g, ' ').trim();
+export const dropDerived = (list) => list.filter((b) => !(qtyKg(b) == null && /\bkg\b|quilo/i.test(`${b.name} ${b.size ?? ''} ${b.condition ?? ''}`)
+  && list.some((a) => a !== b && qtyKg(a) > 1 && baseName(a.name) === baseName(b.name) && Math.abs(a.price - b.price * qtyKg(a)) <= a.price * 0.01 + 0.05)));
+
+// "cada"/"un"/"por" não é condição; "quilo"/"kg" vira "preço por kg"; frase de cálculo sai
+export const cond = (c) => {
   const t = String(c ?? '').trim();
-  if (!t || /^(cada|un\.?|und\.?|unid\.?|unidade|(o )?pre[cç]o (por|da) unidade)$/i.test(t)) return null;
+  if (!t || /^(cada|por|un\.?|und\.?|unid\.?|unidade|(o )?pre[cç]o (por|da) unidade)$/i.test(t) || isCalc(t)) return null;
   if (/^(por\s+)?(o\s+)?(quilo|kg)$/i.test(t) || /^pre[cç]o por (kg|quilo)$/i.test(t)) return 'preço por kg';
   return t;
 };
@@ -184,7 +213,7 @@ const isPdf = (u) => /\.pdf($|\?)/i.test(u);
 // sem nenhum assim, o de cartão fica só como observação (o build-site não deixa virar preço principal).
 const CARD = /cart[aã]o|\bpay\b/i;
 const brl = (n) => 'R$ ' + n.toFixed(2).replace('.', ',');
-const bestCond = (it) => {
+export const bestCond = (it) => {
   const alts = (Array.isArray(it.others) ? it.others : []).filter((x) => typeof x?.price === 'number' && x.price > 0 && x.price < it.price && x.condition);
   const free = alts.filter((x) => !CARD.test(x.condition)).sort((a, b) => a.price - b.price)[0];
   if (free) return `${brl(free.price)} ${free.condition.trim()}`;
@@ -221,6 +250,15 @@ async function main() {
           report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: false, error: e.message });
         }
       }
+      // página sem nenhum preço alternativo num encarte em que as outras têm: leitura provavelmente incompleta
+      // (conferência de 18/11: 6 páginas do Assaí sem nenhum "a partir de 3 un."). Só avisa; não relê sozinho.
+      const alts = (p) => p.products.filter((it) => (Array.isArray(it.others) && it.others.length) || it.condition).length;
+      if (pages.some((p) => alts(p) > 0)) {
+        for (const p of pages.filter((p) => p.products.length >= 10 && !alts(p))) {
+          console.log(`::warning::${enc.market}: página sem nenhum preço alternativo, conferir ${p.url}`);
+          const r = report.pages.find((x) => x.url === p.url); if (r) r.semAlternativos = true;
+        }
+      }
       // validade: a do manifesto; senão a impressa na página; senão a mais comum entre as páginas do encarte
       const encFrom = mode(pages.map((p) => p.validFrom)), encUntil = mode(pages.map((p) => p.validUntil));
       for (const p of pages) {
@@ -228,7 +266,7 @@ async function main() {
         const validUntil = enc.validUntil ?? endIso(p.validUntil ?? encUntil);
         if (!validUntil) { console.warn(`  sem validade, descartando a página ${p.url}`); continue; }
         if (new Date(validUntil) < now) continue;
-        for (const it of p.products.filter(ok)) {
+        for (const it of dropDerived(p.products.filter(ok).map(normalize))) {
           const id = sha1(`${enc.market}|${it.name.trim().toLowerCase()}|${it.price}`).slice(0, 12);
           rows[enc.market].set(id, {
             market: enc.market, externalId: id, name: it.name.trim(), brand: it.brand ?? null, ean: null, size: it.size ?? null,
@@ -260,4 +298,5 @@ async function main() {
   report.newReads = newReads;
   fs.writeFileSync(path.join(OUT, 'encartes.leitura.json'), JSON.stringify(report, null, 1));
 }
-main().catch((e) => { console.error(e.message); process.exit(1); });
+// só roda quando chamado direto (o teste importa as funções acima)
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((e) => { console.error(e.message); process.exit(1); });

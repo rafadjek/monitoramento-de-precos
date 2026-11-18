@@ -1,0 +1,499 @@
+{
+ "geradoEm": "2026-11-18T16:52:45.686Z",
+ "semente": 3,
+ "amostraPorMercado": 15,
+ "cooperadoConta": true,
+ "mercados": {
+  "Atacadão": {
+   "metodo": "página do produto",
+   "noSite": true,
+   "produtosNoSite": 6696,
+   "coletadoEm": "2026-11-17T18:00:12.505Z",
+   "loja": "Mauá Itapark",
+   "conferidos": 15,
+   "batem": 4,
+   "divergentes": 11,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [
+    {
+     "id": "atacadao:6283",
+     "nome": "Margarina Qualy Com sal 500g",
+     "url": "https://www.atacadao.com.br/margarina-qualy-com-sal-35265-6283/p",
+     "nossoPreco": 8.98,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 8.98,
+       "rotulo": "g A partir de 3 unid. R$ 8,98 R$ 8,40 -6% Qua"
+      },
+      {
+       "valor": 8.4,
+       "rotulo": "r de 3 unid. R$ 8,98 R$ 8,40 -6% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 8.4,
+     "diferencaPct": 6.9,
+     "motivo": "a loja mostra R$ 8,40 (r de 3 unid. R$ 8,98 R$ 8,40 -6% Quantidade:) e o site publica R$ 8,98"
+    },
+    {
+     "id": "atacadao:30371",
+     "nome": "Toalha de Papel Sorella 60 Folhas 2 rolos",
+     "url": "https://www.atacadao.com.br/toalha-de-papel-sorella-60-folhas-pacote-com-2-rolos-29983-30371/p",
+     "nossoPreco": 5.5,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 5.5,
+       "rotulo": "s A partir de 3 unid. R$ 5,50 R$ 5,15 -6% Qua"
+      },
+      {
+       "valor": 5.15,
+       "rotulo": "r de 3 unid. R$ 5,50 R$ 5,15 -6% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 5.15,
+     "diferencaPct": 6.8,
+     "motivo": "a loja mostra R$ 5,15 (r de 3 unid. R$ 5,50 R$ 5,15 -6% Quantidade:) e o site publica R$ 5,50"
+    },
+    {
+     "id": "atacadao:3242",
+     "nome": "Macarrão Inst Nissin Cup Noodles Costela com molho 68g",
+     "url": "https://www.atacadao.com.br/macarrao-instantaneo-nissin-cup-noodles-costela-com-molho-de-churrasco-63488-3242/p",
+     "nossoPreco": 5.49,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 5.49,
+       "rotulo": "g A partir de 3 unid. R$ 5,49 R$ 5,39 -2% Qua"
+      },
+      {
+       "valor": 5.39,
+       "rotulo": "r de 3 unid. R$ 5,49 R$ 5,39 -2% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 5.39,
+     "diferencaPct": 1.9,
+     "motivo": "a loja mostra R$ 5,39 (r de 3 unid. R$ 5,49 R$ 5,39 -2% Quantidade:) e o site publica R$ 5,49"
+    },
+    {
+     "id": "atacadao:31709",
+     "nome": "Desinfetante Pinho Bril Plus 1L",
+     "url": "https://www.atacadao.com.br/desinfetante-pinho-bril-plus-frasco-com-1l-71851-31709/p",
+     "nossoPreco": 11.9,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 11.9,
+       "rotulo": "L A partir de 3 unid. R$ 11,90 R$ 10,90 -8% Qu"
+      },
+      {
+       "valor": 10.9,
+       "rotulo": "de 3 unid. R$ 11,90 R$ 10,90 -8% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 10.9,
+     "diferencaPct": 9.2,
+     "motivo": "a loja mostra R$ 10,90 (de 3 unid. R$ 11,90 R$ 10,90 -8% Quantidade:) e o site publica R$ 11,90"
+    },
+    {
+     "id": "atacadao:3148",
+     "nome": "Café Premium 3 Corações Estrada Real 500g",
+     "url": "https://www.atacadao.com.br/cafe-premium-3-coracoes-estrada-real-pacote-com-500g-75263-3148/p",
+     "nossoPreco": 29.9,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 29.9,
+       "rotulo": "g A partir de 2 unid. R$ 29,90 R$ 28,90 -3% Qu"
+      },
+      {
+       "valor": 28.9,
+       "rotulo": "de 2 unid. R$ 29,90 R$ 28,90 -3% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 28.9,
+     "diferencaPct": 3.5,
+     "motivo": "a loja mostra R$ 28,90 (de 2 unid. R$ 29,90 R$ 28,90 -3% Quantidade:) e o site publica R$ 29,90"
+    },
+    {
+     "id": "atacadao:41792",
+     "nome": "Salgadinho Lucky Torcida Jr Cebola 35g",
+     "url": "https://www.atacadao.com.br/salgadinho-lucky-torcida-jr-cebola-92546-41792/p",
+     "nossoPreco": 1.59,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 1.59,
+       "rotulo": "g A partir de 2 unid. R$ 1,59 R$ 1,49 -6% Qua"
+      },
+      {
+       "valor": 1.49,
+       "rotulo": "r de 2 unid. R$ 1,59 R$ 1,49 -6% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 1.49,
+     "diferencaPct": 6.7,
+     "motivo": "a loja mostra R$ 1,49 (r de 2 unid. R$ 1,59 R$ 1,49 -6% Quantidade:) e o site publica R$ 1,59"
+    },
+    {
+     "id": "atacadao:46025",
+     "nome": "Iogurte Fazenda Bela Vista Coco 180g",
+     "url": "https://www.atacadao.com.br/iogurte-fazenda-bela-vista-coco-96138-46025/p",
+     "nossoPreco": 3.25,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 3.25,
+       "rotulo": "g A partir de 2 unid. R$ 3,25 R$ 2,89 -11% Qu"
+      },
+      {
+       "valor": 2.89,
+       "rotulo": "r de 2 unid. R$ 3,25 R$ 2,89 -11% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 2.89,
+     "diferencaPct": 12.5,
+     "motivo": "a loja mostra R$ 2,89 (r de 2 unid. R$ 3,25 R$ 2,89 -11% Quantidade:) e o site publica R$ 3,25"
+    },
+    {
+     "id": "atacadao:34530",
+     "nome": "Limpador Multiuso Veja Power Fusion Limão 500ml",
+     "url": "https://www.atacadao.com.br/limpador-multiuso-veja-power-fusion-limao-63916-34530/p",
+     "nossoPreco": 9.2,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 9.2,
+       "rotulo": "l A partir de 3 unid. R$ 9,20 R$ 8,50 -8% Qua"
+      },
+      {
+       "valor": 8.5,
+       "rotulo": "r de 3 unid. R$ 9,20 R$ 8,50 -8% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 8.5,
+     "diferencaPct": 8.2,
+     "motivo": "a loja mostra R$ 8,50 (r de 3 unid. R$ 9,20 R$ 8,50 -8% Quantidade:) e o site publica R$ 9,20"
+    },
+    {
+     "id": "atacadao:20511",
+     "nome": "Panettone Tommy Frutas 400g",
+     "url": "https://www.atacadao.com.br/panettone-tommy-frutas-25574-20511/p",
+     "nossoPreco": 11.99,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "preco-diferente",
+     "precosNaLoja": [
+      {
+       "valor": 13.99,
+       "rotulo": "ne Tommy Frutas 400g R$ 13,99 Quantidade: unid"
+      }
+     ],
+     "menorNaLoja": 13.99,
+     "diferencaPct": -14.3,
+     "motivo": "a loja não mostra R$ 11,99; o menor que ela mostra é R$ 13,99"
+    },
+    {
+     "id": "atacadao:63812",
+     "nome": "Kit Desodorante Roll-On Nivea Derma Control Defende 2 un 50ml",
+     "url": "https://www.atacadao.com.br/kit-desodorante-roll-on-nivea-derma-control-defende-17652-63812/p",
+     "nossoPreco": 14.25,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 14.25,
+       "rotulo": "l A partir de 3 unid. R$ 14,25 R$ 13,35 -6% Qu"
+      },
+      {
+       "valor": 13.35,
+       "rotulo": "de 3 unid. R$ 14,25 R$ 13,35 -6% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 13.35,
+     "diferencaPct": 6.7,
+     "motivo": "a loja mostra R$ 13,35 (de 3 unid. R$ 14,25 R$ 13,35 -6% Quantidade:) e o site publica R$ 14,25"
+    },
+    {
+     "id": "atacadao:63740",
+     "nome": "Amaciante de Roupas Concentrado Downy Brisa Verão 1,2L",
+     "url": "https://www.atacadao.com.br/amaciante-de-roupas-concentrado-downy-brisa-verao-17731-63740/p",
+     "nossoPreco": 26.9,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 26.9,
+       "rotulo": "L A partir de 2 unid. R$ 26,90 R$ 24,50 -9% Qu"
+      },
+      {
+       "valor": 24.5,
+       "rotulo": "de 2 unid. R$ 26,90 R$ 24,50 -9% Quantidade:"
+      }
+     ],
+     "menorNaLoja": 24.5,
+     "diferencaPct": 9.8,
+     "motivo": "a loja mostra R$ 24,50 (de 2 unid. R$ 26,90 R$ 24,50 -9% Quantidade:) e o site publica R$ 26,90"
+    }
+   ],
+   "inconclusivosLista": []
+  },
+  "Coop": {
+   "metodo": "página do produto",
+   "noSite": true,
+   "produtosNoSite": 4186,
+   "coletadoEm": "2026-11-17T18:15:54.653Z",
+   "loja": "Barão de Mauá\n\nMinha\nLista\n\n0\nMenu\nOfertas do dia\n\nAlimentos Básicos\n\nBebidas\n\nHortifruti\n\nAçougue\n\nLimpeza\n\nProdutos Coop\n\nFrios e Laticínios\nManteiga e Margarina\nCom sal\nManteiga Aviação com Sal 200g Lata\nAviação\nManteiga Aviação com Sal 200g Lata\nCod. 40917349\nR$ 19,99\n/ 1 un\nAdicionar\n\nAdicionar à lista\n\nAviação é a manteiga de primeira qualidade com sal. Com tradição no mercado, seu sabor deixa suas refeições mais saborosas.\n\nOutros produtos da categoria\n\nMargarina Qualy Light com Sal Zero Lactose 250g\n\nR$ 5,99/ 1 un\n\nMargarina Claybom com Sal 500g\n\nR$ 6,59/ 1 un\n\nMargarina Qualy com Sal 500g\n\nR$ 8,99/ 1 un\n\nManteiga e Margarina com Sal Leco 200g\n\nR$ 13,49/ 1 un\n\nTermos mais buscados\n\n1ºleite\n2ºcafé\n3ºpapel higiênico\n4ºarroz\n5ºcerveja\n6ºmussarela\n7ºiogurte\n8ºpao\n9ºbolacha\n10ºchocolate",
+   "conferidos": 14,
+   "batem": 7,
+   "divergentes": 7,
+   "inconclusivos": 1,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [
+    {
+     "id": "coop:40910075",
+     "nome": "Café Torrado e Moído Caboclo Tradicional Vácuo 500g",
+     "url": "https://www.coopsupermercado.com.br/cafe-torrado-e-moido-caboclo-tradicional-vacuo-500g/p",
+     "nossoPreco": 22.79,
+     "listPrice": 27.49,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 27.49,
+       "rotulo": "Cod. 40910075 R$ 27,49 R$ 22,79 / 1 un C"
+      },
+      {
+       "valor": 22.79,
+       "rotulo": "od. 40910075 R$ 27,49 R$ 22,79 / 1 un Cooperado"
+      },
+      {
+       "valor": 17.99,
+       "rotulo": "2,79 / 1 un Cooperado R$ 17,99/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 17.99,
+     "diferencaPct": 26.7,
+     "motivo": "a loja mostra R$ 17,99 (2,79 / 1 un Cooperado R$ 17,99/ 1 un Adicionar) e o site publica R$ 22,79"
+    },
+    {
+     "id": "coop:40908324",
+     "nome": "Chá Verde Limão Leão Garrafa 450ml",
+     "url": "https://www.coopsupermercado.com.br/cha-verde-limao-leao-garrafa-450ml-s/p",
+     "nossoPreco": 4.39,
+     "listPrice": 4.59,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 4.59,
+       "rotulo": "Cod. 40908324 R$ 4,59 R$ 4,39 / 1 un Co"
+      },
+      {
+       "valor": 4.39,
+       "rotulo": "Cod. 40908324 R$ 4,59 R$ 4,39 / 1 un Cooperado"
+      },
+      {
+       "valor": 4.09,
+       "rotulo": "4,39 / 1 un Cooperado R$ 4,09/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 4.09,
+     "diferencaPct": 7.3,
+     "motivo": "a loja mostra R$ 4,09 (4,39 / 1 un Cooperado R$ 4,09/ 1 un Adicionar) e o site publica R$ 4,39"
+    },
+    {
+     "id": "coop:40917475",
+     "nome": "Paçoca Santa Helena Paçoquita Mini Pacote 210g",
+     "url": "https://www.coopsupermercado.com.br/pacoca-santa-helena-pacoquita-mini-pacote-210g/p",
+     "nossoPreco": 14.99,
+     "listPrice": 15.99,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 15.99,
+       "rotulo": "Cod. 40917475 R$ 15,99 R$ 14,99 / 1 un C"
+      },
+      {
+       "valor": 14.99,
+       "rotulo": "od. 40917475 R$ 15,99 R$ 14,99 / 1 un Cooperado"
+      },
+      {
+       "valor": 13.99,
+       "rotulo": "4,99 / 1 un Cooperado R$ 13,99/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 13.99,
+     "diferencaPct": 7.1,
+     "motivo": "a loja mostra R$ 13,99 (4,99 / 1 un Cooperado R$ 13,99/ 1 un Adicionar) e o site publica R$ 14,99"
+    },
+    {
+     "id": "coop:40898208",
+     "nome": "Chocolate Twix Triple 40g",
+     "url": "https://www.coopsupermercado.com.br/chocolate-twix-triple-40g-s/p",
+     "nossoPreco": 3.99,
+     "listPrice": 4.49,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 4.49,
+       "rotulo": "Cod. 40898208 R$ 4,49 R$ 3,99 / 1 un Co"
+      },
+      {
+       "valor": 3.99,
+       "rotulo": "Cod. 40898208 R$ 4,49 R$ 3,99 / 1 un Cooperado"
+      },
+      {
+       "valor": 3.49,
+       "rotulo": "3,99 / 1 un Cooperado R$ 3,49/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 3.49,
+     "diferencaPct": 14.3,
+     "motivo": "a loja mostra R$ 3,49 (3,99 / 1 un Cooperado R$ 3,49/ 1 un Adicionar) e o site publica R$ 3,99"
+    },
+    {
+     "id": "coop:40941206",
+     "nome": "Salgadinho Lua Sabor Queijo Parmesão Cheetos 90G",
+     "url": "https://www.coopsupermercado.com.br/salgadinho-lua-sabor-queijo-parmesao-cheetos-90g/p",
+     "nossoPreco": 9.19,
+     "listPrice": 10.29,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 10.29,
+       "rotulo": "Cod. 40941206 R$ 10,29 R$ 9,19 / 1 un Co"
+      },
+      {
+       "valor": 9.19,
+       "rotulo": "od. 40941206 R$ 10,29 R$ 9,19 / 1 un Cooperado"
+      },
+      {
+       "valor": 7.99,
+       "rotulo": "9,19 / 1 un Cooperado R$ 7,99/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 7.99,
+     "diferencaPct": 15,
+     "motivo": "a loja mostra R$ 7,99 (9,19 / 1 un Cooperado R$ 7,99/ 1 un Adicionar) e o site publica R$ 9,19"
+    },
+    {
+     "id": "coop:40905733",
+     "nome": "Refrigerante original Sprite 350ml",
+     "url": "https://www.coopsupermercado.com.br/refrigerante-original-sprite-350ml-s/p",
+     "nossoPreco": 3.29,
+     "listPrice": 3.59,
+     "condicao": null,
+     "tipo": "cooperado",
+     "precosNaLoja": [
+      {
+       "valor": 3.59,
+       "rotulo": "Cod. 40905733 R$ 3,59 R$ 3,29 / 1 un Co"
+      },
+      {
+       "valor": 3.29,
+       "rotulo": "Cod. 40905733 R$ 3,59 R$ 3,29 / 1 un Cooperado"
+      },
+      {
+       "valor": 2.99,
+       "rotulo": "3,29 / 1 un Cooperado R$ 2,99/ 1 un Adicionar",
+       "cooperado": true
+      }
+     ],
+     "menorNaLoja": 2.99,
+     "diferencaPct": 10,
+     "motivo": "a loja mostra R$ 2,99 (3,29 / 1 un Cooperado R$ 2,99/ 1 un Adicionar) e o site publica R$ 3,29"
+    },
+    {
+     "id": "coop:40918411",
+     "nome": "Cereal Matinal Nestlé Moça Flakes Leite Condensado 230g",
+     "url": "https://www.coopsupermercado.com.br/cereal-matinal-nestle-moca-flakes-leite-condensado-230g/p",
+     "nossoPreco": 17.79,
+     "tipo": "sumiu",
+     "precosNaLoja": [],
+     "motivo": "página diz \"Este produto não está disponível no momento\""
+    }
+   ],
+   "inconclusivosLista": [
+    {
+     "id": "coop:40906260",
+     "nome": "Pão integral com frutas Wickbold 500g",
+     "url": "https://www.coopsupermercado.com.br/pao-integral-com-frutas-wickbold-500g-s/p",
+     "nossoPreco": 17.69,
+     "motivo": "nenhum preço lido na loja"
+    }
+   ]
+  },
+  "Nagumo": {
+   "metodo": "página do produto",
+   "noSite": true,
+   "produtosNoSite": 6355,
+   "coletadoEm": "2026-11-17T18:16:29.325Z",
+   "loja": "038-MAUA",
+   "conferidos": 15,
+   "batem": 14,
+   "divergentes": 1,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [
+    {
+     "id": "nagumo:854511",
+     "nome": "Ração Úmida Para Gatos Adultos Patê De Peixe Whiskas 290G",
+     "url": "https://www.nagumo.com.br/categoria/departamentos/pet-shop/alimento-gato/racao-gato/ra%C3%A7%C3%A3o-%C3%BAmida-para-gatos-adultos-pat%C3%AA-de-peixe-whiskas-290g-854511.html",
+     "nossoPreco": 10.98,
+     "listPrice": null,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 10.98,
+       "rotulo": "20% Preço baixou! De R$ 10,98 Por: R$ 8,79 R$"
+      },
+      {
+       "valor": 8.79,
+       "rotulo": "ou! De R$ 10,98 Por: R$ 8,79 R$ 8,79"
+      },
+      {
+       "valor": 8.79,
+       "rotulo": "$ 10,98 Por: R$ 8,79 R$ 8,79"
+      }
+     ],
+     "menorNaLoja": 8.79,
+     "diferencaPct": 24.9,
+     "motivo": "a loja mostra R$ 8,79 (ou! De R$ 10,98 Por: R$ 8,79 R$ 8,79) e o site publica R$ 10,98"
+    }
+   ],
+   "inconclusivosLista": []
+  }
+ }
+}

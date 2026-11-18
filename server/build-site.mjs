@@ -13,7 +13,13 @@ const valid = (o) => o && o.market && o.externalId != null && o.name && typeof o
    o.collectedAt;
 const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\W+/g, '-');
 const now = Date.now();
-const index = { generatedAt: new Date().toISOString(), markets: [] };
+const index = { generatedAt: new Date().toISOString(), markets: [], retired: [] };
+// Trava contra preço velho: mercado de catálogo (coletado do site, sem validade por oferta) cuja coleta
+// mais recente passou do limite sai da comparação, em vez de mostrar preço antigo como se fosse de hoje.
+// Encarte e Instagram já saem pela validade de cada oferta. Limite em horas; MAX_AGE_HOURS sobrescreve (teste).
+const CATALOG_MARKETS = new Set(['Atacadão', 'Spani', 'Coop', 'Nagumo', 'Semar', 'Extra']);
+const MAX_AGE_HOURS = Number(process.env.MAX_AGE_HOURS) > 0 ? Number(process.env.MAX_AGE_HOURS) : 48;
+const brDate = (t) => new Date(t).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', timeZone: 'America/Sao_Paulo' });
 
 import crypto from 'node:crypto';
 import sharp from 'sharp';
@@ -91,6 +97,12 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
   const rows = parsed.filter(valid);
   if (!rows.length) continue;
   const market = rows[0].market;
+  const lastCollected = rows.map((r) => r.collectedAt).sort().at(-1);
+  if (CATALOG_MARKETS.has(market) && now - new Date(lastCollected).getTime() > MAX_AGE_HOURS * 3600e3) {
+    index.retired.push({ name: market, collectedAt: lastCollected, maxAgeHours: MAX_AGE_HOURS });
+    console.log(`::warning::${market}: coleta de ${brDate(lastCollected)}, mais de ${+(MAX_AGE_HOURS / 24).toFixed(1)} dias; fora do site até a próxima coleta`);
+    continue;
+  }
   const vigentes = rows.filter((o) => !o.validUntil || new Date(o.validUntil).getTime() >= now);
   const slim = [];
   for (const o of vigentes) {
@@ -114,7 +126,7 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
   index.markets.push({
     name: market, file: `${slug(market)}.json`, products: slim.length, cities: CITIES[market] ?? [],
     source: rows.some((r) => r.source === 'encarte') ? 'encarte' : 'site', expiredDropped: rows.length - vigentes.length,
-    storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: rows.map((r) => r.collectedAt).sort().at(-1),
+    storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: lastCollected,
   });
 }
 

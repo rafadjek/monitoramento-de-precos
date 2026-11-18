@@ -117,6 +117,23 @@ jobs:
         working-directory: server
         run: node build-site.mjs
 
+      # Confere uma amostra de cada catálogo (15 produtos por mercado, metade em oferta) contra a loja, do dado
+      # que o site vai publicar (app/public/data, montado no passo acima). Só avisa (::warning::), nunca derruba a publicação.
+      # O relatório (server/data/extraido/conferencia.json) é guardado num commit próprio aqui, porque o passo
+      # "Guardar dados coletados" roda antes do build; commit do GITHUB_TOKEN não dispara outro workflow.
+      - name: Conferir preços do site com a loja
+        if: github.event_name != 'push'
+        working-directory: server
+        continue-on-error: true
+        timeout-minutes: 45
+        run: |
+          node tools/conferir-precos.mjs
+          cd ..
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add server/data/extraido/conferencia.json
+          git diff --cached --quiet || (git commit -m "Conferência de preços com a loja" && git pull --rebase -X theirs && git push)
+
       # Endereço oficial: https://bate-ofertas.pages.dev (Cloudflare Pages, projeto bate-ofertas).
       # Com a chave do Cloudflare, publica lá e o endereço antigo do GitHub Pages vira só um redirecionamento.
       # Sem a chave, continua publicando o site completo no GitHub Pages (nada fica parado).
