@@ -11,7 +11,7 @@ Site público de preços de mercados de Mauá e Ribeirão Pires (alimentícios, 
 - `server/build-site.mjs`: gera `app/public/data` e as miniaturas.
 - `server/group.mjs` + `server/ean.mjs`: agrupa o mesmo produto entre mercados. EAN primeiro (descarta código interno de loja, prefixo 2, e EAN com tamanho e preço muito diferentes); regra por nome só sem EAN em conflito. Embeddings grátis do Cloudflare Workers AI foram testados em 2026-11-08 e descartados: confundem marcas e o EAN já cobre ~96% dos produtos.
 - `app/`: React + Vite + Tailwind, estático, busca no navegador.
-- `.github/workflows/atualizar.yml`: todo dia às 06h lê os encartes; às quartas (e no disparo manual) também coleta os catálogos; publica no GitHub Pages.
+- `.github/workflows/atualizar.yml`: todo dia às 01h17 (Brasília) coleta os catálogos e lê os encartes, confere uma amostra de preços com as lojas (`tools/conferir-precos.mjs`) e publica no Cloudflare Pages.
 
 ## Regras
 - Sem servidor nem banco em produção. Nada pode depender de um computador pessoal.

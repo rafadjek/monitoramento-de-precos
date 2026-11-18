@@ -2,8 +2,8 @@ name: Atualizar preços e publicar
 
 on:
   schedule:
-    # todo dia, 06h de Brasília: catálogos dos sites + encartes (as ofertas mudam de um dia para o outro)
-    - cron: '0 9 * * *'
+    # todo dia, 01h17 de Brasília (madrugada e minuto quebrado: o agendamento das 06h chegava a atrasar 8 h na fila do GitHub)
+    - cron: '17 4 * * *'
   workflow_dispatch:
   push:
     branches: [main]
