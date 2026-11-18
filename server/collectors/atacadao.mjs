@@ -67,6 +67,9 @@ function toRecord(node, scope, collectedAt, fromPage) {
   const notes = [];
   if ((o.minQuantity || 1) > 1) notes.push(`preço válido a partir de ${o.minQuantity} un`);
   for (const t of tiers) notes.push(`R$ ${t.price.toFixed(2).replace('.', ',')} a partir de ${t.minQuantity} un`);
+  // menor preço por quantidade vira a condição (como no Spani): o comparador usa esse preço, não o de 1 unidade
+  const best = tiers.reduce((x, y) => (!x || y.price < x.price ? y : x), null);
+  const condition = best ? `R$ ${best.price.toFixed(2).replace('.', ',')} a partir de ${best.minQuantity} un` : null;
   if (fromPage === 'catalogo') notes.push('listado em Super Ofertas');
   notes.push('o site não informa data de validade; preço vigente no momento da coleta');
   return {
@@ -85,6 +88,7 @@ function toRecord(node, scope, collectedAt, fromPage) {
     categoryRaw: crumbs.join(' > ') || null,
     imageUrl: node.image?.[0]?.url || null,
     productUrl: `${BASE}/${node.slug}/p`,
+    condition,
     validFrom: null,
     validUntil: null,
     validityNote: notes.join('; '),
