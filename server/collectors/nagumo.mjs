@@ -111,17 +111,24 @@ function categoryFromUrl(url) {
 }
 
 function normalize(p, ctxInfo) {
-  const price = p.price && p.price.sales && Number(p.price.sales.value);
+  const sales = p.price && p.price.sales && Number(p.price.sales.value);
+  // "Preço baixou! De R$ X | Por: R$ Y": a página mostra o Por como preço; ele vem em flagtypes[].valueFlag
+  // (preço do kg nos itens por peso, como o preço normal). O De é o preço normal (price.sales).
+  // A API não traz data de fim dessa oferta. Só vale valueFlag menor que o preço normal.
+  const flags = (p.flagtypes || []).map((f) => ({ type: String(f.flagType || ''), v: Number(f.valueFlag) })).filter((f) => f.v > 0 && f.v < sales);
+  const flag = flags.sort((a, b) => a.v - b.v)[0] || null;
+  const price = flag ? flag.v : sales;
   const name = (p.productName || '').replace(/\s+/g, ' ').trim();
   if (!name || !(price > 0)) return null;
   // esgotado na loja escolhida não entra
   if (p.available === false || p.readyToOrder === false || p.availability?.available === false) return null;
-  const listV = p.price.list && Number(p.price.list.value);
+  const listV = flag ? sales : p.price.list && Number(p.price.list.value);
   const productUrl = p.productShowFullUrl;
   const { dept, raw } = categoryFromUrl(productUrl);
   const img = p.images && p.images.large && p.images.large[0];
   const notes = ['O Nagumo informa que preços e ofertas valem no dia da consulta, só para compra online/aplicativo e sujeitos a estoque; sem data de fim de oferta no site'];
   if (ctxInfo.inOfertaDia) notes.push('listado em "Ofertas do dia"');
+  if (flag) notes.push('"Preço baixou! De R$ ' + sales.toFixed(2).replace('.', ',') + ' por R$ ' + flag.v.toFixed(2).replace('.', ',') + '" do site');
   if (p.isAccelerator === true) notes.push('item com selo "Meu Nagumo" no site (condição do selo não detalhada)');
   return {
     market: MARKET,
@@ -224,7 +231,7 @@ async function main() {
   } else {
     console.error(`Resultado parcial (${rows.length}) menor que o anterior (${prev}); mantendo o arquivo existente.`);
   }
-  fs.writeFileSync(OUT + 'nagumo.meta.json', JSON.stringify({ stats, requests, aborted, seconds: Math.round((Date.now() - t0) / 1000), ofertaDia: ofertaIds.size, produtos: rows.length }, null, 2));
+  fs.writeFileSync(OUT + 'nagumo.meta.json', JSON.stringify({ stats, requests, aborted, seconds: Math.round((Date.now() - t0) / 1000), ofertaDia: ofertaIds.size, precoBaixou: rows.filter((r) => /Preço baixou/.test(r.validityNote)).length, produtos: rows.length }, null, 2));
   console.log(`\nOK ${rows.length} produtos em ${requests} requisições, ${Math.round((Date.now() - t0) / 1000)}s${aborted ? ' (INCOMPLETO: ' + aborted + ')' : ''}`);
   await browser.close();
   process.exit(aborted ? 2 : 0);

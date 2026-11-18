@@ -53,14 +53,18 @@ async function search(terms, page) {
   return { products: [], totalPages: 0 };
 }
 
-// Menor preço sem cartão da loja: oferta, app (Clube Extra, só CPF), "leve X pague Y" e desconto na Nª unidade.
+// Menor preço sem cartão da loja: oferta, app (Clube Extra, só CPF), "leve X pague Y", desconto na Nª unidade
+// e desconto percentual simples ("10% off", promotionPercentOffOnUnity 1, sem quantidade mínima). Nesse último
+// caso o site manda o preço final já pronto em promotion.unitPrice (ex.: R$ 7,69 -> R$ 6,92 com 10%); ele só vale
+// se for menor que o preço mostrado, senão o preço mostrado já traz o desconto.
 function priceOf(p) {
   const shown = Number(p.price);
   const regular = Number(p.priceFrom) > shown ? Number(p.priceFrom) : null;
   let price = shown, condition = null, ends = null;
   for (const pr of p.productPromotions || []) {
     ends = pr.endDate ? new Date(pr.endDate + (pr.endDate.endsWith('Z') ? '' : '-03:00')).toISOString() : ends;
-    if (pr.paymentFormName && /cart/i.test(pr.paymentFormName)) continue; // cartão da loja não conta
+    // cartão da loja não conta; o selo FIC é o "10% pagando com o Cartão Extra" e a API nem sempre preenche paymentFormName nele
+    if ((pr.paymentFormName && /cart/i.test(pr.paymentFormName)) || pr.promotionSealColor === 'FIC') continue;
     const buy = Number(pr.promotionQuantityBuy), pay = Number(pr.promotionQuantityPayFor);
     const nth = Number(pr.promotionPercentOffOnUnity), off = Number(pr.promotionPercentOff);
     if (buy > 1 && pay > 0 && pay < buy) {
@@ -69,6 +73,12 @@ function priceOf(p) {
     } else if (nth > 1 && off > 0) {
       const v = (shown * (nth - 1 + (1 - off / 100))) / nth;
       if (v < price) { price = v; condition = `cada levando ${nth} (${off}% off na ${nth}ª)`; }
+    } else if (!(buy > 1) && off > 0 && off < 100) {
+      // percentual simples: usa o preço pronto do site (unitPrice). Sem ele, só aplica o percentual que o próprio
+      // site informa se o preço mostrado não vier com "de" riscado (aí o desconto já está no preço mostrado)
+      const u = Number(pr.unitPrice);
+      const v = u > 0 ? u : regular ? shown : (shown * (100 - off)) / 100;
+      if (v < price) { price = v; condition = pr.appExclusive ? 'no app (Clube Extra, só CPF)' : null; }
     }
     if (pr.appExclusive && !condition) condition = 'no app (Clube Extra, só CPF)';
   }

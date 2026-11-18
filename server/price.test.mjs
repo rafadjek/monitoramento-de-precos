@@ -22,3 +22,7 @@ test('preço do quilo e condição sem valor não mudam o preço', () => {
   assert.equal(bestPrice(13.9, 'preço por kg').condition, 'preço por kg');
   assert.deepEqual(bestPrice(3.5, null), { price: 3.5, listPrice: null, condition: null });
 });
+
+test('preço de cooperado conta e mantém o normal como riscado', () => {
+  assert.deepEqual(bestPrice(13.79, 'R$ 11,99 para cooperado'), { price: 11.99, listPrice: 13.79, condition: 'para cooperado' });
+});

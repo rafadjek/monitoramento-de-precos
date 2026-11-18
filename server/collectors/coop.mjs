@@ -9,10 +9,13 @@ const BASE = 'https://www.coopsupermercado.com.br';
 // coopsprp = Ribeirão Pires (vendedores listados em /api/checkout/pub/regions?country=BRA&postalCode=09310000).
 const SELLER = process.env.COOP_SELLER || 'coopspbm';
 const REGION = Buffer.from(`SW#${SELLER}`).toString('base64');
+// Preço de cooperado: o site usa o canal de vendas 2 (vendedor "<loja>sc2"), que a mesma API devolve com
+// regionId = base64("SW#coopspbmsc2"). Pela regra do price.mjs cooperado conta (só pede ser cooperado).
+const REGION_COOP = Buffer.from(`SW#${SELLER}sc2`).toString('base64');
 const STORE_SCOPE = 'Coop Supermercado Barão de Mauá (preços da loja, via regionId do site)';
 const MARKET = 'Coop';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';
-const MAX_REQ = 600;
+const MAX_REQ = 800; // cada página é lida duas vezes (preço normal e de cooperado)
 const PAGE_CAP = 2400; // a API não entrega mais que ~2.500 itens por consulta
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const strip = (s) => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -38,13 +41,13 @@ function categorize(dept, catPath, name) {
 }
 
 let requests = 0;
-async function api(path) {
+async function api(path, region = REGION) {
   if (requests >= MAX_REQ) throw new Error('teto de requisições atingido');
   for (let t = 0; t < 3; t++) {
     requests++;
     await sleep(1000);
     const sep = path.includes('?') ? '&' : '?';
-    const r = await fetch(`${BASE}/api/io/_v/api/intelligent-search/${path}${sep}regionId=${encodeURIComponent(REGION)}`, { headers: { 'user-agent': UA } });
+    const r = await fetch(`${BASE}/api/io/_v/api/intelligent-search/${path}${sep}regionId=${encodeURIComponent(region)}`, { headers: { 'user-agent': UA } });
     if (r.status === 403 || r.status === 429) throw new Error(`bloqueio HTTP ${r.status}`);
     if (r.ok) return r.json();
     if (r.status < 500) throw new Error(`HTTP ${r.status} em ${path}`);
@@ -55,6 +58,24 @@ async function api(path) {
 async function categoryTree() {
   const r = await fetch(`${BASE}/sitemap/category-0.xml`, { headers: { 'user-agent': UA } });
   return [...(await r.text()).matchAll(/<loc>https:\/\/www\.coopsupermercado\.com\.br\/([^<]+)<\/loc>/g)].map((m) => m[1]);
+}
+
+// Cooperado: mesma página da busca no canal 2. Guarda o menor preço de cada produto (productId -> oferta).
+// Falha que não seja bloqueio só deixa a página sem preço de cooperado (nunca inventa).
+const coopOffers = new Map();
+async function coopPage(path) {
+  try {
+    const d = await api(path, REGION_COOP);
+    for (const p of d.products || []) {
+      const it = p.items?.[0];
+      const se = it?.sellers?.find((x) => x.sellerDefault) ?? it?.sellers?.[0];
+      const co = se?.commertialOffer;
+      if (co && co.Price > 0 && co.AvailableQuantity > 0) coopOffers.set(p.productId, { price: co.Price, listPrice: co.ListPrice });
+    }
+  } catch (e) {
+    if (/bloqueio|teto/.test(e.message)) throw e;
+    console.warn('cooperado: página sem preço de cooperado:', e.message);
+  }
 }
 
 const facetPath = (levels) => levels.map((l, i) => `category-${i + 1}/${l}`).join('/');
@@ -71,6 +92,7 @@ async function walk(levels, all, cats, dept, seen) {
   let page = 1;
   let data = first;
   while (data.products?.length) {
+    await coopPage(`product_search/${facetPath(levels)}?count=50&page=${page}`);
     for (const p of data.products) if (!seen.has(p.productId)) { seen.add(p.productId); all.push({ p, dept }); }
     if (page * 50 >= total || page >= 50) break;
     page++;
@@ -83,7 +105,26 @@ function toRow(p, dept, collectedAt, storeScope) {
   const se = it?.sellers?.find((s) => s.sellerDefault) ?? it?.sellers?.[0];
   const co = se?.commertialOffer;
   if (!co || !(co.Price > 0) || !(co.AvailableQuantity > 0)) return null;
-  const promo = co.ListPrice > co.Price;
+  // Produto vendido por peso: a API traz o preço do kg (Price) e o site mostra o preço do item,
+  // "R$ 6,29 / 0.6 kg (R$ 10,49 /kg)" = preço do kg x unitMultiplier, cortado nos centavos (não arredondado).
+  // Só usa o unitMultiplier que a própria API informa; kg com multiplicador 1 fica "preço por kg".
+  const mu = String(it.measurementUnit || '').toLowerCase();
+  const mult = Number(it.unitMultiplier);
+  const byWeight = (mu === 'kg' || mu === 'g') && mult > 0 && mult !== 1;
+  const scale = (v) => (byWeight ? Math.floor(Math.round(v * mult * 1e4) / 100) / 100 : v);
+  const price = scale(co.Price);
+  const listPrice = scale(co.ListPrice);
+  const promo = listPrice > price;
+  const brl = (n) => 'R$ ' + n.toFixed(2).replace('.', ',');
+  let condition = null;
+  const coop = coopOffers.get(p.productId);
+  if (coop) {
+    const cp = scale(coop.price);
+    if (cp > 0 && cp < price) condition = `${brl(cp)} para cooperado`;
+  }
+  let unitPrice = null;
+  if (mu === 'kg' && byWeight) unitPrice = `${brl(co.Price)} /kg`;
+  else if (mu === 'kg') unitPrice = 'preço por kg';
   const until = co.PriceValidUntil && new Date(co.PriceValidUntil).getUTCFullYear() < 2100 ? co.PriceValidUntil : null;
   const sizeM = [...String(p.productName).matchAll(/(\d+(?:[.,]\d+)?)\s?(kg|g|ml|l|un)\b/gi)].pop();
   return {
@@ -93,9 +134,9 @@ function toRow(p, dept, collectedAt, storeScope) {
     brand: p.brand || null,
     ean: it?.ean ? String(it.ean).trim() : null,
     size: sizeM ? `${sizeM[1].replace(',', '.')}${sizeM[2].toLowerCase()}` : null,
-    price: co.Price,
-    listPrice: promo ? co.ListPrice : null,
-    unitPrice: null,
+    price,
+    listPrice: promo ? listPrice : null,
+    unitPrice,
     category: categorize(dept, p.categories?.[0] ?? '', p.productName),
     categoryRaw: (p.categories?.[0] ?? '').replace(/^\/|\/$/g, '').replace(/\//g, ' > ') || null,
     imageUrl: it.images?.[0]?.imageUrl ?? null,
@@ -103,6 +144,7 @@ function toRow(p, dept, collectedAt, storeScope) {
     validFrom: null,
     validUntil: until,
     validityNote: until ? null : 'o site não informa até quando o preço vale',
+    condition,
     storeScope,
     collectedAt,
   };
