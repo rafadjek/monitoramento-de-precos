@@ -75,6 +75,15 @@ function priceOf(h) {
     const min = Number(pp.minQuantity) || 1;
     if (live(pp) && v > 0 && v < price) { price = v; condition = min > 1 ? `cada levando ${min} ou mais` : null; }
   }
+  // Promoção de quantidade (MORE_FOR_LESS, "Leve 3 Pague 2": buy=3, gift=1): o preço continua o unitário normal;
+  // a regra só vai na condição, como no Extra ("leve X pague Y"). Sem divisão de preço.
+  for (const pp of [].concat(h.promotions || [])) {
+    const buy = Number(pp.buy), gift = Number(pp.gift);
+    if (live(pp) && pp.promotionType === 'MORE_FOR_LESS' && pp.discountType === 'FREE' && buy > 1 && gift >= 1 && gift < buy) {
+      const regra = `leve ${buy} pague ${buy - gift}`;
+      condition = condition ? `${condition}; ${regra}` : regra;
+    }
+  }
   const listPrice = regular > price ? regular : null;
   const ends = [].concat(h.personaPromotions || [], h.promotions || []).filter(live).map((x) => x.endDate).filter(Boolean).sort()[0] || null;
   return { price: Math.round(price * 100) / 100, listPrice, condition, validUntil: listPrice ? ends : null };
@@ -91,8 +100,13 @@ for (const dept of depts) {
     const j = await search(`categories=${encodeURIComponent(dept)}&from=${from}&search=`);
     total = Math.min(j.total ?? 0, 10000);
     for (const h of j.hits || []) {
-      if (h.type && h.type !== 'PRODUCT') continue;
+      // PRODUCT (por unidade) e VARIABLE (peso variável, vendido por kg: carnes, hortifrúti)
+      if (h.type && h.type !== 'PRODUCT' && h.type !== 'VARIABLE') continue;
       const pr = priceOf(h);
+      // Item por kg: o preço da API é o do kg. Mesmo formato do Extra/Coop/folhetos: unitPrice e condição "preço por kg"
+      // (o site mostra a condição; o peso do nome, como "500g (Peso Aproximado)", é só a porção, não o tamanho).
+      const porKg = h.type === 'VARIABLE' || String(h.saleUnit).toUpperCase() === 'KG';
+      if (porKg) pr.condition = pr.condition ? `${pr.condition}; preço por kg` : 'preço por kg';
       if (!h.name || !(pr.price > 0) || h.quantity?.inStock === 0) continue;
       const cat = (h.categories || []).filter((c) => c.startsWith(`store${STORE}:`)).map((c) => c.split(':')[1]).sort((a, b) => b.length - a.length)[0] || dept.split(':')[1];
       rows.set(String(h.id), {
@@ -104,7 +118,7 @@ for (const dept of depts) {
         size: null,
         price: pr.price,
         listPrice: pr.listPrice,
-        unitPrice: h.saleUnit && h.saleUnit !== 'UN' ? `preço por ${h.saleUnit.toLowerCase()}` : null,
+        unitPrice: porKg ? 'preço por kg' : h.saleUnit && h.saleUnit !== 'UN' ? `preço por ${h.saleUnit.toLowerCase()}` : null,
         category: categoryOf(cat),
         categoryRaw: cat,
         imageUrl: h.image || null,

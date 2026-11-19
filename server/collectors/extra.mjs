@@ -1,56 +1,51 @@
-// Extra Mercado (GPA). As lojas de Mauá e Ribeirão Pires não vendem pelo site; a loja online mais
-// próxima é a 1867 Demarchi, em São Bernardo do Campo (storeId 1162, 12,6 km de Mauá), achada pela
-// própria API de retirada do site (delivery-v2/ecom/driveThru com a latitude/longitude de Mauá).
-// A busca (POST api.vendas.gpa.digital/ex/search/search) não aceita termo vazio e devolve 21 por página,
-// então o coletor busca uma lista de itens comuns de mercado e junta tudo sem repetir.
+// Extra Mercado (GPA). As lojas físicas de Mauá e Ribeirão Pires não vendem pelo site. A loja online mais
+// próxima que entrega na região é a de Ribeirão Pires: loja 5675, storeId 1643, R. João Domingues de
+// Oliveira, 194. Ela só faz ENTREGA (taxa de R$ 19,90), sem retirada; Mauá não tem entrega. Tem preço próprio
+// (só parte dos preços coincide com a antiga loja 1162 de São Bernardo) e cerca de 8,7 mil itens.
+// Coleta por categoria: POST api.vendas.gpa.digital/ex/search/category-page, 100 itens por página, um
+// departamento por vez (a busca por termos perdia ~20% do catálogo). A API não traz o EAN; ele vem das
+// páginas dos produtos (extra-ean.mjs).
 // Saída: server/data/extraido/extra.json
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { fillEans } from './extra-ean.mjs';
 
 const OUT = fileURLToPath(new URL('../data/extraido/extra.json', import.meta.url));
-const API = 'https://api.vendas.gpa.digital/ex/search/search';
+const API = 'https://api.vendas.gpa.digital/ex/search/category-page';
 const SITE = 'https://www.extramercado.com.br';
-const STORE_ID = 1162;
+const STORE_ID = 1643;
 const MARKET = 'Extra';
-const SCOPE = 'Loja online 1867 Demarchi, São Bernardo do Campo (as lojas de Mauá e Ribeirão Pires não vendem pelo site)';
+const SCOPE = 'Loja online de Ribeirão Pires (loja 5675, R. João Domingues de Oliveira, 194): só entrega, R$ 19,90; sem retirada. As lojas de Mauá e Ribeirão Pires não vendem pelo site';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
-const PER_PAGE = 21;
-const MAX_PAGES = 12;
+const PER_PAGE = 100;
+const MAX_PAGES = 120; // freio por departamento (o maior tem ~45 páginas)
 const PAUSE_MS = 1000;
-const MAX_REQ = 2500;
-const TERMS = `arroz, feijão, macarrão, espaguete, farinha de trigo, farinha de mandioca, açúcar, sal, óleo, azeite, vinagre, café, filtro de café,
-achocolatado, leite, leite condensado, creme de leite, manteiga, margarina, requeijão, queijo, presunto, mortadela, salame, iogurte,
-bebida láctea, ovos, pão, bisnaguinha, torrada, biscoito, bolacha, cookies, wafer, bolo, chocolate, bombom, bala, chiclete, pipoca,
-salgadinho, batata palha, amendoim, castanha, granola, aveia, cereal, geleia, mel, doce de leite, gelatina, pudim, mistura para bolo,
-fermento, leite em pó, fórmula infantil, papinha, molho de tomate, extrato de tomate, ketchup, maionese, mostarda, tempero, caldo,
-azeitona, palmito, milho, ervilha, atum, sardinha, salsicha, linguiça, bacon, hambúrguer, nuggets, empanado, frango, carne bovina,
-carne moída, costela, peixe, tilápia, camarão, lasanha, pizza, pão de queijo, batata congelada, sorvete, polpa de fruta, refrigerante,
-coca-cola, guaraná, suco, néctar, água mineral, água de coco, chá, energético, isotônico, cerveja, vinho, espumante, vodka, whisky,
-cachaça, gin, licor, sabão em pó, sabão líquido, lava-roupas, amaciante, alvejante, água sanitária, desinfetante, detergente,
-lava-louças, esponja, limpador, multiuso, limpa vidros, cera, saco de lixo, papel toalha, guardanapo, papel alumínio, filme plástico,
-inseticida, repelente, papel higiênico, sabonete, sabonete líquido, shampoo, condicionador, creme para cabelo, creme dental,
-escova dental, fio dental, enxaguante bucal, desodorante, absorvente, protetor diário, fralda, lenço umedecido, algodão, hastes,
-aparelho de barbear, protetor solar, hidratante, ração cachorro, ração gato, areia sanitária, pilha, lâmpada, vela, fósforo, carvão,
-copo descartável, prato descartável`.split(/\s*,\s*/).map((t) => t.trim()).filter(Boolean);
+const MAX_REQ = 400;
+// departamento do site -> nome para a categoria fina (server/category.mjs lê categoryRaw) e categoria grossa
+const DEPTS = [
+  ['alimentos', 'Alimentos', 'alimenticios'], ['bebidas', 'Bebidas', 'alimenticios'],
+  ['limpeza', 'Limpeza', 'limpeza'], ['descartaveis', 'Descartáveis', 'limpeza'],
+  ['bebe-e-crianca', 'Bebê e criança', 'alimenticios'], ['perfumaria', 'Perfumaria', 'higiene'],
+  ['petshop', 'Petshop', 'alimenticios'], ['bazar', 'Bazar', 'alimenticios'], ['textil', 'Têxtil', 'alimenticios'],
+];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let requests = 0;
-async function search(terms, page) {
+async function fetchPage(multiCategory, page) {
   if (++requests > MAX_REQ) throw new Error(`teto de ${MAX_REQ} requisições`);
   await sleep(PAUSE_MS);
-  const body = { terms, page, sortBy: 'relevance', resultsPerPage: PER_PAGE, allowRedirect: true, storeId: STORE_ID, department: 'ecom', customerPlus: true, partner: 'fallback' };
+  const body = { partner: 'linx', page, resultsPerPage: PER_PAGE, multiCategory, sortBy: 'relevance', department: 'ecom', storeId: STORE_ID, customerPlus: true, filters: [] };
   for (let t = 1; t <= 3; t++) {
     const r = await fetch(API, {
       method: 'POST', body: JSON.stringify(body), signal: AbortSignal.timeout(30000),
       headers: { 'User-Agent': UA, 'Content-Type': 'application/json', Accept: 'application/json', Origin: SITE, Referer: SITE + '/' },
     }).catch((e) => ({ ok: false, status: 0, e }));
     if (r.ok) return r.json();
-    if (r.status === 404) return { products: [], totalPages: 0 }; // termo sem resultado
+    if (r.status === 404) return { products: [], totalPages: 0 }; // departamento sem itens
     if (r.status === 403 || r.status === 429) throw new Error(`bloqueio ${r.status}`);
     await sleep(3000 * t);
   }
-  return { products: [], totalPages: 0 };
+  throw new Error(`falha repetida em ${multiCategory} página ${page}`); // melhor não gravar do que gravar catálogo cortado
 }
 
 // Menor preço sem cartão da loja: oferta, app (Clube Extra, só CPF), "leve X pague Y", desconto na Nª unidade
@@ -86,32 +81,40 @@ function priceOf(p) {
   return { price: Math.round(price * 100) / 100, listPrice: list, condition, validUntil: list ? ends : null };
 }
 
-const CAT = [[/sab[aã]o|amaciante|alvejante|sanit[aá]ria|desinfet|detergente|lava|esponja|limpa|multiuso|cera|lixo|inseticida|papel toalha|guardanapo/i, 'limpeza'],
-  [/higi[eê]nico|sabonete|shampoo|condicionador|creme de cabelo|dental|enxaguante|desodorante|absorvente|protetor|fralda|len[cç]o|algod|hastes|barbear|hidratante/i, 'higiene']];
-const categoryOf = (term) => (CAT.find(([re]) => re.test(term)) || [null, 'alimenticios'])[1];
+// categoria grossa: o departamento manda em limpeza/perfumaria; nas fraldas/higiene do "bebê e criança" e em
+// itens de limpeza soltos em outros departamentos vale o nome
+const HIG = /higi[eê]nico|sabonete|shampoo|condicionador|dental|enxaguante|desodorante|absorvente|protetor solar|fralda|len[cç]o umedecido|algod|hastes|barbear|hidratante/i;
+const LIMP = /sab[aã]o em p[óo]|sab[aã]o l[ií]quido|amaciante|alvejante|sanit[aá]ria|desinfet|detergente|lava[- ]?(roupas|lou[cç]as)|esponja|multiuso|saco de lixo|papel toalha|inseticida/i;
+function categoryOf(dept, name) {
+  if (dept[2] !== 'alimenticios') return dept[2];
+  if (dept[0] === 'bebe-e-crianca' || dept[0] === 'bazar') return HIG.test(name) ? 'higiene' : LIMP.test(name) ? 'limpeza' : 'alimenticios';
+  return LIMP.test(name) && dept[0] !== 'alimentos' ? 'limpeza' : 'alimenticios';
+}
 
 const collectedAt = new Date().toISOString();
 const rows = new Map();
-for (const term of TERMS) {
-  let page = 1, pages = 1;
+const totais = {};
+for (const dept of DEPTS) {
+  let page = 1, pages = 1, antes = rows.size;
   do {
-    const j = await search(term, page);
+    const j = await fetchPage(dept[0], page);
     pages = Math.min(j.totalPages || 0, MAX_PAGES);
     for (const p of j.products || []) {
       if (!p.name || !(p.price > 0) || p.stock === false || rows.has(String(p.id))) continue;
       const pr = priceOf(p);
+      const name = p.name.replace(/\s+/g, ' ').trim();
       rows.set(String(p.id), {
         market: MARKET,
         externalId: String(p.id),
-        name: p.name.replace(/\s+/g, ' ').trim(),
+        name,
         brand: p.brand || null,
         ean: null,
         size: null,
         price: pr.price,
         listPrice: pr.listPrice,
         unitPrice: p.variableWeight ? 'preço por kg' : null,
-        category: categoryOf(term),
-        categoryRaw: `busca: ${term}`,
+        category: categoryOf(dept, name),
+        categoryRaw: dept[1],
         imageUrl: p.productImages?.[0] ? 'https://static.extramercado.com.br' + p.productImages[0] : null,
         productUrl: p.urlDetails || null,
         validFrom: null,
@@ -124,10 +127,11 @@ for (const term of TERMS) {
     }
     page++;
   } while (page <= pages);
-  if (rows.size && TERMS.indexOf(term) % 20 === 0) console.log(`  ... "${term}": ${rows.size} produtos, ${requests} requisições`);
+  totais[dept[0]] = rows.size - antes;
+  console.log(`  ... ${dept[0]}: ${totais[dept[0]]} novos, ${rows.size} no total, ${requests} requisições`);
 }
 const out = [...rows.values()];
 if (out.length < 500) { console.error(`extra: só ${out.length} produtos; não grava`); process.exit(1); }
 await fillEans(out);
 fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
-console.log(`extra: ${out.length} produtos (${TERMS.length} termos), ${out.filter((o) => o.listPrice).length} em oferta, ${requests} requisições`);
+console.log(`extra: ${out.length} produtos (${DEPTS.length} departamentos), ${out.filter((o) => o.listPrice).length} em oferta, ${requests} requisições`);

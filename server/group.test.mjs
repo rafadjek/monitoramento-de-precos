@@ -137,3 +137,14 @@ test('marca deduzida do nome para quem não informa marca (Semar, Spani, encarte
   // com a marca deduzida, nome quase igual (só palavra SOFT a mais) junta
   assert.ok(groupOffers([...comMarca, b('X', 'Óleo de Soja Liza 900ml', 'Liza', 7.2), sem[0]]).some((g) => g.idx.includes(comMarca.length + 1) && g.idx.includes(comMarca.length)));
 });
+
+test('remédio de farmácia só agrupa pelo EAN (Fase 14)', () => {
+  const f = (market, name, ean = null) => ({ market, name, size: null, category: 'farmacia', ean });
+  assert.ok(!grouped(f('A', 'Dipirona Monoidratada 500mg EMS 10 Comprimidos'), f('B', 'Dipirona Monoidratada 500mg EMS 10 Comprimidos')));
+  assert.ok(grouped(f('A', 'Dipirona 500mg EMS 10 Comprimidos', '7896004713175'), f('B', 'Dipirona Monoidratada EMS 10 cp', '7896004713175')));
+});
+
+test('item vendido por kg não agrupa com pacote do mesmo peso', () => {
+  const kg = { market: 'A', name: 'Bisteca Suína Sadia 500g', size: null, condition: 'preço por kg' };
+  assert.ok(!grouped(kg, o('B', 'Bisteca Suína Sadia 500g')));
+});

@@ -190,7 +190,8 @@ async function judge(pairs, examples) {
 const offers = [];
 for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !/encartes|meta|verificacao|leitura|juiz/.test(x))) {
   const a = JSON.parse(fs.readFileSync(path.join(IN, f), 'utf8'));
-  if (Array.isArray(a)) offers.push(...a.filter((o) => o && o.name && o.price >= 0.1 && o.price < 20000));
+  // farmácia fica fora do juiz por enquanto (Fase 14): junta com os mercados só pelo EAN, sem gastar cota
+  if (Array.isArray(a)) offers.push(...a.filter((o) => o && o.name && o.price >= 0.1 && o.price < 20000 && o.segment !== 'farmacia'));
 }
 const imageOf = new Map(offers.filter((o) => o.imageUrl).map((o) => [offerKey(o), o.imageUrl]));
 const candImgs = new Map();
@@ -329,7 +330,9 @@ if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini
   // primeiro os pares em que um lado não tem EAN (Nagumo, Semar, encartes), depois menos palavras diferentes
   // ordem: encartes primeiro (poucos e valiosos); depois a 1ª tentativa de cada oferta antes da 2ª; depois menos palavras diferentes
   const CATALOGOS = new Set(['Atacadão', 'Coop', 'Extra', 'Spani', 'Nagumo', 'Semar']);
-  const encarte = (c) => !CATALOGOS.has(offers[c.ia].market) || !CATALOGOS.has(offers[c.ib].market);
+  // item de jornal/encarte dentro de um mercado de catálogo (jornal do Spani) também conta como encarte
+  const deEncarte = (o) => o.source === 'encarte' || !CATALOGOS.has(o.market);
+  const encarte = (c) => deEncarte(offers[c.ia]) || deEncarte(offers[c.ib]);
   const vez = new Map(); // oferta -> quantos pares dela já vieram antes
   const fila = [...cand.values()].sort((x, y) => x.d - y.d);
   for (const c of fila) { c.vez = Math.max(vez.get(c.ia) ?? 0, vez.get(c.ib) ?? 0); vez.set(c.ia, (vez.get(c.ia) ?? 0) + 1); vez.set(c.ib, (vez.get(c.ib) ?? 0) + 1); }

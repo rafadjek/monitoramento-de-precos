@@ -50,6 +50,10 @@ Regras:
 - validFrom e validUntil = período de validade impresso na página ("ofertas válidas de 03/11 a 09/11/2026"), no formato AAAA-MM-DD; null se a página não mostrar. Se o ano não aparecer, use ${new Date().getFullYear()}.
 Responda só com o objeto JSON.`;
 
+// Só para tabloides cujo manifesto traz blockValidity (Joanin): cada bloco colorido tem a sua faixa de validade.
+const BLOCK_RULE = `
+- Este encarte tem BLOCOS com validade própria: faixas como "OFERTAS VÁLIDAS DE 20/11 A 22/11/2026 - SEXTA/SÁBADO/DOMINGO" valem só para os produtos daquele bloco (os que aparecem logo abaixo da faixa, até a próxima faixa). Em cada produto, preencha validFrom e validUntil (AAAA-MM-DD) com a faixa do bloco onde ele está. Se a página tem uma faixa só (ou o produto não está sob nenhuma faixa), deixe validFrom e validUntil do produto como null: vale a validade geral. Nunca copie a faixa de um bloco para produtos de outro. O validFrom/validUntil do topo do objeto continua sendo a validade geral (a faixa mais ampla/principal).`;
+
 const SCHEMA = {
   type: 'OBJECT',
   properties: {
@@ -65,6 +69,7 @@ const SCHEMA = {
           condition: { type: 'STRING', nullable: true },
           others: { type: 'ARRAY', items: { type: 'OBJECT', properties: { price: { type: 'NUMBER' }, condition: { type: 'STRING' } }, required: ['price', 'condition'] } },
           category: { type: 'STRING', enum: ['alimenticios', 'higiene', 'limpeza', 'outros'] },
+          validFrom: { type: 'STRING', nullable: true }, validUntil: { type: 'STRING', nullable: true },
           box: { type: 'ARRAY', items: { type: 'INTEGER' } },
         },
         required: ['name', 'price', 'category'],
@@ -74,9 +79,43 @@ const SCHEMA = {
   required: ['products'],
 };
 
+// Imagem cortada no meio (o servidor da Baronesa às vezes entrega só 229.376 bytes = 224 KiB, sem avisar): o formato
+// tem marcador de fim e ele falta. Formato desconhecido (ou HTML de erro) não é tratado aqui: segue o fluxo normal.
+export const TRUNC_SUSPECT_SIZE = 229376;
+export function isTruncated(buf) {
+  if (!buf || buf.length < 4) return true;
+  let end = buf.length;
+  while (end > 0 && buf[end - 1] === 0) end--; // alguns servidores completam com zeros
+  if (buf[0] === 0xff && buf[1] === 0xd8) return !(buf[end - 2] === 0xff && buf[end - 1] === 0xd9); // JPEG: termina em FFD9
+  if (buf[0] === 0x89 && buf.subarray(1, 4).toString() === 'PNG') return buf.subarray(buf.length - 8, buf.length - 4).toString() !== 'IEND'; // PNG: chunk IEND + CRC
+  if (buf.subarray(0, 4).toString() === 'RIFF' && buf.subarray(8, 12).toString() === 'WEBP') return buf.readUInt32LE(4) + 8 > buf.length; // WebP: tamanho declarado
+  if (buf.subarray(0, 4).toString() === '%PDF') return !buf.subarray(Math.max(0, buf.length - 1024)).toString('latin1').includes('%%EOF');
+  return false;
+}
+// Baixa (getBuf) até vir inteira: tenta de novo depois de uma pausa (pausa cresce a cada tentativa). Se continuar
+// cortada, lança erro (a página não vai para o leitor, não gasta cota) e registra o aviso do GitHub Actions.
+export async function fetchComplete(getBuf, url, { tries = Number(process.env.TRUNC_TRIES || 3), pauseMs = Number(process.env.TRUNC_PAUSE_MS || 20000), sleepFn = sleep } = {}) {
+  let buf;
+  for (let i = 1; i <= tries; i++) {
+    buf = await getBuf();
+    if (!isTruncated(buf)) return buf;
+    console.warn(`  imagem cortada (${buf.length} bytes${buf.length === TRUNC_SUSPECT_SIZE ? ', tamanho típico de corte do servidor' : ''}), tentativa ${i}/${tries}`);
+    if (i < tries) await sleepFn(pauseMs * i);
+  }
+  console.log(`::warning::imagem de encarte continua cortada após ${tries} tentativas, não enviada ao leitor: ${url}`);
+  throw new Error(`imagem cortada (${buf.length} bytes) após ${tries} tentativas`);
+}
+
 async function download(url, referer) {
   const f = path.join(CACHE_PAGES, sha1(url));
-  if (fs.existsSync(f)) return fs.readFileSync(f);
+  if (fs.existsSync(f)) {
+    const c = fs.readFileSync(f);
+    if (!isTruncated(c)) return c;
+    fs.rmSync(f); // cache antigo com imagem cortada: baixa de novo
+  }
+  return fetchComplete(() => rawDownload(url, referer, f), url);
+}
+async function rawDownload(url, referer, f) {
   const headers = { 'User-Agent': UA, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' };
   if (referer) headers.Referer = referer;
   let r = await fetch(url, { headers, signal: AbortSignal.timeout(45000) });
@@ -86,17 +125,18 @@ async function download(url, referer) {
   }
   if (!r.ok) throw new Error(`download HTTP ${r.status}`);
   const buf = Buffer.from(await r.arrayBuffer());
+  if (isTruncated(buf)) return buf; // cortada: não vai para o cache; fetchComplete decide
   fs.mkdirSync(CACHE_PAGES, { recursive: true });
   fs.writeFileSync(f, buf);
   return buf;
 }
 
 let modelIdx = 0;
-async function askGemini(buf, mime) {
+async function askGemini(buf, mime, prompt = PROMPT) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error('sem GEMINI_API_KEY');
   const body = {
-    contents: [{ parts: [{ text: PROMPT }, { inline_data: { mime_type: mime, data: buf.toString('base64') } }] }],
+    contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: mime, data: buf.toString('base64') } }] }],
     generationConfig: { temperature: 0, responseMimeType: 'application/json', responseSchema: SCHEMA },
   };
   let last = '';
@@ -131,14 +171,14 @@ async function askGemini(buf, mime) {
   throw new Error(`gemini: limite de uso atingido (${last})`);
 }
 
-async function askOpenRouter(buf, mime) {
+async function askOpenRouter(buf, mime, prompt = PROMPT) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) throw new Error('sem OPENROUTER_API_KEY');
   const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(120000),
     body: JSON.stringify({
       model: 'openrouter/free', temperature: 0,
-      messages: [{ role: 'user', content: [{ type: 'text', text: PROMPT }, { type: 'image_url', image_url: { url: `data:${mime};base64,${buf.toString('base64')}` } }] }],
+      messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image_url', image_url: { url: `data:${mime};base64,${buf.toString('base64')}` } }] }],
     }),
   });
   if (!r.ok) throw new Error(`openrouter ${r.status}`);
@@ -148,8 +188,11 @@ async function askOpenRouter(buf, mime) {
 
 let newReads = 0;
 // key: identificador estável da imagem (o endereço do Instagram muda a cada consulta; a chave é o post)
-async function readPage(url, referer, key = url) {
-  const f = path.join(CACHE_READ, sha1(key + '|' + READ_VERSION) + '.json');
+// blockValidity: tabloide com faixas de validade por bloco (Joanin). Muda o prompt e a chave do cache só desses encartes,
+// então as leituras em cache dos outros mercados não são refeitas.
+async function readPage(url, referer, key = url, blockValidity = false) {
+  const prompt = blockValidity ? PROMPT.replace('Responda só com o objeto JSON.', BLOCK_RULE.trim() + ' Responda só com o objeto JSON.') : PROMPT;
+  const f = path.join(CACHE_READ, sha1(key + '|' + READ_VERSION + (blockValidity ? '|blocos' : '')) + '.json');
   if (fs.existsSync(f)) return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true };
   if (newReads >= MAX_NEW) throw new Error('teto de páginas novas desta execução');
   if (Date.now() > DEADLINE) throw new Error('prazo da rodada esgotado; fica para a próxima');
@@ -158,16 +201,28 @@ async function readPage(url, referer, key = url) {
   const mime = buf.subarray(0, 4).toString() === '%PDF' ? 'application/pdf' : buf[0] === 0x89 ? 'image/png' : buf[0] === 0x52 ? 'image/webp' : 'image/jpeg';
   newReads++;
   let res;
-  try { res = await askGemini(buf, mime); }
+  try { res = await askGemini(buf, mime, prompt); }
   catch (e) {
     console.warn('  gemini falhou:', e.message);
-    try { res = await askOpenRouter(buf, mime); }
+    try { res = await askOpenRouter(buf, mime, prompt); }
     catch (e2) { throw new Error(`${e.message} | reserva: ${e2.message}`); }
   }
   const page = { validFrom: res.validFrom ?? null, validUntil: res.validUntil ?? null, products: res.products ?? [], model: res.model, readAt: new Date().toISOString() };
   fs.mkdirSync(CACHE_READ, { recursive: true });
   fs.writeFileSync(f, JSON.stringify(page));
   return { ...page, cached: false };
+}
+
+// Validade própria de um produto (bloco do tabloide). Vale só se for uma data coerente: dentro da janela geral do
+// encarte (um bloco nunca dura mais que o tabloide) e com início <= fim; do contrário usa a validade geral.
+// geral = { validFrom, validUntil } em ISO (já convertidas por startIso/endIso). Devolve { validFrom, validUntil }.
+export function itemValidity(it, geral) {
+  let from = startIso(it.validFrom), until = endIso(it.validUntil);
+  const gF = geral.validFrom ? Date.parse(geral.validFrom) : -Infinity, gU = geral.validUntil ? Date.parse(geral.validUntil) : Infinity;
+  if (from && (Date.parse(from) < gF || Date.parse(from) > gU)) from = null;
+  if (until && (Date.parse(until) > gU || Date.parse(until) < gF)) until = null;
+  if (from && until && Date.parse(from) > Date.parse(until)) { from = null; until = null; }
+  return { validFrom: from ?? geral.validFrom, validUntil: until ?? geral.validUntil };
 }
 
 // "2026-11-09" em horário de Brasília: início às 00:00, fim às 23:59:59.
@@ -240,7 +295,7 @@ async function main() {
         console.log(`${enc.market} ${enc.offerId} página ${i + 1}/${enc.images.length}`);
         if (DRY) continue;
         try {
-          const p = await readPage(url, enc.referer, enc.imageKeys?.[i] ?? url);
+          const p = await readPage(url, enc.referer, enc.imageKeys?.[i] ?? url, !!enc.blockValidity);
           pages.push({ url, ...p });
           report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model });
           console.log(`  ${p.products.length} produtos${p.cached ? ' (cache)' : ` (${p.model})`}`);
@@ -263,20 +318,28 @@ async function main() {
       const encFrom = mode(pages.map((p) => p.validFrom)), encUntil = mode(pages.map((p) => p.validUntil));
       for (const p of pages) {
         const validFrom = enc.validFrom ?? startIso(p.validFrom ?? encFrom);
-        const validUntil = enc.validUntil ?? endIso(p.validUntil ?? encUntil);
+        // comércio de bairro (social.mjs): arte sem data impressa vale até fallbackUntil (3 dias após o post)
+        const printed = endIso(p.validUntil ?? encUntil);
+        const validUntil = enc.validUntil ?? printed ?? enc.fallbackUntil ?? null;
+        const usouFallback = !enc.validUntil && !printed && !!enc.fallbackUntil;
         if (!validUntil) { console.warn(`  sem validade, descartando a página ${p.url}`); continue; }
         if (new Date(validUntil) < now) continue;
         for (const it of dropDerived(p.products.filter(ok).map(normalize))) {
+          // faixa de validade do bloco (só em encarte com blockValidity); sem ela vale a geral
+          const v = enc.blockValidity ? itemValidity(it, { validFrom, validUntil }) : { validFrom, validUntil };
+          if (new Date(v.validUntil) < now) continue; // bloco já vencido
           const id = sha1(`${enc.market}|${it.name.trim().toLowerCase()}|${it.price}`).slice(0, 12);
           rows[enc.market].set(id, {
             market: enc.market, externalId: id, name: it.name.trim(), brand: it.brand ?? null, ean: null, size: it.size ?? null,
             price: it.price, listPrice: it.listPrice > it.price ? it.listPrice : null, unitPrice: null,
-            category: it.category ?? 'outros', categoryRaw: null,
+            category: it.category ?? 'outros', categoryRaw: enc.categoryRaw ?? null,
+            ...(enc.section ? { section: enc.section } : {}), // ex.: 'farmacia', para filtrar depois
+            ...(enc.segment ? { segment: enc.segment } : {}), // 'bairro' (comércio de bairro do Instagram)
             // de PDF não dá para recortar a foto: fica sem imagem e o link abre o PDF
             imageUrl: isPdf(p.url) ? null : p.url, imageBox: !isPdf(p.url) && Array.isArray(it.box) && it.box.length === 4 ? it.box : null,
             productUrl: enc.link ?? p.url, source: 'encarte', condition: bestCond(it),
-            validFrom, validUntil,
-            validityNote: enc.validityNote ?? null,
+            validFrom: v.validFrom, validUntil: v.validUntil,
+            validityNote: usouFallback ? (enc.fallbackNote ?? null) : (enc.validityNote ?? null),
             storeScope: enc.storeScope ?? `Encarte: ${(enc.stores ?? []).join(', ') || 'lojas não informadas'}`,
             collectedAt: now.toISOString(),
           });

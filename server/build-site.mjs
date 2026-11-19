@@ -17,7 +17,7 @@ const index = { generatedAt: new Date().toISOString(), markets: [], retired: [] 
 // Trava contra preço velho: mercado de catálogo (coletado do site, sem validade por oferta) cuja coleta
 // mais recente passou do limite sai da comparação, em vez de mostrar preço antigo como se fosse de hoje.
 // Encarte e Instagram já saem pela validade de cada oferta. Limite em horas; MAX_AGE_HOURS sobrescreve (teste).
-const CATALOG_MARKETS = new Set(['Atacadão', 'Spani', 'Coop', 'Nagumo', 'Semar', 'Extra']);
+const CATALOG_MARKETS = new Set(['Atacadão', 'Spani', 'Coop', 'Nagumo', 'Semar', 'Extra', 'Drogaria São Paulo', 'Farma Conde', 'Tony BRJ Carnes']);
 const MAX_AGE_HOURS = Number(process.env.MAX_AGE_HOURS) > 0 ? Number(process.env.MAX_AGE_HOURS) : 48;
 const brDate = (t) => new Date(t).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', timeZone: 'America/Sao_Paulo' });
 
@@ -64,20 +64,33 @@ const STORE_LABEL = {
   'Assaí': 'encarte das lojas de Ribeirão Pires e Mauá',
   Nagumo: 'preços da loja de Mauá (Av. Barão de Mauá, 3232)',
   Semar: 'preços da loja 06 Mauá',
-  Extra: 'preços da loja online de São Bernardo (Demarchi); as lojas de Mauá e Ribeirão Pires não vendem pelo site',
+  Extra: 'preços da loja online de Ribeirão Pires (R. João Domingues de Oliveira, 194); só entrega (R$ 19,90), sem retirada',
   Joanin: 'tabloide das lojas de Mauá e Ribeirão Pires',
   Nevada: 'ofertas do Instagram (@redenevada)',
   STUK: 'jornal de ofertas do dia publicado no Instagram (@supermercadostuk)',
   Lourencini: 'ofertas do Instagram (@lourencinisupermercados)',
   Dia: 'destaques do folheto da loja de Mauá (Av. Dom José Gaspar, 1016), via Tiendeo',
   'Roldão': 'encartes que valem na loja de Mauá (o Roldão não tem loja em Ribeirão Pires)',
+  // Fase 14: farmácias (preço do site, só itens que dá para retirar numa loja da região) e comércio de bairro
+  'Drogaria São Paulo': 'preço do site com retirada nas lojas de Mauá e Ribeirão Pires',
+  'Farma Conde': 'preço do site com retirada nas lojas de Mauá (Av. Barão de Mauá, 732 e Av. Castelo Branco, 2365)',
+  'Tony BRJ Carnes': 'catálogo online do açougue da Vila Assis, Mauá',
+  'Família Lima': 'ofertas do Instagram (@supermercadofamilialima)',
+  'Mercado Capital': 'ofertas do Instagram (@mercadocapitalmaua)',
+  'Mercadinho Parceiro': 'ofertas do Instagram (@mercadinhoparceiro)',
+  'Mercado Baratinho': 'ofertas do Instagram (@mercadobaratinhooficial), 3 lojas em Mauá',
+  'Carnes Santana': 'ofertas do Instagram (@_carnessantanamaua)',
 };
 // Cidades das lojas usadas por mercado (filtro do site).
 const CITIES = {
   'Atacadão': ['Mauá'], Spani: ['Mauá'], Coop: ['Mauá'], Baronesa: ['Mauá'], 'Assaí': ['Mauá', 'Ribeirão Pires'],
   Nagumo: ['Mauá'], Semar: ['Mauá'], Joanin: ['Mauá', 'Ribeirão Pires'], 'Roldão': ['Mauá'], Dia: ['Mauá'], STUK: ['Ribeirão Pires'], Nevada: ['Mauá'], Lourencini: ['Mauá'],
-  // preço da loja online de São Bernardo: não entra no filtro "Lojas em Mauá/Ribeirão Pires"
-  Extra: ['São Bernardo do Campo'],
+  // loja online de Ribeirão Pires (desde 19/11; antes era a de São Bernardo); só entrega
+  Extra: ['Ribeirão Pires'],
+  'Drogaria São Paulo': ['Mauá', 'Ribeirão Pires'], 'Farma Conde': ['Mauá'], 'Tony BRJ Carnes': ['Mauá'],
+  // comércio de bairro do Instagram (social.mjs)
+  'Família Lima': ['Mauá', 'Ribeirão Pires'], 'Mercado Capital': ['Mauá'], 'Mercadinho Parceiro': ['Mauá'],
+  'Mercado Baratinho': ['Mauá'], 'Carnes Santana': ['Mauá'],
 };
 // Mercados sem fonte coletável: aparecem no site só com o caminho para as ofertas.
 index.infoOnly = [{
@@ -119,12 +132,17 @@ for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.inclu
       // caixa/fardo: quantas unidades vêm (o site compara pelo preço de cada uma)
       ...(parsePack(o.name, o.size ?? '') > 1 ? { units: parsePack(o.name, o.size ?? '') } : {}),
       ...(o.source === 'encarte' ? { source: 'encarte' } : {}),
+      // farmácia: segmento, remédio de receita (aviso no site, fora de ofertas) e genérico
+      ...((o.segment ?? (o.section === 'farmacia' ? 'farmacia' : null)) ? { segment: o.segment ?? 'farmacia' } : {}), // section: tabloide Drogarias Joanin
+      ...(o.rx ? { rx: 1 } : {}),
+      ...(o.generic ? { generic: 1 } : {}),
       ...(best.condition ? { condition: best.condition } : {}),
     });
   }
   built.push({ market, slim });
   index.markets.push({
     name: market, file: `${slug(market)}.json`, products: slim.length, cities: CITIES[market] ?? [],
+    ...(rows[0].segment ? { segment: rows[0].segment } : {}),
     source: rows.some((r) => r.source === 'encarte') ? 'encarte' : 'site', expiredDropped: rows.length - vigentes.length,
     storeScope: STORE_LABEL[market] ?? ((rows[0].storeScope ?? '').slice(0, 90) || null), collectedAt: lastCollected,
   });
@@ -175,6 +193,7 @@ for (const o of flat) delete o.ean; // só serve para agrupar; o site não usa
   // Queda de mais de 60% é quase sempre cadastro errado ou caixa x unidade: fica de fora.
   const best = new Map();
   for (const o of flat) {
+    if (o.rx) continue; // remédio de receita não vira destaque
     const s = h.ids[o.id];
     if (!s) continue;
     // maior preço dos 7 dias anteriores; só conta se a queda aconteceu nesta semana

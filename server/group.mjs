@@ -83,7 +83,10 @@ export function parsePack(name, size = '') {
 }
 
 export function signature(o) {
-  const size = parseSize(o.size, o.name);
+  // Item vendido por kg (Semar, Coop, Extra, encartes): o preço é do kg e o "500g" do nome é só o peso
+  // aproximado da peça. Não pode juntar com o pacote de 500g de outro mercado; junta com outros itens por kg.
+  const perKg = /preço por kg/i.test(o.condition ?? '') || /preço por kg/i.test(o.unitPrice ?? '');
+  const size = perKg ? { key: 'porkg' } : parseSize(o.size, o.name);
   const toks = tokens(o.name);
   const core = new Set(toks.filter((w) => !NEUTRAL.has(w)));
   return { size: size?.key ?? null, core, key: size ? `${size.key}|${[...core].sort().join(' ')}` : null };
@@ -140,6 +143,9 @@ export function groupOffers(offers, decide = () => undefined) {
   eans.forEach((e, i) => { if (e) groupEans.set(i, new Set([e])); });
 
   const sigs = offers.map(signature);
+  // Remédio e saúde de farmácia só juntam pelo EAN: nome parecido não basta (genérico x referência,
+  // dosagens e quantidades de comprimidos diferentes).
+  const eanOnly = (i) => offers[i].category === 'farmacia' || !!offers[i].rx;
   // EAN cadastrado errado num mercado: tamanho E preço muito diferentes (ex.: 100g por R$ 3,99 x 200g por R$ 8,49).
   // Tamanho diferente com preço parecido é o mesmo produto (peso drenado, 12x5g = 60g) e junta.
   const sizeOf = (i) => { const k = sigs[i].size; if (!k) return null; const [u, v] = k.split(':'); return { u, v: +v }; };
@@ -159,7 +165,7 @@ export function groupOffers(offers, decide = () => undefined) {
   });
 
   const bySig = new Map();
-  sigs.forEach((s, i) => { if (!s.key) return; if (bySig.has(s.key)) { if (decide(bySig.get(s.key), i) !== false) union(bySig.get(s.key), i, true); } else bySig.set(s.key, i); });
+  sigs.forEach((s, i) => { if (!s.key || eanOnly(i)) return; if (bySig.has(s.key)) { if (decide(bySig.get(s.key), i) !== false) union(bySig.get(s.key), i, true); } else bySig.set(s.key, i); });
 
   // Nomes quase iguais: mesma marca, mesmo tamanho, preço parecido, e as palavras que sobram de um lado
   // ou do outro são todas da lista SOFT. Junta por cima do EAN (são cadastros diferentes do mesmo produto).
@@ -167,7 +173,7 @@ export function groupOffers(offers, decide = () => undefined) {
   const near = new Map();
   sigs.forEach((sg, i) => {
     const b = brands[i];
-    if (!sg.size || !b) return;
+    if (!sg.size || !b || eanOnly(i)) return;
     const k = sg.size + '|' + b;
     (near.get(k) ?? near.set(k, []).get(k)).push(i);
   });

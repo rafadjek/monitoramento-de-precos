@@ -6,10 +6,22 @@
 // (crédito acabou, bloqueio, erro) ou não trouxer nada.
 // Pega os posts dos últimos 3 dias; post já lido não é lido de novo (cache pelo código do post) e jornal vencido
 // é descartado pela validade impressa. Grava data/extraido/social-encartes.json para readers/folheto.mjs.
+// Comércio de bairro (segment: 'bairro'): antes de gastar crédito do serviço, uma pré-checagem grátis abre o perfil
+// público do Instagram (sem login, 1 perfil por vez, pausa de 1,5 s) e olha os 12 posts recentes e a data de cada um
+// (texto alternativo da foto). Só chama o serviço pago se houver post novo desde a última coleta; se a pré-checagem
+// falhar (bloqueio, página mudou, sem Chrome), segue como antes e chama o serviço. Estado em data/extraido/social-vistos.json.
+// Lojas com teste: true saem em social-encartes-teste.json (o workflow não lê), até o Rafael aprovar.
 import fs from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const OUT = fileURLToPath(new URL('../data/extraido/social-encartes.json', import.meta.url));
+// SOCIAL_OUT_DIR e SOCIAL_MOCK existem só para testar sem chaves nem serviço pago (SOCIAL_MOCK = JSON com posts prontos)
+const DIR = process.env.SOCIAL_OUT_DIR || fileURLToPath(new URL('../data/extraido/', import.meta.url));
+const OUT = path.join(DIR, 'social-encartes.json');
+const OUT_TESTE = path.join(DIR, 'social-encartes-teste.json');
+const VISTOS = path.join(DIR, 'social-vistos.json');
+const CHROME = process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+const SEM_VALIDADE_DIAS = 3; // arte de bairro sem data impressa vale até 3 dias após o post
 const DAYS = 7; // o Lourencini posta com menos frequência; com 6 posts por perfil o custo diário fica parecido com 3 dias x 12
 const SINCE = Date.now() - DAYS * 86400e3;
 const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDATA_TOKEN, scrapecreators: process.env.SCRAPECREATORS_KEY, socialcrawl: process.env.SOCIALCRAWL_KEY, crawlbase: process.env.CRAWLBASE_TOKEN };
@@ -18,8 +30,22 @@ const MARKETS = {
   Nevada: { ig: 'redenevada', fb: 'https://www.facebook.com/redenevada/', daily: false },
   STUK: { ig: 'supermercadostuk', fb: null, daily: true },
   Lourencini: { ig: 'lourencinisupermercados', fb: 'https://www.facebook.com/LourenciniSupermercados/', daily: false },
+  // Comércio de bairro: segment 'bairro' vai ao manifesto; cidades = onde ficam as lojas.
+  'Família Lima': { ig: 'supermercadofamilialima', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá', 'Ribeirão Pires'] },
+  'Mercado Capital': { ig: 'mercadocapitalmaua', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
+  'Mercadinho Parceiro': { ig: 'mercadinhoparceiro', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
+  'Mercado Baratinho': { ig: 'mercadobaratinhooficial', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] }, // 3 lojas
+  'Carnes Santana': { ig: '_carnessantanamaua', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
+  // Em teste (saem à parte, não vão para o site):
+  'Sacolão São Jorge': { ig: 'sacolaosaojorge', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'], teste: true }, // Guapituba
+  'Consulado do Churrasco': { ig: 'consuladodochurrascopremium', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'], teste: true },
+  // Açougues Grupo Parati (Ribeirão Pires, só Facebook): a URL da página não consta na pesquisa em D:\Temp\pesquisa-14.
+  // Preencher fb com a URL confirmada e descomentar.
+  // 'Açougues Grupo Parati': { ig: null, fb: 'https://www.facebook.com/<página>/', daily: false, segment: 'bairro', cidades: ['Ribeirão Pires'], teste: true },
 };
-if (!Object.values(KEYS).some(Boolean)) { console.log('social: nenhuma chave de serviço, pulando'); process.exit(0); }
+let TARGETS = MARKETS; // perfis que o serviço pago vai consultar nesta rodada (muda depois da pré-checagem)
+const MOCK = process.env.SOCIAL_MOCK;
+if (!MOCK && !process.env.SOCIAL_PRECHECK_ONLY && !Object.values(KEYS).some(Boolean)) { console.log('social: nenhuma chave de serviço, pulando'); process.exit(0); }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const toIso = (t) => { if (t == null || t === '') return null; const n = Number(t); const d = Number.isFinite(n) ? new Date(n < 1e12 ? n * 1000 : n) : new Date(t); return isNaN(d) ? null : d.toISOString(); };
@@ -47,8 +73,8 @@ function findImages(obj, out = []) {
 async function apify(net) {
   const actor = net === 'ig' ? 'apify~instagram-post-scraper' : 'apify~facebook-posts-scraper';
   const input = net === 'ig'
-    ? { username: Object.values(MARKETS).map((m) => m.ig), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` }
-    : { startUrls: Object.values(MARKETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` };
+    ? { username: Object.values(TARGETS).map((m) => m.ig), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` }
+    : { startUrls: Object.values(TARGETS).filter((m) => m.fb).map((m) => ({ url: m.fb })), resultsLimit: 6, onlyPostsNewerThan: `${DAYS} days` };
   const r = await fetch(`https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${KEYS.apify}&timeout=280`, {
     method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input), signal: AbortSignal.timeout(320000),
   });
@@ -69,7 +95,7 @@ async function apify(net) {
 async function brightdata(net) {
   // Web Scraper API: posts recentes de cada perfil ("discover by url"); se demorar, vira snapshot e é consultado depois
   const ds = net === 'ig' ? 'gd_lk5ns7kz21pck8jpis' : 'gd_lkaxegm826bjpoo9m5';
-  const urls = net === 'ig' ? Object.values(MARKETS).map((m) => `https://www.instagram.com/${m.ig}/`) : Object.values(MARKETS).filter((m) => m.fb).map((m) => m.fb);
+  const urls = net === 'ig' ? Object.values(TARGETS).map((m) => `https://www.instagram.com/${m.ig}/`) : Object.values(TARGETS).filter((m) => m.fb).map((m) => m.fb);
   const d = new Date(SINCE);
   const start = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}-${d.getFullYear()}`;
   const H = { Authorization: `Bearer ${KEYS.brightdata}`, 'Content-Type': 'application/json' };
@@ -98,7 +124,7 @@ async function brightdata(net) {
 async function scrapecreators(net) {
   const H = { 'x-api-key': KEYS.scrapecreators };
   const out = [];
-  for (const [market, m] of Object.entries(MARKETS)) {
+  for (const [market, m] of Object.entries(TARGETS)) {
     if (net === 'fb' && !m.fb) continue;
     const url = net === 'ig'
       ? `https://api.scrapecreators.com/v2/instagram/user/posts?handle=${m.ig}&trim=false`
@@ -125,7 +151,7 @@ async function socialcrawl(net) {
   // só Instagram (não achei endpoint de posts de página do Facebook na documentação)
   if (net !== 'ig') return [];
   const out = [];
-  for (const [market, m] of Object.entries(MARKETS)) {
+  for (const [market, m] of Object.entries(TARGETS)) {
     const since = new Date(SINCE).toISOString().slice(0, 10);
     const r = await fetch(`https://www.socialcrawl.dev/v1/instagram/profile/posts?handle=${m.ig}&since=${since}`, { headers: { 'x-api-key': KEYS.socialcrawl }, signal: AbortSignal.timeout(90000) });
     if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
@@ -147,7 +173,7 @@ async function crawlbase(net) {
   // Crawling API com os extratores prontos do Crawlbase (instagram-profile e facebook-page).
   // A documentação não detalha os campos: as imagens dos posts são achadas em qualquer campo (findImages).
   const out = [];
-  for (const [market, m] of Object.entries(MARKETS)) {
+  for (const [market, m] of Object.entries(TARGETS)) {
     const page = net === 'ig' ? `https://www.instagram.com/${m.ig}/` : m.fb;
     if (!page) continue;
     const scraper = net === 'ig' ? 'instagram-profile' : 'facebook-page';
@@ -169,12 +195,64 @@ async function crawlbase(net) {
   return out;
 }
 
+// ---------- pré-checagem grátis (Instagram público, sem login) ----------
+const MESES = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
+  janeiro: 1, fevereiro: 2, março: 3, marco: 3, abril: 4, maio: 5, junho: 6, julho: 7, agosto: 8, setembro: 9, outubro: 10, novembro: 11, dezembro: 12 };
+// "Photo by X on November 16, 2026." (inglês) ou "... 16 de novembro de 2026" (português) -> 'AAAA-MM-DD'
+function dateOfAlt(alt) {
+  const s = String(alt || '').toLowerCase();
+  let m = s.match(/\bon ([a-zç]+) (\d{1,2}),? (\d{4})/), d, mo, y;
+  if (m) { mo = MESES[m[1]]; d = +m[2]; y = +m[3]; }
+  else if ((m = s.match(/(\d{1,2}) de ([a-zç]+)(?: de)? (\d{4})/))) { mo = MESES[m[2]]; d = +m[1]; y = +m[3]; }
+  return mo ? `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}` : null;
+}
+const readJson = (f, fallback) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return fallback; } };
+// Devolve { handle: { ok, posts: [{ code, date }], latest } }; ok:false quando não deu para ler (aí o serviço é chamado)
+async function precheck(handles) {
+  const out = {};
+  let browser;
+  try {
+    const { chromium } = await import('playwright-core');
+    browser = await chromium.launch({ executablePath: CHROME, headless: true });
+    const ctx = await browser.newContext({ locale: 'pt-BR', viewport: { width: 1200, height: 1000 } });
+    for (const h of handles) {
+      const page = await ctx.newPage();
+      try {
+        await page.goto(`https://www.instagram.com/${h}/`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await page.waitForSelector('a[href*="/p/"]', { timeout: 10000 }).catch(() => {});
+        const raw = await page.evaluate(() => [...document.querySelectorAll('a[href*="/p/"],a[href*="/reel/"]')].map((a) => ({ h: a.getAttribute('href'), alt: a.querySelector('img')?.alt || '' })));
+        const posts = raw.map((r) => ({ code: (r.h.match(/\/(?:p|reel)\/([^/?]+)/) || [])[1], date: dateOfAlt(r.alt), video: /\/reel\//.test(r.h) || /^video by/i.test(r.alt) })).filter((p) => p.code);
+        const dates = posts.map((p) => p.date).filter(Boolean).sort();
+        // sem posts, ou nenhum com data legível: página bloqueada ou mudou -> não confiar
+        out[h] = posts.length && dates.length ? { ok: true, posts, latest: dates[dates.length - 1] } : { ok: false, motivo: posts.length ? 'sem data no texto alternativo' : 'nenhum post visível (login/bloqueio?)' };
+      } catch (e) { out[h] = { ok: false, motivo: String(e.message).slice(0, 100) }; }
+      await page.close();
+      await sleep(1500);
+    }
+  } catch (e) { for (const h of handles) out[h] ??= { ok: false, motivo: 'navegador indisponível: ' + String(e.message).slice(0, 80) }; }
+  finally { await browser?.close().catch(() => {}); }
+  return out;
+}
+// Há post novo? Sem estado anterior ou sem leitura válida: sim (chama o serviço). Post antigo que só entrou na janela
+// dos 12 (apagaram um mais novo) não conta: exige código não visto E data >= último visto. Vídeo/reel não conta (o coletor ignora vídeo).
+function hasNew(res, state) {
+  if (!res?.ok || !state) return true;
+  const seen = new Set(state.codes || []);
+  return res.posts.some((p) => !p.video && !seen.has(p.code) && (!p.date || p.date >= state.latest));
+}
+const vistos = readJson(VISTOS, {});
+let PRE = {}; // resultado da pré-checagem desta rodada, por handle
+
 // ---------- cadeia de reserva ----------
 const SERVICES = [['apify', apify], ['brightdata', brightdata], ['scrapecreators', scrapecreators], ['socialcrawl', socialcrawl], ['crawlbase', crawlbase]];
 // SOCIAL_SKIP=apify,brightdata pula serviços (para testar as reservas)
 const STATUS = { em: new Date().toISOString(), servicos: [] };
 const SKIP = new Set(String(process.env.SOCIAL_SKIP || '').split(',').map((x) => x.trim()).filter(Boolean));
 async function collect(net) {
+  // perfis de bairro do Instagram só entram se a pré-checagem achou post novo
+  TARGETS = Object.fromEntries(Object.entries(MARKETS).filter(([, m]) => (net === 'ig' ? m.ig : m.fb) && (net !== 'ig' || m.segment !== 'bairro' || hasNew(PRE[m.ig], vistos[m.ig]))));
+  if (!Object.keys(TARGETS).length) { console.log(`  ${net === 'ig' ? 'instagram' : 'facebook'}: nenhum perfil para consultar`); return []; }
+  if (MOCK) return readJson(MOCK, []).filter((p) => p.net === net && TARGETS[p.market] && recent(p.when)).map((p) => ({ ...p, via: 'mock' }));
   for (const [name, fn] of SERVICES) {
     if (!KEYS[name] || SKIP.has(name)) continue;
     try {
@@ -191,22 +269,62 @@ async function collect(net) {
 }
 
 const endOfDay = (iso) => { const d = new Date(new Date(iso).getTime() - 3 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1, 2, 59, 59)).toISOString(); };
-const manifest = [];
-for (const p of [...(await collect('ig')), ...(await collect('fb'))]) {
+// Jornal diário: o STUK posta o jornal à tarde/noite da véspera do dia impresso. Usar o dia do post fazia
+// todo jornal chegar vencido à coleta da madrugada (STUK com 0 itens). Post a partir das 12h (Brasília)
+// vale até o fim do dia seguinte; antes disso, até o fim do próprio dia.
+const dailyUntil = (iso) => {
+  const t = new Date(iso).getTime();
+  const horaBrt = new Date(t - 3 * 3600e3).getUTCHours();
+  return endOfDay(new Date(t + (horaBrt >= 12 ? 24 * 3600e3 : 0)).toISOString());
+};
+// Pré-checagem dos perfis de bairro (grátis). SOCIAL_SEM_PRECHECK=1 desliga (volta a chamar o serviço sempre).
+const bairroHandles = Object.values(MARKETS).filter((m) => m.segment === 'bairro' && m.ig).map((m) => m.ig);
+if (bairroHandles.length && !process.env.SOCIAL_SEM_PRECHECK) {
+  PRE = await precheck(bairroHandles);
+  for (const [market, m] of Object.entries(MARKETS)) {
+    if (m.segment !== 'bairro' || !m.ig) continue;
+    const r = PRE[m.ig];
+    const novo = hasNew(r, vistos[m.ig]);
+    console.log(`  pré-checagem ${m.ig}: ${r.ok ? `${r.posts.length} posts, último ${r.latest}` : `falhou (${r.motivo})`} -> ${novo ? 'consultar serviço' : 'sem post novo, não gasta crédito'}`);
+  }
+}
+if (process.env.SOCIAL_PRECHECK_ONLY) { console.log(JSON.stringify(PRE, null, 1)); process.exit(0); }
+
+const dm = (iso) => { const d = new Date(new Date(iso).getTime() - 3 * 3600e3); return `${String(d.getUTCDate()).padStart(2, '0')}/${String(d.getUTCMonth() + 1).padStart(2, '0')}`; };
+const manifest = [], manifestTeste = [];
+const calledIg = new Set(Object.values(MARKETS).filter((m) => m.ig && m.segment === 'bairro').map((m) => m.ig));
+const igPosts = await collect('ig');
+const calledNow = new Set(Object.values(TARGETS).map((m) => m.ig)); // quem o serviço consultou de fato
+for (const p of [...igPosts, ...(await collect('fb'))]) {
   const m = MARKETS[p.market];
   const images = [...new Set(p.images.filter((u) => typeof u === 'string' && /^https?:/.test(u)))].slice(0, 12);
   if (!images.length || !p.code) continue;
   // jornal diário (STUK) sem data do post não entra: não dá para saber de que dia é
   if (m.daily && p.noDate) continue;
-  manifest.push({
+  const rede = p.net === 'ig' ? 'Instagram' : 'Facebook';
+  const bairro = m.segment === 'bairro';
+  const entry = {
     market: p.market, offerId: `${p.net}-${p.code}`, validFrom: null,
-    validUntil: m.daily ? endOfDay(p.when) : null, // os outros precisam da validade impressa na imagem
-    validityNote: m.daily ? 'jornal de ofertas do dia' : `post de ofertas (${p.net === 'ig' ? 'Instagram' : 'Facebook'})`,
-    stores: [p.market], storeScope: `Ofertas publicadas no ${p.net === 'ig' ? 'Instagram' : 'Facebook'} ${p.owner || p.market}`,
+    validUntil: m.daily ? dailyUntil(p.when) : null, // os outros precisam da validade impressa na imagem
+    validityNote: m.daily ? 'jornal de ofertas do dia' : bairro ? `post do ${rede} de ${dm(p.when)}` : `post de ofertas (${rede})`,
+    // Bairro sem data impressa na arte: vale até o fim do 3º dia após o post. O leitor deve usar só se a arte não tiver
+    // validade (ver relatório: readers/folheto.mjs precisa ler fallbackUntil/fallbackNote e repassar segment).
+    ...(bairro && !p.noDate ? { fallbackUntil: endOfDay(new Date(Date.parse(p.when) + SEM_VALIDADE_DIAS * 86400e3).toISOString()), fallbackNote: `post de ${dm(p.when)}, sem validade impressa` } : {}),
+    ...(bairro ? { segment: m.segment, cidades: m.cidades } : {}),
+    stores: [p.market], storeScope: `Ofertas publicadas no ${rede} ${p.owner || p.market}`,
     via: p.via, link: p.link, images, imageKeys: images.map((_, i) => `${p.net}:${p.code}:${i}`), collectedAt: new Date().toISOString(),
-  });
+  };
+  (m.teste ? manifestTeste : manifest).push(entry);
 }
+// Guarda o que a pré-checagem viu, só dos perfis que o serviço consultou nesta rodada com resposta, ou dos que não tinham novidade
+if (igPosts.length || MOCK) {
+  for (const h of calledIg) if (calledNow.has(h) && PRE[h]?.ok) vistos[h] = { latest: PRE[h].latest, codes: PRE[h].posts.map((x) => x.code), checkedAt: new Date().toISOString() };
+}
+for (const h of calledIg) if (!calledNow.has(h) && PRE[h]?.ok && vistos[h]) vistos[h].checkedAt = new Date().toISOString();
+if (Object.keys(vistos).length) fs.writeFileSync(VISTOS, JSON.stringify(vistos, null, 1));
+fs.mkdirSync(DIR, { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));
+fs.writeFileSync(OUT_TESTE, JSON.stringify(manifestTeste, null, 2));
 // SOCIAL_TEST=socialcrawl,crawlbase: chama esses serviços à parte só para diagnóstico (não entram no resultado)
 for (const name of String(process.env.SOCIAL_TEST || '').split(',').map((x) => x.trim()).filter(Boolean)) {
   const fn = SERVICES.find(([n]) => n === name)?.[1];

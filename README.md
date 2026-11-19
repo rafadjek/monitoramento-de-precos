@@ -57,18 +57,30 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 | Mercado | Fonte | Situação |
 |---|---|---|
 | Atacadão | API do site (loja de Mauá, CEP 09310-000) | funcionando |
-| Spani | API do site (loja Mauá 1) | funcionando |
+| Spani | API do site (loja Mauá 1) + jornal de ofertas em PDF da loja de Mauá, lido pelo texto do PDF (`spani-jornal.mjs`, sem IA) | funcionando |
 | Coop | API VTEX do site, loja Barão de Mauá fixa pelo `regionId` (base64 de `SW#coopspbm`; Ribeirão Pires = `coopsprp`) | funcionando |
 | Baronesa (Mauá) | Encarte em imagem (`/classes/encarte.php`), lido por IA | funcionando |
 | Assaí | Encarte em imagem das lojas Ribeirão Pires e Mauá, lido por IA | funcionando (imagens pelo Worker, ver abaixo) |
-| STUK (Ribeirão Pires) | Ofertas só no Instagram e WhatsApp | só link no rodapé do site |
+| STUK (Ribeirão Pires) | Jornal de ofertas do dia no Instagram, lido por IA (`social.mjs`); o jornal é postado na véspera, então post a partir das 12h vale para o dia seguinte | funcionando |
 | Nagumo | JSON do site (Salesforce, `Search-UpdateGrid`) com a loja 038 Mauá fixada, pelo navegador | funcionando (~26 mil produtos) |
 | Semar | API OSuper `sense.osuper.com.br/336/1705/v2/search` (loja 06 Mauá), chamada de dentro da página (a Cloudflare só atende navegador); 20 por página, por departamento | funcionando (~9,5 mil) |
-| Extra | API GPA (EAN pela página do produto) `api.vendas.gpa.digital/ex/search/search`. As lojas de Mauá e Ribeirão Pires não vendem pelo site: usa a loja online mais próxima (1867 Demarchi, São Bernardo, `storeId` 1162). A busca não aceita termo vazio: 158 termos de itens comuns | funcionando (~4 mil; cidade "São Bernardo do Campo" no filtro) |
+| Extra | API GPA `api.vendas.gpa.digital/ex/search/category-page` (100 por página, por departamento; EAN pela página do produto). Desde 19/11/2026 usa a loja online de Ribeirão Pires (loja 5675, `storeId` 1643, R. João Domingues de Oliveira, 194): só entrega (R$ 19,90), sem retirada; Mauá não tem entrega | funcionando (~6,4 mil) |
 | Joanin | Tabloide em imagem em `/ofertas/` (`pagN-full-tabloide-*-DDMMAAAA.jpg`), lido por IA | funcionando |
 | Dia (Mauá) | O site do Dia não publica ofertas. Entra pelos produtos em destaque do folheto da loja de Mauá na página pública do Tiendeo (`/maua/supermercado-dia`): nome, preço, De/Por e foto, em texto, sem IA. O folheto inteiro fica em `/Catalogos/`, que o robots.txt do Tiendeo proíbe, por isso não é usado | funcionando (~10 destaques) |
 | Roldão (Mauá) | Encarte em PDF por campanha em `/ofertas/`; entram as que citam Mauá ou valem para a rede. O PDF vem de `admin-ajax.php?action=elem_get_pdf_oferta_iframe` e o leitor manda o PDF direto ao Gemini (sem foto recortada). Sem loja em Ribeirão Pires | funcionando |
 | São Jorge | só folheto | adiado (decisão do Rafael em 13/11/2026) |
+| **Farmácias (Fase 14)** | | |
+| Drogaria São Paulo | API VTEX pública: catálogo por faixa de preço e simulação de pedido com o CEP 09400110; só entram itens com retirada numa das 4 lojas de Mauá ou 2 de Ribeirão Pires. Receita e genérico pelos campos da ficha | funcionando (~3,8 mil) |
+| Farma Conde | API VTEX pública, simulação nas 2 lojas de Mauá (Barão de Mauá 732, Castelo Branco 2365) | funcionando (~6,3 mil) |
+| Drogarias Joanin | Tabloide de drogarias do Joanin (`JOANIN_DROGARIAS=1`), lido por IA | funcionando |
+| **Comércio de bairro (Fase 14)** | | |
+| Tony BRJ Carnes (Vila Assis) | Catálogo OnBeef, API pública `api.onbeefapp.com.br`, sem IA | funcionando (~180) |
+| Família Lima, Mercado Capital, Mercadinho Parceiro, Mercado Baratinho, Carnes Santana | Artes de oferta do Instagram (`social.mjs`), lidas por IA; sem data impressa, vale 3 dias após o post. Pré-checagem grátis do perfil antes de gastar crédito do serviço | funcionando |
+| Sacolão São Jorge, Consulado do Churrasco | Instagram, em teste (`social-encartes-teste.json`, fora do site) | em teste |
+
+As farmácias são coletadas num workflow à parte (`.github/workflows/farmacias.yml`, 22h47), porque não cabem no tempo da coleta principal; a publicação diária leva os preços ao site. No site: filtro "Farmácia" (remédio e saúde; higiene de farmácia fica em "Higiene" para comparar com os mercados), remédio de receita com o aviso "Venda sob prescrição médica" e fora das ofertas, remédio só se junta com outro pelo EAN.
+
+Fora, de propósito: Ultrafarma, Pague Menos e Pacheco (sem loja em Mauá/RP); Drogasil, Raia, Onofre, Panvel e Araujo (bloqueio Akamai); Joanin online (os termos de uso proíbem copiar preços).
 
 Nem todo mercado informa validade de oferta; quando não informa, o site mostra "validade não informada".
 

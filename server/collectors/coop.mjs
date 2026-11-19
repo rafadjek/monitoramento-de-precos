@@ -27,13 +27,17 @@ const DEPTS = {
   congelados: 'alimenticios', peixaria: 'alimenticios', padaria: 'alimenticios', acougue: 'alimenticios',
   'cereais-e-saudaveis': 'alimenticios', 'especial-coca-cola': 'alimenticios',
   'higiene-e-cuidados-pessoais': 'higiene', limpeza: 'limpeza',
+  // 'outros' (~84 itens, visto em 19/11): quase tudo comida, mas mistura lava-roupas, lã de aço, body splash;
+  // separa limpeza e higiene pelo nome, como em exclusivos-coop. Fica por último: o que já saiu em outro
+  // departamento não repete (a ordem das chaves é a ordem da coleta).
+  outros: 'alimenticios',
 };
 const HIGIENE = /higiene|sabonete|shampoo|xampu|condicionador|creme dental|escova dental|enxaguante|desodorante|absorvente|fralda|papel higienico|cotonete|barbear/;
 const LIMPEZA = /limpeza|detergente|desinfetante|amaciante|sabao|alvejante|agua sanitaria|lava roupa|multiuso|esponja|saco de lixo|limpador/;
 
 function categorize(dept, catPath, name) {
   const s = strip(`${catPath} ${name}`);
-  if (DEPTS[dept] === 'alimenticios' && dept === 'exclusivos-coop') {
+  if (dept === 'exclusivos-coop' || dept === 'outros') {
     if (LIMPEZA.test(s)) return 'limpeza';
     if (HIGIENE.test(s)) return 'higiene';
   }

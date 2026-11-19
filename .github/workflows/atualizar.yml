@@ -59,6 +59,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Fase 14: lê também o tabloide das Drogarias Joanin (itens com section 'farmacia')
+          JOANIN_DROGARIAS: '1'
           # Apify (crédito grátis): jornais de ofertas do Instagram e do Facebook de Nevada, STUK e Lourencini
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           # reservas, nesta ordem, se a Apify falhar ou o crédito acabar

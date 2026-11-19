@@ -1,4 +1,4 @@
-import { lazy, Suspense, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, startTransition, Suspense, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
 import { decodeCart, keyOf, type CartItem } from './cart';
 import { ProductList } from './components/ProductList';
@@ -12,13 +12,14 @@ import { CityPicker } from './components/CityPicker';
 import { Logo } from './components/Logo';
 import { ScrollRow } from './components/ScrollRow';
 import { DATA_BASE, isApp, useFromCache } from './native';
+import { groupBySegment, splitLoad, type Segment } from './pharma';
 import { effectiveCities, marketInCities, migrateCities, serializeCities, type Sel } from './cities';
 
 const SuaCidade = lazy(() => import('./pages/SuaCidade'));
 const BASE = import.meta.env.BASE_URL;
 const PAGE = 30;
 
-type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte' };
+type MarketInfo = { name: string; file: string; products: number; storeScope: string | null; collectedAt: string; cities?: string[]; source?: 'site' | 'encarte'; segment?: Segment };
 
 const CATEGORIES = [
   { id: '', label: 'Todos', icon: '▦' },
@@ -29,6 +30,7 @@ const CATEGORIES = [
   { id: 'mercearia', label: 'Mercearia', icon: '🥫' },
   { id: 'limpeza', label: 'Limpeza', icon: '🧴' },
   { id: 'higiene', label: 'Higiene', icon: '🧻' },
+  { id: 'farmacia', label: 'Farmácia', icon: '💊' },
 ];
 const SORTS = [
   { id: 'preco', label: 'Menor preço' },
@@ -85,29 +87,45 @@ function Comparador() {
     } catch { /* sem armazenamento */ }
   }, [rawCities]);
 
+  // Carrega o arquivo de cada mercado; o que falhar é ignorado só quando `tolerant` (farmácia, em segundo plano).
+  const fetchMarket = async (m: MarketInfo) => {
+    const r = await fetch(`${DATA_BASE}data/${m.file}`);
+    if (!r.ok) throw new Error(m.name);
+    return (await r.json()) as Offer[];
+  };
+  // oferta vencida some (um folheto pode vencer antes da próxima leitura)
+  const prepare = (parts: Offer[][]): Indexed[] => {
+    const now = Date.now();
+    return parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) }));
+  };
+  // Cada recarga tem um número; uma recarga antiga que chega atrasada não sobrescreve a nova.
+  const loadId = useRef(0);
   // silent: recarga em segundo plano (volta da internet no app): sem tela de carregando e sem mostrar erro
   const loadData = async (silent: boolean) => {
+    const id = ++loadId.current;
     if (!silent) setStatus('loading');
-    {
-      try {
-        const idx = await (await fetch(`${DATA_BASE}data/index.json`)).json();
-        const parts = await Promise.all(
-          idx.markets.map(async (m: MarketInfo) => {
-            const r = await fetch(`${DATA_BASE}data/${m.file}`);
-            if (!r.ok) throw new Error(m.name);
-            return (await r.json()) as Offer[];
-          }),
-        );
-        setMarkets(idx.markets);
-        setGeneratedAt(idx.generatedAt);
-        setHist(idx.hist ?? null);
-        // oferta vencida some (um folheto pode vencer antes da próxima leitura)
-        const now = Date.now();
-        setAll(parts.flat().filter((o) => !o.validUntil || new Date(o.validUntil).getTime() > now).map((o) => ({ ...o, _n: norm(`${o.name} ${o.brand ?? ''}`) })));
-        setStatus('ok');
-      } catch {
-        if (!silent) setStatus('error');
+    try {
+      const idx = await (await fetch(`${DATA_BASE}data/index.json`)).json();
+      // peso no celular: farmácias (dezenas de milhares de itens) só depois que a primeira tela já apareceu
+      const { first, later } = splitLoad<MarketInfo>(idx.markets);
+      const parts = await Promise.all(first.map(fetchMarket));
+      if (id !== loadId.current) return;
+      setMarkets(first);
+      setGeneratedAt(idx.generatedAt);
+      setHist(idx.hist ?? null);
+      setAll(prepare(parts));
+      setStatus('ok');
+      // uma farmácia por vez: a busca passa a incluí-la quando ela chega; falha numa não derruba as outras
+      await new Promise((r) => setTimeout(r, 400));
+      for (const m of later) {
+        try {
+          const rows = prepare([await fetchMarket(m)]);
+          if (id !== loadId.current) return;
+          startTransition(() => { setMarkets((cur) => [...cur.filter((x) => x.name !== m.name), m]); setAll((cur) => [...cur.filter((o) => o.market !== m.name), ...rows]); });
+        } catch { /* farmácia fora do ar: o resto do site segue */ }
       }
+    } catch {
+      if (!silent && id === loadId.current) setStatus('error');
     }
   };
   useEffect(() => { void loadData(false); }, [attempt]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -137,6 +155,8 @@ function Comparador() {
   const inCity = useMemo(() => new Set(markets.filter((m) => marketInCities(m.cities, cities)).map((m) => m.name)), [markets, cities]);
   // colunas: todos os mercados da região escolhida, do que tem mais produtos para o que tem menos
   const columns = useMemo(() => markets.filter((m) => inCity.has(m.name)).sort((a, b) => b.products - a.products).map((m) => m.name), [markets, inCity]);
+  const colGroups = useMemo(() => groupBySegment(columns, markets), [columns, markets]);
+  const scopeOf = useMemo(() => new Map(markets.map((m) => [m.name, m.storeScope])), [markets]);
   useEffect(() => { if (market && !inCity.has(market)) setMarket(''); }, [inCity, market]);
 
   const cityOffers = useMemo(() => (cities === null ? all : all.filter((o) => inCity.has(o.market))), [all, cities, inCity]);
@@ -229,7 +249,7 @@ function Comparador() {
         </div>
         <main className="min-w-0 space-y-4 lg:col-start-1 lg:row-span-2 lg:row-start-1">
           <div className="glass p-2">
-            <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-9 xl:overflow-visible">
+            <div className="flex gap-2 overflow-x-auto xl:grid xl:grid-cols-10 xl:overflow-visible">
               {CATEGORIES.map((c) => (
                 <button
                   key={c.id}
@@ -261,17 +281,22 @@ function Comparador() {
             {/* filtro por mercado: um botão com o logotipo de cada mercado da região */}
             <ScrollRow role="group" label="Mercado" className="gap-2 pb-1">
               <button onClick={() => setMarket('')} aria-pressed={market === ''} className={`min-h-[2.75rem] shrink-0 rounded-xl border px-3 text-sm font-bold ${market === '' ? 'border-sky bg-sky/15 text-ink' : 'border-edge bg-panel2 text-muted'}`}>Todos</button>
-              {columns.map((m) => (
-                <button key={m} onClick={() => setMarket(market === m ? '' : m)} aria-pressed={market === m} className={`flex min-h-[2.75rem] shrink-0 items-center rounded-xl border px-2 ${market === m ? 'border-sky bg-sky/15' : 'border-edge bg-panel2 hover:border-sky/60'}`}>
-                  <MarketLogo name={m} h="h-7" />
-                </button>
+              {colGroups.map((gr) => (
+                <div key={gr.id} role="group" aria-label={gr.title} className="flex shrink-0 items-center gap-2">
+                  {colGroups.length > 1 && <span className="shrink-0 pl-1 text-[0.7rem] font-bold uppercase tracking-wide text-muted">{gr.title}</span>}
+                  {gr.names.map((m) => (
+                    <button key={m} onClick={() => setMarket(market === m ? '' : m)} aria-pressed={market === m} className={`flex min-h-[2.75rem] shrink-0 items-center rounded-xl border px-2 ${market === m ? 'border-sky bg-sky/15' : 'border-edge bg-panel2 hover:border-sky/60'}`}>
+                      <MarketLogo name={m} h="h-7" />
+                    </button>
+                  ))}
+                </div>
               ))}
             </ScrollRow>
 
             {status === 'ok' && !none && (
               <p className="text-xs text-muted">
                 {list.length.toLocaleString('pt-BR')} produtos
-                {market && <> no <b className="text-ink">{market}</b> · <button onClick={() => setMarket('')} className="text-sky underline">ver todos os mercados</button></>}
+                {market && <> no <b className="text-ink">{market}</b>{scopeOf.get(market) && <> ({scopeOf.get(market)})</>} · <button onClick={() => setMarket('')} className="text-sky underline">ver todos os mercados</button></>}
                 {onlyFavs && <> · só favoritos</>}
               </p>
             )}

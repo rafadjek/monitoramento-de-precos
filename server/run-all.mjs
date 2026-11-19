@@ -10,7 +10,8 @@ const OUT = path.join(ROOT, 'data/extraido');
 const COLLECTORS = (process.env.COLLECTORS || 'spani,atacadao,coop,nagumo,semar,extra').split(',');
 // Tempo máximo de cada coletor. O Semar faz ~600 buscas com pausa de 1 s e leva ~45 min:
 // com 40 min ele era cortado no fim todo dia (desde 10/11) e o site ficava com o preço antigo.
-const LIMIT_MIN = { semar: 90 };
+// Farmácias (workflow farmacias.yml): DSP leva ~30 min e se limita a 55; Conde ~27 min.
+const LIMIT_MIN = { semar: 90, drogariasaopaulo: 60, farmaconde: 50 };
 const count = (f) => { try { const j = JSON.parse(fs.readFileSync(f, 'utf8')); return Array.isArray(j) ? j.length : 0; } catch { return 0; } };
 
 let failed = 0;

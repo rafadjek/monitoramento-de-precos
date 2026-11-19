@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { brl, type Indexed } from '../lib';
+import { semReceita } from '../pharma';
 import { Icon, MarketLogo, Price, Thumb } from './Parts';
 
 // Ofertas do dia: os maiores descontos de verdade (preço "de" riscado contra o atual), do maior para o menor.
@@ -11,7 +12,7 @@ const chaveMarca = (b: string | null | undefined) => semAcento(b ?? '').replace(
 const semelhanca = (a: Set<string>, b: Set<string>) => { const i = [...a].filter((x) => b.has(x)).length; return i / (a.size + b.size - i || 1); };
 
 export function pickOffers(all: Indexed[], n = 20): Indexed[] {
-  const real = all.filter((o) => o.listPrice && o.listPrice > o.price && !(o.condition && /levando|a partir|leve \d|cart[aã]o/i.test(o.condition)) && o.imageUrl);
+  const real = semReceita(all).filter((o) => o.listPrice && o.listPrice > o.price && !(o.condition && /levando|a partir|leve \d|cart[aã]o/i.test(o.condition)) && o.imageUrl);
   const off = (o: Indexed) => 1 - o.price / o.listPrice!;
   // marcas conhecidas: as informadas em 3 ou mais ofertas; sem marca, a palavra do nome que é uma delas
   const cont = new Map<string, number>();

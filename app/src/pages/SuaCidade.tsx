@@ -167,7 +167,7 @@ export default function SuaCidade() {
           <section aria-label="Números do comparador de Mauá e Ribeirão Pires" className="border-b border-edge bg-panel/90">
             <div className="mx-auto max-w-6xl px-4 py-5">
               <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-x-4 gap-y-4 lg:grid-cols-4">
-                <Stat big={stats.markets.toLocaleString('pt-BR')} small="mercados com preços no site" />
+                <Stat big={stats.markets.toLocaleString('pt-BR')} small="lojas com preços no site" />
                 <Stat big={stats.products.toLocaleString('pt-BR')} small="preços coletados" />
                 <Stat big={stats.groups.toLocaleString('pt-BR')} small="produtos comparados entre mercados" />
                 <Stat big={stats.updated} small="última atualização" />

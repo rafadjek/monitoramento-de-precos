@@ -14,6 +14,9 @@ export type Offer = {
   condition?: string | null;
   units?: number; // caixa/fardo: quantas unidades vêm
   g?: string;
+  rx?: number; // remédio de venda sob prescrição
+  generic?: number; // medicamento genérico
+  segment?: 'farmacia' | 'bairro';
 };
 
 // _u: unidades que valem na comparação (decidido no grupo; o nome do produto sozinho não basta)

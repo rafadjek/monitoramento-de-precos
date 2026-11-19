@@ -20,11 +20,14 @@ const MAX_REQUESTS = 700;
 // ofertas-dia primeiro; higiene-e-perfumaria já contém "higiene", então higiene não entra à parte.
 const SECTIONS = [
   'ofertas-dia', 'hortifruti', 'acougue', 'peixaria', 'padaria',
-  'basicos-e-matinais', 'frios-e-laticinios', 'bebidas', 'limpeza', 'higiene-e-perfumaria',
+  'basicos-e-matinais', 'mercearia-doce', 'mercearia-salgada', 'frios-e-laticinios', 'bebidas', 'limpeza', 'higiene-e-perfumaria',
 ];
+// Paginação: o site lista os itens em estoque antes dos esgotados. Depois de tantas páginas seguidas
+// sem nenhum item em estoque, o resto da seção é só esgotado e a leitura para (exceto em ofertas-dia).
+const MAX_PAGINAS_SEM_ESTOQUE = 3;
 const DEPT_CATEGORY = {
   hortifruti: 'alimenticios', acougue: 'alimenticios', peixaria: 'alimenticios', padaria: 'alimenticios',
-  'basicos-e-matinais': 'alimenticios', 'frios-e-laticinios': 'alimenticios', bebidas: 'alimenticios',
+  'basicos-e-matinais': 'alimenticios', 'mercearia-doce': 'alimenticios', 'mercearia-salgada': 'alimenticios', 'frios-e-laticinios': 'alimenticios', bebidas: 'alimenticios',
   limpeza: 'limpeza', 'higiene-e-perfumaria': 'higiene', higiene: 'higiene',
 };
 
@@ -110,6 +113,9 @@ function categoryFromUrl(url) {
   } catch { return { dept: null, raw: null }; }
 }
 
+// Mesmo critério de estoque usado em normalize: esgotado na loja escolhida não entra.
+const emEstoque = (p) => !(p.available === false || p.readyToOrder === false || p.availability?.available === false);
+
 function normalize(p, ctxInfo) {
   const sales = p.price && p.price.sales && Number(p.price.sales.value);
   // "Preço baixou! De R$ X | Por: R$ Y": a página mostra o Por como preço; ele vem em flagtypes[].valueFlag
@@ -121,7 +127,7 @@ function normalize(p, ctxInfo) {
   const name = (p.productName || '').replace(/\s+/g, ' ').trim();
   if (!name || !(price > 0)) return null;
   // esgotado na loja escolhida não entra
-  if (p.available === false || p.readyToOrder === false || p.availability?.available === false) return null;
+  if (!emEstoque(p)) return null;
   const listV = flag ? sales : p.price.list && Number(p.price.list.value);
   const productUrl = p.productShowFullUrl;
   const { dept, raw } = categoryFromUrl(productUrl);
@@ -186,6 +192,7 @@ async function main() {
       let start = 0;
       let total = null;
       let got = 0;
+      let semEstoque = 0; // páginas seguidas sem item em estoque
       while (true) {
         const { count, items } = await gridPage(cgid, start);
         if (total === null) total = count;
@@ -200,6 +207,8 @@ async function main() {
           }
         }
         got += items.length;
+        semEstoque = items.some(emEstoque) ? 0 : semEstoque + 1;
+        if (cgid !== 'ofertas-dia' && semEstoque >= MAX_PAGINAS_SEM_ESTOQUE) break;
         start += PAGE_SIZE;
         if (start >= total + PAGE_SIZE) break;
         if (requests % 25 === 0) console.log(`  ... ${requests} requisições, ${byId.size} produtos únicos`);

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ScrollRow } from './ScrollRow';
 import { HistoryPanel } from './HistoryPanel';
 import type { HistMeta } from '../history';
+import { isRx, RX_AVISO } from '../pharma';
 
 // Linha de produto: só os mercados que têm o produto, lado a lado, do mais barato ao mais caro.
 // Clicar numa etiqueta seleciona aquela oferta (borda amarela) e mostra o botão para pôr na lista;
@@ -38,7 +39,7 @@ function Tag({ g, it, best, temEscolha, picked, onSelect }: { g: Group; it: Inde
   const value = g.perUnit ? each(it) : it.price;
   // o verde do mais barato só aparece enquanto nenhuma etiqueta está selecionada
   const verde = best && !temEscolha;
-  const strike = it.listPrice && it.listPrice > it.price && !byQty(it) && !(g.perUnit && (it._u ?? 1) > 1) ? it.listPrice : null;
+  const strike = !isRx(it) && it.listPrice && it.listPrice > it.price && !byQty(it) && !(g.perUnit && (it._u ?? 1) > 1) ? it.listPrice : null;
   const cond = conditionText(it, g);
   // selecionada: borda amarela de alerta; só uma etiqueta por vez (a escolhida apaga o verde do mais barato)
   const cls = picked ? 'border-2 border-gold bg-gold/10 shadow-[0_0_0_1px_rgba(255,194,26,.6),0_0_18px_rgba(255,194,26,.35)]'
@@ -93,6 +94,12 @@ export function ProductList({ groups, only, favs, onFav, inCart, onAdd, selected
                   <Icon name="heart" className="h-5 w-5" fill={fav} />
                 </button>
               </div>
+              {(g.items.some(isRx) || g.items.some((i) => i.generic)) && (
+                <p className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
+                  {g.items.some((i) => i.generic) && <span className="rounded-md border border-sky/60 px-1.5 py-0.5 font-bold text-sky">Genérico</span>}
+                  {g.items.some(isRx) && <span className="inline-flex items-center gap-1 text-muted" title={RX_AVISO}><Icon name="alert" className="h-3.5 w-3.5 text-gold" />{RX_AVISO}</span>}
+                </p>
+              )}
               {(alone || g.suspect || g.saving <= 0.004) && (
                 <p className="mt-0.5 text-sm text-muted">
                   {alone ? `Por enquanto só achei no ${best.market}`

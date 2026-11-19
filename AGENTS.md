@@ -1,12 +1,13 @@
 # Monitoramento de Preços
 
-Site público de preços de mercados de Mauá e Ribeirão Pires (alimentícios, higiene, limpeza). Perfil: site-app.
+Site público de preços de mercados, farmácias e comércio de bairro de Mauá e Ribeirão Pires (alimentícios, higiene, limpeza, farmácia). Perfil: site-app.
 
 ## Arquitetura
 - `server/collectors/<mercado>.mjs`: coleta cada mercado e grava `server/data/extraido/<mercado>.json` (formato em `server/build-site.mjs`).
 - `server/readers/folheto.mjs`: leitor de encartes em imagem com IA de visão gratuita (Gemini; reserva OpenRouter). Lê os manifestos `<mercado>-encartes.json` gerados por `collectors/assai.mjs` e `collectors/baronesa.mjs`; validade vem do manifesto ou é lida na própria imagem; sem validade, o produto não entra. Cache por URL em `server/data/cache` (guardado entre execuções pelo actions/cache). Relatório da última leitura em `data/extraido/encartes.leitura.json`.
-- Mercados: Atacadão (Mauá Itapark), Spani (Mauá), Coop (Barão de Mauá), Nagumo (038 Mauá), Semar (06 Mauá) e Extra (loja online de São Bernardo; as da região não vendem pelo site) por catálogo do site; Baronesa (Mauá), Assaí (Ribeirão Pires e Mauá) e Joanin por encarte/tabloide; STUK e Dia só como cartão (ofertas só no Instagram/WhatsApp e no app ClubDIA).
+- Mercados: Atacadão (Mauá Itapark), Spani (Mauá), Coop (Barão de Mauá), Nagumo (038 Mauá), Semar (06 Mauá) e Extra (loja online de Ribeirão Pires, só entrega) por catálogo do site; Baronesa (Mauá), Assaí (Ribeirão Pires e Mauá) e Joanin por encarte/tabloide; STUK e Dia só como cartão (ofertas só no Instagram/WhatsApp e no app ClubDIA).
 - Comparação: preço por unidade em caixa/fardo (`parsePack`), preço fora do padrão (>2,2x) marcado e fora da economia, menor preço sem cartão da loja (`price.mjs`). Nunca chutar quantidade que o nome não diz.
+- Farmácias (Fase 14): Drogaria São Paulo e Farma Conde (VTEX, só itens com retirada em loja de Mauá/RP; campos `segment: 'farmacia'`, `rx`, `generic`), coletadas em `.github/workflows/farmacias.yml`. Comércio de bairro (`segment: 'bairro'`): Tony BRJ Carnes (`tonybrj.mjs`) e lojas do Instagram em `social.mjs`. Remédio agrupa só por EAN; farmácia fica fora do juiz.
 - `server/run-all.mjs`: roda os coletores e mantém os dados antigos se um falhar.
 - `server/build-site.mjs`: gera `app/public/data` e as miniaturas.
 - `server/group.mjs` + `server/ean.mjs`: agrupa o mesmo produto entre mercados. EAN primeiro (descarta código interno de loja, prefixo 2, e EAN com tamanho e preço muito diferentes); regra por nome só sem EAN em conflito. Embeddings grátis do Cloudflare Workers AI foram testados em 2026-11-08 e descartados: confundem marcas e o EAN já cobre ~96% dos produtos.

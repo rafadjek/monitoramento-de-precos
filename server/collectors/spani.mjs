@@ -2,6 +2,7 @@
 // Usa a API pública da VipCommerce com o login anônimo que o próprio site faz (sem conta de usuário).
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { lerJornal } from './spani-jornal.mjs';
 
 const MARKET = 'Spani';
 const API = 'https://services-beta.vipcommerce.com.br/api-admin/v1';
@@ -153,9 +154,20 @@ async function main() {
   }
 
   const list = [...out.values()];
+  // Jornal de ofertas em PDF da loja de Mauá (carnes, frios, ovos que o site não tem). Se falhar, o catálogo segue sem ele.
+  let jornal = null;
+  try {
+    const j = await lerJornal();
+    stats.requests += 2;
+    for (const it of j.items) if (!out.has(it.externalId)) list.push(it);
+    jornal = { itens: j.items.length, pdf: j.pdf, validUntil: j.validade.validUntil, paginas: j.paginas };
+  } catch (e) {
+    console.warn('jornal do Spani ignorado:', e.message);
+    jornal = { erro: e.message };
+  }
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(OUT + 'spani.json', JSON.stringify(list, null, 2));
-  const meta = { startedAt, finishedAt: new Date().toISOString(), total: list.length, perDept, skippedDepartments: skipped, unavailable, discarded, requests: stats.requests, storeScope, storeId: cd };
+  const meta = { startedAt, finishedAt: new Date().toISOString(), total: list.length, perDept, skippedDepartments: skipped, unavailable, discarded, requests: stats.requests, storeScope, storeId: cd, jornal };
   fs.writeFileSync(OUT + 'spani.meta.json', JSON.stringify(meta, null, 2));
   console.log('TOTAL', list.length, JSON.stringify({ unavailable, discarded, requests: stats.requests }));
 }

@@ -8,8 +8,8 @@
 // Como cada mercado é lido:
 //   Spani, Atacadão, Coop, Nagumo -> abre a página do produto (productUrl) no Chrome e lê os preços
 //                                    mostrados no bloco do produto (inclui "mais por menos"/quantidade e cooperado).
-//   Extra  -> API da própria loja para aquele produto (bestPrices?storeId=1162), o mesmo endereço que a página
-//             usa para desenhar o preço. Motivo: a página do Extra só mostra a loja 1162 (São Bernardo) se o
+//   Extra  -> API da própria loja para aquele produto (bestPrices?storeId=1643), o mesmo endereço que a página
+//             usa para desenhar o preço. Motivo: a página do Extra só mostra a loja 1643 (Ribeirão Pires, loja online da R. João Domingues de Oliveira; até 19/11 era a 1162 de São Bernardo) se o
 //             visitante informar um endereço atendido por ela (fica no estado persistido do site), e o site
 //             não entrega em Mauá; sem isso a página mostra a loja padrão (483) com outros preços.
 //   Semar  -> busca na API oSuper (sense.osuper.com.br) pelo nome do produto, de dentro da página da loja
@@ -45,7 +45,9 @@ const PAUSA_MS = 1100;
 // price.mjs diz que preço de cooperado conta (só pede ser cooperado). Mude para false se o Rafael decidir
 // que o preço de cooperado (Coop) não vale como "menor preço".
 const COOPERADO_CONTA = true;
-const TODOS = ['Spani', 'Atacadão', 'Coop', 'Nagumo', 'Semar', 'Extra'];
+const TODOS = ['Spani', 'Atacadão', 'Coop', 'Nagumo', 'Semar', 'Extra', 'Drogaria São Paulo', 'Farma Conde'];
+// leitores que usam só API (sem navegador)
+const SEM_NAVEGADOR = new Set(['Atacadão', 'Extra', 'Drogaria São Paulo', 'Farma Conde']);
 const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const filtro = (process.env.MERCADOS || '').split(',').map((s) => norm(s.trim())).filter(Boolean);
 const MERCADOS = TODOS.filter((m) => !filtro.length || filtro.includes(norm(m)));
@@ -132,7 +134,35 @@ async function abrirPagina(page, url, esperaRe, assentarMs) {
   return { status: resp?.status() ?? 0, txt };
 }
 
+// Farmácias VTEX (Fase 14): o coletor usa o preço da simulação com retirada; a API pública do catálogo, pelo SKU,
+// traz o mesmo preço que a página do produto mostra (conferido em 19/11 em 8 itens da DSP e 10 da Conde).
+function leitorVtex(base, rotuloLoja) {
+  return {
+    metodo: 'API pública do catálogo (preço do SKU, o mesmo da página do produto)',
+    async ler(o) {
+      const sku = o.id.split(':').pop();
+      const r = await fetch(`${base}/api/catalog_system/pub/products/search?fq=skuId:${sku}`, { headers: { 'User-Agent': UA_BASE(130), Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
+      if ([403, 429].includes(r.status)) throw new Bloqueado(`HTTP ${r.status}`);
+      if (!r.ok) return { inconclusivo: `API respondeu HTTP ${r.status}` };
+      const item = (await r.json())[0]?.items?.find((i) => String(i.itemId) === sku);
+      if (!item) return { sumiu: 'o site não tem mais esse produto' };
+      const precos = [];
+      for (const se of item.sellers || []) {
+        const co = se.commertialOffer || {};
+        if (!(co.AvailableQuantity > 0)) continue;
+        if (co.Price > 0) precos.push({ valor: co.Price, rotulo: `preço (${se.sellerName || se.sellerId})`, peso: false, cartao: false, cooperado: false });
+      }
+      if (!precos.length) return { sumiu: 'sem estoque no site' };
+      return { precos };
+    },
+    loja: () => rotuloLoja,
+    fechar: async () => {},
+  };
+}
+
 const LEITORES = {
+  async 'Drogaria São Paulo'() { return leitorVtex('https://www.drogariasaopaulo.com.br', 'site (retirada nas lojas de Mauá e Ribeirão Pires)'); },
+  async 'Farma Conde'() { return leitorVtex('https://www.farmaconde.com.br', 'site (retirada nas lojas de Mauá)'); },
   // Spani (VipCommerce): loja de retirada Mauá 1 (centro de distribuição 17), escolhida como o site faz, pelo localStorage.
   async Spani(ctxNav) {
     let cd = 17;
@@ -265,12 +295,12 @@ const LEITORES = {
     };
   },
 
-  // Extra: API de preços da página do produto, loja 1162 (ver o comentário no topo do arquivo).
+  // Extra: API de preços da página do produto, loja 1643 (ver o comentário no topo do arquivo).
   async Extra() {
-    const STORE = 1162;
+    const STORE = 1643;
     const H = { 'User-Agent': UA_BASE(130), Origin: 'https://www.extramercado.com.br', Referer: 'https://www.extramercado.com.br/', Accept: 'application/json' };
     return {
-      metodo: 'API da loja (bestPrices, loja 1162)',
+      metodo: 'API da loja (bestPrices, loja 1643)',
       async ler(o) {
         const id = o.id.split(':')[1];
         const r = await fetch(`https://api.vendas.gpa.digital/ex/products/ecom/${id}/bestPrices?storeId=${STORE}&sellType=&isClienteMais=true`, { headers: H, signal: AbortSignal.timeout(30000) });
@@ -279,7 +309,7 @@ const LEITORES = {
         if (!r.ok) return { inconclusivo: `API respondeu HTTP ${r.status}` };
         const c = (await r.json()).content;
         const s = (c?.sellInfos || []).find((x) => x.storeId === STORE) || null;
-        if (!s) return { sumiu: 'sem preço para a loja 1162' };
+        if (!s) return { sumiu: 'sem preço para a loja 1643' };
         if (s.stock === false || s.validOnStore === false) return { sumiu: 'loja marca o produto sem estoque/fora da loja' };
         const agora = Date.now();
         const vivo = (p) => (!p.startDate || Date.parse(p.startDate + (/[Z+-]\d*:?\d*$/.test(p.startDate) ? '' : '-03:00')) <= agora) && (!p.endDate || Date.parse(p.endDate + (/Z$|[+-]\d\d:\d\d$/.test(p.endDate) ? '' : '-03:00')) >= agora);
@@ -401,7 +431,7 @@ for (const nome of MERCADOS) {
   console.log(`\n== ${nome}: ${amostra.length} produtos sorteados de ${produtos.length} (${amostra.filter((o) => o.listPrice || o.condition || extraOferta.has(o.id)).length} em oferta)`);
   let leitor = null;
   try {
-    leitor = await LEITORES[nome](nome === 'Atacadão' || nome === 'Extra' ? undefined : await nav());
+    leitor = await LEITORES[nome](SEM_NAVEGADOR.has(nome) ? undefined : await nav());
     rel.metodo = leitor.metodo;
     let bloqueios = 0;
     for (const o of amostra) {
