@@ -188,19 +188,38 @@ const LEITORES = {
   async Coop(ctxNav) {
     const ctx = await ctxNav.browser.newContext({ locale: 'pt-BR', userAgent: ctxNav.UA, viewport: { width: 1366, height: 900 } });
     const page = await ctx.newPage();
-    await page.goto('https://www.coopsupermercado.com.br/', { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.waitForTimeout(4000);
-    await page.getByRole('button', { name: /aceitar todos/i }).first().click({ timeout: 3000 }).catch(() => {});
-    await page.getByText('Alterar loja').first().click({ timeout: 15000 });
-    await page.waitForTimeout(1500);
-    await page.getByPlaceholder(/cep/i).first().fill('09310-000');
-    await page.getByText('Verificar').first().click();
-    await page.waitForTimeout(4000);
-    await page.getByText(/Retire Hoje/).first().click({ timeout: 15000 });
-    await page.waitForTimeout(3000);
-    await page.getByText('BARÃO DE MAUÁ').first().click({ timeout: 15000 });
-    await page.getByRole('button', { name: /continuar/i }).click();
-    await page.waitForTimeout(4000);
+    // Em 18/11 o Actions não achou "Alterar loja" (daqui funcionava): agora espera mais, tenta duas vezes
+    // e, se falhar, põe no erro o passo e o começo do texto da tela, para o log mostrar o que apareceu.
+    const escolherLoja = async () => {
+      let passo = 'abrir o site';
+      try {
+        await page.goto('https://www.coopsupermercado.com.br/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.waitForTimeout(4000);
+        await page.getByRole('button', { name: /aceitar todos/i }).first().click({ timeout: 3000 }).catch(() => {});
+        passo = 'Alterar loja';
+        await page.getByText('Alterar loja').first().click({ timeout: 30000 });
+        await page.waitForTimeout(1500);
+        passo = 'CEP';
+        await page.getByPlaceholder(/cep/i).first().fill('09310-000', { timeout: 15000 });
+        await page.getByText('Verificar').first().click({ timeout: 15000 });
+        await page.waitForTimeout(4000);
+        passo = 'Retire Hoje';
+        await page.getByText(/Retire Hoje/).first().click({ timeout: 20000 });
+        await page.waitForTimeout(3000);
+        passo = 'BARÃO DE MAUÁ';
+        await page.getByText('BARÃO DE MAUÁ').first().click({ timeout: 20000 });
+        passo = 'Continuar';
+        await page.getByRole('button', { name: /continuar/i }).click({ timeout: 15000 });
+        await page.waitForTimeout(4000);
+      } catch (e) {
+        const tela = await page.evaluate(() => document.body?.innerText || '').catch(() => '');
+        throw new Error(`escolha da loja parou em "${passo}" (${e.message.split('\n')[0]}); tela: ${tela.replace(/\s+/g, ' ').slice(0, 300)}`);
+      }
+    };
+    try { await escolherLoja(); } catch (e) {
+      console.log(`  Coop: 1ª tentativa de escolher a loja falhou: ${e.message}`);
+      await escolherLoja();
+    }
     await poupar(page);
     let loja = null;
     return {
