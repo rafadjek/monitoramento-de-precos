@@ -1,7 +1,28 @@
 [
   {
     "market": "Joanin",
+    "offerId": "tabloide-drogarias-01122026",
+    "blockValidity": false,
+    "section": "farmacia",
+    "categoryRaw": "Farmácia (Drogarias Joanin)",
+    "validFrom": null,
+    "validUntil": "2026-12-02T02:59:59.000Z",
+    "validityNote": "tabloide válido até 01/12/2026",
+    "stores": [
+      "Drogarias Joanin"
+    ],
+    "storeScope": "Tabloide das Drogarias Joanin (farmácia)",
+    "referer": "https://www.joanin.com.br/ofertas/",
+    "images": [
+      "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-12112026-01122026-drogarias.jpg",
+      "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-12112026-01122026-drogarias.jpg"
+    ],
+    "collectedAt": "2026-11-19T17:28:18.592Z"
+  },
+  {
+    "market": "Joanin",
     "offerId": "tabloide-23112026",
+    "blockValidity": true,
     "validFrom": null,
     "validUntil": "2026-11-24T02:59:59.000Z",
     "validityNote": "tabloide válido até 23/11/2026",
@@ -15,6 +36,6 @@
       "https://www.joanin.com.br/wp-content/uploads/2026/11/pag1-full-tabloide-17112026-23112026.jpg",
       "https://www.joanin.com.br/wp-content/uploads/2026/11/pag2-full-tabloide-17112026-23112026.jpg"
     ],
-    "collectedAt": "2026-11-19T14:58:03.859Z"
+    "collectedAt": "2026-11-19T17:28:18.592Z"
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "market": "Baronesa",
-    "offerId": "encarte-2026-11-17",
+    "offerId": "encarte-2026-11-19",
     "validFrom": null,
     "validUntil": null,
     "validityNote": "ofertas do encarte, enquanto durarem os estoques",
@@ -13,12 +13,12 @@
     "images": [
       "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
       "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902014.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902638.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902639.jpg",
       "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902640.jpg",
       "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902641.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902642.jpg"
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004909090.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004909158.jpg",
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004910914.jpg"
     ],
-    "collectedAt": "2026-11-17T19:24:50.478Z"
+    "collectedAt": "2026-11-19T17:28:17.134Z"
   }
 ]

@@ -1,0 +1,92 @@
+[
+  {
+    "market": "Sacolão São Jorge",
+    "offerId": "ig-Df5OcSLGN8h",
+    "validFrom": null,
+    "validUntil": null,
+    "validityNote": "post do Instagram de 18/11",
+    "fallbackUntil": "2026-11-22T02:59:59.000Z",
+    "fallbackNote": "post de 18/11, sem validade impressa",
+    "segment": "bairro",
+    "cidades": [
+      "Mauá"
+    ],
+    "stores": [
+      "Sacolão São Jorge"
+    ],
+    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
+    "via": "scrapecreators",
+    "link": "https://www.instagram.com/p/Df5OcSLGN8h/",
+    "images": [
+      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/919114622_18203391010375835_3845792141958912437_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODE2ODc0MzY1Mjk5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ewFN4guZdQ8Q7kNvwHVHhbi&_nc_oc=AdpOcsa0Y-X7lXQtiyEFpjlLMIsHSNethzkgV0ppEaqK1DrKcj1bulTwapdDCAQQAQk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR5VqmsWFolOkbpvkIqiEgW-Rv9HjVIAAm6kw0KaqMv5A&oe=6B050478",
+      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/916814562_18203391034375835_6608290051279666518_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODIxMTA0NzQyNzUxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pBfzDYb7u3gQ7kNvwEmqWWb&_nc_oc=AdpygxL-vGpTmWUlVXpFYZ0wXDWg0DXIMYYIsA0hkcUGBANAAwdh8uIapUVCouxgjQI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSAEFmh1fqMsci1ySiCOU_KSv9LrilhcYxGv-c-eY9Scw&oe=6B04F2DB",
+      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/902825602_18203391052375835_8338309842786648680_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODI1MTM4ODI3MDg1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Pi3SgxdLqJkQ7kNvwHdUpdE&_nc_oc=AdqNmnJNTQR5Fjpjq4_5Gz7jghdLPksrALclnhROnGGbq7J4Jpl5tLyO-3di6GAQ9mM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSbLMApUCvMFn38bZ1OvIrbyHOA9_4dkSETTsLCu-EmMA&oe=6B051F47",
+      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/916447933_18203391073375835_9156700960413991810_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODI4OTA2OTg0NzAxNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DO2TWrEjKJIQ7kNvwFdRCfU&_nc_oc=AdqT7vt6U1dYHHCJ4PUbYVSF776b5oT-wP16kJDk3A5rd7STFcxapyiduk3gWONPfA0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQPdaOX4eT6k9FxqAYkriJ9GhAeAFxn6xTzkkxBBoveTQ&oe=6B05109E",
+      "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/910845501_18203391091375835_1262354610529663237_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODMyNjQ1Nzg2ODQwNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=rCsKq2fTgWAQ7kNvwHoaoV-&_nc_oc=AdokIMUZAj7YZ8Zi2LOryKMd8p4Dd1Q8PYh_nvrFW-Edy8Jsdo5hZF5HN3xe4p_Yh5A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQOvAxZwmgTSyvfFYGidlM_ozXuIHgsuEYIJJfO27ggIA&oe=6B04EC41",
+      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/902586809_18203391112375835_279351013234237022_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODM2NzY0NTk1NTI2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pW_b4g__nnkQ7kNvwGONNrV&_nc_oc=AdqTx2rKNtk0P5uBNfWSQJTu4v69IKcu0wW4inL9poCz1qOrjgmTLEFdaQXXd9nullE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQrM-f7jxBVmROtKG5JwI33toPHxN31bnGXY9YdSgzLeg&oe=6B050DFB",
+      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/907374261_18203391130375835_1738364051476921466_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODQwNzA2NDAyOTU1NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=eLsJA_F66cMQ7kNvwEo8PTI&_nc_oc=AdpD6FbBYByl8KkRvkXn8TT-ibY-X9QDSJ_Ui5wPaDy0NvybFQwUNx2T0wgEC_4aUY8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQliavA9S0F_A-tRvFI48FWMixgri04lgeIrhqIRJ3I0g&oe=6B04F2BF"
+    ],
+    "imageKeys": [
+      "ig:Df5OcSLGN8h:0",
+      "ig:Df5OcSLGN8h:1",
+      "ig:Df5OcSLGN8h:2",
+      "ig:Df5OcSLGN8h:3",
+      "ig:Df5OcSLGN8h:4",
+      "ig:Df5OcSLGN8h:5",
+      "ig:Df5OcSLGN8h:6"
+    ],
+    "collectedAt": "2026-11-19T17:31:02.500Z"
+  },
+  {
+    "market": "Sacolão São Jorge",
+    "offerId": "ig-Df1zNuKG9Fu",
+    "validFrom": null,
+    "validUntil": null,
+    "validityNote": "post do Instagram de 17/11",
+    "fallbackUntil": "2026-11-21T02:59:59.000Z",
+    "fallbackNote": "post de 17/11, sem validade impressa",
+    "segment": "bairro",
+    "cidades": [
+      "Mauá"
+    ],
+    "stores": [
+      "Sacolão São Jorge"
+    ],
+    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
+    "via": "scrapecreators",
+    "link": "https://www.instagram.com/p/Df1zNuKG9Fu/",
+    "images": [
+      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/912228272_18203245765375835_8771418266100701172_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM1NDI4NDY2NzEzMDIyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=V7JzgCsKMRsQ7kNvwGWA9m9&_nc_oc=AdrM53WV9Y1GlzSGiVObUI93Xhe_uK9j0iJmC8Hx7aQ91FzBqiESdTCF6fM5UmCad3o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTwRnmMrvbciKC9eSIUcr2d0tituKwgl46r-jmSB4gUPg&oe=6B0511E3"
+    ],
+    "imageKeys": [
+      "ig:Df1zNuKG9Fu:0"
+    ],
+    "collectedAt": "2026-11-19T17:31:02.500Z"
+  },
+  {
+    "market": "Sacolão São Jorge",
+    "offerId": "ig-DfqiOrpG9eR",
+    "validFrom": null,
+    "validUntil": null,
+    "validityNote": "post do Instagram de 13/11",
+    "fallbackUntil": "2026-11-17T02:59:59.000Z",
+    "fallbackNote": "post de 13/11, sem validade impressa",
+    "segment": "bairro",
+    "cidades": [
+      "Mauá"
+    ],
+    "stores": [
+      "Sacolão São Jorge"
+    ],
+    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
+    "via": "scrapecreators",
+    "link": "https://www.instagram.com/p/DfqiOrpG9eR/",
+    "images": [
+      "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/902584822_18202642504375835_2939529569353852819_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTE4MzM1OTE1MDk3MDc2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Epak0AY1zxcQ7kNvwHynBlq&_nc_oc=AdrhjKvfQOXrQwzYKKGg3Zmkl-f_Lf6sbk0mun0NM-vycCeZSG1X6ci5NrKCXfUowjg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=bOFqZL_tXR4R4sAbqFHlcg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQC5KpKUFFulomJrGZnmCFFk6UQijq1XYduubIZhydj7w&oe=6B04EA91"
+    ],
+    "imageKeys": [
+      "ig:DfqiOrpG9eR:0"
+    ],
+    "collectedAt": "2026-11-19T17:31:02.500Z"
+  }
+]
