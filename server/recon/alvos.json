@@ -1,0 +1,14 @@
+[
+  { "nome": "Atacadão", "url": "https://www.atacadao.com.br", "coletor": "atacadao" },
+  { "nome": "Spani", "url": "https://www.spanionline.com.br", "coletor": "spani" },
+  { "nome": "Coop", "url": "https://www.coopsupermercado.com.br", "coletor": "coop" },
+  { "nome": "Nagumo", "url": "https://www.nagumo.com.br", "coletor": "nagumo" },
+  { "nome": "Semar", "url": "https://www.semarentrega.com.br/loja-06-maua", "coletor": "semar" },
+  { "nome": "Extra", "url": "https://www.extramercado.com.br", "coletor": "extra" },
+  { "nome": "Joanin", "url": "https://www.joanin.com.br/ofertas/", "coletor": "joanin" },
+  { "nome": "Baronesa", "url": "https://baronesasupermercados.com.br", "coletor": "baronesa" },
+  { "nome": "Assaí", "url": "https://www.assai.com.br/ofertas", "coletor": "assai" },
+  { "nome": "Roldão", "url": "https://roldao.com.br/ofertas/", "coletor": "roldao" },
+  { "nome": "Drogaria São Paulo", "url": "https://www.drogariasaopaulo.com.br", "coletor": "drogariasaopaulo" },
+  { "nome": "Farma Conde", "url": "https://www.farmaconde.com.br", "coletor": "farmaconde" }
+]

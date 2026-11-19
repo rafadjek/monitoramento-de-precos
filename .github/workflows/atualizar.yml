@@ -38,6 +38,30 @@ jobs:
           npm ci --prefix server
           npm ci --prefix app
 
+      # Fase 15.4: OCR local (RapidOCR, só CPU) lê o texto dos encartes; o Gemini fica de reserva. Se o Python ou o pip
+      # falharem, o leitor segue só com o Gemini (a etapa não quebra).
+      - uses: actions/setup-python@v5
+        id: py
+        continue-on-error: true
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: server/readers/requirements.txt
+
+      - name: Instalar OCR (RapidOCR)
+        id: ocr
+        continue-on-error: true
+        run: |
+          pip install -r server/readers/requirements.txt
+          echo "modelos=$(python -c 'import os, rapidocr; print(os.path.join(os.path.dirname(rapidocr.__file__), "models"))')" >> "$GITHUB_OUTPUT"
+
+      - name: Restaurar cache dos modelos do OCR
+        if: steps.ocr.outputs.modelos != ''
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.ocr.outputs.modelos }}
+          key: rapidocr-modelos-3.10.0-ppocrv5-latin
+
       - name: Restaurar cache de leitura dos encartes
         uses: actions/cache@v4
         with:
@@ -45,20 +69,20 @@ jobs:
           key: encartes-${{ github.run_id }}
           restore-keys: encartes-
 
-      - name: Coletar catálogos dos sites
-        if: github.event_name != 'push'
+      # Fase 15.1: catálogos (run-all, 3 sites por vez) e encartes/redes rodam AO MESMO TEMPO, em vez de um depois do outro.
+      # No push só os encartes rodam (catálogo só no agendado ou manual). Falha de encarte não derruba a etapa.
+      - name: Coletar catálogos e ler encartes (em paralelo)
         working-directory: server
+        timeout-minutes: 120
         env:
           COLLECTORS: spani,atacadao,coop,nagumo,semar,extra
-        run: node run-all.mjs
-
-      - name: Ler encartes (Assaí, Baronesa, Joanin e Roldão)
-        working-directory: server
-        continue-on-error: true
-        timeout-minutes: 60
-        env:
+          PARALLEL: '3'
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Fase 15.4: Groq é a 2ª opção de modelo de texto do leitor OCR (o mesmo segredo do juiz)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # ocr-primeiro (padrão), gemini-primeiro ou so-gemini; defina a variável READER_MODE do repositório para mudar
+          READER_MODE: ${{ vars.READER_MODE }}
           # Fase 14: lê também o tabloide das Drogarias Joanin (itens com section 'farmacia')
           JOANIN_DROGARIAS: '1'
           # Apify (crédito grátis): jornais de ofertas do Instagram e do Facebook de Nevada, STUK e Lourencini
@@ -73,13 +97,19 @@ jobs:
           # que recusa os IPs do GitHub. Usado só quando o download direto dá 403.
           IMG_PROXY: https://monitoramento-precos-imagens.consultor-milhas-worker.workers.dev
         run: |
-          node collectors/assai.mjs || echo "::warning::Assaí: lista de encartes indisponível"
-          node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"
-          node collectors/joanin.mjs || echo "::warning::Joanin: tabloide indisponível"
-          node collectors/roldao.mjs || echo "::warning::Roldão: encarte indisponível"
-          node collectors/dia.mjs || echo "::warning::Dia: folheto indisponível no Tiendeo"
-          node collectors/social.mjs || echo "::warning::Instagram (Apify) indisponível"
-          node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json
+          if [ "$GITHUB_EVENT_NAME" != "push" ]; then node run-all.mjs > ../coleta-catalogos.log 2>&1 & CAT=$!; fi
+          (
+            node collectors/assai.mjs || echo "::warning::Assaí: lista de encartes indisponível"
+            node collectors/baronesa.mjs || echo "::warning::Baronesa: encarte indisponível"
+            node collectors/joanin.mjs || echo "::warning::Joanin: tabloide indisponível"
+            node collectors/roldao.mjs || echo "::warning::Roldão: encarte indisponível"
+            node collectors/dia.mjs || echo "::warning::Dia: folheto indisponível no Tiendeo"
+            node collectors/social.mjs || echo "::warning::Instagram (Apify) indisponível"
+            node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json
+          ) || echo "::warning::leitura de encartes terminou com erro"
+          RC=0
+          if [ -n "${CAT:-}" ]; then wait $CAT || RC=$?; cat ../coleta-catalogos.log; fi
+          exit $RC
 
       # Juiz de "mesmo produto?" (Gemini grátis): primeiro a prova com os pares rotulados pelo Rafael;
       # se acertar >= 95% e mais que a regra, julga pares duvidosos (com as fotos; cada par uma vez só, com teto por rodada).

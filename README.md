@@ -88,6 +88,44 @@ Nem todo mercado informa validade de oferta; quando não informa, o site mostra 
 
 O servidor de imagens do Assaí só atende o Brasil e recusa os IPs do GitHub. As imagens passam por um Worker na Cloudflare (`worker-imagens/`, `monitoramento-precos-imagens.consultor-milhas-worker.workers.dev`), fixado perto de São Paulo (`[placement] region = "aws:sa-east-1"`). Ele só aceita imagens `.jpg/.png` do servidor de encartes do Assaí e é usado só quando o download direto dá 403. Publicar de novo: `npx wrangler deploy` dentro de `worker-imagens/`.
 
+## Varredura rápida, coleta em paralelo e leitura por OCR (Fase 15, 2026-11-19)
+
+**Descobrir as fontes de um site em minutos** (sem IA): `node server/recon/kit.mjs tudo <url>` devolve um JSON curto com:
+- as APIs que a página chama;
+- se o site é VTEX: catálogo, estoque e lojas com retirada perto de um CEP;
+- o sitemap;
+- os encartes em PDF ou imagem, e se o PDF tem texto;
+- os últimos posts do Instagram.
+
+Cada parte também roda sozinha, com os comandos `api`, `vtex`, `sitemap`, `instagram` e `folheto`. O kit segue as regras do projeto: sem login, com pausa entre requisições, e bloqueio só é relatado.
+
+**Varrer vários sites com IAs grátis:** `node server/recon/varrer.mjs server/recon/alvos.json`.
+- **O que faz:** roda o kit em 4 sites ao mesmo tempo e entrega cada resultado a um modelo grátis pelo OpenCode (`opencode-cli run`, agente só de leitura). O modelo devolve, em JSON, as fontes, as lacunas e os bloqueios.
+- **Tempo e saída:** os 12 sites atuais levam cerca de 4 min. Os resultados ficam em `D:\Temp\varredura-<data>`.
+- **Modelos, nesta ordem:**
+  1. os modelos grátis do OpenCode: rápidos, mas com limite de uso compartilhado;
+  2. o Gemma 4, pela chave do Google configurada no OpenCode: limite de 16 mil tokens por minuto, uma chamada por vez.
+- **Uso dos resumos:** servem de triagem. As decisões e o código continuam com o Claude e o Rafael.
+
+**Coleta diária mais rápida:**
+- `run-all.mjs` roda 3 coletores ao mesmo tempo, começando pelos mais demorados. Como cada um é de um site diferente, cada site continua recebendo uma requisição por vez.
+- No workflow, catálogos e encartes rodam em paralelo, na mesma etapa.
+- `PARALLEL=1` volta ao modo antigo, um coletor por vez.
+
+**Encartes: OCR primeiro, Gemini de reserva:**
+- **Como funciona:**
+  1. `server/readers/ocr.py` (RapidOCR, na CPU) lê o texto e as posições na página.
+  2. Um modelo de texto grátis monta os itens. A ordem é: Gemma 4 pela chave do Gemini (cota separada da do Gemini), depois Groq, depois OpenRouter.
+  3. Todo preço precisa aparecer no texto do OCR. Se algum não aparecer, a página vai para o Gemini.
+- **Resultado na comparação de 19/11:** em 13 páginas, o OCR com o modelo de texto acertou 98,6% dos preços em comum com o Gemini e achou 2 erros dele.
+- **Ordem dos leitores:** a variável `READER_MODE` do repositório escolhe entre `ocr-primeiro` (padrão), `gemini-primeiro` e `so-gemini`.
+- **Fim da cota:** quando a cota do dia do Gemini acaba em todos os modelos, ele é desligado na hora. Antes, o leitor ficava cerca de 35 min esperando.
+
+**Ferramentas locais (só para varredura e testes, nunca na coleta diária):**
+- **PaddleOCR 3.7 com GPU**, em `D:\Projetos Open Code\paddleocr\venv`, com modelos em `D:\Cache\paddlex` (variável `PADDLE_PDX_CACHE_HOME`). Lê cerca de 2 s por página.
+- **Ollama** com `qwen3-vl:8b`, em `D:\Ollama\models`.
+- **Atenção à placa de vídeo:** em 19/11 a RTX 3060 chegou a 92-94 °C com a ventoinha a 0%. Ela precisa ser conferida antes de uso pesado.
+
 ## Configuração (uma vez)
 
 **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `(root)`.**

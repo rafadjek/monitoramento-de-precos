@@ -3,13 +3,17 @@
 // Manifesto (gerado pelo coletor de cada mercado): array de
 //   { market, offerId, validFrom?, validUntil?, validityNote?, stores[], storeScope?, images[], referer? }
 // Sem validade no manifesto, vale a validade impressa nas páginas (lida pela IA). Sem validade nenhuma, o produto não entra.
-// Segredos (variáveis de ambiente): GEMINI_API_KEY (principal), OPENROUTER_API_KEY (reserva).
+// Leitores (READER_MODE): "ocr-primeiro" (padrão) = OCR local (ocr.py, RapidOCR) + modelo de texto grátis, com conferência dos
+// preços contra o OCR; o que não passa na conferência vai para o Gemini (visão). "gemini-primeiro" = Gemini, depois OCR,
+// depois OpenRouter (imagem). "so-gemini" = como antes (Gemini, reserva OpenRouter de imagem). Ver readers/ocr-leitor.mjs.
+// Segredos (variáveis de ambiente): GEMINI_API_KEY (Gemini e Gemma), GROQ_API_KEY e OPENROUTER_API_KEY (reservas).
 // Cache: data/cache/leitura/<sha1(url)>.json (resposta da IA) e data/cache/paginas/<sha1(url)> (imagem, reaproveitada
 // pelo build-site para recortar a foto do produto). A mesma imagem nunca é lida duas vezes.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { lerPorOcr, lerJson, OcrFalhou } from './ocr-leitor.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE_READ = path.join(ROOT, 'data/cache/leitura');
@@ -21,6 +25,7 @@ const MAX_NEW = Number(process.env.READER_MAX_NEW || 60);
 // prazo da rodada: depois dele não começa imagem nova (grava o que leu; o resto fica para a próxima rodada).
 // Sem isso o passo do GitHub era interrompido no limite de tempo e nada era gravado.
 const DEADLINE = Date.now() + Number(process.env.READER_BUDGET_MIN || 40) * 60e3; // teto de páginas novas por execução; o resto fica para a próxima
+const READER_MODE = ['ocr-primeiro', 'gemini-primeiro', 'so-gemini'].includes(process.env.READER_MODE) ? process.env.READER_MODE : 'ocr-primeiro';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 const manifests = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const DRY = process.argv.includes('--dry');
@@ -132,9 +137,11 @@ async function rawDownload(url, referer, f) {
 }
 
 let modelIdx = 0;
+let geminiOff = false; // cota do dia acabou em todos os modelos: não tenta mais nesta execução
 async function askGemini(buf, mime, prompt = PROMPT) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error('sem GEMINI_API_KEY');
+  if (geminiOff) throw new Error('gemini: cota do dia esgotada em todos os modelos (desligado nesta execução)');
   const body = {
     contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: mime, data: buf.toString('base64') } }] }],
     generationConfig: { temperature: 0, responseMimeType: 'application/json', responseSchema: SCHEMA },
@@ -156,10 +163,19 @@ async function askGemini(buf, mime, prompt = PROMPT) {
     }
     if (r.status === 404 && modelIdx < MODELS.length - 1) { console.warn(`  modelo ${model} indisponível, tentando ${MODELS[modelIdx + 1]}`); modelIdx++; onModel = -1; continue; }
     if (r.status === 429 || r.status >= 500) {
-      last = `${model} ${r.status} ${(await r.text()).replace(/\s+/g, ' ').slice(0, 160)}`;
+      const txt = (await r.text()).replace(/\s+/g, ' ');
+      last = `${model} ${r.status} ${txt.slice(0, 160)}`;
       console.warn('  ' + last);
-      // só a cota do DIA troca de modelo (cada modelo tem a sua); limite por minuto (PDF grande) é esperar e repetir
-      if ((/PerDay|per day/i.test(last) || (r.status >= 500 && onModel >= 2)) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+      // Cota do DIA: o quotaId vem no fim da mensagem ("...PerDay..."); antes o teste olhava só os 160 primeiros
+      // caracteres, não via o PerDay e esperava ~35 min em vão (19/11). Cota do dia troca de modelo (cada um tem a
+      // sua); acabou em todos, o Gemini fica desligado nesta execução e as páginas vão direto para a reserva.
+      // Sem PerDay nem PerMinute no texto, 3 recusas seguidas no mesmo modelo contam como cota do dia.
+      const daily = r.status === 429 && (/PerDay|per day/i.test(txt) || (!/PerMinute|per minute/i.test(txt) && onModel >= 2));
+      if (daily || (r.status >= 500 && onModel >= 2)) {
+        if (modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
+        if (daily) { geminiOff = true; break; }
+      }
+      // limite por minuto (PDF grande) é esperar e repetir
       await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
       continue;
     }
@@ -171,19 +187,32 @@ async function askGemini(buf, mime, prompt = PROMPT) {
   throw new Error(`gemini: limite de uso atingido (${last})`);
 }
 
+// Reserva de imagem: modelos de visão :free explícitos (o "openrouter/free" às vezes devolvia texto sem JSON e quebrava com
+// "Unexpected end of JSON input"). Lista separada por vírgula em OPENROUTER_VISION_MODEL; o próximo entra se um falhar.
+const OR_VISION = (process.env.OPENROUTER_VISION_MODEL || 'google/gemma-4-31b-it:free,nvidia/nemotron-3.5-super-vl:free').split(',');
 async function askOpenRouter(buf, mime, prompt = PROMPT) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) throw new Error('sem OPENROUTER_API_KEY');
-  const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(120000),
-    body: JSON.stringify({
-      model: 'openrouter/free', temperature: 0,
-      messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image_url', image_url: { url: `data:${mime};base64,${buf.toString('base64')}` } }] }],
-    }),
-  });
-  if (!r.ok) throw new Error(`openrouter ${r.status}`);
-  const t = (await r.json()).choices?.[0]?.message?.content ?? '';
-  return { ...JSON.parse(t.slice(t.indexOf('{'), t.lastIndexOf('}') + 1)), model: 'openrouter/free' };
+  // PDF não vai como image_url: a reserva de imagem só lê imagem
+  if (mime === 'application/pdf') throw new Error('openrouter: PDF não suportado na reserva de imagem');
+  const falhas = [];
+  for (const model of OR_VISION) {
+    try {
+      const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(180000),
+        body: JSON.stringify({
+          model, temperature: 0,
+          messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image_url', image_url: { url: `data:${mime};base64,${buf.toString('base64')}` } }] }],
+        }),
+      });
+      if (!r.ok) { falhas.push(`${model} HTTP ${r.status}`); continue; }
+      const t = (await r.json()).choices?.[0]?.message?.content ?? '';
+      const j = lerJson(t);
+      if (!j || !Array.isArray(j.products)) { falhas.push(`${model} sem JSON`); continue; }
+      return { ...j, model };
+    } catch (e) { falhas.push(`${model} ${e.message}`); }
+  }
+  throw new Error(`openrouter: ${falhas.join('; ')}`);
 }
 
 let newReads = 0;
@@ -200,14 +229,35 @@ async function readPage(url, referer, key = url, blockValidity = false) {
   // PDF (o Roldão publica o encarte inteiro assim): o Gemini lê PDF direto
   const mime = buf.subarray(0, 4).toString() === '%PDF' ? 'application/pdf' : buf[0] === 0x89 ? 'image/png' : buf[0] === 0x52 ? 'image/webp' : 'image/jpeg';
   newReads++;
-  let res;
-  try { res = await askGemini(buf, mime, prompt); }
-  catch (e) {
-    console.warn('  gemini falhou:', e.message);
-    try { res = await askOpenRouter(buf, mime, prompt); }
-    catch (e2) { throw new Error(`${e.message} | reserva: ${e2.message}`); }
+  const blockRule = blockValidity ? BLOCK_RULE : '';
+  // Cada leitor devolve a página lida ou lança erro; o motivo da troca fica registrado em motivoGemini
+  const porOcr = async () => ({ ...(await lerPorOcr(buf, PROMPT, { blockRule })) });
+  const porGemini = async () => {
+    try { return { ...(await askGemini(buf, mime, prompt)), reader: 'gemini' }; }
+    catch (e) {
+      console.warn('  gemini falhou:', e.message);
+      try { const r = await askOpenRouter(buf, mime, prompt); return { ...r, reader: 'openrouter:' + r.model }; }
+      catch (e2) { throw new Error(`${e.message} | reserva: ${e2.message}`); }
+    }
+  };
+  let res, motivoGemini = null;
+  if (READER_MODE === 'so-gemini') { res = await porGemini(); motivoGemini = 'READER_MODE=so-gemini'; }
+  else if (READER_MODE === 'gemini-primeiro') {
+    try { res = await porGemini(); }
+    catch (e) {
+      console.warn('  tentando o OCR:', e.message);
+      try { res = await porOcr(); } catch (e2) { throw new Error(`${e.message} | ocr: ${e2.message}`); }
+    }
+  } else {
+    try { res = await porOcr(); }
+    catch (e) {
+      if (!(e instanceof OcrFalhou)) console.warn('  erro inesperado no OCR:', e.message);
+      motivoGemini = e.message.slice(0, 300);
+      console.warn('  OCR não resolveu, indo para o Gemini:', motivoGemini);
+      res = await porGemini();
+    }
   }
-  const page = { validFrom: res.validFrom ?? null, validUntil: res.validUntil ?? null, products: res.products ?? [], model: res.model, readAt: new Date().toISOString() };
+  const page = { validFrom: res.validFrom ?? null, validUntil: res.validUntil ?? null, products: res.products ?? [], model: res.model, reader: res.reader, ...(motivoGemini ? { motivoGemini } : {}), readAt: new Date().toISOString() };
   fs.mkdirSync(CACHE_READ, { recursive: true });
   fs.writeFileSync(f, JSON.stringify(page));
   return { ...page, cached: false };
@@ -297,9 +347,11 @@ async function main() {
         try {
           const p = await readPage(url, enc.referer, enc.imageKeys?.[i] ?? url, !!enc.blockValidity);
           pages.push({ url, ...p });
-          report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model });
-          console.log(`  ${p.products.length} produtos${p.cached ? ' (cache)' : ` (${p.model})`}`);
-          if (!p.cached) await sleep(GAP_MS);
+          // leitura antiga (sem "reader"): foi o Gemini, ou o OpenRouter se o modelo começa assim
+          const reader = p.reader ?? (String(p.model).startsWith('openrouter') ? 'openrouter:' + p.model : 'gemini');
+          report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model, reader, ...(p.motivoGemini ? { motivoGemini: p.motivoGemini } : {}) });
+          console.log(`  ${p.products.length} produtos${p.cached ? ' (cache)' : ` (${reader})`}`);
+          if (!p.cached && !reader.startsWith('ocr+')) await sleep(GAP_MS); // o intervalo é por causa da cota do Gemini; o OCR tem o seu controle de tokens
         } catch (e) {
           console.warn('  erro:', e.message);
           report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: false, error: e.message });
@@ -359,6 +411,9 @@ async function main() {
   }
   report.finishedAt = new Date().toISOString();
   report.newReads = newReads;
+  report.readerMode = READER_MODE;
+  report.porLeitor = {};
+  for (const p of report.pages.filter((x) => x.ok && !x.cached)) { const k = p.reader.startsWith('ocr+') ? 'ocr' : p.reader.split(':')[0]; report.porLeitor[k] = (report.porLeitor[k] ?? 0) + 1; }
   fs.writeFileSync(path.join(OUT, 'encartes.leitura.json'), JSON.stringify(report, null, 1));
 }
 // só roda quando chamado direto (o teste importa as funções acima)
