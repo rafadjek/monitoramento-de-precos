@@ -1,8 +1,8 @@
 {
   "stats": {
     "ofertas-dia": {
-      "siteCount": 1858,
-      "lidos": 1858
+      "siteCount": 2099,
+      "lidos": 2099
     },
     "peixaria": {
       "siteCount": 679,
@@ -41,9 +41,10 @@
       "lidos": 6095
     }
   },
-  "requests": 341,
+  "requests": 343,
   "aborted": null,
-  "seconds": 1161,
-  "ofertaDia": 1858,
-  "produtos": 6425
+  "seconds": 1034,
+  "ofertaDia": 2099,
+  "precoBaixou": 1246,
+  "produtos": 6617
 }

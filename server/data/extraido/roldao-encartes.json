@@ -1,19 +1,19 @@
 [
   {
     "market": "Roldão",
-    "offerId": "5109-16.11-18.11",
+    "offerId": "5120-19.11",
     "validFrom": null,
-    "validUntil": "2026-11-19T02:59:59.000Z",
-    "validityNote": "Hortifruti (REDE): 16.11 a 18.11",
+    "validUntil": "2026-11-20T02:59:59.000Z",
+    "validityNote": "Quinta da Carne: 19.11",
     "stores": [
       "todas as lojas Roldão"
     ],
-    "storeScope": "Encarte \"Hortifruti (REDE)\" da rede (vale em Mauá)",
+    "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
     "referer": "https://roldao.com.br/ofertas/",
     "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTI-REDE-16-A-18-11-2026-2-1.pdf"
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-18T19:51:15.530Z"
+    "collectedAt": "2026-11-19T14:58:04.741Z"
   },
   {
     "market": "Roldão",
@@ -29,6 +29,22 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-LANCHONETE-16-A-22-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-18T19:51:15.530Z"
+    "collectedAt": "2026-11-19T14:58:04.741Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5124-19.11-22.11",
+    "validFrom": null,
+    "validUntil": "2026-11-23T02:59:59.000Z",
+    "validityNote": "Fim de Semana Arrasador (REDE PRÉ BLACK): 19.11 a 22.11",
+    "stores": [
+      "Roldão Mauá"
+    ],
+    "storeScope": "Encarte \"Fim de Semana Arrasador (REDE PRÉ BLACK)\" das lojas que incluem Mauá",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PRE-BLACK-REDE-19-A-22-11-2026-3.pdf"
+    ],
+    "collectedAt": "2026-11-19T14:58:04.741Z"
   }
 ]
