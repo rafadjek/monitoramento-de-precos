@@ -1,14 +1,14 @@
 {
- "geradoEm": "2026-11-18T20:24:34.003Z",
- "semente": 1884628758,
+ "geradoEm": "2026-11-19T15:56:40.431Z",
+ "semente": 1954955186,
  "amostraPorMercado": 15,
  "cooperadoConta": true,
  "mercados": {
   "Spani": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 3314,
-   "coletadoEm": "2026-11-18T18:19:59.175Z",
+   "produtosNoSite": 3313,
+   "coletadoEm": "2026-11-19T13:26:41.474Z",
    "loja": "Av. Barão de Mauá, 2005",
    "conferidos": 15,
    "batem": 15,
@@ -22,8 +22,8 @@
   "Atacadão": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 6751,
-   "coletadoEm": "2026-11-18T18:21:18.196Z",
+   "produtosNoSite": 6814,
+   "coletadoEm": "2026-11-19T13:27:58.540Z",
    "loja": "Mauá Itapark",
    "conferidos": 15,
    "batem": 15,
@@ -35,254 +35,48 @@
    "inconclusivosLista": []
   },
   "Coop": {
-   "metodo": null,
+   "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 4271,
-   "coletadoEm": "2026-11-18T18:36:39.308Z",
-   "loja": null,
-   "conferidos": 0,
-   "batem": 0,
+   "produtosNoSite": 4275,
+   "coletadoEm": "2026-11-19T13:46:37.407Z",
+   "loja": "Barão de Mauá",
+   "conferidos": 14,
+   "batem": 14,
    "divergentes": 0,
-   "inconclusivos": 0,
+   "inconclusivos": 1,
    "bloqueado": false,
-   "erro": "locator.click: Timeout 15000ms exceeded.",
+   "erro": null,
    "divergencias": [],
-   "inconclusivosLista": []
+   "inconclusivosLista": [
+    {
+     "id": "coop:40905537",
+     "nome": "Amaciante para Roupas Ypê Concentrado Encanto 1L",
+     "url": "https://www.coopsupermercado.com.br/amaciante-para-roupas-ype-concentrado-encanto-1l/p",
+     "nossoPreco": 15.89,
+     "motivo": "bloco do produto não encontrado na página"
+    }
+   ]
   },
   "Nagumo": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 6425,
-   "coletadoEm": "2026-11-18T18:37:15.398Z",
+   "produtosNoSite": 6617,
+   "coletadoEm": "2026-11-19T13:47:13.367Z",
    "loja": "038-MAUA",
    "conferidos": 15,
-   "batem": 7,
-   "divergentes": 8,
+   "batem": 15,
+   "divergentes": 0,
    "inconclusivos": 0,
    "bloqueado": false,
    "erro": null,
-   "divergencias": [
-    {
-     "id": "nagumo:329521",
-     "nome": "Desodorante Aerosol Men+Care Invisible Dry Dove 150Ml",
-     "url": "https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/desodorante/desodorante-aerosol-men%2Bcare-invisible-dry-dove-150ml-329521.html",
-     "nossoPreco": 19.98,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 19.98,
-       "rotulo": "Preço baixou! De R$ 19,98"
-      },
-      {
-       "valor": 15.98,
-       "rotulo": "Por: R$ 15,98"
-      },
-      {
-       "valor": 15.98,
-       "rotulo": "Por: R$ 15,98 R$ 15,98"
-      }
-     ],
-     "menorNaLoja": 15.98,
-     "diferencaPct": 25,
-     "motivo": "a loja mostra R$ 15,98 (Por: R$ 15,98) e o site publica R$ 19,98"
-    },
-    {
-     "id": "nagumo:573887",
-     "nome": "Café Torrado E Moído Extraforte Bom Jesus Pacote 500G",
-     "url": "https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/cafe/caf%C3%A9-torrado-e-mo%C3%ADdo-extraforte-bom-jesus-pacote-500g--573887.html",
-     "nossoPreco": 21.85,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 21.85,
-       "rotulo": "Preço baixou! De R$ 21,85"
-      },
-      {
-       "valor": 17.98,
-       "rotulo": "Por: R$ 17,98"
-      },
-      {
-       "valor": 17.98,
-       "rotulo": "Por: R$ 17,98 R$ 17,98"
-      }
-     ],
-     "menorNaLoja": 17.98,
-     "diferencaPct": 21.5,
-     "motivo": "a loja mostra R$ 17,98 (Por: R$ 17,98) e o site publica R$ 21,85"
-    },
-    {
-     "id": "nagumo:267575",
-     "nome": "Iogurte Natural Integral Verde Campo 160g",
-     "url": "https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/iogurte/iogurte-natural-integral-verde-campo-160g-267575.html",
-     "nossoPreco": 4.59,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 4.59,
-       "rotulo": "Preço baixou! De R$ 4,59"
-      },
-      {
-       "valor": 3.29,
-       "rotulo": "Por: R$ 3,29"
-      },
-      {
-       "valor": 3.29,
-       "rotulo": "Por: R$ 3,29 R$ 3,29"
-      }
-     ],
-     "menorNaLoja": 3.29,
-     "diferencaPct": 39.5,
-     "motivo": "a loja mostra R$ 3,29 (Por: R$ 3,29) e o site publica R$ 4,59"
-    },
-    {
-     "id": "nagumo:2714",
-     "nome": "Mandioca",
-     "url": "https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/tuberculos/mandioca-2714.html",
-     "nossoPreco": 4.98,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 4.98,
-       "rotulo": "Preço baixou! De R$ 4,98"
-      },
-      {
-       "valor": 2.98,
-       "rotulo": "Por: R$ 2,98"
-      },
-      {
-       "valor": 1.79,
-       "rotulo": "Peso médio por unidade 600g R$ 1,79"
-      },
-      {
-       "valor": 2.98,
-       "rotulo": "R$ 1,79 R$ 2,98/kg",
-       "porPeso": true
-      }
-     ],
-     "menorNaLoja": 1.79,
-     "diferencaPct": 178.2,
-     "motivo": "a loja mostra R$ 1,79 (Peso médio por unidade 600g R$ 1,79) e o site publica R$ 4,98"
-    },
-    {
-     "id": "nagumo:707855",
-     "nome": "Bolo Pronto Kim De Chocolate 250G",
-     "url": "https://www.nagumo.com.br/categoria/departamentos/padaria/industrializada/bolos-industrializados/bolo-pronto-kim-de-chocolate-250g-707855.html",
-     "nossoPreco": 9.49,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 9.49,
-       "rotulo": "Preço baixou! De R$ 9,49"
-      },
-      {
-       "valor": 5.98,
-       "rotulo": "Por: R$ 5,98"
-      },
-      {
-       "valor": 5.98,
-       "rotulo": "Por: R$ 5,98 R$ 5,98"
-      }
-     ],
-     "menorNaLoja": 5.98,
-     "diferencaPct": 58.7,
-     "motivo": "a loja mostra R$ 5,98 (Por: R$ 5,98) e o site publica R$ 9,49"
-    },
-    {
-     "id": "nagumo:248192",
-     "nome": "Biscoito Água E Sal Tradicional Vitarella 350G",
-     "url": "https://www.nagumo.com.br/categoria/mercearia-doce/doce/biscoito/biscoito-%C3%A1gua-e-sal-tradicional-vitarella-350g-248192.html",
-     "nossoPreco": 6.98,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 6.98,
-       "rotulo": "Preço baixou! De R$ 6,98"
-      },
-      {
-       "valor": 4.98,
-       "rotulo": "Por: R$ 4,98"
-      },
-      {
-       "valor": 4.98,
-       "rotulo": "Por: R$ 4,98 R$ 4,98"
-      }
-     ],
-     "menorNaLoja": 4.98,
-     "diferencaPct": 40.2,
-     "motivo": "a loja mostra R$ 4,98 (Por: R$ 4,98) e o site publica R$ 6,98"
-    },
-    {
-     "id": "nagumo:368667",
-     "nome": "Bebida A Base De Soja Ades Sabor Uva 1L",
-     "url": "https://www.nagumo.com.br/categoria/departamentos/bebidas/nao-alcoolicas/bebida-vegetal/bebida-a-base-de-soja-ades-sabor-uva-1l-368667.html",
-     "nossoPreco": 10.29,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 10.29,
-       "rotulo": "Preço baixou! De R$ 10,29"
-      },
-      {
-       "valor": 6.98,
-       "rotulo": "Por: R$ 6,98"
-      },
-      {
-       "valor": 6.98,
-       "rotulo": "Por: R$ 6,98 R$ 6,98"
-      }
-     ],
-     "menorNaLoja": 6.98,
-     "diferencaPct": 47.4,
-     "motivo": "a loja mostra R$ 6,98 (Por: R$ 6,98) e o site publica R$ 10,29"
-    },
-    {
-     "id": "nagumo:157704",
-     "nome": "Desodorante Dove Original Rollon 50Ml",
-     "url": "https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/desodorante/desodorante-dove-original-rollon-50ml-157704.html",
-     "nossoPreco": 13.98,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 13.98,
-       "rotulo": "Preço baixou! De R$ 13,98"
-      },
-      {
-       "valor": 9.98,
-       "rotulo": "Por: R$ 9,98"
-      },
-      {
-       "valor": 9.98,
-       "rotulo": "Por: R$ 9,98 R$ 9,98"
-      }
-     ],
-     "menorNaLoja": 9.98,
-     "diferencaPct": 40.1,
-     "motivo": "a loja mostra R$ 9,98 (Por: R$ 9,98) e o site publica R$ 13,98"
-    }
-   ],
+   "divergencias": [],
    "inconclusivosLista": []
   },
   "Semar": {
    "metodo": "API da loja (busca oSuper, loja 06 Mauá)",
    "noSite": true,
-   "produtosNoSite": 9526,
-   "coletadoEm": "2026-11-18T18:56:06.289Z",
+   "produtosNoSite": 9459,
+   "coletadoEm": "2026-11-19T14:03:56.629Z",
    "loja": "loja 1705 (06 Mauá)",
    "conferidos": 15,
    "batem": 15,
@@ -296,43 +90,16 @@
   "Extra": {
    "metodo": "API da loja (bestPrices, loja 1162)",
    "noSite": true,
-   "produtosNoSite": 4126,
-   "coletadoEm": "2026-11-18T19:39:04.339Z",
+   "produtosNoSite": 4089,
+   "coletadoEm": "2026-11-19T14:45:56.576Z",
    "loja": "loja 1162",
    "conferidos": 15,
-   "batem": 14,
-   "divergentes": 1,
+   "batem": 15,
+   "divergentes": 0,
    "inconclusivos": 0,
    "bloqueado": false,
    "erro": null,
-   "divergencias": [
-    {
-     "id": "extra:449289",
-     "nome": "Desodorante Aerossol Pera e Aloe Vera Dove Go Fresh Spray 150ml",
-     "url": "https://www.extramercado.com.br/produto/449289/desodorante-aerossol-pera-e-aloe-vera-dove-go-fresh-spray-150ml",
-     "nossoPreco": 19.99,
-     "listPrice": null,
-     "condicao": null,
-     "tipo": "menor-preco-nao-usado",
-     "precosNaLoja": [
-      {
-       "valor": 19.99,
-       "rotulo": "preço da loja"
-      },
-      {
-       "valor": 19.99,
-       "rotulo": "preço de venda"
-      },
-      {
-       "valor": 16.99,
-       "rotulo": "promoção (preço de cada)"
-      }
-     ],
-     "menorNaLoja": 16.99,
-     "diferencaPct": 17.7,
-     "motivo": "a loja mostra R$ 16,99 (promoção (preço de cada)) e o site publica R$ 19,99"
-    }
-   ],
+   "divergencias": [],
    "inconclusivosLista": []
   }
  }
