@@ -56,6 +56,11 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   'Mercadinho Parceiro': { word: 'Parceiro', bg: '#146C43', wordCls: 'font-display text-base font-extrabold uppercase tracking-wide text-white' },
   'Mercado Baratinho': { word: 'Baratinho', bg: '#F2A900', wordCls: 'font-display text-base font-extrabold uppercase tracking-wide text-[#5C3A00]' },
   'Carnes Santana': { word: 'Carnes Santana', bg: '#8C1C13', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
+  // Outros sem logo em arquivo: STUK (Instagram), farmácias e açougue (Fase 14).
+  STUK: { word: 'STUK', bg: '#6A1B9A', wordCls: 'font-display text-lg font-extrabold uppercase tracking-wide text-white' },
+  'Drogaria São Paulo': { word: 'Drogaria São Paulo', bg: '#0B6E4F', wordCls: 'font-display text-xs font-extrabold uppercase tracking-wide text-white' },
+  'Farma Conde': { word: 'Farma Conde', bg: '#0F5FA6', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
+  'Tony BRJ Carnes': { word: 'Tony BRJ', bg: '#6B2E1F', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
 };
 
 export function MarketLogo({ name, h = 'h-8' }: { name: string; h?: string }) {
