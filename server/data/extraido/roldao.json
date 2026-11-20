@@ -1,466 +1,6 @@
 [
  {
   "market": "Roldão",
-  "externalId": "aa9245ed675f",
-  "name": "Músculo Bovino Peça, Pedaço ou Moído",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 35.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 34,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "8b171f5cabf9",
-  "name": "Coxão Duro Bovino Peça, Pedaço ou Bife",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 39.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 38,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "df26f08887fa",
-  "name": "Coxão Mole Bovino Peça, Pedaço ou Bife",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 43.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 42,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "78d579901fab",
-  "name": "Mocotó Bovino",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 14.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 13,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "692abe06452e",
-  "name": "Fígado Bovino",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 14.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 13,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "b2ab78407961",
-  "name": "Peito de Frango Sem Osso e Sem Pele Resfriado",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 19.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 18,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "2b34ba9d64c1",
-  "name": "Coxa com Sobrecoxa de Frango Resfriada",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 11.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 10,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "4e1925d01353",
-  "name": "Asa ou Coxinha da Asa de Frango Resfriada",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 15.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 14,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "3615e1a0ae16",
-  "name": "Moela de Frango Resfriada",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 17.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 16,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "87f50f610d25",
-  "name": "Coração de Frango Resfriado",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 42.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 41,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "7aca15fb3642",
-  "name": "Pernil Suíno com Pele",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 15.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 14,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "17b3e8d402a0",
-  "name": "Filé Mignon Suíno",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 20.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 19,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "be6338a725da",
-  "name": "Lombo Suíno",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 21.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 20,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "024134d8579d",
-  "name": "Costela Suína",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 20.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 19,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "eaf17cd89f6a",
-  "name": "Barriga Suína",
-  "brand": null,
-  "ean": null,
-  "size": null,
-  "price": 21.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 20,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "0b7733596b3e",
-  "name": "Linguiça Suína Nobre Fracionada",
-  "brand": "Nobre",
-  "ean": null,
-  "size": null,
-  "price": 17.5,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 16,50 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "5420c11142cd",
-  "name": "Linguiça Toscana Perdigão Fracionada",
-  "brand": "Perdigão",
-  "ean": null,
-  "size": null,
-  "price": 23.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 22,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "49efa7cff5ab",
-  "name": "Linguiça Toscana Salerno Apimentada Fracionada",
-  "brand": "Salerno",
-  "ean": null,
-  "size": null,
-  "price": 30.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 29,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "bfe9efcb8d86",
-  "name": "Linguiça de Frango Fina com Ervas Salerno Fracionada",
-  "brand": "Salerno",
-  "ean": null,
-  "size": null,
-  "price": 30.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 29,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
-  "externalId": "1d30784875b5",
-  "name": "Salsicha Hot Dog Seara Fracionada",
-  "brand": "Seara",
-  "ean": null,
-  "size": null,
-  "price": 10.9,
-  "listPrice": null,
-  "unitPrice": null,
-  "category": "alimenticios",
-  "categoryRaw": null,
-  "imageUrl": null,
-  "imageBox": null,
-  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-QUINTA-DA-CARNE-19-11-2026.pdf",
-  "source": "encarte",
-  "condition": "R$ 9,90 preço por kg no app Roldão Mais",
-  "validFrom": "2026-11-19T03:00:00.000Z",
-  "validUntil": "2026-11-20T02:59:59.000Z",
-  "validityNote": "Quinta da Carne: 19.11",
-  "storeScope": "Encarte \"Quinta da Carne\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
- },
- {
-  "market": "Roldão",
   "externalId": "37a8f4d00e43",
   "name": "FILEZINHO SASSAMI CONGELADO PERDIGÃO 2KG",
   "brand": "Perdigão",
@@ -480,7 +20,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -503,7 +43,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -526,7 +66,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -549,7 +89,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -572,7 +112,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -595,7 +135,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -618,7 +158,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -641,7 +181,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -664,7 +204,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -687,7 +227,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -710,7 +250,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -733,7 +273,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -756,7 +296,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -779,7 +319,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -802,7 +342,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -825,7 +365,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -848,7 +388,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -871,7 +411,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -894,7 +434,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -917,7 +457,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -940,7 +480,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -963,7 +503,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -986,7 +526,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1009,7 +549,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1032,7 +572,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1055,7 +595,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1078,7 +618,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1101,7 +641,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1124,7 +664,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1147,7 +687,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1170,7 +710,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1193,7 +733,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Comerciante: 16.11 a 22.11",
   "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  },
  {
   "market": "Roldão",
@@ -1216,6 +756,121 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "Fim de Semana Arrasador (REDE PRÉ BLACK): 19.11 a 22.11",
   "storeScope": "Encarte \"Fim de Semana Arrasador (REDE PRÉ BLACK)\" das lojas que incluem Mauá",
-  "collectedAt": "2026-11-19T19:14:31.017Z"
+  "collectedAt": "2026-11-20T13:08:37.270Z"
+ },
+ {
+  "market": "Roldão",
+  "externalId": "24d0c6ffb57d",
+  "name": "AMENDOIM SEM PELE, JAPONÊS OU OVINHOS DE AMENDOIM ELMA CHIPS 400G",
+  "brand": "Elma Chips",
+  "ean": null,
+  "size": "400g",
+  "price": 14.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": null,
+  "imageBox": null,
+  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "Pepsico: 20.11 a 23.11",
+  "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+  "collectedAt": "2026-11-20T13:08:37.270Z"
+ },
+ {
+  "market": "Roldão",
+  "externalId": "7c10da384bd0",
+  "name": "BATATA RUFFLES ELMA CHIPS ORIGINAL 167G",
+  "brand": "Elma Chips",
+  "ean": null,
+  "size": "167g",
+  "price": 10.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": null,
+  "imageBox": null,
+  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "Pepsico: 20.11 a 23.11",
+  "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+  "collectedAt": "2026-11-20T13:08:37.270Z"
+ },
+ {
+  "market": "Roldão",
+  "externalId": "117848ec569c",
+  "name": "BATATA RUFFLES ELMA CHIPS SABORES 65G / 68G",
+  "brand": "Elma Chips",
+  "ean": null,
+  "size": "65G / 68G",
+  "price": 5.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": null,
+  "imageBox": null,
+  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "Pepsico: 20.11 a 23.11",
+  "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+  "collectedAt": "2026-11-20T13:08:37.270Z"
+ },
+ {
+  "market": "Roldão",
+  "externalId": "8d456465f8d1",
+  "name": "SALGADINHO CHEETOS OU FANDANGOS ELMA CHIPS SABORES 35G / 36G / 40G",
+  "brand": "Elma Chips",
+  "ean": null,
+  "size": "35G / 36G / 40G",
+  "price": 2.59,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": null,
+  "imageBox": null,
+  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "Pepsico: 20.11 a 23.11",
+  "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+  "collectedAt": "2026-11-20T13:08:37.270Z"
+ },
+ {
+  "market": "Roldão",
+  "externalId": "4e04715a383e",
+  "name": "SALGADINHO CHEETOS ELMA CHIPS CRUNCHY SUPER CHEDDAR 160G",
+  "brand": "Elma Chips",
+  "ean": null,
+  "size": "160g",
+  "price": 10.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "imageUrl": null,
+  "imageBox": null,
+  "productUrl": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "Pepsico: 20.11 a 23.11",
+  "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+  "collectedAt": "2026-11-20T13:08:37.270Z"
  }
 ]

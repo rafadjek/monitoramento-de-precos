@@ -1,50 +1,58 @@
 {
   "stats": {
     "ofertas-dia": {
-      "siteCount": 2099,
-      "lidos": 2099
+      "siteCount": 2541,
+      "lidos": 2541
     },
     "peixaria": {
       "siteCount": 679,
-      "lidos": 679
-    },
-    "acougue": {
-      "siteCount": 1583,
-      "lidos": 1583
+      "lidos": 400
     },
     "hortifruti": {
       "siteCount": 2361,
-      "lidos": 2361
+      "lidos": 600
+    },
+    "acougue": {
+      "siteCount": 1583,
+      "lidos": 600
     },
     "padaria": {
       "siteCount": 1732,
-      "lidos": 1732
+      "lidos": 600
     },
     "basicos-e-matinais": {
-      "siteCount": 3471,
-      "lidos": 3471
+      "siteCount": 3470,
+      "lidos": 1200
     },
-    "bebidas": {
-      "siteCount": 4883,
-      "lidos": 4883
+    "mercearia-doce": {
+      "siteCount": 7637,
+      "lidos": 1800
     },
-    "limpeza": {
-      "siteCount": 2950,
-      "lidos": 2950
+    "mercearia-salgada": {
+      "siteCount": 5512,
+      "lidos": 1500
     },
     "frios-e-laticinios": {
       "siteCount": 7134,
-      "lidos": 7134
+      "lidos": 1500
+    },
+    "bebidas": {
+      "siteCount": 4883,
+      "lidos": 1300
+    },
+    "limpeza": {
+      "siteCount": 2950,
+      "lidos": 1200
     },
     "higiene-e-perfumaria": {
       "siteCount": 6095,
-      "lidos": 6095
+      "lidos": 1900
     }
   },
-  "requests": 343,
+  "requests": 153,
   "aborted": null,
-  "seconds": 1034,
-  "ofertaDia": 2099,
-  "precoBaixou": 1246,
-  "produtos": 6617
+  "seconds": 590,
+  "ofertaDia": 2541,
+  "precoBaixou": 1452,
+  "produtos": 8711
 }

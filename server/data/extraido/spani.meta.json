@@ -1,28 +1,34 @@
 {
-  "startedAt": "2026-11-19T13:26:36.690Z",
-  "finishedAt": "2026-11-19T13:27:58.252Z",
-  "total": 3313,
+  "startedAt": "2026-11-20T13:09:55.819Z",
+  "finishedAt": "2026-11-20T13:11:16.553Z",
+  "total": 3412,
   "perDept": {
-    "Biscoitos e chocolates": 439,
-    "Bebidas": 428,
+    "Biscoitos e chocolates": 434,
+    "Bebidas": 425,
     "Mercearia": 360,
-    "Cereais e farinaceos": 105,
-    "Padaria": 89,
-    "Carnes": 110,
-    "Hortifruti": 79,
+    "Cereais e farinaceos": 104,
+    "Padaria": 88,
+    "Carnes": 111,
+    "Hortifruti": 75,
     "Matinais e sobremesas": 284,
-    "Frios e laticinios": 343,
+    "Frios e laticinios": 347,
     "Congelados": 102,
-    "Perfumaria e higiene": 601,
-    "Limpeza": 373
+    "Perfumaria e higiene": 600,
+    "Limpeza": 372
   },
   "skippedDepartments": [
     "Bazar e utilidades",
     "Pet"
   ],
-  "unavailable": 599,
+  "unavailable": 610,
   "discarded": 0,
-  "requests": 50,
+  "requests": 52,
   "storeScope": "Spani Mauá 1 - Av. Barão de Mauá, 2005, Jardim Nóbrega, Mauá/SP, CEP 09340440 (retirada na loja; centro de distribuição 17, selecionado como o site faz ao escolher a loja)",
-  "storeId": 17
+  "storeId": 17,
+  "jornal": {
+    "itens": 110,
+    "pdf": "https://spani-tabloides-bucket.s3.us-east-1.amazonaws.com/tabloides/maua-5xl2m993bb8uwdaeh25ipm.pdf",
+    "validUntil": "2026-11-27T02:59:59.000Z",
+    "paginas": 4
+  }
 }
