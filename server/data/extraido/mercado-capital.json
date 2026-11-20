@@ -1,1 +1,31 @@
-[]
+[
+ {
+  "market": "Mercado Capital",
+  "externalId": "12ab38e774f1",
+  "name": "Frango passarinho",
+  "brand": null,
+  "ean": null,
+  "size": null,
+  "price": 9.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/918164194_18117735095599763_3696843597561036774_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=EKa6Fo0d5_IQ7kNvwHzB9FO&_nc_oc=AdoQSCIHI2FlWahk-svPKXDdaOmdEL8DdRc-6fEvnjf6bqsnG48QBkUudFA7PFew10Y&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=P7ydNxXeyT-TYxryz_anHg&_nc_ss=7d689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR3ft_OXMi7zsgAUx_BT5ln3NqeV2R6XbjHr0by5P40JQ&oe=6B066C15",
+  "imageBox": [
+   406,
+   426,
+   901,
+   1000
+  ],
+  "productUrl": "https://www.instagram.com/mercadocapitalmaua/p/Df8Gsm5liAd/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-20T03:00:00.000Z",
+  "validUntil": "2026-11-23T02:59:59.000Z",
+  "validityNote": "post do Instagram de 20/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadocapitalmaua",
+  "collectedAt": "2026-11-20T20:38:54.946Z"
+ }
+]
