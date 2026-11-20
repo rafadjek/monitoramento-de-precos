@@ -1,122 +1,26 @@
 [
   {
-    "market": "Sacolão São Jorge",
-    "offerId": "ig-Df5OcSLGN8h",
-    "validFrom": null,
-    "validUntil": null,
-    "validityNote": "post do Instagram de 18/11",
-    "fallbackUntil": "2026-11-22T02:59:59.000Z",
-    "fallbackNote": "post de 18/11, sem validade impressa",
-    "segment": "bairro",
-    "cidades": [
-      "Mauá"
-    ],
-    "stores": [
-      "Sacolão São Jorge"
-    ],
-    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
-    "via": "scrapecreators",
-    "link": "https://www.instagram.com/p/Df5OcSLGN8h/",
-    "images": [
-      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/919114622_18203391010375835_3845792141958912437_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODE2ODc0MzY1Mjk5NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ewFN4guZdQ8Q7kNvwEEwaF5&_nc_oc=Adr_Kd6uYU-rLKKa-CrAD_FbjPodTgSwi_qg1whWO240Cg0VlPnQrbyYUqkuM4sCOr0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQhAQOjWe0fhDhJASLXTRe50yBoEBaIOfqw-YBHqxh-SQ&oe=6B061DB8",
-      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/916814562_18203391034375835_6608290051279666518_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODIxMTA0NzQyNzUxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pBfzDYb7u3gQ7kNvwFVfC_j&_nc_oc=Adq8rU0KOQyfvoZw6aTE4hiu7vwoJVhP8SNLZx3iY8bDCDmbYm59GYPZAw7fLIB0Ugg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS1148cbvDhMoQUvkkrAS6rKfsJRYbjXR_79I_E3chRWQ&oe=6B060C1B",
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/902825602_18203391052375835_8338309842786648680_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODI1MTM4ODI3MDg1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Pi3SgxdLqJkQ7kNvwHet9rw&_nc_oc=AdoSLxDT5CVBQpgBF0-CcWARKGPsfLAEZGENThOcomqcukALQwHhPYWyCKYwzr63sqI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRtP499gZqmc9eANAE2pRIXfEGYW7Ls30TU4wkEA9BB7g&oe=6B060047",
-      "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/916447933_18203391073375835_9156700960413991810_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODI4OTA2OTg0NzAxNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=iDEFDU44kk4Q7kNvwGWtGE9&_nc_oc=Adok16g1rvgDRz9OKxRhAzAeWPgv_wQ5nNuO9Gu9OFf7tVPVBDO8Lu-hXBSd2r33-P4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQC3RhK_YzoyJS7cG5tC4o0MckOszWVKuGhlRM1b49I7g&oe=6B0629DE",
-      "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/910845501_18203391091375835_1262354610529663237_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODMyNjQ1Nzg2ODQwNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=fPdXk_Ca7IAQ7kNvwFtH22g&_nc_oc=Ado8q7Qh8rVsUQhytk4TYPVBmvHhV2qlOTW3W-VZVLut7M9mnan-tNZ1SDUPR13TgbA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ20p6e7-nWBqt3veJmzNIh3C6ZjBEwwU-MxFJU9kgeIA&oe=6B060581",
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/902586809_18203391112375835_279351013234237022_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODM2NzY0NTk1NTI2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pW_b4g__nnkQ7kNvwHWmQdd&_nc_oc=AdrWgOaeiF-ayNt2T7nMeZ4SlLn7EH8ge-NampLrY6vrvVkAU7kJ9fAJME3odjjxXD8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQR0F8_Fv6mkhrQX3_Tu-XYojda5DUdbFQ3Xk5ybvsVsNQ&oe=6B06273B",
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/907374261_18203391130375835_1738364051476921466_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxODQwNzA2NDAyOTU1NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=eLsJA_F66cMQ7kNvwG5w3l6&_nc_oc=Adqd5l-6C328JTsT3PdgTXwUwaY_9GThLEcd3zBKZPMienzvAG_Dd67e8Y2oZlGSEz0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQgJjEN2LkG9Z6XUkEwBi8BDqHqfjR8gSse6qoi3_NwdA&oe=6B060BFF"
-    ],
-    "imageKeys": [
-      "ig:Df5OcSLGN8h:0",
-      "ig:Df5OcSLGN8h:1",
-      "ig:Df5OcSLGN8h:2",
-      "ig:Df5OcSLGN8h:3",
-      "ig:Df5OcSLGN8h:4",
-      "ig:Df5OcSLGN8h:5",
-      "ig:Df5OcSLGN8h:6"
-    ],
-    "collectedAt": "2026-11-20T13:08:36.880Z"
-  },
-  {
-    "market": "Sacolão São Jorge",
-    "offerId": "ig-Df9qTz8FbwQ",
+    "market": "Consulado do Churrasco",
+    "offerId": "ig-DfHXyI8Epy7",
     "validFrom": null,
     "validUntil": null,
     "validityNote": "post do Instagram de 20/11",
-    "fallbackUntil": "2026-11-24T02:59:59.000Z",
-    "fallbackNote": "post de 20/11, sem validade impressa",
     "segment": "bairro",
     "cidades": [
       "Mauá"
     ],
     "stores": [
-      "Sacolão São Jorge"
+      "Consulado do Churrasco"
     ],
-    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
-    "via": "scrapecreators",
-    "link": "https://www.instagram.com/p/Df9qTz8FbwQ/",
+    "storeScope": "Ofertas publicadas no Instagram @consuladodochurrascopremium",
+    "via": "crawlbase",
+    "link": "https://www.instagram.com/consuladodochurrascopremium/p/DfHXyI8Epy7/",
     "images": [
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/910742042_18203565862375835_7307291855722919417_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDU2NjM0NjQ4NjQ0NTI5OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=nCVdfthUkawQ7kNvwEaZBcb&_nc_oc=AdoyhNTj2uVpRmx01nAgswc_PSrk9SDL7Cia9Y3In0R7UdBssVfBXUwM2pOvliHuMM8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRwQmKxhEaJZ0VVutYsCjML7tyyT28JOY3IAPJ123Yo7g&oe=6B060467",
-      "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/914505649_18203565880375835_450134918905564424_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDU2NjM5NDMwOTg5NDg5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j7oDHJ-ky2QQ7kNvwExnyW8&_nc_oc=AdobfbusU_K4jshyQUe6Vg4qvJL3J133ma68wL06pFImO7dQ0mQ1h0BtvfFb2ekv43M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSbYieOeBEln7DxKq8HuigHSwC43ZXhSrlmGh_Nnse6eA&oe=6B0605C0",
-      "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/920352407_18203565898375835_6743825727521202692_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDU2NjQyNzk3MzMyODk4NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Y0xa2nVSmKoQ7kNvwHaLo3u&_nc_oc=AdrZXlR5TrqRqFrvMA5qh4N02roPDFIhL3Cvu3Eg3QHoNua5hg_Fn56n9G56w0l230Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ6P6zuMWtGoibHfg2R5T6gIUcqnVj8dsYov-bLxRF1_Q&oe=6B0633F0"
+      "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/870268059_18354333295216106_2209575688643754067_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=xU8xnWERI3EQ7kNvwFs14cl&_nc_oc=AdrlTPJOMX9JwjRY2ddTQEq6huqJijAKaLpPXCoMWZCfv6X1sqHZmw3gsE4Xh8NEkb4&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=h2K-kRgWXie7mkUF0Ag5iA&_nc_ss=73a8c&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRX7_nmw0BkJPSVLZTlw7dWs1TnjX3aMdRGZqvHZEDovw&oe=6B0658B4"
     ],
     "imageKeys": [
-      "ig:Df9qTz8FbwQ:0",
-      "ig:Df9qTz8FbwQ:1",
-      "ig:Df9qTz8FbwQ:2"
+      "ig:DfHXyI8Epy7:0"
     ],
-    "collectedAt": "2026-11-20T13:08:36.880Z"
-  },
-  {
-    "market": "Sacolão São Jorge",
-    "offerId": "ig-Df9T4HUFq0k",
-    "validFrom": null,
-    "validUntil": null,
-    "validityNote": "post do Instagram de 20/11",
-    "fallbackUntil": "2026-11-24T02:59:59.000Z",
-    "fallbackNote": "post de 20/11, sem validade impressa",
-    "segment": "bairro",
-    "cidades": [
-      "Mauá"
-    ],
-    "stores": [
-      "Sacolão São Jorge"
-    ],
-    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
-    "via": "scrapecreators",
-    "link": "https://www.instagram.com/p/Df9T4HUFq0k/",
-    "images": [
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/903005781_18203549380375835_2896546581477104065_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDQ2ODI2MDIyMTQ2Mzg0NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=tB_TErDXRw0Q7kNvwF0vHoX&_nc_oc=Adohqg-Cca8iAQsALImj3cGVLfz7vj6sVfpJF7n35lR1O7v_ZguqcQI0o3KDuhJl2Xo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQT8G4jFFUAZTF8TpxRGWHn6o7t_fnhsvhrrpmdYCr94eg&oe=6B062075"
-    ],
-    "imageKeys": [
-      "ig:Df9T4HUFq0k:0"
-    ],
-    "collectedAt": "2026-11-20T13:08:36.880Z"
-  },
-  {
-    "market": "Sacolão São Jorge",
-    "offerId": "ig-Df1zNuKG9Fu",
-    "validFrom": null,
-    "validUntil": null,
-    "validityNote": "post do Instagram de 17/11",
-    "fallbackUntil": "2026-11-21T02:59:59.000Z",
-    "fallbackNote": "post de 17/11, sem validade impressa",
-    "segment": "bairro",
-    "cidades": [
-      "Mauá"
-    ],
-    "stores": [
-      "Sacolão São Jorge"
-    ],
-    "storeScope": "Ofertas publicadas no Instagram @sacolaosaojorge",
-    "via": "scrapecreators",
-    "link": "https://www.instagram.com/p/Df1zNuKG9Fu/",
-    "images": [
-      "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/912228272_18203245765375835_8771418266100701172_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM1NDI4NDY2NzEzMDIyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=V7JzgCsKMRsQ7kNvwHQe0D3&_nc_oc=AdpAlkv7-MlUAl7vOdXXGVby1LS4Q3yj8eI347SCVW3QPLFfnthlX1PG9BzEqBtFpX8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&se=8&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=XBRl7bNK4J-SUaIiBowydg&_nc_ss=7339b&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSEvLqE_PXxoavWThyeLVeIEwBEgaqLvg99z5ZxEo4Jug&oe=6B062B23"
-    ],
-    "imageKeys": [
-      "ig:Df1zNuKG9Fu:0"
-    ],
-    "collectedAt": "2026-11-20T13:08:36.880Z"
+    "collectedAt": "2026-11-20T18:58:40.702Z"
   }
 ]

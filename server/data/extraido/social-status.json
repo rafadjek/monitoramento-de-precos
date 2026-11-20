@@ -1,5 +1,5 @@
 {
- "em": "2026-11-20T13:07:32.790Z",
+ "em": "2026-11-20T18:55:51.144Z",
  "servicos": [
   {
    "net": "ig",
@@ -9,7 +9,17 @@
   {
    "net": "ig",
    "name": "scrapecreators",
-   "posts": 42
+   "erro": "HTTP 402 {\"success\":false,\"message\":\"Looks like you're out of credits :( You'll need to buy more to continue using the service.\"}"
+  },
+  {
+   "net": "ig",
+   "name": "socialcrawl",
+   "erro": "HTTP 402 {\"success\":false,\"error\":{\"type\":\"INSUFFICIENT_CREDITS\",\"message\":\"Your account has 0 credits remaining. This endpoint requires 1 credits (under 1p at the Growt"
+  },
+  {
+   "net": "ig",
+   "name": "crawlbase",
+   "posts": 54
   },
   {
    "net": "fb",
@@ -19,7 +29,17 @@
   {
    "net": "fb",
    "name": "scrapecreators",
-   "posts": 6
+   "erro": "HTTP 402 {\"success\":false,\"message\":\"Looks like you're out of credits :( You'll need to buy more to continue using the service.\"}"
+  },
+  {
+   "net": "fb",
+   "name": "socialcrawl",
+   "posts": 0
+  },
+  {
+   "net": "fb",
+   "name": "crawlbase",
+   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE html\\u"
   },
   {
    "teste": "socialcrawl",
