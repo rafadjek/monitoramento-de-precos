@@ -50,6 +50,12 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   Lourencini: { src: 'logos/lourencini.png', bg: '#141414' },
   'Roldão': { src: 'logos/roldao.svg', bg: '#082F63' },
   Spani: { word: 'SPANI', bg: '#E30613', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
+  // Comércio de bairro (Instagram, sem logo em arquivo): letreiro nas cores do segmento, como o do Spani.
+  'Família Lima': { word: 'Família Lima', bg: '#2E7D32', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
+  'Mercado Capital': { word: 'Mercado Capital', bg: '#1B4F8A', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
+  'Mercadinho Parceiro': { word: 'Parceiro', bg: '#146C43', wordCls: 'font-display text-base font-extrabold uppercase tracking-wide text-white' },
+  'Mercado Baratinho': { word: 'Baratinho', bg: '#F2A900', wordCls: 'font-display text-base font-extrabold uppercase tracking-wide text-[#5C3A00]' },
+  'Carnes Santana': { word: 'Carnes Santana', bg: '#8C1C13', wordCls: 'font-display text-sm font-extrabold uppercase tracking-wide text-white' },
 };
 
 export function MarketLogo({ name, h = 'h-8' }: { name: string; h?: string }) {

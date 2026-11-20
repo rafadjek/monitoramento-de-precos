@@ -83,6 +83,11 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           # ocr-primeiro (padrão), gemini-primeiro ou so-gemini; defina a variável READER_MODE do repositório para mudar
           READER_MODE: ${{ vars.READER_MODE }}
+          # teto de páginas novas e minutos por execução: com só 60/40 (padrão) o passo não chegava aos mercados
+          # de bairro (Família Lima, Mercado Capital, Mercadinho Parceiro, Mercado Baratinho, Carnes Santana),
+          # que vêm depois de Assaí/Baronesa/Joanin/Roldão e de Nevada/STUK/Lourencini na fila de leitura (20/11/2026)
+          READER_MAX_NEW: '300'
+          READER_BUDGET_MIN: '90'
           # Fase 14: lê também o tabloide das Drogarias Joanin (itens com section 'farmacia')
           JOANIN_DROGARIAS: '1'
           # Apify (crédito grátis): jornais de ofertas do Instagram e do Facebook de Nevada, STUK e Lourencini
