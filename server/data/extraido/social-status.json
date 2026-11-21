@@ -1,5 +1,5 @@
 {
- "em": "2026-11-20T20:37:02.114Z",
+ "em": "2026-11-21T12:47:55.990Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 44
+   "erro": "HTTP 520 {\"original_status\":\"400\",\"pc_status\":544,\"cb_status\":544,\"url\":\"https://www.instagram.com/mercadinhoparceiro/\",\"domain_complexity\":\"standard\",\"body\":\"Request fa"
   },
   {
    "net": "fb",
