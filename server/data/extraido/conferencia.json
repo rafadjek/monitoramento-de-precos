@@ -1,14 +1,14 @@
 {
- "geradoEm": "2026-11-19T15:56:40.431Z",
- "semente": 1954955186,
+ "geradoEm": "2026-11-21T13:54:57.613Z",
+ "semente": 2120452368,
  "amostraPorMercado": 15,
  "cooperadoConta": true,
  "mercados": {
   "Spani": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 3313,
-   "coletadoEm": "2026-11-19T13:26:41.474Z",
+   "produtosNoSite": 3403,
+   "coletadoEm": "2026-11-21T12:52:19.146Z",
    "loja": "Av. Barão de Mauá, 2005",
    "conferidos": 15,
    "batem": 15,
@@ -22,8 +22,8 @@
   "Atacadão": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 6814,
-   "coletadoEm": "2026-11-19T13:27:58.540Z",
+   "produtosNoSite": 6756,
+   "coletadoEm": "2026-11-21T12:52:19.679Z",
    "loja": "Mauá Itapark",
    "conferidos": 15,
    "batem": 15,
@@ -37,32 +37,9 @@
   "Coop": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 4275,
-   "coletadoEm": "2026-11-19T13:46:37.407Z",
+   "produtosNoSite": 4385,
+   "coletadoEm": "2026-11-21T13:07:41.229Z",
    "loja": "Barão de Mauá",
-   "conferidos": 14,
-   "batem": 14,
-   "divergentes": 0,
-   "inconclusivos": 1,
-   "bloqueado": false,
-   "erro": null,
-   "divergencias": [],
-   "inconclusivosLista": [
-    {
-     "id": "coop:40905537",
-     "nome": "Amaciante para Roupas Ypê Concentrado Encanto 1L",
-     "url": "https://www.coopsupermercado.com.br/amaciante-para-roupas-ype-concentrado-encanto-1l/p",
-     "nossoPreco": 15.89,
-     "motivo": "bloco do produto não encontrado na página"
-    }
-   ]
-  },
-  "Nagumo": {
-   "metodo": "página do produto",
-   "noSite": true,
-   "produtosNoSite": 6617,
-   "coletadoEm": "2026-11-19T13:47:13.367Z",
-   "loja": "038-MAUA",
    "conferidos": 15,
    "batem": 15,
    "divergentes": 0,
@@ -72,11 +49,26 @@
    "divergencias": [],
    "inconclusivosLista": []
   },
+  "Nagumo": {
+   "metodo": "página do produto",
+   "noSite": true,
+   "produtosNoSite": 8686,
+   "coletadoEm": "2026-11-21T12:48:57.109Z",
+   "loja": null,
+   "conferidos": 0,
+   "batem": 0,
+   "divergentes": 0,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": "loja errada no Nagumo (lida: nenhuma)",
+   "divergencias": [],
+   "inconclusivosLista": []
+  },
   "Semar": {
    "metodo": "API da loja (busca oSuper, loja 06 Mauá)",
    "noSite": true,
-   "produtosNoSite": 9459,
-   "coletadoEm": "2026-11-19T14:03:56.629Z",
+   "produtosNoSite": 9786,
+   "coletadoEm": "2026-11-21T12:48:17.359Z",
    "loja": "loja 1705 (06 Mauá)",
    "conferidos": 15,
    "batem": 15,
@@ -88,11 +80,60 @@
    "inconclusivosLista": []
   },
   "Extra": {
-   "metodo": "API da loja (bestPrices, loja 1162)",
+   "metodo": "API da loja (bestPrices, loja 1643)",
    "noSite": true,
-   "produtosNoSite": 4089,
-   "coletadoEm": "2026-11-19T14:45:56.576Z",
-   "loja": "loja 1162",
+   "produtosNoSite": 6389,
+   "coletadoEm": "2026-11-21T12:47:36.966Z",
+   "loja": "loja 1643",
+   "conferidos": 15,
+   "batem": 15,
+   "divergentes": 0,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [],
+   "inconclusivosLista": []
+  },
+  "Drogaria São Paulo": {
+   "metodo": "API pública do catálogo (preço do SKU, o mesmo da página do produto)",
+   "noSite": true,
+   "produtosNoSite": 4371,
+   "coletadoEm": "2026-11-21T09:41:43.378Z",
+   "loja": "site (retirada nas lojas de Mauá e Ribeirão Pires)",
+   "conferidos": 15,
+   "batem": 14,
+   "divergentes": 1,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [
+    {
+     "id": "drogaria-sao-paulo:907839",
+     "nome": "Hidratante Corporal Monange Aveia Hidratação Essencial 400ml",
+     "url": "https://www.drogariasaopaulo.com.br/hidratante-corporal-monange-aveia-hidratacao-essencial-400ml/p",
+     "nossoPreco": 12.59,
+     "listPrice": 17.99,
+     "condicao": null,
+     "tipo": "preco-diferente",
+     "precosNaLoja": [
+      {
+       "valor": 16.19,
+       "rotulo": "preço (Drogaria São Paulo)"
+      }
+     ],
+     "menorNaLoja": 16.19,
+     "diferencaPct": -22.2,
+     "motivo": "a loja não mostra R$ 12,59; o menor que ela mostra é R$ 16,19"
+    }
+   ],
+   "inconclusivosLista": []
+  },
+  "Farma Conde": {
+   "metodo": "API pública do catálogo (preço do SKU, o mesmo da página do produto)",
+   "noSite": true,
+   "produtosNoSite": 6329,
+   "coletadoEm": "2026-11-21T09:12:28.988Z",
+   "loja": "site (retirada nas lojas de Mauá)",
    "conferidos": 15,
    "batem": 15,
    "divergentes": 0,
