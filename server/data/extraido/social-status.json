@@ -1,5 +1,5 @@
 {
- "em": "2026-11-22T18:35:09.241Z",
+ "em": "2026-11-22T18:57:47.271Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 25
+   "posts": 35
   },
   {
    "net": "fb",
@@ -50,6 +50,7 @@
  "crawlbasePerfis": {
   "Nevada": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 12,
    "video": 2,
    "semCodigo": 0,
@@ -58,38 +59,43 @@
   },
   "STUK": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 13,
-   "video": 9,
+   "video": 8,
    "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 3
+   "aproveitados": 4
   },
   "Lourencini": {
    "net": "ig",
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
+   "tentativas": 2,
+   "recebidos": 13,
+   "video": 4,
+   "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 8
   },
   "Família Lima": {
    "net": "ig",
-   "recebidos": 0,
+   "tentativas": 1,
+   "recebidos": 13,
    "video": 0,
-   "semCodigo": 0,
+   "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 12
   },
   "Mercado Capital": {
    "net": "ig",
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
+   "tentativas": 1,
+   "recebidos": 13,
+   "video": 3,
+   "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 6
+   "aproveitados": 9
   },
   "Mercadinho Parceiro": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 12,
    "video": 5,
    "semCodigo": 0,
@@ -98,6 +104,7 @@
   },
   "Mercado Baratinho": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 13,
    "video": 4,
    "semCodigo": 1,
@@ -106,14 +113,16 @@
   },
   "Carnes Santana": {
    "net": "ig",
-   "recebidos": 0,
-   "video": 0,
+   "tentativas": 2,
+   "recebidos": 12,
+   "video": 2,
    "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 10
   },
   "Sacolão São Jorge": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 12,
    "video": 2,
    "semCodigo": 0,
@@ -122,6 +131,7 @@
   },
   "Consulado do Churrasco": {
    "net": "ig",
+   "tentativas": 1,
    "recebidos": 13,
    "video": 11,
    "semCodigo": 1,
@@ -130,6 +140,7 @@
   },
   "Nevada (fb)": {
    "net": "fb",
+   "tentativas": 2,
    "recebidos": 0,
    "video": 0,
    "semCodigo": 0,
@@ -138,6 +149,7 @@
   },
   "Lourencini (fb)": {
    "net": "fb",
+   "tentativas": 2,
    "recebidos": 0,
    "video": 0,
    "semCodigo": 0,
