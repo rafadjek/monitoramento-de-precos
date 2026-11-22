@@ -336,7 +336,8 @@ async function main() {
   for (const mf of manifests) {
     if (!fs.existsSync(mf)) { console.warn(`sem manifesto ${mf}`); continue; }
     for (const enc of JSON.parse(fs.readFileSync(mf, 'utf8'))) {
-      rows[enc.market] ??= new Map();
+      const key = enc.arquivo ?? enc.market; // 'arquivo': grava em <arquivo>.json (ex.: folheto do Atacadão, sem apagar o catálogo)
+      rows[key] ??= new Map();
       if (enc.validUntil && new Date(enc.validUntil) < now) { console.log(`pulando vencido: ${enc.market} ${enc.offerId}`); continue; }
       if (enc.validFrom && new Date(enc.validFrom) > now) { console.log(`ainda não começou: ${enc.market} ${enc.offerId}`); continue; }
       const pages = [];
@@ -349,12 +350,12 @@ async function main() {
           pages.push({ url, ...p });
           // leitura antiga (sem "reader"): foi o Gemini, ou o OpenRouter se o modelo começa assim
           const reader = p.reader ?? (String(p.model).startsWith('openrouter') ? 'openrouter:' + p.model : 'gemini');
-          report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model, reader, ...(p.motivoGemini ? { motivoGemini: p.motivoGemini } : {}) });
+          report.pages.push({ market: enc.market, ...(enc.arquivo ? { arquivo: enc.arquivo } : {}), offerId: enc.offerId, url, ok: true, cached: p.cached, products: p.products.length, model: p.model, reader, ...(p.motivoGemini ? { motivoGemini: p.motivoGemini } : {}) });
           console.log(`  ${p.products.length} produtos${p.cached ? ' (cache)' : ` (${reader})`}`);
           if (!p.cached && !reader.startsWith('ocr+')) await sleep(GAP_MS); // o intervalo é por causa da cota do Gemini; o OCR tem o seu controle de tokens
         } catch (e) {
           console.warn('  erro:', e.message);
-          report.pages.push({ market: enc.market, offerId: enc.offerId, url, ok: false, error: e.message });
+          report.pages.push({ market: enc.market, ...(enc.arquivo ? { arquivo: enc.arquivo } : {}), offerId: enc.offerId, url, ok: false, error: e.message });
         }
       }
       // página sem nenhum preço alternativo num encarte em que as outras têm: leitura provavelmente incompleta
@@ -381,7 +382,7 @@ async function main() {
           const v = enc.blockValidity ? itemValidity(it, { validFrom, validUntil }) : { validFrom, validUntil };
           if (new Date(v.validUntil) < now) continue; // bloco já vencido
           const id = sha1(`${enc.market}|${it.name.trim().toLowerCase()}|${it.price}`).slice(0, 12);
-          rows[enc.market].set(id, {
+          rows[key].set(id, {
             market: enc.market, externalId: id, name: it.name.trim(), brand: it.brand ?? null, ean: null, size: it.size ?? null,
             price: it.price, listPrice: it.listPrice > it.price ? it.listPrice : null, unitPrice: null,
             category: it.category ?? 'outros', categoryRaw: enc.categoryRaw ?? null,
@@ -403,7 +404,7 @@ async function main() {
   fs.mkdirSync(OUT, { recursive: true });
   for (const [market, map] of Object.entries(rows)) {
     const file = path.join(OUT, `${slug(market)}.json`);
-    const failed = report.pages.filter((p) => p.market === market && !p.ok).length;
+    const failed = report.pages.filter((p) => (p.arquivo ?? p.market) === market && !p.ok).length;
     // Leitura toda falhou: mantém o arquivo anterior (o build-site tira o que já venceu).
     if (!map.size && failed && fs.existsSync(file)) { console.warn(`${market}: nada lido, mantendo o arquivo anterior`); continue; }
     fs.writeFileSync(file, JSON.stringify([...map.values()], null, 1));
