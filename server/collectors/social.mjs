@@ -29,10 +29,10 @@ const KEYS = { apify: process.env.APIFY_TOKEN, brightdata: process.env.BRIGHTDAT
 // STUK: o próprio site diz que sai um jornal novo por dia, então vale no dia do post.
 const MARKETS = {
   Nevada: { ig: 'redenevada', fb: 'https://www.facebook.com/redenevada/', daily: false },
-  STUK: { ig: 'supermercadostuk', fb: null, daily: true },
+  STUK: { ig: 'supermercadostuk', fb: 'https://www.facebook.com/SuperMercadoStuk/', daily: true },
   Lourencini: { ig: 'lourencinisupermercados', fb: 'https://www.facebook.com/LourenciniSupermercados/', daily: false },
   // Comércio de bairro: segment 'bairro' vai ao manifesto; cidades = onde ficam as lojas.
-  'Família Lima': { ig: 'supermercadofamilialima', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá', 'Ribeirão Pires'] },
+  'Família Lima': { ig: 'supermercadofamilialima', fb: 'https://www.facebook.com/supermercadofamilialima/', daily: false, segment: 'bairro', cidades: ['Mauá', 'Ribeirão Pires'] },
   'Mercado Capital': { ig: 'mercadocapitalmaua', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
   'Mercadinho Parceiro': { ig: 'mercadinhoparceiro', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
   'Mercado Baratinho': { ig: 'mercadobaratinhooficial', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] }, // 3 lojas

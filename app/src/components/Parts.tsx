@@ -36,7 +36,8 @@ export function Validity({ o }: { o: Pick<Indexed, 'validUntil'> }) {
 
 // Cada mercado aparece pela própria marca: logotipo quando ele publica um, letreiro nas cores dele quando não.
 // No tema escuro, logotipo de fundo claro vai numa pastilha branca.
-const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?: string; chipCls?: string }> = {
+// k = ampliação do chip em relação à altura pedida (logo quadrado ou com letra miúda precisa de mais altura para ler).
+const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?: string; chipCls?: string; k?: number }> = {
   'Atacadão': { src: 'logos/atacadao.svg' },
   'Assaí': { src: 'logos/assai.svg' },
   Coop: { src: 'logos/coop.png', bg: '#002846' },
@@ -50,31 +51,35 @@ const LOGOS: Record<string, { src?: string; bg?: string; word?: string; wordCls?
   Lourencini: { src: 'logos/lourencini.png', bg: '#141414' },
   'Roldão': { src: 'logos/roldao.svg', bg: '#082F63' },
   Spani: { word: 'SPANI', bg: '#E30613', wordCls: 'font-display text-lg font-extrabold italic tracking-wider text-[#FFD200] [text-shadow:1px_1px_0_#8a0410]' },
-  // Comércio de bairro (Instagram): logo em arquivo; o Mercadinho Parceiro ainda não tem e fica com letreiro nas cores do segmento, como o do Spani.
-  'Família Lima': { src: 'logos/familia-lima.png', bg: '#000000' },
-  'Mercado Capital': { src: 'logos/mercado-capital.png' },
-  'Mercadinho Parceiro': { word: 'Parceiro', bg: '#146C43', wordCls: 'font-display text-base font-extrabold uppercase tracking-wide text-white' },
-  'Mercado Baratinho': { src: 'logos/mercado-baratinho.png' },
-  'Carnes Santana': { src: 'logos/carnes-santana.png', bg: '#810102' },
+  // Comércio de bairro (Instagram): logo em arquivo; todos têm logo em arquivo.
+  'Família Lima': { src: 'logos/familia-lima.png', bg: '#000000', k: 1.3 },
+  'Mercado Capital': { src: 'logos/mercado-capital.png', k: 1.5 },
+  'Mercadinho Parceiro': { src: 'logos/mercadinho-parceiro.png', k: 1.6 },
+  'Mercado Baratinho': { src: 'logos/mercado-baratinho.png', k: 1.6 },
+  'Carnes Santana': { src: 'logos/carnes-santana.png', bg: '#810102', k: 1.3 },
   // Farmácias, açougue e STUK (Fase 14), com logo em arquivo desde a Fase 16.
-  STUK: { src: 'logos/stuk.png', bg: '#181310' },
-  'Drogaria São Paulo': { src: 'logos/drogaria-sao-paulo.png' },
-  'Farma Conde': { src: 'logos/farma-conde.png' },
-  'Tony BRJ Carnes': { src: 'logos/tony-brj.png', bg: '#000000' },
+  STUK: { src: 'logos/stuk.png', bg: '#181310', k: 1.4 },
+  'Drogaria São Paulo': { src: 'logos/drogaria-sao-paulo.png', k: 1.35 },
+  'Farma Conde': { src: 'logos/farma-conde.png', k: 1.35 },
+  'Tony BRJ Carnes': { src: 'logos/tony-brj.png', bg: '#000000', k: 1.5 },
 };
+
+const H_REM: Record<string, number> = { 'h-4': 1, 'h-5': 1.25, 'h-6': 1.5, 'h-7': 1.75, 'h-8': 2, 'h-9': 2.25, 'h-10': 2.5 };
 
 export function MarketLogo({ name, h = 'h-8' }: { name: string; h?: string }) {
   const l = LOGOS[name];
   if (!l) return <span className="text-sm font-bold leading-tight">{name}</span>;
+  const k = l.k ?? 1;
+  const rem = (H_REM[h] ?? 2) * k;
   return (
     <span
       role="img"
       aria-label={name}
       title={name}
-      className={`inline-flex ${h} items-center gap-1 rounded-md px-1.5 ${l.chipCls ?? ''}`}
-      style={{ background: l.bg ?? '#ffffff' }}
+      className={`inline-flex ${k === 1 ? h : ''} items-center gap-1 rounded-md px-1.5 ${l.chipCls ?? ''}`}
+      style={{ background: l.bg ?? '#ffffff', ...(k === 1 ? {} : { height: `${rem}rem` }) }}
     >
-      {l.src && <img src={imgSrc(l.src)} alt="" className="h-full w-auto max-w-[6.5rem] object-contain py-0.5" />}
+      {l.src && <img src={imgSrc(l.src)} alt="" className="h-full w-auto object-contain py-0.5" style={{ maxWidth: `${6.5 * k}rem` }} />}
       {l.word && <span aria-hidden className={`leading-none ${l.wordCls ?? ''}`}>{l.word}</span>}
     </span>
   );
