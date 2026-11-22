@@ -1,5 +1,5 @@
 {
- "em": "2026-11-22T17:24:26.802Z",
+ "em": "2026-11-22T17:32:40.904Z",
  "servicos": [
   {
    "net": "ig",
@@ -58,27 +58,27 @@
   },
   "STUK": {
    "net": "ig",
+   "recebidos": 13,
+   "video": 9,
+   "semCodigo": 1,
+   "semImagem": 0,
+   "aproveitados": 3
+  },
+  "Lourencini": {
+   "net": "ig",
    "recebidos": 0,
    "video": 0,
    "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 0
   },
-  "Lourencini": {
-   "net": "ig",
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
   "Família Lima": {
    "net": "ig",
-   "recebidos": 13,
+   "recebidos": 0,
    "video": 0,
-   "semCodigo": 1,
+   "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 12
+   "aproveitados": 0
   },
   "Mercado Capital": {
    "net": "ig",
@@ -90,11 +90,11 @@
   },
   "Mercadinho Parceiro": {
    "net": "ig",
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
+   "recebidos": 13,
+   "video": 6,
+   "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 6
   },
   "Mercado Baratinho": {
    "net": "ig",
@@ -122,11 +122,11 @@
   },
   "Consulado do Churrasco": {
    "net": "ig",
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
+   "recebidos": 13,
+   "video": 11,
+   "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 1
   },
   "Nevada (fb)": {
    "net": "fb",

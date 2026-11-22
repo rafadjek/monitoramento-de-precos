@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-22T17:27:21.005Z",
+ "startedAt": "2026-11-22T17:33:52.483Z",
  "pages": [
   {
    "market": "Assaí",
@@ -116,7 +116,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
    "ok": true,
    "cached": true,
@@ -126,7 +126,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902014.jpg",
    "ok": true,
    "cached": true,
@@ -136,7 +136,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902640.jpg",
    "ok": true,
    "cached": true,
@@ -146,7 +146,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902641.jpg",
    "ok": true,
    "cached": true,
@@ -156,24 +156,14 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004909090.jpg",
    "ok": false,
    "error": "fetch failed"
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004910914.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "gemini-flash-latest",
-   "reader": "gemini"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912679.jpg",
    "ok": true,
    "cached": true,
@@ -183,7 +173,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912680.jpg",
    "ok": true,
    "cached": true,
@@ -194,7 +184,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912682.jpg",
    "ok": true,
    "cached": true,
@@ -204,7 +194,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912685.jpg",
    "ok": true,
    "cached": true,
@@ -214,7 +204,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912842.jpg",
    "ok": true,
    "cached": true,
@@ -225,7 +215,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-20",
+   "offerId": "encarte-2026-11-22",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912844.jpg",
    "ok": true,
    "cached": true,
@@ -309,7 +299,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DgBD5hZMxJ2",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/916952080_1596925759145041_5823393003374541562_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Dl36czuy6oUQ7kNvwGEcHQM&_nc_oc=Adq5ckFwSVZVCvpYtZkNVsDkvh1XDJvhrSpRgPto1gRMxtjIOhGmJ1bhICBW00ampWk&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSqKYb3oUqQ66BwJfhoHaaulmcB7bCFY-U6Fw6BD5mdSw&oe=6B090F72",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/916952080_1596925759145041_5823393003374541562_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Dl36czuy6oUQ7kNvwE1Y13x&_nc_oc=Adrl-xWLgod7LtXn_VpUCsaZ7SaFGGhD8w86ZGydG0UIlki5sfBzpqH3jksN6tzdaYs&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR9brdGo2KlVUgyQvhlXid8iCiJcSU4oroMaquoa0-bbg&oe=6B090F72",
    "ok": true,
    "cached": true,
    "products": 1,
@@ -319,7 +309,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-DgAY363OYVe",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/913870617_1596616832509267_6614047487632729544_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Ci6dls9giuIQ7kNvwEBNbzI&_nc_oc=AdrXuEw9PrCTooqQZGB-T_enW0WJOTtfjjDkfG6ddWtQtjGqiCuO4sUlRSYWykn1TJk&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTngw9oafZtOTehZ4NVxeZb1JJms-cwb4XgNePaPT4Q0g&oe=6B090C42",
+   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/913870617_1596616832509267_6614047487632729544_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Ci6dls9giuIQ7kNvwFCU1cp&_nc_oc=Adraw9Zvg8nyMX2FzSF4GrFRi49zktPIc5pOP_yKn7ORnk56qmi1BJQLoIn2Y1lkGB0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQtVnHO7NHc39LmdO4bAezdx7zEpV70iXsrmksVoVN9ew&oe=6B090C42",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -329,7 +319,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df9tG0fG8lX",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t51.82787-15/917682801_18579268459075787_4529069676044080608_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=1ujvrpWWuioQ7kNvwFTMktV&_nc_oc=AdpJ5abezu4vKjliO09GzgU0Exk9fy37NT0mk4IJiJwnfucSfFL5D_KITiMmq3W80wg&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQT-4YfrjDs0iil4ErDP-0IG1MLtwDgNDa-ac3Yy15MgrQ&oe=6B08FF2A",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/917682801_18579268459075787_4529069676044080608_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=1ujvrpWWuioQ7kNvwFoSAaU&_nc_oc=AdrBOwIvBxUE2cFtm6n1AiTidpAOQGAQI3mWkbBboiV-sopodFaez5a3BGeA0c72xCs&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTIYaZJL_Ol2K4Wb-0SyG42VnhtMQO0Y8BoVCXMCiQT-A&oe=6B08FF2A",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -339,7 +329,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df9rwcOu0SR",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/913241574_1595448619292755_1201423291084680990_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ECaQOJV7WcsQ7kNvwFtSh_Z&_nc_oc=AdqE76jOZlGDV-YT6b6v6xy8i1n5uTaonRPZUIrSlp5K7_kWheqYjTVMvfw-DVlpFaU&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQP0Bxe39iyykS8KGaN77kjLKzxQT8cgnap-cmHDbJN1w&oe=6B090EA8",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/913241574_1595448619292755_1201423291084680990_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ECaQOJV7WcsQ7kNvwHAFKrs&_nc_oc=AdpEH2ZGoN40fVwkCiDNrNpotx8G6H7PiDfCa0CRFHKZ_OzPjh3St9SOMBTMknj6e-g&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRV4HTjisFnist_h_E42V2hOwZc_0FlvTSY-C6qAA4mcQ&oe=6B090EA8",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -349,7 +339,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df2FLQuBVCS",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MdIGcuPLWVoQ7kNvwGC1-_M&_nc_oc=AdoCLmFKHSX3zCyr2tfg7PYC3oXKX93wJt4J1ea3PPOlMOd-_zAcxjDRB4LKKnajinY&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTTsyncezvVpwVXpyEQzEj2vNbkoyMa9jwQDmejfOUJCg&oe=6B08F02F",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MdIGcuPLWVoQ7kNvwFNjoEb&_nc_oc=AdqdcrmlMYrn_IxXl8AMzA6FhsLV43HNQlHFpxobOv3TfcTPr321vSF5D_LY9HUHCf8&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRiVu9JWhe0tkZVBI74UC4PNQ9ekCAhEnP55sQdtaXWHg&oe=6B08F02F",
    "ok": true,
    "cached": true,
    "products": 5,
@@ -359,7 +349,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df2Eim6htb6",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t51.82787-15/896132695_18578558911075787_5654359264880233893_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=q_9nSw2b87EQ7kNvwHu7lFi&_nc_oc=AdoqJ80CrADje0nQfUq9alpMT221Y8OW6govTjeXmAuIaIo5c52IdKGt7aPSjzcNHiw&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRNU5lxP7S7i9W2JjWGOBEUAO7bNkeOH70MfGP9q_mNmg&oe=6B0908CB",
+   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/896132695_18578558911075787_5654359264880233893_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=q_9nSw2b87EQ7kNvwFxdsAh&_nc_oc=AdrQumhWfNSsnhrGqk1THQw6rfYxHlEGTafASPLe84CupqxZn9dzoM7LdJE75KkZLfs&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSmlx-etp8suIfGZZfc59Mhz21pHRXN6m8GUNRA9XLYZA&oe=6B0908CB",
    "ok": true,
    "cached": true,
    "products": 15,
@@ -369,7 +359,7 @@
   {
    "market": "Nevada",
    "offerId": "ig-Df0eHrfMsOL",
-   "url": "https://scontent-hel3-1.cdninstagram.com/v/t51.82787-15/913122224_18578366071075787_1171534002479248296_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Opv_OSfs1PMQ7kNvwGwG-tk&_nc_oc=AdrK5YUDiwtOZ-ioqPMY1wjL8nNqGxC6biC55w_N4J8A8sH4qpmeaYSGKxQU7SEueNE&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=2VcGB4kGNsq2ENS5t_kQVA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR6s4GxdEsOnm-JDndoLkuCPCKC2T_hJYSvOyiILZRwmw&oe=6B09048E",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/913122224_18578366071075787_1171534002479248296_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Opv_OSfs1PMQ7kNvwE7eZWN&_nc_oc=AdrD3vKTVyZZlyJ01UpIcOtHAsbV9FKeBsvpHwU2Ki3K6sWORZ0mMe7twxFt8L07PP8&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=amGaxG3ju93EdGJA-mVp5Q&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTAfRoKix64bByzU6BTNLCn2n3aUyg3y7cFL5QJltypHg&oe=6B09048E",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -377,80 +367,9 @@
    "reader": "openrouter:openrouter/free"
   },
   {
-   "market": "Lourencini",
-   "offerId": "ig-Df9ccoigZve",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/913360440_1566361718852929_211837328473460177_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=p1KZZCA3aFkQ7kNvwGs5xbO&_nc_oc=AdrvXzxh6aHMI8oMoXYEq_QQL6z8ECyEIpr2i4vdKsbiyfBHq691w_XJi4AUPVUVPuQ&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=spqmYsXm8stopJCRtL9CqA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR1mL3L6FjK1oamQFGgLlDDImksjTdJuI0mk_24MyK73g&oe=6B090C38",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df9ZBGGiC4D",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/915187076_1566350552187379_7441793858693503827_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=uIJb3zU54XcQ7kNvwG8t-cj&_nc_oc=AdovTMQF3UVqiIYbz9RORj5bWCquQzW34Sg5JXtMwf_P-_9H_uWudMcKnwdoYHlkbSA&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=spqmYsXm8stopJCRtL9CqA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRfv3fQAkGLSruv0RxMzaUPlYosNdqumDLLaTPXOwLpZw&oe=6B08FACE",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df71r0BiRg7",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/916365284_1566332508855850_8819464428567251053_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MoLj8YbEfc0Q7kNvwGmat3K&_nc_oc=AdpxOXkwiZFiTQOg3rev3huKgDjMmhb3gC8R_bmyxhhopm-ugPHWaiXurF-X8jFQC00&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=spqmYsXm8stopJCRtL9CqA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRFWsJR6Iz6BFUBbtIl1rh0Ng5tc20NxC3HVnoMgAZkrg&oe=6B08F105",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df706xDCWfV",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/914353391_1566326942189740_5119230386894240315_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=K2kPt1TsU-0Q7kNvwHVjfIy&_nc_oc=AdqCdfwiGBdSa74Fx7ebcRtw1yil9FN9UCSnOQnjZxz6oUMSJkBBPGfMelKKyslxLpE&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=spqmYsXm8stopJCRtL9CqA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRtTRIrNmWEvEXWPPuT-6tXT9RsOTN2S5k5TwLjfE_H7w&oe=6B08F919",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df0JozjlnyK",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/912256853_1563233822499052_3784916018057349843_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pUpLlFptXi0Q7kNvwEHSe2j&_nc_oc=Adrw_ccJabk0y0WTTwJXtf02-18Ik386kqB4nAcfi3eJXsBfP0JoyVd_YNU3mriVvWY&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=spqmYsXm8stopJCRtL9CqA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRY-D7BkKQdJYxTouU4P1X4__iUh4uNrKSw6FuP0RHw3w&oe=6B0904C5",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini"
-  },
-  {
-   "market": "Família Lima",
-   "offerId": "ig-Df9f47XxWs0",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/914615155_18116046887465670_7040478491543886566_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2AV_MwVDV6EQ7kNvwFl50mA&_nc_oc=AdolzROj-CV6dnGWZ9c1xydY8ROULvDLwtFqc8pVMD8uoD52jRQMw9npMKTNBDgdDyo&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=peEKXTJ3r2YZVBB0w5Tt1Q&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQQmejFNFLLmS6BhF82_gzuCE-nQHO0CC9wszS00z6FKA&oe=6B08F7A3",
-   "ok": true,
-   "cached": true,
-   "products": 49,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "gemma-4-31b-it: 1 preços nos itens, 40 no OCR (leitura incompleta)"
-  },
-  {
-   "market": "Família Lima",
-   "offerId": "ig-Dfy_REopfIC",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/906016002_18115623806465670_8884699886875894602_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=so_QAR9h0FEQ7kNvwELxrI5&_nc_oc=AdqLEBZioQPM3XPD6lX2m9SAkbdN8VvridjIzpj4Hq-F6dZkB6l9na2HL8XoBSVd5P8&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=peEKXTJ3r2YZVBB0w5Tt1Q&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTwqDc-ExYRKnf5jWPNEjY1OR39sNQrlHcZghdb8F1tvQ&oe=6B08F0BE",
-   "ok": true,
-   "cached": true,
-   "products": 10,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
    "market": "Mercado Capital",
    "offerId": "ig-Df8KHjDFu3r",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/916914463_18117712760599763_6232496217110380124_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Xkre2v0HiDsQ7kNvwHYtF8Q&_nc_oc=AdqCHR2yW2A6sMNJt8DpQWI14ID69VRSazTzRMA190GuDrnv4ICP6jcBsUyhDI0BABs&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=-6LbiaECiq9H1fvK7PSFiA&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRp9RNwVeq3BlCI5aYi_IRF26LvgIeuleQcypktdongPQ&oe=6B08FBC6",
+   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/916914463_18117712760599763_6232496217110380124_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Xkre2v0HiDsQ7kNvwHQeHUW&_nc_oc=Adq55xygUss8PqsVzK25_Gr_pjm3-Y9jC3WgI-AEqxhMQKUH3RJQpL6bFIP2OpWkRYQ&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XQKG9L5Pcp4bz9mCxyEpsA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSXo7Qjg39--BHKTabny_X3NPZ0lRyZHNClnuDVk4-reA&oe=6B08FBC6",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -460,7 +379,7 @@
   {
    "market": "Mercado Capital",
    "offerId": "ig-Df8Gsm5liAd",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/918164194_18117735095599763_3696843597561036774_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=E7Xxeo2douUQ7kNvwGEg71X&_nc_oc=AdqtNlYKQWoCybnPPlUmNeE-Y7HIdMbq3BJ98X06VjwC6cinJ76LYHFv6LhSCrDb28A&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=-6LbiaECiq9H1fvK7PSFiA&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQgwhPv3COMIrDPef1NM7GX7uigw9TWGdHD-iiHf0pnZQ&oe=6B090F15",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/918164194_18117735095599763_3696843597561036774_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=E7Xxeo2douUQ7kNvwG7ORLq&_nc_oc=AdqOgDLiuuGwZ5qsAooMH-hwsTuePzhq5mhR3XyTaFiAJ4KFJeOEm345MB-wOfsxApQ&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XQKG9L5Pcp4bz9mCxyEpsA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQF4WpT7aB7mQzj4TJhArrjemjJNTfn8rzkf5zVWTE5zA&oe=6B090F15",
    "ok": true,
    "cached": true,
    "products": 1,
@@ -470,7 +389,7 @@
   {
    "market": "Mercado Capital",
    "offerId": "ig-Df5JDqqI1pB",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/918302476_18117606134599763_9214575739579118101_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=fZQOfeJ0ohYQ7kNvwFthGBr&_nc_oc=Adq1dM5J4lcv1pp3TStTsnrOGiVBcf_hFsBByveEg2eetAmRplEs4KZjsSO2_xhvvnQ&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=-6LbiaECiq9H1fvK7PSFiA&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRHRwqTKT2x395z5NQWddO-rR8J2GAw9z4BfD_4LhZSQg&oe=6B08DE53",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/918302476_18117606134599763_9214575739579118101_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=fZQOfeJ0ohYQ7kNvwEgJmyI&_nc_oc=AdoIza2hgt2AiwmHnqkw8dkXgiJPplsrvU1v_Yn8cCmZ1e9OURPOppcQC-L2dqTrz6I&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XQKG9L5Pcp4bz9mCxyEpsA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQHXu__wlmzBBNQJ_KfWF--xD3Yod6ttfen_o3mWyws5A&oe=6B08DE53",
    "ok": true,
    "cached": true,
    "products": 0,
@@ -480,7 +399,7 @@
   {
    "market": "Mercado Capital",
    "offerId": "ig-Df2ljv8Ft6f",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/911956234_18117477860599763_2330681001095261381_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZeXfLUH43WUQ7kNvwETZKKi&_nc_oc=AdpWzdankGpv2iMbSOx6iuS99GxSshK3Dksh6o6caiy22rnUq1bjMz-8HV8ZNfFt4RM&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=-6LbiaECiq9H1fvK7PSFiA&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ-ZqZ8s6YtSFfnpVfpUBYHdfwnnpP4nkg3mQ7fC9IiYw&oe=6B08EB9F",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/911956234_18117477860599763_2330681001095261381_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZeXfLUH43WUQ7kNvwEAz99I&_nc_oc=AdrP6Mkq4u1YGFW3cmJlhS_TUVp2MXVOgg8MQKM3BOEhUDy3l6keRdxWv9C0y0G8Lek&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XQKG9L5Pcp4bz9mCxyEpsA&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSspOO-ochZPQ0-AZBSKunFkpO3-8zN-ehdlF7sPwpx_A&oe=6B08EB9F",
    "ok": true,
    "cached": true,
    "products": 1,
@@ -488,9 +407,50 @@
    "reader": "ocr+groq:openai/gpt-oss-120b"
   },
   {
+   "market": "Mercadinho Parceiro",
+   "offerId": "ig-Df7_CFQifPV",
+   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+   "ok": true,
+   "cached": true,
+   "products": 11,
+   "model": "ocr+gemma-4-31b-it",
+   "reader": "ocr+gemma-4-31b-it"
+  },
+  {
+   "market": "Mercadinho Parceiro",
+   "offerId": "ig-Df5aiIkpapx",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/910629317_18101830025389709_3547428203470611129_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pswJfTwAzBoQ7kNvwHJrSzK&_nc_oc=AdpSuKtwKY8rtjxX2nn8o9-tviBEbDKnAL9WEVnLOp9BPc-NYa1m-8MJyOmlxGLlROw&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTbNeDMzLdoLm8N_TxjnnqZDqYYU1C3F6LL4f4b7i2eiw&oe=6B090E64",
+   "ok": true,
+   "cached": true,
+   "products": 14,
+   "model": "ocr+gemma-4-31b-it",
+   "reader": "ocr+gemma-4-31b-it"
+  },
+  {
+   "market": "Mercadinho Parceiro",
+   "offerId": "ig-Df29cjDCQXw",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/907169358_18101716106389709_4340051177341205992_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=REgh8ckRIhEQ7kNvwEOmWi0&_nc_oc=AdqfDWsZ-Vcgp1H_mduGtJ4M-wyMn_5aphS_AlPEqoHfMLwU_hVqdaOcxMJnBV-pFfw&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSECmEcscV-lyeYGmoBw9fcP5x9Ts7wueq52oUCNVPBgA&oe=6B08EADD",
+   "ok": true,
+   "cached": true,
+   "products": 10,
+   "model": "gemini-flash-lite-latest",
+   "reader": "gemini",
+   "motivoGemini": "groq:openai/gpt-oss-120b: 0 itens, mas 6 preços no OCR"
+  },
+  {
+   "market": "Mercadinho Parceiro",
+   "offerId": "ig-Df0T59HJ8gn",
+   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/905322731_18101565101389709_3247700096333956646_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=v30xCUDhIpcQ7kNvwF4lPSO&_nc_oc=AdrHGNactg9P9lBQbwRCCerEXAwin_MYEVWHkZ7B6NgHiYRcWjMIiSL1Dye6uTg3yz0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSx4a3bImoTQQlkODZuIQ_c6kLxBP1DB9KO_1Nr_OM2iQ&oe=6B08E0DC",
+   "ok": true,
+   "cached": true,
+   "products": 10,
+   "model": "ocr+groq:openai/gpt-oss-120b",
+   "reader": "ocr+groq:openai/gpt-oss-120b"
+  },
+  {
    "market": "Mercado Baratinho",
    "offerId": "ig-Df90AOKhswJ",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825812_18239570659321030_3784382373686366194_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_5J8g-XTerQQ7kNvwEsJH6W&_nc_oc=Adp5AVaNWqDKZyhztbJBha-i0Lwp3zKrs7fUEwxuDfSAeID4CZ6Zac6J6l4Zn9uOSxA&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=KrLndZoc0lgxMG4YFFQPuw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ9nbVbGg5kazaTUXBIPyPGgWAG80yZ600RZmVgvjLAUw&oe=6B08F5BB",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825812_18239570659321030_3784382373686366194_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_5J8g-XTerQQ7kNvwHdAKEX&_nc_oc=AdqehHtDKbRnYl1mOdbH_3rErUjMaTnEUAv-_iIjZgzbF9kvqWGCLnEWqqZ8tnM50bw&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=f6Tz5f5ALWHxiQB4rHiOBw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQS6ZiYrssujSWu5VS_2deg90MoamOrpLrWIrueciPQA-g&oe=6B08F5BB",
    "ok": true,
    "cached": true,
    "products": 6,
@@ -501,7 +461,7 @@
   {
    "market": "Mercado Baratinho",
    "offerId": "ig-Df9YwLpBjnn",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825575_18239552857321030_4867039900311838043_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=x_RVqczbkWkQ7kNvwFxugzw&_nc_oc=Adr9_fliT4uTUbSv3KrMFLlUIcJEZgsxWEc3k_uNDdyioxFo1NCeKBLXGIkiohQSAeg&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=KrLndZoc0lgxMG4YFFQPuw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRY6Cbehm2DhB2cJAELvAQ5scNOshIxgGrXE7RASf7Jng&oe=6B08E753",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825575_18239552857321030_4867039900311838043_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=x_RVqczbkWkQ7kNvwFOtLMS&_nc_oc=AdpnRNUJufY8jhcEWwBHw9l9rCWfT6RFPZZGiNB_Jl7Ymk74NuSwxtszYlmkGHwdLHc&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=f6Tz5f5ALWHxiQB4rHiOBw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTjLMfwp1uVUF7cNXkh9mvWwbuxCGDpYbQE99IO52t1IQ&oe=6B08E753",
    "ok": true,
    "cached": true,
    "products": 7,
@@ -511,16 +471,101 @@
   {
    "market": "Mercado Baratinho",
    "offerId": "ig-Df1yP7IsKRA",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/907035166_18239296768321030_2530213209281897235_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=TSdrFZhmu-0Q7kNvwFDP6Nn&_nc_oc=AdoNkBqwUxL8sjaCEUHkJTTzB3Jl5gGEtq1EBmbgcstkT3WwijplDARbJg_NXZrRvMA&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=KrLndZoc0lgxMG4YFFQPuw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTAGy3miDzoW6mKJHy8ZWuLbYIywB0RskVS8VhDlAXNnw&oe=6B08E3CB",
+   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/907035166_18239296768321030_2530213209281897235_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=TSdrFZhmu-0Q7kNvwGm0oNF&_nc_oc=Ado_p_A_DNY9UhtqLDFyxwSCHbGZkOErv9aV5hSYqxw_TkDTTgtpa3rxwKyUKfSgkZg&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=f6Tz5f5ALWHxiQB4rHiOBw&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQSFoYEtFuvtlMylE9XlgAvOZXDP1HH_2M2yMEa_W4ZGA&oe=6B08E3CB",
    "ok": true,
    "cached": true,
    "products": 6,
    "model": "ocr+gemma-4-31b-it",
    "reader": "ocr+gemma-4-31b-it"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1RSMgjgDP8pIZ7j5dUKN7sVDZIfFyjbNC",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1RSMgjgDP8pIZ7j5dUKN7sVDZIfFyjbNC",
+   "ok": true,
+   "cached": false,
+   "products": 9,
+   "model": "ocr+gemma-4-31b-it",
+   "reader": "ocr+gemma-4-31b-it"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69",
+   "ok": true,
+   "cached": false,
+   "products": 1,
+   "model": "gemini-flash-lite-latest",
+   "reader": "gemini",
+   "motivoGemini": "PDF com 7 páginas (mais que 4)"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk",
+   "ok": true,
+   "cached": false,
+   "products": 6,
+   "model": "gemini-flash-lite-latest",
+   "reader": "gemini",
+   "motivoGemini": "groq:openai/gpt-oss-120b: 2 preços nos itens, 18 no OCR (leitura incompleta)"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "103lu972UMhwPolufrkxZoMCDys3NmzxM",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=103lu972UMhwPolufrkxZoMCDys3NmzxM",
+   "ok": true,
+   "cached": false,
+   "products": 24,
+   "model": "gemini-flash-lite-latest",
+   "reader": "gemini",
+   "motivoGemini": "The operation was aborted due to timeout"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1PylaPa9uTKshRCdHpfD-wTO1_qYs_58j",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1PylaPa9uTKshRCdHpfD-wTO1_qYs_58j",
+   "ok": true,
+   "cached": false,
+   "products": 119,
+   "model": "gemini-flash-lite-latest",
+   "reader": "gemini",
+   "motivoGemini": "PDF com 5 páginas (mais que 4)"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1zqZrBuDGTHg_fOaw4yPrnn3kZw3lgNBE",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1zqZrBuDGTHg_fOaw4yPrnn3kZw3lgNBE",
+   "ok": true,
+   "cached": false,
+   "products": 22,
+   "model": "gemini-3.5-flash-lite",
+   "reader": "gemini",
+   "motivoGemini": "groq:openai/gpt-oss-120b: 9 preços nos itens, 36 no OCR (leitura incompleta)"
+  },
+  {
+   "market": "Atacadão",
+   "arquivo": "atacadao-folheto",
+   "offerId": "1BF5EUt-inwjcGzt9ZS_DDrrAW8RWZNW6",
+   "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1BF5EUt-inwjcGzt9ZS_DDrrAW8RWZNW6",
+   "ok": true,
+   "cached": false,
+   "products": 11,
+   "model": "ocr+gemma-4-31b-it",
+   "reader": "ocr+gemma-4-31b-it"
   }
  ],
- "finishedAt": "2026-11-22T17:27:31.068Z",
- "newReads": 0,
+ "finishedAt": "2026-11-22T18:27:19.158Z",
+ "newReads": 7,
  "readerMode": "ocr-primeiro",
- "porLeitor": {}
+ "porLeitor": {
+  "ocr": 2,
+  "gemini": 5
+ }
 }
