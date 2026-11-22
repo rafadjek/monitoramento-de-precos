@@ -1,6 +1,383 @@
 [
  {
   "market": "Mercadinho Parceiro",
+  "externalId": "451dfa4517d3",
+  "name": "AMACIANTE COMFORT 500ml",
+  "brand": "Comfort",
+  "ean": null,
+  "size": "500ml",
+  "price": 10.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "limpeza",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   129,
+   88,
+   292,
+   215
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "42799ba45271",
+  "name": "SALSICHA kg",
+  "brand": "Plact Foods",
+  "ean": null,
+  "size": "kg",
+  "price": 9.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   130,
+   536,
+   297,
+   725
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": "preço por kg",
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "2701470f4988",
+  "name": "MACARRÃO ESPAGUETE BULNEZ 500g",
+  "brand": "Bulnez",
+  "ean": null,
+  "size": "500g",
+  "price": 1.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   353,
+   33,
+   461,
+   339
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "7918b46bc450",
+  "name": "SABÃO EM PÓ TIXAN 400g",
+  "brand": "Tixan Ypê",
+  "ean": null,
+  "size": "400g",
+  "price": 5.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "limpeza",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   312,
+   532,
+   469,
+   730
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "284c3262e2e4",
+  "name": "KETCHUP QUERO 400g",
+  "brand": "Quero",
+  "ean": null,
+  "size": "400g",
+  "price": 7.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   493,
+   71,
+   646,
+   175
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "d5c265665835",
+  "name": "NISSIN TALHARIM BOLONHESA 90g",
+  "brand": "Nissin",
+  "ean": null,
+  "size": "90g",
+  "price": 3.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   506,
+   222,
+   638,
+   401
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "e95773248fa9",
+  "name": "TAPIOCA TERRINHA 1kg",
+  "brand": "Da Terrinha",
+  "ean": null,
+  "size": "1kg",
+  "price": 11.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   493,
+   429,
+   646,
+   577
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "778150254aeb",
+  "name": "MILHO PARA PIPOCA PREMIUM YOKI 400g",
+  "brand": "Yoki",
+  "ean": null,
+  "size": "400g",
+  "price": 7.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   493,
+   616,
+   643,
+   770
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "9697905baa0f",
+  "name": "FEIJÃO FRADINHO GUTTO 500g",
+  "brand": "Gutto",
+  "ean": null,
+  "size": "500g",
+  "price": 4.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   502,
+   803,
+   645,
+   963
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "034e24256cfd",
+  "name": "MAIONESE ORIGINAL FUGINI 180g",
+  "brand": "Fugini",
+  "ean": null,
+  "size": "180g",
+  "price": 3.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   738,
+   80,
+   891,
+   206
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "d021d319823d",
+  "name": "GELATINA NEILAR CEREJA 20g",
+  "brand": "Neilar",
+  "ean": null,
+  "size": "20g",
+  "price": 1.49,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   739,
+   298,
+   887,
+   475
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "81e104de13df",
+  "name": "DESODORANTE ROLL-ON REXONA 50ml",
+  "brand": "Rexona",
+  "ean": null,
+  "size": "50ml",
+  "price": 8.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "higiene",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   739,
+   567,
+   887,
+   659
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
+  "externalId": "c928aa712b0a",
+  "name": "BISCOITO TUCS BACON 100g",
+  "brand": "Tucs",
+  "ean": null,
+  "size": "100g",
+  "price": 1.99,
+  "listPrice": null,
+  "unitPrice": null,
+  "category": "alimenticios",
+  "categoryRaw": null,
+  "segment": "bairro",
+  "imageUrl": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwEs3vr6&_nc_oc=Adp2KIn0ZkAQLZTPUn_DaiO4wjOz0EdSWpC0Cl0pZQ5u2aG6SX_AtSQmcdYkrIH9uXk&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTBeyWtGbp5nzYBCoPwVKMlY_cnKu33GLV58MrfFSiVFA&oe=6B090058",
+  "imageBox": [
+   784,
+   737,
+   843,
+   972
+  ],
+  "productUrl": "https://www.instagram.com/mercadinhoparceiro/p/DgDbcdIB3Pi/",
+  "source": "encarte",
+  "condition": null,
+  "validFrom": "2026-11-23T03:00:00.000Z",
+  "validUntil": "2026-11-24T02:59:59.000Z",
+  "validityNote": "post do Instagram de 22/11",
+  "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
+  "collectedAt": "2026-11-22T18:37:57.456Z"
+ },
+ {
+  "market": "Mercadinho Parceiro",
   "externalId": "ba740450ab77",
   "name": "Pizza",
   "brand": null,
@@ -12,7 +389,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    131,
    265,
@@ -26,7 +403,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -41,7 +418,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    142,
    706,
@@ -55,7 +432,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -70,7 +447,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    370,
    154,
@@ -84,7 +461,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -99,7 +476,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    360,
    490,
@@ -113,7 +490,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -128,7 +505,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    360,
    825,
@@ -142,7 +519,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -157,7 +534,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    533,
    148,
@@ -171,7 +548,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -186,7 +563,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    539,
    482,
@@ -200,7 +577,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -215,7 +592,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    539,
    811,
@@ -229,7 +606,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -244,7 +621,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    698,
    167,
@@ -258,7 +635,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -273,7 +650,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    692,
    482,
@@ -287,7 +664,7 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  },
  {
   "market": "Mercadinho Parceiro",
@@ -302,7 +679,7 @@
   "category": "alimenticios",
   "categoryRaw": null,
   "segment": "bairro",
-  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwFfadkb&_nc_oc=AdqvszY3cmKCJ8hqVJsmon_1fpwB29csCSp6mF-ga_RDSB4EPEZpv1kzpvVeKsFM700&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=zRkKsbsSfVh1n7iPSYVHrw&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRViM_IMvRdeOTiblQ7qUNYanX3wvs8KjUAwNNEmDU92g&oe=6B090848",
+  "imageUrl": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwEVvKbi&_nc_oc=AdqNK3Hcgj5ZsmgltJYpcyi1HQejJBFAz_bBpPkQXtKMnWm_mkI0o69KSNPO8IInC1c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=HhYZ4EpgXizb3r-sr_5kvQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRM_PjKviqBC2FZhPo5r10U9lDBW_E2L4nNpvuChKCFug&oe=6B090848",
   "imageBox": [
    671,
    833,
@@ -316,6 +693,6 @@
   "validUntil": "2026-11-23T02:59:59.000Z",
   "validityNote": "post de 19/11, sem validade impressa",
   "storeScope": "Ofertas publicadas no Instagram @mercadinhoparceiro",
-  "collectedAt": "2026-11-22T17:33:52.483Z"
+  "collectedAt": "2026-11-22T18:37:57.456Z"
  }
 ]
