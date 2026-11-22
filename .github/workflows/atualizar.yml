@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/collectors/instagram-data.mjs', 'server/collectors/atacadao-folheto.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -110,7 +110,9 @@ jobs:
             node collectors/roldao.mjs || echo "::warning::Roldão: encarte indisponível"
             node collectors/dia.mjs || echo "::warning::Dia: folheto indisponível no Tiendeo"
             node collectors/social.mjs || echo "::warning::Instagram (Apify) indisponível"
-            node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json
+            node collectors/atacadao-folheto.mjs || echo "::warning::Atacadão: folheto indisponível"
+            # o folheto do Atacadão vai por último: é grande e não pode tirar a vez dos mercados de bairro
+            node readers/folheto.mjs data/extraido/assai-encartes.json data/extraido/baronesa-encartes.json data/extraido/joanin-encartes.json data/extraido/roldao-encartes.json data/extraido/social-encartes.json data/extraido/atacadao-encartes.json
           ) || echo "::warning::leitura de encartes terminou com erro"
           RC=0
           if [ -n "${CAT:-}" ]; then wait $CAT || RC=$?; cat ../coleta-catalogos.log; fi

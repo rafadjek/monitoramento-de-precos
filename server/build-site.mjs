@@ -104,16 +104,25 @@ index.infoOnly = [{
   ],
 }];
 const built = [];
-for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.includes('encartes'))) {
+// Um mercado pode ter mais de um arquivo (ex.: atacadao.json do catálogo e atacadao-folheto.json do folheto): juntam-se aqui.
+const porMercado = new Map();
+for (const f of fs.readdirSync(IN).filter((x) => x.endsWith('.json') && !x.includes('encartes')).sort()) {
   const parsed = JSON.parse(fs.readFileSync(path.join(IN, f), 'utf8'));
   if (!Array.isArray(parsed)) continue; // .meta.json e .verificacao.json dos coletores
-  const rows = parsed.filter(valid);
-  if (!rows.length) continue;
-  const market = rows[0].market;
+  const lidas = parsed.filter(valid);
+  if (!lidas.length) continue;
+  const m = lidas[0].market;
+  porMercado.set(m, [...(porMercado.get(m) ?? []), ...lidas]);
+}
+// catálogo primeiro: rows[0] (segmento, escopo da loja) deve vir do catálogo, não do folheto
+for (const [m, r] of porMercado) porMercado.set(m, [...r.filter((o) => o.source !== 'encarte'), ...r.filter((o) => o.source === 'encarte')]);
+for (const [market, rows] of porMercado) {
   const lastCollected = rows.map((r) => r.collectedAt).sort().at(-1);
-  if (CATALOG_MARKETS.has(market) && now - new Date(lastCollected).getTime() > MAX_AGE_HOURS * 3600e3) {
-    index.retired.push({ name: market, collectedAt: lastCollected, maxAgeHours: MAX_AGE_HOURS });
-    console.log(`::warning::${market}: coleta de ${brDate(lastCollected)}, mais de ${+(MAX_AGE_HOURS / 24).toFixed(1)} dias; fora do site até a próxima coleta`);
+  // a idade vale para o catálogo: um folheto novo não esconde um catálogo velho
+  const catalogCollected = rows.filter((r) => r.source !== 'encarte').map((r) => r.collectedAt).sort().at(-1) ?? lastCollected;
+  if (CATALOG_MARKETS.has(market) && now - new Date(catalogCollected).getTime() > MAX_AGE_HOURS * 3600e3) {
+    index.retired.push({ name: market, collectedAt: catalogCollected, maxAgeHours: MAX_AGE_HOURS });
+    console.log(`::warning::${market}: coleta de ${brDate(catalogCollected)}, mais de ${+(MAX_AGE_HOURS / 24).toFixed(1)} dias; fora do site até a próxima coleta`);
     continue;
   }
   const vigentes = rows.filter((o) => !o.validUntil || new Date(o.validUntil).getTime() >= now);
