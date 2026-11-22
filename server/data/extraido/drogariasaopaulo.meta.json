@@ -1,141 +1,139 @@
 {
-  "startedAt": "2026-11-21T08:50:17.269Z",
-  "finishedAt": "2026-11-21T09:45:29.446Z",
-  "minutes": 55.2,
-  "requests": 563,
+  "startedAt": "2026-11-22T08:54:34.285Z",
+  "finishedAt": "2026-11-22T09:49:42.911Z",
+  "minutes": 55.1,
+  "requests": 572,
   "timing": {
-    "catalogoMin": 1.4,
-    "simulacaoMin": 32.2,
-    "chamadasCatalogo": 221,
-    "chamadasSimulacao": 342
+    "catalogoMin": 1.3,
+    "simulacaoMin": 31.8,
+    "chamadasCatalogo": 223,
+    "chamadasSimulacao": 349
   },
   "cep": "09400110",
   "loteSimulacao": 100,
-  "itensVistosNoCatalogo": 10675,
+  "itensVistosNoCatalogo": 10912,
   "produtosComMaisDeUmItem": 14,
-  "simulados": 10300,
-  "mantidos": 4371,
+  "simulados": 10500,
+  "mantidos": 4675,
   "descartes": {
-    "departamentoIgnorado": 272,
-    "repetido": 3,
+    "departamentoIgnorado": 307,
+    "repetido": 5,
     "semNomeOuEan": 0,
-    "semRetiradaLocal": 1473,
+    "semRetiradaLocal": 1375,
     "simFalhou": 0,
     "outros": {
-      "cannotBeDelivered": 721,
-      "withoutStock": 3693,
-      "maxNumberOfSellersReached": 41,
-      "unavailableItemFulfillment": 1
+      "cannotBeDelivered": 523,
+      "withoutStock": 3875,
+      "maxNumberOfSellersReached": 52
     }
   },
   "faixasDePreco": 12,
   "faixasTruncadas": [],
   "porCategoria": {
-    "farmacia": 1779,
-    "higiene": 1840,
-    "outros": 752
+    "farmacia": 1827,
+    "higiene": 2000,
+    "outros": 848
   },
-  "rx": 972,
-  "generico": 766,
-  "comEan": 4345,
-  "comImagem": 4371,
-  "comPrecoDe": 2621,
+  "rx": 993,
+  "generico": 793,
+  "comEan": 4653,
+  "comImagem": 4675,
+  "comPrecoDe": 2776,
   "medicamentosSemFicha": 0,
   "lojasEncontradas": {
-    "Mauá Centro": 653,
-    "Mauá Barão de Mauá": 1371,
-    "Mauá Jardim Zaira": 501,
-    "Mauá Vila Assis": 1722,
-    "RP Centro": 1625,
-    "RP Francisco Monteiro": 2153
+    "Mauá Centro": 675,
+    "Mauá Barão de Mauá": 1339,
+    "Mauá Jardim Zaira": 541,
+    "Mauá Vila Assis": 1703,
+    "RP Centro": 2112,
+    "RP Francisco Monteiro": 2180
   },
   "fichas": {
     "prescricao": {
-      "Sem Retenção De Receita": 738,
-      "(sem campo)": 3391,
-      "Com Retenção De Receita": 199,
-      "Com Retenção de Receita C1": 43
+      "Sem Retenção De Receita": 756,
+      "(sem campo)": 3674,
+      "Com Retenção De Receita": 204,
+      "Com Retenção de Receita C1": 41
     },
     "classificacao": {
       "Sem Tarja": 8,
-      "Tarja Vermelha": 929,
-      "(sem campo)": 3343,
-      "Tarja Preta": 43,
-      "Comum": 48
+      "Tarja Vermelha": 952,
+      "(sem campo)": 3629,
+      "Tarja Preta": 41,
+      "Comum": 45
     },
     "tipo": {
-      "De Outros Tipos": 133,
-      "Genéricos": 765,
-      "(sem campo)": 2931,
-      "Similares": 333,
-      "De Referência": 208,
-      "Especiais; Genéricos": 1
+      "De Outros Tipos": 136,
+      "Genéricos": 793,
+      "(sem campo)": 3205,
+      "Similares": 332,
+      "De Referência": 209
     }
   },
   "porDepartamento": {
     "Medicamentos": {
-      "vistos": 1585,
-      "mantidos": 980
+      "vistos": 1582,
+      "mantidos": 1001
     },
     "Remédios": {
-      "vistos": 585,
-      "mantidos": 474
+      "vistos": 592,
+      "mantidos": 482
     },
     "Suplemento Alimentar": {
-      "vistos": 559,
-      "mantidos": 50
+      "vistos": 589,
+      "mantidos": 55
     },
     "Sabonete": {
-      "vistos": 478,
-      "mantidos": 275
+      "vistos": 488,
+      "mantidos": 299
     },
     "Desodorante": {
-      "vistos": 461,
-      "mantidos": 288
+      "vistos": 465,
+      "mantidos": 294
     },
     "Esmalte": {
       "vistos": 405,
-      "mantidos": 201
+      "mantidos": 206
     },
     "Shampoo": {
-      "vistos": 238,
-      "mantidos": 107
+      "vistos": 254,
+      "mantidos": 132
     },
     "Pasta de Dente": {
-      "vistos": 188,
-      "mantidos": 126
+      "vistos": 192,
+      "mantidos": 139
     },
     "Escova de Dente": {
       "vistos": 187,
-      "mantidos": 83
+      "mantidos": 93
     },
     "Outros": {
-      "vistos": 173,
-      "mantidos": 50
+      "vistos": 172,
+      "mantidos": 70
     },
     "Curativo": {
-      "vistos": 169,
-      "mantidos": 42
+      "vistos": 170,
+      "mantidos": 49
+    },
+    "Condicionador": {
+      "vistos": 160,
+      "mantidos": 80
     },
     "Tinta de Cabelo": {
-      "vistos": 158,
-      "mantidos": 62
+      "vistos": 159,
+      "mantidos": 59
     },
     "Absorvente": {
       "vistos": 157,
-      "mantidos": 100
-    },
-    "Condicionador": {
-      "vistos": 149,
-      "mantidos": 76
+      "mantidos": 105
     },
     "Creme Para Cabelo": {
-      "vistos": 146,
-      "mantidos": 48
+      "vistos": 149,
+      "mantidos": 72
     },
     "Hidratante": {
-      "vistos": 137,
-      "mantidos": 76
+      "vistos": 142,
+      "mantidos": 81
     },
     "Sonda": {
       "vistos": 114,
@@ -143,131 +141,135 @@
     },
     "Barra de Proteína": {
       "vistos": 107,
-      "mantidos": 40
+      "mantidos": 55
     },
     "Chocolate": {
       "vistos": 102,
-      "mantidos": 71
+      "mantidos": 76
     },
     "Lenço Umedecido": {
-      "vistos": 93,
-      "mantidos": 35
+      "vistos": 92,
+      "mantidos": 34
+    },
+    "Dermocosméticos": {
+      "vistos": 82,
+      "mantidos": 9
+    },
+    "Vitamina": {
+      "vistos": 81,
+      "mantidos": 42
     },
     "Enxaguante Bucal": {
       "vistos": 80,
-      "mantidos": 44
+      "mantidos": 54
     },
-    "Vitamina": {
-      "vistos": 80,
-      "mantidos": 44
+    "Máscara Para Cabelo": {
+      "vistos": 77,
+      "mantidos": 20
     },
     "Agulha": {
       "vistos": 75,
       "mantidos": 10
     },
-    "Máscara Para Cabelo": {
-      "vistos": 72,
-      "mantidos": 17
-    },
-    "Dermocosméticos": {
-      "vistos": 72,
-      "mantidos": 10
+    "Camisinha": {
+      "vistos": 67,
+      "mantidos": 38
     },
     "Atadura": {
       "vistos": 66,
-      "mantidos": 11
-    },
-    "Camisinha": {
-      "vistos": 66,
-      "mantidos": 32
+      "mantidos": 8
     },
     "Seringa": {
-      "vistos": 61,
-      "mantidos": 15
+      "vistos": 60,
+      "mantidos": 16
     },
     "Hidratante Labial": {
       "vistos": 56,
-      "mantidos": 27
+      "mantidos": 37
     },
     "Elástico de Cabelo": {
-      "vistos": 53,
-      "mantidos": 20
+      "vistos": 54,
+      "mantidos": 25
     },
     "Barbeador": {
-      "vistos": 52,
-      "mantidos": 31
+      "vistos": 51,
+      "mantidos": 33
     },
     "Fio Dental": {
+      "vistos": 50,
+      "mantidos": 25
+    },
+    "Shampoo e Condicionador": {
       "vistos": 50,
       "mantidos": 24
     },
     "Bala": {
-      "vistos": 49,
-      "mantidos": 34
+      "vistos": 48,
+      "mantidos": 38
     },
     "Isotônico": {
       "vistos": 48,
       "mantidos": 22
     },
     "Óleo Corporal": {
-      "vistos": 45,
-      "mantidos": 13
-    },
-    "Shampoo e Condicionador": {
-      "vistos": 44,
-      "mantidos": 19
+      "vistos": 47,
+      "mantidos": 18
     },
     "Cateter": {
-      "vistos": 43,
+      "vistos": 42,
       "mantidos": 0
     },
     "Algodão": {
       "vistos": 42,
-      "mantidos": 18
-    },
-    "Repelente": {
-      "vistos": 42,
-      "mantidos": 20
+      "mantidos": 19
     },
     "Fraldas": {
       "vistos": 42,
       "mantidos": 18
     },
+    "Complemento Alimentar": {
+      "vistos": 41,
+      "mantidos": 24
+    },
     "Chiclete": {
       "vistos": 41,
-      "mantidos": 23
+      "mantidos": 31
     },
-    "Complemento Alimentar": {
-      "vistos": 40,
-      "mantidos": 24
+    "Repelente": {
+      "vistos": 41,
+      "mantidos": 20
+    },
+    "Óleo Para Cabelo": {
+      "vistos": 41,
+      "mantidos": 12
     },
     "Sorvete": {
       "vistos": 40,
-      "mantidos": 35
+      "mantidos": 36
     },
     "Pinça": {
       "vistos": 40,
-      "mantidos": 1
+      "mantidos": 3
+    },
+    "Luva": {
+      "vistos": 37,
+      "mantidos": 0
     },
     "Whey Protein": {
       "vistos": 37,
       "mantidos": 8
     },
-    "Óleo Para Cabelo": {
+    "Pincel de Maquiagem": {
       "vistos": 37,
-      "mantidos": 7
-    },
-    "Luva": {
-      "vistos": 36,
-      "mantidos": 0
+      "mantidos": 5
     },
     "Energético": {
       "vistos": 36,
-      "mantidos": 24
+      "mantidos": 27
     },
     "Chupeta": {
       "vistos": 36,
-      "mantidos": 13
+      "mantidos": 11
     },
     "Água Oxigenada": {
       "vistos": 35,
@@ -275,46 +277,46 @@
     },
     "Biscoito": {
       "vistos": 35,
-      "mantidos": 11
+      "mantidos": 10
     },
     "Avental": {
       "vistos": 33,
       "mantidos": 0
     },
-    "Pincel de Maquiagem": {
-      "vistos": 32,
-      "mantidos": 5
+    "Creme Corporal": {
+      "vistos": 33,
+      "mantidos": 13
     },
     "Piranha de Cabelo": {
+      "vistos": 31,
+      "mantidos": 10
+    },
+    "Chá": {
       "vistos": 30,
-      "mantidos": 5
+      "mantidos": 15
     },
     "Pastilha": {
       "vistos": 29,
-      "mantidos": 20
-    },
-    "Chá": {
-      "vistos": 29,
-      "mantidos": 14
+      "mantidos": 23
     },
     "Fita Microporosa": {
       "vistos": 29,
-      "mantidos": 5
+      "mantidos": 4
     },
     "Bebida Proteica": {
       "vistos": 29,
-      "mantidos": 21
-    },
-    "Creme Corporal": {
-      "vistos": 29,
-      "mantidos": 13
+      "mantidos": 25
     },
     "Pente": {
-      "vistos": 27,
-      "mantidos": 2
+      "vistos": 29,
+      "mantidos": 4
     },
-    "Gaze": {
-      "vistos": 25,
+    "Escova de Cabelo": {
+      "vistos": 27,
+      "mantidos": 8
+    },
+    "Ampola Capilar": {
+      "vistos": 27,
       "mantidos": 3
     },
     "Compressa": {
@@ -323,43 +325,59 @@
     },
     "Esparadrapo": {
       "vistos": 25,
-      "mantidos": 10
+      "mantidos": 12
     },
     "Esponja de Maquiagem": {
       "vistos": 25,
       "mantidos": 1
     },
+    "Gaze": {
+      "vistos": 24,
+      "mantidos": 2
+    },
     "Antisséptico": {
       "vistos": 24,
-      "mantidos": 7
+      "mantidos": 8
     },
     "Coletor Para Material Perfurocortante": {
       "vistos": 24,
       "mantidos": 0
     },
-    "Escova de Cabelo": {
-      "vistos": 23,
-      "mantidos": 12
+    "Body Splash": {
+      "vistos": 24,
+      "mantidos": 7
     },
-    "Ampola Capilar": {
+    "Unha Postiça": {
       "vistos": 23,
       "mantidos": 3
     },
+    "Colônia": {
+      "vistos": 23,
+      "mantidos": 5
+    },
+    "Leave-in": {
+      "vistos": 22,
+      "mantidos": 6
+    },
     "Própolis": {
       "vistos": 22,
-      "mantidos": 5
+      "mantidos": 9
     },
     "Gloss": {
       "vistos": 22,
-      "mantidos": 1
+      "mantidos": 2
     },
-    "Colônia": {
+    "Óleo Essencial": {
       "vistos": 22,
-      "mantidos": 4
+      "mantidos": 0
     },
     "Protetor Labial": {
       "vistos": 21,
-      "mantidos": 9
+      "mantidos": 10
+    },
+    "Grampo de Cabelo": {
+      "vistos": 21,
+      "mantidos": 7
     },
     "Magnésio": {
       "vistos": 21,
@@ -367,35 +385,43 @@
     },
     "Água": {
       "vistos": 20,
-      "mantidos": 11
-    },
-    "Grampo de Cabelo": {
-      "vistos": 20,
-      "mantidos": 6
+      "mantidos": 10
     },
     "Teste de Gravidez": {
       "vistos": 20,
-      "mantidos": 7
+      "mantidos": 5
     },
-    "Leave-in": {
+    "Cílios Postiços": {
       "vistos": 20,
-      "mantidos": 4
+      "mantidos": 6
     },
     "Máscara Facial": {
       "vistos": 20,
-      "mantidos": 1
-    },
-    "Batom": {
-      "vistos": 20,
       "mantidos": 2
+    },
+    "Esponja de Banho": {
+      "vistos": 20,
+      "mantidos": 11
     },
     "Creme Para Assadura": {
       "vistos": 20,
-      "mantidos": 12
+      "mantidos": 9
+    },
+    "Óleo Vegetal": {
+      "vistos": 20,
+      "mantidos": 0
+    },
+    "Lâmina de Bisturi": {
+      "vistos": 19,
+      "mantidos": 0
     },
     "Removedor de Esmalte": {
       "vistos": 19,
-      "mantidos": 10
+      "mantidos": 11
+    },
+    "Snack": {
+      "vistos": 19,
+      "mantidos": 0
     },
     "Bolsa Térmica": {
       "vistos": 19,
@@ -403,35 +429,19 @@
     },
     "Soro Fisiológico": {
       "vistos": 19,
-      "mantidos": 13
+      "mantidos": 14
     },
     "Hastes Flexíveis": {
       "vistos": 19,
       "mantidos": 10
     },
-    "Cílios Postiços": {
+    "Batom": {
       "vistos": 19,
-      "mantidos": 6
-    },
-    "Esponja de Banho": {
-      "vistos": 19,
-      "mantidos": 11
-    },
-    "Body Splash": {
-      "vistos": 19,
-      "mantidos": 7
+      "mantidos": 2
     },
     "Esfoliante": {
       "vistos": 19,
       "mantidos": 10
-    },
-    "Óleo Vegetal": {
-      "vistos": 19,
-      "mantidos": 0
-    },
-    "Lâmina de Bisturi": {
-      "vistos": 18,
-      "mantidos": 0
     },
     "Coletor de Urina": {
       "vistos": 18,
@@ -439,15 +449,11 @@
     },
     "Adoçante": {
       "vistos": 18,
-      "mantidos": 10
+      "mantidos": 13
     },
     "Gel de Cabelo": {
       "vistos": 18,
-      "mantidos": 8
-    },
-    "Óleo Essencial": {
-      "vistos": 18,
-      "mantidos": 0
+      "mantidos": 6
     },
     "Mamadeira": {
       "vistos": 18,
@@ -455,29 +461,25 @@
     },
     "Lixa de Unha": {
       "vistos": 17,
-      "mantidos": 3
-    },
-    "Snack": {
-      "vistos": 17,
-      "mantidos": 0
+      "mantidos": 4
     },
     "Solução de Limpeza": {
       "vistos": 17,
       "mantidos": 0
     },
+    "Base": {
+      "vistos": 17,
+      "mantidos": 0
+    },
     "Termômetro": {
       "vistos": 17,
-      "mantidos": 1
+      "mantidos": 2
     },
     "Embalagem Para Esterilização": {
       "vistos": 16,
       "mantidos": 0
     },
     "Almotolia": {
-      "vistos": 16,
-      "mantidos": 0
-    },
-    "Base": {
       "vistos": 16,
       "mantidos": 0
     },
@@ -499,51 +501,51 @@
     },
     "Brinco": {
       "vistos": 15,
-      "mantidos": 9
+      "mantidos": 0
     },
     "Espéculo Vaginal": {
       "vistos": 14,
       "mantidos": 0
     },
+    "Pilha": {
+      "vistos": 14,
+      "mantidos": 0
+    },
     "Cera": {
       "vistos": 14,
-      "mantidos": 4
+      "mantidos": 5
     },
     "Lubrificante": {
       "vistos": 14,
       "mantidos": 11
     },
-    "Unha Postiça": {
-      "vistos": 14,
-      "mantidos": 3
+    "Lanceta": {
+      "vistos": 13,
+      "mantidos": 2
     },
     "Touca Descartável": {
       "vistos": 13,
       "mantidos": 0
     },
-    "Álcool": {
-      "vistos": 13,
-      "mantidos": 6
-    },
     "Lenço de Papel": {
       "vistos": 13,
       "mantidos": 9
     },
-    "Pilha": {
+    "Bandagem Elástica": {
       "vistos": 13,
-      "mantidos": 1
-    },
-    "Lanceta": {
-      "vistos": 12,
-      "mantidos": 2
+      "mantidos": 0
     },
     "Frasco": {
       "vistos": 12,
       "mantidos": 0
     },
+    "Álcool": {
+      "vistos": 12,
+      "mantidos": 8
+    },
     "Bebida Láctea": {
       "vistos": 12,
-      "mantidos": 10
+      "mantidos": 12
     },
     "Fio de Sutura": {
       "vistos": 12,
@@ -553,19 +555,19 @@
       "vistos": 12,
       "mantidos": 0
     },
-    "Pomada Para Pele": {
-      "vistos": 12,
-      "mantidos": 2
-    },
-    "Bandagem Elástica": {
+    "Bolsa de Colostomia": {
       "vistos": 12,
       "mantidos": 0
     },
-    "Leite": {
+    "Pomada Para Pele": {
       "vistos": 12,
-      "mantidos": 5
+      "mantidos": 3
     },
-    "Protetor Solar": {
+    "Gelatina Para Cabelo": {
+      "vistos": 12,
+      "mantidos": 1
+    },
+    "Leite": {
       "vistos": 12,
       "mantidos": 6
     },
@@ -579,15 +581,23 @@
     },
     "Creme Depilatório": {
       "vistos": 11,
-      "mantidos": 8
+      "mantidos": 10
     },
-    "Gelatina Para Cabelo": {
+    "Óleo de Coco": {
       "vistos": 11,
       "mantidos": 1
     },
+    "Pó Facial": {
+      "vistos": 11,
+      "mantidos": 2
+    },
+    "Protetor Solar": {
+      "vistos": 11,
+      "mantidos": 3
+    },
     "Gel para Massagem": {
       "vistos": 10,
-      "mantidos": 3
+      "mantidos": 4
     },
     "Meia": {
       "vistos": 10,
@@ -599,7 +609,7 @@
     },
     "Bloqueador de Odor": {
       "vistos": 10,
-      "mantidos": 6
+      "mantidos": 9
     },
     "Bola": {
       "vistos": 10,
@@ -609,17 +619,17 @@
       "vistos": 10,
       "mantidos": 1
     },
-    "Bebida Vegetal": {
+    "Colágeno": {
       "vistos": 10,
       "mantidos": 0
     },
-    "Óleo de Coco": {
+    "Bebida Vegetal": {
       "vistos": 10,
       "mantidos": 0
     },
     "Palmilha": {
       "vistos": 10,
-      "mantidos": 2
+      "mantidos": 4
     },
     "Protetor de Dedo": {
       "vistos": 10,
@@ -631,35 +641,39 @@
     },
     "Barra de Cereal": {
       "vistos": 9,
-      "mantidos": 7
+      "mantidos": 9
     },
     "Cereal": {
       "vistos": 9,
-      "mantidos": 9
+      "mantidos": 7
     },
     "Alicate de Unha": {
       "vistos": 9,
-      "mantidos": 2
+      "mantidos": 3
     },
     "Sal": {
       "vistos": 9,
       "mantidos": 0
     },
-    "Difusor": {
-      "vistos": 9,
-      "mantidos": 4
-    },
-    "Colágeno": {
+    "Bandagem": {
       "vistos": 9,
       "mantidos": 0
+    },
+    "Difusor": {
+      "vistos": 9,
+      "mantidos": 6
+    },
+    "Shake": {
+      "vistos": 9,
+      "mantidos": 1
     },
     "Massa": {
       "vistos": 9,
       "mantidos": 0
     },
-    "Pó Facial": {
+    "Sérum": {
       "vistos": 9,
-      "mantidos": 2
+      "mantidos": 3
     },
     "Saco de Lixo": {
       "vistos": 8,
@@ -679,19 +693,19 @@
     },
     "Bronzeador": {
       "vistos": 8,
-      "mantidos": 6
+      "mantidos": 7
     },
-    "Bandagem": {
+    "Talco": {
       "vistos": 8,
-      "mantidos": 0
+      "mantidos": 4
     },
     "Lápis de Olho": {
       "vistos": 8,
       "mantidos": 1
     },
-    "Shake": {
+    "Descolorante": {
       "vistos": 8,
-      "mantidos": 1
+      "mantidos": 2
     },
     "Tala": {
       "vistos": 8,
@@ -705,19 +719,27 @@
       "vistos": 8,
       "mantidos": 0
     },
+    "Alisante para Cabelo": {
+      "vistos": 8,
+      "mantidos": 0
+    },
     "Espuma de Barbear": {
       "vistos": 8,
       "mantidos": 5
     },
     "Água Micelar": {
       "vistos": 8,
-      "mantidos": 5
+      "mantidos": 6
     },
-    "Sérum": {
+    "Polivitamínicos": {
       "vistos": 8,
-      "mantidos": 5
+      "mantidos": 3
     },
     "Lanterna Clínica": {
+      "vistos": 8,
+      "mantidos": 0
+    },
+    "Ativador de Cachos": {
       "vistos": 8,
       "mantidos": 0
     },
@@ -733,25 +755,17 @@
       "vistos": 7,
       "mantidos": 0
     },
-    "Caixa Organizadora": {
-      "vistos": 7,
-      "mantidos": 0
-    },
     "Protetor Diário": {
       "vistos": 7,
       "mantidos": 4
     },
     "Pó Descolorante": {
       "vistos": 7,
-      "mantidos": 2
-    },
-    "Talco": {
-      "vistos": 7,
       "mantidos": 3
     },
     "Depilador": {
       "vistos": 7,
-      "mantidos": 6
+      "mantidos": 4
     },
     "Fita Adesiva": {
       "vistos": 7,
@@ -759,25 +773,17 @@
     },
     "Folha Depilatória": {
       "vistos": 7,
-      "mantidos": 3
+      "mantidos": 4
     },
     "Bico de Mamadeira": {
       "vistos": 7,
-      "mantidos": 2
+      "mantidos": 3
     },
     "Gel Facial": {
       "vistos": 7,
       "mantidos": 5
     },
-    "Descolorante": {
-      "vistos": 7,
-      "mantidos": 2
-    },
-    "Bolsa de Colostomia": {
-      "vistos": 7,
-      "mantidos": 0
-    },
-    "Alisante para Cabelo": {
+    "Cálcio": {
       "vistos": 7,
       "mantidos": 0
     },
@@ -785,11 +791,11 @@
       "vistos": 7,
       "mantidos": 0
     },
-    "Polivitamínicos": {
-      "vistos": 7,
-      "mantidos": 2
-    },
     "Tonalizante": {
+      "vistos": 7,
+      "mantidos": 0
+    },
+    "Presilha": {
       "vistos": 7,
       "mantidos": 0
     },
@@ -813,6 +819,10 @@
       "vistos": 6,
       "mantidos": 0
     },
+    "Caixa Organizadora": {
+      "vistos": 6,
+      "mantidos": 0
+    },
     "Campo Cirúrgico": {
       "vistos": 6,
       "mantidos": 0
@@ -820,6 +830,10 @@
     "Água de coco": {
       "vistos": 6,
       "mantidos": 0
+    },
+    "Loção Depilatória": {
+      "vistos": 6,
+      "mantidos": 1
     },
     "Malha Tubular": {
       "vistos": 6,
@@ -841,13 +855,9 @@
       "vistos": 6,
       "mantidos": 0
     },
-    "Cálcio": {
-      "vistos": 6,
-      "mantidos": 0
-    },
     "Spray de Cabelo": {
       "vistos": 6,
-      "mantidos": 4
+      "mantidos": 2
     },
     "Cânula": {
       "vistos": 6,
@@ -855,11 +865,7 @@
     },
     "Fibra Alimentar": {
       "vistos": 6,
-      "mantidos": 3
-    },
-    "Ativador de Cachos": {
-      "vistos": 6,
-      "mantidos": 0
+      "mantidos": 2
     },
     "Fixador Para Cateter": {
       "vistos": 5,
@@ -877,21 +883,17 @@
       "vistos": 5,
       "mantidos": 2
     },
-    "Loção Depilatória": {
-      "vistos": 5,
-      "mantidos": 1
-    },
     "Lancetador": {
       "vistos": 5,
       "mantidos": 0
     },
     "Papinha": {
       "vistos": 5,
-      "mantidos": 2
+      "mantidos": 4
     },
     "Touca": {
       "vistos": 5,
-      "mantidos": 3
+      "mantidos": 2
     },
     "Protetor Ocular": {
       "vistos": 5,
@@ -899,7 +901,7 @@
     },
     "Mel": {
       "vistos": 5,
-      "mantidos": 3
+      "mantidos": 2
     },
     "Luva Cirúrgica": {
       "vistos": 5,
@@ -911,15 +913,11 @@
     },
     "Creme de Barbear": {
       "vistos": 5,
-      "mantidos": 3
-    },
-    "Esponja Facial": {
-      "vistos": 5,
-      "mantidos": 1
+      "mantidos": 4
     },
     "Tônico Capilar": {
       "vistos": 5,
-      "mantidos": 1
+      "mantidos": 3
     },
     "Fita Protetora Para Pés": {
       "vistos": 5,
@@ -933,19 +931,23 @@
       "vistos": 5,
       "mantidos": 1
     },
+    "Melatonina": {
+      "vistos": 5,
+      "mantidos": 0
+    },
     "Aveia": {
       "vistos": 5,
       "mantidos": 0
     },
     "Gel de Limpeza": {
       "vistos": 5,
-      "mantidos": 3
+      "mantidos": 4
     },
     "Nebulizador": {
       "vistos": 5,
       "mantidos": 0
     },
-    "Lip Tint": {
+    "Braçadeira": {
       "vistos": 5,
       "mantidos": 0
     },
@@ -957,7 +959,7 @@
       "vistos": 5,
       "mantidos": 0
     },
-    "Presilha": {
+    "Perfume": {
       "vistos": 5,
       "mantidos": 0
     },
@@ -979,23 +981,27 @@
     },
     "Espátula de Unha": {
       "vistos": 4,
-      "mantidos": 1
+      "mantidos": 2
     },
     "Cortador de Unha": {
       "vistos": 4,
-      "mantidos": 2
+      "mantidos": 1
     },
     "Descolorante Para Cabelo": {
       "vistos": 4,
-      "mantidos": 0
+      "mantidos": 2
     },
     "Creme de Massagem": {
       "vistos": 4,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Vaselina": {
       "vistos": 4,
       "mantidos": 3
+    },
+    "Esponja Facial": {
+      "vistos": 4,
+      "mantidos": 2
     },
     "Equipamento de Primeiros Socorros": {
       "vistos": 4,
@@ -1013,15 +1019,15 @@
       "vistos": 4,
       "mantidos": 1
     },
-    "Melatonina": {
-      "vistos": 4,
-      "mantidos": 1
-    },
     "Lápis Dermatográfico": {
       "vistos": 4,
       "mantidos": 0
     },
     "Cafeína": {
+      "vistos": 4,
+      "mantidos": 0
+    },
+    "Brilho Labial": {
       "vistos": 4,
       "mantidos": 0
     },
@@ -1033,7 +1039,7 @@
       "vistos": 4,
       "mantidos": 0
     },
-    "Braçadeira": {
+    "Lip Tint": {
       "vistos": 4,
       "mantidos": 0
     },
@@ -1049,13 +1055,13 @@
       "vistos": 4,
       "mantidos": 0
     },
-    "Perfume": {
-      "vistos": 4,
-      "mantidos": 0
-    },
     "Irrigador Nasal": {
       "vistos": 4,
-      "mantidos": 3
+      "mantidos": 2
+    },
+    "Loção para Barba": {
+      "vistos": 4,
+      "mantidos": 0
     },
     "Blush": {
       "vistos": 4,
@@ -1089,6 +1095,10 @@
       "vistos": 3,
       "mantidos": 0
     },
+    "Escova de Unha": {
+      "vistos": 3,
+      "mantidos": 0
+    },
     "Protetor de Calo": {
       "vistos": 3,
       "mantidos": 0
@@ -1098,10 +1108,6 @@
       "mantidos": 0
     },
     "Protetor Auricular": {
-      "vistos": 3,
-      "mantidos": 1
-    },
-    "Escova de Unha": {
       "vistos": 3,
       "mantidos": 1
     },
@@ -1115,7 +1121,7 @@
     },
     "Papel Higiênico": {
       "vistos": 3,
-      "mantidos": 1
+      "mantidos": 2
     },
     "Passador de Fio Dental": {
       "vistos": 3,
@@ -1123,13 +1129,17 @@
     },
     "Luva Protetora": {
       "vistos": 3,
-      "mantidos": 1
+      "mantidos": 3
     },
     "Palha Italiana": {
       "vistos": 3,
-      "mantidos": 0
+      "mantidos": 3
     },
     "Óleo Cicatrizante": {
+      "vistos": 3,
+      "mantidos": 0
+    },
+    "Apontador": {
       "vistos": 3,
       "mantidos": 0
     },
@@ -1151,7 +1161,7 @@
     },
     "Aspirador Nasal": {
       "vistos": 3,
-      "mantidos": 0
+      "mantidos": 2
     },
     "Serra Cirúrgica": {
       "vistos": 3,
@@ -1171,11 +1181,11 @@
     },
     "Tônico Facial": {
       "vistos": 3,
-      "mantidos": 1
+      "mantidos": 2
     },
     "Tesoura": {
       "vistos": 3,
-      "mantidos": 2
+      "mantidos": 3
     },
     "Curvador de Cílios": {
       "vistos": 3,
@@ -1189,13 +1199,9 @@
       "vistos": 3,
       "mantidos": 0
     },
-    "Loção para Barba": {
-      "vistos": 3,
-      "mantidos": 0
-    },
     "Lapiseira": {
       "vistos": 3,
-      "mantidos": 0
+      "mantidos": 2
     },
     "Sombra de Olho": {
       "vistos": 3,
@@ -1211,7 +1217,7 @@
     },
     "Navalha": {
       "vistos": 3,
-      "mantidos": 1
+      "mantidos": 0
     },
     "Corretivo": {
       "vistos": 3,
@@ -1219,7 +1225,7 @@
     },
     "Copo": {
       "vistos": 3,
-      "mantidos": 2
+      "mantidos": 3
     },
     "Marcador de Bandas": {
       "vistos": 3,
@@ -1247,11 +1253,11 @@
     },
     "Protetor de Assento": {
       "vistos": 2,
-      "mantidos": 2
+      "mantidos": 1
     },
     "Amônia": {
       "vistos": 2,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Selador de Cutícula": {
       "vistos": 2,
@@ -1259,7 +1265,7 @@
     },
     "Porta Comprimido": {
       "vistos": 2,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Álbum": {
       "vistos": 2,
@@ -1277,11 +1283,11 @@
       "vistos": 2,
       "mantidos": 0
     },
-    "Lenço Barreira": {
+    "Água Destilada": {
       "vistos": 2,
       "mantidos": 0
     },
-    "Água Destilada": {
+    "Lenço Barreira": {
       "vistos": 2,
       "mantidos": 0
     },
@@ -1313,17 +1319,13 @@
       "vistos": 2,
       "mantidos": 0
     },
-    "Apontador": {
-      "vistos": 2,
-      "mantidos": 0
-    },
     "Aplicador de Colirio": {
       "vistos": 2,
       "mantidos": 1
     },
-    "Brilho Labial": {
+    "Cortador de Comprimidos": {
       "vistos": 2,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Óleo de Copaíba": {
       "vistos": 2,
@@ -1351,7 +1353,7 @@
     },
     "Fixador de Dentadura": {
       "vistos": 2,
-      "mantidos": 2
+      "mantidos": 1
     },
     "Pós Barba": {
       "vistos": 2,
@@ -1359,7 +1361,7 @@
     },
     "Fita": {
       "vistos": 2,
-      "mantidos": 2
+      "mantidos": 1
     },
     "Inseticida": {
       "vistos": 2,
@@ -1429,6 +1431,10 @@
       "vistos": 2,
       "mantidos": 2
     },
+    "Cola Para Unha": {
+      "vistos": 2,
+      "mantidos": 0
+    },
     "Lápis de Sobrancelha": {
       "vistos": 2,
       "mantidos": 1
@@ -1439,9 +1445,13 @@
     },
     "Queratina": {
       "vistos": 2,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Desinfetante": {
+      "vistos": 2,
+      "mantidos": 0
+    },
+    "Loção Capilar": {
       "vistos": 2,
       "mantidos": 0
     },
@@ -1469,11 +1479,19 @@
       "vistos": 2,
       "mantidos": 0
     },
+    "Bolsa de Ostomia": {
+      "vistos": 2,
+      "mantidos": 0
+    },
     "Leite de Limpeza Facial": {
       "vistos": 2,
       "mantidos": 0
     },
     "Base de Unha": {
+      "vistos": 2,
+      "mantidos": 0
+    },
+    "Aromatizante": {
       "vistos": 2,
       "mantidos": 0
     },
@@ -1489,13 +1507,17 @@
       "vistos": 2,
       "mantidos": 0
     },
+    "Ômega 3": {
+      "vistos": 2,
+      "mantidos": 0
+    },
     "Babador": {
       "vistos": 2,
       "mantidos": 0
     },
     "Paçoca": {
       "vistos": 1,
-      "mantidos": 1
+      "mantidos": 0
     },
     "Funil": {
       "vistos": 1,
@@ -1507,7 +1529,7 @@
     },
     "Separador de Dedos": {
       "vistos": 1,
-      "mantidos": 1
+      "mantidos": 0
     },
     "Água Boricada": {
       "vistos": 1,
@@ -1573,10 +1595,6 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Cortador de Comprimidos": {
-      "vistos": 1,
-      "mantidos": 1
-    },
     "Aspirador de Secreção": {
       "vistos": 1,
       "mantidos": 0
@@ -1613,10 +1631,6 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Acidificante": {
-      "vistos": 1,
-      "mantidos": 0
-    },
     "Papel Toalha": {
       "vistos": 1,
       "mantidos": 0
@@ -1641,10 +1655,6 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Adesivo Facial": {
-      "vistos": 1,
-      "mantidos": 0
-    },
     "Shampoo para Barba": {
       "vistos": 1,
       "mantidos": 1
@@ -1654,10 +1664,6 @@
       "mantidos": 0
     },
     "Gel de Banho": {
-      "vistos": 1,
-      "mantidos": 0
-    },
-    "Joelheira": {
       "vistos": 1,
       "mantidos": 0
     },
@@ -1689,15 +1695,15 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Inalador": {
-      "vistos": 1,
-      "mantidos": 1
-    },
-    "Fixador de Cabelo": {
+    "Joelheira": {
       "vistos": 1,
       "mantidos": 0
     },
-    "Cola Para Unha": {
+    "Inalador": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Fixador de Cabelo": {
       "vistos": 1,
       "mantidos": 1
     },
@@ -1715,7 +1721,7 @@
     },
     "Modelador de Cacho": {
       "vistos": 1,
-      "mantidos": 0
+      "mantidos": 1
     },
     "Obturador Provisório": {
       "vistos": 1,
@@ -1730,10 +1736,6 @@
       "mantidos": 0
     },
     "Gancho": {
-      "vistos": 1,
-      "mantidos": 0
-    },
-    "Loção Capilar": {
       "vistos": 1,
       "mantidos": 0
     },
@@ -1761,15 +1763,7 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Bolsa de Ostomia": {
-      "vistos": 1,
-      "mantidos": 0
-    },
     "Granola": {
-      "vistos": 1,
-      "mantidos": 0
-    },
-    "Aromatizante": {
       "vistos": 1,
       "mantidos": 0
     },
@@ -1861,15 +1855,11 @@
       "vistos": 1,
       "mantidos": 0
     },
-    "Ômega 3": {
+    "Gel de Barbear": {
       "vistos": 1,
       "mantidos": 0
     },
     "Pasta Modeladora": {
-      "vistos": 1,
-      "mantidos": 0
-    },
-    "Gel de Barbear": {
       "vistos": 1,
       "mantidos": 0
     },
@@ -1894,6 +1884,30 @@
       "mantidos": 0
     },
     "Fixador de Maquiagem": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Glicerina": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Comadre": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Placa Para Estomia": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Tornozeleira": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Aromatizador": {
+      "vistos": 1,
+      "mantidos": 0
+    },
+    "Capa para Travesseiro": {
       "vistos": 1,
       "mantidos": 0
     }
