@@ -2,6 +2,12 @@
 
 (repositório `monitoramento-de-precos`)
 
+> **Ficha rápida**
+> - Testar: `npm test` em `server/` (45 testes) e em `app/` (61 testes); `node server/build-site.mjs` + `npm run dev --prefix app` para ver o site.
+> - Onde roda: coleta e leitura no GitHub Actions (`atualizar.yml`, todo dia 01h17; farmácias em `farmacias.yml`, 22h47); site em https://bate-ofertas.pages.dev (Cloudflare Pages).
+> - Variáveis de ambiente (segredos do repositório, só os nomes): `GEMINI_API_KEY`, `GEMINI_JUIZ_KEY`, `OPENROUTER_API_KEY`, `GROQ_API_KEY`, `APIFY_TOKEN`, `BRIGHTDATA_TOKEN`, `SCRAPECREATORS_KEY`, `SOCIALCRAWL_KEY`, `CRAWLBASE_TOKEN` (segredo `CRAWLBASE_API`), `CLOUDFLARE_API_TOKEN`.
+> - Último teste validado: 2026-11-22 (testes do servidor e do app, build do site e conferência visual dos logos). A leitura do folheto do Atacadão ainda precisa ser conferida na primeira coleta (ver Fase 16).
+
 Site que reúne os preços de **alimentícios, higiene e limpeza** dos mercados da região, com busca e filtros. Qualquer pessoa usa pelo navegador. No celular dá para instalar como app (botão "Instalar" no Chrome/Android; no iPhone, Compartilhar → Adicionar à Tela de Início), e ele abre sem internet com os preços da última visita.
 
 Os preços são lidos dos sites e folhetos dos próprios mercados e **podem mudar**. Confirme na loja antes de ir.
@@ -56,7 +62,7 @@ Se um coletor falhar ou voltar muito menos produtos que na semana anterior, o `r
 
 | Mercado | Fonte | Situação |
 |---|---|---|
-| Atacadão | API do site (loja de Mauá, CEP 09310-000) | funcionando |
+| Atacadão | API do site (loja de Mauá, CEP 09310-000) + folhetos em PDF das lojas de Mauá (`collectors/atacadao-folheto.mjs`, API pública `api-middleware-flyer-services`, a mesma da página "Nossas lojas"): preço de app e "a partir de 2 caixas" | catálogo funcionando; folheto entra na Fase 16 |
 | Spani | API do site (loja Mauá 1) + jornal de ofertas em PDF da loja de Mauá, lido pelo texto do PDF (`spani-jornal.mjs`, sem IA) | funcionando |
 | Coop | API VTEX do site, loja Barão de Mauá fixa pelo `regionId` (base64 de `SW#coopspbm`; Ribeirão Pires = `coopsprp`) | funcionando |
 | Baronesa (Mauá) | Encarte em imagem (`/classes/encarte.php`), lido por IA | funcionando |
@@ -125,6 +131,14 @@ Cada parte também roda sozinha, com os comandos `api`, `vtex`, `sitemap`, `inst
 - **PaddleOCR 3.7 com GPU**, em `D:\Projetos Open Code\paddleocr\venv`, com modelos em `D:\Cache\paddlex` (variável `PADDLE_PDX_CACHE_HOME`). Lê cerca de 2 s por página.
 - **Ollama** com `qwen3-vl:8b`, em `D:\Ollama\models`.
 - **Atenção à placa de vídeo:** em 19/11 a RTX 3060 chegou a 92-94 °C com a ventoinha a 0%. Ela precisa ser conferida antes de uso pesado.
+
+## Melhorias da Fase 16 (2026-11-22)
+
+**Mercados de bairro vazios.** Só o Crawlbase ainda responde para o Instagram (Apify, ScrapeCreators e SocialCrawl estão sem crédito). Ele traz as imagens mas **não traz a data do post**, e sem data a arte sem validade impressa era descartada (Mercadinho Parceiro, STUK e outros ficavam com 0). Agora a data sai do próprio código do post (`collectors/instagram-data.mjs`: o código de `/p/<código>/` guarda a hora da publicação), sem custo, e vale o prazo de 3 dias; post antigo sai. O `social-status.json` passou a guardar, por perfil, quantos posts vieram, quantos eram vídeo e quantos sem imagem (`crawlbasePerfis`), para achar onde se perde um mercado.
+
+**Folheto do Atacadão.** `collectors/atacadao-folheto.mjs` consulta as lojas de Mauá na API de folhetos e grava `atacadao-encartes.json` (um item por folheto vigente, cache pela id do folheto). O leitor grava em `atacadao-folheto.json` (campo `arquivo` do manifesto), para não apagar o catálogo `atacadao.json`, e o `build-site` junta os dois arquivos no mesmo mercado "Atacadão". A idade máxima de 48 h vale só para o catálogo. O preço "oferta ativada no APP" vira o principal (só pede CPF); o do app "pagando com cartão" fica como observação. O folheto é o último da fila de leitura, para não tirar a vez dos mercados de bairro.
+
+**Logos.** `app/public/logos/`: Família Lima, Mercado Capital, Mercado Baratinho, Carnes Santana, Tony BRJ (arquivos enviados pelo Rafael), Drogaria São Paulo (seeklogo), Farma Conde (site da loja) e STUK (imagem de compartilhamento do site). Mercadinho Parceiro segue com letreiro até haver o logo.
 
 ## Configuração (uma vez)
 
