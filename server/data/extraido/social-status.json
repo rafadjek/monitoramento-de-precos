@@ -1,5 +1,5 @@
 {
- "em": "2026-11-22T12:41:03.830Z",
+ "em": "2026-11-22T17:24:26.802Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 68
+   "posts": 26
   },
   {
    "net": "fb",
@@ -46,5 +46,103 @@
    "net": "ig",
    "erro": "HTTP 402 {\"success\":false,\"error\":{\"type\":\"INSUFFICIENT_CREDITS\",\"message\":\"Your account has 0 credits remaining. This endpoint requires 1 credits (under 1p at the Growt"
   }
- ]
+ ],
+ "crawlbasePerfis": {
+  "Nevada": {
+   "net": "ig",
+   "recebidos": 12,
+   "video": 2,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 10
+  },
+  "STUK": {
+   "net": "ig",
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Lourencini": {
+   "net": "ig",
+   "recebidos": 13,
+   "video": 4,
+   "semCodigo": 1,
+   "semImagem": 0,
+   "aproveitados": 8
+  },
+  "Família Lima": {
+   "net": "ig",
+   "recebidos": 13,
+   "video": 0,
+   "semCodigo": 1,
+   "semImagem": 0,
+   "aproveitados": 12
+  },
+  "Mercado Capital": {
+   "net": "ig",
+   "recebidos": 13,
+   "video": 3,
+   "semCodigo": 1,
+   "semImagem": 0,
+   "aproveitados": 9
+  },
+  "Mercadinho Parceiro": {
+   "net": "ig",
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Mercado Baratinho": {
+   "net": "ig",
+   "recebidos": 13,
+   "video": 4,
+   "semCodigo": 1,
+   "semImagem": 0,
+   "aproveitados": 8
+  },
+  "Carnes Santana": {
+   "net": "ig",
+   "recebidos": 12,
+   "video": 2,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 10
+  },
+  "Sacolão São Jorge": {
+   "net": "ig",
+   "recebidos": 12,
+   "video": 2,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 10
+  },
+  "Consulado do Churrasco": {
+   "net": "ig",
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Nevada (fb)": {
+   "net": "fb",
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Lourencini (fb)": {
+   "net": "fb",
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  }
+ }
 }
