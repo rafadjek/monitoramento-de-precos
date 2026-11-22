@@ -1,8 +1,8 @@
 {
   "stats": {
     "ofertas-dia": {
-      "siteCount": 2614,
-      "lidos": 2614
+      "siteCount": 2547,
+      "lidos": 2547
     },
     "peixaria": {
       "siteCount": 679,
@@ -24,35 +24,35 @@
       "siteCount": 3470,
       "lidos": 1200
     },
-    "mercearia-doce": {
-      "siteCount": 7637,
-      "lidos": 1800
-    },
     "mercearia-salgada": {
       "siteCount": 5512,
       "lidos": 1500
+    },
+    "mercearia-doce": {
+      "siteCount": 7637,
+      "lidos": 1800
     },
     "frios-e-laticinios": {
       "siteCount": 7134,
       "lidos": 1500
     },
+    "bebidas": {
+      "siteCount": 4883,
+      "lidos": 1300
+    },
     "limpeza": {
       "siteCount": 2950,
       "lidos": 1200
-    },
-    "bebidas": {
-      "siteCount": 4883,
-      "lidos": 1400
     },
     "higiene-e-perfumaria": {
       "siteCount": 6095,
       "lidos": 1900
     }
   },
-  "requests": 155,
+  "requests": 153,
   "aborted": null,
-  "seconds": 649,
-  "ofertaDia": 2614,
-  "precoBaixou": 1500,
-  "produtos": 8686
+  "seconds": 625,
+  "ofertaDia": 2547,
+  "precoBaixou": 1458,
+  "produtos": 8678
 }
