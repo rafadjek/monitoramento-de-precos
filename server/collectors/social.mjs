@@ -11,6 +11,7 @@
 // (texto alternativo da foto). Só chama o serviço pago se houver post novo desde a última coleta; se a pré-checagem
 // falhar (bloqueio, página mudou, sem Chrome), segue como antes e chama o serviço. Estado em data/extraido/social-vistos.json.
 // Lojas com teste: true saem em social-encartes-teste.json (o workflow não lê), até o Rafael aprovar.
+import { dataDoCodigo } from './instagram-data.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -182,13 +183,20 @@ async function crawlbase(net) {
     const j = await r.json();
     const body = j.body || j;
     const posts = body.posts || body.feed || body.timeline || [];
+    // diagnóstico por perfil (vai para social-status.json): onde se perdem os posts de cada mercado
+    const diag = { net, recebidos: posts.length, video: 0, semCodigo: 0, semImagem: 0, aproveitados: 0 };
+    (STATUS.crawlbasePerfis ??= {})[market + (net === 'fb' ? ' (fb)' : '')] = diag;
     for (const p of posts) {
       const link = p.link || p.url || p.postUrl || '';
       const code = (link.match(/\/(?:p|reel|posts)\/([^/?]+)/) || [])[1] || p.id || p.shortcode;
-      if (!code || /video|reel/i.test(String(p.type || p.mediaType || '')) || /\/reel\//.test(link)) continue;
+      if (!code) { diag.semCodigo++; continue; }
+      if (/video|reel/i.test(String(p.type || p.mediaType || '')) || /\/reel\//.test(link)) { diag.video++; continue; }
       // sem data na resposta, conta como recente: a validade impressa no jornal decide se vale
-      const real = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt) || findWhen(p);
-      out.push({ market, net, code, when: real || new Date().toISOString(), noDate: !real, link: link || page, images: findImages(p), owner: net === 'ig' ? '@' + m.ig : market });
+      // o Crawlbase não manda a data: sai do código do post (instagram-data.mjs), sem custo
+      const real = toIso(p.dateTime || p.date || p.timestamp || p.postDate || p.publishedAt) || findWhen(p) || (net === 'ig' ? dataDoCodigo(code) : null);
+      const imgs = findImages(p);
+      if (!imgs.length) diag.semImagem++; else diag.aproveitados++;
+      out.push({ market, net, code, when: real || new Date().toISOString(), noDate: !real, link: link || page, images: imgs, owner: net === 'ig' ? '@' + m.ig : market });
     }
     await sleep(1500);
   }

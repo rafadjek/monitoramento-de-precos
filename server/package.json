@@ -8,7 +8,7 @@
     "coletar": "node run-all.mjs",
     "folhetos": "node readers/folheto.mjs data/extraido/assai-encartes.json",
     "montar": "node build-site.mjs",
-    "test": "node --test group.test.mjs price.test.mjs category.test.mjs ocr-leitor.test.mjs"
+    "test": "node --test group.test.mjs price.test.mjs category.test.mjs ocr-leitor.test.mjs instagram-data.test.mjs"
   },
   "dependencies": {
     "pdfjs-dist": "^6.5.438",
