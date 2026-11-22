@@ -178,13 +178,18 @@ async function crawlbase(net) {
     const page = net === 'ig' ? `https://www.instagram.com/${m.ig}/` : m.fb;
     if (!page) continue;
     const scraper = net === 'ig' ? 'instagram-profile' : 'facebook-page';
-    const r = await fetch(`https://api.crawlbase.com/?token=${KEYS.crawlbase}&scraper=${scraper}&url=${encodeURIComponent(page)}`, { signal: AbortSignal.timeout(120000) });
-    if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
-    const j = await r.json();
-    const body = j.body || j;
-    const posts = body.posts || body.feed || body.timeline || [];
+    // Perfil que volta vazio é comum (22/11: Família Lima, Mercado Capital e Carnes Santana vieram com 0 posts): uma segunda tentativa
+    let posts = [], tentativas = 0;
+    while (!posts.length && tentativas < 2) {
+      if (tentativas++) await sleep(5000);
+      const r = await fetch(`https://api.crawlbase.com/?token=${KEYS.crawlbase}&scraper=${scraper}&url=${encodeURIComponent(page)}`, { signal: AbortSignal.timeout(120000) });
+      if (!r.ok) throw new Error(`HTTP ${r.status} ${(await r.text()).slice(0, 160)}`);
+      const j = await r.json();
+      const body = j.body || j;
+      posts = body.posts || body.feed || body.timeline || [];
+    }
     // diagnóstico por perfil (vai para social-status.json): onde se perdem os posts de cada mercado
-    const diag = { net, recebidos: posts.length, video: 0, semCodigo: 0, semImagem: 0, aproveitados: 0 };
+    const diag = { net, tentativas, recebidos: posts.length, video: 0, semCodigo: 0, semImagem: 0, aproveitados: 0 };
     (STATUS.crawlbasePerfis ??= {})[market + (net === 'fb' ? ' (fb)' : '')] = diag;
     for (const p of posts) {
       const link = p.link || p.url || p.postUrl || '';
