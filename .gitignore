@@ -49,3 +49,21 @@ server/data/rotulos/rotulos.html
 # Arquivos do Windows / Google Drive
 desktop.ini
 Thumbs.db
+
+# Arquivos pesados (ficam no Google Drive, nao no Git)
+*.stl
+*.3mf
+*.gcode
+*.obj
+*.step
+*.stp
+*.skp
+*.skb
+*.f3d
+*.blend
+*.npz
+*.rnx
+*.obs
+*.pdf
+*.zip
+*.7z
