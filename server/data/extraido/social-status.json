@@ -1,5 +1,5 @@
 {
- "em": "2026-11-22T18:57:47.271Z",
+ "em": "2026-11-22T19:47:13.363Z",
  "servicos": [
   {
    "net": "ig",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "posts": 0
+   "erro": "HTTP 520 {\"original_status\":515,\"pc_status\":515,\"cb_status\":515,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed,"
   },
   {
    "teste": "socialcrawl",
@@ -114,11 +114,11 @@
   "Carnes Santana": {
    "net": "ig",
    "tentativas": 2,
-   "recebidos": 12,
-   "video": 2,
+   "recebidos": 0,
+   "video": 0,
    "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 10
+   "aproveitados": 0
   },
   "Sacolão São Jorge": {
    "net": "ig",
@@ -139,15 +139,6 @@
    "aproveitados": 1
   },
   "Nevada (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "Lourencini (fb)": {
    "net": "fb",
    "tentativas": 2,
    "recebidos": 0,
