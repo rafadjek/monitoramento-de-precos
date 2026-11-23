@@ -17,7 +17,15 @@ export const NEUTRAS_V2 = new Set([
   'squeeze', 'copo', 'garrafa', 'pet', 'vidro',
   // forma (separadas por classe em FORMA)
   'liquido', 'liquida',
+  // Fase 18.1, das respostas do Rafael (23/11, 59 de 60 "mesmo"): palavras acessórias que um mercado escreve e o outro não
+  'aerosol', 'neutro', 'doce', 'clareador', 'refil', 'trigo', 'pronto', 'preparo', 'corporal', 'cozinha', 'geral', 'ambiente',
+  'granulado', 'coberto', 'diluido', 'lamen', 'miojo', 'blister', 'pump', 'sleek', 'uva', 'kg',
+  // café: vácuo, almofada e "torrado e moído" são o mesmo café para comparar preço (rótulos do Rafael: Pilão, 3 Corações, Brasileiro)
+  'vacuo', 'almofada', 'torrado', 'moido',
 ]);
+// Bebida: "lata" de um lado só, sem embalagem do outro, é o mesmo produto (rótulos de 23/11: Monster, Stella, Spaten, Pitú).
+// Fora de bebida continua a decisão de 22/11: "Nescau 370g" x "Nescau lata 370g" não junta (existe sachê do mesmo peso).
+const BEBIDA = new Set(['cerveja', 'refrigerante', 'energetico', 'suco', 'cha', 'agua', 'bebida', 'drink', 'isotonico', 'refresco', 'chope', 'vinho', 'espumante', 'cachaca', 'aguardente', 'tonica', 'soda']);
 
 // Embalagem: palavra -> classe. Duas classes diferentes, uma de cada lado, separam. Garrafa, pet e vidro são a mesma classe (decisão do Rafael).
 const EMBALAGEM = { lata: 'lata', garrafa: 'garrafa', pet: 'garrafa', vidro: 'garrafa', sache: 'sache', squeeze: 'squeeze', tubo: 'tubo', pouch: 'pouch', copo: 'copo', caixa: 'caixa', pote: 'pote' };
@@ -104,7 +112,8 @@ export function pareQuaseIgualV2(ca, cb, soft, pa, pb) {
   const razao = pa > 0 && pb > 0 ? Math.max(pa, pb) / Math.min(pa, pb) : 1;
   if (!todas.length) return razao <= 2; // nomes iguais depois de tolerar abreviação: só o preço pode desconfiar
   if (todas.some((t) => VARIANTES.has(t) || /^\d+$/.test(t) && t !== '1')) return false; // variante de sabor, cor, versão ou número
-  if (!todas.every((t) => soft.has(t) || NEUTRAS_V2.has(t))) return false;
+  const lataSozinha = (t) => t === 'lata' && [...ca, ...cb].some((w) => BEBIDA.has(w)) && !classes([...(a.includes('lata') ? cb : ca)], EMBALAGEM).size;
+  if (!todas.every((t) => soft.has(t) || NEUTRAS_V2.has(t) || lataSozinha(t))) return false;
   // fresco x congelado costuma ter preço bem diferente: "congelado" de um lado só pede preço parecido
   if (todas.some((t) => t === 'congelado' || t === 'congelada') && razao > 1.2) return false;
   if (separam(classes(a, EMBALAGEM), classes(b, EMBALAGEM))) return false;

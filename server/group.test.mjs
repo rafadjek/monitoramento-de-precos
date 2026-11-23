@@ -188,6 +188,14 @@ test('v2: abreviação, erro de uma letra e palavra neutra nova juntam', () => {
   assert.ok(grouped(b('A', 'Requeijão Cremoso Vigor 200g', 'Vigor', 8.9), b('B', 'Requeijão Vigor 200g', 'Vigor', 9.4)));
 });
 
+test('Fase 18.1: palavras acessórias e lata de bebida juntam; lata fora de bebida e lata x sachê não', () => {
+  assert.ok(grouped(b('Nagumo', 'Desodorante Aerosol Brisa do Mar Old Spice 250ml', 'Old Spice', 25.98), b('Semar', 'Desodorante Old Spice Brisa do Mar 250ml', 'Old Spice', 25.99)));
+  assert.ok(grouped(b('Extra', 'Energético Ultra Watermelon Zero Açúcar Monster Lata 473ml', 'Monster', 8.99), b('Semar', 'Energetico Monster Ultra Watermelon Zero Acucar 473ml', 'Monster', 8.99)));
+  assert.ok(grouped(b('Extra', 'Nhoque ao Molho Branco Sadia Hot Bowls 300g', 'Sadia', 12.9), b('Semar', 'Nhoque Sadia Hot Bowls Molho Branco 300g', 'Sadia', 12.99)));
+  assert.ok(!grouped(b('A', 'Achocolatado em Pó Nescau 370g', 'Nescau', 12.9), b('B', 'Achocolatado em Pó Nescau Lata 370g', 'Nescau', 13.5)));
+  assert.ok(!grouped(b('A', 'Cerveja Heineken Lata 350ml', 'Heineken', 4.9), b('B', 'Cerveja Heineken Garrafa 350ml', 'Heineken', 5.2)));
+});
+
 test('v2: variante de um lado só (sabor, cor, versão) nunca junta', () => {
   assert.ok(!grouped(b('A', 'Iogurte Grego Vigor 90g', 'Vigor', 3.7), b('B', 'Iogurte Grego Vigor Frutas Vermelhas 90g', 'Vigor', 3.9)));
   assert.ok(!grouped(b('A', 'Iogurte Grego Vigor Frutas Vermelhas 90g', 'Vigor', 3.7), b('B', 'Iogurte Grego Vigor Frutas Amarelas 90g', 'Vigor', 3.9)));

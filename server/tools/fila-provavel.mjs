@@ -79,7 +79,8 @@ const pares = escolhidos.map((c) => {
   const { a, b } = diferenca(sigs[c.ia].core, sigs[c.ib].core);
   return { id: crypto.createHash('sha1').update(c.key).digest('hex').slice(0, 10), kind: 'fila', why: 'hoje o site mostra separados', diff: [...a, ...b], a: item(offers[c.ia]), b: item(offers[c.ib]) };
 });
-console.log(`fila: ${fila.length} pares que mudariam o site (${fila.filter((c) => c.prob >= 2).length} sem palavra de variante); escolhidos ${pares.length}`);
+const nomes = new Set(fila.flatMap((c) => [offers[c.ia].name, offers[c.ib].name]).map((n) => n.toLowerCase().trim()));
+console.log(`fila: ${fila.length} pares que mudariam o site (${fila.filter((c) => c.prob >= 2).length} sem palavra de variante), com ${nomes.size} nomes distintos; escolhidos ${pares.length}`);
 if (process.argv.includes('--amostra')) for (const p of pares) console.log(`${p.a.market.slice(0, 8)}: ${p.a.name.slice(0, 50)} (${p.a.price}) || ${p.b.market.slice(0, 8)}: ${p.b.name.slice(0, 50)} (${p.b.price}) | dif: ${p.diff.join(',')}`);
 fs.writeFileSync(path.join(ROOT, 'data/rotulos/fila-provavel.json'), JSON.stringify(pares, null, 1));
 void offerKey;

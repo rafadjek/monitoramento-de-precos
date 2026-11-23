@@ -6,7 +6,7 @@ import { pareQuaseIgualV2 } from './nomes-v2.mjs';
 import { conflitoDeRegra } from './variacao.mjs';
 
 // "sem" fica de fora: muda o produto (sem gás, sem lactose, sem açúcar).
-const STOP = new Set(['de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'para', 'a', 'o', 'c', 'por']);
+const STOP = new Set(['de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'para', 'a', 'o', 'c', 'por', 'ao', 'aos', 'na', 'no', 'nas', 'nos']);
 const NEUTRAL = new Set([
   'pacote', 'pct', 'pcte', 'embalagem', 'emb', 'unidade', 'unid', 'un', 'tradicional', 'original', 'classico',
   'novo', 'nova', 'oferta',
