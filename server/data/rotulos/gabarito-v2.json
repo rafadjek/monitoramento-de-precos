@@ -1,38 +1,38 @@
 {
- "gerado": "2026-11-23T00:28:16.551Z",
+ "gerado": "2026-11-23T00:30:27.651Z",
  "metodo": "atual",
  "ean": {
   "treino": {
    "pares": 30448,
    "mesmo": 4480,
-   "tp": 1692,
-   "fp": 78,
-   "fn": 2788,
-   "tn": 25890,
-   "precisao": 0.9559,
-   "cobertura": 0.3777
+   "tp": 1717,
+   "fp": 87,
+   "fn": 2763,
+   "tn": 25881,
+   "precisao": 0.9518,
+   "cobertura": 0.3833
   },
   "teste": {
    "pares": 8551,
    "mesmo": 1153,
-   "tp": 529,
-   "fp": 27,
-   "fn": 624,
-   "tn": 7371,
-   "precisao": 0.9514,
-   "cobertura": 0.4588
+   "tp": 533,
+   "fp": 32,
+   "fn": 620,
+   "tn": 7366,
+   "precisao": 0.9434,
+   "cobertura": 0.4623
   }
  },
  "semEan": {
   "rafael": {
    "pares": 144,
    "mesmo": 71,
-   "tp": 15,
+   "tp": 18,
    "fp": 2,
-   "fn": 56,
+   "fn": 53,
    "tn": 71,
-   "precisao": 0.8824,
-   "cobertura": 0.2113
+   "precisao": 0.9,
+   "cobertura": 0.2535
   },
   "ia": {
    "pares": 0,
@@ -47,12 +47,12 @@
   "tudo": {
    "pares": 144,
    "mesmo": 71,
-   "tp": 15,
+   "tp": 18,
    "fp": 2,
-   "fn": 56,
+   "fn": 53,
    "tn": 71,
-   "precisao": 0.8824,
-   "cobertura": 0.2113
+   "precisao": 0.9,
+   "cobertura": 0.2535
   }
  },
  "foraDaComparacao": {

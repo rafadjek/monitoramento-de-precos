@@ -1,0 +1,1016 @@
+[
+ {
+  "id": "6ad260d87b",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "congelada"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Linguiça Toscana Sadia Congelada 700g",
+   "price": 21.8,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2287739/g.jpg.jpg?v=639289534251930000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Linguiça Toscana Sadia 700g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/JZ9jBK-BV6NJSFkq8KW_FaJ1W7M=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91dec5b36fa04/714001-44b18173.webp"
+  }
+ },
+ {
+  "id": "203e85d7df",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "congelada"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Linguiça Toscana Sadia Congelada 700g",
+   "price": 21.8,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2287739/g.jpg.jpg?v=639289534251930000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Linguiça Toscana Sadia 700g",
+   "price": 24.9,
+   "image": "https://static.extramercado.com.br/img/uploads/1/359/33375359.png"
+  }
+ },
+ {
+  "id": "914be5dd88",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Coop",
+   "name": "Mistura para bolo de aipim cremoso Dr. Oetke 400g",
+   "price": 7.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/218592/7891048061787.jpg?v=637919546215900000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Mistura Para Bolo Aipim Cremoso Dr.Oetker 400G",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/209675.webp"
+  }
+ },
+ {
+  "id": "8d87c8bfe3",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "copo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Iogurte Nestlé Natural Integral 170g",
+   "price": 4.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216660/7891000072950.jpg?v=637919534643170000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Iogurte Integral Natural Nestlé Copo 170g",
+   "price": 4.59,
+   "image": "https://static.extramercado.com.br/img/uploads/1/60/33355060.png"
+  }
+ },
+ {
+  "id": "a6eeff47d6",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "copo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Iogurte Nestlé Natural Integral 170g",
+   "price": 4.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/216660/7891000072950.jpg?v=637919534643170000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte Integral Natural Nestlé Copo 170g",
+   "price": 4.39,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/830942.webp"
+  }
+ },
+ {
+  "id": "e395c4c56a",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Atacadão",
+   "name": "Fralda Descartável Huggies Rápida Absorção XXG 66 un",
+   "price": 79.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2263692/g.jpg.png?v=639288125415200000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Fraldas Descartáveis Rápida Absorção Huggies XXG 66Un",
+   "price": 89.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/266572.webp"
+  }
+ },
+ {
+  "id": "a5783dae9d",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "copo"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Iogurte Natural Integral Danone 160g",
+   "price": 4.39,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249908/nq -2-.png?v=639034064669200000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Iogurte Integral Natural Danone Copo 160g",
+   "price": 3.75,
+   "image": "https://static.extramercado.com.br/img/uploads/1/782/33368782.png"
+  }
+ },
+ {
+  "id": "6287fb3560",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Atacadão",
+   "name": "Aparelho de Barbear Bic Comfort 4 un",
+   "price": 16.68,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2255641/g.jpg.jpg?v=639288054139070000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Aparelho De Barbear Bic Comfort3 Embalagem 4Un",
+   "price": 16.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261468.webp"
+  }
+ },
+ {
+  "id": "1694a5019a",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "classic"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Chocolate ao Leite Nestle Classic 80g",
+   "price": 10.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250722.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Chocolate Nestle Ao Leite 80g",
+   "price": 9.49,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/f25a257a-23c9-4e46-80bb-6b4116accd76.jpg"
+  }
+ },
+ {
+  "id": "6b80d2a618",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "sabor"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Refresco Em Pó Sabor Goiaba Tang 18G",
+   "price": 0.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/249858.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Refresco Em Pó Tang 18g Goiaba",
+   "price": 1.09,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/efc458aa-5352-40c0-82e5-ddfc33c8f74f.jpg"
+  }
+ },
+ {
+  "id": "f47e69ac26",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "uht"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Bebida Láctea UHT Cappuccino Zero Lactose Parmalat Wheyfit Caixa 250ml",
+   "price": 8.79,
+   "image": "https://static.extramercado.com.br/img/uploads/1/689/33347689.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bebida Lactea Parmalat Wheyfit 250ml Cappuccino Zero Lactose",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/260216.webp"
+  }
+ },
+ {
+  "id": "d6a67efabf",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Extra",
+   "name": "Panettone com Frutas Cristalizadas Romanato 400g",
+   "price": 10.49,
+   "image": "https://static.extramercado.com.br/img/uploads/1/859/33332859.jpg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Panetone Romanato 400g Frutas Cristalizadas",
+   "price": 11.69,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/cb18d700-c09a-4018-8e01-4f7af814f3de.jpg"
+  }
+ },
+ {
+  "id": "407cfe7a53",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Nagumo",
+   "name": "Biscoito Infantil Biscotti Com Maçã E Canela Papapá 60G",
+   "price": 15.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/262861.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Biscoito Infatil Papapa Biscotti Maca/Canela 60g",
+   "price": 13.99,
+   "image": "https://edge.osuper.com.br/Uv-fxhflRedt8ENASSude0rsbJk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/ecec485c-BiscoitoInfatilPapapaBiscottiMacaCanela60g_e401c5e6-caa8-43c2-b3f0-07ca6a9438ff.jpg.jpeg"
+  }
+ },
+ {
+  "id": "f7acd2ac67",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Coop",
+   "name": "Mistura Para Bolo Petit Gateau Dona Benta 450G",
+   "price": 10.59,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/250364/7896005213995.jpg?v=639045352339130000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Mist Bolo Dona Benta Petit Gateu 450g",
+   "price": 9.89,
+   "image": "https://edge.osuper.com.br/vzL0lRlhKc2rdGFh2uo9Z37bh8g=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/ac9794cb-MistBoloDonaBentaPetitGateu450g_936b5cb5-dcae-48a1-9531-fdf597e16579.jpg.jpeg"
+  }
+ },
+ {
+  "id": "ffceaf5967",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Semar",
+   "name": "Biscoito Marilan Maizena Integral 300g",
+   "price": 6.99,
+   "image": "https://edge.osuper.com.br/dFmErLTG7EyUVdc6o1QWRCh1Bus=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/74e15a76-BiscoitoMarilanMaizenaIntegral300g_0674bf44-49d1-4def-8847-cb067bdf685a.jpg.jpeg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Biscoito Marilan 300g Maisena Integral",
+   "price": 5.49,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/0674bf44-49d1-4def-8847-cb067bdf685a.jpg"
+  }
+ },
+ {
+  "id": "d51b9370fe",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "copo"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Iogurte Morango com Confeitos Coloridos Vigor Mix Copo 140g",
+   "price": 5.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/820/33342820.png"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Iogurte De Morango Com Confeitos Coloridos Mix Vigor 140G",
+   "price": 5.39,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/251623.webp"
+  }
+ },
+ {
+  "id": "4084f7decf",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Coop",
+   "name": "Coxinha da asa temperado Swift 1kg",
+   "price": 17.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/222469/7894904209026.jpg?v=637919572671670000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Coxinha da Asa Temperada SWIFT 1KG",
+   "price": 17.9,
+   "image": "https://static.extramercado.com.br/img/uploads/1/654/33276654.jpg"
+  }
+ },
+ {
+  "id": "7a57a20caa",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "elma"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Batata Chips Sabor Original Ruffles 68G",
+   "price": 8.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/260891.webp"
+  },
+  "b": {
+   "market": "Roldão",
+   "name": "BATATA RUFFLES ELMA CHIPS SABORES 65G / 68G",
+   "price": 5.99,
+   "image": null
+  }
+ },
+ {
+  "id": "248e0c2aa5",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "sabor"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Tic Tac Pastilhas Sabor Citrus Mix 14,5g",
+   "price": 2.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2300509/g.jpg.jpg?v=639291187445500000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Pastilha Tic Tac Citrus Mix 14,5g",
+   "price": 3.99,
+   "image": "https://edge.osuper.com.br/AcpsAVk1Id9ltb64Zw0tsdm5nm0=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/cdba4a20-PastilhaTicTacCitrusMix145g_3da4da8d-57e7-4831-bdba-846647325c98.jpg.jpeg"
+  }
+ },
+ {
+  "id": "546f363db8",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "uht"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Leite Zero Lactose Semidesnatado Italac 1L",
+   "price": 6.19,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/253831/7898080640932.jpg?v=639156501158570000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Leite Semidesnatado Italac UHT 1L Zero Lactose",
+   "price": 6.49,
+   "image": "https://edge.osuper.com.br/qRhMGaOoz5aC0y2_7Gs6Ht3IYr0=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8950dc1ee15f3bf807/249888-2ac48369.webp"
+  }
+ },
+ {
+  "id": "0134ec51d0",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Semar",
+   "name": "BISCOITO PIRAQUE LEITE MALTADO C/COBERTURA CHOC 80g",
+   "price": 4.19,
+   "image": "https://edge.osuper.com.br/1jW4yB0vu4Wc6M_E0y3O3FkyuEA=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895ad81fe35f30f30c/313152-b816fc46.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Biscoito Piraquê Leite Maltado 80g Cobertura De Chocolate",
+   "price": 3.99,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/0a9ee73d-cb38-44db-846e-9cf61fea4949.jpg"
+  }
+ },
+ {
+  "id": "b30a0e5d7e",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Nagumo",
+   "name": "Desodorante Aerosol Invisível Monange 150Ml",
+   "price": 11.49,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/149846.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Desodorante Monange Invisível aerossol 150ml",
+   "price": 11.99,
+   "image": "https://edge.osuper.com.br/6yP6jcVwdnYH0FkT1BA37NWnxJk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e8059d51ce45e3bfb05/21964-f888dac1.webp"
+  }
+ },
+ {
+  "id": "c5b7167d68",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão Instantâneo Lámen Panco Galinha Caipira 85g",
+   "price": 1.95,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2302602/g.jpg.png?v=639293770615130000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Macarrão Instantâneo Panco Lámen Tradicional Galinha Capira 85G",
+   "price": 2.49,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/621496.webp"
+  }
+ },
+ {
+  "id": "fd2fa4c242",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "congelado"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Filé de Peito de Frango Zip Sadia Congelado 1kg",
+   "price": 19.98,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239186/g.jpg.jpg?v=639287928746400000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Filé de Peito de Frango Sadia 1Kg",
+   "price": 26.9,
+   "image": "https://edge.osuper.com.br/Xo1XPGjpAsgv0PmdJEKgRJ6iYJg=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc18e55a3bff00/502136-d61f511a.png"
+  }
+ },
+ {
+  "id": "662acc3afb",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "liquido"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Detergente Líquido Minuano Maçã 500ml",
+   "price": 2.55,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2243114/g.jpg.jpg?v=639287955149130000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Detergente Minuano Maçã 500ml",
+   "price": 2.59,
+   "image": "https://edge.osuper.com.br/NhGhGEfoL5i7gheHoGLeC4HkAck=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284118f5ed819e65f32fa07/59381-f4709f2f.jpg"
+  }
+ },
+ {
+  "id": "4d75341734",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "sabor"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Bala De Gelatina Sabor Banana Dori 60G",
+   "price": 3.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/253753.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Bala De Gelatina Dori Banana 60g",
+   "price": 4.49,
+   "image": "https://edge.osuper.com.br/zFf9hsqDnrekxzZb89YvIbvieBY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895dd41de55f33f203/230586-293ddc28.jpg"
+  }
+ },
+ {
+  "id": "438a38808d",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "sabor"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Bala De Gelatina Sabor Banana Dori 60G",
+   "price": 3.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/253753.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Bala De Gelatina Dori 60g Banana",
+   "price": 3.49,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/6378315d-0233-4e90-87b8-b77079798b16.jpg"
+  }
+ },
+ {
+  "id": "d1491a461d",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Semar",
+   "name": "Macarrão Renata Grano Duro Fusilli 500g",
+   "price": 8.9,
+   "image": "https://edge.osuper.com.br/RjYqQRuehyuZGqngEZMDcxBQK94=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895ade1ae55f32f907/39054-700444c9.jpg"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Macarrão Renata Grano Duro Fusili 500g",
+   "price": 6.29,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/f40e3cde-e956-4a59-a4c7-9c2c21efeac1.jpg"
+  }
+ },
+ {
+  "id": "ec0edefafe",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "congelado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Filezinho de Frango Congelado Aurora 1kg",
+   "price": 23.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/864664.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Frango Filezinho Aurora Zip 1kg",
+   "price": 20.9,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/e31228d3-4267-4be7-8de7-f2155a35166b.jpg"
+  }
+ },
+ {
+  "id": "fc2cdf82fb",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "cremoso",
+   "copo"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Requeijão Cremoso Light Vigor 200G",
+   "price": 9.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/863179.webp"
+  },
+  "b": {
+   "market": "Spani",
+   "name": "Requeijão Copo Vigor Light 200g",
+   "price": 8.99,
+   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/a6040a4b-4674-45ef-aae0-ca3eb9a76680.jpg"
+  }
+ },
+ {
+  "id": "c42eadefe7",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "recheado",
+   "duo"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Biscoito Tortinhas Chocolate Branco Geléia Frutas Vermelhas Adria 140G",
+   "price": 3.49,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/237211.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Biscoito Recheado Tortinhas de Chocolate Branco e Geléia de Frutas Vermelhas Adria Duo 140g",
+   "price": 4.49,
+   "image": "https://edge.osuper.com.br/55rjnbQHqfxqyzc6Tu3PefyjGcA=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108950d918ed5937fc04/156877-f8106570.jpg"
+  }
+ },
+ {
+  "id": "f33d4562ac",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "espaguete",
+   "linguine"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Petybon Espaguete 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235756/g.jpg.jpg?v=639287906827600000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Macarrão Linguine Petybon Com Ovos 500g",
+   "price": 4.49,
+   "image": "https://edge.osuper.com.br/z3g1AJj9oduLU-ATpA0OGIyX50Y=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/6de0c974-MacarroLinguinePetybonComOvos500g_f5bd451f-181f-48b7-af87-921b3b69ad9e.jpg.jpeg"
+  }
+ },
+ {
+  "id": "32064f887e",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "fina"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Batata Palha Extra Fina Parmesão Yoki 100g",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249226/7891095031177_99_1_1200_72_SRGB.png?v=638947477616100000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Batata Palha Extrafina Parmesão Yoki 100G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236457.webp"
+  }
+ },
+ {
+  "id": "f5eaf70956",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "aipim",
+   "milho"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Mistura para bolo de aipim cremoso Dr. Oetke 400g",
+   "price": 7.69,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/218592/7891048061787.jpg?v=637919546215900000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Mistura Para Bolo De Milho Cremoso Dr. Oetker 400G",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/209676.webp"
+  }
+ },
+ {
+  "id": "45ac13af76",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "fina",
+   "parmesao",
+   "sache"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Batata Palha Extra Fina Parmesão Yoki 100g",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249226/7891095031177_99_1_1200_72_SRGB.png?v=638947477616100000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Batata Palha Extrafina Yoki Sachê 100g",
+   "price": 9.99,
+   "image": "https://edge.osuper.com.br/7E_bzQJmVV5i-_TzZeVe06U6P8k=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d918e65e33f907/249707-607f04c0.webp"
+  }
+ },
+ {
+  "id": "d11405f28d",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "espaguete",
+   "furadinho",
+   "semola"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Petybon Espaguete 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235756/g.jpg.jpg?v=639287906827600000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Macarrão Furadinho Petybon Com Ovos Sêmola 500g",
+   "price": 4.49,
+   "image": "https://edge.osuper.com.br/jJqe4hdkTNh0BFzDdfGfxo2Gyq4=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/acb113ca-MacarroFuradinhoPetybonComOvosSmola500g_a08cfa4b-2552-45a3-9a49-2c299a62528b.jpg.jpeg"
+  }
+ },
+ {
+  "id": "c49929b060",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "lata",
+   "lt"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Energético Original Tnt Lata 473Ml",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/698467.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Energetico Tnt Original Lt 473ml",
+   "price": 8.99,
+   "image": "https://edge.osuper.com.br/qH9bn5P08fOuiV0n3BrFOX3hRec=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/8550b36e-energatico-tnt-energy-drink-473ml-1.png"
+  }
+ },
+ {
+  "id": "3aeb4f4de5",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "suina",
+   "toscana",
+   "churrasco",
+   "kg"
+  ],
+  "a": {
+   "market": "Extra",
+   "name": "Linguiça Suína Seara 700g",
+   "price": 21.63,
+   "image": "https://static.extramercado.com.br/img/uploads/1/618/33382618.png"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Linguiça Toscana Seara Churrasco Kg",
+   "price": 21.9,
+   "image": "https://edge.osuper.com.br/eQMTAxgH_8wa0R9yhfLD43H9P9Q=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/348ad70d-LinguiatoscanaSearaChurrascoGranelkg_c3add547-d88d-47da-9aa9-aeb2e4e4eba1.jpg.jpeg"
+  }
+ },
+ {
+  "id": "b00d4acd8e",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "fina",
+   "parmesao"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Batata Palha Extra Fina Parmesão Yoki 100g",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249226/7891095031177_99_1_1200_72_SRGB.png?v=638947477616100000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Batata Palha Extrafina Yoki 100G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236455.webp"
+  }
+ },
+ {
+  "id": "fe9fa3f7d1",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "flow",
+   "pack"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Goiabada Val 300G",
+   "price": 5.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/302821.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Goiabada Val Flow Pack 300g",
+   "price": 3.99,
+   "image": "https://edge.osuper.com.br/6S3G_-4PfbjJ7TQ6iubvX7DhIZY=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e2841e895cd91fe55f31f803/43264-429cab67.jpg"
+  }
+ },
+ {
+  "id": "f45ff575d5",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "toscana",
+   "congelada",
+   "suina",
+   "churrasco"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Linguiça Toscana Sadia Congelada 700g",
+   "price": 21.8,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2287739/g.jpg.jpg?v=639289534251930000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Linguica Suina Sadia Churrasco 700g",
+   "price": 19.98,
+   "image": "https://edge.osuper.com.br/Hv_PsuDt6BjAJO-cXbXhCEx4w6g=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178c59d91dec5b31fa07/500062-85b7a349.webp"
+  }
+ },
+ {
+  "id": "134dfbf5e6",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "ovos",
+   "espaguete",
+   "semola"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Petybon Espaguete 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235756/g.jpg.jpg?v=639287906827600000"
+  },
+  "b": {
+   "market": "Família Lima",
+   "name": "Macarrão Petybon Sêmola 500g",
+   "price": 2.49,
+   "image": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/914615155_18116046887465670_7040478491543886566_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2AV_MwVDV6EQ7kNvwEezIN-&_nc_oc=Adq63iZujln3ZQHjyxxZ2iwVmZQnhK-6y6nJiOZ9d8GCDIJv3Ohs1ctmhX5n1dNzAJ4&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=UWL3btcJ5yPGQJQI8Fnlbg&_nc_ss=7f689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQemnBNlHxa1v0Zlc6NqEj8413Qc1dkUvZ18DGDQX33tA&oe=6B08F7A3"
+  }
+ },
+ {
+  "id": "5cffbc3661",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "canjica",
+   "cristal",
+   "farofa",
+   "milho"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Canjica Yoki Cristal 400g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291629/g.jpg.jpg?v=639290336672970000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Farofa De Milho Yoki 400G",
+   "price": 8.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/253651.webp"
+  }
+ },
+ {
+  "id": "e2746187a5",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "canjica",
+   "cristal",
+   "farofa",
+   "milho"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Canjica Yoki Cristal 400g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291629/g.jpg.jpg?v=639290336672970000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Farofa Yoki Milho Pct 400g",
+   "price": 9.99,
+   "image": "https://edge.osuper.com.br/x-kIfsRKBoj0MaTEkUY5h9hnEwU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d911e45e36ff0d/227505-e59a1837.jpg"
+  }
+ },
+ {
+  "id": "e7d890036c",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "canjica",
+   "cristal",
+   "milho",
+   "pipoca",
+   "premium"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Canjica Yoki Cristal 400g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291629/g.jpg.jpg?v=639290336672970000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Milho Pipoca Yoki Premium 400g",
+   "price": 8.49,
+   "image": "https://edge.osuper.com.br/NoSgZPYRqI3ZhYAbpZ8cbVEKpRc=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284178951d911e45e31ff0c/227167-cffbd693.jpg"
+  }
+ },
+ {
+  "id": "c33f77f986",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "canjica",
+   "cristal",
+   "milho",
+   "pipoca",
+   "premium"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Canjica Yoki Cristal 400g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291629/g.jpg.jpg?v=639290336672970000"
+  },
+  "b": {
+   "market": "Mercadinho Parceiro",
+   "name": "MILHO PARA PIPOCA PREMIUM YOKI 400g",
+   "price": 7.99,
+   "image": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwHsfral&_nc_oc=AdohuHfRxTOsDmqOtHPF_Sj6EmD_nk37WhXFEvjCQmpSC94AtmfQZjucqd72Kf9qq0w&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Lzs7Ak4alhVOIqLsYDvRdQ&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ197ACEE1GXka8CG-qb4fk0bGlurII97bRMtHoXYavrA&oe=6B090058"
+  }
+ },
+ {
+  "id": "055f33b8bb",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "canjica",
+   "cristal",
+   "farofa",
+   "mandioca"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Canjica Yoki Cristal 400g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2291629/g.jpg.jpg?v=639290336672970000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Farofa De Mandioca Tradicional Yoki 400G",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/253650.webp"
+  }
+ },
+ {
+  "id": "08ff14d3e2",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "ovos",
+   "grano",
+   "duro"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Macarrão com Ovos Petybon Espaguete 500g",
+   "price": 3.49,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2235756/g.jpg.jpg?v=639287906827600000"
+  },
+  "b": {
+   "market": "Extra",
+   "name": "Macarrão Grano Duro Espaguete PETYBON Pacote 500g",
+   "price": 8.99,
+   "image": "https://static.extramercado.com.br/img/uploads/1/335/33351335.png"
+  }
+ },
+ {
+  "id": "9e433a1f69",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "wafer"
+  ],
+  "a": {
+   "market": "Coop",
+   "name": "Chocolate Hershey's Mais ao Leite 102g",
+   "price": 7.49,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/224441/7899970400674.jpg?v=637919585018630000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Chocolate Wafer Mais Ao Leite Hershey'S 102G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/231431.webp"
+  }
+ },
+ {
+  "id": "2be9b60827",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "gota"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Pullman Gotas de Chocolate 250g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239319/g.jpg.jpg?v=639287931329300000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Bolo De Chocolate Pullman 250G",
+   "price": 8.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/101165.webp"
+  }
+ }
+]

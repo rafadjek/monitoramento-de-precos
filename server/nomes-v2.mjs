@@ -40,15 +40,50 @@ const lev = (a, b) => {
   for (let i = 1; i <= m; i++) { const c = [i]; for (let j = 1; j <= n; j++) c[j] = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); p = c; }
   return p[n];
 };
-// abreviação ("rech" x "recheado") ou erro de uma letra em palavra de 5+ letras
-export const parecida = (t, u) => t === u || (t.length >= 4 && u.length >= 4 && (u.startsWith(t) || t.startsWith(u))) || (t.length >= 5 && u.length >= 5 && lev(t, u) <= 1);
+// abreviação ("rech" x "recheado") ou erro de uma letra em palavra de 5+ letras. Número no fim da palavra
+// ("comfort3" x "comfort") é versão, não erro de digitação: não tolera.
+const temDigito = (t) => /\d/.test(t);
+export const parecida = (t, u) => {
+  if (t === u) return true;
+  if (temDigito(t) || temDigito(u)) return false;
+  return (t.length >= 4 && u.length >= 4 && (u.startsWith(t) || t.startsWith(u))) || (t.length >= 5 && u.length >= 5 && lev(t, u) <= 1);
+};
 
-/** Palavras que sobram de cada lado depois de casar as parecidas. */
-export function diferenca(ca, cb) {
-  const A = [...ca].filter((t) => !cb.has(t)), B = [...cb].filter((t) => !ca.has(t));
+// abreviações de embalagem que os mercados escrevem soltas ("Lt 473ml" é lata, "Pt" é pote, "Gf" é garrafa)
+const ABREV = { lt: 'lata', pt: 'pote', gf: 'garrafa', vd: 'vidro', pc: 'pacote', sach: 'sache' };
+const canonicos = (set) => new Set([...set].map((t) => ABREV[t] ?? t));
+
+/** Palavras que sobram de cada lado depois de casar as parecidas e as coladas ("extra" + "fina" = "extrafina"). */
+export function diferenca(ca0, cb0) {
+  const ca = canonicos(ca0), cb = canonicos(cb0);
+  let A = [...ca].filter((t) => !cb.has(t)), B = [...cb].filter((t) => !ca.has(t));
+  // palavras coladas de um lado, soltas do outro
+  for (const [X, Y, setX] of [[A, B, 'A'], [B, A, 'B']]) {
+    for (const t of [...Y]) {
+      const duas = X.filter((p) => X.some((q) => q !== p && (p + q === t || q + p === t)));
+      if (duas.length >= 2) {
+        const [p] = duas, q = duas.find((x) => x !== p && (p + x === t || x + p === t));
+        if (q) { if (setX === 'A') { A = A.filter((x) => x !== p && x !== q); B = B.filter((x) => x !== t); } else { B = B.filter((x) => x !== p && x !== q); A = A.filter((x) => x !== t); } }
+      }
+    }
+  }
   const restoB = new Set(B), soA = [];
   for (const t of A) { const m = [...restoB].find((u) => parecida(t, u)); if (m) restoB.delete(m); else soA.push(t); }
   return { a: soA, b: [...restoB] };
+}
+
+/** Tem palavra de variante (sabor, cor, versão, número) na diferença? Usada para ordenar a fila do juiz. */
+export function variantesNaDiferenca(ca, cb) {
+  const { a, b } = diferenca(ca, cb);
+  return a.concat(b).filter((t) => VARIANTES.has(t) || (/^\d+$/.test(t) && t !== '1')).length;
+}
+
+/** Quão provável é ser o mesmo produto (0 a 3), só pelo nome e pelo preço; serve para decidir quem o juiz de IA vê primeiro. */
+export function probabilidade(ca, cb, pa, pb) {
+  const inter = [...ca].filter((t) => cb.has(t)).length;
+  const jac = inter / (ca.size + cb.size - inter || 1);
+  const razao = pa > 0 && pb > 0 ? Math.max(pa, pb) / Math.min(pa, pb) : 1;
+  return (variantesNaDiferenca(ca, cb) ? 0 : 2) + jac - 0.5 * Math.log(razao);
 }
 
 const classes = (palavras, mapa) => new Set(palavras.map((w) => mapa[w]).filter(Boolean));
@@ -68,6 +103,8 @@ export function pareQuaseIgualV2(ca, cb, soft, pa, pb) {
   if (!todas.length) return razao <= 2; // nomes iguais depois de tolerar abreviação: só o preço pode desconfiar
   if (todas.some((t) => VARIANTES.has(t) || /^\d+$/.test(t) && t !== '1')) return false; // variante de sabor, cor, versão ou número
   if (!todas.every((t) => soft.has(t) || NEUTRAS_V2.has(t))) return false;
+  // fresco x congelado costuma ter preço bem diferente: "congelado" de um lado só pede preço parecido
+  if (todas.some((t) => t === 'congelado' || t === 'congelada') && razao > 1.2) return false;
   if (separam(classes(a, EMBALAGEM), classes(b, EMBALAGEM))) return false;
   if (separam(classes(a, FORMA), classes(b, FORMA))) return false;
   return razao <= 1.5;

@@ -14,6 +14,7 @@ import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 import { pairKey, offerKey, brandKeys, signature, strip, groupOffers } from './group.mjs';
 import { conflitoDeRegra } from './variacao.mjs';
+import { probabilidade } from './nomes-v2.mjs';
 import { normalizeEan } from './ean.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -315,7 +316,12 @@ if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini
   const vez = new Map(); // oferta -> quantos pares dela já vieram antes
   const fila = [...cand.values()].sort((x, y) => x.d - y.d);
   for (const c of fila) { c.vez = Math.max(vez.get(c.ia) ?? 0, vez.get(c.ib) ?? 0); vez.set(c.ia, (vez.get(c.ia) ?? 0) + 1); vez.set(c.ib, (vez.get(c.ib) ?? 0) + 1); }
-  fila.sort((x, y) => (encarte(y) - encarte(x)) || (x.vez - y.vez) || (x.d - y.d));
+  // dentro do mesmo grau, o par mais provável de ser o mesmo produto vem primeiro (sem palavra de variante na diferença,
+  // nomes parecidos, preço próximo): a cota do dia é pequena e o juiz quase sempre diz "diferente" para sabor e cor
+  for (const c of fila) c.prob = probabilidade(sigs[c.ia].core, sigs[c.ib].core, offers[c.ia].price, offers[c.ib].price);
+  fila.sort((x, y) => (encarte(y) - encarte(x)) || (x.vez - y.vez) || (y.prob - x.prob) || (x.d - y.d));
+  const semVariante = fila.filter((c) => c.prob >= 2).length;
+  console.log(`juiz: ${semVariante} de ${fila.length} pares sem palavra de variante na diferença (vão primeiro)`);
   console.log(`juiz: ${cand.size} pares sem veredito; até ${MAX_LOTES} lotes de ${BATCH}`);
   const examples = all;
   // oferta que já achou par num mercado nesta rodada não pergunta de novo sobre outro produto desse mercado
