@@ -57,6 +57,9 @@ export function decidirPorFicha(oa, ob, fa, fb) {
   if (soA.concat(soB).some((x) => palavras(x).some((w) => VARIANTES.has(w)))) return false;
   // sabor/aroma: se os dois dizem, tem de ser o mesmo; um lado calado não separa (Hot Pocket X-Burguer x X-Burguer Barbecue)
   if (fa.sabor && fb.sabor && !mesmoTexto(fa.sabor, fb.sabor) && !contem(fa.sabor, fb.sabor)) return false;
+  // "Original"/"Tradicional" de um lado e sabor do outro: o original já é um sabor (Pinho Sol Original x Lavanda)
+  const padrao = (f) => /\b(original|tradicional|classico)\b/.test(`${f.versao} ${f.linha}`);
+  if ((fa.sabor && !fb.sabor && padrao(fb)) || (fb.sabor && !fa.sabor && padrao(fa))) return false;
   if (!produtoCompativel(fa.produto, fb.produto)) return undefined;
   // palavras próprias dos DOIS lados (Espaguete Furado x Conchinha, Caseiro x Italiano): o juiz com fotos decide.
   // Palavra a mais de um lado só é embalagem ou descrição (quase todos os "mesmo" do Rafael em 23/11).

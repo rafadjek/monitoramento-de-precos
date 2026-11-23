@@ -70,3 +70,5 @@ Thumbs.db
 *.pdf
 *.zip
 *.7z
+server/data/rotulos/fila-nomes.json
+server/data/rotulos/fila-provavel.html

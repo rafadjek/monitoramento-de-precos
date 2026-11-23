@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/collectors/instagram-data.mjs', 'server/collectors/atacadao-folheto.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/nomes-v2.mjs', 'server/variacao.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/collectors/instagram-data.mjs', 'server/collectors/atacadao-folheto.mjs', 'server/judge.mjs', 'server/fichas.mjs', 'server/fichas-regra.mjs', 'server/group.mjs', 'server/nomes-v2.mjs', 'server/variacao.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
@@ -117,6 +117,24 @@ jobs:
           RC=0
           if [ -n "${CAT:-}" ]; then wait $CAT || RC=$?; cat ../coleta-catalogos.log; fi
           exit $RC
+
+      # Fase 18: ficha de cada produto (marca, linha, versão, sabor), lida uma vez por nome com IA só de texto e guardada
+      # em data/extraido/fichas.json. Usa os modelos Flash-Lite (cota própria, não disputa com o juiz), depois Groq e
+      # OpenRouter. Só na coleta agendada ou manual; cota esgotada encerra sem erro e o que já foi lido fica salvo.
+      - name: Fichas dos produtos
+        if: github.event_name != 'push'
+        working-directory: server
+        continue-on-error: true
+        timeout-minutes: 40
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_JUIZ_KEY: ${{ secrets.GEMINI_JUIZ_KEY }}
+          GEMINI_JUIZ_KEY_2: ${{ secrets.GEMINI_JUIZ_KEY_2 }}
+          GEMINI_JUIZ_KEY_3: ${{ secrets.GEMINI_JUIZ_KEY_3 }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          FICHAS_LOTE: '25'
+        run: node tools/fila-provavel.mjs 0 --nomes && node fichas.mjs --minutos=35
 
       # Juiz de "mesmo produto?" (Gemini grátis): primeiro a prova com os pares rotulados pelo Rafael;
       # se acertar >= 95% e mais que a regra, julga pares duvidosos (com as fotos; cada par uma vez só, com teto por rodada).

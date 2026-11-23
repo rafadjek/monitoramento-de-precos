@@ -16,6 +16,8 @@ import { pairKey, offerKey, brandKeys, signature, strip, groupOffers } from './g
 import { conflitoDeRegra } from './variacao.mjs';
 import { probabilidade } from './nomes-v2.mjs';
 import { normalizeEan } from './ean.mjs';
+import { lerFichas } from './fichas.mjs';
+import { vereditosPorFicha } from './fichas-regra.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const IN = path.join(ROOT, 'data/extraido');
@@ -369,9 +371,12 @@ if (state.ativo && !process.argv.includes('--so-prova') && aprovadoProv(provedor
   const ratio = (x, y) => Math.max(x, y) / Math.min(x, y);
   const diffOf = (a, b) => { const ca = sigs[a].core, cb = sigs[b].core; return [...ca].filter((t) => !cb.has(t)).length + [...cb].filter((t) => !ca.has(t)).length; };
   const cand = new Map();
+  // Fase 18: par que a ficha já decidiu (mesmo ou conflito claro) não gasta cota de visão; o juiz fica com a zona cinzenta
+  const porFicha = process.env.GROUP_FICHA === '0' ? new Map() : vereditosPorFicha(offers, lerFichas().fichas);
+  console.log(`juiz: ${porFicha.size} pares já decididos pela ficha`);
   const add = (a, b, d) => {
     const key = pairKey(offers[a], offers[b]);
-    if (!state.pares[key]) cand.set(key, { key, a: fmt(offers[a]), b: fmt(offers[b]), imgA: offers[a].imageUrl, imgB: offers[b].imageUrl, d, semEan: !eans[a] || !eans[b], ia: a, ib: b });
+    if (!state.pares[key] && !porFicha.has(key)) cand.set(key, { key, a: fmt(offers[a]), b: fmt(offers[b]), imgA: offers[a].imageUrl, imgB: offers[b].imageUrl, d, semEan: !eans[a] || !eans[b], ia: a, ib: b });
   };
   // mesma marca (informada ou deduzida do nome) e mesmo tamanho, nomes um pouco diferentes
   const buckets = new Map();

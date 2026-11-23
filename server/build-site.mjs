@@ -24,6 +24,8 @@ const brDate = (t) => new Date(t).toLocaleDateString('pt-BR', { day: '2-digit', 
 import crypto from 'node:crypto';
 import sharp from 'sharp';
 import { groupOffers, pairKey, parsePack } from './group.mjs';
+import { lerFichas } from './fichas.mjs';
+import { vereditosPorFicha } from './fichas-regra.mjs';
 import { bestPrice } from './price.mjs';
 import { fineCategory } from './category.mjs';
 import { load as loadHist, priceAt } from './historico.mjs';
@@ -164,6 +166,15 @@ index.infoOnly = index.infoOnly.filter((i) => !index.markets.some((m) => m.name 
 const flat = built.flatMap((b) => b.slim);
 // Vereditos de 'mesmo produto?': os rótulos do Rafael valem sempre; os do juiz com IA só se a prova dele passou.
 const verdicts = new Map();
+// Fase 18: ficha de cada produto (fichas.mjs + fichas-regra.mjs). Só os "mesmo produto" entram, e valem menos que o juiz
+// e os rótulos (que vêm depois e sobrescrevem). GROUP_FICHA=0 desliga.
+if (process.env.GROUP_FICHA !== '0') {
+  const { fichas } = lerFichas();
+  let n = 0;
+  for (const [k, v] of vereditosPorFicha(flat, fichas)) if (v === true) { verdicts.set(k, true); n++; }
+  console.log(`ficha: ${Object.keys(fichas).length} fichas, ${n} pares "mesmo produto"`);
+  index.fichaPares = n;
+}
 try {
   const j = JSON.parse(fs.readFileSync(path.join(IN, 'juiz-veredictos.json'), 'utf8'));
   if (j.ativo) for (const [k, v] of Object.entries(j.pares || {})) verdicts.set(k, v.same);
