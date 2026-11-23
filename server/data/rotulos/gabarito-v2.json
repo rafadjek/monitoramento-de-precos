@@ -1,16 +1,16 @@
 {
- "gerado": "2026-11-23T00:30:27.651Z",
+ "gerado": "2026-11-23T00:31:03.342Z",
  "metodo": "atual",
  "ean": {
   "treino": {
    "pares": 30448,
    "mesmo": 4480,
-   "tp": 1717,
-   "fp": 87,
-   "fn": 2763,
-   "tn": 25881,
-   "precisao": 0.9518,
-   "cobertura": 0.3833
+   "tp": 1706,
+   "fp": 85,
+   "fn": 2774,
+   "tn": 25883,
+   "precisao": 0.9525,
+   "cobertura": 0.3808
   },
   "teste": {
    "pares": 8551,

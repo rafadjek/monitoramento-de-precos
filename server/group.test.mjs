@@ -211,3 +211,17 @@ test('v2: preço muito distante não junta; interruptor GROUP_V2=0 volta à regr
     assert.ok(grouped(b('A', 'Café Melitta Tradicional 500g', 'Melitta', 22.9), b('B', 'Café Torrado e Moído Melitta Tradicional Vácuo 500g', 'Melitta', 24.9)));
   } finally { delete process.env.GROUP_V2; }
 });
+
+test('v2: palavra colada, abreviação de embalagem e número no fim da palavra', () => {
+  assert.ok(grouped(b('A', 'Batata Palha Extra Fina Parmesão Yoki 100g', 'Yoki', 9.9), b('B', 'Batata Palha Extrafina Parmesão Yoki 100g', 'Yoki', 7.9)));
+  assert.ok(grouped(b('A', 'Energético Original Tnt Lata 473ml', 'Tnt', 6.98), b('B', 'Energetico Tnt Original Lt 473ml', 'Tnt', 7.2)));
+  // "Comfort3" é outra versão do aparelho, não erro de digitação de "Comfort"
+  assert.ok(!grouped(b('A', 'Aparelho de Barbear Bic Comfort 4 un', 'Bic', 16.7), b('B', 'Aparelho De Barbear Bic Comfort3 Embalagem 4Un', 'Bic', 16.9)));
+  // Classic é linha de produto (Salton Classic)
+  assert.ok(!grouped(b('A', 'Espumante Salton Classic Moscatel 750ml', 'Salton', 23.9), b('B', 'Espumante Salton Moscatel 750ml', 'Salton', 24.9)));
+});
+
+test('v2: congelado de um lado só pede preço parecido (fresco x congelado)', () => {
+  assert.ok(grouped(b('A', 'Linguiça Toscana Sadia Congelada 700g', 'Sadia', 21.8), b('B', 'Linguiça Toscana Sadia 700g', 'Sadia', 23.9)));
+  assert.ok(!grouped(b('A', 'Filé de Peito de Frango Sadia Congelado 1kg', 'Sadia', 19.9), b('B', 'Filé de Peito de Frango Sadia 1kg', 'Sadia', 26.9)));
+});

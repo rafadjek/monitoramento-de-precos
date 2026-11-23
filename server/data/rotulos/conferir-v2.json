@@ -58,6 +58,85 @@
   }
  },
  {
+  "id": "32064f887e",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Coop",
+   "name": "Batata Palha Extra Fina Parmesão Yoki 100g",
+   "price": 9.99,
+   "image": "https://coopsp.vtexassets.com/arquivos/ids/249226/7891095031177_99_1_1200_72_SRGB.png?v=638947477616100000"
+  },
+  "b": {
+   "market": "Nagumo",
+   "name": "Batata Palha Extrafina Parmesão Yoki 100G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236457.webp"
+  }
+ },
+ {
+  "id": "c49929b060",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [],
+  "a": {
+   "market": "Nagumo",
+   "name": "Energético Original Tnt Lata 473Ml",
+   "price": 6.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/698467.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Energetico Tnt Original Lt 473ml",
+   "price": 8.99,
+   "image": "https://edge.osuper.com.br/qH9bn5P08fOuiV0n3BrFOX3hRec=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/8550b36e-energatico-tnt-energy-drink-473ml-1.png"
+  }
+ },
+ {
+  "id": "9c4f732283",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "torrado",
+   "moido"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café 3 Corações Extra Forte 500g",
+   "price": 22.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2240892/g.jpg.jpg?v=639287941478670000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído Extraforte 3 Corações Pacote 500g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/FlPVx3AgWWiSbqMY9xqXsBUS6Qk=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d910e55e37f90c/138374-38fc023c.jpg"
+  }
+ },
+ {
+  "id": "1d91afc33c",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "torrado",
+   "moido",
+   "vacuo"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café 3 Corações Extra Forte 500g",
+   "price": 22.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2240892/g.jpg.jpg?v=639287941478670000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído a Vácuo Extraforte 3 Corações Pacote 500g",
+   "price": 23.99,
+   "image": "https://edge.osuper.com.br/BlEx2URmoyWv3vjZuIICIZEKDeo=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958d910e55e3af903/13966-638baca2.jpg"
+  }
+ },
+ {
   "id": "8d87c8bfe3",
   "kind": "v2-junta",
   "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
@@ -133,44 +212,6 @@
    "name": "Iogurte Integral Natural Danone Copo 160g",
    "price": 3.75,
    "image": "https://static.extramercado.com.br/img/uploads/1/782/33368782.png"
-  }
- },
- {
-  "id": "6287fb3560",
-  "kind": "v2-junta",
-  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
-  "diff": [],
-  "a": {
-   "market": "Atacadão",
-   "name": "Aparelho de Barbear Bic Comfort 4 un",
-   "price": 16.68,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2255641/g.jpg.jpg?v=639288054139070000"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Aparelho De Barbear Bic Comfort3 Embalagem 4Un",
-   "price": 16.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/261468.webp"
-  }
- },
- {
-  "id": "1694a5019a",
-  "kind": "v2-junta",
-  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
-  "diff": [
-   "classic"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Chocolate ao Leite Nestle Classic 80g",
-   "price": 10.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/250722.webp"
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Chocolate Nestle Ao Leite 80g",
-   "price": 9.49,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/f25a257a-23c9-4e46-80bb-6b4116accd76.jpg"
   }
  },
  {
@@ -438,23 +479,46 @@
   }
  },
  {
-  "id": "fd2fa4c242",
+  "id": "cca35825fc",
   "kind": "v2-junta",
   "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
   "diff": [
-   "congelado"
+   "torrado",
+   "moido"
   ],
   "a": {
    "market": "Atacadão",
-   "name": "Filé de Peito de Frango Zip Sadia Congelado 1kg",
-   "price": 19.98,
-   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239186/g.jpg.jpg?v=639287928746400000"
+   "name": "Café Pilão Extra Forte Vácuo 500g",
+   "price": 23.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246483/g.jpg.jpg?v=639287974845230000"
   },
   "b": {
    "market": "Semar",
-   "name": "Filé de Peito de Frango Sadia 1Kg",
-   "price": 26.9,
-   "image": "https://edge.osuper.com.br/Xo1XPGjpAsgv0PmdJEKgRJ6iYJg=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284158958dc18e55a3bff00/502136-d61f511a.png"
+   "name": "Café Torrado e Moído a Vácuo Extraforte Pilão Pacote 500g",
+   "price": 23.69,
+   "image": "https://edge.osuper.com.br/49RqlYe8wX8EBEZe8tSjHEvK0hM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108950d518e45c36fb00/432589-55963114.webp"
+  }
+ },
+ {
+  "id": "af70da7ce2",
+  "kind": "v2-junta",
+  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
+  "diff": [
+   "vacuo",
+   "torrado",
+   "moido"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Café Pilão Extra Forte Vácuo 500g",
+   "price": 23.9,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2246483/g.jpg.jpg?v=639287974845230000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Café Torrado e Moído Extraforte Pilão Pacote 500g",
+   "price": 23.69,
+   "image": "https://edge.osuper.com.br/jvEWDH7ddtqEOgiulMRf60KJ7MM=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108950d518e45c31f20c/248060-9b6d5664.jpg"
   }
  },
  {
@@ -518,65 +582,6 @@
   }
  },
  {
-  "id": "d1491a461d",
-  "kind": "v2-junta",
-  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
-  "diff": [],
-  "a": {
-   "market": "Semar",
-   "name": "Macarrão Renata Grano Duro Fusilli 500g",
-   "price": 8.9,
-   "image": "https://edge.osuper.com.br/RjYqQRuehyuZGqngEZMDcxBQK94=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-product-vault.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e28410895ade1ae55f32f907/39054-700444c9.jpg"
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Macarrão Renata Grano Duro Fusili 500g",
-   "price": 6.29,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/f40e3cde-e956-4a59-a4c7-9c2c21efeac1.jpg"
-  }
- },
- {
-  "id": "ec0edefafe",
-  "kind": "v2-junta",
-  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
-  "diff": [
-   "congelado"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Filezinho de Frango Congelado Aurora 1kg",
-   "price": 23.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/864664.webp"
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Frango Filezinho Aurora Zip 1kg",
-   "price": 20.9,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/e31228d3-4267-4be7-8de7-f2155a35166b.jpg"
-  }
- },
- {
-  "id": "fc2cdf82fb",
-  "kind": "v2-junta",
-  "why": "o novo agrupamento JUNTA (a regra antiga não juntava)",
-  "diff": [
-   "cremoso",
-   "copo"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Requeijão Cremoso Light Vigor 200G",
-   "price": 9.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/863179.webp"
-  },
-  "b": {
-   "market": "Spani",
-   "name": "Requeijão Copo Vigor Light 200g",
-   "price": 8.99,
-   "image": "https://produto-assets-vipcommerce-com-br.br-se1.magaluobjects.com/500x500/a6040a4b-4674-45ef-aae0-ca3eb9a76680.jpg"
-  }
- },
- {
   "id": "c42eadefe7",
   "kind": "v2-recusa",
   "why": "o novo agrupamento NÃO junta",
@@ -619,26 +624,6 @@
   }
  },
  {
-  "id": "32064f887e",
-  "kind": "v2-recusa",
-  "why": "o novo agrupamento NÃO junta",
-  "diff": [
-   "fina"
-  ],
-  "a": {
-   "market": "Coop",
-   "name": "Batata Palha Extra Fina Parmesão Yoki 100g",
-   "price": 9.99,
-   "image": "https://coopsp.vtexassets.com/arquivos/ids/249226/7891095031177_99_1_1200_72_SRGB.png?v=638947477616100000"
-  },
-  "b": {
-   "market": "Nagumo",
-   "name": "Batata Palha Extrafina Parmesão Yoki 100G",
-   "price": 7.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/236457.webp"
-  }
- },
- {
   "id": "f5eaf70956",
   "kind": "v2-recusa",
   "why": "o novo agrupamento NÃO junta",
@@ -664,7 +649,6 @@
   "kind": "v2-recusa",
   "why": "o novo agrupamento NÃO junta",
   "diff": [
-   "fina",
    "parmesao",
    "sache"
   ],
@@ -704,27 +688,6 @@
   }
  },
  {
-  "id": "c49929b060",
-  "kind": "v2-recusa",
-  "why": "o novo agrupamento NÃO junta",
-  "diff": [
-   "lata",
-   "lt"
-  ],
-  "a": {
-   "market": "Nagumo",
-   "name": "Energético Original Tnt Lata 473Ml",
-   "price": 6.98,
-   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/698467.webp"
-  },
-  "b": {
-   "market": "Semar",
-   "name": "Energetico Tnt Original Lt 473ml",
-   "price": 8.99,
-   "image": "https://edge.osuper.com.br/qH9bn5P08fOuiV0n3BrFOX3hRec=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/8550b36e-energatico-tnt-energy-drink-473ml-1.png"
-  }
- },
- {
   "id": "3aeb4f4de5",
   "kind": "v2-recusa",
   "why": "o novo agrupamento NÃO junta",
@@ -752,7 +715,6 @@
   "kind": "v2-recusa",
   "why": "o novo agrupamento NÃO junta",
   "diff": [
-   "fina",
    "parmesao"
   ],
   "a": {
@@ -1011,6 +973,46 @@
    "name": "Bolo De Chocolate Pullman 250G",
    "price": 8.98,
    "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/101165.webp"
+  }
+ },
+ {
+  "id": "d361085abc",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "salgado"
+  ],
+  "a": {
+   "market": "Nagumo",
+   "name": "Biscoito De Polvilho Biscoitone Embalagem 150G",
+   "price": 7.98,
+   "image": "https://ngostpubprd001.blob.core.windows.net/produtos/assets/ofertas-ecommerce/180542.webp"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Biscoito de Polvilho Salgado Biscoitone 150g",
+   "price": 7.99,
+   "image": "https://edge.osuper.com.br/TcMCcTMV7OHoH7ggYJnoJuekphU=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-semarsupermercados.s3.sa-east-1.amazonaws.com/657b6339-BiscoitodePolvilhoSalgadoBiscoitone150g_73e232a5-c313-40de-a67a-0f6b6385e337.jpg.jpeg"
+  }
+ },
+ {
+  "id": "fe17f137dc",
+  "kind": "v2-recusa",
+  "why": "o novo agrupamento NÃO junta",
+  "diff": [
+   "gota"
+  ],
+  "a": {
+   "market": "Atacadão",
+   "name": "Bolo Pullman Gotas de Chocolate 250g",
+   "price": 8.99,
+   "image": "https://atacadaobr.vtexassets.com/arquivos/ids/2239319/g.jpg.jpg?v=639287931329300000"
+  },
+  "b": {
+   "market": "Semar",
+   "name": "Bolo de Chocolate Pullman 250G",
+   "price": 8.49,
+   "image": "https://edge.osuper.com.br/f18k1cEo4cd_ItkSFtJo2wozCDA=/fit-in/400x400/filters:fill(FFFFFF):background_color(white)/https://produtos-osuper.s3.sa-east-1.amazonaws.com/934f78e66b9c78d0e284108958de1be35e32fa0c/304754-c657e1dd.webp"
   }
  }
 ]
