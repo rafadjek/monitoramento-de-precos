@@ -23,7 +23,10 @@ const OUT = path.join(IN, 'juiz-veredictos.json');
 const LABELS = path.join(ROOT, 'data/rotulos/rotulos.json');
 const CANDS = path.join(ROOT, 'data/rotulos/candidatos.json');
 // chave do juiz primeiro; esgotada a cota do dia, usa a do leitor de encartes (que já leu os encartes antes, no workflow)
-const KEYS = [...new Set([process.env.GEMINI_JUIZ_KEY, process.env.GEMINI_API_KEY].filter(Boolean))];
+// Cada projeto do AI Studio tem cota própria (20 pedidos por dia por modelo no plano grátis): mais chaves = mais pares por dia.
+// Ordem: GEMINI_JUIZ_KEY, GEMINI_JUIZ_KEY_2, GEMINI_JUIZ_KEY_3... e só no fim a do leitor de encartes.
+const chavesExtras = Object.keys(process.env).filter((k) => /^GEMINI_JUIZ_KEY_\d+$/.test(k)).sort((a, b) => parseInt(a.split('_').pop()) - parseInt(b.split('_').pop())).map((k) => process.env[k]);
+const KEYS = [...new Set([process.env.GEMINI_JUIZ_KEY, ...chavesExtras, process.env.GEMINI_API_KEY].filter(Boolean))];
 const KEY = KEYS[0];
 let keyIdx = 0;
 const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash').split(',');
@@ -107,6 +110,8 @@ async function ask(pairs, examples) {
       if ((/PerDay|per day/i.test(t) || lim === '0' || onModel >= 1) && modelIdx < MODELS.length - 1) { modelIdx++; onModel = -1; continue; }
       if (/PerDay|per day/i.test(t) && keyIdx < KEYS.length - 1) { keyIdx++; modelIdx = 0; onModel = -1; falhas.push('trocou para a chave do leitor'); continue; }
       if (/PerDay|per day/i.test(t)) throw new Error('gemini: cota do dia esgotada');
+      // erro 5xx (alta demanda) repetido no último modelo: tenta a próxima chave em vez de esperar sempre no mesmo lugar
+      if (r.status >= 500 && onModel >= 2 && keyIdx < KEYS.length - 1) { keyIdx++; modelIdx = 0; onModel = -1; falhas.push('trocou de chave por erro 5xx'); continue; }
       await sleep(Math.min(30 * (onModel + 1), 120) * 1000);
       continue;
     }
@@ -223,6 +228,13 @@ if (provedor === 'gemini' && (state.prova?.hash !== hash || process.argv.include
     const test = all.filter((x) => fold(x) === f), examples = all.filter((x) => fold(x) !== f);
     for (const [k, val] of await judge(test, examples)) v.set(k, val);
   }
+  const semResposta = labels.filter((x) => v.get(x.id)?.same === undefined).length;
+  if (semResposta / labels.length >= 0.2) {
+    // cota esgotada ou API instável no meio da prova: resposta vazia não é erro do juiz. Mantém a prova e o "ativo" de antes.
+    console.warn(`juiz: prova abandonada (${semResposta} de ${labels.length} sem resposta); fica a prova anterior e o estado "ativo" não muda`);
+    state.provaAbandonada = { em: new Date().toISOString(), semResposta, total: labels.length };
+  } else {
+  delete state.provaAbandonada;
   let acertos = 0, regra = 0;
   const erros = [];
   for (const x of labels) {
@@ -234,6 +246,7 @@ if (provedor === 'gemini' && (state.prova?.hash !== hash || process.argv.include
   state.prova = { em: new Date().toISOString(), hash, total: labels.length, acertos, regra, taxa: acertos / labels.length, taxaRegra: regra / labels.length, fotos: all.filter((x) => x.imgA && x.imgB).length, modelos: [...new Set([...v.values()].map((x) => x.model))], trocas: falhas.slice(-10), erros };
   state.ativo = acertos / labels.length >= META && acertos > regra;
   delete state.erro;
+  }
 }
 const pv = state.prova;
 console.log(`juiz: prova ${pv.acertos}/${pv.total} (${(100 * pv.taxa).toFixed(0)}%); regra atual ${pv.regra}/${pv.total}; ativo: ${state.ativo}`);
@@ -314,7 +327,9 @@ if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini
   const deEncarte = (o) => o.source === 'encarte' || !CATALOGOS.has(o.market);
   const encarte = (c) => deEncarte(offers[c.ia]) || deEncarte(offers[c.ib]);
   const vez = new Map(); // oferta -> quantos pares dela já vieram antes
-  const fila = [...cand.values()].sort((x, y) => x.d - y.d);
+  // Foto do Semar dá erro fora do navegador (bloqueio do site, não contornamos): par sem foto de nenhum lado não gasta cota de visão
+  const semFoto = (o) => !o.imageUrl || o.market === 'Semar';
+  const fila = [...cand.values()].filter((c) => !(semFoto(offers[c.ia]) && semFoto(offers[c.ib]))).sort((x, y) => x.d - y.d);
   for (const c of fila) { c.vez = Math.max(vez.get(c.ia) ?? 0, vez.get(c.ib) ?? 0); vez.set(c.ia, (vez.get(c.ia) ?? 0) + 1); vez.set(c.ib, (vez.get(c.ib) ?? 0) + 1); }
   // dentro do mesmo grau, o par mais provável de ser o mesmo produto vem primeiro (sem palavra de variante na diferença,
   // nomes parecidos, preço próximo): a cota do dia é pequena e o juiz quase sempre diz "diferente" para sabor e cor
