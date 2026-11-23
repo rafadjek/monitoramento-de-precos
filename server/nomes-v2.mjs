@@ -10,6 +10,8 @@ import { GRUPOS_VARIACAO } from './variacao.mjs';
 // Palavras que só descrevem o produto (valem as de SOFT em group.mjs e estas).
 export const NEUTRAS_V2 = new Set([
   'sabor', 'semola', 'cremoso', 'cremosa', 'congelado', 'congelada', 'roupa', 'massa', 'brasileiro', 'uht', 'nacional',
+  // vindas da conferência do Rafael (22/11): "Biscoito de Polvilho Salgado", "Recheado" e "Flow Pack" são o mesmo produto sem a palavra
+  'salgado', 'recheado', 'flow',
   // embalagem (separadas por classe em EMBALAGEM abaixo). Decisão do Rafael: lata e sachê de um lado só NÃO são neutros
   // (Nescau lata x sachê são produtos diferentes); garrafa, pet e vidro são, com squeeze e copo.
   'squeeze', 'copo', 'garrafa', 'pet', 'vidro',
