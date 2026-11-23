@@ -1,5 +1,5 @@
 {
- "em": "2026-11-22T19:47:13.363Z",
+ "em": "2026-11-23T00:46:11.699Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 35
+   "posts": 30
   },
   {
    "net": "fb",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":515,\"pc_status\":515,\"cb_status\":515,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed,"
+   "posts": 0
   },
   {
    "teste": "socialcrawl",
@@ -68,7 +68,7 @@
   },
   "Lourencini": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 13,
    "video": 4,
    "semCodigo": 1,
@@ -113,21 +113,21 @@
   },
   "Carnes Santana": {
    "net": "ig",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "Sacolão São Jorge": {
-   "net": "ig",
    "tentativas": 1,
    "recebidos": 12,
    "video": 2,
    "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 10
+  },
+  "Sacolão São Jorge": {
+   "net": "ig",
+   "tentativas": 2,
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
   },
   "Consulado do Churrasco": {
    "net": "ig",
@@ -139,6 +139,33 @@
    "aproveitados": 1
   },
   "Nevada (fb)": {
+   "net": "fb",
+   "tentativas": 2,
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "STUK (fb)": {
+   "net": "fb",
+   "tentativas": 2,
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Lourencini (fb)": {
+   "net": "fb",
+   "tentativas": 2,
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
+  },
+  "Família Lima (fb)": {
    "net": "fb",
    "tentativas": 2,
    "recebidos": 0,

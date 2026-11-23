@@ -1,38 +1,6 @@
 [
   {
     "market": "Roldão",
-    "offerId": "5105-16.11-22.11",
-    "validFrom": null,
-    "validUntil": "2026-11-23T02:59:59.000Z",
-    "validityNote": "Comerciante: 16.11 a 22.11",
-    "stores": [
-      "todas as lojas Roldão"
-    ],
-    "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
-    "referer": "https://roldao.com.br/ofertas/",
-    "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-LANCHONETE-16-A-22-11-2026.pdf"
-    ],
-    "collectedAt": "2026-11-22T19:47:08.970Z"
-  },
-  {
-    "market": "Roldão",
-    "offerId": "5124-19.11-22.11",
-    "validFrom": null,
-    "validUntil": "2026-11-23T02:59:59.000Z",
-    "validityNote": "Fim de Semana Arrasador (REDE PRÉ BLACK): 19.11 a 22.11",
-    "stores": [
-      "Roldão Mauá"
-    ],
-    "storeScope": "Encarte \"Fim de Semana Arrasador (REDE PRÉ BLACK)\" das lojas que incluem Mauá",
-    "referer": "https://roldao.com.br/ofertas/",
-    "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PRE-BLACK-REDE-19-A-22-11-2026-3.pdf"
-    ],
-    "collectedAt": "2026-11-22T19:47:08.970Z"
-  },
-  {
-    "market": "Roldão",
     "offerId": "5133-20.11-23.11",
     "validFrom": null,
     "validUntil": "2026-11-24T02:59:59.000Z",
@@ -45,6 +13,22 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-22T19:47:08.970Z"
+    "collectedAt": "2026-11-23T00:46:08.560Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5136-23.11-29.11",
+    "validFrom": null,
+    "validUntil": "2026-11-30T02:59:59.000Z",
+    "validityNote": "Comerciante: 23.11 a 29.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-23-A-29-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-23T00:46:08.560Z"
   }
 ]
