@@ -1,5 +1,5 @@
 {
- "em": "2026-11-23T01:35:05.329Z",
+ "em": "2026-11-23T01:54:30.601Z",
  "servicos": [
   {
    "net": "ig",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE html\\u"
+   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE "
   },
   {
    "teste": "socialcrawl",
@@ -77,7 +77,7 @@
   },
   "Família Lima": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 13,
    "video": 0,
    "semCodigo": 1,
@@ -86,7 +86,7 @@
   },
   "Mercado Capital": {
    "net": "ig",
-   "tentativas": 1,
+   "tentativas": 2,
    "recebidos": 13,
    "video": 3,
    "semCodigo": 1,
@@ -95,7 +95,7 @@
   },
   "Mercadinho Parceiro": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 12,
    "video": 5,
    "semCodigo": 0,
@@ -122,7 +122,7 @@
   },
   "Sacolão São Jorge": {
    "net": "ig",
-   "tentativas": 1,
+   "tentativas": 2,
    "recebidos": 12,
    "video": 2,
    "semCodigo": 0,
@@ -137,6 +137,15 @@
    "semCodigo": 1,
    "semImagem": 0,
    "aproveitados": 1
+  },
+  "Nevada (fb)": {
+   "net": "fb",
+   "tentativas": 2,
+   "recebidos": 0,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 0
   }
  }
 }
