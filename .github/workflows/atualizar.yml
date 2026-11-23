@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/collectors/instagram-data.mjs', 'server/collectors/atacadao-folheto.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
+    paths: ['app/**', 'server/build-site.mjs', 'server/readers/**', 'server/collectors/baronesa.mjs', 'server/collectors/assai.mjs', 'server/collectors/joanin.mjs', 'server/collectors/roldao.mjs', 'server/collectors/dia.mjs', 'server/collectors/social.mjs', 'server/collectors/instagram-data.mjs', 'server/collectors/atacadao-folheto.mjs', 'server/judge.mjs', 'server/group.mjs', 'server/nomes-v2.mjs', 'server/variacao.mjs', 'server/data/rotulos/rotulos.json', '.github/workflows/atualizar.yml']
 
 permissions:
   contents: write
