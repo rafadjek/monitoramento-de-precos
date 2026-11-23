@@ -2,6 +2,8 @@
 // Regra conservadora: mesmo tamanho (em unidade base) E mesmo conjunto de palavras significativas.
 // Diferença de uma palavra só vale se for palavra "neutra" (embalagem, marketing). Na dúvida, não junta.
 import { normalizeEan } from './ean.mjs';
+import { pareQuaseIgualV2 } from './nomes-v2.mjs';
+import { conflitoDeRegra } from './variacao.mjs';
 
 // "sem" fica de fora: muda o produto (sem gás, sem lactose, sem açúcar).
 const STOP = new Set(['de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'para', 'a', 'o', 'c', 'por']);
@@ -95,23 +97,83 @@ export function signature(o) {
 // Marca de cada oferta (primeira palavra, sem acento). Quem não informa a marca (Semar, Spani, encartes)
 // ganha a marca deduzida do nome: uma palavra do nome que, nos mercados que informam marca, é a marca
 // em >= 60% dos nomes onde aparece (e em >= 3 ofertas). Mais de uma marca no nome (combo, kit) = sem marca.
-export function brandKeys(offers) {
-  const first = (o) => strip(o.brand ?? '').split(/\s+/)[0] || null;
-  const asBrand = new Map(), inName = new Map();
+// Marca de mais de uma palavra ("Do Valle", "Sabor Máximo", "Da Colônia"): a chave é a primeira palavra, ou as
+// duas primeiras quando a primeira é artigo/preposição ("do", "da"); no nome ela é achada pelas palavras coladas
+// ("do valle", "dovalle" e "DoValle" dão a mesma coisa), com a mesma regra dos 60%.
+const palavrasCruas = (name) => strip(name).replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
+const PREPOSICAO = new Set(['do', 'da', 'de', 'dos', 'das', 'o', 'a']);
+const chaveDaMarca = (brand) => {
+  const w = palavrasCruas(brand);
+  if (!w.length) return null;
+  return PREPOSICAO.has(w[0]) && w.length > 1 ? w[0] + w[1] : w[0];
+};
+export function brandKeys(offers, diag = null) {
+  const first = (o) => chaveDaMarca(o.brand);
   const toks = offers.map((o) => new Set(tokens(o.name)));
+  // marcas de mais de uma palavra: texto colado -> chave
+  const multi = new Map();
+  for (const o of offers) { const w = palavrasCruas(o.brand ?? ''); if (w.length > 1) multi.set(w.join(''), chaveDaMarca(o.brand)); }
+  const multiNome = offers.map((o) => {
+    const w = palavrasCruas(o.name), achadas = new Set();
+    for (let n = 1; n <= 3; n++) for (let i = 0; i + n <= w.length; i++) { const k = w.slice(i, i + n).join(''); if (multi.has(k)) achadas.add(k); }
+    return achadas;
+  });
+  // asBrand: forma da marca como aparece no nome (singular, igual ao que tokens() faz) -> { key, n }
+  const asBrand = new Map(), inName = new Map();
+  const asBrandMulti = new Map(), inNameMulti = new Map();
   offers.forEach((o, i) => {
     const b = first(o);
     if (!b) return;
-    if (toks[i].has(b)) asBrand.set(b, (asBrand.get(b) ?? 0) + 1);
+    const cheia = palavrasCruas(o.brand).join('');
+    if (multi.has(cheia) && multiNome[i].has(cheia)) asBrandMulti.set(cheia, (asBrandMulti.get(cheia) ?? 0) + 1);
+    for (const k of multiNome[i]) inNameMulti.set(k, (inNameMulti.get(k) ?? 0) + 1);
+    const forma = singular(b);
+    if (toks[i].has(forma)) { const e = asBrand.get(forma) ?? { key: b, n: 0 }; e.n++; asBrand.set(forma, e); }
     for (const w of toks[i]) inName.set(w, (inName.get(w) ?? 0) + 1);
   });
-  const dict = new Set([...asBrand].filter(([b, n]) => n >= 3 && b.length >= 3 && !/^\d+$/.test(b) && n / inName.get(b) >= 0.6).map(([b]) => b));
+  const MIN_MARCA = Number(process.env.MIN_MARCA || 2); // ofertas que informam a marca para ela entrar no dicionário
+  const dict = new Map([...asBrand].filter(([f, e]) => e.n >= MIN_MARCA && f.length >= 3 && !/^\d+$/.test(f) && e.n / inName.get(f) >= 0.6));
+  const dictMulti = new Map([...asBrandMulti].filter(([k, n]) => n >= MIN_MARCA && k.length >= 5 && n / inNameMulti.get(k) >= 0.6).map(([k, n]) => [k, { key: multi.get(k), n }]));
+  if (diag) { diag.dict = dict; diag.dictMulti = dictMulti; }
   return offers.map((o, i) => {
     const b = first(o);
     if (b) return b;
-    const found = [...toks[i]].filter((w) => dict.has(w));
-    return found.length === 1 ? found[0] : null;
+    const multis = [...multiNome[i]].filter((k) => dictMulti.has(k));
+    // a palavra solta que faz parte de uma marca de várias palavras já achada ("casa", "mae" em "Casa de Mãe") não conta à parte
+    const soltas = [...toks[i]].filter((w) => dict.has(w) && !multis.some((k) => k.includes(w)));
+    const achadas = new Map();
+    for (const w of soltas) { const e = dict.get(w); achadas.set(e.key, Math.max(achadas.get(e.key) ?? 0, e.n)); }
+    for (const k of multis) { const e = dictMulti.get(k); achadas.set(e.key, Math.max(achadas.get(e.key) ?? 0, e.n)); }
+    if (achadas.size === 1) return [...achadas.keys()][0];
+    if (achadas.size === 0) return null;
+    // duas marcas no nome: marca e submarca ("Nissin Cup Noodles", "Bauducco Fini") ou combo. A bem mais conhecida
+    // (3 vezes mais ofertas que informam) vence; parecidas = combo, sem marca.
+    const ord = [...achadas].sort((x, y) => y[1] - x[1]);
+    return ord[0][1] >= 3 * ord[1][1] ? ord[0][0] : null;
   });
+}
+
+// Nomes quase iguais (mesma marca e mesmo tamanho; quem chama confere isso).
+// v2 (padrão, Fase 17.4): nomes-v2.mjs + trava de variação do juiz. GROUP_V2=0 volta à regra antiga:
+// as palavras que sobram de um lado ou do outro são todas da lista SOFT e o preço é parecido (até 30%).
+export function pareQuaseIgual(ca, cb, pa, pb, nomeA = '', nomeB = '') {
+  if (process.env.GROUP_V2 !== '0') {
+    if (nomeA && nomeB && conflitoDeRegra(nomeA, nomeB)) return false;
+    return pareQuaseIgualV2(ca, cb, SOFT, pa, pb);
+  }
+  const diff = [...ca].filter((t) => !cb.has(t)).concat([...cb].filter((t) => !ca.has(t)));
+  if (!diff.length || !diff.every((t) => SOFT.has(t))) return false;
+  if (pa > 0 && pb > 0 && Math.max(pa, pb) / Math.min(pa, pb) > 1.3) return false;
+  return true;
+}
+
+// Decisão só pelo nome, para um par de ofertas (sem EAN, sem vereditos): a mesma que o agrupamento toma.
+// ba e bb são as marcas (brandKeys). Usada pela ferramenta de medição (tools/gabarito.mjs).
+export function mesmoPorNome(oa, ob, ba, bb) {
+  const sa = signature(oa), sb = signature(ob);
+  if (sa.key && sa.key === sb.key) return true;
+  if (!sa.size || sa.size !== sb.size || !ba || ba !== bb) return false;
+  return pareQuaseIgual(sa.core, sb.core, oa.price, ob.price, oa.name, ob.name);
 }
 
 // Chave estável de um par de ofertas (mercado + nome normalizado), igual nos dois sentidos.
@@ -187,10 +249,7 @@ export function groupOffers(offers, decide = () => undefined) {
       if (verdict === false) continue;
       // veredito "mesmo produto": junta mesmo com palavras diferentes (preço até 50% de diferença, por segurança)
       if (verdict === true) { if (!(pa > 0 && pb > 0 && ratio(pa, pb) > 1.5)) union(a, b, false); continue; }
-      const ca = sigs[a].core, cb = sigs[b].core;
-      const diff = [...ca].filter((t) => !cb.has(t)).concat([...cb].filter((t) => !ca.has(t)));
-      if (!diff.length || !diff.every((t) => SOFT.has(t))) continue;
-      if (pa > 0 && pb > 0 && ratio(pa, pb) > 1.3) continue;
+      if (!pareQuaseIgual(sigs[a].core, sigs[b].core, pa, pb, offers[a].name, offers[b].name)) continue;
       union(a, b, false);
     }
   }

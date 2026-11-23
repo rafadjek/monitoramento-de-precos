@@ -1,0 +1,150 @@
+{
+ "gerado": "2026-11-23T00:28:16.551Z",
+ "metodo": "atual",
+ "ean": {
+  "treino": {
+   "pares": 30448,
+   "mesmo": 4480,
+   "tp": 1692,
+   "fp": 78,
+   "fn": 2788,
+   "tn": 25890,
+   "precisao": 0.9559,
+   "cobertura": 0.3777
+  },
+  "teste": {
+   "pares": 8551,
+   "mesmo": 1153,
+   "tp": 529,
+   "fp": 27,
+   "fn": 624,
+   "tn": 7371,
+   "precisao": 0.9514,
+   "cobertura": 0.4588
+  }
+ },
+ "semEan": {
+  "rafael": {
+   "pares": 144,
+   "mesmo": 71,
+   "tp": 15,
+   "fp": 2,
+   "fn": 56,
+   "tn": 71,
+   "precisao": 0.8824,
+   "cobertura": 0.2113
+  },
+  "ia": {
+   "pares": 0,
+   "mesmo": 0,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "tn": 0,
+   "precisao": null,
+   "cobertura": null
+  },
+  "tudo": {
+   "pares": 144,
+   "mesmo": 71,
+   "tp": 15,
+   "fp": 2,
+   "fn": 56,
+   "tn": 71,
+   "precisao": 0.8824,
+   "cobertura": 0.2113
+  }
+ },
+ "foraDaComparacao": {
+  "Assaí": {
+   "ofertas": 237,
+   "fora": 39,
+   "pctFora": 16.5
+  },
+  "Atacadão": {
+   "ofertas": 6850,
+   "fora": 608,
+   "pctFora": 8.9
+  },
+  "Baronesa": {
+   "ofertas": 28,
+   "fora": 19,
+   "pctFora": 67.9
+  },
+  "Coop": {
+   "ofertas": 4462,
+   "fora": 419,
+   "pctFora": 9.4
+  },
+  "Extra": {
+   "ofertas": 6284,
+   "fora": 601,
+   "pctFora": 9.6
+  },
+  "Família Lima": {
+   "ofertas": 49,
+   "fora": 29,
+   "pctFora": 59.2
+  },
+  "Joanin": {
+   "ofertas": 128,
+   "fora": 32,
+   "pctFora": 25
+  },
+  "Lourencini": {
+   "ofertas": 1,
+   "fora": 0,
+   "pctFora": 0
+  },
+  "Mercadinho Parceiro": {
+   "ofertas": 24,
+   "fora": 11,
+   "pctFora": 45.8
+  },
+  "Mercado Baratinho": {
+   "ofertas": 13,
+   "fora": 4,
+   "pctFora": 30.8
+  },
+  "Mercado Capital": {
+   "ofertas": 1,
+   "fora": 1,
+   "pctFora": 100
+  },
+  "Nagumo": {
+   "ofertas": 8678,
+   "fora": 678,
+   "pctFora": 7.8
+  },
+  "Nevada": {
+   "ofertas": 16,
+   "fora": 3,
+   "pctFora": 18.8
+  },
+  "Roldão": {
+   "ofertas": 38,
+   "fora": 4,
+   "pctFora": 10.5
+  },
+  "Semar": {
+   "ofertas": 9732,
+   "fora": 4013,
+   "pctFora": 41.2
+  },
+  "Spani": {
+   "ofertas": 3396,
+   "fora": 898,
+   "pctFora": 26.4
+  },
+  "STUK": {
+   "ofertas": 7,
+   "fora": 0,
+   "pctFora": 0
+  },
+  "Tony BRJ Carnes": {
+   "ofertas": 176,
+   "fora": 152,
+   "pctFora": 86.4
+  }
+ }
+}

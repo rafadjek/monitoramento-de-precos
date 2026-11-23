@@ -148,3 +148,66 @@ test('item vendido por kg não agrupa com pacote do mesmo peso', () => {
   const kg = { market: 'A', name: 'Bisteca Suína Sadia 500g', size: null, condition: 'preço por kg' };
   assert.ok(!grouped(kg, o('B', 'Bisteca Suína Sadia 500g')));
 });
+
+// ---------- Fase 17.3: marcas de mais de uma palavra, plural e submarca ----------
+const mk = (market, name, brand = null) => ({ market, name, brand, price: 5 });
+const informantes = (marca, nome, n = 4) => Array.from({ length: n }, (_, i) => mk(['A', 'B', 'C', 'D'][i % 4], `${nome} ${100 + i}g`, marca));
+
+test('marca no plural (Trakinas) entra no dicionário e vale para quem não informa marca', () => {
+  const k = brandKeys([...informantes('Trakinas', 'Biscoito Recheado Trakinas Chocolate'), mk('S', 'Biscoito Recheado Trakinas Morango 126g')]);
+  assert.equal(k.at(-1), 'trakinas');
+});
+
+test('marca com preposição (Do Valle) vale colada ou separada', () => {
+  const k = brandKeys([...informantes('Do Valle', 'Fubá Mimoso Do Valle'), mk('S', 'FAROFA DOVALLE TEMP. 400G PC'), mk('S', 'Cuscuz Do Valle 500g'), mk('S', 'Arroz Branco 5kg')]);
+  assert.equal(k.at(-3), 'dovalle');
+  assert.equal(k.at(-2), 'dovalle');
+  assert.equal(k.at(-1), null);
+  assert.equal(k[0], 'dovalle'); // quem informa "Do Valle" também fica com 'dovalle', não com o artigo 'do'
+});
+
+test('marca de duas palavras (Casa de Mãe) não vira combo com as palavras soltas', () => {
+  const k = brandKeys([...informantes('Casa de Mãe', 'Farinha Casa de Mãe'), ...informantes('Mãe Terra', 'Granola Mãe Terra'), mk('S', 'Batata Palha Casa de Mae Extra Fina 400g')]);
+  assert.equal(k.at(-1), 'casa');
+});
+
+test('marca e submarca (Nissin Cup Noodles): a mais conhecida vence; duas parecidas continuam combo', () => {
+  const nissin = Array.from({ length: 12 }, (_, i) => mk('A', `Macarrão Instantâneo Nissin ${i}`, 'Nissin'));
+  const cup = Array.from({ length: 2 }, (_, i) => mk('B', `Cup Noodles Galinha ${i}`, 'Cup Noodles'));
+  const k = brandKeys([...nissin, ...cup, mk('S', 'Macarrão Instantâneo Nissin Cup Noodles Galinha 69g')]);
+  assert.equal(k.at(-1), 'nissin');
+  const liza = informantes('Liza', 'Óleo de Soja Liza'), pilao = informantes('Pilão', 'Café Pilão Tradicional');
+  assert.equal(brandKeys([...liza, ...pilao, mk('S', 'Combo Óleo Liza 900ml + Café Pilão 500g')]).at(-1), null);
+});
+
+// ---------- Fase 17.4: regra v2 de nomes (nomes-v2.mjs) ----------
+test('v2: abreviação, erro de uma letra e palavra neutra nova juntam', () => {
+  assert.ok(grouped(b('A', 'Biscoito Recheado Choc Bauducco 140g', 'Bauducco', 3.3), b('B', 'Biscoito Recheado Chocolate Bauducco 140g', 'Bauducco', 3.5)));
+  assert.ok(grouped(b('A', 'Macarrão Espaguete Adria Sêmola 500g', 'Adria', 4.5), b('B', 'Macarrão Espaguete Adria 500g', 'Adria', 4.7)));
+  assert.ok(grouped(b('A', 'Refresco em Pó Tang Sabor Laranja 25g', 'Tang', 1.5), b('B', 'Refresco em Pó Tang Laranja 25g', 'Tang', 1.6)));
+  assert.ok(grouped(b('A', 'Requeijão Cremoso Vigor 200g', 'Vigor', 8.9), b('B', 'Requeijão Vigor 200g', 'Vigor', 9.4)));
+});
+
+test('v2: variante de um lado só (sabor, cor, versão) nunca junta', () => {
+  assert.ok(!grouped(b('A', 'Iogurte Grego Vigor 90g', 'Vigor', 3.7), b('B', 'Iogurte Grego Vigor Frutas Vermelhas 90g', 'Vigor', 3.9)));
+  assert.ok(!grouped(b('A', 'Iogurte Grego Vigor Frutas Vermelhas 90g', 'Vigor', 3.7), b('B', 'Iogurte Grego Vigor Frutas Amarelas 90g', 'Vigor', 3.9)));
+  assert.ok(!grouped(b('A', 'Leite Condensado Moça 395g', 'Moça', 8.5), b('B', 'Leite Condensado Moça Semidesnatado 395g', 'Moça', 8.9)));
+  assert.ok(!grouped(b('A', 'Suco Integral Aurora 1,5L', 'Aurora', 19.9), b('B', 'Suco Integral Aurora Tinto 1,5L', 'Aurora', 19.9)));
+  assert.ok(!grouped(b('A', 'Bala Butter Toffees 400g', 'Arcor', 18.9), b('B', 'Bala Arcor Butter Toffees Intense Chocolate 400g', 'Arcor', 21.9)));
+  assert.ok(!grouped(b('A', 'Biscoito Club Social 141g', 'Club Social', 5.9), b('B', 'Biscoito Club Social Pão de Alho 141g', 'Club Social', 6.2)));
+});
+
+test('v2: embalagem e forma diferentes separam (lata x garrafa, líquido x pó)', () => {
+  assert.ok(!grouped(b('A', 'Cerveja Heineken Lata 350ml', 'Heineken', 5.5), b('B', 'Cerveja Heineken Garrafa 350ml', 'Heineken', 5.9)));
+  assert.ok(!grouped(b('A', 'Lava Roupas Líquido Omo 1,6kg', 'Omo', 29.9), b('B', 'Lava Roupas em Pó Omo 1,6kg', 'Omo', 28.9)));
+  assert.ok(!grouped(b('A', 'Achocolatado em Pó Nescau 370g', 'Nescau', 12.9), b('B', 'Achocolatado em Pó Nescau Sachê 370g', 'Nescau', 13.5)));
+});
+
+test('v2: preço muito distante não junta; interruptor GROUP_V2=0 volta à regra antiga', () => {
+  assert.ok(!grouped(b('A', 'Macarrão Espaguete Adria Sêmola 500g', 'Adria', 4.5), b('B', 'Macarrão Espaguete Adria 500g', 'Adria', 9.9)));
+  process.env.GROUP_V2 = '0';
+  try {
+    assert.ok(!grouped(b('A', 'Macarrão Espaguete Adria Sêmola 500g', 'Adria', 4.5), b('B', 'Macarrão Espaguete Adria 500g', 'Adria', 4.7))); // 'semola' não é SOFT
+    assert.ok(grouped(b('A', 'Café Melitta Tradicional 500g', 'Melitta', 22.9), b('B', 'Café Torrado e Moído Melitta Tradicional Vácuo 500g', 'Melitta', 24.9)));
+  } finally { delete process.env.GROUP_V2; }
+});

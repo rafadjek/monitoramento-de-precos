@@ -1,5 +1,6 @@
 import { lazy, startTransition, Suspense, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { buildGroups, each, norm, type Group, type Indexed, type Offer } from './lib';
+import { migrateCart, migrateFavs, precisaMigrar, type Aliases } from './aliases';
 import { decodeCart, keyOf, type CartItem } from './cart';
 import { ProductList } from './components/ProductList';
 import { CartPanel } from './components/CartPanel';
@@ -113,6 +114,12 @@ function Comparador() {
       setMarkets(first);
       setGeneratedAt(idx.generatedAt);
       setHist(idx.hist ?? null);
+      // grupos que se juntaram desde a última visita: troca os ids guardados (favoritos e lista) pelos novos
+      const aliases: Aliases = idx.aliases ?? {};
+      if (Object.keys(aliases).length) {
+        setFavs((cur) => { if (!precisaMigrar([...cur], aliases)) return cur; const n = new Set(migrateFavs([...cur], aliases)); save('bate-favoritos', [...n]); return n; });
+        setCartState((cur) => { if (!precisaMigrar(cur.map((c) => c.g), aliases)) return cur; const n = migrateCart(cur, aliases); save('bate-lista', n); return n; });
+      }
       setAll(prepare(parts));
       setStatus('ok');
       // uma farmácia por vez: a busca passa a incluí-la quando ela chega; falha numa não derruba as outras

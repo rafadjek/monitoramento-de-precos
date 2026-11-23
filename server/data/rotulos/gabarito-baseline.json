@@ -1,0 +1,44 @@
+{
+ "gerado": "2026-11-22 (antes da Fase 17.3)",
+ "metodo": "regra antiga (SOFT, preço 1,3), marca só pela primeira palavra",
+ "nota": "Medido na 17.2, antes de mudar marcas e regras. Mesmos gabaritos de hoje (tools/gabarito.mjs).",
+ "ean": {
+  "treino": {
+   "pares": 28566,
+   "mesmo": 4150,
+   "tp": 1294,
+   "fp": 37,
+   "precisao": 0.9722,
+   "cobertura": 0.3118
+  },
+  "teste": {
+   "pares": 8417,
+   "mesmo": 1132,
+   "tp": 383,
+   "fp": 24,
+   "precisao": 0.941,
+   "cobertura": 0.3383
+  }
+ },
+ "semEan": {
+  "rafael": {
+   "pares": 144,
+   "mesmo": 71,
+   "tp": 10,
+   "fp": 1,
+   "precisao": 0.9091,
+   "cobertura": 0.1408
+  }
+ },
+ "foraDaComparacao": {
+  "Assaí": 16.9,
+  "Atacadão": 8.9,
+  "Coop": 9.4,
+  "Extra": 9.8,
+  "Joanin": 25.8,
+  "Nagumo": 7.8,
+  "Semar": 45.7,
+  "Spani": 36.3,
+  "Tony BRJ Carnes": 86.4
+ }
+}

@@ -13,6 +13,7 @@ import crypto from 'node:crypto';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 import { pairKey, offerKey, brandKeys, signature, strip, groupOffers } from './group.mjs';
+import { conflitoDeRegra } from './variacao.mjs';
 import { normalizeEan } from './ean.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -57,28 +58,6 @@ Exceção de encarte: oferta que vale para vários sabores ("sabores", "diversos
 que qualquer sabor incluído, de mesma marca e tamanho; sem tamanho no encarte, vale o tamanho mais comum da marca.
 Não responda false só porque um lado escreve menos palavras: faltar uma palavra descritiva não é diferença.
 Siga o critério dos exemplos já decididos pelo dono do site: eles mostram até onde ele considera "o mesmo produto".`;
-
-// Filtro de regra antes do juiz (não gasta cota): os dois nomes dizem sabor ou versão, e são diferentes.
-// Só vale quando OS DOIS lados dizem algo; um lado calado é dúvida e vai para o juiz. Encarte "sabores/diversos" nunca cai aqui.
-// Cada grupo é comparado à parte: sabor com sabor, versão do leite com versão do leite etc.
-const GRUPOS_VARIACAO = [
-  ['morango', 'uva', 'laranja', 'limao', 'chocolate', 'baunilha', 'coco', 'abacaxi', 'maracuja', 'pessego', 'framboesa',
-    'menta', 'hortela', 'cereja', 'banana', 'maca', 'manga', 'goiaba', 'caju', 'acerola', 'tangerina', 'melancia', 'amendoim', 'avela',
-    'caramelo', 'frango', 'carne', 'presunto', 'calabresa', 'bacon', 'cebola', 'picanha', 'costela', 'camarao', 'atum', 'sardinha'],
-  ['integral', 'desnatado', 'semidesnatado'],
-  ['sem gas', 'com gas'],
-  ['sem sal', 'com sal'],
-  ['zero', 'light', 'diet'],
-];
-const norm = (nome) => ' ' + strip(nome).replace(/[^a-z0-9]+/g, ' ').replace(/ semi desnatad/g, ' semidesnatad') + ' ';
-export function conflitoDeRegra(nomeA, nomeB) {
-  if (/\bsabores\b|divers|varios|sortid/i.test(strip(nomeA + ' ' + nomeB))) return false;
-  const na = norm(nomeA), nb = norm(nomeB);
-  return GRUPOS_VARIACAO.some((g) => {
-    const a = g.filter((v) => na.includes(' ' + v + ' ')), b = g.filter((v) => nb.includes(' ' + v + ' '));
-    return a.length && b.length && (a.length !== b.length || a.some((v) => !b.includes(v)));
-  });
-}
 
 const SCHEMA = { type: 'OBJECT', properties: { results: { type: 'ARRAY', items: { type: 'OBJECT', properties: { id: { type: 'STRING' }, same: { type: 'BOOLEAN' } }, required: ['id', 'same'] } } }, required: ['results'] };
 const fmt = (o) => `${o.market} | ${o.name}${o.price ? ` | R$ ${Number(o.price).toFixed(2)}` : ''}`;

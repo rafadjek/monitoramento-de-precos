@@ -172,12 +172,37 @@ try {
   for (const x of JSON.parse(fs.readFileSync(path.join(ROOT, 'data/rotulos/rotulos.json'), 'utf8')))
     if (x.label === 'mesmo' || x.label === 'diferente') verdicts.set(pairKey(x.a, x.b), x.label === 'mesmo');
 } catch { /* sem rótulos */ }
-const groups = groupOffers(flat, (i, j) => verdicts.get(pairKey(flat[i], flat[j])));
+const decide = (i, j) => verdicts.get(pairKey(flat[i], flat[j]));
+const groups = groupOffers(flat, decide);
 index.verdicts = verdicts.size;
-for (const g of groups) {
-  const gid = crypto.createHash('sha1').update(g.key).digest('hex').slice(0, 10);
-  for (const i of g.idx) flat[i].g = gid;
+const gidOf = (key) => crypto.createHash('sha1').update(key).digest('hex').slice(0, 10);
+// Ids estáveis (Fase 17): o carrinho e os favoritos guardam o id do grupo. Quando as regras novas juntam grupos que antes
+// eram separados, o grupo novo fica com um dos ids antigos (o menor) e os outros viram "alias" no index.json,
+// para o site trocar os ids guardados no navegador. O agrupamento antigo é calculado com GROUP_V2=0, só para isso.
+const aliases = {};
+{
+  const gv2 = process.env.GROUP_V2;
+  process.env.GROUP_V2 = '0';
+  const antigos = groupOffers(flat, decide);
+  if (gv2 === undefined) delete process.env.GROUP_V2; else process.env.GROUP_V2 = gv2;
+  const antigoDe = new Map(); // índice da oferta -> id do grupo antigo
+  for (const g of antigos) { const id = gidOf(g.key); for (const i of g.idx) antigoDe.set(i, id); }
+  const usados = new Set();
+  const escolhidos = groups.map((g) => {
+    const ids = [...new Set(g.idx.map((i) => antigoDe.get(i)).filter(Boolean))].sort();
+    return { g, ids };
+  });
+  // quem tem id antigo primeiro, para que um grupo sem passado nunca tome o id de outro
+  for (const e of escolhidos.filter((x) => x.ids.length)) {
+    const gid = e.ids.find((id) => !usados.has(id)) ?? gidOf(e.g.key);
+    usados.add(gid);
+    e.gid = gid;
+    for (const id of e.ids) if (id !== gid) aliases[id] = gid;
+  }
+  for (const e of escolhidos.filter((x) => !x.ids.length)) { e.gid = gidOf(e.g.key); usados.add(e.gid); }
+  for (const e of escolhidos) for (const i of e.g.idx) flat[i].g = e.gid;
 }
+index.aliases = aliases;
 for (const o of flat) delete o.ean; // só serve para agrupar; o site não usa
 
 // Histórico (historico.mjs): o site baixa só o pedaço do produto aberto (data/hist/NN.json, 30 dias)
