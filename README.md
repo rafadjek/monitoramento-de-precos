@@ -3,10 +3,10 @@
 (repositório `monitoramento-de-precos`)
 
 > **Ficha rápida**
-> - Testar: `npm test` em `server/` (60 testes) e em `app/` (70 testes); `node server/build-site.mjs` + `npm run dev --prefix app` para ver o site.
+> - Testar: `npm test` em `server/` (65 testes) e em `app/` (70 testes); `node server/build-site.mjs` + `npm run dev --prefix app` para ver o site.
 > - Onde roda: coleta e leitura no GitHub Actions (`atualizar.yml`, todo dia 01h17; farmácias em `farmacias.yml`, 22h47); site em https://bate-ofertas.pages.dev (Cloudflare Pages).
-> - Variáveis de ambiente (segredos do repositório, só os nomes): `GEMINI_API_KEY`, `GEMINI_JUIZ_KEY`, `OPENROUTER_API_KEY`, `GROQ_API_KEY`, `APIFY_TOKEN`, `BRIGHTDATA_TOKEN`, `SCRAPECREATORS_KEY`, `SOCIALCRAWL_KEY`, `CRAWLBASE_TOKEN` (segredo `CRAWLBASE_API`), `CLOUDFLARE_API_TOKEN`.
-> - Último teste validado: 2026-11-22 (testes do servidor e do app, build completo do site com a regra v2 e medição no gabarito). Folheto do Atacadão conferido em 22/11: 9 de 9 itens verificáveis batem com o PDF.
+> - Variáveis de ambiente (segredos do repositório, só os nomes): `GEMINI_API_KEY`, `GEMINI_JUIZ_KEY`, `GEMINI_JUIZ_KEY_2`, `GEMINI_JUIZ_KEY_3`, `OPENROUTER_API_KEY`, `OPENCODE_API_KEY`, `GROQ_API_KEY`, `APIFY_TOKEN`, `BRIGHTDATA_TOKEN`, `SCRAPECREATORS_KEY`, `SOCIALCRAWL_KEY`, `CRAWLBASE_TOKEN` (segredo `CRAWLBASE_API`), `CLOUDFLARE_API_TOKEN`.
+> - Último teste validado: 2026-11-23 (65 testes do servidor e medição no gabarito com as palavras acessórias da Fase 18.1); build completo do site validado em 2026-11-22. Folheto do Atacadão conferido em 22/11: 9 de 9 itens verificáveis batem com o PDF.
 
 Site que reúne os preços de **alimentícios, higiene e limpeza** dos mercados da região, com busca e filtros. Qualquer pessoa usa pelo navegador. No celular dá para instalar como app (botão "Instalar" no Chrome/Android; no iPhone, Compartilhar → Adicionar à Tela de Início), e ele abre sem internet com os preços da última visita.
 
@@ -155,6 +155,17 @@ Cada parte também roda sozinha, com os comandos `api`, `vtex`, `sitemap`, `inst
 - **Juiz de IA** (`judge.mjs`): a fila agora vai dos pares mais prováveis (sem palavra de variante na diferença, nomes parecidos, preço próximo) aos menos. Atenção: dos 3.865 pares em `juiz-veredictos.json`, só 20 foram julgados por IA (16 "mesmo"); os outros 3.845 foram barrados pela trava de variação, sem IA. A cota grátis do dia acaba cedo.
 
 **Ofertas do Dia** (`app/src/offers.ts`, testado em `offers.test.ts`): escolhe por tipo de produto (mercearia, frescos, laticínios e bebidas, higiene, limpeza, farmácia, outros), uma de cada tipo por rodada, até 8 por mercado; farmácia no máximo 4 de 20 e com desconto de até 40% (o "de" de farmácia é preço de tabela). Preço de app (sem cartão) conta como oferta.
+
+## Ficha por produto (Fase 18, 2026-11-23)
+
+O Rafael respondeu 60 pares da fila do juiz e 59 eram o mesmo produto: a regra de nomes era cautelosa demais e o juiz par a par (com fotos) levaria de 8 a 15 dias para zerar a fila. A troca, vinda de uma pesquisa do Rafael sobre resolução de entidades, foi **ler cada produto uma vez em vez de cada par**: a fila tem ~25 mil pares, mas só ~14,5 mil nomes.
+
+- **Palavras acessórias (18.1, `nomes-v2.mjs`):** aerosol, neutro, doce, clareador, refil, vácuo, almofada, torrado, moído e outras das respostas de 23/11 não separam mais; "ao/na/no" saíram da comparação (`STOP` em `group.mjs`). **"Lata" de um lado só junta só em bebida** e quando o outro lado não cita embalagem (Monster, Stella, Pitú); fora de bebida continua separando (Nescau 370g x Nescau lata 370g, porque existe sachê do mesmo peso). Medição: rótulos do Rafael 95,6% / 28% → 97,3% / 46% (precisão / cobertura).
+- **Leitor de fichas (18.2, `fichas.mjs`):** para cada nome, uma IA só de texto devolve marca, produto, linha, versão e sabor/aroma, em lotes de 25 a 40 nomes com id. **Tamanho e unidades não vêm da IA** (continuam com `parseSize`/`parsePack`). Cache em `server/data/extraido/fichas.json` (chave: nome sem acento e minúsculo), gravado a cada lote. Provedores: Gemini **Flash-Lite** (`gemini-flash-lite-latest`, `gemini-3.5-flash-lite`; cota própria por modelo, não disputa com o juiz, que usa o Flash), depois Groq e OpenRouter. Sobrecarga (503) alterna de provedor e volta depois; só cota do dia esgotada descarta. Nos modelos 3.x o "não pensar" é `thinkingLevel: 'minimal'` (`thinkingBudget: 0` dá erro 400). Passo "Fichas dos produtos" no workflow, só na coleta agendada ou manual; primeiro os nomes da fila (`tools/fila-provavel.mjs 0 --nomes`).
+- **Regra campo a campo (18.3, `fichas-regra.mjs`, testes em `fichas.test.mjs`):** mesmo produto quando nada conflita. Separa: sabor/versão que os dois nomes dizem e são outros (`conflitoDeRegra`), palavra de variante conhecida de um lado só, linha diferente dita pelos dois lados (Clear Men x Sports Men), versão de verdade de um lado só (light, zero, integral...), sabor diferente dos dois lados, e "Original" de um lado com sabor do outro (Pinho Sol Original x Lavanda). Não separa: versão descritiva de um lado só ("longa vida" x "UHT") nem sabor de um lado só fora da lista de variantes (Hot Pocket X-Burguer x X-Burguer Barbecue). Palavras próprias **dos dois lados** (Espaguete Furado x Conchinha) vão para o juiz com fotos.
+- **No site (18.4):** os "mesmo" da ficha entram como vereditos em `build-site.mjs`, abaixo do juiz e dos rótulos do Rafael. **Ficam desligados até a medição passar de 95%** (`GROUP_FICHA=1` liga). O juiz já pula os pares que a ficha marca como conflito claro.
+- **Descartado da pesquisa:** embeddings (testados em 8/11, confundiam marcas; com a ficha a comparação é campo a campo), reranker (o juiz com fotos faz esse papel) e a API Cosmos (paga).
+- **Medição em 23/11 (amostra pequena, 89 pares dos rótulos com ficha):** ficha 94,1% de precisão e 62,7% de cobertura, contra 81,8% e 17,6% da regra de nomes nos mesmos pares.
 
 ## Configuração (uma vez)
 
