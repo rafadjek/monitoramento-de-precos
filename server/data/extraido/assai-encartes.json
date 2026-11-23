@@ -1,93 +1,56 @@
 [
   {
     "market": "Assaí",
-    "offerId": "176161-883",
-    "validFrom": "2026-11-16T03:00:00.000Z",
-    "validUntil": "2026-11-23T02:59:59.000Z",
+    "offerId": "176561-883",
+    "validFrom": "2026-11-23T03:00:00.000Z",
+    "validUntil": "2026-11-27T02:59:59.000Z",
     "vigente": true,
-    "validityNote": "Preços válidos de 16/11/2026 até 22/11/2026",
+    "validityNote": "Preços válidos de 23/11/2026 até 26/11/2026",
     "stores": [
       "Assaí Ribeirão Pires",
       "Assaí Shop. Mauá"
     ],
     "images": [
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176161/campanha-176161-cluster-883-pagina-1.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176161/campanha-176161-cluster-883-pagina-2.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176161/campanha-176161-cluster-883-pagina-3.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176161/campanha-176161-cluster-883-pagina-4.jpeg"
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176561/campanha-176561-cluster-883-pagina-1.jpeg",
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176561/campanha-176561-cluster-883-pagina-2.jpeg",
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176561/campanha-176561-cluster-883-pagina-3.jpeg",
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176561/campanha-176561-cluster-883-pagina-4.jpeg"
     ],
     "storeScope": "Encarte das lojas Assaí Ribeirão Pires e Mauá",
-    "collectedAt": "2026-11-23T02:07:43.272Z"
+    "collectedAt": "2026-11-23T13:30:39.070Z"
   },
   {
     "market": "Assaí",
-    "offerId": "176164-883",
-    "validFrom": "2026-11-16T03:00:00.000Z",
-    "validUntil": "2026-11-23T02:59:59.000Z",
+    "offerId": "176562-883",
+    "validFrom": "2026-11-23T03:00:00.000Z",
+    "validUntil": "2026-11-27T02:59:59.000Z",
     "vigente": true,
-    "validityNote": "Preços válidos de 16/11/2026 até 22/11/2026",
+    "validityNote": "Preços válidos de 23/11/2026 até 26/11/2026",
     "stores": [
       "Assaí Ribeirão Pires",
       "Assaí Shop. Mauá"
     ],
     "images": [
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176164/campanha-176164-cluster-883-pagina-1.jpeg"
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176562/campanha-176562-cluster-883-pagina-1.jpeg"
     ],
     "storeScope": "Encarte das lojas Assaí Ribeirão Pires e Mauá",
-    "collectedAt": "2026-11-23T02:07:43.272Z"
+    "collectedAt": "2026-11-23T13:30:39.070Z"
   },
   {
     "market": "Assaí",
-    "offerId": "176165-883",
-    "validFrom": "2026-11-16T03:00:00.000Z",
-    "validUntil": "2026-11-23T02:59:59.000Z",
+    "offerId": "176563-883",
+    "validFrom": "2026-11-23T03:00:00.000Z",
+    "validUntil": "2026-11-24T02:59:59.000Z",
     "vigente": true,
-    "validityNote": "Preços válidos de 16/11/2026 até 22/11/2026",
+    "validityNote": "Preços válidos para 23/11/2026",
     "stores": [
       "Assaí Ribeirão Pires",
       "Assaí Shop. Mauá"
     ],
     "images": [
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176165/campanha-176165-cluster-883-pagina-1.jpeg"
+      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176563/campanha-176563-cluster-883-pagina-1.jpeg"
     ],
     "storeScope": "Encarte das lojas Assaí Ribeirão Pires e Mauá",
-    "collectedAt": "2026-11-23T02:07:43.272Z"
-  },
-  {
-    "market": "Assaí",
-    "offerId": "176344-739",
-    "validFrom": "2026-11-19T03:00:00.000Z",
-    "validUntil": "2026-11-23T02:59:59.000Z",
-    "vigente": true,
-    "validityNote": "Preços válidos de 19/11/2026 até 22/11/2026",
-    "stores": [
-      "Assaí Ribeirão Pires",
-      "Assaí Shop. Mauá"
-    ],
-    "images": [
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176344/campanha-176344-cluster-739-pagina-1.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176344/campanha-176344-cluster-739-pagina-2.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176344/campanha-176344-cluster-739-pagina-3.jpeg",
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176344/campanha-176344-cluster-739-pagina-4.jpeg"
-    ],
-    "storeScope": "Encarte das lojas Assaí Ribeirão Pires e Mauá",
-    "collectedAt": "2026-11-23T02:07:43.272Z"
-  },
-  {
-    "market": "Assaí",
-    "offerId": "176454-883",
-    "validFrom": "2026-11-20T03:00:00.000Z",
-    "validUntil": "2026-11-23T02:59:59.000Z",
-    "vigente": true,
-    "validityNote": "Preços válidos de 20/11/2026 até 22/11/2026",
-    "stores": [
-      "Assaí Ribeirão Pires",
-      "Assaí Shop. Mauá"
-    ],
-    "images": [
-      "https://d2q57q7k4hzryv.cloudfront.net/RPA/v3/176454/campanha-176454-cluster-883-pagina-1.jpeg"
-    ],
-    "storeScope": "Encarte das lojas Assaí Ribeirão Pires e Mauá",
-    "collectedAt": "2026-11-23T02:07:43.272Z"
+    "collectedAt": "2026-11-23T13:30:39.070Z"
   }
 ]

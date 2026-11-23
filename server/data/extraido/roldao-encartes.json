@@ -13,7 +13,23 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-23T02:07:58.452Z"
+    "collectedAt": "2026-11-23T13:30:51.954Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5139-23.11-26.11",
+    "validFrom": null,
+    "validUntil": "2026-11-27T02:59:59.000Z",
+    "validityNote": "Hortifruti (REDE BLACK WEEK): 23.11 a 26.11",
+    "stores": [
+      "Roldão Mauá"
+    ],
+    "storeScope": "Encarte \"Hortifruti (REDE BLACK WEEK)\" das lojas que incluem Mauá",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTIFRUTI-BLACK-WEEK-REDE-23-A-26-11-2026-3.pdf"
+    ],
+    "collectedAt": "2026-11-23T13:30:51.954Z"
   },
   {
     "market": "Roldão",
@@ -29,6 +45,6 @@
     "images": [
       "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-23-A-29-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-23T02:07:58.452Z"
+    "collectedAt": "2026-11-23T13:30:51.954Z"
   }
 ]

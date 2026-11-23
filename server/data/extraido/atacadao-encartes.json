@@ -7,10 +7,10 @@
     "validUntil": "2026-11-24T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
-      "Mauá Itapark",
-      "Mauá João Ramalho"
+      "Mauá João Ramalho",
+      "Mauá Itapark"
     ],
-    "storeScope": "Folheto das lojas de Mauá: Mauá Itapark, Mauá João Ramalho",
+    "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
       "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1-wYJMhc1maUWr2XLj1Qg1Akr4MAcuBs7"
@@ -18,7 +18,7 @@
     "imageKeys": [
       "atacadao:1-wYJMhc1maUWr2XLj1Qg1Akr4MAcuBs7"
     ],
-    "collectedAt": "2026-11-23T02:10:54.145Z"
+    "collectedAt": "2026-11-23T13:34:30.997Z"
   },
   {
     "market": "Atacadão",
@@ -28,10 +28,10 @@
     "validUntil": "2026-11-24T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
-      "Mauá Itapark",
-      "Mauá João Ramalho"
+      "Mauá João Ramalho",
+      "Mauá Itapark"
     ],
-    "storeScope": "Folheto das lojas de Mauá: Mauá Itapark, Mauá João Ramalho",
+    "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
       "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69"
@@ -39,7 +39,7 @@
     "imageKeys": [
       "atacadao:1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69"
     ],
-    "collectedAt": "2026-11-23T02:10:54.145Z"
+    "collectedAt": "2026-11-23T13:34:30.997Z"
   },
   {
     "market": "Atacadão",
@@ -49,10 +49,10 @@
     "validUntil": "2026-11-24T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
-      "Mauá Itapark",
-      "Mauá João Ramalho"
+      "Mauá João Ramalho",
+      "Mauá Itapark"
     ],
-    "storeScope": "Folheto das lojas de Mauá: Mauá Itapark, Mauá João Ramalho",
+    "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
       "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk"
@@ -60,7 +60,7 @@
     "imageKeys": [
       "atacadao:1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk"
     ],
-    "collectedAt": "2026-11-23T02:10:54.145Z"
+    "collectedAt": "2026-11-23T13:34:30.997Z"
   },
   {
     "market": "Atacadão",
@@ -70,10 +70,10 @@
     "validUntil": "2026-11-27T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
-      "Mauá Itapark",
-      "Mauá João Ramalho"
+      "Mauá João Ramalho",
+      "Mauá Itapark"
     ],
-    "storeScope": "Folheto das lojas de Mauá: Mauá Itapark, Mauá João Ramalho",
+    "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
       "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1XioqaqOYvgBwBzZWk9Zc7OLc1pruZeQN"
@@ -81,6 +81,6 @@
     "imageKeys": [
       "atacadao:1XioqaqOYvgBwBzZWk9Zc7OLc1pruZeQN"
     ],
-    "collectedAt": "2026-11-23T02:10:54.145Z"
+    "collectedAt": "2026-11-23T13:34:30.997Z"
   }
 ]
