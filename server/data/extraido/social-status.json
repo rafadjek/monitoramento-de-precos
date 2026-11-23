@@ -1,5 +1,5 @@
 {
- "em": "2026-11-23T01:54:30.601Z",
+ "em": "2026-11-23T02:08:01.507Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 35
+   "erro": "HTTP 520 {\"original_status\":\"0\",\"pc_status\":0,\"cb_status\":0,\"url\":\"https://www.instagram.com/lourencinisupermercados/\",\"domain_complexity\":\"standard\",\"body\":\"Request fai"
   },
   {
    "net": "fb",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE "
+   "erro": "HTTP 520 {\"original_status\":615,\"pc_status\":615,\"cb_status\":615,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed,"
   },
   {
    "teste": "socialcrawl",
@@ -65,78 +65,6 @@
    "semCodigo": 1,
    "semImagem": 0,
    "aproveitados": 4
-  },
-  "Lourencini": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
-  "Família Lima": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 0,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 12
-  },
-  "Mercado Capital": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 13,
-   "video": 3,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 9
-  },
-  "Mercadinho Parceiro": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 12,
-   "video": 5,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 7
-  },
-  "Mercado Baratinho": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
-  "Carnes Santana": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 12,
-   "video": 2,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 10
-  },
-  "Sacolão São Jorge": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 12,
-   "video": 2,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 10
-  },
-  "Consulado do Churrasco": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 11,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 1
   },
   "Nevada (fb)": {
    "net": "fb",
