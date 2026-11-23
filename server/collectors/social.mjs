@@ -33,8 +33,8 @@ const MARKETS = {
   Lourencini: { ig: 'lourencinisupermercados', fb: 'https://www.facebook.com/LourenciniSupermercados/', daily: false },
   // Comércio de bairro: segment 'bairro' vai ao manifesto; cidades = onde ficam as lojas.
   'Família Lima': { ig: 'supermercadofamilialima', fb: 'https://www.facebook.com/supermercadofamilialima/', daily: false, segment: 'bairro', cidades: ['Mauá', 'Ribeirão Pires'] },
-  'Mercado Capital': { ig: 'mercadocapitalmaua', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
-  'Mercadinho Parceiro': { ig: 'mercadinhoparceiro', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
+  'Mercado Capital': { ig: 'mercadocapitalmaua', fb: 'https://www.facebook.com/profile.php?id=61572556502031', /* Mercado Capital Itapark */ daily: false, segment: 'bairro', cidades: ['Mauá'] },
+  'Mercadinho Parceiro': { ig: 'mercadinhoparceiro', fb: 'https://www.facebook.com/p/mercadinho-Parceiro-61560723461690/', daily: false, segment: 'bairro', cidades: ['Mauá'] },
   'Mercado Baratinho': { ig: 'mercadobaratinhooficial', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] }, // 3 lojas
   'Carnes Santana': { ig: '_carnessantanamaua', fb: null, daily: false, segment: 'bairro', cidades: ['Mauá'] },
   // Em teste (saem à parte, não vão para o site):
@@ -61,7 +61,9 @@ function findWhen(p) {
 }
 const recent = (iso) => iso && Date.parse(iso) >= SINCE;
 const marketOfIg = (u) => Object.entries(MARKETS).find(([, v]) => v.ig === String(u || '').toLowerCase())?.[0];
-const marketOfFb = (s) => Object.entries(MARKETS).find(([, v]) => v.fb && String(s || '').toLowerCase().includes(v.fb.split('/')[3].toLowerCase()))?.[0];
+// Chave da página: o número (links /p/nome-123 e profile.php?id=123) ou o nome em facebook.com/<nome>/.
+const fbKey = (u) => (u.match(/\d{10,}/) || [u.split('/')[3]])[0].toLowerCase();
+const marketOfFb = (s) => Object.entries(MARKETS).find(([, v]) => v.fb && String(s || '').toLowerCase().includes(fbKey(v.fb)))?.[0];
 // imagens de post (CDN do Instagram/Facebook) achadas em qualquer campo; foto de perfil fica de fora
 function findImages(obj, out = []) {
   if (typeof obj === 'string') { if (/^https:\/\/[^ ]*(cdninstagram|fbcdn|scontent)[^ ]*/.test(obj) && !/s150x150|p50x50|profile_pic|\/v\/t1\.30497/.test(obj)) out.push(obj); }
