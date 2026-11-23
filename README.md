@@ -3,10 +3,10 @@
 (repositório `monitoramento-de-precos`)
 
 > **Ficha rápida**
-> - Testar: `npm test` em `server/` (45 testes) e em `app/` (61 testes); `node server/build-site.mjs` + `npm run dev --prefix app` para ver o site.
+> - Testar: `npm test` em `server/` (60 testes) e em `app/` (70 testes); `node server/build-site.mjs` + `npm run dev --prefix app` para ver o site.
 > - Onde roda: coleta e leitura no GitHub Actions (`atualizar.yml`, todo dia 01h17; farmácias em `farmacias.yml`, 22h47); site em https://bate-ofertas.pages.dev (Cloudflare Pages).
 > - Variáveis de ambiente (segredos do repositório, só os nomes): `GEMINI_API_KEY`, `GEMINI_JUIZ_KEY`, `OPENROUTER_API_KEY`, `GROQ_API_KEY`, `APIFY_TOKEN`, `BRIGHTDATA_TOKEN`, `SCRAPECREATORS_KEY`, `SOCIALCRAWL_KEY`, `CRAWLBASE_TOKEN` (segredo `CRAWLBASE_API`), `CLOUDFLARE_API_TOKEN`.
-> - Último teste validado: 2026-11-22 (testes do servidor e do app, build do site e conferência visual dos logos). Folheto do Atacadão conferido em 22/11: 9 de 9 itens verificáveis batem com o PDF.
+> - Último teste validado: 2026-11-22 (testes do servidor e do app, build completo do site com a regra v2 e medição no gabarito). Folheto do Atacadão conferido em 22/11: 9 de 9 itens verificáveis batem com o PDF.
 
 Site que reúne os preços de **alimentícios, higiene e limpeza** dos mercados da região, com busca e filtros. Qualquer pessoa usa pelo navegador. No celular dá para instalar como app (botão "Instalar" no Chrome/Android; no iPhone, Compartilhar → Adicionar à Tela de Início), e ele abre sem internet com os preços da última visita.
 
@@ -139,6 +139,19 @@ Cada parte também roda sozinha, com os comandos `api`, `vtex`, `sitemap`, `inst
 **Folheto do Atacadão.** `collectors/atacadao-folheto.mjs` consulta as lojas de Mauá na API de folhetos e grava `atacadao-encartes.json` (um item por folheto vigente, cache pela id do folheto). O leitor grava em `atacadao-folheto.json` (campo `arquivo` do manifesto), para não apagar o catálogo `atacadao.json`, e o `build-site` junta os dois arquivos no mesmo mercado "Atacadão". A idade máxima de 48 h vale só para o catálogo. O preço "oferta ativada no APP" vira o principal (só pede CPF); o do app "pagando com cartão" fica como observação. O folheto é o último da fila de leitura, para não tirar a vez dos mercados de bairro. Os 7 PDFs de 22/11: 5 têm texto; um (7 páginas de imagem) só sai por IA; PDF com mais de 4 páginas vai direto ao Gemini, e um deles estourou o tempo uma vez (leitura repetida na rodada seguinte). Itens "a partir de N un." às vezes ficam sem a condição, e o preço "a cada 100g" aparece com essa condição escrita.
 
 **Logos.** `app/public/logos/`: Família Lima, Mercado Capital, Mercado Baratinho, Carnes Santana, Tony BRJ (arquivos enviados pelo Rafael), Drogaria São Paulo (seeklogo), Farma Conde (site da loja) e STUK (imagem de compartilhamento do site). Todos os mercados têm logo em arquivo (o do Mercadinho Parceiro foi enviado pelo Rafael em 22/11). Cada logo tem um fator `k` em `Parts.tsx` (`LOGOS`) que amplia o chip na proporção do formato: logo quadrado ou com letra miúda fica mais alto (até 1,6x), logo largo um pouco mais (1,3x); altura e largura máxima crescem juntas.
+
+## Produtos iguais e Ofertas do Dia (Fase 17, 2026-11-22)
+
+**Agrupamento por nome, v2** (`server/nomes-v2.mjs`, `server/variacao.mjs`, `brandKeys` em `server/group.mjs`; `GROUP_V2=0` volta à regra antiga):
+- **Marca:** `brandKeys` agora entende marca no plural ("Trakinas"), com artigo ("Do Valle" = "DoValle") e de várias palavras ("Casa de Mãe"), e resolve marca + submarca ("Nissin Cup Noodles"). Ofertas fora da comparação por falta de marca ou tamanho: Semar 45,7% → 41,2%, Spani 36,3% → 26,4%.
+- **Nomes:** para a mesma marca e o mesmo tamanho, as palavras que sobram de cada lado (tolerando abreviação, erro de uma letra, palavra colada e "Lt" = lata) precisam ser todas neutras (lista curada em `NEUTRAS_V2` e `SOFT`); preço até 1,5 vez. Nunca junta se a diferença tem sabor, cor, light/zero, versão ou número (mesmo de um lado só), nem embalagem diferente (lata × garrafa × sachê; decisão do Rafael: lata e sachê de um lado só não são neutros) nem forma diferente (líquido × pó × barra). "Congelado" de um lado só pede preço até 1,2 vez.
+- **Ids estáveis:** o carrinho e os favoritos guardam o id do grupo. Quando grupos se juntam, o novo fica com o menor id antigo e `index.json` traz `aliases` (id antigo → novo); o site (`app/src/aliases.ts`) troca os ids guardados no navegador.
+- **Medição** (`node server/tools/gabarito.mjs [--salvar=nome]`): gabarito A, pares com código de barras nos dois lados (mesmo EAN = mesmo produto), dividido por marca em treino e teste; gabarito B, os rótulos do Rafael. Teste de EAN, regra antiga → v2: precisão 94,1% → 94,3%, cobertura 33,8% → 46,2% (parte dos "erros" é o mesmo produto com dois EANs, como café vácuo × almofada). Rótulos do Rafael: cobertura 14% → 25% (18 certos, 2 errados em 20 juntadas; amostra pequena). Números de antes em `server/data/rotulos/gabarito-baseline.json`, os de agora em `gabarito-v2.json`.
+- **Resultado no site:** ofertas em grupo de 2+ mercados (fora farmácia): Nagumo 22% → 26%, Semar 17% → 20%, Assaí 14% → 17%, Atacadão 48% → 50%, Extra 40% → 42%. O resto depende de o produto existir nos dois mercados.
+- **Conferência:** `node server/tools/conferir-v2.mjs` monta 30 pares que a v2 junta e 20 que recusa (a maioria com Nagumo, Semar ou encartes); a página gerada vai para o artefato https://claude.ai/artifact/1xS2ttcohaF8Yyfd7g7PRU. As respostas do Rafael viram rótulos novos em `rotulos.json` (valem sempre).
+- **Juiz de IA** (`judge.mjs`): a fila agora vai dos pares mais prováveis (sem palavra de variante na diferença, nomes parecidos, preço próximo) aos menos. Atenção: dos 3.865 pares em `juiz-veredictos.json`, só 20 foram julgados por IA (16 "mesmo"); os outros 3.845 foram barrados pela trava de variação, sem IA. A cota grátis do dia acaba cedo.
+
+**Ofertas do Dia** (`app/src/offers.ts`, testado em `offers.test.ts`): escolhe por tipo de produto (mercearia, frescos, laticínios e bebidas, higiene, limpeza, farmácia, outros), uma de cada tipo por rodada, até 8 por mercado; farmácia no máximo 4 de 20 e com desconto de até 40% (o "de" de farmácia é preço de tabela). Preço de app (sem cartão) conta como oferta.
 
 ## Configuração (uma vez)
 
