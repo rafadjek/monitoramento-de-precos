@@ -18,8 +18,12 @@ test('fichas: palavra acessória de um lado só junta (respostas do Rafael de 23
     f('old spice', 'desodorante', '', '', 'brisa do mar'), f('old spice', 'desodorante', '', '', 'brisa do mar')), true);
   assert.equal(decidirPorFicha(o('Leite Longa Vida Ninho Integral 1L', 6.5), o('Leite Uht Ninho Integral 1L', 6.7),
     f('ninho', 'leite', '', 'integral, longa vida'), f('ninho', 'leite', '', 'integral, uht')), true);
+  // sabor contido no outro: dúvida, vai para o juiz com fotos (não junta sozinho, mas também não descarta)
   assert.equal(decidirPorFicha(o('Sanduíche Hot Pocket X-Burguer Barbecue Sadia 145G', 10.98), o('Sanduíche Hot Pocket X-Burguer Sadia 145g', 10.99),
-    f('sadia', 'sanduiche', 'hot pocket', '', 'x-burguer barbecue'), f('sadia', 'sanduiche', 'hot pocket', '', 'x-burguer')), true);
+    f('sadia', 'sanduiche', 'hot pocket', '', 'x-burguer barbecue'), f('sadia', 'sanduiche', 'hot pocket', '', 'x-burguer')), undefined);
+  // sabor ou linha de um lado só (Batata Palha x Batata Palha Parmesão): juiz
+  assert.equal(decidirPorFicha(o('Batata Palha Extra Fina Parmesão Yoki 100g', 9.99), o('Batata Palha Extrafina Yoki 100G', 7.98),
+    f('yoki', 'batata palha', '', 'extra fina', 'parmesao'), f('yoki', 'batata palha', '', 'extrafina', '')), undefined);
 });
 
 test('fichas: linha, sabor ou versão de verdade diferentes separam', () => {

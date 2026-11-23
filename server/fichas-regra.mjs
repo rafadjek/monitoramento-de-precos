@@ -25,6 +25,7 @@ function mesmoTexto(x, y) {
   return true;
 }
 const itensVersao = (v) => String(v || '').split(/\s*[,;/]\s*|\s+e\s+/).map((x) => x.trim()).filter((x) => x && !VERSAO_NEUTRA.has(x));
+const FORTES = new Set(['ovo', 'ovos', 'manteiga', 'parmesao', 'queijo', 'gota', 'gotas', 'recheio', 'cobertura', 'cobertos', 'coberto', 'mel']);
 // as palavras de um estão todas no outro ("zero" e "zero acucar", "lavanda" e "lavanda oriental")
 const contem = (x, y) => { const a = palavras(x), b = palavras(y); const [p, g] = a.length <= b.length ? [a, b] : [b, a]; return p.length > 0 && p.every((w) => g.some((u) => parecida(w, u))); };
 const marcaCompativel =(a, b) => !a || !b || junto(a) === junto(b) || junto(a).includes(junto(b)) || junto(b).includes(junto(a));
@@ -55,12 +56,17 @@ export function decidirPorFicha(oa, ob, fa, fb) {
   const va = itensVersao(fa.versao), vb = itensVersao(fb.versao);
   const soA = va.filter((x) => !vb.some((y) => mesmoTexto(x, y) || contem(x, y))), soB = vb.filter((y) => !va.some((x) => mesmoTexto(x, y) || contem(x, y)));
   if (soA.concat(soB).some((x) => palavras(x).some((w) => VARIANTES.has(w)))) return false;
-  // sabor/aroma: se os dois dizem, tem de ser o mesmo; um lado calado não separa (Hot Pocket X-Burguer x X-Burguer Barbecue)
-  if (fa.sabor && fb.sabor && !mesmoTexto(fa.sabor, fb.sabor) && !contem(fa.sabor, fb.sabor)) return false;
+  // sabor/aroma: se os dois dizem, tem de ser o mesmo ("Gotas de Chocolate" x "Chocolate" é outro produto)
+  // um contido no outro ("X-Burguer" x "X-Burguer Barbecue", "Lavanda" x "Lavanda Oriental") é dúvida: vai para o juiz
+  if (fa.sabor && fb.sabor && !mesmoTexto(fa.sabor, fb.sabor)) return contem(fa.sabor, fb.sabor) ? undefined : false;
   // "Original"/"Tradicional" de um lado e sabor do outro: o original já é um sabor (Pinho Sol Original x Lavanda)
   const padrao = (f) => /\b(original|tradicional|classico)\b/.test(`${f.versao} ${f.linha}`);
   if ((fa.sabor && !fb.sabor && padrao(fb)) || (fb.sabor && !fa.sabor && padrao(fa))) return false;
+  // sabor ou linha de um lado só é dúvida de verdade (Barbecue foi "mesmo", Parmesão, Hot Dog, Crinkle e Lanche não): juiz com fotos
+  if (!fa.sabor !== !fb.sabor || !fa.linha !== !fb.linha) return undefined;
   if (!produtoCompativel(fa.produto, fb.produto)) return undefined;
+  // palavras que mudam a receita e a IA às vezes não anota na versão (macarrão "com ovos" x "sêmola")
+  if (a.concat(b).some((t) => FORTES.has(t))) return undefined;
   // palavras próprias dos DOIS lados (Espaguete Furado x Conchinha, Caseiro x Italiano): o juiz com fotos decide.
   // Palavra a mais de um lado só é embalagem ou descrição (quase todos os "mesmo" do Rafael em 23/11).
   const marcas = new Set(palavras(`${fa.marca} ${fb.marca}`));

@@ -22,6 +22,9 @@ jobs:
     timeout-minutes: 200
     env:
       CHROME_PATH: /usr/bin/google-chrome
+      # Fase 18: vereditos da ficha de cada produto valem no site e tiram pares da fila do juiz (medição de 23/11:
+      # rótulos do Rafael 97,8% de precisão e 74% de cobertura; EAN 98,8% e 53%). '0' desliga.
+      GROUP_FICHA: '1'
     steps:
       - uses: actions/checkout@v4
 
