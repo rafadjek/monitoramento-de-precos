@@ -31,8 +31,9 @@ const KEY = KEYS[0];
 let keyIdx = 0;
 const MODELS = (process.env.JUIZ_MODEL || 'gemini-flash-latest,gemini-3.8-flash').split(',');
 const BATCH = 20; // 20 pares = até 40 fotos por pedido
-const MAX_LOTES = Number(process.env.JUIZ_MAX_LOTES || 40);
-const DEADLINE = Date.now() + Number(process.env.JUIZ_BUDGET_MIN || 20) * 60e3;
+// 40 pedidos por chave de projeto (cada projeto tem 20 pedidos por modelo por dia, e o juiz usa 2 modelos), até 160 por rodada
+const MAX_LOTES = Number(process.env.JUIZ_MAX_LOTES || 40 * Math.min(Math.max(KEYS.length, 1), 4));
+const DEADLINE = Date.now() + Number(process.env.JUIZ_BUDGET_MIN || 45) * 60e3;
 const META = 0.95;
 const FOLDS = 3;
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';

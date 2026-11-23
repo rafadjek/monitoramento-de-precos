@@ -126,7 +126,7 @@ jobs:
         if: github.event_name != 'push'
         working-directory: server
         continue-on-error: true
-        timeout-minutes: 25
+        timeout-minutes: 60
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # chave só do juiz (outro projeto no Google AI Studio = cota própria); sem ela, usa a do leitor
