@@ -34,7 +34,7 @@ const FORMA = { liquido: 'liquido', liquida: 'liquido', po: 'po', barra: 'barra'
 
 const strip = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 // variantes: tudo que as listas do juiz tratam como sabor/versão (só as palavras soltas), mais cores, "frutas vermelhas" etc.
-const VARIANTES = new Set([
+export const VARIANTES = new Set([
   ...GRUPOS_VARIACAO.flatMap((g) => g.flatMap((v) => v.split(' '))),
   'gas', 'sal', 'sem', 'acucar', 'lactose', 'gluten',
   'fruta', 'vermelha', 'vermelho', 'amarela', 'amarelo', 'verde', 'azul', 'preto', 'preta', 'branco', 'branca', 'rosa', 'rose', 'tinto', 'dourado', 'prata',

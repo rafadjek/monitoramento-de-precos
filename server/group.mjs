@@ -19,7 +19,7 @@ const NEUTRAL = new Set([
 // Nomes da mesma marca e do mesmo tamanho que diferem SÓ por elas são o mesmo produto, mesmo com EAN diferente
 // ("Café Melitta Tradicional 500g" x "Café Torrado e Moído Melitta Tradicional Vácuo 500g").
 // Lista fechada de propósito: qualquer outra palavra a mais (sem, zero, light, integral, um sabor) separa.
-const SOFT = new Set([
+export const SOFT = new Set([
   'torrado', 'moido', 'vacuo', 'almofada', 'soluvel', 'vidro',
   'nestle', 'elma', 'chip', 'chips', 'danone',
   'cerveja', 'lager', 'pilsen', 'long', 'neck', 'refrigerante', 'garrafa', 'pet',
