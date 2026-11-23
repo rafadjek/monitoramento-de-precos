@@ -372,7 +372,8 @@ if (state.ativo && !process.argv.includes('--so-prova') && aprovadoProv(provedor
   const diffOf = (a, b) => { const ca = sigs[a].core, cb = sigs[b].core; return [...ca].filter((t) => !cb.has(t)).length + [...cb].filter((t) => !ca.has(t)).length; };
   const cand = new Map();
   // Fase 18: par que a ficha já decidiu (mesmo ou conflito claro) não gasta cota de visão; o juiz fica com a zona cinzenta
-  const porFicha = process.env.GROUP_FICHA === '0' ? new Map() : vereditosPorFicha(offers, lerFichas().fichas);
+  // com a ficha ainda fora do site (GROUP_FICHA != 1), só os conflitos claros ("diferente") saem da fila do juiz
+  const porFicha = new Map([...vereditosPorFicha(offers, lerFichas().fichas)].filter(([, v]) => process.env.GROUP_FICHA === '1' || v === false));
   console.log(`juiz: ${porFicha.size} pares já decididos pela ficha`);
   const add = (a, b, d) => {
     const key = pairKey(offers[a], offers[b]);

@@ -167,8 +167,8 @@ const flat = built.flatMap((b) => b.slim);
 // Vereditos de 'mesmo produto?': os rótulos do Rafael valem sempre; os do juiz com IA só se a prova dele passou.
 const verdicts = new Map();
 // Fase 18: ficha de cada produto (fichas.mjs + fichas-regra.mjs). Só os "mesmo produto" entram, e valem menos que o juiz
-// e os rótulos (que vêm depois e sobrescrevem). GROUP_FICHA=0 desliga.
-if (process.env.GROUP_FICHA !== '0') {
+// e os rótulos (que vêm depois e sobrescrevem). Liga com GROUP_FICHA=1 (no workflow), só depois de medir >= 95%.
+if (process.env.GROUP_FICHA === '1') {
   const { fichas } = lerFichas();
   let n = 0;
   for (const [k, v] of vereditosPorFicha(flat, fichas)) if (v === true) { verdicts.set(k, true); n++; }
