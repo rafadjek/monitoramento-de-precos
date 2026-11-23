@@ -134,6 +134,9 @@ jobs:
           # chaves de mais projetos do AI Studio: cada uma soma a cota de um projeto (opcionais; vazio = ignorada)
           GEMINI_JUIZ_KEY_2: ${{ secrets.GEMINI_JUIZ_KEY_2 }}
           GEMINI_JUIZ_KEY_3: ${{ secrets.GEMINI_JUIZ_KEY_3 }}
+          # visão grátis no formato OpenAI, depois do Gemini e só se passar na prova com os rótulos do dono
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           # segundo juiz (Groq, só texto): entra quando a cota do Gemini acaba, se passou na prova dele
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node judge.mjs

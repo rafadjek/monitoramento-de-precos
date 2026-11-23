@@ -127,7 +127,8 @@ async function ask(pairs, examples) {
 // e só entra quando a cota do Gemini acaba, se a prova dele passou.
 const GROQ_KEY = process.env.GROQ_API_KEY;
 const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
-let provedor = process.argv.includes('--provedor=groq') ? 'groq' : 'gemini';
+const provArg = process.argv.find((a) => a.startsWith('--provedor='))?.slice(11);
+let provedor = ['groq', 'openrouter', 'zen'].includes(provArg) ? provArg : 'gemini';
 // o pedido inteiro tem de caber em 8 mil tokens: vão só os exemplos mais parecidos com os pares do lote (palavras em comum)
 const GROQ_EXEMPLOS = 40;
 const palavras = (s) => new Set(strip(s).split(/[^a-z0-9]+/).filter((w) => w.length > 2));
@@ -159,12 +160,67 @@ async function askGroq(pairs, todos) {
   }
   throw new Error(`groq: limite de uso atingido (${falhas.slice(-4).join(' | ')})`);
 }
+
+// ---------- Provedores de visão no formato OpenAI: OpenRouter (modelos :free) e OpenCode Zen (modelos *-free) ----------
+// Entram depois do Gemini, quando a cota dele acaba, e só depois de passar numa prova própria (garantirProva) com os
+// rótulos do dono: acertar >= META e mais que a regra. Chaves: OPENROUTER_API_KEY (já existe no repositório) e
+// OPENCODE_API_KEY (conta gratuita em opencode.ai; sem ela esse provedor fica desligado). Modelos: JUIZ_OR_MODELS / JUIZ_ZEN_MODELS.
+const COMPAT = {
+  openrouter: { url: 'https://openrouter.ai/api/v1/chat/completions', key: process.env.OPENROUTER_API_KEY, models: (process.env.JUIZ_OR_MODELS || 'google/gemma-4-31b-it:free,nvidia/nemotron-3.5-super-vl:free').split(',').map((x) => x.trim()).filter(Boolean) },
+  zen: { url: 'https://opencode.ai/inference/openai/v1/chat/completions', key: process.env.OPENCODE_API_KEY, models: (process.env.JUIZ_ZEN_MODELS || 'mimo-v2.6-flash-free,deepseek-v4.1-flash-free,nemotron-3.5-super-vl-free').split(',').map((x) => x.trim()).filter(Boolean) },
+};
+const LOTE_COMPAT = 8; // pares por pedido (até 16 fotos): modelos grátis aceitam menos imagens que o Gemini
+const PROVA_COMPAT_N = Number(process.env.JUIZ_PROVA_N || 60); // pares da prova de cada provedor (uma passada só, para gastar pouca cota)
+const modeloCompat = {}; // índice do modelo que respondeu por último, por provedor
+function lerJsonSolto(t) {
+  const txt = String(t ?? '').replace(/```(?:json)?/g, '');
+  try { return JSON.parse(txt); } catch { /* texto em volta do JSON */ }
+  const m = /\{[\s\S]*\}/.exec(txt);
+  try { return m ? JSON.parse(m[0]) : null; } catch { return null; }
+}
+async function askCompat(prov, pairs, todos) {
+  const cfg = COMPAT[prov];
+  const examples = exemplosParecidos(pairs, todos);
+  const content = [{ type: 'text', text: `${RULES}\n\nExemplos decididos pelo dono do site (A || B => resposta):\n${examples.map((e) => `${e.a} || ${e.b} => ${e.same ? 'mesmo' : 'diferente'}`).join('\n')}\n\nPares para decidir. As fotos de cada par vêm logo depois do texto dele; quando falta a foto de um lado, decida pelo texto. Responda SOMENTE um objeto JSON no formato {"results":[{"id":"1","same":true}]}, um item por par, com o mesmo id do par.` }];
+  for (const p of pairs) {
+    content.push({ type: 'text', text: `\nPar ${p.id}: A = ${p.a} || B = ${p.b}` });
+    for (const [lado, url] of [['A', p.imgA], ['B', p.imgB]]) {
+      const b64 = await photo(url);
+      if (b64) content.push({ type: 'text', text: `foto ${lado} do par ${p.id}:` }, { type: 'image_url', image_url: { url: 'data:image/jpeg;base64,' + b64 } });
+    }
+  }
+  const erros = [];
+  for (let k = 0; k < cfg.models.length; k++) {
+    const i = ((modeloCompat[prov] ?? 0) + k) % cfg.models.length;
+    const model = cfg.models[i];
+    let r, t;
+    try {
+      r = await fetch(cfg.url, { method: 'POST', headers: { Authorization: `Bearer ${cfg.key}`, 'Content-Type': 'application/json', 'X-Title': 'Bate Ofertas' },
+        body: JSON.stringify({ model, temperature: 0, max_tokens: 3000, messages: [{ role: 'user', content }] }), signal: AbortSignal.timeout(180000) });
+      t = await r.text();
+    } catch (e) { erros.push(`${model}: ${e.message}`.slice(0, 110)); continue; }
+    if (!r.ok) {
+      erros.push(`${model}: ${r.status} ${t.replace(/\s+/g, ' ').slice(0, 100)}`);
+      if (r.status === 429 && /per.?day|FreeUsageLimit|free-models-per-day/i.test(t)) { falhas.push(...erros.slice(-2)); throw new Error(`${prov}: cota do dia esgotada`); }
+      continue; // limite por minuto, modelo fora do ar ou imagem recusada: tenta o próximo modelo
+    }
+    let corpo = null;
+    try { corpo = JSON.parse(t); } catch { /* resposta que não é JSON */ }
+    const out = lerJsonSolto(corpo?.choices?.[0]?.message?.content);
+    if (!out || !Array.isArray(out.results)) { erros.push(`${model}: resposta sem JSON`); continue; }
+    modeloCompat[prov] = i;
+    return { model: `${prov}:${model}`, results: new Map(out.results.map((x) => [String(x.id), x.same === true || x.same === 'true'])) };
+  }
+  falhas.push(...erros.slice(-3));
+  throw new Error(`${prov}: limite de uso atingido (${erros.slice(-3).join(' | ')})`);
+}
+const loteDe = (prov) => (prov === 'groq' ? 10 : COMPAT[prov] ? LOTE_COMPAT : BATCH);
 async function judge(pairs, examples) {
   const out = new Map();
-  const lote = provedor === 'groq' ? 10 : BATCH;
+  const lote = loteDe(provedor);
   for (let i = 0; i < pairs.length; i += lote) {
     const part = pairs.slice(i, i + lote).map((p, k) => ({ ...p, id: String(k + 1) }));
-    const { model, results } = provedor === 'groq' ? await askGroq(part, examples) : await ask(part, examples);
+    const { model, results } = provedor === 'groq' ? await askGroq(part, examples) : COMPAT[provedor] ? await askCompat(provedor, part, examples) : await ask(part, examples);
     part.forEach((p, k) => { if (results.has(p.id)) out.set(pairs[i + k].key, { same: results.get(p.id), model }); });
     await sleep(4000);
   }
@@ -194,7 +250,7 @@ const asPair = (x) => ({
   imgB: x.b.image || candImgs.get(x.id)?.b.image || imageOf.get(offerKey(x.b)),
 });
 const all = labels.map(asPair);
-const hashDe = (prov) => crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, prov === 'groq' ? 'groq:' + GROQ_MODEL : MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
+const hashDe = (prov) => crypto.createHash('sha1').update(JSON.stringify([labels.map((x) => [x.id, x.label]), RULES, prov === 'groq' ? 'groq:' + GROQ_MODEL : COMPAT[prov] ? prov + ':' + COMPAT[prov].models.join() : MODELS.join(), FOLDS, 'fotos-v1'])).digest('hex').slice(0, 12);
 const hash = hashDe('gemini');
 // prova do Groq (--provedor=groq): grava em provaGroq e não mexe na do Gemini nem no "ativo"
 const groqAprovado = () => !!(GROQ_KEY && state.provaGroq?.hash === hashDe('groq') && state.provaGroq.taxa >= META && state.provaGroq.acertos > state.provaGroq.regra);
@@ -214,6 +270,54 @@ if (provedor === 'groq' && (state.provaGroq?.hash !== hashDe('groq') || process.
   console.log(`juiz Groq: prova ${acertos}/${labels.length} (${(100 * acertos / labels.length).toFixed(1)}%); regra ${regra}; aprovado: ${groqAprovado()}`);
   for (const e of erros) console.log(`  erro Groq: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz}`);
 }
+// Prova dos provedores no formato OpenAI (state.provas[prov]). Feita na hora em que o provedor vai ser usado, uma passada só com
+// até PROVA_COMPAT_N rótulos que têm foto; resposta que falta (cota, instabilidade) não conta como erro: 20% ou mais sem resposta
+// abandona a prova e o provedor fica desligado nesta rodada.
+state.provas ??= {};
+const aprovadoCompat = (prov) => { const pr = state.provas[prov]; return !!(COMPAT[prov]?.key && pr?.hash === hashDe(prov) && pr.taxa >= META && pr.acertos > pr.regra); };
+const tentouProva = new Set();
+async function garantirProva(prov, forcar = false) {
+  if (!COMPAT[prov]?.key) return false;
+  if (!forcar && state.provas[prov]?.hash === hashDe(prov)) return aprovadoCompat(prov);
+  if (tentouProva.has(prov)) return false; // uma tentativa por rodada
+  tentouProva.add(prov);
+  const hs = (x) => parseInt(crypto.createHash('sha1').update(x.key).digest('hex').slice(0, 6), 16);
+  const amostra = all.filter((x) => x.imgA || x.imgB).sort((a, b) => hs(a) - hs(b)).slice(0, PROVA_COMPAT_N);
+  if (amostra.length < 20) return false;
+  const chaves = new Set(amostra.map((x) => x.key));
+  const exemplos = all.filter((x) => !chaves.has(x.key));
+  const anterior = provedor;
+  provedor = prov;
+  let v;
+  try { v = await judge(amostra, exemplos); }
+  catch (e) { state.provas[prov] = { em: new Date().toISOString(), hash: null, erro: String(e.message).slice(0, 300) }; console.warn(`juiz ${prov}: prova não concluída: ${e.message}`); return false; }
+  finally { provedor = anterior; }
+  const sem = amostra.filter((x) => v.get(x.key)?.same === undefined).length;
+  if (sem / amostra.length >= 0.2) { state.provas[prov] = { em: new Date().toISOString(), hash: null, erro: `${sem} de ${amostra.length} sem resposta` }; console.warn(`juiz ${prov}: prova abandonada (${sem} de ${amostra.length} sem resposta)`); return false; }
+  let acertos = 0, regra = 0;
+  const erros = [];
+  for (const x of amostra) {
+    const got = v.get(x.key)?.same;
+    if (got === x.same) acertos++; else erros.push({ a: x.a, b: x.b, rafael: x.same ? 'mesmo' : 'diferente', juiz: got === undefined ? 'sem resposta' : got ? 'mesmo' : 'diferente' });
+    const lab = labels.find((l) => l.id === x.key);
+    if (((lab?.kind ?? 'juntos') !== 'separados') === x.same) regra++;
+  }
+  state.provas[prov] = { em: new Date().toISOString(), hash: hashDe(prov), modelos: [...new Set([...v.values()].map((r) => r.model))], total: amostra.length, acertos, regra, taxa: acertos / amostra.length, erros: erros.slice(0, 15) };
+  console.log(`juiz ${prov}: prova ${acertos}/${amostra.length} (${(100 * acertos / amostra.length).toFixed(1)}%); regra ${regra}; aprovado: ${aprovadoCompat(prov)}`);
+  return aprovadoCompat(prov);
+}
+// próximo provedor da cadeia depois do atual, já aprovado (ou aprovado agora, por uma prova na hora)
+const ORDEM = ['gemini', 'openrouter', 'zen', 'groq'];
+const aprovadoProv = (p) => (p === 'gemini' ? !!state.ativo : p === 'groq' ? groqAprovado() : aprovadoCompat(p));
+async function proximoProvedor() {
+  for (const p of ORDEM.slice(ORDEM.indexOf(provedor) + 1)) {
+    if (p === 'groq' ? groqAprovado() : await garantirProva(p)) return p;
+  }
+  return null;
+}
+// --provedor=openrouter|zen: só a prova desse provedor (grava em state.provas e sai do julgamento)
+if (COMPAT[provedor]) { await garantirProva(provedor, process.argv.includes('--forcar-prova')); }
+
 // --aceitar-prova: o Rafael aceita a última prova feita (ex.: rodou com outra lista de modelos) sem gastar cota refazendo
 if (process.argv.includes('--aceitar-prova') && state.prova) {
   state.prova.hash = hash;
@@ -248,13 +352,16 @@ if (provedor === 'gemini' && (state.prova?.hash !== hash || process.argv.include
   delete state.erro;
   }
 }
+// Provedores de visão do formato OpenAI (OpenRouter, OpenCode): prova feita uma vez logo no começo, para saber cedo se prestam
+// (cerca de 8 pedidos de cada); depois só se repete quando mudam rótulos, regras ou modelos. Falha aqui não afeta o Gemini.
+for (const p of ['openrouter', 'zen']) { if (COMPAT[p].key && state.provas[p]?.hash !== hashDe(p)) await garantirProva(p); }
 const pv = state.prova;
 console.log(`juiz: prova ${pv.acertos}/${pv.total} (${(100 * pv.taxa).toFixed(0)}%); regra atual ${pv.regra}/${pv.total}; ativo: ${state.ativo}`);
 if (pv.trocas?.length) console.log("  trocas de modelo:", pv.trocas.join(" | "));
 for (const e of pv.erros) console.log(`  erro: ${e.a} x ${e.b} -> Rafael ${e.rafael}, juiz ${e.juiz} [${e.modelo}]`);
 
 // ---------- 2. julga pares candidatos ----------
-if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini' || groqAprovado())) {
+if (state.ativo && !process.argv.includes('--so-prova') && aprovadoProv(provedor)) {
   const sigs = offers.map(signature);
   const brands = brandKeys(offers);
   const eans = offers.map((o) => normalizeEan(o.ean));
@@ -345,7 +452,7 @@ if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini
   let feitos = 0, pos = 0;
   for (let lote = 0; lote < MAX_LOTES && pos < fila.length && Date.now() < DEADLINE; lote++) {
     const part = [], posIni = pos;
-    while (part.length < BATCH && pos < fila.length) { const c = fila[pos++]; if (!inutil(c)) part.push(c); }
+    while (part.length < loteDe(provedor) && pos < fila.length) { const c = fila[pos++]; if (!inutil(c)) part.push(c); }
     try {
       const r = await judge(part, examples);
       for (const [k, val] of r) {
@@ -355,10 +462,9 @@ if (state.ativo && !process.argv.includes('--so-prova') && (provedor === 'gemini
       }
     } catch (e) {
       // Gemini sem cota: o Groq (só texto) continua, se passou na prova dele; o lote é refeito
-      if (provedor === 'gemini' && /cota do dia|limite de uso/.test(e.message) && groqAprovado()) {
-        console.log(`juiz: ${e.message}; seguindo com o Groq`);
-        provedor = 'groq'; pos = posIni; lote--;
-        continue;
+      if (/cota do dia|limite de uso/.test(e.message)) {
+        const prox = await proximoProvedor();
+        if (prox) { console.log(`juiz: ${e.message}; seguindo com ${prox}`); provedor = prox; pos = posIni; lote--; continue; }
       }
       console.warn('juiz:', e.message); state.erro = { em: new Date().toISOString(), msg: String(e.message).slice(0, 600), falhas: falhas.slice(-10) }; break;
     }
