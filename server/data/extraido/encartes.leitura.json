@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-11-23T00:50:10.254Z",
+ "startedAt": "2026-11-23T01:15:21.492Z",
  "pages": [
   {
    "market": "Assaí",
@@ -116,7 +116,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
+   "offerId": "encarte-2026-11-23",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
    "ok": true,
    "cached": true,
@@ -126,7 +126,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
+   "offerId": "encarte-2026-11-23",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902014.jpg",
    "ok": true,
    "cached": true,
@@ -136,7 +136,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
+   "offerId": "encarte-2026-11-23",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902640.jpg",
    "ok": true,
    "cached": true,
@@ -146,7 +146,7 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
+   "offerId": "encarte-2026-11-23",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902641.jpg",
    "ok": true,
    "cached": true,
@@ -156,72 +156,10 @@
   },
   {
    "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
+   "offerId": "encarte-2026-11-23",
    "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004909090.jpg",
    "ok": false,
    "error": "imagem cortada (229376 bytes) após 3 tentativas"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912679.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 3,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912680.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "gemma-4-31b-it: preço fora do OCR: 12.99 (MELANCIA MEDIA)"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912682.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 2,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912685.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 4,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912842.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 2,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "gemma-4-31b-it: preço fora do OCR: 25.99 (Whisky Mark One)"
-  },
-  {
-   "market": "Baronesa",
-   "offerId": "encarte-2026-11-22",
-   "url": "https://baronesasupermercados.com.br/classes/encarte.php?img=1004912844.jpg",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
   },
   {
    "market": "Joanin",
@@ -281,285 +219,11 @@
    "offerId": "5136-23.11-29.11",
    "url": "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-23-A-29-11-2026.pdf",
    "ok": true,
-   "cached": false,
+   "cached": true,
    "products": 33,
    "model": "gemini-flash-lite-latest",
    "reader": "gemini",
    "motivoGemini": "groq:openai/gpt-oss-120b: 1 preços nos itens, 49 no OCR (leitura incompleta)"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-DgBD5hZMxJ2",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/916952080_1596925759145041_5823393003374541562_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Dl36czuy6oUQ7kNvwEiMN_u&_nc_oc=Adq1eaH1FdwgT6f-VB10uCmbns_ZloWomS20i1-m75WW38vjwa5z_-c__oeDH-vFIhE&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR6r99o9m1UVwGK2qv0KqXegxvcH1-SHpK9zMZwfG_AKQ&oe=6B0947B2",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-DgAY363OYVe",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/913870617_1596616832509267_6614047487632729544_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Ci6dls9giuIQ7kNvwE3ly0m&_nc_oc=AdqnL879XBPHXDRrEV7E7fAO8QILvUDhBbWCAgC4RObALnEQhJujCfE7BSyvWkzcGlM&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ2jakeDnGSACo7p1k3zWeDBH-i1n6pyJrJOApn33xbYQ&oe=6B094482",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-Df9tG0fG8lX",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/917682801_18579268459075787_4529069676044080608_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=1ujvrpWWuioQ7kNvwFsTA8E&_nc_oc=AdpcuXz5NfR1eFxyY9vIz-QXgrc-zBa9fRX8JSHos1PafTJd5UfUKXVTT3OrGrU21OY&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR52r1GoYr4hJeYH2v0MpTnimovTDJ5JhFKXwPVcCWSBw&oe=6B096FAA",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-Df9rwcOu0SR",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/913241574_1595448619292755_1201423291084680990_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ECaQOJV7WcsQ7kNvwFDDlYu&_nc_oc=AdqNr9T4OeYujJXGRcA7tTPpjBOICsV8-dBmPkPSmIYxrLtLTYYd-R6bnyNtCMtd8uU&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQcjjkaB0akLc023YYBqzeTRLGUUVDgSsOYGXlNE6zsTQ&oe=6B0946E8",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-Df2FLQuBVCS",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t39.30808-6/915187072_1592273332943617_4593123082673876169_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MdIGcuPLWVoQ7kNvwFu9nB-&_nc_oc=AdrYmG7vPUnsNd6it83s5Bz3Nwy8nHMZIzqWujob0dK1otZUVt9eKsl8xUTSvqIwzlI&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSawyed8BujI-GZ2RpoP6AlH5JEOy4ZC85FCw7V1Qs5eg&oe=6B0960AF",
-   "ok": true,
-   "cached": true,
-   "products": 5,
-   "model": "openrouter/free",
-   "reader": "openrouter:openrouter/free"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-Df2Eim6htb6",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/896132695_18578558911075787_5654359264880233893_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=q_9nSw2b87EQ7kNvwGGCoPw&_nc_oc=AdrYlRYH1TKHrnNTViZFdLas9IHSvbw_KuhWL-0mPXk0p8_LAohdAZ_Foth2-oyumTY&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQT0GWa1Kwp9wKsg7LDrROc__0n1oyv2PsmSqhBnF2bSDA&oe=6B09794B",
-   "ok": true,
-   "cached": true,
-   "products": 15,
-   "model": "gemini-3.5-flash-lite",
-   "reader": "gemini"
-  },
-  {
-   "market": "Nevada",
-   "offerId": "ig-Df0eHrfMsOL",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/913122224_18578366071075787_1171534002479248296_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Opv_OSfs1PMQ7kNvwGyQyET&_nc_oc=Ado5sX42z4_RjqgrE6-LKPlmYi2mtbphXabTXBFPtQFn-gomTNX6whTSg6LizRU9UWs&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=Sh4BlzEWV7E4OpNoFgli-A&_nc_ss=73689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRFiwsyR6tP_rtLukQrVF5gZLXC9iLBvRshoHGM9Ie0bA&oe=6B09750E",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "openrouter/free",
-   "reader": "openrouter:openrouter/free"
-  },
-  {
-   "market": "STUK",
-   "offerId": "ig-DgDcDC4G-iu",
-   "url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/921877635_18252836779315091_2168903688061635180_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=f0bG-dFaHvkQ7kNvwGiSr0c&_nc_oc=Adr6YPtRUxUDoGrspLUP3RbmMrStT0JywvQqbhMWzGwl1zPZ7NlIxoatcrztR1U6xp8&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=L2eiU2pcZtXNQihDwyhhCg&_nc_ss=78a8c&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR-D63G0qpOZiYl2LLppKRjsnesvyI00JYeE4_Cyf3wBw&oe=6B094778",
-   "ok": true,
-   "cached": true,
-   "products": 7,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df9ccoigZve",
-   "url": "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/913360440_1566361718852929_211837328473460177_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=p1KZZCA3aFkQ7kNvwG91INa&_nc_oc=AdogwPl6gHBwCXeGkr2XHsMl95210suw8pljRsFxrSMVxBhEUa50nNLIrpPT2Iiw-Vk&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=Qf038N6phKDCyNdwZv_KoQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR4taUVGhziu1WgGtown6nTEtBBhi4po7n93FnZ8sVFWg&oe=6B094478",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df9ZBGGiC4D",
-   "url": "https://scontent-sea5-2.cdninstagram.com/v/t39.30808-6/915187076_1566350552187379_7441793858693503827_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=uIJb3zU54XcQ7kNvwGEf6ZT&_nc_oc=AdpnF56iMWnsWNYfvYGMWc4NCx9s0C3fBjWvEkYZ5Cbq7KbXCn82ezTlYoyV2BinuQc&_nc_zt=23&_nc_ht=scontent-sea5-2.cdninstagram.com&_nc_gid=Qf038N6phKDCyNdwZv_KoQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSAUpLCUzPr3FD-lF-pj8V7SnN9dwk9ZNKFyhKPnP7ojA&oe=6B096B4E",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df71r0BiRg7",
-   "url": "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/916365284_1566332508855850_8819464428567251053_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MoLj8YbEfc0Q7kNvwGYL8wv&_nc_oc=AdqhyAc_2dIL7q8EkFIYfg4kejURtwdEcyNotbr8oxt2XUtTHTjZ2c_RHGWn9jxcYAk&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=Qf038N6phKDCyNdwZv_KoQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRd05ZP5z0-xzlkcftGgS6JkWfefoDEaSnECk5oEnP1og&oe=6B096185",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df706xDCWfV",
-   "url": "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/914353391_1566326942189740_5119230386894240315_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=5W0wNjCAZaEQ7kNvwGLlUpW&_nc_oc=Adq2ny3MBLHUf-UWuzCiEXW82pur4lYHeJ20ErRyyzczMoi7ujV7gG5MhTEU-pSpcwM&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=Qf038N6phKDCyNdwZv_KoQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRGGlCuIYu7pUMrg0VeTAxyudKLSCYqFW_Kr4ifeZXr_g&oe=6B096999",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Lourencini",
-   "offerId": "ig-Df0JozjlnyK",
-   "url": "https://scontent-sea5-2.cdninstagram.com/v/t39.30808-6/912256853_1563233822499052_3784916018057349843_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pUpLlFptXi0Q7kNvwFiJCXy&_nc_oc=AdowZ_swier5UKxy1THDGxBUIyipytszK6scbTixbHOu1DKlGHP44NYWCxWfRxLvjTg&_nc_zt=23&_nc_ht=scontent-sea5-2.cdninstagram.com&_nc_gid=Qf038N6phKDCyNdwZv_KoQ&_nc_ss=7b689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSUW-BdqZ0kr-m4SIAj_9nrzHAd_2vm7JOa6UcDIXx8KQ&oe=6B097545",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini"
-  },
-  {
-   "market": "Família Lima",
-   "offerId": "ig-Df9f47XxWs0",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/914615155_18116046887465670_7040478491543886566_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2AV_MwVDV6EQ7kNvwEbQzeH&_nc_oc=AdrWP8UPG6f9Qo9T40Af2eP7bN94OHy56UEenynRJaGC8UjEOlvbEH0Ci_-FBV-nV7w&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=bPwjvywTXAtguR3cU_FCag&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRRsta97ExgdxCyd7dMJ2NTsFy_y975AoVBlxA2HXYjVg&oe=6B096823",
-   "ok": true,
-   "cached": true,
-   "products": 49,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "gemma-4-31b-it: 1 preços nos itens, 40 no OCR (leitura incompleta)"
-  },
-  {
-   "market": "Família Lima",
-   "offerId": "ig-Dfy_REopfIC",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/906016002_18115623806465670_8884699886875894602_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=so_QAR9h0FEQ7kNvwHW-lYI&_nc_oc=AdrKCbsUjL48Zjj9FYbp7uQQJIWwGD_tFrDT7WbgKzU-7ghu9DIQCB1rKHZ5FguBkps&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=bPwjvywTXAtguR3cU_FCag&_nc_ss=70689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRpiCxXUhIttTbPl9bbfo13c-4DQ7y7yXHKFQUYE2rTpg&oe=6B09613E",
-   "ok": true,
-   "cached": true,
-   "products": 10,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Mercado Capital",
-   "offerId": "ig-Df8KHjDFu3r",
-   "url": "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/916914463_18117712760599763_6232496217110380124_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Xkre2v0HiDsQ7kNvwFx85b5&_nc_oc=AdoxrGttqhdTh8jwas5NTovjnRUOwiPlL5AfwH51_TSzDWBdtwClRxAakGQa_Pz3nDk&_nc_zt=23&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=47fnGd-c2lexAvb7P3oKcw&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSuYAxANOuF0einEgjEPMp_Q26-Cyb948okJqk8mHMCzA&oe=6B096C46",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Mercado Capital",
-   "offerId": "ig-Df8Gsm5liAd",
-   "url": "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/918164194_18117735095599763_3696843597561036774_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=E7Xxeo2douUQ7kNvwHCSvNv&_nc_oc=AdpO7LdT_7jANzJ_Rf9YWOPprpw_mAW-Ccjd-zd_VxK7ABRaX2X5AfE3b4l0ifuAOqk&_nc_zt=23&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_gid=47fnGd-c2lexAvb7P3oKcw&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQTlL0lISP-XB7kNtrgDOT3ZwgxRYd2iw8woeDVy7LqMQ&oe=6B094755",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Mercado Capital",
-   "offerId": "ig-Df5JDqqI1pB",
-   "url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/918302476_18117606134599763_9214575739579118101_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=fZQOfeJ0ohYQ7kNvwEDHBQ-&_nc_oc=AdpLvIA28aTJzYAXkvR6RcwFYF9jaLbBAG1gu8-U_ZNF1jjkAEkpWwMuWUiuqn1nxj8&_nc_zt=23&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=47fnGd-c2lexAvb7P3oKcw&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTu-Yd2MkL2M_jW4gNKYTfg4p-SAk5i2Bo6wiEFxRLaWg&oe=6B094ED3",
-   "ok": true,
-   "cached": true,
-   "products": 0,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Mercado Capital",
-   "offerId": "ig-Df2ljv8Ft6f",
-   "url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/911956234_18117477860599763_2330681001095261381_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZeXfLUH43WUQ7kNvwGT-C7c&_nc_oc=Adp014fYzRDifB6cJUdUJaZBwKg_V6HUnNZQXBFPrw87Cdvgd1l0uvtZSt4CByg0i9g&_nc_zt=23&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=47fnGd-c2lexAvb7P3oKcw&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRIjVbN-XXy6nN0jKADTFd9s2IIrbJbRwJk8lEZMPGCxQ&oe=6B095C1F",
-   "ok": true,
-   "cached": true,
-   "products": 1,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Mercadinho Parceiro",
-   "offerId": "ig-DgDbcdIB3Pi",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825804_18102314825389709_8116244745977558292_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tVaP7aOv_ikQ7kNvwHXTLNr&_nc_oc=AdpCvg3EQa5MZYBgfSmfThn26k3SbRiPKH5G6eaD-kuQ3EzlULR9njOONNx9K9qlT4U&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=uHs3rQ9Iwm2-R0XXVk3O2w&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTcis9w9qNTop5xmEV-Eak53mHIHpYX41uTp9eVlqJ5nw&oe=6B0970D8",
-   "ok": true,
-   "cached": true,
-   "products": 13,
-   "model": "gemini-flash-latest",
-   "reader": "gemini",
-   "motivoGemini": "groq:openai/gpt-oss-120b: 3 preços nos itens, 14 no OCR (leitura incompleta)"
-  },
-  {
-   "market": "Mercadinho Parceiro",
-   "offerId": "ig-Df7_CFQifPV",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/907470746_18101962214389709_709103909963300494_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NqFu0xmByXwQ7kNvwGNNgBC&_nc_oc=AdqeTzzwEXkTXHmac1UxN_QstB-NZO54TdSU84p1e2q1r-XeM7o6OZ1jW81bE-Pui2E&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=uHs3rQ9Iwm2-R0XXVk3O2w&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSrStgXJ9Fwm1jWATynmLDa6ArDOlB6xFMw0QtQ2ossJg&oe=6B0978C8",
-   "ok": true,
-   "cached": true,
-   "products": 11,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Mercadinho Parceiro",
-   "offerId": "ig-Df5aiIkpapx",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/910629317_18101830025389709_3547428203470611129_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pswJfTwAzBoQ7kNvwGTpvq3&_nc_oc=AdqgXXk5lCkeauL5rHlArdj8ct5Tn5wPpd9TBs3CGLRTRIfE_i-NfN8nEsND9gWy1Ig&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=uHs3rQ9Iwm2-R0XXVk3O2w&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQScfzKOeZ7bzjjJBcJKgNPdL3Ak2lblCuXjhjNRupDeQg&oe=6B0946A4",
-   "ok": true,
-   "cached": true,
-   "products": 14,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Mercadinho Parceiro",
-   "offerId": "ig-Df29cjDCQXw",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/907169358_18101716106389709_4340051177341205992_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=REgh8ckRIhEQ7kNvwEfJMZl&_nc_oc=AdpNt5cCFOAdDCEqaErnXKCRZmBN2F8cMH7B7I8v77y4vzu5cDuTr0HEK73hxFhU3WA&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=uHs3rQ9Iwm2-R0XXVk3O2w&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSxLkwz2rC8P6XwAl0pxlEc_bPo-bOOswaPOyZHg5vjNA&oe=6B095B5D",
-   "ok": true,
-   "cached": true,
-   "products": 10,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "groq:openai/gpt-oss-120b: 0 itens, mas 6 preços no OCR"
-  },
-  {
-   "market": "Mercadinho Parceiro",
-   "offerId": "ig-Df0T59HJ8gn",
-   "url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/905322731_18101565101389709_3247700096333956646_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=v30xCUDhIpcQ7kNvwHmDNp1&_nc_oc=AdprrPCWQRibu1NxGnV1FvCKj4PjacD_Q_BQzzBRWJoEoiQ6PWXpxTB39FskL8z7P0c&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=uHs3rQ9Iwm2-R0XXVk3O2w&_nc_ss=78689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTht0cQE9uq7y_69-xWlJJB4CxMCKjAVLEZJoGNwXyH-w&oe=6B09515C",
-   "ok": true,
-   "cached": true,
-   "products": 10,
-   "model": "ocr+groq:openai/gpt-oss-120b",
-   "reader": "ocr+groq:openai/gpt-oss-120b"
-  },
-  {
-   "market": "Mercado Baratinho",
-   "offerId": "ig-Df90AOKhswJ",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825812_18239570659321030_3784382373686366194_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_5J8g-XTerQQ7kNvwERp1Re&_nc_oc=Adr4mn2NHSV3an4Lp5Mkd5sqbQzQ60YHqwVq6nLboaFZoSrKQdbgcWQbHUXNnwl0yYQ&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=7Kn4-lWtWSwtcCWfNYMPGA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQS9wY5Yu9FCkp7aMCP4kOpXJ88wT9z-MLBnOojXvMxdaw&oe=6B09663B",
-   "ok": true,
-   "cached": true,
-   "products": 6,
-   "model": "gemini-flash-lite-latest",
-   "reader": "gemini",
-   "motivoGemini": "gemma-4-31b-it: preço fora do OCR: 11.99 (Sabão líquido tixan Ypê fragrâncias REFI)"
-  },
-  {
-   "market": "Mercado Baratinho",
-   "offerId": "ig-Df9YwLpBjnn",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/902825575_18239552857321030_4867039900311838043_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=x_RVqczbkWkQ7kNvwGdFant&_nc_oc=Adpw9z25a1mylFB26WyPLYOyq8nR6tyUxVQLWL2CtO7rwuArJ8Y1IbEXcTUV1ArAuBw&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=7Kn4-lWtWSwtcCWfNYMPGA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQUHpr0mDzK4I056ur5Moffmxu2LvYLgmO_wK-rP4sMPw&oe=6B0957D3",
-   "ok": true,
-   "cached": true,
-   "products": 7,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
-  },
-  {
-   "market": "Mercado Baratinho",
-   "offerId": "ig-Df1yP7IsKRA",
-   "url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/907035166_18239296768321030_2530213209281897235_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=TSdrFZhmu-0Q7kNvwFbf_Wr&_nc_oc=AdqkaHSGAYkW56LR6zbRpp6XWUjhQqtyg3lmNTVDxNQNT2qm-2nUyXYoRL0IXssxjQU&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=7Kn4-lWtWSwtcCWfNYMPGA&_nc_ss=72689&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQT18Ke8eLRRmtWVWEg2R5-1Su_87QM8dMy6FRnyvz8PDw&oe=6B09544B",
-   "ok": true,
-   "cached": true,
-   "products": 6,
-   "model": "ocr+gemma-4-31b-it",
-   "reader": "ocr+gemma-4-31b-it"
   },
   {
    "market": "Atacadão",
@@ -586,8 +250,8 @@
    "motivoGemini": "groq:openai/gpt-oss-120b: 2 preços nos itens, 18 no OCR (leitura incompleta)"
   }
  ],
- "finishedAt": "2026-11-23T01:08:13.462Z",
- "newReads": 1,
+ "finishedAt": "2026-11-23T01:16:29.181Z",
+ "newReads": 0,
  "readerMode": "ocr-primeiro",
  "porLeitor": {
   "gemini": 1

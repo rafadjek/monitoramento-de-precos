@@ -1,5 +1,5 @@
 {
- "em": "2026-11-23T00:46:11.699Z",
+ "em": "2026-11-23T01:13:22.624Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 30
+   "erro": "HTTP 520 {\"original_status\":\"429\",\"pc_status\":576,\"cb_status\":576,\"url\":\"https://www.instagram.com/supermercadostuk/\",\"domain_complexity\":\"standard\",\"body\":\"Request fail"
   },
   {
    "net": "fb",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "posts": 0
+   "erro": "HTTP 520 {\"original_status\":0,\"pc_status\":0,\"cb_status\":0,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed, with status"
   },
   {
    "teste": "socialcrawl",
@@ -56,123 +56,6 @@
    "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 10
-  },
-  "STUK": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 8,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 4
-  },
-  "Lourencini": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
-  "Família Lima": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 0,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 12
-  },
-  "Mercado Capital": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 3,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 9
-  },
-  "Mercadinho Parceiro": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 12,
-   "video": 5,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 7
-  },
-  "Mercado Baratinho": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
-  "Carnes Santana": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 12,
-   "video": 2,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 10
-  },
-  "Sacolão São Jorge": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "Consulado do Churrasco": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 11,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 1
-  },
-  "Nevada (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "STUK (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "Lourencini (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
-  },
-  "Família Lima (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 0
   }
  }
 }
