@@ -1,5 +1,5 @@
 {
- "em": "2026-11-23T01:21:41.729Z",
+ "em": "2026-11-23T01:35:05.329Z",
  "servicos": [
   {
    "net": "ig",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":515,\"pc_status\":515,\"cb_status\":515,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed, with "
+   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE html\\u"
   },
   {
    "teste": "socialcrawl",
@@ -68,7 +68,7 @@
   },
   "Lourencini": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 13,
    "video": 4,
    "semCodigo": 1,
@@ -86,7 +86,7 @@
   },
   "Mercado Capital": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 13,
    "video": 3,
    "semCodigo": 1,
@@ -95,7 +95,7 @@
   },
   "Mercadinho Parceiro": {
    "net": "ig",
-   "tentativas": 1,
+   "tentativas": 2,
    "recebidos": 12,
    "video": 5,
    "semCodigo": 0,
@@ -113,7 +113,7 @@
   },
   "Carnes Santana": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 12,
    "video": 2,
    "semCodigo": 0,
