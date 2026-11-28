@@ -2,9 +2,9 @@
   {
     "market": "Atacadão",
     "arquivo": "atacadao-folheto",
-    "offerId": "1-wYJMhc1maUWr2XLj1Qg1Akr4MAcuBs7",
-    "validFrom": "2026-11-23T03:00:00.000Z",
-    "validUntil": "2026-11-24T02:59:59.000Z",
+    "offerId": "1oehXAn5VvhodbNCOG9jTti07RAAq5Txv",
+    "validFrom": "2026-11-28T03:00:00.000Z",
+    "validUntil": "2026-12-01T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
       "Mauá João Ramalho",
@@ -13,19 +13,19 @@
     "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
-      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1-wYJMhc1maUWr2XLj1Qg1Akr4MAcuBs7"
+      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1oehXAn5VvhodbNCOG9jTti07RAAq5Txv"
     ],
     "imageKeys": [
-      "atacadao:1-wYJMhc1maUWr2XLj1Qg1Akr4MAcuBs7"
+      "atacadao:1oehXAn5VvhodbNCOG9jTti07RAAq5Txv"
     ],
-    "collectedAt": "2026-11-23T13:34:30.997Z"
+    "collectedAt": "2026-11-28T01:46:22.284Z"
   },
   {
     "market": "Atacadão",
     "arquivo": "atacadao-folheto",
-    "offerId": "1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69",
-    "validFrom": "2026-11-17T03:00:00.000Z",
-    "validUntil": "2026-11-24T02:59:59.000Z",
+    "offerId": "1s_J100zIP3HneCo1V1xyjGpGCs-iVqVK",
+    "validFrom": "2026-11-28T03:00:00.000Z",
+    "validUntil": "2026-12-01T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
       "Mauá João Ramalho",
@@ -34,19 +34,19 @@
     "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
-      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69"
+      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1s_J100zIP3HneCo1V1xyjGpGCs-iVqVK"
     ],
     "imageKeys": [
-      "atacadao:1ocAEOjXJSQnqzI96wqKPlbS56yNU-t69"
+      "atacadao:1s_J100zIP3HneCo1V1xyjGpGCs-iVqVK"
     ],
-    "collectedAt": "2026-11-23T13:34:30.997Z"
+    "collectedAt": "2026-11-28T01:46:22.284Z"
   },
   {
     "market": "Atacadão",
     "arquivo": "atacadao-folheto",
-    "offerId": "1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk",
-    "validFrom": "2026-11-17T03:00:00.000Z",
-    "validUntil": "2026-11-24T02:59:59.000Z",
+    "offerId": "1jga7T4-budrN_mLW737BmDXZB-dh92d9",
+    "validFrom": "2026-11-28T03:00:00.000Z",
+    "validUntil": "2026-12-01T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
       "Mauá João Ramalho",
@@ -55,19 +55,19 @@
     "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
-      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk"
+      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1jga7T4-budrN_mLW737BmDXZB-dh92d9"
     ],
     "imageKeys": [
-      "atacadao:1FVs4tZZQUf7PUTm4p2PqWEKncV0i6Xkk"
+      "atacadao:1jga7T4-budrN_mLW737BmDXZB-dh92d9"
     ],
-    "collectedAt": "2026-11-23T13:34:30.997Z"
+    "collectedAt": "2026-11-28T01:46:22.284Z"
   },
   {
     "market": "Atacadão",
     "arquivo": "atacadao-folheto",
-    "offerId": "1XioqaqOYvgBwBzZWk9Zc7OLc1pruZeQN",
-    "validFrom": "2026-11-23T03:00:00.000Z",
-    "validUntil": "2026-11-27T02:59:59.000Z",
+    "offerId": "1B51Ys4410g_3JXGQ4P3V70sWhaT_9GDr",
+    "validFrom": "2026-11-28T03:00:00.000Z",
+    "validUntil": "2026-12-01T02:59:59.000Z",
     "validityNote": "folheto do Atacadão",
     "stores": [
       "Mauá João Ramalho",
@@ -76,11 +76,11 @@
     "storeScope": "Folheto das lojas de Mauá: Mauá João Ramalho, Mauá Itapark",
     "referer": "https://www.atacadao.com.br/institucional/nossas-lojas",
     "images": [
-      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1XioqaqOYvgBwBzZWk9Zc7OLc1pruZeQN"
+      "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1B51Ys4410g_3JXGQ4P3V70sWhaT_9GDr"
     ],
     "imageKeys": [
-      "atacadao:1XioqaqOYvgBwBzZWk9Zc7OLc1pruZeQN"
+      "atacadao:1B51Ys4410g_3JXGQ4P3V70sWhaT_9GDr"
     ],
-    "collectedAt": "2026-11-23T13:34:30.997Z"
+    "collectedAt": "2026-11-28T01:46:22.284Z"
   }
 ]

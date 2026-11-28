@@ -1,7 +1,7 @@
 [
   {
     "market": "Baronesa",
-    "offerId": "encarte-2026-11-23",
+    "offerId": "encarte-2026-11-28",
     "validFrom": null,
     "validUntil": null,
     "validityNote": "ofertas do encarte, enquanto durarem os estoques",
@@ -11,12 +11,8 @@
     "storeScope": "Encarte da loja de Mauá (R. Fernão Dias, 5, Vila Augusto)",
     "referer": "https://baronesasupermercados.com.br/encarte/",
     "images": [
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902007.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902014.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902640.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004902641.jpg",
-      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004909090.jpg"
+      "https://baronesasupermercados.com.br/classes/encarte.php?img=1004931632.jpg"
     ],
-    "collectedAt": "2026-11-23T02:07:55.581Z"
+    "collectedAt": "2026-11-28T01:43:44.753Z"
   }
 ]

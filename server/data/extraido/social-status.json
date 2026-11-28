@@ -1,5 +1,5 @@
 {
- "em": "2026-11-23T13:30:56.373Z",
+ "em": "2026-11-28T01:43:55.587Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 34
+   "posts": 29
   },
   {
    "net": "fb",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/SuperMercadoStuk/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE "
+   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE html\\u"
   },
   {
    "teste": "socialcrawl",
@@ -52,48 +52,21 @@
    "net": "ig",
    "tentativas": 1,
    "recebidos": 12,
-   "video": 2,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 10
-  },
-  "STUK": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 12,
-   "video": 8,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 4
-  },
-  "Lourencini": {
-   "net": "ig",
-   "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 8
-  },
-  "Família Lima": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 13,
-   "video": 0,
-   "semCodigo": 1,
-   "semImagem": 0,
-   "aproveitados": 12
-  },
-  "Mercado Capital": {
-   "net": "ig",
-   "tentativas": 2,
-   "recebidos": 13,
    "video": 3,
-   "semCodigo": 1,
+   "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 9
   },
-  "Mercadinho Parceiro": {
+  "STUK": {
+   "net": "ig",
+   "tentativas": 1,
+   "recebidos": 12,
+   "video": 11,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 1
+  },
+  "Lourencini": {
    "net": "ig",
    "tentativas": 1,
    "recebidos": 12,
@@ -102,47 +75,65 @@
    "semImagem": 0,
    "aproveitados": 7
   },
+  "Família Lima": {
+   "net": "ig",
+   "tentativas": 2,
+   "recebidos": 12,
+   "video": 0,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 12
+  },
+  "Mercado Capital": {
+   "net": "ig",
+   "tentativas": 1,
+   "recebidos": 12,
+   "video": 4,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 8
+  },
+  "Mercadinho Parceiro": {
+   "net": "ig",
+   "tentativas": 1,
+   "recebidos": 12,
+   "video": 3,
+   "semCodigo": 0,
+   "semImagem": 0,
+   "aproveitados": 9
+  },
   "Mercado Baratinho": {
    "net": "ig",
    "tentativas": 1,
-   "recebidos": 13,
-   "video": 4,
-   "semCodigo": 1,
+   "recebidos": 12,
+   "video": 3,
+   "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 8
+   "aproveitados": 9
   },
   "Carnes Santana": {
    "net": "ig",
    "tentativas": 2,
-   "recebidos": 12,
-   "video": 2,
+   "recebidos": 0,
+   "video": 0,
    "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 10
+   "aproveitados": 0
   },
   "Sacolão São Jorge": {
    "net": "ig",
    "tentativas": 2,
    "recebidos": 13,
-   "video": 3,
+   "video": 2,
    "semCodigo": 1,
    "semImagem": 0,
-   "aproveitados": 9
+   "aproveitados": 10
   },
   "Consulado do Churrasco": {
    "net": "ig",
-   "tentativas": 2,
+   "tentativas": 1,
    "recebidos": 12,
-   "video": 11,
-   "semCodigo": 0,
-   "semImagem": 0,
-   "aproveitados": 1
-  },
-  "Nevada (fb)": {
-   "net": "fb",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
+   "video": 12,
    "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 0

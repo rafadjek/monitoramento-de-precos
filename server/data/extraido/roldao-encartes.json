@@ -1,50 +1,98 @@
 [
   {
     "market": "Roldão",
-    "offerId": "5133-20.11-23.11",
+    "offerId": "5154-26.11-28.11",
     "validFrom": null,
-    "validUntil": "2026-11-24T02:59:59.000Z",
-    "validityNote": "Pepsico: 20.11 a 23.11",
+    "validUntil": "2026-11-29T02:59:59.000Z",
+    "validityNote": "Sadia e Perdigão Black Friday: 26.11 a 28.11",
     "stores": [
       "todas as lojas Roldão"
     ],
-    "storeScope": "Encarte \"Pepsico\" da rede (vale em Mauá)",
+    "storeScope": "Encarte \"Sadia e Perdigão Black Friday\" da rede (vale em Mauá)",
     "referer": "https://roldao.com.br/ofertas/",
     "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-PEPSICO-20-A-23-11-2026.pdf"
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-BRF-26-A-28-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-23T13:30:51.954Z"
+    "collectedAt": "2026-11-28T01:43:47.037Z"
   },
   {
     "market": "Roldão",
-    "offerId": "5139-23.11-26.11",
-    "validFrom": null,
-    "validUntil": "2026-11-27T02:59:59.000Z",
-    "validityNote": "Hortifruti (REDE BLACK WEEK): 23.11 a 26.11",
-    "stores": [
-      "Roldão Mauá"
-    ],
-    "storeScope": "Encarte \"Hortifruti (REDE BLACK WEEK)\" das lojas que incluem Mauá",
-    "referer": "https://roldao.com.br/ofertas/",
-    "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-HORTIFRUTI-BLACK-WEEK-REDE-23-A-26-11-2026-3.pdf"
-    ],
-    "collectedAt": "2026-11-23T13:30:51.954Z"
-  },
-  {
-    "market": "Roldão",
-    "offerId": "5136-23.11-29.11",
+    "offerId": "5170-27.11-29.11",
     "validFrom": null,
     "validUntil": "2026-11-30T02:59:59.000Z",
-    "validityNote": "Comerciante: 23.11 a 29.11",
+    "validityNote": "Black Friday Roldão: 27.11 a 29.11",
     "stores": [
       "todas as lojas Roldão"
     ],
-    "storeScope": "Encarte \"Comerciante\" da rede (vale em Mauá)",
+    "storeScope": "Encarte \"Black Friday Roldão\" da rede (vale em Mauá)",
     "referer": "https://roldao.com.br/ofertas/",
     "images": [
-      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COMERCIANTE-RESTAURANTE-23-A-29-11-2026.pdf"
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-LAMINA-BLACK-FRIDAY-27-A-29-11-2026.pdf"
     ],
-    "collectedAt": "2026-11-23T13:30:51.954Z"
+    "collectedAt": "2026-11-28T01:43:47.037Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5157-27.11-29.11",
+    "validFrom": null,
+    "validUntil": "2026-11-30T02:59:59.000Z",
+    "validityNote": "Coca-Cola Black Friday: 27.11 a 29.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Coca-Cola Black Friday\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-COCA-COLA-27-A-29-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-28T01:43:47.037Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5163-27.11-29.11",
+    "validFrom": null,
+    "validUntil": "2026-11-30T02:59:59.000Z",
+    "validityNote": "Fim de Semana Black Friday Roldão: 27.11 a 29.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"Fim de Semana Black Friday Roldão\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/BLACK-FRIDAY-ROLDAO-27-A-29-11-2029-2.pdf"
+    ],
+    "collectedAt": "2026-11-28T01:43:47.037Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5160-27.11-29.11",
+    "validFrom": null,
+    "validUntil": "2026-11-30T02:59:59.000Z",
+    "validityNote": "MARS Petcare Black Friday: 27.11 a 29.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"MARS Petcare Black Friday\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-MARS-27-A-29-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-28T01:43:47.037Z"
+  },
+  {
+    "market": "Roldão",
+    "offerId": "5167-27.11-29.11",
+    "validFrom": null,
+    "validUntil": "2026-11-30T02:59:59.000Z",
+    "validityNote": "VESTCASA BLACK FRIDAY: 27.11 a 29.11",
+    "stores": [
+      "todas as lojas Roldão"
+    ],
+    "storeScope": "Encarte \"VESTCASA BLACK FRIDAY\" da rede (vale em Mauá)",
+    "referer": "https://roldao.com.br/ofertas/",
+    "images": [
+      "https://roldao.com.br/wp-content/uploads/2026/11/ROLDAO-VESTCASA-BLACK-FRIDAY-27-A-29-11-2026.pdf"
+    ],
+    "collectedAt": "2026-11-28T01:43:47.037Z"
   }
 ]
