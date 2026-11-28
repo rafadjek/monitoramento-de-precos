@@ -1,14 +1,14 @@
 {
- "geradoEm": "2026-11-21T13:54:57.613Z",
- "semente": 2120452368,
+ "geradoEm": "2026-11-28T15:26:28.649Z",
+ "semente": 583259757,
  "amostraPorMercado": 15,
  "cooperadoConta": true,
  "mercados": {
   "Spani": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 3403,
-   "coletadoEm": "2026-11-21T12:52:19.146Z",
+   "produtosNoSite": 3302,
+   "coletadoEm": "2026-11-28T12:50:54.328Z",
    "loja": "Av. Barão de Mauá, 2005",
    "conferidos": 15,
    "batem": 15,
@@ -22,23 +22,55 @@
   "Atacadão": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 6756,
-   "coletadoEm": "2026-11-21T12:52:19.679Z",
+   "produtosNoSite": 6823,
+   "coletadoEm": "2026-11-28T12:52:12.632Z",
    "loja": "Mauá Itapark",
    "conferidos": 15,
-   "batem": 15,
-   "divergentes": 0,
+   "batem": 14,
+   "divergentes": 1,
    "inconclusivos": 0,
    "bloqueado": false,
    "erro": null,
-   "divergencias": [],
+   "divergencias": [
+    {
+     "id": "atacadao:42522",
+     "nome": "Queijo Provolone Ipanema quilo",
+     "url": "https://www.atacadao.com.br/queijo-provolone-ipanema-88115-42522/p",
+     "nossoPreco": 31.16,
+     "listPrice": 77.9,
+     "condicao": null,
+     "tipo": "menor-preco-nao-usado",
+     "precosNaLoja": [
+      {
+       "valor": 31.16,
+       "rotulo": "Queijo Provolone Ipanema quilo R$ 31,16"
+      },
+      {
+       "valor": 12.46,
+       "rotulo": "R$ 31,16 R$ 12,46"
+      },
+      {
+       "valor": 12.46,
+       "rotulo": "-60% R$ 12,46/kg",
+       "porPeso": true
+      },
+      {
+       "valor": 12.46,
+       "rotulo": "= 1 unidade R$ 12,46"
+      }
+     ],
+     "menorNaLoja": 12.46,
+     "diferencaPct": 150.1,
+     "motivo": "a loja mostra R$ 12,46 (R$ 31,16 R$ 12,46) e o site publica R$ 31,16"
+    }
+   ],
    "inconclusivosLista": []
   },
   "Coop": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 4385,
-   "coletadoEm": "2026-11-21T13:07:41.229Z",
+   "produtosNoSite": 4550,
+   "coletadoEm": "2026-11-28T13:05:41.599Z",
    "loja": "Barão de Mauá",
    "conferidos": 15,
    "batem": 15,
@@ -52,8 +84,8 @@
   "Nagumo": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 8686,
-   "coletadoEm": "2026-11-21T12:48:57.109Z",
+   "produtosNoSite": 8761,
+   "coletadoEm": "2026-11-28T12:49:00.508Z",
    "loja": null,
    "conferidos": 0,
    "batem": 0,
@@ -67,8 +99,8 @@
   "Semar": {
    "metodo": "API da loja (busca oSuper, loja 06 Mauá)",
    "noSite": true,
-   "produtosNoSite": 9786,
-   "coletadoEm": "2026-11-21T12:48:17.359Z",
+   "produtosNoSite": 9847,
+   "coletadoEm": "2026-11-28T12:48:25.332Z",
    "loja": "loja 1705 (06 Mauá)",
    "conferidos": 15,
    "batem": 15,
@@ -82,8 +114,8 @@
   "Extra": {
    "metodo": "API da loja (bestPrices, loja 1643)",
    "noSite": true,
-   "produtosNoSite": 6389,
-   "coletadoEm": "2026-11-21T12:47:36.966Z",
+   "produtosNoSite": 6235,
+   "coletadoEm": "2026-11-28T12:48:07.375Z",
    "loja": "loja 1643",
    "conferidos": 15,
    "batem": 15,
@@ -97,9 +129,24 @@
   "Drogaria São Paulo": {
    "metodo": "API pública do catálogo (preço do SKU, o mesmo da página do produto)",
    "noSite": true,
-   "produtosNoSite": 4371,
-   "coletadoEm": "2026-11-21T09:41:43.378Z",
+   "produtosNoSite": 4389,
+   "coletadoEm": "2026-11-28T10:16:48.794Z",
    "loja": "site (retirada nas lojas de Mauá e Ribeirão Pires)",
+   "conferidos": 15,
+   "batem": 15,
+   "divergentes": 0,
+   "inconclusivos": 0,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [],
+   "inconclusivosLista": []
+  },
+  "Farma Conde": {
+   "metodo": "API pública do catálogo (preço do SKU, o mesmo da página do produto)",
+   "noSite": true,
+   "produtosNoSite": 6249,
+   "coletadoEm": "2026-11-28T09:52:16.186Z",
+   "loja": "site (retirada nas lojas de Mauá)",
    "conferidos": 15,
    "batem": 14,
    "divergentes": 1,
@@ -108,39 +155,24 @@
    "erro": null,
    "divergencias": [
     {
-     "id": "drogaria-sao-paulo:907839",
-     "nome": "Hidratante Corporal Monange Aveia Hidratação Essencial 400ml",
-     "url": "https://www.drogariasaopaulo.com.br/hidratante-corporal-monange-aveia-hidratacao-essencial-400ml/p",
-     "nossoPreco": 12.59,
-     "listPrice": 17.99,
+     "id": "farma-conde:299028",
+     "nome": "Desodorante Corporal Dove Men Care Aerossol All Body Deo Aloe e Bamboo 150ml",
+     "url": "https://www.farmaconde.com.br/desodorante-corporal-dove-men-care-aerossol-all-body-deo-aloe-e-bamboo-150ml/p",
+     "nossoPreco": 29.99,
+     "listPrice": null,
      "condicao": null,
      "tipo": "preco-diferente",
      "precosNaLoja": [
       {
-       "valor": 16.19,
-       "rotulo": "preço (Drogaria São Paulo)"
+       "valor": 22.49,
+       "rotulo": "preço (Farma Conde)"
       }
      ],
-     "menorNaLoja": 16.19,
-     "diferencaPct": -22.2,
-     "motivo": "a loja não mostra R$ 12,59; o menor que ela mostra é R$ 16,19"
+     "menorNaLoja": 22.49,
+     "diferencaPct": 33.3,
+     "motivo": "a loja não mostra R$ 29,99; o menor que ela mostra é R$ 22,49"
     }
    ],
-   "inconclusivosLista": []
-  },
-  "Farma Conde": {
-   "metodo": "API pública do catálogo (preço do SKU, o mesmo da página do produto)",
-   "noSite": true,
-   "produtosNoSite": 6329,
-   "coletadoEm": "2026-11-21T09:12:28.988Z",
-   "loja": "site (retirada nas lojas de Mauá)",
-   "conferidos": 15,
-   "batem": 15,
-   "divergentes": 0,
-   "inconclusivos": 0,
-   "bloqueado": false,
-   "erro": null,
-   "divergencias": [],
    "inconclusivosLista": []
   }
  }
