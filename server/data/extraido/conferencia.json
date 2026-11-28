@@ -1,14 +1,14 @@
 {
- "geradoEm": "2026-11-28T15:26:28.649Z",
- "semente": 583259757,
+ "geradoEm": "2026-11-28T16:56:59.268Z",
+ "semente": 588690375,
  "amostraPorMercado": 15,
  "cooperadoConta": true,
  "mercados": {
   "Spani": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 3302,
-   "coletadoEm": "2026-11-28T12:50:54.328Z",
+   "produtosNoSite": 3300,
+   "coletadoEm": "2026-11-28T16:05:30.903Z",
    "loja": "Av. Barão de Mauá, 2005",
    "conferidos": 15,
    "batem": 15,
@@ -22,56 +22,87 @@
   "Atacadão": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 6823,
-   "coletadoEm": "2026-11-28T12:52:12.632Z",
+   "produtosNoSite": 7039,
+   "coletadoEm": "2026-11-28T16:06:56.143Z",
    "loja": "Mauá Itapark",
-   "conferidos": 15,
-   "batem": 14,
+   "conferidos": 14,
+   "batem": 13,
    "divergentes": 1,
-   "inconclusivos": 0,
+   "inconclusivos": 1,
    "bloqueado": false,
    "erro": null,
    "divergencias": [
     {
-     "id": "atacadao:42522",
-     "nome": "Queijo Provolone Ipanema quilo",
-     "url": "https://www.atacadao.com.br/queijo-provolone-ipanema-88115-42522/p",
-     "nossoPreco": 31.16,
-     "listPrice": 77.9,
+     "id": "atacadao:36136",
+     "nome": "Queijo Mussarela Président F4 Preço por quilo na peça",
+     "url": "https://www.atacadao.com.br/queijo-mussarela-president-f4-55974-36136/p",
+     "nossoPreco": 19.45,
+     "listPrice": 38.9,
      "condicao": null,
      "tipo": "menor-preco-nao-usado",
      "precosNaLoja": [
       {
-       "valor": 31.16,
-       "rotulo": "Queijo Provolone Ipanema quilo R$ 31,16"
+       "valor": 19.45,
+       "rotulo": "ident F4 Preço por quilo na peça R$ 19,45"
       },
       {
-       "valor": 12.46,
-       "rotulo": "R$ 31,16 R$ 12,46"
+       "valor": 9.73,
+       "rotulo": "R$ 19,45 R$ 9,73"
       },
       {
-       "valor": 12.46,
-       "rotulo": "-60% R$ 12,46/kg",
+       "valor": 9.73,
+       "rotulo": "-50% R$ 9,73/kg",
        "porPeso": true
       },
       {
-       "valor": 12.46,
-       "rotulo": "= 1 unidade R$ 12,46"
+       "valor": 9.73,
+       "rotulo": "= 1 unidade R$ 9,73"
       }
      ],
-     "menorNaLoja": 12.46,
-     "diferencaPct": 150.1,
-     "motivo": "a loja mostra R$ 12,46 (R$ 31,16 R$ 12,46) e o site publica R$ 31,16"
+     "menorNaLoja": 9.73,
+     "diferencaPct": 99.9,
+     "motivo": "a loja mostra R$ 9,73 (R$ 19,45 R$ 9,73) e o site publica R$ 19,45"
     }
    ],
-   "inconclusivosLista": []
+   "inconclusivosLista": [
+    {
+     "id": "atacadao:8cdd711c5e98",
+     "nome": "Bebida Alcoólica Mista Absolut Sprite",
+     "url": "https://apigw.cloud.carrefour.com.br/api-middleware-flyer-services/api/v2/Flyer/?id=1s_J100zIP3HneCo1V1xyjGpGCs-iVqVK",
+     "nossoPreco": 7.99,
+     "motivo": "erro na leitura: page.goto: Download is starting"
+    }
+   ]
   },
   "Coop": {
    "metodo": "página do produto",
    "noSite": true,
-   "produtosNoSite": 4550,
-   "coletadoEm": "2026-11-28T13:05:41.599Z",
+   "produtosNoSite": 4552,
+   "coletadoEm": "2026-11-28T16:21:41.444Z",
    "loja": "Barão de Mauá",
+   "conferidos": 14,
+   "batem": 14,
+   "divergentes": 0,
+   "inconclusivos": 1,
+   "bloqueado": false,
+   "erro": null,
+   "divergencias": [],
+   "inconclusivosLista": [
+    {
+     "id": "coop:40907241",
+     "nome": "Fralda Descartável Infantil Huggies Tripla Proteção Disney Baby XXG 32 Unidades",
+     "url": "https://www.coopsupermercado.com.br/fralda-descartavel-infantil-tripla-protecao-xxg-com-32-unidades-huggies-s/p",
+     "nossoPreco": 36.89,
+     "motivo": "bloco do produto não encontrado na página"
+    }
+   ]
+  },
+  "Nagumo": {
+   "metodo": "página do produto",
+   "noSite": true,
+   "produtosNoSite": 8764,
+   "coletadoEm": "2026-11-28T16:03:22.706Z",
+   "loja": "038-MAUA",
    "conferidos": 15,
    "batem": 15,
    "divergentes": 0,
@@ -81,26 +112,11 @@
    "divergencias": [],
    "inconclusivosLista": []
   },
-  "Nagumo": {
-   "metodo": "página do produto",
-   "noSite": true,
-   "produtosNoSite": 8761,
-   "coletadoEm": "2026-11-28T12:49:00.508Z",
-   "loja": null,
-   "conferidos": 0,
-   "batem": 0,
-   "divergentes": 0,
-   "inconclusivos": 0,
-   "bloqueado": false,
-   "erro": "loja errada no Nagumo (lida: nenhuma)",
-   "divergencias": [],
-   "inconclusivosLista": []
-  },
   "Semar": {
    "metodo": "API da loja (busca oSuper, loja 06 Mauá)",
    "noSite": true,
-   "produtosNoSite": 9847,
-   "coletadoEm": "2026-11-28T12:48:25.332Z",
+   "produtosNoSite": 9909,
+   "coletadoEm": "2026-11-28T16:02:43.733Z",
    "loja": "loja 1705 (06 Mauá)",
    "conferidos": 15,
    "batem": 15,
@@ -114,8 +130,8 @@
   "Extra": {
    "metodo": "API da loja (bestPrices, loja 1643)",
    "noSite": true,
-   "produtosNoSite": 6235,
-   "coletadoEm": "2026-11-28T12:48:07.375Z",
+   "produtosNoSite": 6201,
+   "coletadoEm": "2026-11-28T16:02:36.104Z",
    "loja": "loja 1643",
    "conferidos": 15,
    "batem": 15,
@@ -148,29 +164,65 @@
    "coletadoEm": "2026-11-28T09:52:16.186Z",
    "loja": "site (retirada nas lojas de Mauá)",
    "conferidos": 15,
-   "batem": 14,
-   "divergentes": 1,
+   "batem": 12,
+   "divergentes": 3,
    "inconclusivos": 0,
    "bloqueado": false,
    "erro": null,
    "divergencias": [
     {
-     "id": "farma-conde:299028",
-     "nome": "Desodorante Corporal Dove Men Care Aerossol All Body Deo Aloe e Bamboo 150ml",
-     "url": "https://www.farmaconde.com.br/desodorante-corporal-dove-men-care-aerossol-all-body-deo-aloe-e-bamboo-150ml/p",
-     "nossoPreco": 29.99,
+     "id": "farma-conde:190207",
+     "nome": "Cobavital Caixa 30 Comprimidos",
+     "url": "https://www.farmaconde.com.br/cobavital-caixa-30-comprimidos/p",
+     "nossoPreco": 43.89,
+     "listPrice": 48.43,
+     "condicao": null,
+     "tipo": "preco-diferente",
+     "precosNaLoja": [
+      {
+       "valor": 45.99,
+       "rotulo": "preço (Farma Conde)"
+      }
+     ],
+     "menorNaLoja": 45.99,
+     "diferencaPct": -4.6,
+     "motivo": "a loja não mostra R$ 43,89; o menor que ela mostra é R$ 45,99"
+    },
+    {
+     "id": "farma-conde:75929",
+     "nome": "Cetoprofeno 20mg Teuto Genérico Suspensão Gotas Frasco 20ml",
+     "url": "https://www.farmaconde.com.br/cetoprofeno-20mg-teuto-generico-suspensao-gotas-frasco-20ml/p",
+     "nossoPreco": 15.49,
+     "listPrice": 19.94,
+     "condicao": null,
+     "tipo": "preco-diferente",
+     "precosNaLoja": [
+      {
+       "valor": 16.19,
+       "rotulo": "preço (Farma Conde)"
+      }
+     ],
+     "menorNaLoja": 16.19,
+     "diferencaPct": -4.3,
+     "motivo": "a loja não mostra R$ 15,49; o menor que ela mostra é R$ 16,19"
+    },
+    {
+     "id": "farma-conde:932186",
+     "nome": "Asepxia Sabonete Suavizante Barra 80g",
+     "url": "https://www.farmaconde.com.br/asepxia-sabonete-suavizante-barra-80g/p",
+     "nossoPreco": 13.99,
      "listPrice": null,
      "condicao": null,
      "tipo": "preco-diferente",
      "precosNaLoja": [
       {
-       "valor": 22.49,
+       "valor": 13.49,
        "rotulo": "preço (Farma Conde)"
       }
      ],
-     "menorNaLoja": 22.49,
-     "diferencaPct": 33.3,
-     "motivo": "a loja não mostra R$ 29,99; o menor que ela mostra é R$ 22,49"
+     "menorNaLoja": 13.49,
+     "diferencaPct": 3.7,
+     "motivo": "a loja não mostra R$ 13,99; o menor que ela mostra é R$ 13,49"
     }
    ],
    "inconclusivosLista": []
