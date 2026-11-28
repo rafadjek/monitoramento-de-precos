@@ -1,0 +1,57 @@
+name: Fichas dos produtos (varredura longa)
+
+# Lê a ficha (marca, linha, versão, sabor) de todos os nomes que ainda não têm, por IA grátis só de texto.
+# A coleta diária só dá 35 min por rodada; este workflow dá até 5 h seguidas para zerar a fila de uma vez.
+# Disparo manual. No fim, grava fichas.json e dispara a coleta (atualizar.yml) para o site já usar as fichas novas.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+# mesmo grupo da coleta: não rodam juntos (os dois gravam fichas.json)
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  fichas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+      - run: npm ci --prefix server
+
+      - name: Ler fichas dos nomes que faltam
+        working-directory: server
+        continue-on-error: true
+        timeout-minutes: 320
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_JUIZ_KEY: ${{ secrets.GEMINI_JUIZ_KEY }}
+          GEMINI_JUIZ_KEY_2: ${{ secrets.GEMINI_JUIZ_KEY_2 }}
+          GEMINI_JUIZ_KEY_3: ${{ secrets.GEMINI_JUIZ_KEY_3 }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          FICHAS_LOTE: '25'
+        run: node tools/fila-provavel.mjs 0 --nomes && node fichas.mjs --minutos=300
+
+      - name: Guardar fichas
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add server/data/extraido/fichas.json
+          git diff --cached --quiet || (git commit -m "Fichas dos produtos (varredura longa) [skip ci]" && git pull --rebase --autostash -X theirs && git push)
+          node -e "const f=require('./server/data/extraido/fichas.json');console.log('fichas guardadas:',Object.keys(f.fichas).length)"
+
+      - name: Disparar a coleta para publicar no site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: curl -s -f -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${{ github.repository }}/actions/workflows/atualizar.yml/dispatches" -d '{"ref":"main"}'
