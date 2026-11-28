@@ -68,10 +68,12 @@ function provedores() {
   if (process.env.GROQ_API_KEY) lista.push({ nome: 'groq', tipo: 'openai', url: 'https://api.groq.com/openai/v1/chat/completions', key: process.env.GROQ_API_KEY, model: process.env.FICHAS_GROQ_MODEL || 'openai/gpt-oss-120b', lote: 25 });
   if (process.env.OPENROUTER_API_KEY) for (const model of (process.env.FICHAS_OR_MODELS || 'google/gemma-4-31b-it:free,meta-llama/llama-4-maverick:free').split(','))
     lista.push({ nome: `openrouter:${model}`, tipo: 'openai', url: 'https://openrouter.ai/api/v1/chat/completions', key: process.env.OPENROUTER_API_KEY, model });
+  if (process.env.OPENCODE_API_KEY) for (const model of (process.env.FICHAS_ZEN_MODELS || '').split(',').map((x) => x.trim()).filter(Boolean))
+    lista.push({ nome: `zen:${model}`, tipo: 'openai', url: 'https://opencode.ai/inference/openai/v1/chat/completions', key: process.env.OPENCODE_API_KEY, model });
   return lista;
 }
 
-async function pedir(p, itens) {
+export async function pedir(p, itens) {
   const texto = `${PEDIDO}\n\n${JSON.stringify(itens)}`;
   let ultimo = '';
   for (let tentativa = 0; tentativa < 3; tentativa++) {

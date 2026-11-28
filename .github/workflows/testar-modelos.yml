@@ -1,0 +1,30 @@
+name: Testar modelos grátis na ficha
+
+# Compara cada modelo grátis com as fichas que o Gemini já leu (50 nomes, campo a campo). Disparo manual.
+on:
+  workflow_dispatch:
+    inputs:
+      modelos:
+        description: 'Modelos separados por vírgula (OpenRouter direto; OpenCode Zen com prefixo zen:)'
+        required: false
+        default: 'google/gemma-4-31b-it:free,google/gemma-4-26b-a4b-it:free,nvidia/nemotron-3.5-super-vl:free,nvidia/nemotron-3.5-lightning:free,nvidia/nemotron-3-ultra-550b-a55b:free,baidu/ernie-5.5-flash-preview:free,particle-ai/particle-1:free,recursive/flint-v1.0:free,zen:deepseek-v4.1-flash-free,zen:deepseek-v4-flash-free,zen:mimo-v2.6-flash-free,zen:mimo-v2.5-free,zen:mimo-v2-pro-free,zen:kimi-k2.5-free,zen:qwen3.6-plus-free,zen:qwen4-max-free,zen:glm-5-free,zen:glm-5.3-flash-free,zen:glm-4.7-free,zen:minimax-m3.1-flash-free,zen:minimax-m3-free,zen:nemotron-3-ultra-free,zen:nemotron-3-super-free,zen:longcat-2.5-free,zen:ling-3.1-flash-free,zen:hy4-flash-free,zen:ring-2.6-1t-free'
+
+permissions:
+  contents: read
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testar
+        working-directory: server
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          MODELOS: ${{ inputs.modelos }}
+        run: node tools/testar-modelos-ficha.mjs "$MODELOS" --n=50
