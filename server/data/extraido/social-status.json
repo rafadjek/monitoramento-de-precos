@@ -1,5 +1,5 @@
 {
- "em": "2026-11-28T01:43:55.587Z",
+ "em": "2026-11-28T12:48:28.995Z",
  "servicos": [
   {
    "net": "ig",
@@ -19,7 +19,7 @@
   {
    "net": "ig",
    "name": "crawlbase",
-   "posts": 29
+   "posts": 30
   },
   {
    "net": "fb",
@@ -39,7 +39,7 @@
   {
    "net": "fb",
    "name": "crawlbase",
-   "erro": "HTTP 520 {\"original_status\":400,\"pc_status\":704,\"cb_status\":704,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"\\u003c!DOCTYPE html\\u"
+   "erro": "HTTP 520 {\"original_status\":515,\"pc_status\":515,\"cb_status\":515,\"url\":\"https://www.facebook.com/redenevada/\",\"domain_complexity\":\"standard\",\"body\":\"Request failed, with "
   },
   {
    "teste": "socialcrawl",
@@ -68,19 +68,19 @@
   },
   "Lourencini": {
    "net": "ig",
-   "tentativas": 1,
+   "tentativas": 2,
    "recebidos": 12,
-   "video": 5,
+   "video": 4,
    "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 7
+   "aproveitados": 8
   },
   "Família Lima": {
    "net": "ig",
-   "tentativas": 2,
-   "recebidos": 12,
+   "tentativas": 1,
+   "recebidos": 13,
    "video": 0,
-   "semCodigo": 0,
+   "semCodigo": 1,
    "semImagem": 0,
    "aproveitados": 12
   },
@@ -113,25 +113,25 @@
   },
   "Carnes Santana": {
    "net": "ig",
-   "tentativas": 2,
-   "recebidos": 0,
-   "video": 0,
+   "tentativas": 1,
+   "recebidos": 12,
+   "video": 2,
    "semCodigo": 0,
    "semImagem": 0,
-   "aproveitados": 0
+   "aproveitados": 10
   },
   "Sacolão São Jorge": {
    "net": "ig",
-   "tentativas": 2,
-   "recebidos": 13,
+   "tentativas": 1,
+   "recebidos": 12,
    "video": 2,
-   "semCodigo": 1,
+   "semCodigo": 0,
    "semImagem": 0,
    "aproveitados": 10
   },
   "Consulado do Churrasco": {
    "net": "ig",
-   "tentativas": 1,
+   "tentativas": 2,
    "recebidos": 12,
    "video": 12,
    "semCodigo": 0,
