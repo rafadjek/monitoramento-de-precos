@@ -17,7 +17,8 @@ const norm = (s) => String(s ?? '').trim().toLowerCase();
 const res = [];
 for (const m of modelos) {
   const zen = m.startsWith('zen:');
-  const p = m === 'oclivre' ? { nome: 'oclivre', tipo: 'oclivre' } : zen
+  const p = m === 'oclivre' ? { nome: 'oclivre', tipo: 'oclivre' } : m.startsWith('mistral:')
+    ? { nome: m, tipo: 'openai', url: 'https://api.mistral.ai/v1/chat/completions', key: process.env.MISTRAL_API_KEY, model: m.slice(8) } : zen
     ? { nome: m, tipo: 'openai', url: 'https://opencode.ai/inference/openai/v1/chat/completions', key: process.env.OPENCODE_API_KEY, model: m.slice(4) }
     : { nome: m, tipo: 'openai', url: 'https://openrouter.ai/api/v1/chat/completions', key: process.env.OPENROUTER_API_KEY, model: m };
   const t0 = Date.now();
