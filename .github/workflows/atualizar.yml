@@ -1,9 +1,8 @@
 name: Atualizar preços e publicar
 
 on:
-  schedule:
-    # todo dia, 01h17 de Brasília (madrugada e minuto quebrado: o agendamento das 06h chegava a atrasar 8 h na fila do GitHub)
-    - cron: '17 4 * * *'
+  # A coleta diária é disparada pelo Worker da Cloudflare `bate-ofertas-disparo` (worker-disparo/), às 01h30 de Brasília.
+  # O schedule do GitHub atrasava até 9 h na fila. Se o disparo parar (token do GitHub expira em 1 ano), rode manualmente ou recoloque um schedule.
   workflow_dispatch:
   push:
     branches: [main]
