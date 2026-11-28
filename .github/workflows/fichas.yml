@@ -2,7 +2,7 @@ name: Fichas dos produtos (varredura longa)
 
 # Lê a ficha (marca, linha, versão, sabor) de todos os nomes que ainda não têm, por IA grátis só de texto.
 # A coleta diária só dá 35 min por rodada; este workflow dá até 5 h seguidas para zerar a fila de uma vez.
-# Disparo manual. No fim, grava fichas.json e dispara a coleta (atualizar.yml) para o site já usar as fichas novas.
+# Disparo manual (workflow_dispatch). No fim, grava fichas.json e dispara a coleta (atualizar.yml) para o site já usar as fichas novas. 
 on:
   workflow_dispatch:
 
