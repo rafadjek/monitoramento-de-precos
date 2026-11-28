@@ -135,7 +135,8 @@ jobs:
           GEMINI_JUIZ_KEY_3: ${{ secrets.GEMINI_JUIZ_KEY_3 }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          FICHAS_LOTE: '25'
+          FICHAS_LOTE: '100'
+          FICHAS_OR_MODELS: 'google/gemma-4-31b-it:free'
         run: node tools/fila-provavel.mjs 0 --nomes && node fichas.mjs --minutos=35
 
       # Juiz de "mesmo produto?" (Gemini grátis): primeiro a prova com os pares rotulados pelo Rafael;

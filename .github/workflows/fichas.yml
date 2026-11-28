@@ -39,19 +39,25 @@ jobs:
           GEMINI_JUIZ_KEY_3: ${{ secrets.GEMINI_JUIZ_KEY_3 }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          FICHAS_LOTE: '25'
+          FICHAS_LOTE: '100'
+          FICHAS_OR_MODELS: 'google/gemma-4-31b-it:free'
         run: node tools/fila-provavel.mjs 0 --nomes && node fichas.mjs --minutos=300
 
       - name: Guardar fichas
+        id: guardar
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add server/data/extraido/fichas.json
-          git diff --cached --quiet || (git commit -m "Fichas dos produtos (varredura longa) [skip ci]" && git pull --rebase --autostash -X theirs && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "Fichas dos produtos (varredura longa) [skip ci]" && git pull --rebase --autostash -X theirs && git push
+            echo "mudou=1" >> "$GITHUB_OUTPUT"
+          fi
           node -e "const f=require('./server/data/extraido/fichas.json');console.log('fichas guardadas:',Object.keys(f.fichas).length)"
 
       - name: Disparar a coleta para publicar no site
+        if: steps.guardar.outputs.mudou == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
