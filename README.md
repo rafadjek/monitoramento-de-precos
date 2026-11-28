@@ -8,6 +8,12 @@
 > - Variáveis de ambiente (segredos do repositório, só os nomes): `GEMINI_API_KEY`, `GEMINI_JUIZ_KEY`, `GEMINI_JUIZ_KEY_2`, `GEMINI_JUIZ_KEY_3`, `OPENROUTER_API_KEY`, `OPENCODE_API_KEY`, `GROQ_API_KEY`, `APIFY_TOKEN`, `BRIGHTDATA_TOKEN`, `SCRAPECREATORS_KEY`, `SOCIALCRAWL_KEY`, `CRAWLBASE_TOKEN` (segredo `CRAWLBASE_API`), `CLOUDFLARE_API_TOKEN`.
 > - Último teste validado: 2026-11-23 (65 testes do servidor e medição no gabarito com as palavras acessórias da Fase 18.1); build completo do site validado em 2026-11-22. Folheto do Atacadão conferido em 22/11: 9 de 9 itens verificáveis batem com o PDF.
 
+> **Estado atual (2026-11-28)**
+> - Coleta diária voltou a publicar em 28/11 (run 46094512416 com sucesso, site com data de 28/11). De 23 a 27/11 ela falhava todo dia no passo "Guardar dados coletados": `git pull --rebase` recusava rodar com arquivos alterados fora do commit. Corrigido com `--autostash` (commit ae6c205, em `atualizar.yml` e `farmacias.yml`); o que sobrava sem commit não foi identificado.
+> - Falta conferir o juiz de IA (cadeia Gemini → OpenRouter → OpenCode → Groq) numa coleta agendada: `juiz-veredictos.json` ainda mostra a última execução em 23/11.
+> - Black Friday na página de venda termina em 30/11 (decisão do Rafael: deixar encerrar; para outro evento, acrescentar em `EVENTS`).
+> - Avisos sem gravidade em 27/11: Baronesa com timeout, Apify com 403, Instagram do Consulado do Churrasco sem posts.
+
 Site que reúne os preços de **alimentícios, higiene e limpeza** dos mercados da região, com busca e filtros. Qualquer pessoa usa pelo navegador. No celular dá para instalar como app (botão "Instalar" no Chrome/Android; no iPhone, Compartilhar → Adicionar à Tela de Início), e ele abre sem internet com os preços da última visita.
 
 Os preços são lidos dos sites e folhetos dos próprios mercados e **podem mudar**. Confirme na loja antes de ir.
