@@ -66,6 +66,7 @@ const GEMINI_MODELS = (process.env.FICHAS_GEMINI_MODELS || 'gemini-flash-lite-la
 function provedores() {
   // Só no PC do Rafael: escada de modelos grátis do OpenCode (apoio\ferramentas\oc-livre.ps1), que troca sozinha de modelo.
   if (process.env.FICHAS_PROVEDORES === 'oclivre') return [{ nome: 'oclivre', tipo: 'oclivre', lote: Number(process.env.FICHAS_LOTE_OC || 60) }];
+  if (process.env.FICHAS_PROVEDORES === 'codex') return [{ nome: 'codex', tipo: 'codex', lote: Number(process.env.FICHAS_LOTE_CODEX || 100) }];
   const lista = [];
   for (const key of geminiKeys()) for (const model of GEMINI_MODELS) lista.push({ nome: `gemini:${model}`, tipo: 'gemini', key, model });
   if (process.env.GROQ_API_KEY) lista.push({ nome: 'groq', tipo: 'openai', url: 'https://api.groq.com/openai/v1/chat/completions', key: process.env.GROQ_API_KEY, model: process.env.FICHAS_GROQ_MODEL || 'openai/gpt-oss-120b', lote: 25 });
@@ -88,6 +89,15 @@ export async function pedir(p, itens) {
     const m = /\[oc-livre\] modelo: (\S+)/.exec(String(r.stderr));
     if (m) p.nome = `oclivre:${m[1]}`;
     return r.stdout;
+  }
+  if (p.tipo === 'codex') {
+    // Só no PC do Rafael: Codex CLI logado com a conta do ChatGPT (codex exec lê o pedido da entrada padrão).
+    const saida = path.join(process.env.TEMP || 'D:\Temp', `codex-ficha-${process.pid}-${Date.now()}.txt`);
+    const r = spawnSync('codex.cmd', ['exec', '--skip-git-repo-check', '--sandbox', 'read-only', '--ephemeral', '--output-last-message', saida, '-'], { input: texto, encoding: 'utf8', maxBuffer: 64e6, shell: true, cwd: process.env.TEMP || 'D:\Temp', timeout: 600000 });
+    if (r.status !== 0 || !fs.existsSync(saida)) throw new Error(`codex saiu com ${r.status}: ${String(r.stderr || r.error).slice(-160)}`);
+    const out = fs.readFileSync(saida, 'utf8'); fs.rmSync(saida, { force: true });
+    if (/usage limit|rate limit|quota/i.test(out + r.stderr) && !out.includes('"itens"')) throw new CotaEsgotada('codex: limite de uso');
+    return out;
   }
   let ultimo = '';
   for (let tentativa = 0; tentativa < 3; tentativa++) {
@@ -114,38 +124,46 @@ export async function pedir(p, itens) {
   throw new Error(`sem resposta depois de 3 tentativas (${ultimo})`);
 }
 
-/** Lê as fichas dos nomes que faltam, gravando o cache a cada lote. Devolve um resumo. */
-export async function lerNovas(nomes, { maxLotes = Infinity, minutos = 40, arq = ARQ_FICHAS } = {}) {
+/** Lê as fichas dos nomes que faltam, gravando o cache a cada lote. Devolve um resumo.
+ *  `paralelo` trabalhadores leem lotes ao mesmo tempo, cada um começando num provedor diferente. */
+export async function lerNovas(nomes, { maxLotes = Infinity, minutos = 40, arq = ARQ_FICHAS, paralelo = Number(process.env.FICHAS_PARALELO || 1) } = {}) {
   const base = lerFichas(arq);
   const faltam = [...new Map(nomes.map((n) => [chaveNome(n), n])).entries()].filter(([k]) => k && !base.fichas[k]);
   const fim = Date.now() + minutos * 60e3;
   const lista = provedores();
-  let pi = 0, lotes = 0, lidas = 0, falhasSeguidas = 0;
+  let lotes = 0, lidas = 0, pos = 0;
   const erros = [], usados = {}, esgotado = new Set();
-  let pos = 0;
-  // Sobrecarga (503) ou resposta ruim: passa ao próximo provedor e volta a este depois. Só a cota do dia esgotada
-  // descarta o provedor. Para quando todos esgotaram ou quando todos falharam duas voltas seguidas.
-  const proximo = () => { for (let k = 1; k <= lista.length; k++) { const j = (pi + k) % lista.length; if (!esgotado.has(j)) { pi = j; return; } } };
-  while (pos < faltam.length && lotes < maxLotes && Date.now() < fim && esgotado.size < lista.length && falhasSeguidas < 2 * lista.length) {
-    const p = lista[pi];
-    const tam = p.lote ?? LOTE;
-    const parte = faltam.slice(pos, pos + tam);
-    const itens = parte.map(([, nome], i) => ({ id: String(i + 1), nome }));
-    try {
-      const resp = interpretar(await pedir(p, itens), new Set(itens.map((x) => x.id)));
-      const hoje = new Date().toISOString().slice(0, 10);
-      parte.forEach(([k], i) => { const f = resp.get(String(i + 1)); if (f && f.produto) { base.fichas[k] = { ...f, m: p.nome, em: hoje }; lidas++; } });
-      fs.writeFileSync(arq, JSON.stringify(base));
-      usados[p.nome] = (usados[p.nome] ?? 0) + 1;
-      pos += tam; lotes++; falhasSeguidas = 0;
-    } catch (e) {
-      erros.push(`${p.nome}: ${String(e.message).slice(0, 120)}`);
-      if (e instanceof CotaEsgotada) esgotado.add(pi);
-      falhasSeguidas++;
-      proximo(); // o lote não se perde: o próximo provedor tenta o mesmo trecho
-      if (falhasSeguidas >= lista.length) await sleep(30000); // todos sobrecarregados: espera um pouco antes da nova volta
+  const refazer = []; // lotes que um provedor não conseguiu ler: outro tenta
+  // Sobrecarga (503) ou resposta ruim: o trabalhador passa ao próximo provedor e o lote volta à fila. Só a cota do dia
+  // esgotada descarta o provedor. Para quando todos esgotaram ou quando o trabalhador falha duas voltas seguidas.
+  const proximo = (pi) => { for (let k = 1; k <= lista.length; k++) { const j = (pi + k) % lista.length; if (!esgotado.has(j)) return j; } return -1; };
+  async function trabalhador(w) {
+    let pi = w % lista.length, falhasSeguidas = 0;
+    while (Date.now() < fim && lotes < maxLotes && esgotado.size < lista.length && falhasSeguidas < 2 * lista.length) {
+      if (esgotado.has(pi)) { pi = proximo(pi); if (pi < 0) break; }
+      const p = lista[pi];
+      let parte = refazer.shift();
+      if (!parte) { if (pos >= faltam.length) break; parte = faltam.slice(pos, pos + (p.lote ?? LOTE)); pos += parte.length; }
+      const itens = parte.map(([, nome], i) => ({ id: String(i + 1), nome }));
+      try {
+        const resp = interpretar(await pedir(p, itens), new Set(itens.map((x) => x.id)));
+        const hoje = new Date().toISOString().slice(0, 10);
+        parte.forEach(([k], i) => { const f = resp.get(String(i + 1)); if (f && f.produto) { base.fichas[k] = { ...f, m: p.nome, em: hoje }; lidas++; } });
+        fs.writeFileSync(arq, JSON.stringify(base));
+        usados[p.nome] = (usados[p.nome] ?? 0) + 1;
+        lotes++; falhasSeguidas = 0;
+      } catch (e) {
+        erros.push(`${p.nome}: ${String(e.message).slice(0, 120)}`);
+        refazer.push(parte);
+        if (e instanceof CotaEsgotada) esgotado.add(pi);
+        falhasSeguidas++;
+        pi = proximo(pi);
+        if (pi < 0) break;
+        await sleep(Math.min(30000, 3000 * falhasSeguidas));
+      }
     }
   }
+  await Promise.all(Array.from({ length: Math.max(1, paralelo) }, (_, w) => trabalhador(w)));
   return { faltavam: faltam.length, lidas, lotes, usados, erros: erros.slice(-8), total: Object.keys(base.fichas).length };
 }
 
@@ -165,7 +183,8 @@ if (direto) {
     }
   }
   if (!provedores().length) { console.log('fichas: nenhuma chave de IA, pulando'); process.exit(0); }
-  const r = await lerNovas(nomes, { maxLotes: Number(arg('max-lotes', Infinity)), minutos: Number(arg('minutos', 40)) });
+  if (arg('reverso', null) !== null) nomes = [...nomes].reverse();
+  const r = await lerNovas(nomes, { arq: arg('arq', ARQ_FICHAS), maxLotes: Number(arg('max-lotes', Infinity)), minutos: Number(arg('minutos', 40)) });
   console.log(`fichas: ${r.lidas} lidas em ${r.lotes} lotes (faltavam ${r.faltavam}); total no cache ${r.total}; uso ${JSON.stringify(r.usados)}`);
   if (r.erros.length) console.log('fichas: trocas de provedor:', r.erros.join(' | '));
 }

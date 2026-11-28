@@ -40,7 +40,8 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           FICHAS_LOTE: '100'
-          FICHAS_OR_MODELS: 'google/gemma-4-31b-it:free'
+          FICHAS_OR_MODELS: 'nvidia/nemotron-3.5-super-vl:free,baidu/ernie-5.5-flash-preview:free,particle-ai/particle-1:free,nvidia/nemotron-3-ultra-550b-a55b:free'
+          FICHAS_PARALELO: '6'
         run: node tools/fila-provavel.mjs 0 --nomes && node fichas.mjs --minutos=300
 
       - name: Guardar fichas
