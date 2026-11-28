@@ -36,13 +36,13 @@
       "siteCount": 7134,
       "lidos": 1500
     },
-    "bebidas": {
-      "siteCount": 4883,
-      "lidos": 1400
-    },
     "limpeza": {
       "siteCount": 2951,
       "lidos": 1200
+    },
+    "bebidas": {
+      "siteCount": 4883,
+      "lidos": 1400
     },
     "higiene-e-perfumaria": {
       "siteCount": 6093,
@@ -51,8 +51,8 @@
   },
   "requests": 157,
   "aborted": null,
-  "seconds": 563,
+  "seconds": 640,
   "ofertaDia": 2865,
-  "precoBaixou": 1655,
-  "produtos": 8761
+  "precoBaixou": 1668,
+  "produtos": 8764
 }
