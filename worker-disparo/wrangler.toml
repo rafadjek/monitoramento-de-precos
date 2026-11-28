@@ -1,0 +1,8 @@
+name = "bate-ofertas-disparo"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# 04:30 UTC = 01:30 de Brasília. A coleta leva cerca de 1h35, então o site fica atualizado antes das 04h.
+[triggers]
+crons = ["30 4 * * *"]
