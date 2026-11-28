@@ -6,6 +6,7 @@
 // O cache é gravado a cada lote: o que foi lido não se perde se a rodada parar no meio.
 // Uso: node fichas.mjs [--max-lotes=N] [--minutos=N] [--nomes=arquivo.json (lista de nomes; padrão: todos)]
 import fs from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { strip } from './group.mjs';
@@ -63,6 +64,8 @@ const geminiKeys = () => {
 const GEMINI_MODELS = (process.env.FICHAS_GEMINI_MODELS || 'gemini-flash-lite-latest,gemini-3.5-flash-lite').split(',').map((x) => x.trim()).filter(Boolean);
 
 function provedores() {
+  // Só no PC do Rafael: escada de modelos grátis do OpenCode (apoio\ferramentas\oc-livre.ps1), que troca sozinha de modelo.
+  if (process.env.FICHAS_PROVEDORES === 'oclivre') return [{ nome: 'oclivre', tipo: 'oclivre', lote: Number(process.env.FICHAS_LOTE_OC || 60) }];
   const lista = [];
   for (const key of geminiKeys()) for (const model of GEMINI_MODELS) lista.push({ nome: `gemini:${model}`, tipo: 'gemini', key, model });
   if (process.env.GROQ_API_KEY) lista.push({ nome: 'groq', tipo: 'openai', url: 'https://api.groq.com/openai/v1/chat/completions', key: process.env.GROQ_API_KEY, model: process.env.FICHAS_GROQ_MODEL || 'openai/gpt-oss-120b', lote: 25 });
@@ -75,6 +78,15 @@ function provedores() {
 
 export async function pedir(p, itens) {
   const texto = `${PEDIDO}\n\n${JSON.stringify(itens)}`;
+  if (p.tipo === 'oclivre') {
+    const arq = path.join(process.env.TEMP || 'D:\\Temp', `ficha-pedido-${process.pid}.txt`);
+    fs.writeFileSync(arq, texto);
+    const r = spawnSync('powershell', ['-NoProfile', '-File', 'D:\\Projetos Claude\\apoio\\ferramentas\\oc-livre.ps1', '-Tipo', 'texto', '-ArquivoPedido', arq, '-TimeoutSeg', '240'], { encoding: 'utf8', maxBuffer: 64e6 });
+    if (r.status !== 0) throw new Error(`oc-livre saiu com ${r.status}: ${String(r.stderr).slice(-120)}`);
+    const m = /\[oc-livre\] modelo: (\S+)/.exec(String(r.stderr));
+    if (m) p.nome = `oclivre:${m[1]}`;
+    return r.stdout;
+  }
   let ultimo = '';
   for (let tentativa = 0; tentativa < 3; tentativa++) {
     let r;
